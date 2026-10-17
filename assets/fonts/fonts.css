@@ -1,0 +1,15 @@
+/* Bundled from Google Fonts (SIL Open Font License) so the app works offline. */
+@font-face {
+  font-family: "Quicksand";
+  src: url("quicksand.woff2") format("woff2-variations");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("nunito.woff2") format("woff2-variations");
+  font-weight: 200 1000;
+  font-style: normal;
+  font-display: block;
+}

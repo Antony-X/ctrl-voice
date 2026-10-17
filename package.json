@@ -1,0 +1,16 @@
+{
+  "name": "ctrl-voice",
+  "productName": "Ctrl+Voice",
+  "version": "0.1.0",
+  "description": "AI-native voice messages — edit what you said like text, keep your own voice.",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "start:hidden": "electron . --hidden"
+  },
+  "author": "Ctrl+Voice team",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^33.2.0"
+  }
+}

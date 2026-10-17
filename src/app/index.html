@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self' blob:; font-src 'self';" />
+  <title>Ctrl+Voice</title>
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="titlebar">
+    <div class="drag"></div>
+    <div class="tb-left">
+      <button class="tb-btn" data-action="toggle-sidebar" title="Toggle sidebar"><i data-icon="sidebar"></i></button>
+      <button class="tb-btn" data-action="nav" data-route="settings" title="Account &amp; settings"><i data-icon="user"></i></button>
+    </div>
+    <div class="rec-indicator" id="recIndicator" hidden><span class="dot"></span>Recording <span id="recIndicatorTime">0:00</span></div>
+    <div class="win-controls">
+      <button data-action="win-min" title="Minimize">&#xE921;</button>
+      <button data-action="win-max" title="Maximize" id="maxBtn">&#xE922;</button>
+      <button data-action="win-close" class="close" title="Close to tray">&#xE8BB;</button>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="../../assets/logo.svg" alt="" />
+        <span>Ctrl+Voice</span>
+      </div>
+
+      <nav class="nav">
+        <button data-action="nav" data-route="home"><i data-icon="home"></i>Home</button>
+        <button data-action="nav" data-route="compose"><i data-icon="mic"></i>New message</button>
+        <button data-action="nav" data-route="library"><i data-icon="library"></i>Library</button>
+        <button data-action="nav" data-route="voice"><i data-icon="voice"></i>My voice</button>
+        <button data-action="nav" data-route="shortcuts"><i data-icon="keyboard"></i>Shortcuts</button>
+      </nav>
+
+      <div class="setup" id="setupCard"></div>
+
+      <div class="nav nav-bottom">
+        <button data-action="rec-toggle"><i data-icon="bar"></i><span id="sideRecLabel">Start recording</span></button>
+        <button data-action="nav" data-route="settings"><i data-icon="settings"></i>Settings</button>
+      </div>
+    </aside>
+
+    <main class="panel-main">
+      <div class="view" id="view"></div>
+    </main>
+  </div>
+
+  <div class="toasts" id="toasts"></div>
+
+  <script src="mockai.js"></script>
+  <script src="player.js"></script>
+  <script src="app.js"></script>
+  <script src="exporter.js"></script>
+</body>
+</html>

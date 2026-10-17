@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; media-src 'self' blob:; font-src 'self';" />
+  <title>Ctrl+Voice Bar</title>
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css" />
+  <link rel="stylesheet" href="overlay.css" />
+</head>
+<body>
+  <div class="stack">
+    <div class="toast interactive" id="toast" hidden>
+      <span class="toast-icon">↶</span>
+      <span class="toast-text">Removed <em id="toastText"></em></span>
+      <button class="toast-btn" id="toastRestore">Restore</button>
+    </div>
+
+    <div class="caption interactive" id="caption" hidden>
+      <span class="cap-target" id="capTarget" hidden></span>
+      <div class="caption-lines" id="captionLines"></div>
+    </div>
+
+    <div class="pill interactive idle" id="pill">
+      <!-- idle -->
+      <button class="idle-hit" id="idleHit" title="Record a voice message">
+        <span class="idle-line"></span>
+        <span class="idle-hint"><span class="mic-dot"></span>Press <kbd id="hintToggle">Ctrl Shift Space</kbd> to speak</span>
+      </button>
+
+      <!-- recording -->
+      <div class="rec-row">
+        <span class="rec-dot"></span>
+        <span class="rec-time" id="time">0:00</span>
+        <canvas class="wave" id="wave" width="440" height="72"></canvas>
+        <button class="pill-btn undo" id="undoBtn" title="Undo last thought">
+          <svg viewBox="0 0 24 24"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg>
+          <span>Undo</span><kbd id="hintUndo">Ctrl Z</kbd>
+        </button>
+        <button class="pill-btn icon cancel" id="cancelBtn" title="Discard (Esc)">
+          <svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <button class="pill-btn icon review" id="reviewBtn" title="Finish &amp; review">
+          <svg viewBox="0 0 24 24"><path d="m15 4 5 5L9 20H4v-5L15 4Z"/></svg>
+        </button>
+        <button class="pill-btn icon done" id="doneBtn" title="Finish &amp; send">
+          <svg viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7Z"/></svg>
+        </button>
+      </div>
+
+      <!-- processing -->
+      <div class="proc-row">
+        <span class="spark">✦</span>
+        <span class="proc-text" id="procText">Polishing your message…</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="session.js"></script>
+  <script src="overlay.js"></script>
+</body>
+</html>
