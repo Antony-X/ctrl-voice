@@ -93,3 +93,13 @@ def levenshtein(a, b):
         prev, d[0] = d[0], i
         for j, y in enumerate(b, 1): prev, d[j] = d[j], min(d[j] + 1, d[j - 1] + 1, prev + (x != y))
     return d[-1]
+
+
+def fit(x16, text):
+    """How well do the canonical phones of `text` explain this audio? (CTC log-likelihood per phone; higher = closer to what was said)."""
+    ids = [V[p] for w in text.split() for p in phones(w)]
+    if not ids or len(x16) < 1600: return -1e9
+    em = emissions(x16)
+    if em.shape[0] < len(ids): return -1e9
+    ll = -F.ctc_loss(em[:, None, :], torch.tensor([ids]).cuda(), torch.tensor([em.shape[0]]), torch.tensor([len(ids)]), blank=BLANK, reduction="sum", zero_infinity=True)
+    return ll.item() / len(ids)

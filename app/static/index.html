@@ -69,8 +69,8 @@ canvas{width:100%;height:46px;display:block;border-radius:6px;background:#1e1f22
     <button class="btn" id="bClean">✨ Clean up</button>
     <button class="btn" id="bTight">✂ Tighten</button>
     <button class="btn" id="bGram">Aa Grammar</button>
-    <button class="btn" id="bPron">🗣 Pronunciation</button>
-    <select class="btn" id="tone"><option value="">🎭 Tone…</option><optgroup label="Natural (pitch &amp; pace only, 100% your voice)"><option value="n:confident">Confident</option><option value="n:calm">Calm</option><option value="n:warm">Warm</option></optgroup><optgroup label="AI restyle (regenerates the voice)"><option value="calm">Calm</option><option value="friendly">Friendly</option><option value="excited">Excited</option><option value="confident">Confident (experimental)</option><option value="native">Native accent (experimental)</option><option value="clean">Studio clean</option></optgroup></select>
+    <button class="btn" id="bPron">🗣 Pronunciation coach</button>
+    <select class="btn" id="tone"><option value="">🎭 Tone…</option><optgroup label="Natural (pitch &amp; pace only, 100% your voice)"><option value="n:confident">Confident</option><option value="n:calm">Calm</option><option value="n:warm">Warm</option></optgroup><optgroup label="AI restyle (regenerates your voice)"><option value="confident">Confident</option><option value="professional">Professional</option><option value="warm">Warm</option><option value="calm">Calm</option><option value="friendly">Friendly</option><option value="excited">Excited</option><option value="serious">Serious</option><option value="apologetic">Apologetic</option></optgroup></select>
     <span class="hint">Tip: click a word to replace it in your voice</span>
    </div>
    <div class="list" id="sugs"></div>
@@ -89,11 +89,11 @@ canvas{width:100%;height:46px;display:block;border-radius:6px;background:#1e1f22
   </div>
  </div>
 </div>
-<div class="pop" id="pop"><div class="hint">Replace <b id="popOld"></b> with…</div><input id="popIn" placeholder="new words"><div class="row"><button class="btn pri" id="popGo">Regenerate in my voice</button><button class="btn" id="popDel">Delete</button></div><div class="row" style="margin-top:6px"><button class="btn" id="popPron">🗣 Re-say it clearly</button></div><div class="row" style="margin-top:6px"><span class="hint">Restyle:</span><button class="btn" data-st="calm">Calm</button><button class="btn" data-st="confident">Confident</button><button class="btn" data-st="friendly">Friendly</button><button class="btn" data-st="native">Native</button></div><div class="hint" id="popMsg"></div></div>
+<div class="pop" id="pop"><div class="hint">Replace <b id="popOld"></b> with…</div><input id="popIn" placeholder="new words"><div class="row"><button class="btn pri" id="popGo">Regenerate in my voice</button><button class="btn" id="popDel">Delete</button></div><div class="row" style="margin-top:6px"><button class="btn" id="popPron">🗣 Re-say it clearly</button></div><div class="row" style="margin-top:6px"><span class="hint">Natural:</span><button class="btn" data-nat="confident">Confident</button><button class="btn" data-nat="calm">Calm</button><button class="btn" data-nat="warm">Warm</button></div><div class="row" style="margin-top:6px"><span class="hint">AI:</span><button class="btn" data-st="confident">Confident</button><button class="btn" data-st="professional">Professional</button><button class="btn" data-st="warm">Warm</button><button class="btn" data-st="calm">Calm</button></div><div class="hint" id="popMsg"></div></div>
 <div class="toast" id="toast"></div>
 <script>
 const $=id=>document.getElementById(id), api=(p,b)=>fetch(p,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b||{})}).then(r=>{if(!r.ok)throw new Error(r.statusText);return r.json()});
-let pronFlags={}, meant=[]; let sid=null, ws=null, ctx=null, node=null, stream=null, t0=0, tick=null, words=[], removed=[], ops=[], sugs=[], sel=null, rendered=null, dirty=true, origUrl=null, tones=[];
+let pronFlags={}, meant=[], accentTips=[]; let sid=null, ws=null, ctx=null, node=null, stream=null, t0=0, tick=null, words=[], removed=[], ops=[], sugs=[], sel=null, rendered=null, dirty=true, origUrl=null, tones=[];
 const toast=(m,ms=2600)=>{const t=$('toast');t.innerHTML=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),ms)};
 const fmt=s=>`${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,'0')}`, esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 const WORKLET=`class P extends AudioWorkletProcessor{process(i){const c=i[0][0];if(c)this.port.postMessage(c.slice(0));return true}}registerProcessor('p',P)`;
@@ -117,7 +117,7 @@ function onMsg(m){
   if(m.type==='final'){ ws.close(); ws=null; $('mic').textContent='🎙'; finalize(m); }
 }
 function finalize(m){
-  pronFlags={}; meant=[]; ops=removed.map((r,k)=>({id:'u'+k,type:'cut',t0:r.t0,t1:r.t1,kind:r.kind,text:r.text,on:true})); words.forEach(w=>w.x=null);
+  pronFlags={}; meant=[]; accentTips=[]; ops=removed.map((r,k)=>({id:'u'+k,type:'cut',t0:r.t0,t1:r.t1,kind:r.kind,text:r.text,on:true})); words.forEach(w=>w.x=null);
   origUrl=`/api/s/${sid}/file/orig.wav`; $('post').style.display='block'; $('dOrig').textContent=fmt(m.dur); drawWave('cvO',origUrl,[]); drawWords(); renderSugs(); refreshEdited();
 }
 const covered=(w,o)=>{const c=(w.s+w.e)/2;return c>=o.t0&&c<=o.t1};
@@ -137,7 +137,8 @@ function renderSugs(){
   $('sugs').innerHTML=ops.map((o,n)=>`<label class="item"><input type="checkbox" data-n="${n}" ${o.on?'checked':''}><span class="tag ${o.type==='replace'?'a':'c'}">${o.type==='replace'?(o.kind&&o.kind!=='replace'?o.kind:'AI voice'):o.kind}</span><span class="t">${o.type==='replace'?`${esc(o.old)} → <span class="ai">${esc(o.new)}</span>${o.verified?'':' <span class="hint">(unverified)</span>'}`:`<s>${esc(o.text)}</s>`}</span></label>`).join('')
    + tones.map(t=>`<div class="item"><span class="tag a">tone</span><span class="t">${t.style.replace('n:','')} take <span class="hint">(${t.sec}s, ${t.style.startsWith('n:')?'pitch &amp; pace only, still your real voice':'whole message regenerated by AI'})</span></span><button class="btn" onclick="playUrl('${t.url}')">▶</button><button class="btn" onclick="useTone('${t.url}',${t.style.startsWith('n:')})">Use</button></div>`).join('');
   $('sugs').insertAdjacentHTML('afterbegin', Object.values(pronFlags).map(x=>`<div class="item"><span class="tag" style="color:#f0a020">pronunciation</span><span class="t"><b>${esc(x.word)}</b> <span class="hint">${x.acc}/10 · expected /${x.canon}/ · weakest sound /${x.phone}/</span></span><button class="btn" data-fix="${x.i}">Re-say in my voice</button></div>`).join(''));
-  $('sugs').insertAdjacentHTML('afterbegin', meant.map((x,n)=>`<div class="item"><span class="tag" style="color:#f0a020">did you mean?</span><span class="t">heard <s>${esc(x.old)}</s> → <b>${esc(x.new)}</b> <span class="hint">sounds alike (/${x.heard}/ vs /${x.intended}/)</span></span><button class="btn" data-mean="${n}">Fix in my voice</button></div>`).join(''));
+  $('sugs').insertAdjacentHTML('afterbegin', accentTips.map(a=>`<div class="item"><span class="tag" style="color:#5fb3d3">accent</span><span class="t">You say /${a.phone}/ your own way in ${a.n} words. That's your accent, not a mistake, so those words aren't flagged.</span></div>`).join(''));
+  $('sugs').insertAdjacentHTML('afterbegin', meant.map((x,n)=>`<div class="item"><span class="tag" style="color:#f0a020">did you mean?</span><span class="t">heard <s>${esc(x.old)}</s> → <b>${esc(x.new)}</b> <span class="hint">sounds alike (/${x.heard}/ vs /${x.intended}/)${x.alts&&x.alts.length?` · or: ${x.alts.map(esc).join(', ')}`:''}</span></span><button class="btn" data-mean="${n}">Fix in my voice</button></div>`).join(''));
   $('sugs').querySelectorAll('[data-mean]').forEach(b=>b.onclick=()=>{const x=meant[+b.dataset.mean]; meant=meant.filter(y=>y!==x); b.disabled=true; b.innerHTML='<span class="spin"></span>'; replace(x.i,x.j,x.new)});
   $('sugs').querySelectorAll('[data-fix]').forEach(b=>b.onclick=()=>{b.disabled=true;b.innerHTML='<span class="spin"></span>';replace(+b.dataset.fix,+b.dataset.fix,null,true)});
   $('sugs').querySelectorAll('input').forEach(c=>c.onchange=()=>{ops[c.dataset.n].on=c.checked;dirty=true;drawWords();refreshEdited()});
@@ -172,8 +173,8 @@ $('tx').onclick=e=>{ const el=e.target.closest('.w'); if(!el||ws)return; const k
   $('popOld').textContent=words.slice(sel[0],sel[1]+1).map(w=>w.w).join(' '); $('popIn').value=''; $('popMsg').textContent='shift-click to select more words'; $('popIn').focus() };
 function hidePop(){ $('pop').style.display='none'; sel=null; drawWords() }
 $('popPron').onclick=()=>{ if(sel) replace(sel[0],sel[1],null,true) };
-document.querySelectorAll('#pop [data-st]').forEach(b=>b.onclick=async()=>{ if(!sel)return; const st=b.dataset.st, [i,j]=sel; $('popMsg').innerHTML='<span class="spin"></span> restyling…';
-  try{ const r=await api(`/api/s/${sid}/tone`,{style:st,i,j}); ops.push({id:'s'+Date.now(),type:'replace',...r.op,on:true}); hidePop(); toast(`${st} applied to the selection (${r.sec}s)`); drawWords(); renderSugs(); refreshEdited() }catch(e){ $('popMsg').textContent='failed: '+e.message } });
+document.querySelectorAll('#pop [data-st],#pop [data-nat]').forEach(b=>b.onclick=async()=>{ if(!sel)return; const nat=!!b.dataset.nat, st=b.dataset.st||b.dataset.nat, [i,j]=sel; $('popMsg').innerHTML='<span class="spin"></span> restyling…';
+  try{ const r=await api(`/api/s/${sid}/${nat?'natural':'tone'}`,{style:st,i,j}); ops.push({id:'s'+Date.now(),type:'replace',...r.op,on:true}); hidePop(); toast(`${st} applied to the selection (${r.sec}s)`); drawWords(); renderSugs(); refreshEdited() }catch(e){ $('popMsg').textContent='failed: '+e.message } });
 $('popGo').onclick=()=>{ const v=$('popIn').value.trim(); if(v&&sel) replace(sel[0],sel[1],v) };
 $('popIn').onkeydown=e=>{ if(e.key==='Enter')$('popGo').click(); if(e.key==='Escape')hidePop() };
 $('popDel').onclick=()=>{ const a=words[sel[0]],b=words[sel[1]],pv=words[sel[0]-1],nx=words[sel[1]+1];
@@ -183,7 +184,7 @@ document.addEventListener('mousedown',e=>{ if(!e.target.closest('#pop')&&!e.targ
 $('mic').onclick=()=>ws?stop():start().catch(e=>toast('Mic error: '+e.message));
 $('undo').onclick=()=>ws&&ws.send(JSON.stringify({type:'undo'})); $('redo').onclick=()=>ws&&ws.send(JSON.stringify({type:'redo'}));
 document.addEventListener('keydown',e=>{ if(!ws||e.target.tagName==='INPUT')return; if(e.key==='Backspace'||(e.key==='z'&&(e.ctrlKey||e.metaKey))){e.preventDefault();$('undo').click()} if(e.key===' '){e.preventDefault();stop()} });
-$('bPron').onclick=async()=>{ toast('<span class="spin"></span> checking pronunciation…',60000); const [r,m]=await Promise.all([api(`/api/s/${sid}/pron`),api(`/api/s/${sid}/intent`)]); pronFlags={}; meant=m.items;
+$('bPron').onclick=async()=>{ toast('<span class="spin"></span> checking pronunciation…',60000); const [r,m]=await Promise.all([api(`/api/s/${sid}/pron`),api(`/api/s/${sid}/intent`)]); pronFlags={}; meant=m.items; accentTips=r.accent||[];
   r.items.forEach(x=>pronFlags[x.i]=x); drawWords();
   renderSugs();
   toast(r.items.length?`${label}: ${r.items.length} edit${r.items.length>1?'s':''} (${((Date.now()-t)/1000).toFixed(1)}s) — untick any you want to keep`:`${label}: nothing to change 👍`); drawWords(); renderSugs(); refreshEdited();
@@ -230,7 +231,7 @@ $('bClean').onclick=()=>addCuts('c',`/api/s/${sid}/clean`,'Clean up'); $('bTight
 $('bGram').onclick=async()=>{ toast('<span class="spin"></span> checking grammar…',60000); const r=await api(`/api/s/${sid}/grammar`); if(!r.items.length)return toast('Grammar looks fine 👍');
   toast(`${r.items.length} fix${r.items.length>1?'es':''} — generating in your voice…`,60000); for(const f of r.items) await replace(f.i,f.j,f.new) };
 $('tone').onchange=async e=>{ const st=e.target.value; e.target.value=''; if(!st)return; toast(`<span class="spin"></span> ${st} take…`,60000);
-  try{ const nat=st.startsWith('n:'); const r=await api(`/api/s/${sid}/${nat?'natural':'tone'}`,{style:nat?st.slice(2):st,file:rendered&&rendered.url.split('/').pop()}); tones.push({style:st,...r}); renderSugs(); toast(`${st} take ready (${r.sec}s)`); playUrl(r.url) }catch(err){toast('tone failed: '+err.message)} };
+  try{ const nat=st.startsWith('n:'); const r=await api(`/api/s/${sid}/${nat?'natural':'tone'}`,{style:nat?st.slice(2):st,file:rendered&&rendered.url.split('/').pop()}); tones.push({style:st,...r}); renderSugs(); toast(`${st.replace('n:','')} take ready (${r.sec}s${r.engine?` · ${r.engine} · words kept ${Math.round(r.words_kept*100)}% · voice match ${r.voice_sim}`:''})`); playUrl(r.url) }catch(err){toast('tone failed: '+err.message)} };
 $('again').onclick=()=>{ $('post').style.display='none'; $('tx').innerHTML=''; $('timer').textContent='0:00' };
 $('file').onchange=async e=>{ const f=e.target.files[0]; if(!f)return; toast('<span class="spin"></span> transcribing…',60000); const fd=new FormData(); fd.append('f',f);
   const r=await (await fetch('/api/upload',{method:'POST',body:fd})).json(); sid=r.sid; words=r.words; removed=[]; ops=[]; tones=[]; toast('ready'); finalize(r) };

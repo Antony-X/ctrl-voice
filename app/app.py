@@ -12,7 +12,7 @@ from render import render, gap_edges, quiet
 from align import align, emissions
 from prosody import restyle, PRESETS
 import pickle
-from pron import score as pscore, features as pfeat, phones as g2p, levenshtein
+from pron import score as pscore, features as pfeat, phones as g2p, levenshtein, fit as afit
 PRON = pickle.load(open("/workspace/app/pron_model.pkl", "rb"))  # trained on speechocean762 expert word-accuracy labels
 FUNC = set("a an the of to in on at is it i you he she we they and or but be am are was were do does did my your his her its our their this that for with as by from not so if me us".split())
 
@@ -249,7 +249,8 @@ async def score_cands(s, engines, outs, cands, tw, wi, nw, win, W, i, j, L, dur,
             # verify: transcribe the spliced window and check the new words are actually there
             oL, oR = gap_edges(W, i, j, dur); test, _ = render(win, SR, [dict(t0=oL - L, t1=oR - L, insert=seg)])
             heard = " ".join(w["w"] for w in await asyncio.to_thread(transcribe, test, 1))
-            ok = norm(new.replace(" ", "")) in norm(heard.replace(" ", ""))
+            ht, nt = [norm(x) for x in heard.split() if norm(x)], [norm(x) for x in new.split() if norm(x)]
+            ok = any(ht[k:k + len(nt)] == nt for k in range(len(ht) - len(nt) + 1))
             sim = float(embed(seg, SR) @ e0) if len(seg) > 0.3 * SR else 0.5
             if same:  # pronunciation fix: re-score the regenerated word(s) with the mispronunciation detector
                 tws = [dict(w=w["w"]) for w in tw]; al = align(librosa.resample(test, orig_sr=SR, target_sr=16000), [w["w"] for w in tws])
@@ -260,29 +261,51 @@ async def score_cands(s, engines, outs, cands, tw, wi, nw, win, W, i, j, L, dur,
 
 
 @app.post("/api/s/{sid}/intent")
-async def api_intent(sid: str):
-    """Words the recognizer probably mis-heard because of pronunciation -> intended words (kept only if they sound alike)."""
+async def api_intent(sid: str, margin: float = 1.0):
+    """Words the recognizer probably mis-heard because of pronunciation. The LLM proposes up to 3 intended sentences;
+    each candidate word is scored by how well ITS phonemes explain the recorded sounds, relative to the word Whisper wrote."""
     s = get(sid); idx = [k for k, f in enumerate(s.flags()) if f is None]; act = [s.words[k] for k in idx]
-    res = await asyncio.to_thread(intent, act); out = []
-    for c in res:
-        a = sum((g2p(w) for w in c["old"].split()), []); b = sum((g2p(w) for w in c["new"].split()), [])
-        d = levenshtein(a, b) / max(1, len(b))
-        if d <= 0.6: out.append(dict(c, i=idx[c["i"]], j=idx[c["j"]], heard="".join(a), intended="".join(b), dist=round(d, 2)))
+    groups = await asyncio.to_thread(intent, act); out = []; x16 = librosa.resample(s.audio(), orig_sr=SR, target_sr=16000)
+    async with GPU:
+        for g in groups:
+            i, j = idx[g["i"]], idx[g["j"]]
+            seg = x16[int(max(0, s.words[i]["s"] - 0.05) * 16000):int((s.words[j]["e"] + 0.05) * 16000)]
+            heard = sum((g2p(w) for w in g["old"].split()), []); base = await asyncio.to_thread(afit, seg, g["old"])
+            best = None
+            for c in g["cands"]:
+                ph = sum((g2p(w) for w in c["new"].split()), []); d = levenshtein(heard, ph) / max(1, len(ph))
+                if d > 0.6: continue  # must sound alike
+                c.update(fit=round(await asyncio.to_thread(afit, seg, c["new"]) - base, 2), dist=round(d, 2), intended="".join(ph))
+                if c["fit"] >= -margin and (best is None or c["fit"] - 0.3 * c["rank"] > best["fit"] - 0.3 * best["rank"]): best = c
+            if best:
+                out.append(dict(i=i, j=j, old=g["old"], new=best["new"], heard="".join(heard), intended=best["intended"], fit=best["fit"], dist=best["dist"],
+                                alts=[c["new"] for c in g["cands"] if c is not best]))
     return dict(items=out)
 
 
 @app.post("/api/s/{sid}/pron")
-async def api_pron(sid: str, thr: float = 6.8):
-    """Flag likely mispronounced content words (skip function words, names, cut words)."""
+async def api_pron(sid: str, thr: float = 6.8, rel: float = 1.5):
+    """Flag words that are mispronounced FOR THIS SPEAKER. A sound the speaker always says differently is their accent:
+    it becomes a coach tip, not an error flag. Skips function words, names and cut words."""
     s = get(sid); W = s.words; fl = s.flags()
     async with GPU: pred, sc = await asyncio.to_thread(pron_pred, s.audio(), SR, W)
+    st = PRON["stats"]; per_phone = {}
+    content = [k for k, (w, p) in enumerate(zip(W, pred)) if p is not None and not fl[k] and norm(w["w"]) not in FUNC and len(norm(w["w"])) >= 3]
+    for k in content:
+        for g, ph in zip(sc[k]["gops"], sc[k]["phones"]):
+            mu, sd = st.get(ph, (0, 1)); per_phone.setdefault(ph, []).append((g - mu) / sd)
+    accent = {ph: float(np.mean(v)) for ph, v in per_phone.items() if len(v) >= 3 and np.mean(v) <= -1.0}  # consistently different = accent
+    med = float(np.median([pred[k] for k in content])) if len(content) >= 6 else 10.0
     items = []
-    for k, (w, p, o) in enumerate(zip(W, pred, sc)):
-        nw = norm(w["w"]); name = w["w"][:1].isupper() and k > 0 and not re.search(r"[.!?]$", W[k - 1]["w"])
-        if p is None or fl[k] or nw in FUNC or len(nw) < 3 or name: continue
-        if p <= thr: items.append(dict(i=k, word=w["w"], acc=round(p, 1), canon="".join(o["phones"]), heard="".join(o["heard"]), sub=o["sub"],
-                                      phone=o["phones"][o["worst"]]))
-    return dict(items=items, scores=[None if p is None else round(p, 1) for p in pred])
+    for k in content:
+        w, p, o = W[k], pred[k], sc[k]
+        if w["w"][:1].isupper() and k > 0 and not re.search(r"[.!?]$", W[k - 1]["w"]): continue  # probably a name
+        worst = o["phones"][o["worst"]]
+        bad = (p <= thr and p <= med - rel) if len(content) >= 6 else p <= thr  # worse than THIS speaker's usual, not just non-native
+        if bad and worst in accent and p > med - 2 * rel: bad = False  # only the speaker's habitual accent sound is off
+        if bad: items.append(dict(i=k, word=w["w"], acc=round(p, 1), canon="".join(o["phones"]), heard="".join(o["heard"]), sub=o["sub"], phone=worst))
+    tips = [dict(phone=ph, n=len(per_phone[ph]), z=round(z, 2)) for ph, z in sorted(accent.items(), key=lambda kv: kv[1])][:3]
+    return dict(items=items, accent=tips, median=round(med, 1), scores=[None if p is None else round(p, 1) for p in pred])
 
 
 def load_insert(s, iid):
@@ -297,36 +320,69 @@ async def api_render(sid: str, r: dict):
     return dict(url=f"/api/s/{sid}/file/{name}", dur=round(len(y) / SR, 2), ai=[[round(a, 2), round(b, 2)] for a, b in ai])
 
 
-TONES = {"calm": "Change the emotion to calm.", "friendly": "Change the emotion to happy.", "excited": "Change the emotion to excited.",
-         "serious": "Change the emotion to sad.", "clean": "Preserve all speakers, remove noise and reverberation, and output clean speech of the same length.",
-         "confident": "Change the speaking style to confident and assertive, keep the same voice and words.",
-         "native": "Remove the regional accent while preserving the speaker's voice and content."}
+STYLES = {  # Step-Audio-EditX edit types (32 speaking styles, 14 emotions); AuK instructions are the fallback
+    "confident": ("style", "authority"), "professional": ("style", "news"), "warm": ("style", "warm"), "calm": ("style", "gentle"),
+    "serious": ("style", "serious"), "friendly": ("emotion", "happy"), "excited": ("emotion", "excited"), "apologetic": ("emotion", "empathy")}
+AUK = {"calm": "Change the emotion to calm.", "friendly": "Change the emotion to happy.", "excited": "Change the emotion to excited.",
+       "confident": "Change the speaking style to confident and assertive, keep the same voice and words."}
+
+
+async def restyle_ai(src, text, style):
+    async with httpx.AsyncClient(timeout=300) as cl:
+        if "stepx" in ENGINES:
+            et, ei = STYLES[style]
+            o = (await cl.post(f"http://127.0.0.1:{ENGINES['stepx']}/instruct", json=dict(path=src, text=text, edit_type=et, edit_info=ei))).json(); o["engine"] = "Step-Audio-EditX"
+        elif "auk" in ENGINES and style in AUK:
+            o = (await cl.post(f"http://127.0.0.1:{ENGINES['auk']}/instruct", json=dict(path=src, instruction=AUK[style]))).json(); o["engine"] = "AuK"
+        else: raise HTTPException(400, f"no tone engine for {style}")
+    y, gsr = sf.read(o["path"], dtype="float32"); y = y.mean(1) if y.ndim > 1 else y
+    return librosa.resample(y, orig_sr=gsr, target_sr=SR), o
+
+
+def same_words(a, b):
+    from jiwer import wer
+    A, B = " ".join(norm(x) for x in a.split() if norm(x)), " ".join(norm(x) for x in b.split() if norm(x))
+    return 1 - min(1.0, wer(A, B)) if A else 0.0
+
+
 @app.post("/api/s/{sid}/tone")
 async def api_tone(sid: str, r: dict):
-    s = get(sid); src = f"{s.dir}/{r['file']}" if r.get("file") else f"{s.dir}/orig.wav"
-    if "auk" not in ENGINES: raise HTTPException(400, "tone engine not running")
-    if r.get("i") is not None:  # restyle only the selected words: same-length edit on a crop, splice the selection back
-        W, x = s.words, s.audio(); dur = len(x) / SR; L, R = gap_edges(W, r["i"], r["j"], dur); cL, cR = max(0, L - 1.0), min(dur, R + 1.0)
-        cp = f"{s.dir}/crop_{uuid.uuid4().hex[:6]}.wav"; sf.write(cp, x[int(cL * SR):int(cR * SR)], SR)
-        async with httpx.AsyncClient(timeout=180) as cl:
-            o = (await cl.post(f"http://127.0.0.1:{ENGINES['auk']}/instruct", json=dict(path=cp, instruction=TONES[r["style"]]))).json()
-        y, gsr = sf.read(o["path"], dtype="float32"); y = librosa.resample(y, orig_sr=gsr, target_sr=SR)
-        seg = y[int((L - cL) * SR):int((R - cL) * SR)]; ref = x[int(L * SR):int(R * SR)]
+    """AI restyle of the whole current edit or of the selected words. Checked: words kept (re-transcribed) and voice similarity."""
+    s = get(sid); t = time.time(); W, x = s.words, s.audio(); dur = len(x) / SR
+    if r.get("i") is not None:
+        i, j = r["i"], r["j"]; L, R = gap_edges(W, i, j, dur); a, b, cL, cR = window(W, i, j, dur, ctx=2.0)
+        crop = x[int(cL * SR):int(cR * SR)]; cp = f"{s.dir}/crop_{uuid.uuid4().hex[:6]}.wav"; sf.write(cp, crop, SR)
+        tw = [dict(w=w["w"]) for w in W[a:b + 1]]; y, o = await restyle_ai(cp, " ".join(w["w"] for w in tw), r["style"])
+        async with GPU:
+            seg = await asyncio.to_thread(extract, librosa.resample(y, orig_sr=SR, target_sr=16000), y, SR, tw, i - a, j - a)
+            if seg is None: raise HTTPException(500, "restyled words not found in the output")
+            heard = " ".join(w["w"] for w in await asyncio.to_thread(transcribe, seg, 1)); ref = x[int(L * SR):int(R * SR)]
+            sim = float(embed(seg, SR) @ embed(ref, SR)) if len(seg) > 0.5 * SR else None
         seg = seg * min(3.0, float(np.sqrt(np.mean(ref ** 2) + 1e-12) / np.sqrt(np.mean(seg ** 2) + 1e-12)))
         iid = uuid.uuid4().hex[:8]; np.save(f"{s.dir}/ins_{iid}.npy", seg); s.inserts[iid] = seg
-        return dict(op=dict(t0=round(L, 3), t1=round(R, 3), insert=iid, i=r["i"], j=r["j"], old=" ".join(w["w"] for w in W[r["i"]:r["j"] + 1]),
-                            new=" ".join(w["w"] for w in W[r["i"]:r["j"] + 1]), engine="auk", verified=True, kind=r["style"]), sec=round(o["sec"], 2))
-    async with httpx.AsyncClient(timeout=180) as cl:
-        o = (await cl.post(f"http://127.0.0.1:{ENGINES['auk']}/instruct", json=dict(path=src, instruction=TONES[r["style"]]))).json()
-    y, gsr = sf.read(o["path"], dtype="float32"); y = librosa.resample(y, orig_sr=gsr, target_sr=SR)
+        kept = same_words(" ".join(w["w"] for w in W[i:j + 1]), heard)
+        return dict(op=dict(t0=round(L, 3), t1=round(R, 3), insert=iid, i=i, j=j, old=" ".join(w["w"] for w in W[i:j + 1]), new=" ".join(w["w"] for w in W[i:j + 1]),
+                            engine=o["engine"], verified=kept >= 0.8, kind=r["style"], sim=None if sim is None else round(sim, 3)), sec=round(time.time() - t, 2))
+    src = f"{s.dir}/{r['file']}" if r.get("file") else f"{s.dir}/orig.wav"; y0, _ = librosa.load(src, sr=SR)
+    async with GPU: text = " ".join(w["w"] for w in await asyncio.to_thread(transcribe, y0, 1))
+    y, o = await restyle_ai(src, text, r["style"])
+    async with GPU:
+        heard = " ".join(w["w"] for w in await asyncio.to_thread(transcribe, y, 1)); sim = float(embed(y, SR) @ embed(y0, SR))
     name = f"tone_{r['style']}_{uuid.uuid4().hex[:6]}.wav"; sf.write(f"{s.dir}/{name}", y, SR)
-    return dict(url=f"/api/s/{sid}/file/{name}", dur=round(len(y) / SR, 2), sec=round(o["sec"], 2))
+    return dict(url=f"/api/s/{sid}/file/{name}", dur=round(len(y) / SR, 2), sec=round(time.time() - t, 2), engine=o["engine"],
+                words_kept=round(same_words(text, heard), 2), voice_sim=round(sim, 3))
 
 
 @app.post("/api/s/{sid}/natural")
 async def api_natural(sid: str, r: dict):
     """Pitch/timing-only restyle of the current edit (no AI voice): confident / calm / warm."""
     s = get(sid); src = f"{s.dir}/{r['file']}" if r.get("file") else f"{s.dir}/orig.wav"; t = time.time()
+    if r.get("i") is not None:  # selection: restyle just those words and splice them back
+        W, x = s.words, s.audio(); L, R = gap_edges(W, r["i"], r["j"], len(x) / SR)
+        sub = [dict(w, s=w["s"] - L, e=w["e"] - L) for w in W[r["i"]:r["j"] + 1]]
+        seg = await asyncio.to_thread(restyle, x[int(L * SR):int(R * SR)], SR, sub, r["style"])
+        iid = uuid.uuid4().hex[:8]; np.save(f"{s.dir}/ins_{iid}.npy", seg); s.inserts[iid] = seg; txt = " ".join(w["w"] for w in W[r["i"]:r["j"] + 1])
+        return dict(op=dict(t0=round(L, 3), t1=round(R, 3), insert=iid, i=r["i"], j=r["j"], old=txt, new=txt, engine="praat", verified=True, kind="natural " + r["style"]), sec=round(time.time() - t, 2))
     y, _ = librosa.load(src, sr=SR)
     async with GPU: W = await asyncio.to_thread(transcribe, y, 1)
     z = await asyncio.to_thread(restyle, y, SR, W, r["style"])

@@ -210,23 +210,26 @@ def tighten(words):
 
 
 INTENT_SYS = """You get the speech-recognition transcript of a voice message, often from a non-native English speaker.
-Mispronounced words get recognized as DIFFERENT real words that sound similar: r/l ("load" for "road", "right" for "light"), th/s/d ("sing" for "thing"),
-vowels ("lock" for "look", "date" for "day", "ears" for "eyes"), dropped endings ("walk" for "walked"), "her" for "here", "three" for "there".
-Write the sentence the speaker most likely INTENDED to say. Keep every word that already makes sense; only change words that are wrong in context.
-Words marked (?) were recognized with LOW confidence: they are the most likely to be mis-heard, so check whether a similar-sounding word fits the context better
-(e.g. "our battle(?) games" -> "our better games", "for United from(?)" -> "for a united front").
-If the transcript already makes sense, return it unchanged. Output only the intended sentence, without (?) marks."""
+Mispronounced words get recognized as DIFFERENT real words that sound similar: r/l ("lice" for "rice"), th/s ("sink" for "think"), short/long vowels ("sheep" for "ship"),
+dropped endings ("walk" for "walked"). Words marked (?) were recognized with LOW confidence and are the most likely to be wrong.
+Write up to 3 different sentences the speaker most likely INTENDED, most likely first. Keep every word that already makes sense; only change words that are wrong in context.
+If the transcript already makes sense, return it unchanged as the only option.
+Answer as JSON: {"intended": ["sentence 1", "sentence 2"]}"""
 
 
 def intent(words):
-    """Likely mis-pronounced / mis-heard words -> what the speaker probably meant. Diffed word-by-word; caller keeps only sound-alike swaps."""
-    try: out = re.sub(r"\(\?\)", "", chat(INTENT_SYS, " ".join(w["w"] + ("(?)" if w.get("p", 1) < 0.6 else "") for w in words), 300)).strip().strip('"')
+    """N-best guesses of what the speaker meant -> candidate word substitutions per span (caller ranks them by the actual sounds)."""
+    try:
+        out = chat(INTENT_SYS, " ".join(w["w"] + ("(?)" if w.get("p", 1) < 0.6 else "") for w in words), 500)
+        m = re.search(r"\{.*\}", out, re.S); sents = json.loads(m.group(0))["intended"] if m else [out]
     except Exception as e: print("llm error", e); return []
-    a, b = [norm(w["w"]) for w in words], out.split()
-    res = []
-    for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, [norm(x) for x in b], autojunk=False).get_opcodes():
-        if op != "replace" or i2 - i1 > 3 or j2 - j1 > 3: continue  # word substitutions only (insert/delete are grammar, not pronunciation)
-        new = " ".join(re.sub(r"[.,!?;:]+$", "", x) for x in b[j1:j2])
-        if norm(new.replace(" ", "")) == "".join(a[i1:i2]): continue
-        res.append(dict(i=i1, j=i2 - 1, old=" ".join(w["w"] for w in words[i1:i2]), new=new))
-    return res
+    a, groups = [norm(w["w"]) for w in words], {}
+    for rank, sent in enumerate(sents[:3]):
+        b = re.sub(r"\(\?\)", "", str(sent)).split()
+        for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, [norm(x) for x in b], autojunk=False).get_opcodes():
+            if op != "replace" or i2 - i1 > 3 or j2 - j1 > 3: continue  # word substitutions only
+            new = " ".join(re.sub(r"[.,!?;:]+$", "", x) for x in b[j1:j2])
+            if norm(new.replace(" ", "")) == "".join(a[i1:i2]): continue
+            g = groups.setdefault((i1, i2 - 1), dict(i=i1, j=i2 - 1, old=" ".join(w["w"] for w in words[i1:i2]), cands=[]))
+            if new.lower() not in [c["new"].lower() for c in g["cands"]]: g["cands"].append(dict(new=new, rank=rank))
+    return list(groups.values())
