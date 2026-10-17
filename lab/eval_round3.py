@@ -29,7 +29,7 @@ if mode == "pron":
             if o is None or norm(w["text"]) in FUNC or len(norm(w["text"])) < 3: continue
             p = float(M["reg"].predict([features(o, st)])[0])
             spk.setdefault(r["speaker"], []).append(dict(p=p, acc=w["accuracy"], o=o, word=w["text"]))
-    res = {"absolute": [], "tolerant": []}; nwords = 0; accent_tips = 0
+    res = {"absolute": [], "tolerant": [], "accent-excl only": []}; nwords = 0; accent_tips = 0; nag = 0
     for s, ws in spk.items():
         nwords += len(ws); per = {}
         for w in ws:
@@ -38,11 +38,14 @@ if mode == "pron":
         med = float(np.median([w["p"] for w in ws]))
         for w in ws:
             worst = w["o"]["phones"][w["o"]["worst"]]
-            if w["p"] <= 6.8: res["absolute"].append(w)
+            if w["p"] <= 6.8:
+                res["absolute"].append(w); nag += worst in accent
+                if not (worst in accent and w["p"] > med - 3.0): res["accent-excl only"].append(w)
             bad = w["p"] <= 6.8 and w["p"] <= med - 1.5
             if bad and worst in accent and w["p"] > med - 3.0: bad = False
             if bad: res["tolerant"].append(w)
     print(f"speakers {len(spk)}, content words {nwords}, accent sounds found per speaker {accent_tips/len(spk):.1f}")
+    print(f"absolute flags whose weakest sound is the speaker's habitual accent sound: {nag}/{len(res['absolute'])} = {nag/len(res['absolute']):.2f}")
     for k, v in res.items():
         a = np.array([w["acc"] for w in v])
         print(f"{k:9s} flags {len(v):4d} ({100*len(v)/nwords:.1f} per 100 words) | expert-bad (<=5) precision {np.mean(a<=5):.2f} | (<=3) {np.mean(a<=3):.2f} | expert-fine (>=8) false alarms {np.mean(a>=8):.2f}")

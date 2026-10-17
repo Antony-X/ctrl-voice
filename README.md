@@ -4,6 +4,7 @@ Voice messages you can edit like text: undo the last thought while recording, re
 
 - **Architecture (visual)**: `docs/architecture.html` (open in a browser) · hosted copy: https://claude.ai/artifact/BHqCXAa4bTqss5iu8fhPqf
 - **Listening page with all test audio**: `docs/listening_page.html` · hosted copy: https://claude.ai/artifact/Vw2FXXNXYrhobJrQSNtQg2
+- **Start here (humans and agents)**: `CLAUDE.md`, `docs/PROJECT.md`, `docs/HANDOFF.md`, `docs/RESULTS.md`
 - **Research reports**: `reports/ReSpeak voice editing feasibility.md` (round 1) and `reports/ReSpeak grammar pronunciation and accent.md` (round 2); sources in `research_notes/`
 
 ## Status (measured, see reports for details)
@@ -14,11 +15,11 @@ Voice messages you can edit like text: undo the last thought while recording, re
 | Clean up (fillers, self-corrections, repeats) | Works | 24/28 exact, 0/10 meaning-changing edits |
 | Replace a word in your own voice | Works | dots.tts.edit+splice 10/10, PlayDiffusion+splice 9/10 on real recordings; app uses PlayDiffusion + F5 in parallel with ASR verification, 3-6 s |
 | Grammar fix in your own voice | Works (suggestions) | 8/8 fixes rendered and verified on real L2 speakers (EdAcc) |
-| Mispronunciation detection | Works on read speech | AUC 0.88, corr. with experts 0.53 (speechocean762) |
+| Pronunciation coach (detection) | Works on read speech | AUC 0.88, corr. with experts 0.53 (speechocean762); accent-tolerant mode flags 26% fewer words |
 | Re-say a word clearly | Works | detector score 4.6-6.1 → 9.0-9.95 |
 | "Did you mean...?" (mis-heard words) | Experimental | no net gain yet |
 | Tone: natural (pitch & pace) | Works, not listener-validated | 0.1 s, voice untouched |
-| Tone: AI restyle | Experimental | voice similarity drops (0.72 for calm with AuK) |
+| Tone: AI restyle | Experimental | AuK voice sim 0.72-0.86; Step-Audio-EditX (optional) 0.52-0.60 |
 | English accent removal | Does not work (dropped) | no measurable change with AuK |
 
 ## Repo layout
@@ -32,6 +33,7 @@ Voice messages you can edit like text: undo the last thought while recording, re
 | `app/pron.py`, `app/pron_model.pkl` | Pronunciation scorer (wav2vec2 phoneme CTC + GOP features) and the detector trained on speechocean762 |
 | `app/prosody.py` | Natural tone presets (Praat PSOLA) |
 | `app/editor_service.py` | One small server per voice model: `playdiff`, `f5`, `auk`, `dots` |
+| `app/stepx_service.py` | Optional Step-Audio-EditX tone server (more styles, bigger voice change) |
 | `lab/` | Benchmarks and experiments; `lab/align.py` (forced aligner) is imported by the app |
 | `scripts/` | Install / start scripts used on the RunPod pod |
 | `docs/` | Architecture and listening pages (self-contained HTML) |

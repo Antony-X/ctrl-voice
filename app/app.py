@@ -273,6 +273,8 @@ async def api_intent(sid: str, margin: float = 1.0):
             heard = sum((g2p(w) for w in g["old"].split()), []); base = await asyncio.to_thread(afit, seg, g["old"])
             best = None
             for c in g["cands"]:
+                o_, n_ = norm(g["old"].replace(" ", "")), norm(c["new"].replace(" ", ""))
+                if o_ in n_ or n_ in o_: continue  # "upward"->"upwards", "day"->"today": word-form nitpicks, not mispronunciations
                 ph = sum((g2p(w) for w in c["new"].split()), []); d = levenshtein(heard, ph) / max(1, len(ph))
                 if d > 0.6: continue  # must sound alike
                 c.update(fit=round(await asyncio.to_thread(afit, seg, c["new"]) - base, 2), dist=round(d, 2), intended="".join(ph))

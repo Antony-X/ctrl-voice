@@ -180,7 +180,7 @@ code{font-family:var(--mono);font-size:13.5px;background:var(--paper);border:1px
 
       <text class="tkeep" x="230" y="318">RESTYLE PATH · Tone, whole message or selected words</text>
       <rect class="keep" x="230" y="330" width="330" height="62" rx="8"/><text class="tb" x="395" y="355" text-anchor="middle">Natural: Praat pitch &amp; pace</text><text class="ts" x="395" y="374" text-anchor="middle">confident · calm · warm · 0.1 s · voice untouched</text>
-      <rect class="ai" x="600" y="330" width="340" height="62" rx="8"/><text class="tb" x="770" y="355" text-anchor="middle">AI restyle: AuK</text><text class="ts" x="770" y="374" text-anchor="middle">calm · friendly · confident* · native* · ~1 s</text>
+      <rect class="ai" x="600" y="330" width="340" height="62" rx="8"/><text class="tb" x="770" y="355" text-anchor="middle">AI restyle: Step-Audio-EditX</text><text class="ts" x="770" y="374" text-anchor="middle">confident · professional · warm · calm · 13–30 s</text>
 
       <path class="ln" marker-end="url(#a3)" d="M174,225 C200,225 200,79 228,79"/>
       <path class="ln" marker-end="url(#a3)" d="M174,240 L228,203"/>
@@ -195,7 +195,7 @@ code{font-family:var(--mono);font-size:13.5px;background:var(--paper);border:1px
       <path class="ln" marker-end="url(#a3)" d="M770,392 L770,426"/>
     </svg>
     </div>
-    <figcaption>The LLM (Qwen3.6-35B-A3B) never edits audio. It only proposes which words to cut or fix; code checks every proposal, and voice models only ever regenerate a short window, which is then checked by transcribing it again. * marks experimental styles.</figcaption>
+    <figcaption>The LLM (Qwen3.6-35B-A3B) never edits audio. It only proposes which words to cut or fix; code checks every proposal, and voice models only ever regenerate a short window, which is then checked by transcribing it again. AI tone results report how many words survived and how close the voice stayed.</figcaption>
   </figure>
 </section>
 
@@ -229,15 +229,15 @@ code{font-family:var(--mono);font-size:13.5px;background:var(--paper);border:1px
   <h2>Everything on one 80 GB GPU</h2>
   <figure>
     <div class="scroll">
-    <svg viewBox="0 0 960 130" role="img" aria-label="GPU memory: about 40 GB for the language model, 19 GB for the AuK tone model, about 11 GB for the two voice editors, about 4 GB for speech recognition and scoring, and about 6 GB free.">
+    <svg viewBox="0 0 960 130" role="img" aria-label="GPU memory: about 40 GB for the language model, about 17 GB for the Step-Audio-EditX tone model, about 11 GB for the two voice editors, about 4 GB for speech recognition and scoring, and about 6 GB free.">
       <rect class="ai" x="20" y="30" width="450" height="44"/><text class="tb" x="245" y="57" text-anchor="middle">LLM brain · Qwen3.6-35B-A3B · 40 GB</text>
-      <rect class="keep" x="470" y="30" width="214" height="44"/><text class="tb" x="577" y="57" text-anchor="middle">AuK tone · 19 GB</text>
-      <rect class="live" x="684" y="30" width="124" height="44"/><text class="tb" x="746" y="57" text-anchor="middle">Editors · ~11</text>
-      <rect class="cut" x="808" y="30" width="45" height="44"/><text class="tb" x="830" y="57" text-anchor="middle">~4</text>
-      <rect class="bx" x="853" y="30" width="87" height="44"/><text class="ts" x="896" y="57" text-anchor="middle">free ~6</text>
+      <rect class="keep" x="470" y="30" width="191" height="44"/><text class="tb" x="565" y="57" text-anchor="middle">Step-Audio-EditX · ~17</text>
+      <rect class="live" x="661" y="30" width="124" height="44"/><text class="tb" x="723" y="57" text-anchor="middle">Editors · ~11</text>
+      <rect class="cut" x="785" y="30" width="45" height="44"/><text class="tb" x="807" y="57" text-anchor="middle">~4</text>
+      <rect class="bx" x="830" y="30" width="110" height="44"/><text class="ts" x="885" y="57" text-anchor="middle">free ~8</text>
       <line class="ln" x1="20" y1="90" x2="940" y2="90"/>
       <text class="tm" x="20" y="110">0 GB</text><text class="tm" x="470" y="110" text-anchor="middle">40</text><text class="tm" x="940" y="110" text-anchor="end">80 GB</text>
-      <text class="tm" x="830" y="22" text-anchor="middle">ASR + scorers</text>
+      <text class="tm" x="807" y="22" text-anchor="middle">ASR + scorers</text>
     </svg>
     </div>
     <figcaption>RTX-class 24 GB cards can run the voice editors and recognizer; the LLM is the big block. Using a hosted LLM API instead would free 40 GB for the slower, more reliable editor (dots.tts.edit) or a richer tone model (Step-Audio-EditX).</figcaption>
@@ -257,10 +257,10 @@ code{font-family:var(--mono);font-size:13.5px;background:var(--paper);border:1px
       <tr><td>✂ Tighten</td><td>Clean up + LLM picks digressions to drop</td><td class="num">~1.3 s</td><td><span class="pill p-cut">cuts only</span></td></tr>
       <tr><td>Click word → replace</td><td>Two voice models in parallel → splice → re-transcribe → retry</td><td class="num">3–6 s</td><td><span class="pill p-ai">1 AI phrase</span></td></tr>
       <tr><td>Aa Grammar</td><td>LLM fixes 7 error types → each fix goes through replace</td><td class="num">2–6 s / fix</td><td><span class="pill p-ai">AI words</span></td></tr>
-      <tr><td>🗣 Pronunciation</td><td>Phoneme scorer + did-you-mean LLM → suggestions</td><td class="num">~0.5 s</td><td><span class="pill p-none">unchanged</span></td></tr>
+      <tr><td>🗣 Pronunciation coach</td><td>Phoneme scorer flags words worse than your own norm; accent sounds become tips; did-you-mean guesses ranked by your actual sounds</td><td class="num">~0.5 s</td><td><span class="pill p-none">unchanged</span></td></tr>
       <tr><td>Re-say clearly</td><td>Regenerate the same word, re-score it</td><td class="num">3–5 s</td><td><span class="pill p-ai">1 AI word</span></td></tr>
       <tr><td>Tone · natural</td><td>Praat changes pitch and pace</td><td class="num">0.1–0.6 s</td><td><span class="pill p-keep">your voice</span></td></tr>
-      <tr><td>Tone · AI</td><td>AuK regenerates the message or the selection</td><td class="num">~1 s</td><td><span class="pill p-ai">regenerated</span></td></tr>
+      <tr><td>Tone · AI</td><td>Step-Audio-EditX regenerates the message or the selection; words and voice checked</td><td class="num">13–30 s</td><td><span class="pill p-ai">regenerated</span></td></tr>
       <tr><td>Send</td><td>Renderer applies the edit list once</td><td class="num">&lt; 0.1 s</td><td><span class="pill p-none">new file</span></td></tr>
     </tbody></table></div>
 </section>
@@ -277,7 +277,7 @@ code{font-family:var(--mono);font-size:13.5px;background:var(--paper);border:1px
       <tr><td><code>lab/align.py</code></td><td>Forced aligner that gives exact word start and end times</td></tr>
       <tr><td><code>app/pron.py</code> · <code>pron_model.pkl</code></td><td>Pronunciation scorer and the small detector trained on speechocean762</td></tr>
       <tr><td><code>app/prosody.py</code></td><td>Natural tone presets (pitch and pace with Praat)</td></tr>
-      <tr><td><code>app/editor_service.py</code></td><td>One small server per voice model: PlayDiffusion, F5, AuK, dots</td></tr>
+      <tr><td><code>app/editor_service.py</code> · <code>app/stepx_service.py</code></td><td>One small server per voice model: PlayDiffusion, F5, dots; Step-Audio-EditX for tone</td></tr>
       <tr><td><code>scripts/</code></td><td>Install and start scripts for a fresh GPU machine</td></tr>
       <tr><td><code>lab/</code> · <code>reports/</code> · <code>research_notes/</code></td><td>Benchmarks, measurements, and the two research reports</td></tr>
     </tbody></table></div>
