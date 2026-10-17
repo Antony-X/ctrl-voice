@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReSpeak</title>
+<style>
+:root{--bg:#1e1f22;--panel:#2b2d31;--panel2:#313338;--line:#3f4147;--text:#f2f3f5;--mut:#949ba4;--acc:#5865f2;--ai:#b197fc;--cut:#f87171;--ok:#3ba55d;--warn:#faa61a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 "gg sans","Segoe UI",system-ui,sans-serif}
+.app{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:16px;max-width:1280px;margin:0 auto;padding:16px;min-height:100vh}
+@media(max-width:900px){.app{grid-template-columns:1fr}}
+.card{background:var(--panel);border-radius:14px;padding:18px;border:1px solid #232428}
+h1{margin:0 0 2px;font-size:22px;letter-spacing:-.3px}h1 b{color:var(--acc)}.sub{color:var(--mut);font-size:13px;margin-bottom:14px}
+.rec{display:flex;align-items:center;gap:14px;margin:6px 0 14px}
+.mic{width:64px;height:64px;border-radius:50%;border:0;background:var(--acc);color:#fff;font-size:26px;cursor:pointer;flex:none;transition:.15s;box-shadow:0 0 0 0 rgba(88,101,242,.6)}
+.mic.on{background:#ed4245;animation:pulse 1.4s infinite}@keyframes pulse{70%{box-shadow:0 0 0 14px rgba(237,66,69,0)}}
+.timer{font:600 20px ui-monospace,monospace;min-width:64px}.meter{flex:1;height:8px;background:#1e1f22;border-radius:6px;overflow:hidden}.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ok),var(--warn));transition:width .08s}
+.btn{border:0;border-radius:8px;padding:9px 14px;background:var(--panel2);color:var(--text);cursor:pointer;font:inherit;font-weight:600;display:inline-flex;gap:6px;align-items:center;border:1px solid var(--line)}
+.btn:hover{background:#3a3c42}.btn.pri{background:var(--acc);border-color:var(--acc)}.btn.pri:hover{background:#4752c4}.btn:disabled{opacity:.45;cursor:default}
+.btn.big{padding:12px 18px;font-size:16px}.kbd{font:11px ui-monospace,monospace;background:#1e1f22;border-radius:4px;padding:1px 5px;color:var(--mut)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tx{min-height:150px;max-height:46vh;overflow:auto;background:var(--panel2);border-radius:10px;padding:14px;margin:12px 0;font-size:17px;line-height:2}
+.tx:empty::before{content:"Your words appear here as you speak…";color:var(--mut)}
+.w{border-radius:5px;padding:2px 2px;cursor:pointer;transition:background .2s}.w:hover{background:#404249}.w.sel{background:var(--acc)}
+.w.cut{color:var(--cut);text-decoration:line-through;opacity:.55}.w.sug{text-decoration:underline wavy var(--warn);text-underline-offset:5px}
+.w.new{animation:fade .35s}.w.pron{text-decoration:underline dotted #f0a020;text-decoration-thickness:3px;text-underline-offset:5px}@keyframes fade{from{opacity:0;transform:translateY(3px)}}
+.ai{color:var(--ai);background:rgba(177,151,252,.13);border-radius:5px;padding:2px 4px;font-weight:600}
+.tag{font-size:10px;text-transform:uppercase;letter-spacing:.5px;background:#1e1f22;color:var(--mut);border-radius:4px;padding:0 4px;margin:0 2px;vertical-align:2px}
+.tag.c{color:var(--cut)}.tag.a{color:var(--ai)}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:#111214;border:1px solid var(--line);padding:10px 16px;border-radius:10px;opacity:0;transition:.25s;pointer-events:none;max-width:90vw;z-index:9}
+.toast.show{opacity:1}
+.pop{position:absolute;background:#111214;border:1px solid var(--line);border-radius:10px;padding:10px;display:none;z-index:5;width:300px;box-shadow:0 8px 24px #0008}
+.pop input{width:100%;background:var(--panel2);border:1px solid var(--line);color:var(--text);border-radius:6px;padding:8px;font:inherit;margin:6px 0}
+.list{display:flex;flex-direction:column;gap:6px;margin-top:8px}.item{display:flex;gap:8px;align-items:center;background:var(--panel2);border-radius:8px;padding:7px 10px;font-size:14px}
+.item .t{flex:1}.item input{accent-color:var(--acc)}
+.players{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}.pl{background:var(--panel2);border-radius:10px;padding:10px}.pl h4{margin:0 0 6px;font-size:13px;color:var(--mut);font-weight:600}
+canvas{width:100%;height:46px;display:block;border-radius:6px;background:#1e1f22;cursor:pointer}
+.spin{display:inline-block;width:14px;height:14px;border:2px solid #fff6;border-top-color:#fff;border-radius:50%;animation:sp 0.7s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}
+.chat{display:flex;flex-direction:column;padding:0;overflow:hidden}.chat .hd{padding:14px 16px;border-bottom:1px solid #1f2023;font-weight:700}.chat .hd span{color:var(--mut);font-weight:400}
+.msgs{flex:1;overflow:auto;padding:12px 16px;display:flex;flex-direction:column;gap:14px;min-height:300px}
+.msg{display:flex;gap:10px}.av{width:38px;height:38px;border-radius:50%;flex:none;display:grid;place-items:center;font-weight:700}
+.msg .n{font-weight:600}.msg .n small{color:var(--mut);font-weight:400;margin-left:6px}
+.vm{margin-top:4px;background:var(--panel2);border-radius:22px;padding:7px 12px 7px 7px;display:flex;align-items:center;gap:10px;width:min(330px,100%)}
+.vm button{width:34px;height:34px;border-radius:50%;border:0;background:var(--acc);color:#fff;cursor:pointer;flex:none}
+.bars{flex:1;height:28px;display:flex;align-items:center;gap:2px}.bars i{flex:1;background:#6d6f78;border-radius:2px;min-height:3px}.bars i.ai{background:var(--ai)}
+.badge{font-size:12px;color:var(--ai);margin-top:4px;cursor:pointer}.trans{font-size:13px;color:var(--mut);margin-top:4px;display:none}
+.hint{color:var(--mut);font-size:13px}.sec{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+.sec h3{margin:0 0 8px;font-size:14px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut)}
+</style>
+</head>
+<body>
+<div class="app">
+ <div class="card" id="composer">
+  <h1>Re<b>Speak</b></h1>
+  <div class="sub">Voice messages you can edit like text — your real voice, minus the mistakes.</div>
+  <div class="rec">
+   <button class="mic" id="mic" title="Record">🎙</button>
+   <div class="timer" id="timer">0:00</div>
+   <div class="meter"><i id="lvl"></i></div>
+  </div>
+  <div class="row" id="liveBar">
+   <button class="btn" id="undo" disabled>⟲ Undo last thought <span class="kbd">⌫</span></button>
+   <button class="btn" id="redo" disabled>⟳ Redo</button>
+   <span class="hint">…or just say <i>“scratch that”</i></span>
+  </div>
+  <div class="tx" id="tx"></div>
+  <div id="post" style="display:none">
+   <div class="row">
+    <button class="btn" id="bClean">✨ Clean up</button>
+    <button class="btn" id="bTight">✂ Tighten</button>
+    <button class="btn" id="bGram">Aa Grammar</button>
+    <button class="btn" id="bPron">🗣 Pronunciation</button>
+    <select class="btn" id="tone"><option value="">🎭 Tone…</option><optgroup label="Natural (pitch &amp; pace only, 100% your voice)"><option value="n:confident">Confident</option><option value="n:calm">Calm</option><option value="n:warm">Warm</option></optgroup><optgroup label="AI restyle (regenerates the voice)"><option value="calm">Calm</option><option value="friendly">Friendly</option><option value="excited">Excited</option><option value="confident">Confident (experimental)</option><option value="native">Native accent (experimental)</option><option value="clean">Studio clean</option></optgroup></select>
+    <span class="hint">Tip: click a word to replace it in your voice</span>
+   </div>
+   <div class="list" id="sugs"></div>
+   <div class="players">
+    <div class="pl"><h4>ORIGINAL <span id="dOrig"></span></h4><canvas id="cvO"></canvas></div>
+    <div class="pl"><h4>EDITED <span id="dEd"></span></h4><canvas id="cvE"></canvas></div>
+   </div>
+   <div class="row" style="margin-top:12px"><button class="btn pri big" id="send">➤ Send voice message</button><button class="btn" id="again">New recording</button></div>
+  </div>
+  <div class="sec"><h3>No mic?</h3><div class="row"><button class="btn" id="sample">▶ Try a sample message</button><input type="file" id="file" accept="audio/*" class="btn"><span class="hint">or upload a recording</span></div></div>
+ </div>
+ <div class="card chat">
+  <div class="hd"># weekend-plans <span>· Discord-style demo channel</span></div>
+  <div class="msgs" id="msgs">
+   <div class="msg"><div class="av" style="background:#eb459e">M</div><div><div class="n">Maya <small>Today 14:02</small></div>are we still on for this weekend?? send me the plan 🙏</div></div>
+  </div>
+ </div>
+</div>
+<div class="pop" id="pop"><div class="hint">Replace <b id="popOld"></b> with…</div><input id="popIn" placeholder="new words"><div class="row"><button class="btn pri" id="popGo">Regenerate in my voice</button><button class="btn" id="popDel">Delete</button></div><div class="row" style="margin-top:6px"><button class="btn" id="popPron">🗣 Re-say it clearly</button></div><div class="row" style="margin-top:6px"><span class="hint">Restyle:</span><button class="btn" data-st="calm">Calm</button><button class="btn" data-st="confident">Confident</button><button class="btn" data-st="friendly">Friendly</button><button class="btn" data-st="native">Native</button></div><div class="hint" id="popMsg"></div></div>
+<div class="toast" id="toast"></div>
+<script>
+const $=id=>document.getElementById(id), api=(p,b)=>fetch(p,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b||{})}).then(r=>{if(!r.ok)throw new Error(r.statusText);return r.json()});
+let pronFlags={}, meant=[]; let sid=null, ws=null, ctx=null, node=null, stream=null, t0=0, tick=null, words=[], removed=[], ops=[], sugs=[], sel=null, rendered=null, dirty=true, origUrl=null, tones=[];
+const toast=(m,ms=2600)=>{const t=$('toast');t.innerHTML=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),ms)};
+const fmt=s=>`${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,'0')}`, esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const WORKLET=`class P extends AudioWorkletProcessor{process(i){const c=i[0][0];if(c)this.port.postMessage(c.slice(0));return true}}registerProcessor('p',P)`;
+
+async function start(){
+  sid=Math.random().toString(36).slice(2,10); words=[];removed=[];ops=[];sugs=[];rendered=null;dirty=true;tones=[];$('tx').innerHTML='';$('post').style.display='none';$('sugs').innerHTML='';
+  stream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true,channelCount:1}});
+  ctx=new AudioContext({sampleRate:24000}); await ctx.audioWorklet.addModule(URL.createObjectURL(new Blob([WORKLET],{type:'text/javascript'})));
+  node=new AudioWorkletNode(ctx,'p'); ctx.createMediaStreamSource(stream).connect(node);
+  ws=new WebSocket(`${location.protocol==='https:'?'wss':'ws'}://${location.host}/ws/${sid}`); ws.binaryType='arraybuffer';
+  let buf=[]; node.port.onmessage=e=>{const f=e.data;buf.push(f);let m=0;for(const v of f)m=Math.max(m,Math.abs(v));$('lvl').style.width=Math.min(100,m*140)+'%';
+    if(buf.length>=10&&ws.readyState===1){const n=buf.reduce((a,b)=>a+b.length,0),o=new Int16Array(n);let k=0;for(const b of buf)for(const v of b)o[k++]=Math.max(-1,Math.min(1,v))*32767;ws.send(o.buffer);buf=[]}};
+  ws.onmessage=e=>onMsg(JSON.parse(e.data));
+  $('mic').classList.add('on');$('mic').textContent='■';$('undo').disabled=$('redo').disabled=false;t0=Date.now();tick=setInterval(()=>$('timer').textContent=fmt((Date.now()-t0)/1000),250);
+}
+function stop(){ if(!ws)return; ws.send(JSON.stringify({type:'stop'})); node.disconnect(); stream.getTracks().forEach(t=>t.stop()); ctx.close(); clearInterval(tick);
+  $('mic').classList.remove('on');$('mic').innerHTML='<span class="spin"></span>';$('undo').disabled=$('redo').disabled=true;$('lvl').style.width='0'}
+function onMsg(m){
+  if(m.type==='words'||m.type==='final'){ words=m.words; removed=m.removed; drawWords(); }
+  if(m.type==='undone'&&m.r) toast(`${m.r.kind==='command'?'🗣 Heard “scratch that” — removed':'⟲ Removed'}: <i>${esc(m.r.text)}</i>${m.ms?` <span class="hint">(${m.ms} ms)</span>`:''}`);
+  if(m.type==='final'){ ws.close(); ws=null; $('mic').textContent='🎙'; finalize(m); }
+}
+function finalize(m){
+  pronFlags={}; meant=[]; ops=removed.map((r,k)=>({id:'u'+k,type:'cut',t0:r.t0,t1:r.t1,kind:r.kind,text:r.text,on:true})); words.forEach(w=>w.x=null);
+  origUrl=`/api/s/${sid}/file/orig.wav`; $('post').style.display='block'; $('dOrig').textContent=fmt(m.dur); drawWave('cvO',origUrl,[]); drawWords(); renderSugs(); refreshEdited();
+}
+const covered=(w,o)=>{const c=(w.s+w.e)/2;return c>=o.t0&&c<=o.t1};
+function drawWords(){
+  const tx=$('tx'), live=!!ws; let h='';
+  words.forEach((w,k)=>{
+    if(live){ h+=`<span class="w ${w.x?'cut':''}" data-k="${k}">${esc(w.w)}</span>${w.x&&(!words[k+1]||!words[k+1].x)?`<span class="tag c">${w.x}</span>`:''} `; return; }
+    const rep=ops.find(o=>o.on&&o.type==='replace'&&k>=o.i&&k<=o.j);
+    if(rep){ if(k===rep.i) h+= rep.kind&&rep.kind!=='replace' ? `<span class="ai" title="${rep.kind} · regenerated in your voice">${esc(rep.new)}</span><span class="tag a">${rep.kind}</span> ` : `<span class="w cut" data-k="${k}">${esc(rep.old)}</span> <span class="ai" title="AI-generated in your voice (${rep.engine})">${esc(rep.new)}</span> `; return; }
+    const cut=ops.find(o=>o.on&&o.type==='cut'&&covered(w,o)), sug=ops.find(o=>!o.on&&o.type==='cut'&&covered(w,o));
+    const last=cut&&!(words[k+1]&&covered(words[k+1],cut));
+    h+=`<span class="w ${cut?'cut':''} ${sug?'sug':''} ${sel&&k>=sel[0]&&k<=sel[1]?'sel':''} ${pronFlags[k]&&!cut?'pron':''}" data-k="${k}" ${pronFlags[k]?`title="pronunciation ${pronFlags[k].acc}/10 · expected /${pronFlags[k].canon}/"`:''}>${esc(w.w)}</span>${last?`<span class="tag c">${cut.kind}</span>`:''} `;
+  });
+  const atEnd=tx.scrollTop+tx.clientHeight>=tx.scrollHeight-30; tx.innerHTML=h; if(atEnd)tx.scrollTop=tx.scrollHeight;
+}
+function renderSugs(){
+  $('sugs').innerHTML=ops.map((o,n)=>`<label class="item"><input type="checkbox" data-n="${n}" ${o.on?'checked':''}><span class="tag ${o.type==='replace'?'a':'c'}">${o.type==='replace'?(o.kind&&o.kind!=='replace'?o.kind:'AI voice'):o.kind}</span><span class="t">${o.type==='replace'?`${esc(o.old)} → <span class="ai">${esc(o.new)}</span>${o.verified?'':' <span class="hint">(unverified)</span>'}`:`<s>${esc(o.text)}</s>`}</span></label>`).join('')
+   + tones.map(t=>`<div class="item"><span class="tag a">tone</span><span class="t">${t.style.replace('n:','')} take <span class="hint">(${t.sec}s, ${t.style.startsWith('n:')?'pitch &amp; pace only, still your real voice':'whole message regenerated by AI'})</span></span><button class="btn" onclick="playUrl('${t.url}')">▶</button><button class="btn" onclick="useTone('${t.url}',${t.style.startsWith('n:')})">Use</button></div>`).join('');
+  $('sugs').insertAdjacentHTML('afterbegin', Object.values(pronFlags).map(x=>`<div class="item"><span class="tag" style="color:#f0a020">pronunciation</span><span class="t"><b>${esc(x.word)}</b> <span class="hint">${x.acc}/10 · expected /${x.canon}/ · weakest sound /${x.phone}/</span></span><button class="btn" data-fix="${x.i}">Re-say in my voice</button></div>`).join(''));
+  $('sugs').insertAdjacentHTML('afterbegin', meant.map((x,n)=>`<div class="item"><span class="tag" style="color:#f0a020">did you mean?</span><span class="t">heard <s>${esc(x.old)}</s> → <b>${esc(x.new)}</b> <span class="hint">sounds alike (/${x.heard}/ vs /${x.intended}/)</span></span><button class="btn" data-mean="${n}">Fix in my voice</button></div>`).join(''));
+  $('sugs').querySelectorAll('[data-mean]').forEach(b=>b.onclick=()=>{const x=meant[+b.dataset.mean]; meant=meant.filter(y=>y!==x); b.disabled=true; b.innerHTML='<span class="spin"></span>'; replace(x.i,x.j,x.new)});
+  $('sugs').querySelectorAll('[data-fix]').forEach(b=>b.onclick=()=>{b.disabled=true;b.innerHTML='<span class="spin"></span>';replace(+b.dataset.fix,+b.dataset.fix,null,true)});
+  $('sugs').querySelectorAll('input').forEach(c=>c.onchange=()=>{ops[c.dataset.n].on=c.checked;dirty=true;drawWords();refreshEdited()});
+}
+let rTimer=null; function refreshEdited(){ clearTimeout(rTimer); rTimer=setTimeout(async()=>{
+  const r=await api(`/api/s/${sid}/render`,{ops:ops.filter(o=>o.on).map(o=>({t0:o.t0,t1:o.t1,insert:o.insert||null}))});
+  rendered=r; dirty=false; $('dEd').textContent=`${fmt(r.dur)} · ${r.ai.length?r.ai.length+' AI part'+(r.ai.length>1?'s':''):'100% real voice'}`; drawWave('cvE',r.url,r.ai); },150) }
+async function addCuts(kind,url,label){
+  toast(`<span class="spin"></span> ${label}…`,60000); const t=Date.now(); const r=await api(url);
+  r.items.forEach((c,k)=>ops.push({id:kind+k+Date.now(),type:'cut',t0:c.t0,t1:c.t1,kind:c.kind,text:c.text,on:c.auto!==false}));
+  toast(r.items.length?`${label}: ${r.items.length} edit${r.items.length>1?'s':''} (${((Date.now()-t)/1000).toFixed(1)}s) — untick any you want to keep`:`${label}: nothing to change 👍`); drawWords(); renderSugs(); refreshEdited();
+}
+async function replace(i,j,nw,same){
+  $('popMsg').innerHTML='<span class="spin"></span> generating in your voice…'; const t=Date.now();
+  try{ const r=await api(`/api/s/${sid}/replace`,same?{i,j,same:true}:{i,j,new:nw}); if(same) delete pronFlags[i]; ops.push({id:'r'+Date.now(),type:'replace',...r.op,on:true});
+    hidePop(); toast(`✨ “${esc(r.op.new)}” ${same?'re-said':'generated'} with ${r.op.engine}${same&&r.op.after!=null?` · pronunciation score ${r.op.after}/10`:''} in ${((Date.now()-t)/1000).toFixed(1)}s ${r.op.verified?'· verified by ASR':'· ⚠ not verified'}`); drawWords(); renderSugs(); refreshEdited();
+  }catch(e){ $('popMsg').textContent='failed: '+e.message }
+}
+async function useTone(url,nat){ const ai=nat?[]:[[0,999]]; rendered={url,dur:0,ai}; drawWave('cvE',url,ai); toast(nat?'Natural tone take selected (your real voice, new pitch &amp; pace)':'Tone take selected (whole message is AI-regenerated)'); }
+// --- waveform canvas with AI regions
+const AC=new AudioContext(); const cache={};
+async function decode(url){ if(!cache[url]) cache[url]=await AC.decodeAudioData(await (await fetch(url)).arrayBuffer()); return cache[url] }
+async function drawWave(id,url,ai){ const b=await decode(url), c=$(id), g=c.getContext('2d'), W=c.width=c.clientWidth*2, H=c.height=92, d=b.getChannelData(0), n=Math.floor(d.length/W);
+  g.clearRect(0,0,W,H); for(let x=0;x<W;x++){let m=0;for(let k=x*n;k<(x+1)*n;k+=8)m=Math.max(m,Math.abs(d[k]||0)); const t=x/W*b.duration; g.fillStyle=ai.some(([a,z])=>t>=a&&t<=z)?'#b197fc':'#8e9297'; g.fillRect(x,H/2-m*H*.9/2,1,Math.max(1,m*H*.9))}
+  c.onclick=()=>playUrl(url); c.dataset.url=url }
+let cur=null; function playUrl(url){ if(cur){cur.pause();if(cur._u===url){cur=null;return}} cur=new Audio(url); cur._u=url; cur.play() }
+// --- word selection + replace popover
+$('tx').onclick=e=>{ const el=e.target.closest('.w'); if(!el||ws)return; const k=+el.dataset.k;
+  const cut=ops.find(o=>o.type==='cut'&&covered(words[k],o)); if(cut){cut.on=!cut.on;dirty=true;drawWords();renderSugs();refreshEdited();return}
+  sel=(e.shiftKey&&sel)?[Math.min(sel[0],k),Math.max(sel[1],k)]:[k,k]; drawWords();
+  const p=$('pop'), r=el.getBoundingClientRect(); p.style.display='block'; p.style.left=Math.min(innerWidth-310,r.left+scrollX)+'px'; p.style.top=(r.bottom+scrollY+6)+'px';
+  $('popOld').textContent=words.slice(sel[0],sel[1]+1).map(w=>w.w).join(' '); $('popIn').value=''; $('popMsg').textContent='shift-click to select more words'; $('popIn').focus() };
+function hidePop(){ $('pop').style.display='none'; sel=null; drawWords() }
+$('popPron').onclick=()=>{ if(sel) replace(sel[0],sel[1],null,true) };
+document.querySelectorAll('#pop [data-st]').forEach(b=>b.onclick=async()=>{ if(!sel)return; const st=b.dataset.st, [i,j]=sel; $('popMsg').innerHTML='<span class="spin"></span> restyling…';
+  try{ const r=await api(`/api/s/${sid}/tone`,{style:st,i,j}); ops.push({id:'s'+Date.now(),type:'replace',...r.op,on:true}); hidePop(); toast(`${st} applied to the selection (${r.sec}s)`); drawWords(); renderSugs(); refreshEdited() }catch(e){ $('popMsg').textContent='failed: '+e.message } });
+$('popGo').onclick=()=>{ const v=$('popIn').value.trim(); if(v&&sel) replace(sel[0],sel[1],v) };
+$('popIn').onkeydown=e=>{ if(e.key==='Enter')$('popGo').click(); if(e.key==='Escape')hidePop() };
+$('popDel').onclick=()=>{ const a=words[sel[0]],b=words[sel[1]],pv=words[sel[0]-1],nx=words[sel[1]+1];
+  ops.push({id:'d'+Date.now(),type:'cut',t0:pv?(pv.e+a.s)/2:Math.max(0,a.s-.04),t1:nx?(b.e+nx.s)/2:b.e+.04,kind:'deleted',text:words.slice(sel[0],sel[1]+1).map(w=>w.w).join(' '),on:true}); hidePop(); renderSugs(); refreshEdited() };
+document.addEventListener('mousedown',e=>{ if(!e.target.closest('#pop')&&!e.target.closest('.w')&&$('pop').style.display==='block')hidePop() });
+// --- buttons
+$('mic').onclick=()=>ws?stop():start().catch(e=>toast('Mic error: '+e.message));
+$('undo').onclick=()=>ws&&ws.send(JSON.stringify({type:'undo'})); $('redo').onclick=()=>ws&&ws.send(JSON.stringify({type:'redo'}));
+document.addEventListener('keydown',e=>{ if(!ws||e.target.tagName==='INPUT')return; if(e.key==='Backspace'||(e.key==='z'&&(e.ctrlKey||e.metaKey))){e.preventDefault();$('undo').click()} if(e.key===' '){e.preventDefault();stop()} });
+$('bPron').onclick=async()=>{ toast('<span class="spin"></span> checking pronunciation…',60000); const [r,m]=await Promise.all([api(`/api/s/${sid}/pron`),api(`/api/s/${sid}/intent`)]); pronFlags={}; meant=m.items;
+  r.items.forEach(x=>pronFlags[x.i]=x); drawWords();
+  renderSugs();
+  toast(r.items.length?`${label}: ${r.items.length} edit${r.items.length>1?'s':''} (${((Date.now()-t)/1000).toFixed(1)}s) — untick any you want to keep`:`${label}: nothing to change 👍`); drawWords(); renderSugs(); refreshEdited();
+}
+async function replace(i,j,nw,same){
+  $('popMsg').innerHTML='<span class="spin"></span> generating in your voice…'; const t=Date.now();
+  try{ const r=await api(`/api/s/${sid}/replace`,same?{i,j,same:true}:{i,j,new:nw}); if(same) delete pronFlags[i]; ops.push({id:'r'+Date.now(),type:'replace',...r.op,on:true});
+    hidePop(); toast(`✨ “${esc(r.op.new)}” ${same?'re-said':'generated'} with ${r.op.engine}${same&&r.op.after!=null?` · pronunciation score ${r.op.after}/10`:''} in ${((Date.now()-t)/1000).toFixed(1)}s ${r.op.verified?'· verified by ASR':'· ⚠ not verified'}`); drawWords(); renderSugs(); refreshEdited();
+  }catch(e){ $('popMsg').textContent='failed: '+e.message }
+}
+async function useTone(url,nat){ const ai=nat?[]:[[0,999]]; rendered={url,dur:0,ai}; drawWave('cvE',url,ai); toast(nat?'Natural tone take selected (your real voice, new pitch &amp; pace)':'Tone take selected (whole message is AI-regenerated)'); }
+// --- waveform canvas with AI regions
+const AC=new AudioContext(); const cache={};
+async function decode(url){ if(!cache[url]) cache[url]=await AC.decodeAudioData(await (await fetch(url)).arrayBuffer()); return cache[url] }
+async function drawWave(id,url,ai){ const b=await decode(url), c=$(id), g=c.getContext('2d'), W=c.width=c.clientWidth*2, H=c.height=92, d=b.getChannelData(0), n=Math.floor(d.length/W);
+  g.clearRect(0,0,W,H); for(let x=0;x<W;x++){let m=0;for(let k=x*n;k<(x+1)*n;k+=8)m=Math.max(m,Math.abs(d[k]||0)); const t=x/W*b.duration; g.fillStyle=ai.some(([a,z])=>t>=a&&t<=z)?'#b197fc':'#8e9297'; g.fillRect(x,H/2-m*H*.9/2,1,Math.max(1,m*H*.9))}
+  c.onclick=()=>playUrl(url); c.dataset.url=url }
+let cur=null; function playUrl(url){ if(cur){cur.pause();if(cur._u===url){cur=null;return}} cur=new Audio(url); cur._u=url; cur.play() }
+// --- word selection + replace popover
+$('tx').onclick=e=>{ const el=e.target.closest('.w'); if(!el||ws)return; const k=+el.dataset.k;
+  const cut=ops.find(o=>o.type==='cut'&&covered(words[k],o)); if(cut){cut.on=!cut.on;dirty=true;drawWords();renderSugs();refreshEdited();return}
+  sel=(e.shiftKey&&sel)?[Math.min(sel[0],k),Math.max(sel[1],k)]:[k,k]; drawWords();
+  const p=$('pop'), r=el.getBoundingClientRect(); p.style.display='block'; p.style.left=Math.min(innerWidth-310,r.left+scrollX)+'px'; p.style.top=(r.bottom+scrollY+6)+'px';
+  $('popOld').textContent=words.slice(sel[0],sel[1]+1).map(w=>w.w).join(' '); $('popIn').value=''; $('popMsg').textContent='shift-click to select more words'; $('popIn').focus() };
+function hidePop(){ $('pop').style.display='none'; sel=null; drawWords() }
+$('popPron').onclick=()=>{ if(sel) replace(sel[0],sel[1],null,true) };
+document.querySelectorAll('#pop [data-st]').forEach(b=>b.onclick=async()=>{ if(!sel)return; const st=b.dataset.st, [i,j]=sel; $('popMsg').innerHTML='<span class="spin"></span> restyling…';
+  try{ const r=await api(`/api/s/${sid}/tone`,{style:st,i,j}); ops.push({id:'s'+Date.now(),type:'replace',...r.op,on:true}); hidePop(); toast(`${st} applied to the selection (${r.sec}s)`); drawWords(); renderSugs(); refreshEdited() }catch(e){ $('popMsg').textContent='failed: '+e.message } });
+$('popGo').onclick=()=>{ const v=$('popIn').value.trim(); if(v&&sel) replace(sel[0],sel[1],v) };
+$('popIn').onkeydown=e=>{ if(e.key==='Enter')$('popGo').click(); if(e.key==='Escape')hidePop() };
+$('popDel').onclick=()=>{ const a=words[sel[0]],b=words[sel[1]],pv=words[sel[0]-1],nx=words[sel[1]+1];
+  ops.push({id:'d'+Date.now(),type:'cut',t0:pv?(pv.e+a.s)/2:Math.max(0,a.s-.04),t1:nx?(b.e+nx.s)/2:b.e+.04,kind:'deleted',text:words.slice(sel[0],sel[1]+1).map(w=>w.w).join(' '),on:true}); hidePop(); renderSugs(); refreshEdited() };
+document.addEventListener('mousedown',e=>{ if(!e.target.closest('#pop')&&!e.target.closest('.w')&&$('pop').style.display==='block')hidePop() });
+// --- buttons
+$('mic').onclick=()=>ws?stop():start().catch(e=>toast('Mic error: '+e.message));
+$('undo').onclick=()=>ws&&ws.send(JSON.stringify({type:'undo'})); $('redo').onclick=()=>ws&&ws.send(JSON.stringify({type:'redo'}));
+document.addEventListener('keydown',e=>{ if(!ws||e.target.tagName==='INPUT')return; if(e.key==='Backspace'||(e.key==='z'&&(e.ctrlKey||e.metaKey))){e.preventDefault();$('undo').click()} if(e.key===' '){e.preventDefault();stop()} });
+$('bPron').onclick=async()=>{ toast('<span class="spin"></span> checking pronunciation…',60000); const [r,m]=await Promise.all([api(`/api/s/${sid}/pron`),api(`/api/s/${sid}/intent`)]); pronFlags={}; meant=m.items;
+  r.items.forEach(x=>pronFlags[x.i]=x); drawWords();
+  $('sugs').insertAdjacentHTML('afterbegin', r.items.map(x=>`<div class="item"><span class="tag" style="color:#f0a020">pronunciation</span><span class="t"><b>${esc(x.word)}</b> <span class="hint">${x.acc}/10 · expected /${x.canon}/ · weakest sound /${x.phone}/</span></span><button class="btn" data-fix="${x.i}">Re-say in my voice</button></div>`).join(''));
+  $('sugs').querySelectorAll('[data-fix]').forEach(b=>b.onclick=()=>replace(+b.dataset.fix,+b.dataset.fix,null,true));
+  const n=r.items.length+meant.length; toast(n?`${n} word${n>1?'s':''} may be hard to understand — see suggestions`:'Pronunciation sounds clear 👍') };
+$('bClean').onclick=()=>addCuts('c',`/api/s/${sid}/clean`,'Clean up'); $('bTight').onclick=()=>addCuts('t',`/api/s/${sid}/tighten`,'Tighten');
+$('bGram').onclick=async()=>{ toast('<span class="spin"></span> checking grammar…',60000); const r=await api(`/api/s/${sid}/grammar`); if(!r.items.length)return toast('Grammar looks fine 👍');
+  toast(`${r.items.length} fix${r.items.length>1?'es':''} — generating in your voice…`,60000); for(const f of r.items) await replace(f.i,f.j,f.new) };
+$('tone').onchange=async e=>{ const st=e.target.value; e.target.value=''; if(!st)return; toast(`<span class="spin"></span> ${st} take…`,60000);
+  try{ const nat=st.startsWith('n:'); const r=await api(`/api/s/${sid}/${nat?'natural':'tone'}`,{style:nat?st.slice(2):st,file:rendered&&rendered.url.split('/').pop()}); tones.push({style:st,...r}); renderSugs(); toast(`${st} take ready (${r.sec}s)`); playUrl(r.url) }catch(err){toast('tone failed: '+err.message)} };
+$('again').onclick=()=>{ $('post').style.display='none'; $('tx').innerHTML=''; $('timer').textContent='0:00' };
+$('file').onchange=async e=>{ const f=e.target.files[0]; if(!f)return; toast('<span class="spin"></span> transcribing…',60000); const fd=new FormData(); fd.append('f',f);
+  const r=await (await fetch('/api/upload',{method:'POST',body:fd})).json(); sid=r.sid; words=r.words; removed=[]; ops=[]; tones=[]; toast('ready'); finalize(r) };
+$('sample').onclick=async()=>{ toast('<span class="spin"></span> loading sample…',60000); const r=await api('/api/sample'); sid=r.sid; words=r.words; removed=[]; ops=[]; tones=[]; toast('Sample loaded — try ✨ Clean up'); finalize(r) };
+$('send').onclick=async()=>{ if(!rendered)return; const b=await decode(rendered.url), d=b.getChannelData(0), N=36, bars=[];
+  for(let k=0;k<N;k++){let m=0;for(let j=Math.floor(k*d.length/N);j<(k+1)*d.length/N;j+=40)m=Math.max(m,Math.abs(d[j]));const t=(k+.5)/N*b.duration;bars.push(`<i class="${rendered.ai.some(([a,z])=>t>=a&&t<=z)?'ai':''}" style="height:${Math.max(12,m*100)}%"></i>`)}
+  const kept=words.filter((w,k)=>!ops.some(o=>o.on&&o.type==='cut'&&covered(w,o))&&!ops.some(o=>o.on&&o.type==='replace'&&k>=o.i&&k<=o.j)).length, nAi=ops.filter(o=>o.on&&o.type==='replace').length, nCut=ops.filter(o=>o.on&&o.type==='cut').length;
+  const text=words.map((w,k)=>{const rep=ops.find(o=>o.on&&o.type==='replace'&&k>=o.i&&k<=o.j);if(rep)return k===rep.i?`<span class="ai">${esc(rep.new)}</span>`:'';return ops.some(o=>o.on&&o.type==='cut'&&covered(w,o))?'':esc(w.w)}).filter(Boolean).join(' ');
+  const el=document.createElement('div'); el.className='msg'; el.innerHTML=`<div class="av" style="background:#5865f2">Y</div><div style="flex:1"><div class="n">You <small>just now</small></div>
+   <div class="vm"><button>▶</button><div class="bars">${bars.join('')}</div><span class="hint">${fmt(b.duration)}</span></div>
+   <div class="badge">✨ edited with ReSpeak · ${nCut} cut${nCut!==1?'s':''}${nAi?` · ${nAi} AI-voiced phrase${nAi>1?'s':''}`:' · 100% your real voice'} ▾</div><div class="trans">${text}</div></div>`;
+  el.querySelector('button').onclick=()=>playUrl(rendered.url); el.querySelector('.badge').onclick=()=>{const t=el.querySelector('.trans');t.style.display=t.style.display==='block'?'none':'block'};
+  $('msgs').appendChild(el); $('msgs').scrollTop=1e9; toast('Sent ✓') };
+</script>
+</body>
+</html>

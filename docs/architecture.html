@@ -1,0 +1,285 @@
+<title>ReSpeak Architecture</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@600;800&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one column that follows a voice message's life: the core idea, recording, after you stop, hardware, then reference tables. */
+:root{
+  --paper:#f7f7fb; --surface:#ffffff; --ink:#17181f; --mut:#5b5f73; --line:#d6d9e4;
+  --ai:#6d48e5; --ai-soft:#efeaff; --cut:#cc4237; --cut-soft:#fdecea; --live:#a8650a; --live-soft:#fff3df; --keep:#1d7656; --keep-soft:#e3f4ec;
+  --display:"Schibsted Grotesk","Segoe UI",system-ui,sans-serif; --body:"Source Sans 3","Segoe UI",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#121318;--surface:#1b1c24;--ink:#ecedf5;--mut:#a3a6b8;--line:#33364a;--ai:#a68cff;--ai-soft:#2a2347;--cut:#ff8077;--cut-soft:#3b2124;--live:#f2b34a;--live-soft:#3a2e17;--keep:#5fd3a4;--keep-soft:#173229;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121318;--surface:#1b1c24;--ink:#ecedf5;--mut:#a3a6b8;--line:#33364a;--ai:#a68cff;--ai-soft:#2a2347;--cut:#ff8077;--cut-soft:#3b2124;--live:#f2b34a;--live-soft:#3a2e17;--keep:#5fd3a4;--keep-soft:#173229;color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font:17px/1.6 var(--body)}
+.wrap{max-width:1000px;margin:0 auto;padding-block:40px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:48px}
+h1,h2{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.015em}
+h1{font-size:clamp(32px,5.5vw,52px);font-weight:800;line-height:1.05}
+h2{font-size:clamp(22px,3vw,28px);font-weight:600}
+p{margin:0;max-width:68ch}.mut{color:var(--mut)}
+.eyebrow{font:600 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+section,header{display:flex;flex-direction:column;gap:14px}
+figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:12px}
+.scroll{overflow-x:auto}
+svg{display:block;width:100%;height:auto;min-width:720px;color:var(--ink)}
+figcaption{font-size:15px;color:var(--mut);max-width:72ch}
+.legend{display:flex;flex-wrap:wrap;gap:18px;font-size:14px;color:var(--mut)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.legend i{width:14px;height:14px;border-radius:4px;display:inline-block}
+.k1{background:var(--keep-soft);border:1.5px solid var(--keep)}.k2{background:var(--cut-soft);border:1.5px solid var(--cut)}.k3{background:var(--ai-soft);border:1.5px solid var(--ai)}.k4{background:var(--live-soft);border:1.5px solid var(--live)}
+/* SVG vocabulary (page-level classes, no style inside the SVG) */
+.bx{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.zone{fill:none;stroke:var(--line);stroke-width:1.5;stroke-dasharray:5 5}
+.keep{fill:var(--keep-soft);stroke:var(--keep);stroke-width:1.5}
+.cut{fill:var(--cut-soft);stroke:var(--cut);stroke-width:1.5}
+.ai{fill:var(--ai-soft);stroke:var(--ai);stroke-width:1.5}
+.live{fill:var(--live-soft);stroke:var(--live);stroke-width:1.5}
+.t{fill:var(--ink);font:13px var(--body)}
+.tb{fill:var(--ink);font:600 13px var(--body)}
+.ts{fill:var(--mut);font:12px var(--body)}
+.tm{fill:var(--mut);font:11.5px var(--mono)}
+.tcut{fill:var(--cut);font:600 11.5px var(--mono)}
+.tai{fill:var(--ai);font:600 11.5px var(--mono)}
+.tkeep{fill:var(--keep);font:600 11.5px var(--mono)}
+.tlive{fill:var(--live);font:600 11.5px var(--mono)}
+.ln{stroke:var(--mut);stroke-width:1.5;fill:none}
+.lnai{stroke:var(--ai);stroke-width:1.5;fill:none}
+.lnkeep{stroke:var(--keep);stroke-width:1.2;fill:none}
+.lnlive{stroke:var(--live);stroke-width:1.5;fill:none}
+.dash{stroke-dasharray:4 4}
+.ah{fill:var(--mut)}.ahai{fill:var(--ai)}.ahlive{fill:var(--live)}.ahkeep{fill:var(--keep)}
+.strike{stroke:var(--cut);stroke-width:1.5}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:600 11px/1.3 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--mut);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.num{font-family:var(--mono);font-size:13px;white-space:nowrap;font-variant-numeric:tabular-nums}
+code{font-family:var(--mono);font-size:13.5px;background:var(--paper);border:1px solid var(--line);border-radius:5px;padding:1px 5px}
+.pill{font:600 11px/1 var(--mono);border-radius:999px;padding:4px 8px;white-space:nowrap}
+.p-keep{background:var(--keep-soft);color:var(--keep)}.p-cut{background:var(--cut-soft);color:var(--cut)}.p-ai{background:var(--ai-soft);color:var(--ai)}.p-none{background:var(--paper);color:var(--mut);border:1px solid var(--line)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">ReSpeak · how it works</div>
+  <h1>Your recording is never changed. Every edit is a time range.</h1>
+  <p class="mut">ReSpeak keeps the original audio untouched and builds a list of edits on top of it: cut this stretch, replace that word with a new one in your voice. When you play or send, the list is rendered into a new file. That one idea is why every edit can be undone and why most of the message stays 100% your real voice.</p>
+  <div class="legend"><span><i class="k1"></i>your real recording, copied as-is</span><span><i class="k2"></i>cut out</span><span><i class="k3"></i>new words generated in your voice</span><span><i class="k4"></i>live, while you are still talking</span></div>
+</header>
+
+<section>
+  <div class="eyebrow">The core idea</div>
+  <h2>Original, edit list, message</h2>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 960 300" role="img" aria-label="The original recording stays intact; cuts remove stretches, one replaced word is generated in your voice, and the kept parts are copied unchanged into the message you send.">
+      <defs>
+        <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ahkeep" d="M0,0 L10,5 L0,10 z"/></marker>
+        <marker id="a1ai" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ahai" d="M0,0 L10,5 L0,10 z"/></marker>
+      </defs>
+      <text class="tm" x="40" y="28">YOUR RECORDING · original.wav · never modified</text>
+      <rect class="keep" x="40" y="42" width="168" height="48" rx="8"/><text class="t" x="124" y="71" text-anchor="middle">I'll meet you on</text>
+      <rect class="cut" x="214" y="42" width="150" height="48" rx="8"/><text class="t" x="289" y="71" text-anchor="middle">Monday, no wait,</text><line class="strike" x1="226" y1="66" x2="352" y2="66"/>
+      <text class="tcut" x="289" y="108" text-anchor="middle">cut · correction</text>
+      <rect class="keep" x="370" y="42" width="168" height="48" rx="8"/><text class="t" x="454" y="71" text-anchor="middle">Wednesday at five,</text>
+      <rect class="cut" x="544" y="42" width="54" height="48" rx="8"/><text class="t" x="571" y="71" text-anchor="middle">um,</text><line class="strike" x1="554" y1="66" x2="588" y2="66"/>
+      <text class="tcut" x="571" y="108" text-anchor="middle">cut · filler</text>
+      <rect class="keep" x="604" y="42" width="84" height="48" rx="8"/><text class="t" x="646" y="71" text-anchor="middle">at the</text>
+      <rect class="cut" x="694" y="42" width="74" height="48" rx="8"/><text class="t" x="731" y="71" text-anchor="middle">cafe.</text><line class="strike" x1="704" y1="66" x2="758" y2="66"/>
+      <text class="tai" x="731" y="108" text-anchor="middle">replace → “park”</text>
+      <text class="ts" x="790" y="60">edit list:</text>
+      <text class="tm" x="790" y="78">cut 1.42–2.31 s</text>
+      <text class="tm" x="790" y="94">cut 3.40–3.62 s</text>
+      <text class="tm" x="790" y="110">insert 4.10–4.55 s</text>
+
+      <path class="lnkeep" marker-end="url(#a1)" d="M124,92 L124,222"/>
+      <text class="tkeep" x="132" y="160">copied</text>
+      <path class="lnkeep" marker-end="url(#a1)" d="M454,92 C454,160 298,160 298,222"/>
+      <path class="lnkeep" marker-end="url(#a1)" d="M646,92 C646,170 442,170 442,222"/>
+      <path class="lnai" marker-end="url(#a1ai)" d="M731,122 C731,190 532,180 532,222"/>
+      <text class="tai" x="642" y="206">regenerated in your voice</text>
+
+      <text class="tm" x="40" y="214">MESSAGE YOU SEND · rendered from the list</text>
+      <rect class="keep" x="40" y="226" width="168" height="48" rx="8"/><text class="t" x="124" y="255" text-anchor="middle">I'll meet you on</text>
+      <rect class="keep" x="214" y="226" width="168" height="48" rx="8"/><text class="t" x="298" y="255" text-anchor="middle">Wednesday at five,</text>
+      <rect class="keep" x="400" y="226" width="84" height="48" rx="8"/><text class="t" x="442" y="255" text-anchor="middle">at the</text>
+      <rect class="ai" x="490" y="226" width="84" height="48" rx="8"/><text class="tb" x="532" y="255" text-anchor="middle">park.</text>
+      <text class="ts" x="600" y="246">12 ms crossfade at each join,</text>
+      <text class="ts" x="600" y="264">cut at the quietest point near the gap</text>
+    </svg>
+    </div>
+    <figcaption>Cutting needs no AI voice at all, so undo, clean-up and tightening keep the message 100% real. Only a replaced word is generated, and only that word is spliced in; the rest is copied byte for byte.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <div class="eyebrow">While you record</div>
+  <h2>The live loop and semantic undo</h2>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 960 300" role="img" aria-label="While recording, audio streams to the server in 100 millisecond chunks, is transcribed every 0.7 seconds and aligned to exact word times; pressing Undo picks the last thought and marks its time range as removed in about 350 milliseconds.">
+      <defs>
+        <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ah" d="M0,0 L10,5 L0,10 z"/></marker>
+        <marker id="a2l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ahlive" d="M0,0 L10,5 L0,10 z"/></marker>
+      </defs>
+      <rect class="zone" x="10" y="14" width="180" height="272" rx="12"/><text class="tm" x="22" y="34">YOUR BROWSER</text>
+      <rect class="zone" x="214" y="14" width="736" height="272" rx="12"/><text class="tm" x="226" y="34">RESPEAK SERVER · one A100 GPU</text>
+
+      <rect class="bx" x="24" y="52" width="152" height="56" rx="8"/><text class="tb" x="100" y="76" text-anchor="middle">Microphone</text><text class="ts" x="100" y="95" text-anchor="middle">24 kHz audio</text>
+      <rect class="bx" x="232" y="52" width="160" height="56" rx="8"/><text class="tb" x="312" y="76" text-anchor="middle">Session buffer</text><text class="ts" x="312" y="95" text-anchor="middle">original, append-only</text>
+      <rect class="bx" x="440" y="52" width="150" height="56" rx="8"/><text class="tb" x="515" y="76" text-anchor="middle">Whisper turbo</text><text class="ts" x="515" y="95" text-anchor="middle">speech → words</text>
+      <rect class="bx" x="638" y="52" width="150" height="56" rx="8"/><text class="tb" x="713" y="76" text-anchor="middle">Forced aligner</text><text class="ts" x="713" y="95" text-anchor="middle">exact word times</text>
+      <rect class="bx" x="24" y="150" width="152" height="56" rx="8"/><text class="tb" x="100" y="174" text-anchor="middle">Live transcript</text><text class="ts" x="100" y="193" text-anchor="middle">words appear</text>
+
+      <path class="ln" marker-end="url(#a2)" d="M176,80 L230,80"/><text class="tm" x="203" y="70" text-anchor="middle">100 ms</text>
+      <path class="ln" marker-end="url(#a2)" d="M392,80 L438,80"/><text class="tm" x="415" y="70" text-anchor="middle">0.7 s</text>
+      <path class="ln" marker-end="url(#a2)" d="M590,80 L636,80"/>
+      <path class="ln" marker-end="url(#a2)" d="M788,80 C860,80 860,130 820,130 L210,130 C190,130 176,150 150,150"/>
+      <text class="tm" x="500" y="124" text-anchor="middle">words + times, every update</text>
+
+      <rect class="live" x="24" y="226" width="152" height="50" rx="8"/><text class="tb" x="100" y="247" text-anchor="middle">Undo · ⌫</text><text class="ts" x="100" y="265" text-anchor="middle">or say “scratch that”</text>
+      <rect class="live" x="300" y="200" width="250" height="76" rx="8"/><text class="tb" x="425" y="222" text-anchor="middle">Find the last thought</text><text class="ts" x="425" y="241" text-anchor="middle">candidates: sentence end, pause ≥ 0.45 s,</text><text class="ts" x="425" y="258" text-anchor="middle">“, and / but / so”; LLM picks 1 of ≤ 5</text>
+      <rect class="live" x="600" y="214" width="200" height="56" rx="8"/><text class="tb" x="700" y="238" text-anchor="middle">Mark time range removed</text><text class="ts" x="700" y="257" text-anchor="middle">audio itself untouched</text>
+      <path class="lnlive" marker-end="url(#a2l)" d="M176,251 L298,251"/><text class="tlive" x="237" y="243" text-anchor="middle">press</text>
+      <path class="lnlive" marker-end="url(#a2l)" d="M550,242 L598,242"/>
+      <path class="lnlive" marker-end="url(#a2l)" d="M800,242 C880,242 890,190 840,178 L180,178"/>
+      <text class="tlive" x="660" y="172" text-anchor="middle">words struck through · ~350 ms · keep talking</text>
+    </svg>
+    </div>
+    <figcaption>The server re-transcribes the whole growing buffer every 0.7 s, then a second model snaps each word to its exact start and end (Whisper alone was off by up to 0.4 s). Undo never deletes audio: it records “remove 3.1–5.8 s”, so Redo just drops that entry.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <div class="eyebrow">After you stop</div>
+  <h2>Three kinds of edit, one renderer</h2>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 960 500" role="img" aria-label="After recording, the transcript feeds three paths: a cut path where the LLM marks words and a validator approves deletions, a regenerate path where two voice models rewrite a short window in parallel and a checker verifies the new words, and a restyle path for tone. All edits end in the edit list that the renderer turns into the message.">
+      <defs>
+        <marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ah" d="M0,0 L10,5 L0,10 z"/></marker>
+        <marker id="a3ai" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ahai" d="M0,0 L10,5 L0,10 z"/></marker>
+      </defs>
+      <rect class="bx" x="14" y="200" width="160" height="80" rx="10"/><text class="tb" x="94" y="230" text-anchor="middle">Final transcript</text><text class="ts" x="94" y="249" text-anchor="middle">+ exact word times</text><text class="ts" x="94" y="266" text-anchor="middle">+ confidence per word</text>
+
+      <text class="tcut" x="230" y="36">CUT PATH · Undo · Clean up · Tighten · Delete — 100% your voice</text>
+      <rect class="bx" x="230" y="48" width="190" height="62" rx="8"/><text class="tb" x="325" y="73" text-anchor="middle">LLM marks words</text><text class="ts" x="325" y="92" text-anchor="middle">[correction: Monday, no wait,]</text>
+      <rect class="bx" x="460" y="48" width="250" height="62" rx="8"/><text class="tb" x="585" y="73" text-anchor="middle">Validator (plain code)</text><text class="ts" x="585" y="92" text-anchor="middle">delete-only · keeps not / numbers / dates</text>
+      <rect class="cut" x="750" y="48" width="190" height="62" rx="8"/><text class="tb" x="845" y="73" text-anchor="middle">Cut ranges</text><text class="ts" x="845" y="92" text-anchor="middle">unsure → suggestion only</text>
+      <path class="ln" marker-end="url(#a3)" d="M420,79 L458,79"/><path class="ln" marker-end="url(#a3)" d="M710,79 L748,79"/>
+
+      <text class="tai" x="230" y="160">REGENERATE PATH · Replace word · Grammar · Did you mean? · Re-say clearly</text>
+      <rect class="bx" x="230" y="172" width="130" height="62" rx="8"/><text class="tb" x="295" y="197" text-anchor="middle">8 s window</text><text class="ts" x="295" y="216" text-anchor="middle">around the words</text>
+      <rect class="ai" x="400" y="172" width="190" height="62" rx="8"/><text class="tb" x="495" y="197" text-anchor="middle">PlayDiffusion ‖ F5</text><text class="ts" x="495" y="216" text-anchor="middle">rewrite from your voice</text>
+      <rect class="bx" x="630" y="172" width="140" height="62" rx="8"/><text class="tb" x="700" y="197" text-anchor="middle">Splice</text><text class="ts" x="700" y="216" text-anchor="middle">only the new words</text>
+      <rect class="bx" x="800" y="172" width="140" height="62" rx="8"/><text class="tb" x="870" y="197" text-anchor="middle">Check</text><text class="ts" x="870" y="216" text-anchor="middle">heard it? clear?</text>
+      <path class="ln" marker-end="url(#a3)" d="M360,203 L398,203"/><path class="ln" marker-end="url(#a3)" d="M590,203 L628,203"/><path class="ln" marker-end="url(#a3)" d="M770,203 L798,203"/>
+      <path class="lnai dash" marker-end="url(#a3ai)" d="M870,236 C870,262 495,262 495,238"/>
+      <text class="tai" x="682" y="276" text-anchor="middle">not heard → new seed, up to 3 rounds</text>
+
+      <text class="tkeep" x="230" y="318">RESTYLE PATH · Tone, whole message or selected words</text>
+      <rect class="keep" x="230" y="330" width="330" height="62" rx="8"/><text class="tb" x="395" y="355" text-anchor="middle">Natural: Praat pitch &amp; pace</text><text class="ts" x="395" y="374" text-anchor="middle">confident · calm · warm · 0.1 s · voice untouched</text>
+      <rect class="ai" x="600" y="330" width="340" height="62" rx="8"/><text class="tb" x="770" y="355" text-anchor="middle">AI restyle: AuK</text><text class="ts" x="770" y="374" text-anchor="middle">calm · friendly · confident* · native* · ~1 s</text>
+
+      <path class="ln" marker-end="url(#a3)" d="M174,225 C200,225 200,79 228,79"/>
+      <path class="ln" marker-end="url(#a3)" d="M174,240 L228,203"/>
+      <path class="ln" marker-end="url(#a3)" d="M174,255 C200,255 200,361 228,361"/>
+
+      <rect class="bx" x="230" y="428" width="710" height="58" rx="10"/>
+      <text class="tb" x="585" y="452" text-anchor="middle">Edit list → Renderer → message</text>
+      <text class="ts" x="585" y="471" text-anchor="middle">applies cuts and inserts in time order · 12 ms crossfades · long pauses capped at 0.45 s · AI parts tagged for the listener</text>
+      <path class="ln" marker-end="url(#a3)" d="M940,111 C955,111 955,420 942,426"/>
+      <path class="ln" marker-end="url(#a3)" d="M940,236 C952,236 952,410 932,426"/>
+      <path class="ln" marker-end="url(#a3)" d="M395,392 L395,426"/>
+      <path class="ln" marker-end="url(#a3)" d="M770,392 L770,426"/>
+    </svg>
+    </div>
+    <figcaption>The LLM (Qwen3.6-35B-A3B) never edits audio. It only proposes which words to cut or fix; code checks every proposal, and voice models only ever regenerate a short window, which is then checked by transcribing it again. * marks experimental styles.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <div class="eyebrow">Pronunciation, in detail</div>
+  <h2>Two detectors, because the transcript lies</h2>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 960 250" role="img" aria-label="Pronunciation checking uses two routes: an acoustic scorer flags words that match the transcript but sound off, and a did-you-mean pass catches words that the recognizer turned into a different word; both end in re-saying the word in your voice.">
+      <defs><marker id="a4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ah" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+      <rect class="bx" x="14" y="92" width="150" height="66" rx="10"/><text class="tb" x="89" y="120" text-anchor="middle">Transcript</text><text class="ts" x="89" y="139" text-anchor="middle">“the bear is in…”</text>
+      <text class="tm" x="210" y="34">ROUTE A · the word is right but sounds off</text>
+      <rect class="bx" x="210" y="44" width="230" height="62" rx="8"/><text class="tb" x="325" y="69" text-anchor="middle">Phoneme scorer</text><text class="ts" x="325" y="88" text-anchor="middle">expected sounds vs heard sounds</text>
+      <rect class="bx" x="480" y="44" width="220" height="62" rx="8"/><text class="tb" x="590" y="69" text-anchor="middle">Trained on 16k words</text><text class="ts" x="590" y="88" text-anchor="middle">expert scores · AUC 0.88</text>
+      <text class="tm" x="210" y="146">ROUTE B · the recognizer wrote a different word</text>
+      <rect class="bx" x="210" y="156" width="230" height="62" rx="8"/><text class="tb" x="325" y="181" text-anchor="middle">LLM: what did you mean?</text><text class="ts" x="325" y="200" text-anchor="middle">“the ball is in their court”</text>
+      <rect class="bx" x="480" y="156" width="220" height="62" rx="8"/><text class="tb" x="590" y="181" text-anchor="middle">Sounds-alike check</text><text class="ts" x="590" y="200" text-anchor="middle">bear /bɛɹ/ ≈ ball /bɔl/</text>
+      <rect class="ai" x="750" y="96" width="196" height="62" rx="8"/><text class="tb" x="848" y="121" text-anchor="middle">Re-say in your voice</text><text class="ts" x="848" y="140" text-anchor="middle">same regenerate path</text>
+      <path class="ln" marker-end="url(#a4)" d="M164,112 C186,112 186,75 208,75"/><path class="ln" marker-end="url(#a4)" d="M164,138 C186,138 186,187 208,187"/>
+      <path class="ln" marker-end="url(#a4)" d="M440,75 L478,75"/><path class="ln" marker-end="url(#a4)" d="M440,187 L478,187"/>
+      <path class="ln" marker-end="url(#a4)" d="M700,75 C726,75 726,118 748,118"/><path class="ln" marker-end="url(#a4)" d="M700,187 C726,187 726,140 748,140"/>
+      <text class="tm" x="718" y="240" text-anchor="middle">you tap “fix” first: suggestions, not auto-edits</text>
+    </svg>
+    </div>
+    <figcaption>On real learner speech, Whisper usually writes a badly pronounced word as another real word (“road” → “load”), so the acoustic scorer alone misses it. Route B uses context to guess the intended word and keeps the guess only if it sounds alike.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <div class="eyebrow">Hardware</div>
+  <h2>Everything on one 80 GB GPU</h2>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 960 130" role="img" aria-label="GPU memory: about 40 GB for the language model, 19 GB for the AuK tone model, about 11 GB for the two voice editors, about 4 GB for speech recognition and scoring, and about 6 GB free.">
+      <rect class="ai" x="20" y="30" width="450" height="44"/><text class="tb" x="245" y="57" text-anchor="middle">LLM brain · Qwen3.6-35B-A3B · 40 GB</text>
+      <rect class="keep" x="470" y="30" width="214" height="44"/><text class="tb" x="577" y="57" text-anchor="middle">AuK tone · 19 GB</text>
+      <rect class="live" x="684" y="30" width="124" height="44"/><text class="tb" x="746" y="57" text-anchor="middle">Editors · ~11</text>
+      <rect class="cut" x="808" y="30" width="45" height="44"/><text class="tb" x="830" y="57" text-anchor="middle">~4</text>
+      <rect class="bx" x="853" y="30" width="87" height="44"/><text class="ts" x="896" y="57" text-anchor="middle">free ~6</text>
+      <line class="ln" x1="20" y1="90" x2="940" y2="90"/>
+      <text class="tm" x="20" y="110">0 GB</text><text class="tm" x="470" y="110" text-anchor="middle">40</text><text class="tm" x="940" y="110" text-anchor="end">80 GB</text>
+      <text class="tm" x="830" y="22" text-anchor="middle">ASR + scorers</text>
+    </svg>
+    </div>
+    <figcaption>RTX-class 24 GB cards can run the voice editors and recognizer; the LLM is the big block. Using a hosted LLM API instead would free 40 GB for the slower, more reliable editor (dots.tts.edit) or a richer tone model (Step-Audio-EditX).</figcaption>
+  </figure>
+</section>
+
+<section>
+  <div class="eyebrow">Reference</div>
+  <h2>What happens when you press…</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Action</th><th>What runs</th><th>Time</th><th>Audio</th></tr></thead>
+    <tbody>
+      <tr><td>Record</td><td>Browser streams chunks; Whisper + aligner refresh the transcript</td><td class="num">live</td><td><span class="pill p-none">unchanged</span></td></tr>
+      <tr><td>Undo · ⌫ · “scratch that”</td><td>Boundary candidates, LLM picks the last thought, range marked removed</td><td class="num">~350 ms</td><td><span class="pill p-cut">cut</span></td></tr>
+      <tr><td>Stop</td><td>Careful transcription (beam 5) + alignment</td><td class="num">~2 s / 15 s</td><td><span class="pill p-none">unchanged</span></td></tr>
+      <tr><td>✨ Clean up</td><td>LLM markup → validator → cuts for fillers, corrections, repeats, scratched thoughts</td><td class="num">~0.7 s</td><td><span class="pill p-cut">cuts only</span></td></tr>
+      <tr><td>✂ Tighten</td><td>Clean up + LLM picks digressions to drop</td><td class="num">~1.3 s</td><td><span class="pill p-cut">cuts only</span></td></tr>
+      <tr><td>Click word → replace</td><td>Two voice models in parallel → splice → re-transcribe → retry</td><td class="num">3–6 s</td><td><span class="pill p-ai">1 AI phrase</span></td></tr>
+      <tr><td>Aa Grammar</td><td>LLM fixes 7 error types → each fix goes through replace</td><td class="num">2–6 s / fix</td><td><span class="pill p-ai">AI words</span></td></tr>
+      <tr><td>🗣 Pronunciation</td><td>Phoneme scorer + did-you-mean LLM → suggestions</td><td class="num">~0.5 s</td><td><span class="pill p-none">unchanged</span></td></tr>
+      <tr><td>Re-say clearly</td><td>Regenerate the same word, re-score it</td><td class="num">3–5 s</td><td><span class="pill p-ai">1 AI word</span></td></tr>
+      <tr><td>Tone · natural</td><td>Praat changes pitch and pace</td><td class="num">0.1–0.6 s</td><td><span class="pill p-keep">your voice</span></td></tr>
+      <tr><td>Tone · AI</td><td>AuK regenerates the message or the selection</td><td class="num">~1 s</td><td><span class="pill p-ai">regenerated</span></td></tr>
+      <tr><td>Send</td><td>Renderer applies the edit list once</td><td class="num">&lt; 0.1 s</td><td><span class="pill p-none">new file</span></td></tr>
+    </tbody></table></div>
+</section>
+
+<section>
+  <h2>Where each piece lives in the repo</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>File</th><th>Role</th></tr></thead>
+    <tbody>
+      <tr><td><code>app/static/index.html</code></td><td>The whole UI: recorder, live transcript, undo, suggestions, waveforms, chat preview</td></tr>
+      <tr><td><code>app/app.py</code></td><td>Server: WebSocket live loop, sessions, every button's endpoint, verification and retries</td></tr>
+      <tr><td><code>app/brain.py</code></td><td>LLM prompts and the validators: undo, clean up, tighten, grammar, did-you-mean</td></tr>
+      <tr><td><code>app/render.py</code></td><td>Edit list → audio: quiet-point cuts, crossfades, pause capping, inserts</td></tr>
+      <tr><td><code>lab/align.py</code></td><td>Forced aligner that gives exact word start and end times</td></tr>
+      <tr><td><code>app/pron.py</code> · <code>pron_model.pkl</code></td><td>Pronunciation scorer and the small detector trained on speechocean762</td></tr>
+      <tr><td><code>app/prosody.py</code></td><td>Natural tone presets (pitch and pace with Praat)</td></tr>
+      <tr><td><code>app/editor_service.py</code></td><td>One small server per voice model: PlayDiffusion, F5, AuK, dots</td></tr>
+      <tr><td><code>scripts/</code></td><td>Install and start scripts for a fresh GPU machine</td></tr>
+      <tr><td><code>lab/</code> · <code>reports/</code> · <code>research_notes/</code></td><td>Benchmarks, measurements, and the two research reports</td></tr>
+    </tbody></table></div>
+</section>
+</div>
