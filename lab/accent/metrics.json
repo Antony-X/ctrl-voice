@@ -1,0 +1,152 @@
+{
+ "russian_C24A": {
+  "speaker": "EDACC-C24-A",
+  "l1": "Russian",
+  "accent_label": "Don't know",
+  "segment": "EDACC-C24-308.wav",
+  "held_out": [
+   "EDACC-C24-29.wav",
+   "EDACC-C24-49.wav",
+   "EDACC-C24-73.wav"
+  ],
+  "original": {
+   "dur": 14.8,
+   "asr": "So I would actually, I would say, you know, we leave relatively early from Loch Ness. Like get to La Pule and do a proper hike maybe that day. Because we will not be tired yet and the first day will be sort of mostly driving and being lazy.",
+   "wer_vs_edacc_ref": 0.1,
+   "wer_vs_tts_text": 0.0,
+   "sim_heldout": 0.9,
+   "sim_original": 1.0,
+   "sim_native_ref_voice": -0.117,
+   "top": "england",
+   "cos_us": 0.366,
+   "cos_england": 0.419,
+   "cos_indian": -0.01
+  },
+  "native_tts": {
+   "dur": 13.21,
+   "asr": "so i would actually i would say you know we leave relatively early from loch ness like get to la pool and do a proper hike maybe that day because we will not be tired yet and the first day will be sort of mostly driving and being lazy",
+   "wer_vs_edacc_ref": 0.1,
+   "wer_vs_tts_text": 0.02,
+   "sim_heldout": -0.123,
+   "sim_original": -0.181,
+   "sim_native_ref_voice": 0.801,
+   "top": "us",
+   "cos_us": 0.63,
+   "cos_england": 0.034,
+   "cos_indian": 0.11
+  },
+  "converted": {
+   "dur": 13.2,
+   "asr": "So I would actually, I would say, you know, we leave relatively early from Loch Ness, like get to La Poole and do a proper hike maybe that day, because we will not be tired yet. And the first day, we'll be sort of mostly driving and being lazy.",
+   "wer_vs_edacc_ref": 0.08,
+   "wer_vs_tts_text": 0.041,
+   "sim_heldout": 0.635,
+   "sim_original": 0.597,
+   "sim_native_ref_voice": -0.072,
+   "top": "us",
+   "cos_us": 0.594,
+   "cos_england": 0.379,
+   "cos_indian": 0.161
+  }
+ },
+ "indian_C09B": {
+  "speaker": "EDACC-C09-B",
+  "l1": "Indian English",
+  "accent_label": "Indian English",
+  "segment": "EDACC-C09-6.wav",
+  "held_out": [
+   "EDACC-C09-26.wav",
+   "EDACC-C09-60.wav",
+   "EDACC-C09-72.wav"
+  ],
+  "original": {
+   "dur": 14.86,
+   "asr": "Yeah, so the topic that we chosen was basically what was the first movie that we watched that was based on a book. So for me, it's Alice in Wonderland. What is it for you?",
+   "wer_vs_edacc_ref": 0.057,
+   "wer_vs_tts_text": 0.0,
+   "sim_heldout": 0.759,
+   "sim_original": 1.0,
+   "sim_native_ref_voice": 0.073,
+   "top": "indian",
+   "cos_us": 0.456,
+   "cos_england": 0.204,
+   "cos_indian": 0.701
+  },
+  "native_tts": {
+   "dur": 9.75,
+   "asr": "Yeah, so the topic that we'd chosen was basically what was the first movie that we watched that was based on a book, so for me, it's Alice in Wonderland. What is it for you?",
+   "wer_vs_edacc_ref": 0.057,
+   "wer_vs_tts_text": 0.029,
+   "sim_heldout": 0.057,
+   "sim_original": 0.092,
+   "sim_native_ref_voice": 0.865,
+   "top": "us",
+   "cos_us": 0.653,
+   "cos_england": -0.058,
+   "cos_indian": 0.217
+  },
+  "converted": {
+   "dur": 9.74,
+   "asr": "Yeah. So the topic that we chosen was basically what was the first movie that we watched that was based on a book. So for me, it's Alice in Wonderland. What is it for you?",
+   "wer_vs_edacc_ref": 0.057,
+   "wer_vs_tts_text": 0.0,
+   "sim_heldout": 0.331,
+   "sim_original": 0.473,
+   "sim_native_ref_voice": 0.18,
+   "top": "us",
+   "cos_us": 0.725,
+   "cos_england": 0.199,
+   "cos_indian": 0.271
+  }
+ },
+ "native_C07A": {
+  "speaker": "EDACC-C07-A",
+  "l1": "Mainstream US English",
+  "accent_label": "Mainstream US English",
+  "segment": "EDACC-C07-197.wav",
+  "held_out": [
+   "EDACC-C07-39.wav",
+   "EDACC-C07-73.wav",
+   "EDACC-C07-141.wav"
+  ],
+  "original": {
+   "dur": 12.16,
+   "asr": "um but yeah like i said and then after this in a while i'm gonna leave and then i have drum rehearsals and that's for like two hours and then after that uh we can meet and make the thai curry",
+   "wer_vs_edacc_ref": 0.0,
+   "wer_vs_tts_text": 0.0,
+   "sim_heldout": 0.775,
+   "sim_original": 1.0,
+   "sim_native_ref_voice": -0.039,
+   "top": "indian",
+   "cos_us": 0.359,
+   "cos_england": 0.399,
+   "cos_indian": 0.563
+  },
+  "native_tts": {
+   "dur": 10.51,
+   "asr": "but yeah like I said and then after this in a while I'm gonna leave and then I have drum rehearsals and that's for like two hours and then after that we can meet and make the thigh curry",
+   "wer_vs_edacc_ref": 0.026,
+   "wer_vs_tts_text": 0.026,
+   "sim_heldout": -0.047,
+   "sim_original": 0.008,
+   "sim_native_ref_voice": 0.829,
+   "top": "us",
+   "cos_us": 0.705,
+   "cos_england": 0.158,
+   "cos_indian": 0.056
+  },
+  "converted": {
+   "dur": 10.5,
+   "asr": "But yeah, like I said, and then after this in a while I'm going to leave, and then I have drum rehearsals, and that's for like two hours, and then after that we can meet and make the thigh curry.",
+   "wer_vs_edacc_ref": 0.077,
+   "wer_vs_tts_text": 0.077,
+   "sim_heldout": 0.712,
+   "sim_original": 0.827,
+   "sim_native_ref_voice": 0.008,
+   "top": "us",
+   "cos_us": 0.592,
+   "cos_england": 0.401,
+   "cos_indian": 0.313
+  }
+ }
+}

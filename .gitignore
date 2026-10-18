@@ -5,3 +5,7 @@ __pycache__/
 *.npy
 *.parquet
 .venv/
+
+# The demo kit and accent samples ship their audio
+!demo/**/*.wav
+!demo/**/*.mp3

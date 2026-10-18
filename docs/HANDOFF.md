@@ -36,6 +36,7 @@ See `docs/architecture.html` for the diagrams.
 - LibriSpeech test-clean, AMI headset, DisfluencySpeech (round 1 editing benchmark and cleanup).
 - speechocean762 (HF `mispeech/speechocean762`, Mandarin-L1 learners, expert word/phone labels): pronunciation detector training/eval, did-you-mean eval.
 - EdAcc (HF `edinburghcstr/edacc`, accented Zoom conversations): grammar test, accent and tone tests.
+- **Accent service (port 8106), not started by `start_app.sh`:** `/workspace/envs/accent/.venv/bin/python /workspace/app/accent_service.py 8106` (log `/workspace/logs/accent.log`, ~22 s to load, ~5.5 GB GPU). Venv from `scripts/install_accent.sh`; Seed-VC code is the Hugging Face Space `Plachta/Seed-VC` in `/workspace/envs/accent/seed-vc` (the GitHub repo is gone) with its `audiotools` import bypassed; native F5 references in `/workspace/accent/refs` (LibriSpeech test-clean). Without it, `/api/s/{sid}/accent` returns 503 and the app shows the error.
 - Not used (needs the user to accept terms or fill a form): L2-ARCTIC, Speak & Improve 2025 (the only spoken grammar-correction corpus), Common Voice.
 - The demo sample message and the live-undo test audio are synthetic (F5-TTS cloning a dataset voice); replace with a real recording.
 

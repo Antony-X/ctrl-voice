@@ -1,10 +1,14 @@
-# ReSpeak
+# Ctrl+Voice
+
+**Say it messy. Send it clean.** Everything for Ctrl+Voice in one repo: the Windows app (`desktop/`), the GPU engine it talks to (`app/`, formerly ReSpeak), and the hackathon demo kit (`demo/`).
 
 Voice messages you can edit like text: undo the last thought while recording, remove "Monday, no wait, Wednesday" automatically, fix grammar and mispronounced words in your own voice, and change tone. The original recording is never modified; every edit is a time range in an edit list that is rendered when you play or send.
 
 - **Architecture (visual)**: `docs/architecture.html` (open in a browser) · hosted copy: https://claude.ai/artifact/BHqCXAa4bTqss5iu8fhPqf
 - **Listening page with all test audio**: `docs/listening_page.html` · hosted copy: https://claude.ai/artifact/Vw2FXXNXYrhobJrQSNtQg2
 - **Start here (humans and agents)**: `CLAUDE.md`, `docs/PROJECT.md`, `docs/HANDOFF.md`, `docs/RESULTS.md`
+- **The app**: `desktop/README.md` (run with `cd desktop && npm install && npm start`)
+- **The demo**: `demo/README.md` and `demo/DEMO_PLAN.md` (deck, video, demo script, test harnesses)
 - **Research reports**: `reports/ReSpeak voice editing feasibility.md` (round 1) and `reports/ReSpeak grammar pronunciation and accent.md` (round 2); sources in `research_notes/`
 
 ## Status (measured, see reports for details)
@@ -17,15 +21,19 @@ Voice messages you can edit like text: undo the last thought while recording, re
 | Grammar fix in your own voice | Works (suggestions) | 8/8 fixes rendered and verified on real L2 speakers (EdAcc) |
 | Pronunciation coach (detection) | Works on read speech | AUC 0.88, corr. with experts 0.53 (speechocean762); accent-tolerant mode flags 26% fewer words |
 | Re-say a word clearly | Works | detector score 4.6-6.1 → 9.0-9.95 |
-| "Did you mean...?" (mis-heard words) | Experimental | no net gain yet |
+| Misspoken words ("pacific" → "specific") | Works for real words wrong in context | 8/8 synthetic demo takes fixed both words; non-words ("libary") are silently corrected by the recognizer, so they are not caught |
 | Tone: natural (pitch & pace) | Works, not listener-validated | 0.1 s, voice untouched |
 | Tone: AI restyle | Experimental | AuK voice sim 0.72-0.86; Step-Audio-EditX (optional) 0.52-0.60 |
-| English accent removal | Does not work (dropped) | no measurable change with AuK |
+| Native accent (AI voice, whole message) | Works for some speakers | ASR → native F5 voice → Seed-VC back to the speaker: Russian speaker voice sim 0.64 (ceiling 0.90), WER 0.04; Indian speaker 0.33 (ceiling 0.76); ~3.4 s per 15 s message. See `lab/accent/results.md`. (AuK de-accent earlier: no change, dropped.) |
 
 ## Repo layout
 
 | Path | What |
 |---|---|
+| `desktop/` | The Ctrl+Voice Windows app (Electron): tray, floating recording bar, editor, settings, paste-and-send into chat apps. History from george-ckito/ctrl-voice |
+| `demo/` | Hackathon demo kit: pitch deck build, Remotion video project, validated demo script, e2e harness. See `demo/README.md` |
+| `app/accent_service.py` | Native-accent server (port 8106) in its own venv (`scripts/install_accent.sh`); `/api/s/{sid}/accent` proxies to it |
+| `lab/accent/` | The accent prototype: speaker picks, metrics, results |
 | `app/static/index.html` | The whole UI (recorder, live transcript, undo, suggestions, waveforms, Discord-style chat preview) |
 | `app/app.py` | FastAPI server: WebSocket live loop, sessions, all endpoints, verification and retries |
 | `app/brain.py` | LLM prompts + validators: undo, clean up, tighten, grammar, did-you-mean |
