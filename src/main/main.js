@@ -5,7 +5,7 @@
 // recorded from (Discord, WhatsApp, …).
 const {
   app, BrowserWindow, Tray, Menu, globalShortcut, ipcMain,
-  nativeImage, nativeTheme, screen, session, Notification,
+  nativeImage, nativeTheme, screen, session, Notification, dialog,
 } = require('electron');
 const path = require('path');
 const fs = require('fs');
@@ -524,6 +524,38 @@ function markSent(meta, appName) {
 const overlayStatus = (text) => overlay?.webContents.send('overlay:status', { text });
 const overlayDone = (text, ok = true) => overlay?.webContents.send('overlay:done', { text, ok });
 
+// A voice note made somewhere else (a phone memo, a chat app's download) is
+// fixed like a recording. The engine decodes any format, and its WAV copy
+// becomes the original, so the original and the engine's audio line up.
+const IMPORT_KINDS = ['wav', 'mp3', 'm4a', 'aac', 'ogg', 'opus', 'webm', 'flac'];
+async function importVoiceNote(file) {
+  if (!file) {
+    const pick = await dialog.showOpenDialog(mainWin, {
+      title: 'Import a voice note', properties: ['openFile'],
+      filters: [{ name: 'Voice notes', extensions: IMPORT_KINDS }],
+    });
+    if (pick.canceled || !pick.filePaths.length) return null;
+    file = pick.filePaths[0];
+  }
+  if (typeof file !== 'string' || !IMPORT_KINDS.includes(path.extname(file).slice(1).toLowerCase()) || !fs.existsSync(file)) {
+    throw new Error("That isn't an audio file Ctrl+Voice can open");
+  }
+  const up = await engine.upload(fs.readFileSync(file), path.basename(file));
+  const words = up.words.map(({ w, s, e, p }) => ({ w, s, e, p }));
+  const ops = Edits.fromRemoved([]);
+  const meta = {
+    id: newId(), createdAt: Date.now(), sid: up.sid, dur: up.dur, words, removed: [], ops,
+    title: titleFor(words, ops), from: null, imported: path.basename(file), output: null, take: null,
+  };
+  fs.mkdirSync(dataDir(), { recursive: true });
+  fs.writeFileSync(msgFile(meta.id, 'wav'), await engine.download(`/api/s/${up.sid}/file/orig.wav`));
+  saveMessage(meta);
+  notifyMessage(meta);
+  if (wantsFix()) fixInBackground(meta);
+  showMain(`editor:${meta.id}`);
+  return meta;
+}
+
 async function finishRecording({ sid, words = [], removed = [], dur = 0, wav }, mode) {
   const target = recordTarget;
   const label = sendLabel(target);
@@ -807,6 +839,8 @@ function wireIpc() {
     return saveMessage(meta);
   });
   ipcMain.handle('messages:delete', (_e, id) => { deleteMessage(id); return true; });
+  // file: a path dropped on the window; none opens a file picker
+  ipcMain.handle('messages:import', (_e, file) => importVoiceNote(file));
   // which: 'original' | 'output' (what would be sent)
   ipcMain.handle('messages:audio', (_e, { id, which }) => {
     const meta = readMessage(id);

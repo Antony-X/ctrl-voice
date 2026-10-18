@@ -166,11 +166,12 @@ kbd + kbd { margin-left: 3px; }
 .row-meta { display: flex; justify-content: space-between; gap: 8px; font: 12px/1.4 var(--small); color: var(--ink-3); margin-top: 1px; }
 .row-meta .sent { color: var(--ink-2); }
 
-.side-settings {
+.side-settings, .side-import {
   height: 36px; margin-top: 6px; padding: 0 10px; border-radius: 9px;
   display: flex; align-items: center; gap: 10px; color: var(--ink-2); font-weight: 500;
 }
-.side-settings:hover { background: var(--fill); color: var(--ink); }
+.side-settings:hover, .side-import:hover { background: var(--fill); color: var(--ink); }
+.side-import:disabled { opacity: .6; cursor: default; background: none; }
 .side-settings.active { background: var(--picked); color: var(--ink); }
 
 /* ---------- the sheet ---------- */
@@ -189,6 +190,8 @@ kbd + kbd { margin-left: 3px; }
 .empty h1 kbd { font-size: 15px; line-height: 26px; padding: 0 8px; vertical-align: 4px; }
 .empty p { margin-top: 12px; color: var(--ink-2); font-size: 15px; line-height: 1.6; }
 .empty p + p { margin-top: 6px; }
+.link-btn { font: inherit; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+body.dropping .main { box-shadow: inset 0 0 0 2px var(--primary); }
 
 /* a still of the recording bar, so you know what to look for */
 .still { display: inline-flex; flex-direction: column; align-items: center; gap: 8px; }
