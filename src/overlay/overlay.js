@@ -176,7 +176,8 @@ function noteText() {
 // ---------- rendering ----------
 function renderCaption() {
   if (state !== 'rec') return;
-  const inCut = (w) => recentCut && recentCut.t0 <= (w.s + w.e) / 2 && (w.s + w.e) / 2 <= recentCut.t1;
+  const center = (w) => w.s + Math.min(w.e - w.s, 0.4) / 2;  // as Edits.center: whisper stretches word ends into pauses
+  const inCut = (w) => recentCut && recentCut.t0 <= center(w) && center(w) <= recentCut.t1;
   const shown = words.filter(w => !w.x || inCut(w)).slice(-28);
   if (!shown.length) {
     capText.innerHTML = `<span class="line empty">${offline ? 'Recording. Fixes run when you finish' : 'Listening…'}</span>`;

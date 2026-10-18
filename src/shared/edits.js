@@ -35,9 +35,15 @@
 
   const isCut = (op) => op.type === 'cut';
 
-  // The on-cut a word falls in (by its midpoint, like the engine does), or null.
+  // Where a word sits in time, for matching it to cuts (the engine uses the same rule).
+  // Whisper stretches a word's end through the pause after it ("that." 13.1-14.7 s for
+  // 0.15 s of speech), so the midpoint can land outside a cut that removed the word;
+  // starts are reliable, and no spoken word needs more than 0.4 s to reach its middle.
+  const center = (w) => w.s + Math.min(w.e - w.s, 0.4) / 2;
+
+  // The on-cut a word falls in, or null.
   function cutFor(word, ops) {
-    const m = (word.s + word.e) / 2;
+    const m = center(word);
     return ops.find(o => o.on && isCut(o) && o.t0 <= m && m <= o.t1) || null;
   }
 
@@ -46,7 +52,7 @@
 
   // A cut the engine suggested but didn't apply (from /tighten), not yet taken.
   function suggestionFor(word, ops) {
-    const m = (word.s + word.e) / 2;
+    const m = center(word);
     return ops.find(o => !o.on && isCut(o) && o.auto === false && o.t0 <= m && m <= o.t1) || null;
   }
 
@@ -57,12 +63,12 @@
     return { id: uid(), type: 'cut', t0, t1, i, j, kind: 'cut', text: words.slice(i, j + 1).map(w => w.w).join(' '), on: true };
   }
 
-  // The words an op covers, as {i, j}; cuts are matched by word midpoints.
+  // The words an op covers, as {i, j}; cuts are matched by word centers.
   function rangeOf(op, words) {
     if (!isCut(op)) return { i: op.i, j: op.j };
     let i = -1, j = -1;
     words.forEach((w, k) => {
-      const m = (w.s + w.e) / 2;
+      const m = center(w);
       if (op.t0 <= m && m <= op.t1) { if (i < 0) i = k; j = k; }
     });
     return i < 0 ? null : { i, j };
@@ -105,5 +111,5 @@
     return op.kind ? `Tone: ${op.kind}` : 'Edit';
   }
 
-  return { uid, overlaps, fromRemoved, fromCuts, fromOp, cutFor, replaceFor, suggestionFor, cutRange, rangeOf, forRender, keptText, label, isCut };
+  return { uid, overlaps, center, fromRemoved, fromCuts, fromOp, cutFor, replaceFor, suggestionFor, cutRange, rangeOf, forRender, keptText, label, isCut };
 });

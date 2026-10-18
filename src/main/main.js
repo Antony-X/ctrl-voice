@@ -30,7 +30,7 @@ const DEFAULT_SETTINGS = {
     cancel: 'Escape',                            // discard recording (only while recording)
   },
   shortcutsVersion: SHORTCUTS_VERSION,
-  backendUrl: 'https://zaa3ajj8o85hhq-7860.proxy.runpod.net',
+  backendUrl: 'https://xjdypx6zst9jkd-7860.proxy.runpod.net',
   finishAction: 'send',     // 'send' = fix and paste into the app you recorded from, 'review' = open the editor
   autoSend: true,           // press Enter after pasting
   fix: { cleanup: true, grammar: true, pronunciation: true }, // applied before sending
@@ -225,23 +225,23 @@ const wordsCut = (meta, i, j) => meta.words.slice(i, j + 1).some(w => Edits.cutF
 async function autoFix(meta, status, { all = false } = {}) {
   const fix = all ? { cleanup: true, grammar: true, pronunciation: true } : settings.fix;
   meta.ops ||= Edits.fromRemoved(meta.removed);
-  if (fix.cleanup) {
-    status('Cleaning up…');
-    const { items } = await withSession(meta, (sid) => engine.clean(sid));
-    meta.ops.push(...Edits.fromCuts(items, meta.ops));
-  }
-  if (fix.grammar) {
-    status('Checking grammar…');
-    const { items } = await withSession(meta, (sid) => engine.grammar(sid));
-    for (const g of items.filter(g => !wordsCut(meta, g.i, g.j)).slice(0, MAX_AUTO_REPLACE)) {
+  // The three checks only read the transcript, so they run at the same time;
+  // their results are applied in order, the same as running them one by one.
+  status(fix.cleanup ? 'Cleaning up…' : fix.grammar ? 'Checking grammar…' : 'Checking pronunciation…');
+  const [cleaned, gram, pr] = await withSession(meta, (sid) => Promise.all([
+    fix.cleanup ? engine.clean(sid) : null,
+    fix.grammar ? engine.grammar(sid) : null,
+    fix.pronunciation ? engine.pron(sid) : null,
+  ]));
+  if (cleaned) meta.ops.push(...Edits.fromCuts(cleaned.items, meta.ops));
+  if (gram) {
+    for (const g of gram.items.filter(g => !wordsCut(meta, g.i, g.j)).slice(0, MAX_AUTO_REPLACE)) {
       status(`Saying “${g.new}”…`);
       const r = await withSession(meta, (sid) => engine.replace(sid, { i: g.i, j: g.j, new: g.new, kind: 'grammar' }));
       meta.ops.push(Edits.fromOp(r.op, r.op.verified));
     }
   }
-  if (fix.pronunciation) {
-    status('Checking pronunciation…');
-    const pr = await withSession(meta, (sid) => engine.pron(sid));
+  if (pr) {
     meta.pron = { items: pr.items, accent: pr.accent, median: pr.median };
     for (const p of pr.items.filter(p => !wordsCut(meta, p.i, p.i)).slice(0, MAX_AUTO_REPLACE)) {
       status(`Re-saying “${p.word.replace(/[^\w']/g, '')}”…`);
