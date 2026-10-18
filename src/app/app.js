@@ -313,17 +313,14 @@ function summaryHtml() {
   const cuts = on.filter(Edits.isCut).length;
   const reps = on.filter(o => !Edits.isCut(o));
   const resaid = reps.filter(o => o.kind === 'pronunciation').length;
-  const changed = reps.filter(o => o.kind === 'replace' || o.kind === 'grammar').length;
+  const changed = reps.filter(o => o.kind === 'replace' || o.kind === 'grammar' || o.kind === 'misspoken').length;
   const restyled = reps.length - resaid - changed;
   const parts = [];
   if (cuts) parts.push(plural(cuts, 'cut'));
   if (changed) parts.push(`${plural(changed, 'word')} changed`);
   if (resaid) parts.push(`${plural(resaid, 'word')} re-said`);
   if (restyled) parts.push(`${plural(restyled, 'part')} in a new tone`);
-  if (S.meta.take) {
-    const tones = takeTones(S.meta.take);
-    parts.push(`${/^[aeiou]/.test(tones[0]) ? 'an' : 'a'} ${tones.join(', ')} tone${S.meta.take.engine === 'tone' ? ' (AI voice)' : ''}`);
-  }
+  if (S.meta.take) parts.push(takeText(S.meta.take));
   let what = parts.length ? cap(joinAnd(parts)) : S.meta.fixed ? 'Nothing needed fixing' : 'No changes yet';
   const outDur = S.meta.take?.dur ?? S.meta.output?.dur;
   if (outDur && !S.dirty && S.meta.dur - outDur >= 1) what += `, ${Math.round(S.meta.dur - outDur)} seconds shorter`;
@@ -796,8 +793,8 @@ function renderBar() {
   const playing = !player.paused;
   const time = updating ? 'Updating…' : playing || player.currentTime > 0 ? fmt(player.currentTime) : fmt(dur);
   const take = S.meta.take;
-  const tones = take ? takeTones(take) : [];
-  const toneLabel = !tones.length ? 'Tone' : tones.length === 1 ? cap(tones[0]) : `${tones.length} tones`;
+  const tones = take && take.engine !== 'accent' ? takeTones(take) : [];
+  const toneLabel = take?.engine === 'accent' ? 'Native accent' : !tones.length ? 'Tone' : tones.length === 1 ? cap(tones[0]) : `${tones.length} tones`;
   const avatars = tones.length ? `<span class="avs">${tones.slice(0, 3).map(s => avatar(s, take.engine === 'tone')).join('')}</span>` : '';
   const target = sendTarget();
   const busy = !canEdit() ? 'disabled' : '';
@@ -907,6 +904,15 @@ const TONE = {
 };
 
 // The tones in a take, strongest first.
+// "a calm tone", "a native accent (AI voice) and a confident tone"
+function takeText(take) {
+  if (take.engine === 'accent') return 'a native accent (AI voice)';
+  const tones = takeTones(take);
+  const tone = `${/^[aeiou]/.test(tones[0]) ? 'an' : 'a'} ${tones.join(', ')} tone`;
+  if (take.accent) return `a native accent (AI voice) and ${tone}`;
+  return `${tone}${take.engine === 'tone' ? ' (AI voice)' : ''}`;
+}
+
 function takeTones(take) {
   const mix = take.mix || { [take.style]: 1 };
   return Object.entries(mix).filter(([, a]) => a > 0).sort((a, b) => b[1] - a[1]).map(([k]) => k);
@@ -990,7 +996,8 @@ function renderTone() {
       return `<button class="tc k-${s} ${on ? 'on' : ''}" data-action="tone-ai" data-tone="${s}" style="--a:${on ? 1 : 0}" aria-pressed="${on}" ${locked}>
         <span class="tc-art">${character(s)}</span><span class="tc-name">${cap(s)}</span></button>`;
     }).join('')}</div>
-    <div class="tone-foot"><span class="grow">Re-made by an AI voice, so it sounds less like you</span><span class="tone-status"></span></div>`;
+    <div class="tone-foot"><button class="text-btn" data-action="tone-accent" aria-pressed="${take?.engine === 'accent'}" ${locked}>${take?.engine === 'accent' ? 'Native accent ✓' : 'Native accent'}</button>
+      <span class="grow">Re-made by an AI voice, so it sounds less like you</span><span class="tone-status"></span></div>`;
   }
   toneEl.innerHTML = `
     <div class="tone-head">
@@ -1072,14 +1079,14 @@ function preview() {
   player.play().catch(() => {});
 }
 
-async function pickAiTone(style) {
+async function pickAiTone(style, engine = 'tone') {
   if (TONE.busy || !S.meta) return;
   const take = S.meta.take;
-  if (take?.engine === 'tone' && take.style === style) return preview();
+  if (take?.engine === engine && take.style === style) return preview();
   TONE.busy = true;
   let ok = false;
   try {
-    ok = await toneAll('tone', style);
+    ok = await toneAll(engine, style);
   } finally {
     TONE.busy = false;
   }
@@ -1102,19 +1109,19 @@ async function resetTone() {
   renderTone();
 }
 
-// A take of the whole message: natural (a mix of presets, in your own voice)
-// or tone (the AI voice). Resolves true when there is a new take.
+// A take of the whole message: natural (a mix of presets, in your own voice),
+// tone or accent (the AI voice). Resolves true when there is a new take.
 async function toneAll(engine, style, mix) {
   if (!canEdit() || !(await ensureRendered())) return false;
   const id = S.id;
   const what = mix ? joinAnd(Object.keys(mix).sort((a, b) => mix[b] - mix[a])) : style;
-  const text = engine === 'tone' ? `Making it ${what} with the AI voice…` : `Making it ${what}…`;
+  const text = engine === 'accent' ? 'Giving it a native accent…' : engine === 'tone' ? `Making it ${what} with the AI voice…` : `Making it ${what}…`;
   const r = await job(text, () => api.invoke('edit:restyle', { id, engine, style, mix }));
   if (!r || !adopt(r.meta)) return false;
   renderEditor();
   setView('output');
   setAudio('output', r.audio);
-  if (engine === 'tone' && r.meta.take?.wordsKept != null && r.meta.take.wordsKept < 0.9) {
+  if (engine !== 'natural' && r.meta.take?.wordsKept != null && r.meta.take.wordsKept < 0.9) {
     toast('Some words changed in the restyle. Listen before sending', true);
   }
   return true;
@@ -1243,6 +1250,7 @@ function renderSettings() {
             <span class="set-lvl" data-lvl="${t}">${levelName(v)}</span>
             <input class="tc-range set-range k-${t}" type="range" min="0" max="100" value="${Math.round(v * 100)}" data-set-tone="${t}" style="--a:${v}" aria-label="How ${t}" aria-valuetext="${levelName(v)}" />`);
         }).join('')}
+        ${row('Native accent', 'Every message said again with a native English accent, in a voice like yours. Made by an AI voice, so listen before sending', sw('accent', s.accent))}
       </div><p class="section-note" id="toneNote">${esc(toneNote(s.tone))}</p></section>
 
       <section class="section"><h2>Shortcuts</h2><div class="group">
@@ -1394,6 +1402,7 @@ const ACTIONS = {
     scheduleTone(450);
   },
   'tone-ai': (el) => pickAiTone(el.dataset.tone),
+  'tone-accent': () => pickAiTone('native', 'accent'),
   'tone-reset': () => resetTone(),
   send: () => send(sendTarget()),
   'send-menu': (el) => (menuEl.hidden ? openMenu(el, sendMenuHtml()) : closeMenu()),

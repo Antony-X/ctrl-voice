@@ -73,6 +73,7 @@ class Engine {
   natural(sid, body) { return this.request(`/api/s/${sid}/natural`, { json: body, timeout: 90000 }); }
   // AI restyle (changes the voice somewhat): confident | calm | friendly | excited.
   tone(sid, body) { return this.request(`/api/s/${sid}/tone`, { json: body, timeout: 180000 }); }
+  accent(sid, body) { return this.request(`/api/s/${sid}/accent`, { json: body, timeout: 180000 }); }
   download(p) { return this.request(p, { method: 'GET', raw: true }); }
 }
 

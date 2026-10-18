@@ -35,6 +35,7 @@ const DEFAULT_SETTINGS = {
   autoSend: true,           // press Enter after pasting
   fix: { cleanup: true, grammar: true, misspoken: true, pronunciation: true }, // applied before sending
   tone: { confident: 0, calm: 0, warm: 0 }, // your-voice tone for every message, slider positions 0..1 as in the editor
+  accent: false,            // every message said again with a native accent (AI voice), before the tone
   showIdleBar: true,
   launchAtStartup: false,
   startHidden: false,
@@ -239,19 +240,20 @@ async function autoFix(meta, status, { all = false } = {}) {
   if (cleaned) meta.ops.push(...Edits.fromCuts(cleaned.items, meta.ops));
   // Words already cut, or already replaced by an earlier fix, are left alone.
   const free = (i, j) => !wordsCut(meta, i, j) && !meta.ops.some(o => o.on && !Edits.isCut(o) && o.i <= j && i <= o.j);
-  if (gram) {
-    for (const g of gram.items.filter(g => free(g.i, g.j)).slice(0, MAX_AUTO_REPLACE)) {
-      status(`Saying “${g.new}”…`);
-      const r = await withSession(meta, (sid) => engine.replace(sid, { i: g.i, j: g.j, new: g.new, kind: 'grammar' }));
-      meta.ops.push(Edits.fromOp(r.op, r.op.verified));
-    }
-  }
   // Words that came out as a different word ("bored game" for "board game"):
   // the engine checks the meant word fits the recorded sounds before offering it.
+  // Before grammar, which often catches the same word ("pacific" for "specific").
   if (meant) {
     for (const m of meant.items.filter(m => free(m.i, m.j)).slice(0, MAX_AUTO_REPLACE)) {
       status(`Saying “${m.new}”…`);
       const r = await withSession(meta, (sid) => engine.replace(sid, { i: m.i, j: m.j, new: m.new, kind: 'misspoken' }));
+      meta.ops.push(Edits.fromOp(r.op, r.op.verified));
+    }
+  }
+  if (gram) {
+    for (const g of gram.items.filter(g => free(g.i, g.j)).slice(0, MAX_AUTO_REPLACE)) {
+      status(`Saying “${g.new}”…`);
+      const r = await withSession(meta, (sid) => engine.replace(sid, { i: g.i, j: g.j, new: g.new, kind: 'grammar' }));
       meta.ops.push(Edits.fromOp(r.op, r.op.verified));
     }
   }
@@ -273,10 +275,12 @@ async function autoFix(meta, status, { all = false } = {}) {
   await applyTone(meta, status);
 }
 
-// The tone a message gets after each render: the your-voice tone picked for it
-// in the editor, else the Your sound setting. "No tone change" turns it off for
-// that message; an AI-voice take is slow to remake, so after an edit it is
-// picked again by hand (as before).
+// The take a message gets after each render: a native accent (the Settings
+// switch), then the your-voice tone picked for it in the editor, else the Your
+// sound setting. "No tone change" turns both off for that message; an AI-voice
+// take is slow to remake, so after an edit it is picked again by hand (as before).
+const standingAccent = (meta) => settings.accent && meta.tone !== 'none' && meta.tone !== 'ai';
+
 function standingTone(meta) {
   if (meta.tone === 'none' || meta.tone === 'ai') return null;
   const mix = meta.tone?.mix || toneMix(settings.tone);
@@ -285,10 +289,15 @@ function standingTone(meta) {
 }
 
 async function applyTone(meta, status) {
+  const accent = standingAccent(meta);
+  if (accent) {
+    status?.('Giving it a native accent…');
+    await makeTake(meta, 'accent', 'native');
+  }
   const t = standingTone(meta);
   if (!t) return;
   status?.(`Making it ${joinAnd(t.tones)}…`);
-  await makeTake(meta, 'natural', t.tones[0], t.mix);
+  await makeTake(meta, 'natural', t.tones[0], t.mix, accent ? meta.take : null);
 }
 
 // Tone slider positions (0..1) to what the engine's natural takes: {style: amount},
@@ -301,18 +310,24 @@ function toneMix(levels = {}) {
 }
 const joinAnd = (xs) => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`);
 
-// A take of the whole message: natural (pitch and timing, own voice) or tone (AI).
-// mix ({style: amount}, natural only) blends presets; an engine without mixing
-// reads just style, the strongest of them, at full preset.
-async function makeTake(meta, kind, style, mix) {
-  const call = kind === 'tone' ? 'tone' : 'natural';
+// A take of the whole message: natural (pitch and timing, own voice), tone (AI)
+// or accent (a native accent, AI). mix ({style: amount}, natural only) blends
+// presets; an engine without mixing reads just style, the strongest of them, at
+// full preset. over: a take to build on (a tone over the accent) instead of the render.
+async function makeTake(meta, kind, style, mix, over = null) {
+  const call = kind === 'tone' || kind === 'accent' ? kind : 'natural';
   const blend = kind === 'natural' && mix ? { mix } : {};
   const r = await withSession(meta, async (sid) => {
     if (!meta.output) await renderMessage(meta); // the session was re-created
-    return engine[call](sid, { style, ...blend, file: meta.output.file });
+    const text = kind === 'accent' ? Edits.keptText(meta.words, meta.ops) : undefined; // so it says the fixed words
+    return engine[call](sid, { style, ...blend, text, file: over?.file || meta.output.file });
   });
   fs.writeFileSync(msgFile(meta.id, 'take.wav'), await engine.download(r.url));
-  meta.take = { engine: kind, style, ...blend, dur: r.dur, by: r.engine || 'praat', wordsKept: r.words_kept ?? null, voiceSim: r.voice_sim ?? null };
+  meta.take = {
+    engine: kind, style, ...blend, dur: r.dur, by: r.engine || 'praat', file: r.url.split('/').pop(),
+    wordsKept: r.words_kept ?? over?.wordsKept ?? null, voiceSim: r.voice_sim ?? over?.voiceSim ?? null,
+    ...(over?.engine === 'accent' ? { accent: true } : {}),
+  };
   saveMessage(meta);
 }
 
@@ -699,8 +714,9 @@ function wireIpc() {
     await applyTone(meta);
     return { meta, audio: readAudio(meta, 'output') };
   });
-  // engine: natural (pitch and timing, own voice) | tone (AI). With i/j it
-  // returns an op for those words; without, a take of the whole message.
+  // engine: natural (pitch and timing, own voice) | tone (AI) | accent (AI, whole
+  // message only). With i/j it returns an op for those words; without, a take of
+  // the whole message.
   // mix ({style: amount}, natural only) blends the tone sliders; an engine
   // without mixing reads just style, the strongest of them, at full preset.
   ipcMain.handle('edit:restyle', async (_e, { id, engine: kind, style, mix, i, j }) => {
@@ -712,7 +728,7 @@ function wireIpc() {
       return { meta, op: r.op };
     }
     await makeTake(meta, kind, style, mix);
-    meta.tone = kind === 'tone' ? 'ai' : { mix: mix || { [style]: 1 } };
+    meta.tone = kind === 'natural' ? { mix: mix || { [style]: 1 } } : 'ai';
     saveMessage(meta);
     return { meta, audio: readAudio(meta, 'output') };
   });
