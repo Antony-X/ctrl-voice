@@ -122,6 +122,15 @@ def clean(words, kinds=("filler", "correction", "restart", "repetition", "comman
             if c and not (s["kind"] == "correction" and any(cat(x["w"]) == c for x in words[s["j"] + 1:s["j"] + 7])): risky = True
         if s["kind"] == "filler" and not all(norm(w["w"]) in FILLERS for w in words[s["i"]:s["j"] + 1]): risky = True
         out.append(dict(s, auto=not risky))
+    # A word said again across a filler ("bring the, uh, the board game") is a repetition the model
+    # usually misses, since the copies aren't adjacent; cut the first copy.
+    if "repetition" in kinds:
+        cut = {k for s in out if s["auto"] for k in range(s["i"], s["j"] + 1)}
+        for s in [s for s in out if s["kind"] == "filler" and s["auto"]]:
+            a, b = s["i"] - 1, s["j"] + 1
+            if a >= 0 and b < len(words) and a not in cut and b not in cut and norm(words[a]["w"]) and norm(words[a]["w"]) == norm(words[b]["w"]):
+                out.append(dict(kind="repetition", i=a, j=a, text=words[a]["w"], auto=True)); cut.add(a)
+        out.sort(key=lambda s: s["i"])
     return out
 
 
