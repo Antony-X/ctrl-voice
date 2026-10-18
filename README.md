@@ -28,7 +28,9 @@ The app warns at startup if the record shortcut is taken by another app.
 
 1. Open a chat and press `` Alt+` ``. The floating bar shows the live transcript (streamed to the engine over a WebSocket).
 2. Talk. Say "scratch that" or press `Ctrl+Z` to drop the last thought; it disappears while you keep talking.
-3. Press `` Alt+` `` again. The engine applies the fixes switched on in **Settings → Automatic fixes** (cut filler words and false starts, fix grammar, re-say unclear words), renders the audio, and Ctrl+Voice pastes it into the chat and presses Enter.
+3. Press `` Alt+` `` again. The engine applies the fixes switched on in **Settings → Automatic fixes** (cut filler words and false starts, fix grammar, fix misspoken words, re-say unclear words), renders the audio, gives it your tone from **Settings → Your sound**, and Ctrl+Voice pastes it into the chat and presses Enter.
+
+Set it once: **Your sound** has a slider per tone (Confident, Calm, Warm) that every message gets, in your own voice; the note under it says what the mix does. A message can still get a different tone, or none, in the editor, and it keeps that choice through later edits. **Fix misspoken words** catches a word that came out as another one ("bored game" for "board game"): the engine's LLM proposes the word you meant, checks it fits the sounds you made, and says it again in your voice.
 
 Sending works in Discord (including Vesktop, Equibop and Legcord), WhatsApp, Telegram, Slack, Signal and Teams. Anywhere else, or with "Open the editor" chosen in Settings, the message opens in the editor instead.
 

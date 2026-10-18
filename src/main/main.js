@@ -33,7 +33,8 @@ const DEFAULT_SETTINGS = {
   backendUrl: 'https://xjdypx6zst9jkd-7860.proxy.runpod.net',
   finishAction: 'send',     // 'send' = fix and paste into the app you recorded from, 'review' = open the editor
   autoSend: true,           // press Enter after pasting
-  fix: { cleanup: true, grammar: true, pronunciation: true }, // applied before sending
+  fix: { cleanup: true, grammar: true, misspoken: true, pronunciation: true }, // applied before sending
+  tone: { confident: 0, calm: 0, warm: 0 }, // your-voice tone for every message, slider positions 0..1 as in the editor
   showIdleBar: true,
   launchAtStartup: false,
   startHidden: false,
@@ -90,6 +91,7 @@ function loadSettings() {
       ...DEFAULT_SETTINGS, ...raw,
       shortcuts: { ...DEFAULT_SETTINGS.shortcuts, ...(raw.shortcuts || {}) },
       fix: { ...DEFAULT_SETTINGS.fix, ...(raw.fix || {}) },
+      tone: { ...DEFAULT_SETTINGS.tone, ...(raw.tone || {}) },
     };
     if ((raw.shortcutsVersion || 1) < SHORTCUTS_VERSION) {
       for (const [k, olds] of Object.entries(LEGACY_SHORTCUTS)) {
@@ -223,27 +225,39 @@ const wordsCut = (meta, i, j) => meta.words.slice(i, j + 1).some(w => Edits.cutF
 // The fixes applied before a message is sent, or when it opens for review.
 // all: run every fix regardless of settings (the editor's "Fix it").
 async function autoFix(meta, status, { all = false } = {}) {
-  const fix = all ? { cleanup: true, grammar: true, pronunciation: true } : settings.fix;
+  const fix = all ? { cleanup: true, grammar: true, misspoken: true, pronunciation: true } : settings.fix;
   meta.ops ||= Edits.fromRemoved(meta.removed);
-  // The three checks only read the transcript, so they run at the same time;
+  // The checks only read the transcript, so they run at the same time;
   // their results are applied in order, the same as running them one by one.
-  status(fix.cleanup ? 'Cleaning up…' : fix.grammar ? 'Checking grammar…' : 'Checking pronunciation…');
-  const [cleaned, gram, pr] = await withSession(meta, (sid) => Promise.all([
+  status(fix.cleanup ? 'Cleaning up…' : fix.grammar ? 'Checking grammar…' : fix.misspoken ? 'Checking for misspoken words…' : 'Checking pronunciation…');
+  const [cleaned, gram, meant, pr] = await withSession(meta, (sid) => Promise.all([
     fix.cleanup ? engine.clean(sid) : null,
     fix.grammar ? engine.grammar(sid) : null,
+    fix.misspoken ? engine.intent(sid) : null,
     fix.pronunciation ? engine.pron(sid) : null,
   ]));
   if (cleaned) meta.ops.push(...Edits.fromCuts(cleaned.items, meta.ops));
+  // Words already cut, or already replaced by an earlier fix, are left alone.
+  const free = (i, j) => !wordsCut(meta, i, j) && !meta.ops.some(o => o.on && !Edits.isCut(o) && o.i <= j && i <= o.j);
   if (gram) {
-    for (const g of gram.items.filter(g => !wordsCut(meta, g.i, g.j)).slice(0, MAX_AUTO_REPLACE)) {
+    for (const g of gram.items.filter(g => free(g.i, g.j)).slice(0, MAX_AUTO_REPLACE)) {
       status(`Saying “${g.new}”…`);
       const r = await withSession(meta, (sid) => engine.replace(sid, { i: g.i, j: g.j, new: g.new, kind: 'grammar' }));
       meta.ops.push(Edits.fromOp(r.op, r.op.verified));
     }
   }
+  // Words that came out as a different word ("bored game" for "board game"):
+  // the engine checks the meant word fits the recorded sounds before offering it.
+  if (meant) {
+    for (const m of meant.items.filter(m => free(m.i, m.j)).slice(0, MAX_AUTO_REPLACE)) {
+      status(`Saying “${m.new}”…`);
+      const r = await withSession(meta, (sid) => engine.replace(sid, { i: m.i, j: m.j, new: m.new, kind: 'misspoken' }));
+      meta.ops.push(Edits.fromOp(r.op, r.op.verified));
+    }
+  }
   if (pr) {
     meta.pron = { items: pr.items, accent: pr.accent, median: pr.median };
-    for (const p of pr.items.filter(p => !wordsCut(meta, p.i, p.i)).slice(0, MAX_AUTO_REPLACE)) {
+    for (const p of pr.items.filter(p => free(p.i, p.i)).slice(0, MAX_AUTO_REPLACE)) {
       status(`Re-saying “${p.word.replace(/[^\w']/g, '')}”…`);
       const r = await withSession(meta, (sid) => engine.replace(sid, { i: p.i, j: p.i, same: true }));
       // Keep the new take only when the recognizer hears the word and it scores better.
@@ -256,6 +270,50 @@ async function autoFix(meta, status, { all = false } = {}) {
   saveMessage(meta);
   status('Finishing…');
   await renderMessage(meta);
+  await applyTone(meta, status);
+}
+
+// The tone a message gets after each render: the your-voice tone picked for it
+// in the editor, else the Your sound setting. "No tone change" turns it off for
+// that message; an AI-voice take is slow to remake, so after an edit it is
+// picked again by hand (as before).
+function standingTone(meta) {
+  if (meta.tone === 'none' || meta.tone === 'ai') return null;
+  const mix = meta.tone?.mix || toneMix(settings.tone);
+  const tones = Object.keys(mix).sort((a, b) => mix[b] - mix[a]);
+  return tones.length ? { tones, mix } : null;
+}
+
+async function applyTone(meta, status) {
+  const t = standingTone(meta);
+  if (!t) return;
+  status?.(`Making it ${joinAnd(t.tones)}…`);
+  await makeTake(meta, 'natural', t.tones[0], t.mix);
+}
+
+// Tone slider positions (0..1) to what the engine's natural takes: {style: amount},
+// 1 = the preset, a slider at full = TONE_MAX times it (as the editor's tone panel).
+const TONE_MAX = 1.5;
+function toneMix(levels = {}) {
+  const mix = {};
+  for (const [k, v] of Object.entries(levels)) if (v > 0) mix[k] = Math.round(v * TONE_MAX * 100) / 100;
+  return mix;
+}
+const joinAnd = (xs) => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`);
+
+// A take of the whole message: natural (pitch and timing, own voice) or tone (AI).
+// mix ({style: amount}, natural only) blends presets; an engine without mixing
+// reads just style, the strongest of them, at full preset.
+async function makeTake(meta, kind, style, mix) {
+  const call = kind === 'tone' ? 'tone' : 'natural';
+  const blend = kind === 'natural' && mix ? { mix } : {};
+  const r = await withSession(meta, async (sid) => {
+    if (!meta.output) await renderMessage(meta); // the session was re-created
+    return engine[call](sid, { style, ...blend, file: meta.output.file });
+  });
+  fs.writeFileSync(msgFile(meta.id, 'take.wav'), await engine.download(r.url));
+  meta.take = { engine: kind, style, ...blend, dur: r.dur, by: r.engine || 'praat', wordsKept: r.words_kept ?? null, voiceSim: r.voice_sim ?? null };
+  saveMessage(meta);
 }
 
 // Messages opened for review are fixed in the background while the editor
@@ -544,6 +602,7 @@ function applySettings(patch) {
     ...settings, ...patch,
     shortcuts: { ...settings.shortcuts, ...(patch.shortcuts || {}) },
     fix: { ...settings.fix, ...(patch.fix || {}) },
+    tone: { ...settings.tone, ...(patch.tone || {}) },
   };
   saveSettings();
   if (JSON.stringify(settings.shortcuts) !== prevShortcuts) registerGlobalShortcuts();
@@ -637,6 +696,7 @@ function wireIpc() {
     meta.take = null;
     saveMessage(meta);
     await renderMessage(meta);
+    await applyTone(meta);
     return { meta, audio: readAudio(meta, 'output') };
   });
   // engine: natural (pitch and timing, own voice) | tone (AI). With i/j it
@@ -651,18 +711,15 @@ function wireIpc() {
       const r = await withSession(meta, (sid) => engine[call](sid, { style, ...blend, i, j }));
       return { meta, op: r.op };
     }
-    const r = await withSession(meta, async (sid) => {
-      if (!meta.output) await renderMessage(meta); // the session was re-created
-      return engine[call](sid, { style, ...blend, file: meta.output.file });
-    });
-    fs.writeFileSync(msgFile(meta.id, 'take.wav'), await engine.download(r.url));
-    meta.take = { engine: kind, style, ...blend, dur: r.dur, by: r.engine || 'praat', wordsKept: r.words_kept ?? null, voiceSim: r.voice_sim ?? null };
+    await makeTake(meta, kind, style, mix);
+    meta.tone = kind === 'tone' ? 'ai' : { mix: mix || { [style]: 1 } };
     saveMessage(meta);
     return { meta, audio: readAudio(meta, 'output') };
   });
   ipcMain.handle('edit:clear-take', (_e, id) => {
     const meta = messageOrThrow(id);
     meta.take = null;
+    meta.tone = 'none';
     saveMessage(meta);
     return { meta, audio: readAudio(meta, 'output') };
   });

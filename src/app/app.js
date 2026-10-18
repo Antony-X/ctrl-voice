@@ -1232,8 +1232,18 @@ function renderSettings() {
       <section class="section"><h2>Automatic fixes</h2><div class="group">
         ${row('Cut filler words and false starts', '“Um”, “uh”, repeats, and things you corrected yourself', sw('fix.cleanup', s.fix.cleanup))}
         ${row('Fix grammar', 'Up to 3 words per message, said again in your voice', sw('fix.grammar', s.fix.grammar))}
+        ${row('Fix misspoken words', 'A word that came out as another one (“bored game”) is said again as the word you meant', sw('fix.misspoken', s.fix.misspoken))}
         ${row('Re-say unclear words', 'Up to 3 words, kept only when the new take is clearer', sw('fix.pronunciation', s.fix.pronunciation))}
       </div></section>
+
+      <section class="section"><h2>Your sound</h2><div class="group">
+        ${NATURAL_STYLES.map((t) => {
+          const v = s.tone?.[t] || 0;
+          return row(`<span class="set-tone">${avatar(t)}${cap(t)}</span>`, NATURAL_PRESETS[t].blurb, `
+            <span class="set-lvl" data-lvl="${t}">${levelName(v)}</span>
+            <input class="tc-range set-range k-${t}" type="range" min="0" max="100" value="${Math.round(v * 100)}" data-set-tone="${t}" style="--a:${v}" aria-label="How ${t}" aria-valuetext="${levelName(v)}" />`);
+        }).join('')}
+      </div><p class="section-note" id="toneNote">${esc(toneNote(s.tone))}</p></section>
 
       <section class="section"><h2>Shortcuts</h2><div class="group">
         ${SHORTCUT_INFO.map(([k, title, desc]) => {
@@ -1256,6 +1266,19 @@ function renderSettings() {
       </div>
     </div>`;
   mainEl.scrollTop = scroll;
+  // Tone sliders: the label and note follow the slider; the setting is saved when it's let go.
+  const levels = { ...s.tone };
+  mainEl.querySelectorAll('[data-set-tone]').forEach((el) => {
+    const t = el.dataset.setTone;
+    el.addEventListener('input', () => {
+      levels[t] = el.value / 100;
+      el.style.setProperty('--a', levels[t]);
+      el.setAttribute('aria-valuetext', levelName(levels[t]));
+      mainEl.querySelector(`[data-lvl="${t}"]`).textContent = levelName(levels[t]);
+      $('toneNote').textContent = toneNote(levels);
+    });
+    el.addEventListener('change', () => setSetting({ tone: { [t]: el.value / 100 } }));
+  });
   $('micId').addEventListener('change', (e) => setSetting({ micId: e.target.value }));
   $('backendUrl').addEventListener('change', async (e) => {
     const url = e.target.value.trim().replace(/\/+$/, '');
@@ -1263,6 +1286,13 @@ function renderSettings() {
     await setSetting({ backendUrl: url });
     checkHealth();
   });
+}
+
+// What the Your sound sliders do to every message.
+function toneNote(levels = {}) {
+  const mix = mixOf(levels);
+  if (!Object.keys(mix).length) return 'Messages keep the tone you said them in. You can still change it per message in the editor.';
+  return `${describeMix(mix)}. Every message, in your own voice.`;
 }
 
 async function setSetting(patch) {
