@@ -375,20 +375,26 @@ async def api_tone(sid: str, r: dict):
                 words_kept=round(same_words(text, heard), 2), voice_sim=round(sim, 3))
 
 
+def tone_mix(r):  # {"mix": {style: amount}} from the sliders, or the older {"style": name, "amount": 1}
+    mix = {k: float(v) for k, v in (r.get("mix") or {r.get("style"): r.get("amount", 1.0)}).items() if float(v) > 0}
+    if not mix or any(k not in PRESETS for k in mix): raise HTTPException(400, "unknown tone")
+    return mix, r.get("style") if r.get("style") in mix else max(mix, key=mix.get)
+
+
 @app.post("/api/s/{sid}/natural")
 async def api_natural(sid: str, r: dict):
-    """Pitch/timing-only restyle of the current edit (no AI voice): confident / calm / warm."""
-    s = get(sid); src = f"{s.dir}/{r['file']}" if r.get("file") else f"{s.dir}/orig.wav"; t = time.time()
+    """Pitch/timing-only restyle of the current edit (no AI voice): confident / calm / warm, or a mix of them with strengths."""
+    s = get(sid); src = f"{s.dir}/{r['file']}" if r.get("file") else f"{s.dir}/orig.wav"; t = time.time(); mix, style = tone_mix(r)
     if r.get("i") is not None:  # selection: restyle just those words and splice them back
         W, x = s.words, s.audio(); L, R = gap_edges(W, r["i"], r["j"], len(x) / SR)
         sub = [dict(w, s=w["s"] - L, e=w["e"] - L) for w in W[r["i"]:r["j"] + 1]]
-        seg = await asyncio.to_thread(restyle, x[int(L * SR):int(R * SR)], SR, sub, r["style"])
+        seg = await asyncio.to_thread(restyle, x[int(L * SR):int(R * SR)], SR, sub, mix)
         iid = uuid.uuid4().hex[:8]; np.save(f"{s.dir}/ins_{iid}.npy", seg); s.inserts[iid] = seg; txt = " ".join(w["w"] for w in W[r["i"]:r["j"] + 1])
-        return dict(op=dict(t0=round(L, 3), t1=round(R, 3), insert=iid, i=r["i"], j=r["j"], old=txt, new=txt, engine="praat", verified=True, kind="natural " + r["style"]), sec=round(time.time() - t, 2))
+        return dict(op=dict(t0=round(L, 3), t1=round(R, 3), insert=iid, i=r["i"], j=r["j"], old=txt, new=txt, engine="praat", verified=True, kind="natural " + style), sec=round(time.time() - t, 2))
     y, _ = librosa.load(src, sr=SR)
     async with GPU: W = await asyncio.to_thread(transcribe, y, 1)
-    z = await asyncio.to_thread(restyle, y, SR, W, r["style"])
-    name = f"natural_{r['style']}_{uuid.uuid4().hex[:6]}.wav"; sf.write(f"{s.dir}/{name}", z, SR)
+    z = await asyncio.to_thread(restyle, y, SR, W, mix)
+    name = f"natural_{style}_{uuid.uuid4().hex[:6]}.wav"; sf.write(f"{s.dir}/{name}", z, SR)
     return dict(url=f"/api/s/{sid}/file/{name}", dur=round(len(z) / SR, 2), sec=round(time.time() - t, 2))
 
 

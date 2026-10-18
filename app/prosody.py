@@ -5,10 +5,22 @@ from parselmouth.praat import call
 PRESETS = {"confident": dict(shift=0.95, range=1.0, speed=1.07, fall=True),
            "calm": dict(shift=0.97, range=0.7, speed=0.95, fall=True),
            "warm": dict(shift=1.04, range=1.15, speed=1.0, fall=False)}
+MAX_AMOUNT = 1.5  # the strongest slider setting, as a multiple of the preset
+
+
+def blend(mix):
+    """{style: amount} -> one setting; 1 = the preset, 0 = off. Styles multiply, so opposite ones (confident is faster, calm slower) cancel."""
+    p = dict(shift=1.0, range=1.0, speed=1.0, fall=0.0)
+    for k, a in mix.items():
+        a = min(max(float(a), 0.0), MAX_AMOUNT); b = PRESETS[k]
+        for q in ("shift", "range", "speed"): p[q] *= b[q] ** a
+        if b["fall"]: p["fall"] = max(p["fall"], min(a, 1.0))
+    return p
 
 
 def restyle(x, sr, words, style):
-    p = PRESETS[style]; snd = parselmouth.Sound(x.astype(np.float64), sampling_frequency=sr); dur = snd.get_total_duration()
+    """style: a preset name, or a {style: amount} mix from the sliders."""
+    p = blend(style if isinstance(style, dict) else {style: 1.0}); snd = parselmouth.Sound(x.astype(np.float64), sampling_frequency=sr); dur = snd.get_total_duration()
     manip = call(snd, "To Manipulation", 0.01, 75, 600); pt = call(manip, "Extract pitch tier")
     n = call(pt, "Get number of points")
     pts = [(call(pt, "Get time from index", k), call(pt, "Get value at index", k)) for k in range(1, n + 1)]
@@ -24,11 +36,12 @@ def restyle(x, sr, words, style):
             idx = [k for k, (t, _) in enumerate(out) if e - 0.35 <= t <= e + 0.05]
             if len(idx) >= 3 and out[idx[-1]][1] > out[idx[0]][1] * 1.12:
                 f0 = out[idx[0]][1]
-                for m, k in enumerate(idx): out[k][1] = f0 * (1 - 0.08 * m / (len(idx) - 1))
+                w = p["fall"]  # a weaker setting blends toward the fall; w = 1 is the full preset
+                for m, k in enumerate(idx): out[k][1] = (1 - w) * out[k][1] + w * f0 * (1 - 0.08 * m / (len(idx) - 1))
     call(pt, "Remove points between", 0, dur)
     for t, f in out: call(pt, "Add point", t, f)
     call([pt, manip], "Replace pitch tier")
-    if p["speed"] != 1.0:
+    if abs(p["speed"] - 1.0) > 1e-6:
         dt = call(manip, "Extract duration tier"); call(dt, "Add point", 0, 1 / p["speed"]); call([manip, dt], "Replace duration tier")
     y = call(manip, "Get resynthesis (overlap-add)").values[0]
     return (y * (np.sqrt(np.mean(x ** 2)) / (np.sqrt(np.mean(y ** 2)) + 1e-9))).astype(np.float32)
