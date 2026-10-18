@@ -105,11 +105,6 @@
     const k = Math.floor(mid * 37) % 7;
     return inWord ? 0.45 + 0.08 * k : (clip.timed ? 0.03 : 0.25 + 0.05 * k);
   }
-  function voiceLabel(clip, el) {
-    const sp = clip.ex.speaker || {};
-    const own = el && (clip.side === 'after' ? el.dataset.labelAfter || (el.dataset.swap ? '' : el.dataset.label) : el.dataset.label);
-    return clip.data.label || own || sp.label || (clip.ex.synthetic ? 'AI-generated demo voice' : '');
-  }
 
   // ------------------------------------------------------------------ player (waveform + karaoke transcript)
   const players = [];
@@ -148,7 +143,6 @@
         this.wave.outerHTML = '<div class="p-wave"></div>';
         this.wave = $('.p-wave', this.el);
       }
-      this.voice.textContent = voiceLabel(clip, this.el);
       this.time.textContent = `${clip.dur.toFixed(1)} s`;
       this.drawWave(clip);
       this.drawText(clip);
@@ -263,25 +257,7 @@
     const width = Math.min(...ps.map((p) => p.el.clientWidth || 1696));
     const pps = maxDur ? width / maxDur : 100;
     ps.forEach((p) => p.show(p.keys[0], pps));
-    $$('.foot[data-ex]', s).forEach((f) => {
-      f.innerHTML = footFor(f.dataset.ex);
-      f.style.fontSize = '';
-      let size = parseFloat(getComputedStyle(f).fontSize);   // long dataset credits: shrink to fit two lines
-      while (f.offsetHeight > 2.9 * size && size > 16) { size -= 1; f.style.fontSize = `${size}px`; }
-    });
-    $$('.ex-caption[data-ex]', s).forEach((c) => { const f = exampleFor(c.dataset.ex); c.textContent = (f && f.ex.caption) || ''; });
   }
-  function footFor(id) {
-    const found = exampleFor(id);
-    if (!found) return '';
-    const sp = found.ex.speaker || {};
-    if (found.ex.synthetic && !sp.dataset) return '';
-    // the attribution line usually names the licence already; only add the licence when it does not
-    const lic = sp.license && !(sp.attribution || '').includes(sp.license) ? sp.license : '';
-    const bits = [sp.dataset, lic, sp.attribution].filter(Boolean).map(esc);
-    return sp.label || bits.length ? `<b>${esc(sp.label || 'Speaker')}</b>${bits.length ? ' · ' + bits.join(' · ') : ''}` : '';
-  }
-
   // ------------------------------------------------------------------ audio control
   let current = null, lastKey = null, delayT = null, rafId = null;
   function play(key, delay) {

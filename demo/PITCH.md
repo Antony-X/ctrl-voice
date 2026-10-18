@@ -43,7 +43,7 @@ The presentation runs first. Then you switch to Discord for a live part, and you
 | 4 | 0:33–1:00 | **Before / After.** The transcript runs karaoke-style: fillers in red, the scratched sentence struck through, wrong words underlined. Then After, with the regenerated words highlighted. | Before plays on entry. After plays on the next click. | "Here's an example. The original…" *(Before plays)* "…and what Ctrl+Voice turns it into." *(click, After plays)* "Same voice. The ums are gone, the sentence they took back is gone, and the words they got wrong are fixed." |
 | 5 | 1:00–1:20 | **One word, close up.** One sentence with the mispronounced word circled. Label: *Only this word is regenerated. Everything else is the original recording.* | Before on entry, After on click. | "Let's zoom in on one word…" *(Before)* "…and after." *(After)* "Only that one word was regenerated. Every other sound is still their original recording." |
 | 6 | 1:20–1:40 | **Tired → Confident**, with a slider moving to Confident. | Before on entry, After on click. | "It doesn't stop at mistakes. Say you're exhausted and don't have the energy to sound confident. Turn on Confident, and your message sounds sure of itself. Still your voice." |
-| 7 | 1:40–2:00 | **Native accent**. Labels: *dataset speaker* and *AI voice*. | Before on entry, After on click. | "And if you have an accent and want to sound native, Native accent converts your message to a native accent." |
+| 7 | 1:40–2:00 | **Native accent**. Original, then Native accent. | Before on entry, After on click. | "And if you have an accent and want to sound native, Native accent converts your message to a native accent." |
 | 8 | 2:00–2:10 | Use cases as tiles: a voice message to a colleague · a YouTube video · a speech · a class or podcast recording. Then: *Let's see it live.* | — | "Whether you're messaging a colleague, recording a YouTube video or giving a speech, you say it once, messy, and it comes out right. Let's see it live." |
 | — | 2:10–2:50 | **Live: Discord, then the app.** | | See "The live part" below. |
 | 9 | 2:50–3:00 | *Seamless. Made with ML.* **Say it messy. Send it clean.** Small text: *How it works: in the finals.* | — | "It's all done with machine learning, and it's seamless: no one will notice. If we're accepted, we'll show you how it works in the finals. Ctrl+Voice. Say it messy, send it clean." |
@@ -66,10 +66,9 @@ The presentation runs first. Then you switch to Discord for a live part, and you
 
 ## Honesty rules (they keep "no one will notice" true)
 - Every example is real engine output from the real app pipeline. No hand-edited "after" audio.
-- Every voice is labelled on screen:
-  - a dataset speaker: dataset name and licence attribution;
-  - a synthetic voice: *AI-generated demo voice*.
-- The Native accent take is a regenerated AI voice, so its slide says *AI voice*.
+- The slides show only the clips: no per-slide source or voice labels.
+- One small credit line on the last slide names the example voices: speechocean762 (CC BY 4.0), the Speech Accent Archive (CC BY-NC-SA 4.0) and ElevenLabs. Both licences require the credit, and it says, without fuss, where the voices came from.
+- The Native accent take is a regenerated voice. Don't call it a recording of the speaker.
 - "No one will notice" refers to the edits: fixed words and cuts. We pick examples where that is true, and we check by listening.
 - The Confident tone is subtle (about 10% faster and about 1 semitone lower). Use the example where the change is clearest, and don't promise a dramatic transformation.
 
