@@ -14,7 +14,7 @@
   const filledAt = (s) => new Set(ORDER.slice(0, NG - nMasked(s)));
 
   // geometry
-  const X0 = 360, PITCH = 76, TW = 64, TH = 80, ROW_Y = [265, 385, 505, 625];
+  const X0 = 360, PITCH = 76, TW = 64, TH = 80, ROW_Y = [280, 392, 504, 616];   // rows 80 tall, 32 apart
   const tokX = (k) => X0 + k * PITCH;                                  // k = 0 .. NL+NG+NR-1
   const GAP_X0 = tokX(NL), GAP_X1 = tokX(NL + NG - 1) + TW, GAP_CX = (GAP_X0 + GAP_X1) / 2;
 
@@ -62,7 +62,7 @@
         const [a, p] = group(0);
         text(a, (tokX(0) + tokX(NL - 1) + TW) / 2, 236, 'her audio', { fs: 28, color: C.ink2 });
         text(a, GAP_CX, 234, 'Dan have', { fs: 32, font: 'serif', color: C.cut });
-        p.line(GAP_CX - 78, 240, GAP_CX + 78, 238, { color: C.cut, sw: 2.6, rough: 0.9 });
+        p.line(GAP_CX - 68, 236, GAP_CX + 68, 234, { color: C.cut, sw: 2.6, rough: 0.6 });
         for (let k = 0; k < NL + NG + NR; k++) if (k < NL || k >= NL + NG) ctxToken(a, p, k, ROW_Y[0]);
         for (let i = 0; i < NG; i++) maskToken(a, p, i, ROW_Y[0]);
         text(a, tokX(NL + NG + NR - 1) + TW + 24, ROW_Y[0] + TH / 2, 'step 0', { fs: 26, anchor: 'start', font: 'sans', color: C.ink2 });
@@ -72,7 +72,7 @@
       // ---------------------------------------------------------------- the denoiser: 20 non-causal layers
       {
         const [a, p] = group(1);
-        const x = 116, y = 398, w = 156, h = 300;
+        const x = 116, y = 394, w = 156, h = 300;
         for (let i = 2; i > 0; i--) p.rect(x + i * 9, y - i * 9, w, h, { color: alpha(C.attn, 0.5), fill: C.sheet, sw: 1.6, r: 12, rough: 0.9 });
         p.rect(x, y, w, h, { color: C.attn, fill: C.panel, sw: 2.2, r: 12, rough: 0.8 });
         text(a, x + w / 2, y + 46, '× 20', { fs: 40, font: 'sans', weight: 600, color: C.attn });
@@ -106,36 +106,36 @@
       let vocoder;
       {
         const [a, p] = group(5);
-        const yT = 726, yB = 786;
+        const yT = 742, yB = 802;
         p.arrow([[GAP_CX, ROW_Y[3] + TH + 4], [GAP_CX, yT - 2]], { color: C.made, sw: 2.4, hl: 11 });
         vocoder = el('g', {}, a);
         P(vocoder).poly([[GAP_CX - 120, yT], [GAP_CX + 120, yT], [GAP_CX + 190, yB], [GAP_CX - 190, yB]], { closed: true, color: C.out, fill: alpha(C.out, 0.18), sw: 2.2, rough: 0.8 });
         text(vocoder, GAP_CX, (yT + yB) / 2 + 2, 'BigVGAN', { fs: 28, color: C.ink });
         // her voice: a speaker embedding conditions the vocoder
-        text(a, 690, 736, 'her voice', { fs: 28, color: C.ink2 });
-        for (let i = 0; i < 8; i++) el('rect', { x: 628 + i * 16, y: 760, width: 12, height: 18, rx: 2.5, fill: C.extra, opacity: (0.4 + 0.075 * ((i * 5) % 8)).toFixed(2) }, a);
-        p.arrow([[766, 769], [GAP_CX - 150, 769]], { color: C.ink2, sw: 2.2, hl: 12 });
+        text(a, 690, 742, 'her voice', { fs: 28, color: C.ink2 });
+        for (let i = 0; i < 8; i++) el('rect', { x: 628 + i * 16, y: 763, width: 12, height: 18, rx: 2.5, fill: C.extra, opacity: (0.4 + 0.075 * ((i * 5) % 8)).toFixed(2) }, a);
+        p.arrow([[766, 772], [GAP_CX - 163, 772]], { color: C.ink2, sw: 2.2, hl: 12 });   // ends at the trapezoid's slanted edge
       }
 
       // ---------------------------------------------------------------- the message: her recording, the green piece spliced in
       let piece, pieceLabel;
       {
         const [a, p] = group(6);
-        const pxs = 514, X = GAP_CX - ((a0 + a1) / 2 - A.t0) * pxs, T1 = A.t0 + (1720 - X) / pxs, CY = 872, HH = 40;
+        const pxs = 514, X = GAP_CX - ((a0 + a1) / 2 - A.t0) * pxs, T1 = A.t0 + (1720 - X) / pxs, CY = 878, HH = 40;
         const tx = (t) => X + (t - A.t0) * pxs;
         bars(a, A, A.t0, a0 - 0.004, X, tx(a0 - 0.004) - X, CY, HH, C.ink2, { sw: 2.6, opacity: 0.85 });
         bars(a, A, a1 + 0.004, T1, tx(a1 + 0.004), tx(T1) - tx(a1 + 0.004), CY, HH, C.ink2, { sw: 2.6, opacity: 0.85 });
         piece = el('g', {}, a);
         P(piece).rect(tx(a0) - 8, CY - HH - 10, tx(a1) - tx(a0) + 16, 2 * HH + 20, { color: C.made, fill: alpha(C.made, 0.1), sw: 2, r: 8, rough: 0.6 });
         bars(piece, A, a0, a1, tx(a0), tx(a1) - tx(a0), CY, HH, C.made, { sw: 2.6 });
-        pieceLabel = text(a, (tx(a0) + tx(a1)) / 2, 950, 'Dan has', { fs: 34, font: 'serif', color: C.made });
+        pieceLabel = text(a, (tx(a0) + tx(a1)) / 2, 958, 'Dan has', { fs: 34, font: 'serif', color: C.made });
       }
 
       // ---------------------------------------------------------------- result
       {
         const [a] = group(7);
-        text(a, 118, 862, '9 of 10', { fs: 54, anchor: 'start', font: 'sans', weight: 600, color: C.made });
-        text(a, 120, 918, 'words right', { fs: 28, anchor: 'start', color: C.ink2 });
+        text(a, 118, 868, '9 of 10', { fs: 54, anchor: 'start', font: 'sans', weight: 600, color: C.made });
+        text(a, 120, 924, 'words right', { fs: 28, anchor: 'start', color: C.ink2 });
       }
 
       // ================================================================ arrival: the gap fills in, step by step, then the piece drops in
@@ -167,9 +167,9 @@
               const prev = filledAt(SNAP[r - 1]);
               greens[r - 1].forEach((gr, i) => gr.setAttribute('opacity', prev.has(i) ? 1 : 0));
               marks[r - 1].forEach((m, i) => m.setAttribute('opacity', prev.has(i) ? 0 : 1));
-              rows[r].style.transition = 'none'; rows[r].style.transform = `translateY(${ROW_Y[r - 1] - ROW_Y[r]}px)`;
+              rows[r].style.transition = 'none'; rows[r].style.transform = 'translateY(-24px)';
             }
-            piece.style.transition = 'none'; piece.style.transform = 'translateY(-46px)';
+            piece.style.transition = 'none'; piece.style.transform = 'translateY(-22px)';
           });
           const T = 420, ROW = 760;
           for (let r = 1; r < SNAP.length; r++) {
@@ -178,7 +178,7 @@
             now.forEach((i, n) => at(t0 + 340 + n * 110, () => {
               const gr = greens[r - 1][i];
               marks[r - 1][i].setAttribute('opacity', 0);
-              gr.style.transition = 'none'; gr.style.transformOrigin = `${tokX(NL + i) + TW / 2}px ${ROW_Y[r] + TH / 2}px`; gr.style.transform = 'scale(1.35)';
+              gr.style.transition = 'none'; gr.style.transformOrigin = `${tokX(NL + i) + TW / 2}px ${ROW_Y[r] + TH / 2}px`; gr.style.transform = 'scale(1.3)';
               gr.setAttribute('opacity', 1); gr.getBoundingClientRect();
               gr.style.transition = 'transform 260ms cubic-bezier(.3,1.6,.5,1)'; gr.style.transform = 'scale(1)';
             }));

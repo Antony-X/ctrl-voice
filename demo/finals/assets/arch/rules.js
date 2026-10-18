@@ -85,8 +85,13 @@
       const gH = el('g', {}, g), pH = P(gH);
       pH.poly([[136, 300], [380, 300], [306, 500], [210, 500]], { closed: true, color: C.ffn, fill: alpha(C.ffn, 0.14), sw: 2.6, rough: 0.8 });
       text(gH, 258, 350, 'LLM', { fs: 40 });
-      [[212, 414, -14], [270, 398, 9], [262, 450, -5]].forEach(([x, y, a], k) =>
-        el('rect', { x: x - 34, y: y - 12, width: 68, height: 24, rx: 7, fill: alpha(C.ink2, 0.18), stroke: C.ink2, 'stroke-width': 1.6, transform: `rotate(${a} ${x} ${y})` }, gH));
+      // three proposals waiting inside: level, centred, 12 px apart, each 20 px in from both funnel walls
+      const HOP = { x0: 136, x1: 380, y0: 300, bx0: 210, bx1: 306, y1: 500 };
+      const wallW = (y) => (HOP.x1 - HOP.x0) - ((HOP.x1 - HOP.x0) - (HOP.bx1 - HOP.bx0)) * (y - HOP.y0) / (HOP.y1 - HOP.y0);
+      [396, 430, 464].forEach((cy) => {
+        const w = Math.floor(wallW(cy + 11) - 40);
+        pH.rect(258 - w / 2, cy - 11, w, 22, { color: C.ink2, fill: alpha(C.ink2, 0.18), sw: 1.8, r: 7, rough: 0.5 });
+      });
       pH.arrow([[258, 512], [258, 580]], { color: C.ffn, sw: 2.6, hl: 14, dash: [8, 7] });
       items.push({ g: gH, seq: 0 });
 

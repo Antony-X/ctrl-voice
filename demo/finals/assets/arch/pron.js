@@ -34,7 +34,8 @@
         [['ɹ', ROW], ['l', 578], ['w', 688], ['∅', 798]],
         [['iː', ROW], ['ɪ', 578], ['eɪ', 688], ['∅', 798]],
       ];
-      const MX = 1342, YR = 318, YG = 590;               // the score meter: heard (red) above expected (green)
+      const MX = 1330, YR = 400, YG = 500, DOT = 26;     // the score meter, centred on the phone row: heard (red) above expected (green)
+      const RC = 1683, TY = 410;                         // right column centre; gradient-boosting trees, centred on the row
       const box = (k, j) => { const [, y] = cand[k][j], w = j ? cw : BW, h = j ? ch : BH; return { x: SX[k] - w / 2, y: y - h / 2, w, h, cx: SX[k], cy: y }; };
 
       // ------------------------------------------------------------ 0: the phoneme model (left)
@@ -66,7 +67,7 @@
         p.arrow([[885, 324], [885, 372]], { color: C.ink2, hl: 12 });
         const bx0 = SX[0] - BW / 2, bx1 = SX[2] + BW / 2, by = 384;
         p.path(`M${bx0} ${by + 8} Q${bx0} ${by} ${bx0 + 14} ${by} L${885 - 14} ${by} Q885 ${by} 885 ${by - 8} Q885 ${by} ${885 + 14} ${by} L${bx1 - 14} ${by} Q${bx1} ${by} ${bx1} ${by + 8}`, { color: C.made, sw: 2.2, rough: 0.4 });
-        text(a, 662, 336, 'illustration', { fs: 20, color: C.ink3 });
+        text(a, 662, 340, 'illustration', { fs: 22, color: C.ink3 });
       }
       // ------------------------------------------------------------ 2: the lattice of alternatives (faint)
       {
@@ -105,34 +106,34 @@
         strand(a, green, C.made, [[START[0] + 12, ROW], [b0.x, y]]);
         strand(a, green, C.made, [[b0.x + b0.w, y], [b1.x, y]]);
         strand(a, green, C.made, [[b1.x + b1.w, y], [b2.x, y]]);
-        strand(a, green, C.made, [[b2.x + b2.w, y], [1240, y + 14], [MX - 4, YG]]);
+        strand(a, green, C.made, [[b2.x + b2.w, y], [1262, y + 10], [MX - DOT / 2, YG]]);
       }
       {
         const a = grp(5), y = ROW - 24;
         strand(a, red, C.cut, [[START[0] + 8, ROW + 10], [540, 520], [bt.x, bt.cy]]);
         strand(a, red, C.cut, [[bt.x + bt.w, bt.cy], [780, 540], [b1.x, ROW + 34]]);
         strand(a, red, C.cut, [[b1.x + b1.w, y], [b2.x, y]]);
-        strand(a, red, C.cut, [[b2.x + b2.w, y], [1240, y - 20], [MX - 4, YR]]);
+        strand(a, red, C.cut, [[b2.x + b2.w, y], [1262, y - 8], [MX - DOT / 2, YR]]);
       }
       const fl = { g: [flash(0, 0, C.made), flash(1, 0, C.made), flash(2, 0, C.made)], r: [flash(0, 1, C.cut)] };
       // ------------------------------------------------------------ 6: the gap between them is the score
       let bar, gopLabel, endR, endG;
       {
         const a = grp(6), p = P(a);
-        bar = el('g', {}, a);
-        P(bar).rect(MX - 26, YR, 52, YG - YR, { color: C.check, fill: alpha(C.check, 0.6), fillStyle: 'hachure', gap: 7, sw: 2.6, r: 6 });
+        bar = el('g', {}, a);                             // a slim gauge between the two scores
+        P(bar).rect(MX - 11, YR, 22, YG - YR, { color: C.check, fill: alpha(C.check, 0.45), sw: 2.2, r: 9, rough: 0.5 });
         endR = el('g', {}, a); endG = el('g', {}, a);
-        P(endR).circle(MX, YR, 26, { color: C.cut, fill: C.cut, sw: 2, rough: 0.4 });
-        P(endG).circle(MX, YG, 26, { color: C.made, fill: C.made, sw: 2, rough: 0.4 });
-        text(endR, MX + 34, YR, 'heard', { fs: 30, color: C.cut, anchor: 'start' });
-        text(endG, MX + 34, YG, 'expected', { fs: 30, color: C.made, anchor: 'start' });
+        P(endR).circle(MX, YR, DOT, { color: C.cut, fill: C.cut, sw: 2, rough: 0.4 });
+        P(endG).circle(MX, YG, DOT, { color: C.made, fill: C.made, sw: 2, rough: 0.4 });
+        text(endR, MX, YR - 38, 'heard', { fs: 30, color: C.cut });
+        text(endG, MX, YG + 38, 'expected', { fs: 30, color: C.made });
         gopLabel = el('g', {}, a);
-        text(gopLabel, MX + 40, (YR + YG) / 2, 'GOP', { fs: 46, color: C.check, font: 'sans', weight: 600, anchor: 'start' });
+        text(gopLabel, MX + 30, ROW, 'GOP', { fs: 46, color: C.check, font: 'sans', weight: 600, anchor: 'start' });
       }
       // ------------------------------------------------------------ 7: gradient boosting
       {
         const a = grp(7), p = P(a);
-        p.arrow([[1496, (YR + YG) / 2 - 8], [1530, 420], [1560, 404]], { color: C.check, curve: true, hl: 12 });
+        p.arrow([[1478, ROW], [1548, ROW]], { color: C.check, hl: 12 });
         const tree = (cx, y0) => {
           const kids = [cx - 30, cx + 30], leaves = [cx - 45, cx - 15, cx + 15, cx + 45];
           kids.forEach((kx) => p.line(cx, y0 + 9, kx, y0 + 36, { color: C.ink3, sw: 1.8, rough: 0.4 }));
@@ -141,23 +142,25 @@
           kids.forEach((kx) => p.circle(kx, y0 + 42, 18, { color: C.out, fill: alpha(C.out, 0.3), sw: 1.8, rough: 0.4 }));
           leaves.forEach((lx) => p.rect(lx - 9, y0 + 72, 18, 18, { color: C.out, fill: alpha(C.out, 0.6), sw: 1.6, r: 3, rough: 0.4 }));
         };
-        tree(1610, 318); p.op(1683, 364, '+', { color: C.out }); tree(1756, 318);
-        text(a, 1683, 448, 'gradient boosting', { fs: 28 });
-        text(a, 1683, 482, 'speechocean762', { fs: 24, color: C.ink2 });
+        tree(RC - 73, TY); p.op(RC, TY + 40, '+', { color: C.out }); tree(RC + 73, TY);
+        text(a, RC, TY + 138, 'gradient boosting', { fs: 28 });
+        text(a, RC, TY + 172, 'speechocean762', { fs: 24, color: C.ink2 });
       }
       // ------------------------------------------------------------ 8: the word is flagged
-      let underline, flagG;
+      let underline, flagG, FLAG;
       {
         const a = grp(8), p = P(a);
-        p.arrow([[1683, 506], [1683, 560]], { color: C.ink3, hl: 12 });
-        text(a, 1650, 626, '“three”', { fs: 58, font: 'serif' });
+        p.arrow([[RC, TY + 198], [RC, TY + 238]], { color: C.ink3, hl: 12 });
+        const WY = TY + 290;                              // the flagged word
+        text(a, RC - 33, WY, '“three”', { fs: 58, font: 'serif' });
         let d = '';
-        for (let i = 0; i <= 48; i++) { const x = 1562 + i * 3.7, y = 670 + 6 * Math.sin(i / 48 * Math.PI * 6); d += `${i ? 'L' : 'M'}${x.toFixed(1)} ${y.toFixed(1)}`; }
+        for (let i = 0; i <= 48; i++) { const x = RC - 121 + i * 3.7, y = WY + 44 + 6 * Math.sin(i / 48 * Math.PI * 6); d += `${i ? 'L' : 'M'}${x.toFixed(1)} ${y.toFixed(1)}`; }
         underline = el('path', { d, fill: 'none', stroke: C.cut, 'stroke-width': 4, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, a);
         flagG = el('g', {}, a);
         const fp = P(flagG);
-        fp.line(1776, 674, 1776, 584, { color: C.ink2, sw: 3, rough: 0.4 });
-        fp.path('M1778 586 L1816 601 L1778 618 Z', { color: C.cut, fill: C.cut, sw: 2, rough: 0.5 });
+        FLAG = [RC + 93, WY + 48];
+        fp.line(FLAG[0], FLAG[1], FLAG[0], WY - 42, { color: C.ink2, sw: 3, rough: 0.4 });
+        fp.path(`M${FLAG[0] + 2} ${WY - 40} L${FLAG[0] + 40} ${WY - 25} L${FLAG[0] + 2} ${WY - 8} Z`, { color: C.cut, fill: C.cut, sw: 2, rough: 0.5 });
       }
       // ------------------------------------------------------------ 9: the result
       {
@@ -177,7 +180,7 @@
       const sweep = (pths, ms) => pths.forEach((pth) => { pth.getBoundingClientRect(); pth.style.transition = `stroke-dashoffset ${ms}ms linear`; pth.style.strokeDashoffset = '0'; });
       const pulse = (r) => { r.style.transition = 'opacity 160ms ease-out'; r.style.opacity = '0.55'; later(320, () => { r.style.transition = 'opacity 700ms ease'; r.style.opacity = '0'; }); };
       const setBar = (k) => bar.setAttribute('transform', k >= 1 ? '' : `translate(0 ${YG}) scale(1 ${Math.max(0.001, k)}) translate(0 ${-YG})`);
-      const pop = (k) => flagG.setAttribute('transform', k >= 1 ? '' : `translate(1776 674) scale(${Math.max(0.001, k)}) translate(-1776 -674)`);
+      const pop = (k) => flagG.setAttribute('transform', k >= 1 ? '' : `translate(${FLAG[0]} ${FLAG[1]}) scale(${Math.max(0.001, k)}) translate(${-FLAG[0]} ${-FLAG[1]})`);
       const ULEN = underline.getTotalLength ? underline.getTotalLength() || 600 : 600;
       function finish() {
         timers.forEach(clearTimeout); timers = []; cancelAnimationFrame(raf);

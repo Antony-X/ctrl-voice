@@ -26,6 +26,10 @@
       const yR = 702, hB = 52;                   // real (CTC) boxes, right under the spikes
       const yG = 862;                            // Whisper's guesses (dashed ghosts)
       const colCX = 286;
+      const yCap = yR + hB + 24;                 // caption row, for words too narrow to hold their label
+      // serif 25 px label widths, measured with the deck fonts (the map can be built before fonts finish loading)
+      const LW = { 'Um,': 47.7, quick: 60.4, update: 76.3, on: 28.3, the: 35.3, 'trip.': 47.2, 'We’re': 64.2, "We're": 64.2, leaving: 79.1, 'Thursday.': 111.5 };
+      const fits = (word, wf) => (LW[word] ?? word.length * 13) + 16 <= wf;
 
       // ============================================================ 0. model: real waveform -> CNN funnel
       {
@@ -87,7 +91,7 @@
         for (const w of S.whisper) {
           el('rect', { x: X(w.s) + 2, y: yG, width: X(w.e) - X(w.s) - 4, height: hB, rx: 7, fill: alpha(C.ink2, 0.07), stroke: alpha(C.ink2, 0.8), 'stroke-width': 2.4, 'stroke-dasharray': '9 7' }, a);
         }
-        text(a, X0 - 22, yG + hB / 2, 'Whisper’s guess', { fs: 28, anchor: 'end', color: C.ink2 });
+        text(a, X(S.whisper[0].s) - 18, yG + hB / 2, 'Whisper’s guess', { fs: 28, anchor: 'end', color: C.ink2 });
       }
 
       // ============================================================ 5. the real boxes, snapped under their spikes
@@ -100,8 +104,9 @@
           const bg = el('g', {}, a), rg = el('g', {}, bg), tg = el('g', {}, bg);
           P(rg).rect(xf, yR, wf, hB, { color: C.out, fill: alpha(C.out, 0.2), sw: 2.4, r: 7, rough: 0.7 });
           rg.querySelectorAll('path').forEach((p) => p.setAttribute('vector-effect', 'non-scaling-stroke'));
-          text(tg, xf + wf / 2, yR + hB / 2, w.w, { fs: wf < 40 ? 22 : 25, font: 'serif' });
-          boxes.push({ rg, tg, xf, wf, xs, ws, x0: X(w.s), x1: X(w.e) });
+          const cap = !fits(w.w, wf);                       // too narrow: the word sits just under its box
+          text(tg, xf + wf / 2, cap ? yCap : yR + hB / 2, w.w, { fs: 25, font: 'serif' });
+          boxes.push({ rg, tg, xf, wf, xs, ws, cap, x0: X(w.s), x1: X(w.e) });
         });
         text(a, X0 + 6, yR + hB / 2, 'real', { fs: 30, anchor: 'start', color: C.out });
       }
@@ -114,17 +119,18 @@
         S.whisper.forEach((ww, i) => {
           const cw = S.ctc[i], xa = (X(ww.s) + X(ww.e)) / 2, xb = (X(cw.s) + X(cw.e)) / 2;
           if (i === 0) return;
-          pa.arrow([[xa, yG - 8], [xb, yR + hB + 10]], { color: C.ink3, sw: 2, hl: 11, rough: 0.5 });
+          pa.arrow([[xa, yG - 8], [xb, boxes[i].cap ? yCap + 22 : yR + hB + 10]], { color: C.ink3, sw: 2, hl: 11, rough: 0.5 });
         });
         const wu = S.whisper[0], cu = S.ctc[0];
         pa.arrow([[(X(wu.s) + X(wu.e)) / 2, yG - 8], [(X(cu.s) + X(cu.e)) / 2, yR + hB + 10]], { color: C.check, sw: 3, hl: 14, rough: 0.5 });
-        // the offset of "Um," as a dimension under the ghost row
-        const ya = yG + hB + 26;
-        el('line', { x1: X(wu.s), y1: yG + hB + 6, x2: X(wu.s), y2: ya + 10, stroke: C.check, 'stroke-width': 2 }, a);
-        el('line', { x1: X(cu.s), y1: yR + hB, x2: X(cu.s), y2: ya + 10, stroke: C.check, 'stroke-width': 2, 'stroke-dasharray': '4 5' }, a);
-        pa.arrow([[X(wu.s) + 2, ya], [X(cu.s) - 2, ya]], { color: C.check, sw: 2.4, both: true, hl: 10, rough: 0.4 });
-        text(a, X(cu.s) + 16, ya + 6, `${(cu.s - wu.s).toFixed(2)} s`, { fs: 44, anchor: 'start', font: 'sans', weight: 600, color: C.check });
-        text(a, X(cu.s) + 150, ya + 8, 'too early', { fs: 30, anchor: 'start', color: C.check });
+        // the offset of "Um," as a dimension in the gap between the two rows, clear of every box, arrow and label
+        const ya = yR + hB + 52, xw = X(wu.s), xc = X(cu.s);
+        el('line', { x1: xc, y1: yR + hB + 4, x2: xc, y2: ya + 10, stroke: C.check, 'stroke-width': 2, 'stroke-dasharray': '4 5' }, a);
+        el('line', { x1: xw, y1: yG - 4, x2: xw, y2: ya - 10, stroke: C.check, 'stroke-width': 2 }, a);
+        pa.arrow([[xw + 2, ya], [xc - 2, ya]], { color: C.check, sw: 2.4, both: true, hl: 10, rough: 0.4 });
+        const lab = el('text', { x: xw - 18, y: ya + 15, 'text-anchor': 'end', fill: C.check }, a);   // one line, shared baseline
+        el('tspan', { class: 'sans', 'font-size': 44, 'font-weight': 600 }, lab).textContent = `${(cu.s - wu.s).toFixed(2)} s`;
+        el('tspan', { class: 'hand', 'font-size': 30, dx: 14 }, lab).textContent = 'too early';
       }
 
       // ============================================================ arrival: spikes rise, then every box leaves Whisper's spot and snaps onto its spikes
@@ -132,10 +138,11 @@
         const x = b.xs + (b.xf - b.xs) * k, w = b.ws + (b.wf - b.ws) * clamp01(k), y = yG + (yR - yG) * ky;
         b.rg.setAttribute('transform', `translate(${x} ${y}) scale(${(w / b.wf).toFixed(4)} 1) translate(${-b.xf} ${-yR})`);
         b.tg.setAttribute('transform', `translate(${x + w / 2 - (b.xf + b.wf / 2)} ${y - yR})`);
+        if (b.cap) b.tg.style.opacity = String(clamp01((k - 0.75) / 0.25));   // a caption under its box shows as it lands
       };
       function setStatic() {
         for (const s of spikes) { s.r.setAttribute('y', (base - s.h).toFixed(1)); s.r.setAttribute('height', s.h.toFixed(1)); s.r.setAttribute('fill', C.out); }
-        for (const b of boxes) { b.rg.removeAttribute('transform'); b.tg.removeAttribute('transform'); }
+        for (const b of boxes) { b.rg.removeAttribute('transform'); b.tg.removeAttribute('transform'); b.tg.style.opacity = ''; }
         scanEl.setAttribute('opacity', 0);
         shiftG.style.transition = 'none'; shiftG.style.opacity = '';
       }

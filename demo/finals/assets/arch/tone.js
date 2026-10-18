@@ -154,10 +154,10 @@
         }
         return d.join('');
       };
-      el('path', { d: squiggle(1236, 890, 92, 34, 1), fill: 'none', stroke: C.extra, 'stroke-width': 2.4, 'stroke-linejoin': 'round' }, gVC);
-      const NB = 13, DW = 16, DG = 6, DX0 = 1384, DTOP = 836, DBOT = 948;
+      el('path', { d: squiggle(1236, 890, 80, 34, 1), fill: 'none', stroke: C.extra, 'stroke-width': 2.4, 'stroke-linejoin': 'round' }, gVC);
+      const NB = 13, DW = 16, DG = 6, DX0 = 1374, DTOP = 836, DBOT = 948;
       const bx = (i) => DX0 + i * (DW + DG), DR = bx(NB - 1) + DW;
-      pv.arrow([[1334, 890], [DX0 - 8, 890]], { color: C.ink2, sw: 2.4, hl: 12 });
+      pv.arrow([[1326, 890], [DX0 - 8, 890]], { color: C.ink2, sw: 2.4, hl: 12 });
       for (let i = 0; i < NB; i++) pv.rect(bx(i), DTOP, DW, DBOT - DTOP, { color: C.attn, fill: alpha(C.attn, i === 6 ? 0.4 : 0.2), sw: 1.6, r: 4, rough: 0.6 });
       for (let i = 0; i < 6; i++) {                                    // U-ViT long skips: block i joins block 12 - i
         const a = bx(i) + DW / 2, b = bx(NB - 1 - i) + DW / 2, h = 12 + (6 - i) * 7, y = DTOP - 3;
@@ -165,8 +165,8 @@
       }
       text(gVC, (DX0 + DR) / 2, 774, 'Seed-VC', { fs: 28, color: C.model });
       text(gVC, (DX0 + DR) / 2, 972, '× 13', { fs: 26, color: C.attn, font: 'sans', weight: 600 });
-      pv.arrow([[DR + 8, 890], [DR + 40, 890]], { color: C.ink2, sw: 2.4, hl: 12 });
-      el('path', { d: squiggle(DR + 46, 890, 92, 34, 4), fill: 'none', stroke: C.made, 'stroke-width': 2.4, 'stroke-linejoin': 'round' }, gVC);
+      pv.arrow([[DR + 8, 890], [DR + 36, 890]], { color: C.ink2, sw: 2.4, hl: 12 });
+      el('path', { d: squiggle(DR + 44, 890, 80, 34, 4), fill: 'none', stroke: C.made, 'stroke-width': 2.4, 'stroke-linejoin': 'round' }, gVC);
 
       // ============================================================ arrival: the ending bends, the grains spread
       return {

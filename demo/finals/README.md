@@ -23,9 +23,11 @@ The slides are:
 1. title;
 2. two voice notes in a chat, played and fixed (real engine output);
 3. 7 billion;
-4. the architecture map (each click flies to the next region);
-5. mistake bingo (the live demo);
-6. thank you.
+4. the idea: every word tied to its sound, edit the words and the audio follows;
+5. anywhere: one key, six chat apps, then a video and a speech;
+6. the architecture map (each click flies to the next region);
+7. mistake bingo (the live demo);
+8. thank you.
 
 The backup videos are reached only with B.
 
