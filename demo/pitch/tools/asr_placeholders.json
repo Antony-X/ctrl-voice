@@ -1,0 +1,357 @@
+{
+ "scriptA_chris_after.wav": {
+  "dur": 8.57,
+  "text": "Hey, Sam, can you be more specific about game night? Is it Wednesday? Anyway, whatever Jordan said is a moot point now. Just bring snacks.",
+  "words": [
+   {
+    "w": "Hey,",
+    "s": 0.0,
+    "e": 0.26
+   },
+   {
+    "w": "Sam,",
+    "s": 0.26,
+    "e": 0.58
+   },
+   {
+    "w": "can",
+    "s": 0.58,
+    "e": 0.72
+   },
+   {
+    "w": "you",
+    "s": 0.72,
+    "e": 0.82
+   },
+   {
+    "w": "be",
+    "s": 0.82,
+    "e": 0.96
+   },
+   {
+    "w": "more",
+    "s": 0.96,
+    "e": 1.24
+   },
+   {
+    "w": "specific",
+    "s": 1.24,
+    "e": 1.7
+   },
+   {
+    "w": "about",
+    "s": 1.7,
+    "e": 2.46
+   },
+   {
+    "w": "game",
+    "s": 2.46,
+    "e": 2.76
+   },
+   {
+    "w": "night?",
+    "s": 2.76,
+    "e": 3.22
+   },
+   {
+    "w": "Is",
+    "s": 3.58,
+    "e": 3.66
+   },
+   {
+    "w": "it",
+    "s": 3.66,
+    "e": 3.76
+   },
+   {
+    "w": "Wednesday?",
+    "s": 3.76,
+    "e": 4.44
+   },
+   {
+    "w": "Anyway,",
+    "s": 4.8,
+    "e": 5.42
+   },
+   {
+    "w": "whatever",
+    "s": 5.42,
+    "e": 5.62
+   },
+   {
+    "w": "Jordan",
+    "s": 5.62,
+    "e": 5.92
+   },
+   {
+    "w": "said",
+    "s": 5.92,
+    "e": 6.16
+   },
+   {
+    "w": "is",
+    "s": 6.16,
+    "e": 6.3
+   },
+   {
+    "w": "a",
+    "s": 6.3,
+    "e": 6.42
+   },
+   {
+    "w": "moot",
+    "s": 6.42,
+    "e": 6.62
+   },
+   {
+    "w": "point",
+    "s": 6.62,
+    "e": 6.86
+   },
+   {
+    "w": "now.",
+    "s": 6.86,
+    "e": 7.26
+   },
+   {
+    "w": "Just",
+    "s": 7.44,
+    "e": 7.6
+   },
+   {
+    "w": "bring",
+    "s": 7.6,
+    "e": 7.96
+   },
+   {
+    "w": "snacks.",
+    "s": 7.96,
+    "e": 8.54
+   }
+  ]
+ },
+ "misspoken_before.wav": {
+  "dur": 3.674,
+  "text": "Can you be more pacific about game night?",
+  "words": [
+   {
+    "w": "Can",
+    "s": 0.0,
+    "e": 0.14
+   },
+   {
+    "w": "you",
+    "s": 0.14,
+    "e": 0.3
+   },
+   {
+    "w": "be",
+    "s": 0.3,
+    "e": 0.48
+   },
+   {
+    "w": "more",
+    "s": 0.48,
+    "e": 0.94
+   },
+   {
+    "w": "pacific",
+    "s": 0.94,
+    "e": 1.94
+   },
+   {
+    "w": "about",
+    "s": 1.94,
+    "e": 2.5
+   },
+   {
+    "w": "game",
+    "s": 2.5,
+    "e": 2.76
+   },
+   {
+    "w": "night?",
+    "s": 2.76,
+    "e": 3.22
+   }
+  ]
+ },
+ "misspoken_after.wav": {
+  "dur": 3.514,
+  "text": "Can you be more specific about game night?",
+  "words": [
+   {
+    "w": "Can",
+    "s": 0.0,
+    "e": 0.14
+   },
+   {
+    "w": "you",
+    "s": 0.14,
+    "e": 0.3
+   },
+   {
+    "w": "be",
+    "s": 0.3,
+    "e": 0.48
+   },
+   {
+    "w": "more",
+    "s": 0.48,
+    "e": 0.92
+   },
+   {
+    "w": "specific",
+    "s": 0.92,
+    "e": 1.72
+   },
+   {
+    "w": "about",
+    "s": 1.72,
+    "e": 2.32
+   },
+   {
+    "w": "game",
+    "s": 2.32,
+    "e": 2.6
+   },
+   {
+    "w": "night?",
+    "s": 2.6,
+    "e": 3.06
+   }
+  ]
+ },
+ "your_sound_before.wav": {
+  "dur": 4.025,
+  "text": "Anyway, whatever Jordan said is a moot point now. Just bring snacks.",
+  "words": [
+   {
+    "w": "Anyway,",
+    "s": 0.0,
+    "e": 0.92
+   },
+   {
+    "w": "whatever",
+    "s": 0.92,
+    "e": 1.08
+   },
+   {
+    "w": "Jordan",
+    "s": 1.08,
+    "e": 1.38
+   },
+   {
+    "w": "said",
+    "s": 1.38,
+    "e": 1.62
+   },
+   {
+    "w": "is",
+    "s": 1.62,
+    "e": 1.78
+   },
+   {
+    "w": "a",
+    "s": 1.78,
+    "e": 1.88
+   },
+   {
+    "w": "moot",
+    "s": 1.88,
+    "e": 2.08
+   },
+   {
+    "w": "point",
+    "s": 2.08,
+    "e": 2.32
+   },
+   {
+    "w": "now.",
+    "s": 2.32,
+    "e": 2.74
+   },
+   {
+    "w": "Just",
+    "s": 3.0,
+    "e": 3.04
+   },
+   {
+    "w": "bring",
+    "s": 3.04,
+    "e": 3.42
+   },
+   {
+    "w": "snacks.",
+    "s": 3.42,
+    "e": 4.0
+   }
+  ]
+ },
+ "your_sound_after.wav": {
+  "dur": 3.644,
+  "text": "Anyway, whatever Jordan said is a moot point now. Just bring snacks.",
+  "words": [
+   {
+    "w": "Anyway,",
+    "s": 0.0,
+    "e": 0.82
+   },
+   {
+    "w": "whatever",
+    "s": 0.82,
+    "e": 0.98
+   },
+   {
+    "w": "Jordan",
+    "s": 0.98,
+    "e": 1.26
+   },
+   {
+    "w": "said",
+    "s": 1.26,
+    "e": 1.48
+   },
+   {
+    "w": "is",
+    "s": 1.48,
+    "e": 1.62
+   },
+   {
+    "w": "a",
+    "s": 1.62,
+    "e": 1.7
+   },
+   {
+    "w": "moot",
+    "s": 1.7,
+    "e": 1.9
+   },
+   {
+    "w": "point",
+    "s": 1.9,
+    "e": 2.12
+   },
+   {
+    "w": "now.",
+    "s": 2.12,
+    "e": 2.48
+   },
+   {
+    "w": "Just",
+    "s": 2.72,
+    "e": 2.76
+   },
+   {
+    "w": "bring",
+    "s": 2.76,
+    "e": 3.1
+   },
+   {
+    "w": "snacks.",
+    "s": 3.1,
+    "e": 3.62
+   }
+  ]
+ }
+}

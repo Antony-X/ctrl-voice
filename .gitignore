@@ -9,3 +9,8 @@ __pycache__/
 # The demo kit and accent samples ship their audio
 !demo/**/*.wav
 !demo/**/*.mp3
+
+# API keys live next to the code on the GPU box, never in git
+.gemini_key
+*_key
+.env

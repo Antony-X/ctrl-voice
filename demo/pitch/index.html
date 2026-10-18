@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ctrl+Voice Pitch</title>
+<link rel="stylesheet" href="assets/deck.css">
+</head>
+<body>
+<div id="stage">
+
+  <!-- 1 ─────────────────────────────────────────────── hook: text fixes itself -->
+  <section class="slide s-hook" data-id="hook" data-title="Text fixes itself" data-time="0:00–0:10" data-target="10">
+    <div class="field">
+      <span class="typed" data-text="I’m free on Thrusday at 5." data-wrong="Thrusday" data-right="Thursday"></span><span class="caret"></span>
+      <svg class="okmark" viewBox="0 0 54 54"><circle cx="27" cy="27" r="25" fill="none" stroke="#4CC89B" stroke-width="3"/><path d="M15 28 L24 36 L40 19" fill="none" stroke="#4CC89B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <aside class="notes">
+      <p>“You’ve probably heard of Grammarly. You write some text, and it corrects and rewrites it for you. But have you ever wondered if the same thing exists for your voice?”</p>
+      <p><em>On screen: the sentence types itself with a mistake, gets the red squiggle, and corrects itself.</em></p>
+    </aside>
+  </section>
+
+  <!-- 2 ─────────────────────────────────────────────── hook: the waveform fixes itself -->
+  <section class="slide s-wave" data-id="wave" data-title="Ctrl+Voice" data-time="0:10–0:18" data-target="8">
+    <div class="hookwave"></div>
+    <div class="brand" data-step="1">
+      <svg width="124" height="124" viewBox="0 0 100 100" aria-hidden="true"><rect x="3.5" y="3.5" width="93" height="93" rx="20" fill="none" stroke="#F3F2EE" stroke-width="7"/><g stroke="#F3F2EE" stroke-width="6" stroke-linecap="round"><line x1="22.6" y1="40.5" x2="22.6" y2="59.5"/><line x1="36.1" y1="30" x2="36.1" y2="70"/><line x1="50" y1="18.5" x2="50" y2="81.5"/><line x1="63.9" y1="31" x2="63.9" y2="69"/><line x1="77.4" y1="41" x2="77.4" y2="59"/></g></svg>
+      <span>Ctrl+Voice</span>
+    </div>
+    <div class="stat"><b>7 billion</b> voice messages a day. None of them has an undo.</div>
+    <aside class="notes">
+      <p>“Well, now it does. People send about 7 billion voice messages a day on WhatsApp alone, and none of them can be edited.”</p>
+      <p><em>Click:</em> the waveform corrects itself and the name appears.</p>
+      <p>“This is Ctrl+Voice.”</p>
+      <p><em>Source: WhatsApp blog, “Making voice messages better”, 30 March 2022: 7 billion voice messages a day on average.</em></p>
+    </aside>
+  </section>
+
+  <!-- 3 ─────────────────────────────────────────────── what it does -->
+  <section class="slide s-feats" data-id="feats" data-title="What it does" data-time="0:18–0:33" data-target="15">
+    <div class="feats">
+      <div class="feat" data-step="0"><div class="chip"><span class="bad">pacific</span><span class="arrow">→</span><span class="good">specific</span></div><div class="t">Fixes mispronounced words</div></div>
+      <div class="feat" data-step="1"><div class="chip"><span class="filler">umm,</span> <span class="filler">uh,</span> <span class="struck">Monday, no,</span></div><div class="t">Removes ums and false starts</div></div>
+      <div class="feat" data-step="2"><div class="chip"><span class="struck">…teddy bear. Scratch that.</span></div><div class="t">“Scratch that” deletes what you just said</div></div>
+    </div>
+    <div class="tagline" data-step="2">All in <em>your own voice.</em></div>
+    <aside class="notes">
+      <p>“You record your voice the way you normally talk, and Ctrl+Voice fixes it, in your own voice. It corrects words you mispronounced,”</p>
+      <p><em>Click.</em> “removes fillers like ‘umm’,”</p>
+      <p><em>Click.</em> “and if you say ‘scratch that’, it deletes the last thing you said, so you can say it again properly.”</p>
+    </aside>
+  </section>
+
+  <!-- 4 ─────────────────────────────────────────────── before / after -->
+  <section class="slide s-clean" data-id="clean" data-ex="clean" data-title="Before / After" data-time="0:33–1:00" data-target="27">
+    <h1 class="h1">Before / After</h1>
+    <div class="rows">
+      <div class="player before" data-clip="clean.before" data-name="Before" data-step="0" data-audio="clean.before"></div>
+      <div class="player after" data-clip="clean.after" data-name="After" data-step="1" data-audio="clean.after"></div>
+    </div>
+    <div class="foot" data-ex="clean"></div>
+    <aside class="notes">
+      <p>“Here’s an example. The original…” <em>(Before plays by itself.)</em></p>
+      <p><em>Click:</em> “…and what Ctrl+Voice turns it into.” <em>(After plays.)</em></p>
+      <p>“Same voice. The ums are gone, the sentence they took back is gone, and the words they got wrong are fixed.”</p>
+    </aside>
+  </section>
+
+  <!-- 5 ─────────────────────────────────────────────── one word, close up -->
+  <section class="slide s-focus" data-id="mispron" data-ex="mispron" data-title="One word, close up" data-time="1:00–1:20" data-target="20">
+    <h1 class="h1">One word, close up.</h1>
+    <div class="player still" data-clip="mispron.before" data-swap="mispron.after" data-name="Before" data-name-after="After" data-step="0" data-audio="mispron.before"></div>
+    <span class="still" data-step="1" data-audio="mispron.after"></span>
+    <div class="ex-caption" data-ex="mispron"></div>
+    <div class="claim" data-step="1"><b>Only this word is regenerated.</b> Everything else is the original recording.</div>
+    <div class="foot" data-ex="mispron"></div>
+    <aside class="notes">
+      <p>“Let’s zoom in on one word…” <em>(Before plays.)</em></p>
+      <p><em>Click:</em> “…and after.” <em>(After plays.)</em></p>
+      <p>“Only that one word was regenerated. Every other sound is still their original recording.”</p>
+    </aside>
+  </section>
+
+  <!-- 6 ─────────────────────────────────────────────── tired to confident -->
+  <section class="slide s-tone" data-id="tone" data-ex="tone" data-title="Tired → Confident" data-time="1:20–1:40" data-target="20">
+    <h1 class="h1">Tired → Confident</h1>
+    <div class="tone"><div class="row1"><span>Confident</span><span class="val">Off</span></div><div class="track"><div class="fill"></div><div class="knob"></div></div></div>
+    <div class="rows">
+      <div class="player before" data-clip="tone.before" data-name="Tired" data-step="0" data-audio="tone.before"></div>
+      <div class="player after" data-clip="tone.after" data-name="Confident" data-step="1" data-audio="tone.after" data-audio-delay="1"></div>
+    </div>
+    <div class="foot" data-ex="tone"></div>
+    <aside class="notes">
+      <p>“It doesn’t stop at mistakes. Say you’re exhausted and don’t have the energy to sound confident.” <em>(Tired take plays.)</em></p>
+      <p><em>Click:</em> the slider moves to Confident, then the Confident version plays.</p>
+      <p>“Turn on Confident, and your message sounds sure of itself. Still your voice.”</p>
+      <p><em>Honest framing: it is subtle (about 10% quicker, about 1 semitone lower). Don’t promise a dramatic change.</em></p>
+    </aside>
+  </section>
+
+  <!-- 7 ─────────────────────────────────────────────── native accent -->
+  <section class="slide s-accent" data-id="accent" data-ex="accent" data-title="Native accent" data-time="1:40–2:00" data-target="20">
+    <h1 class="h1">Native accent</h1>
+    <div class="rows">
+      <div class="player before" data-clip="accent.before" data-name="Original" data-step="0" data-audio="accent.before"></div>
+      <div class="player after" data-clip="accent.after" data-name="Native accent" data-label="AI voice" data-step="1" data-audio="accent.after"></div>
+    </div>
+    <div class="foot" data-ex="accent"></div>
+    <aside class="notes">
+      <p>“And if you have an accent and want to sound native,” <em>(the original plays: a real dataset speaker.)</em></p>
+      <p><em>Click:</em> “Native accent converts your message to a native accent.” <em>(AI voice plays.)</em></p>
+      <p><em>Honest framing: the native-accent version is a regenerated AI voice; the slide says so.</em></p>
+    </aside>
+  </section>
+
+  <!-- 8 ─────────────────────────────────────────────── use cases, then live -->
+  <section class="slide s-uses" data-id="uses" data-title="Use cases" data-time="2:00–2:10" data-target="10"
+           data-next="Next: LIVE in Discord (2:10–2:50), then slide 9">
+    <div class="tiles">
+      <div class="tile"><svg viewBox="0 0 84 84" fill="none" stroke="#A8A49C" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 18h60a6 6 0 0 1 6 6v30a6 6 0 0 1-6 6H38l-14 12V60H12a6 6 0 0 1-6-6V24a6 6 0 0 1 6-6z"/><path d="M22 39v4M32 33v16M42 30v22M52 34v14M62 39v4"/></svg><div class="t">A voice message to a colleague</div></div>
+      <div class="tile"><svg viewBox="0 0 84 84" fill="none" stroke="#A8A49C" stroke-width="3.5" stroke-linejoin="round"><rect x="6" y="16" width="72" height="52" rx="12"/><path d="M36 30l16 12-16 12z" fill="#A8A49C"/></svg><div class="t">A YouTube video</div></div>
+      <div class="tile"><svg viewBox="0 0 84 84" fill="none" stroke="#A8A49C" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><rect x="32" y="8" width="20" height="34" rx="10"/><path d="M22 34a20 20 0 0 0 40 0M42 54v10M26 76h32M30 64h24"/></svg><div class="t">A speech</div></div>
+      <div class="tile"><svg viewBox="0 0 84 84" fill="none" stroke="#A8A49C" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 50V44a30 30 0 0 1 60 0v6"/><rect x="8" y="48" width="16" height="24" rx="6"/><rect x="60" y="48" width="16" height="24" rx="6"/></svg><div class="t">A class or podcast recording</div></div>
+    </div>
+    <div class="live" data-step="1"><span class="dot"></span>Let’s see it live.</div>
+    <aside class="notes">
+      <p>“Whether you’re messaging a colleague, recording a YouTube video or giving a speech, you say it once, messy, and it comes out right.”</p>
+      <p><em>Click:</em> “Let’s see it live.” <em>Switch to Discord.</em></p>
+      <p><em>LIVE (2:10–2:50):</em></p>
+      <p><em>1. Discord: press Alt+` in the demo channel. The app plays the prerecorded take as its mic; captions, “scratch that” struck out live, the fixes and the paste are real. Play the message in Discord: it’s clean.</em></p>
+      <p><em>2. Open Ctrl+Voice on that message. Play Original, then Fixed. Point at Filler, Self-correction, Scratched; then at Misspoken “specific” and “moot”.</em></p>
+      <p><em>3. Click Confident and play it.</em></p>
+      <p><em>4. In the recording, cut the processing wait and show the “processing sped up” tag (live-tag.html).</em></p>
+      <p><em>Then come back here (one click on the slide is ignored while the window regains focus) and press → for slide 9.</em></p>
+    </aside>
+  </section>
+
+  <!-- 9 ─────────────────────────────────────────────── close -->
+  <section class="slide s-close" data-id="close" data-title="Close" data-time="2:50–3:00" data-target="10">
+    <div class="kicker"><b>Seamless.</b> Made with ML.</div>
+    <div class="brand">
+      <svg width="104" height="104" viewBox="0 0 100 100" aria-hidden="true"><rect x="3.5" y="3.5" width="93" height="93" rx="20" fill="none" stroke="#F3F2EE" stroke-width="7"/><g stroke="#F3F2EE" stroke-width="6" stroke-linecap="round"><line x1="22.6" y1="40.5" x2="22.6" y2="59.5"/><line x1="36.1" y1="30" x2="36.1" y2="70"/><line x1="50" y1="18.5" x2="50" y2="81.5"/><line x1="63.9" y1="31" x2="63.9" y2="69"/><line x1="77.4" y1="41" x2="77.4" y2="59"/></g></svg>
+      <span>Ctrl+Voice</span>
+    </div>
+    <div class="tag">Say it messy. Send it clean.</div>
+    <div class="small">How it works: in the finals.</div>
+    <aside class="notes">
+      <p>“It’s all done with machine learning, and it’s seamless: no one will notice. If we’re accepted, we’ll show you how it works in the finals. Ctrl+Voice. Say it messy, send it clean.”</p>
+    </aside>
+  </section>
+
+  <div id="notes-overlay" class="overlay"></div>
+  <div id="help" class="overlay">
+    <div><b>→ Space PageDown click</b>next step</div>
+    <div><b>← PageUp</b>previous step</div>
+    <div><b>Home / End</b>first / last slide</div>
+    <div><b>F</b>fullscreen</div>
+    <div><b>S</b>speaker notes window</div>
+    <div><b>N</b>notes on the stage</div>
+    <div><b>P / R</b>pause / replay the clip</div>
+    <div><b>T</b>reset the talk clock</div>
+  </div>
+  <div id="toast" class="overlay"></div>
+  <div id="start" class="overlay"><div>Click or press any key to start<small>Auto mode: the deck plays itself, with its audio</small></div></div>
+</div>
+
+<script src="assets/hook.js"></script>
+<script src="assets/peaks.js"></script>
+<script src="placeholders/clean/example.js"></script>
+<script src="placeholders/mispron/example.js"></script>
+<script src="placeholders/tone/example.js"></script>
+<script src="placeholders/accent/example.js"></script>
+<script src="examples/clean/example.js"></script>
+<script src="examples/mispron/example.js"></script>
+<script src="examples/tone/example.js"></script>
+<script src="examples/accent/example.js"></script>
+<script src="assets/deck.js"></script>
+</body>
+</html>
