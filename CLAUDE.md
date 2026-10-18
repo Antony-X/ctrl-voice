@@ -28,5 +28,5 @@ The original recording is never modified. Every edit is a time range in an edit 
 - Be honest about results: several features are experimental; RESULTS.md says which. Do not inflate numbers in demo copy.
 
 ## Running state (as of 2026-10-18)
-- RunPod pod `zaa3ajj8o85hhq` ("respeak-lab", A100 80 GB, community, $1.39/hr) runs the full stack; demo URL `https://zaa3ajj8o85hhq-7860.proxy.runpod.net`. It bills while running — check its state (RunPod console or MCP) before assuming the URL works. Stop it when idle.
+- RunPod pod `xjdypx6zst9jkd` ("respeak-lab-migration", A100 80 GB, community, $1.39/hr) runs the full stack; engine URL `https://xjdypx6zst9jkd-7860.proxy.runpod.net`. It replaced `zaa3ajj8o85hhq` (see `docs/HANDOFF.md`). It bills while running — check its state (RunPod console or MCP) before assuming the URL works. Stop it when idle.
 - SSH from a new machine: add your public key in RunPod settings, restart the pod or use the web terminal; the direct SSH host/port changes on every restart.

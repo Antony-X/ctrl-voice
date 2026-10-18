@@ -35,7 +35,7 @@ Some scripts have absolute paths from the machine they were written on (`C:/User
    - If you'll make test voices: the ElevenLabs key, as `deck/.elevenlabs_key` (gitignored).
 3. **The pod:** `xjdypx6zst9jkd`, an A100 80 GB at $1.39/hr while running. Stopping it wipes its container disk, and the services then have to be started again by hand (see respeak `docs/HANDOFF.md`).
    - Engine: `https://xjdypx6zst9jkd-7860.proxy.runpod.net`.
-   - SSH: `ssh -i ~/.ssh/runpod_ioai -p 23100 root@216.249.100.66`.
+   - SSH: the host and port are in the RunPod console (they change on every restart).
    - Health check: `GET /` returns 307.
    - Restart the engine only:
      ```
