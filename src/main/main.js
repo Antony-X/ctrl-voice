@@ -215,10 +215,26 @@ async function withSession(meta, fn) {
 
 async function renderMessage(meta) {
   const r = await withSession(meta, (sid) => engine.render(sid, Edits.forRender(meta.ops || [])));
-  fs.writeFileSync(msgFile(meta.id, 'edit.wav'), await engine.download(r.url));
+  saveRender(meta, r, await engine.download(r.url));
+}
+
+function saveRender(meta, r, audio) {
+  fs.writeFileSync(msgFile(meta.id, 'edit.wav'), audio);
   meta.output = { file: r.url.split('/').pop(), dur: r.dur, ai: r.ai, at: Date.now() };
   meta.take = null;
   saveMessage(meta);
+}
+
+// renderMessage + applyTone. The takes are made from the engine's copy of the
+// render, so the render downloads while the first take is made, not before it.
+async function renderAndTone(meta, status) {
+  if (!standingAccent(meta) && !standingTone(meta)) return renderMessage(meta);
+  const r = await withSession(meta, (sid) => engine.render(sid, Edits.forRender(meta.ops || [])));
+  const early = { sid: meta.sid, file: r.url.split('/').pop() };
+  early.saved = engine.download(r.url).then((audio) => saveRender(meta, r, audio));
+  early.saved.catch(() => {}); // the first take waits for it and reports its error
+  await applyTone(meta, status, early);
+  await early.saved;
 }
 
 const wordsCut = (meta, i, j) => meta.words.slice(i, j + 1).some(w => Edits.cutFor(w, meta.ops));
@@ -271,8 +287,7 @@ async function autoFix(meta, status, { all = false } = {}) {
   meta.fixed = Date.now();
   saveMessage(meta);
   status('Finishing…');
-  await renderMessage(meta);
-  await applyTone(meta, status);
+  await renderAndTone(meta, status);
 }
 
 // The take a message gets after each render: a native accent (the Settings
@@ -288,16 +303,18 @@ function standingTone(meta) {
   return tones.length ? { tones, mix } : null;
 }
 
-async function applyTone(meta, status) {
+// early: a render still downloading (see renderAndTone), for the first take.
+async function applyTone(meta, status, early = null) {
   const accent = standingAccent(meta);
   if (accent) {
     status?.('Giving it a native accent…');
-    await makeTake(meta, 'accent', 'native');
+    await makeTake(meta, 'accent', 'native', undefined, null, early);
+    early = null;
   }
   const t = standingTone(meta);
   if (!t) return;
   status?.(`Making it ${joinAnd(t.tones)}…`);
-  await makeTake(meta, 'natural', t.tones[0], t.mix, accent ? meta.take : null);
+  await makeTake(meta, 'natural', t.tones[0], t.mix, accent ? meta.take : null, early);
 }
 
 // Tone slider positions (0..1) to what the engine's natural takes: {style: amount},
@@ -314,15 +331,34 @@ const joinAnd = (xs) => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join('
 // or accent (a native accent, AI). mix ({style: amount}, natural only) blends
 // presets; an engine without mixing reads just style, the strongest of them, at
 // full preset. over: a take to build on (a tone over the accent) instead of the render.
-async function makeTake(meta, kind, style, mix, over = null) {
+// early: the render is still downloading ({sid, file, saved}); the take is made from
+// the engine's copy meanwhile and saved after the render (saving a render clears the take).
+async function makeTake(meta, kind, style, mix, over = null, early = null) {
   const call = kind === 'tone' || kind === 'accent' ? kind : 'natural';
   const blend = kind === 'natural' && mix ? { mix } : {};
-  const r = await withSession(meta, async (sid) => {
-    if (!meta.output) await renderMessage(meta); // the session was re-created
+  const ask = (sid, file) => {
     const text = kind === 'accent' ? Edits.keptText(meta.words, meta.ops) : undefined; // so it says the fixed words
-    return engine[call](sid, { style, ...blend, text, file: over?.file || meta.output.file });
-  });
-  fs.writeFileSync(msgFile(meta.id, 'take.wav'), await engine.download(r.url));
+    return engine[call](sid, { style, ...blend, text, file: over?.file || file });
+  };
+  let take = null;
+  if (early) {
+    const made = ask(early.sid, early.file)
+      .catch((err) => { if (err.status === 404) return null; throw err; }) // session gone: re-created below
+      .then(async (r) => r && { r, audio: await engine.download(r.url) });
+    const [got, saved] = await Promise.allSettled([made, early.saved]);
+    if (saved.status === 'rejected') throw saved.reason;
+    if (got.status === 'rejected') throw got.reason;
+    take = got.value;
+  }
+  if (!take) {
+    const r = await withSession(meta, async (sid) => {
+      if (!meta.output) await renderMessage(meta); // the session was re-created
+      return ask(sid, meta.output.file);
+    });
+    take = { r, audio: await engine.download(r.url) };
+  }
+  const { r, audio } = take;
+  fs.writeFileSync(msgFile(meta.id, 'take.wav'), audio);
   meta.take = {
     engine: kind, style, ...blend, dur: r.dur, by: r.engine || 'praat', file: r.url.split('/').pop(),
     wordsKept: r.words_kept ?? over?.wordsKept ?? null, voiceSim: r.voice_sim ?? over?.voiceSim ?? null,
@@ -710,8 +746,7 @@ function wireIpc() {
     meta.output = null;
     meta.take = null;
     saveMessage(meta);
-    await renderMessage(meta);
-    await applyTone(meta);
+    await renderAndTone(meta);
     return { meta, audio: readAudio(meta, 'output') };
   });
   // engine: natural (pitch and timing, own voice) | tone (AI) | accent (AI, whole
