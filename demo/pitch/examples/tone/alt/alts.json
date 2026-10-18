@@ -1,0 +1,951 @@
+{
+ "ai_confident": {
+  "source": "syn_will_endq",
+  "request": {
+   "call": "tone",
+   "style": "confident",
+   "file": "out_d9f727.wav"
+  },
+  "before_dur": 6.8,
+  "after_dur": 6.8,
+  "before_text": "Hey, it's me. I'll have the report done by Friday, and I can present it on Monday?",
+  "after_text": "Hey, it's me. I'll have the report done by Friday, and I can present it on Monday?",
+  "after_words": [
+   {
+    "w": "Hey,",
+    "s": 0.261,
+    "e": 1.063
+   },
+   {
+    "w": "it's",
+    "s": 1.103,
+    "e": 1.304
+   },
+   {
+    "w": "me.",
+    "s": 1.344,
+    "e": 3.049
+   },
+   {
+    "w": "I'll",
+    "s": 3.089,
+    "e": 3.27
+   },
+   {
+    "w": "have",
+    "s": 3.29,
+    "e": 3.39
+   },
+   {
+    "w": "the",
+    "s": 3.43,
+    "e": 3.51
+   },
+   {
+    "w": "report",
+    "s": 3.53,
+    "e": 3.831
+   },
+   {
+    "w": "done",
+    "s": 3.871,
+    "e": 4.032
+   },
+   {
+    "w": "by",
+    "s": 4.052,
+    "e": 4.212
+   },
+   {
+    "w": "Friday,",
+    "s": 4.253,
+    "e": 5.075
+   },
+   {
+    "w": "and",
+    "s": 5.155,
+    "e": 5.536
+   },
+   {
+    "w": "I",
+    "s": 5.596,
+    "e": 5.717
+   },
+   {
+    "w": "can",
+    "s": 5.737,
+    "e": 5.877
+   },
+   {
+    "w": "present",
+    "s": 5.917,
+    "e": 6.238
+   },
+   {
+    "w": "it",
+    "s": 6.258,
+    "e": 6.339
+   },
+   {
+    "w": "on",
+    "s": 6.379,
+    "e": 6.459
+   },
+   {
+    "w": "Monday?",
+    "s": 6.499,
+    "e": 6.74
+   }
+  ],
+  "metrics": {
+   "durPct": 0.0,
+   "f0Semitones": 0.15,
+   "f0MedianHz": [
+    102.7,
+    103.6
+   ],
+   "f0RangeSt": [
+    9.94,
+    9.58
+   ],
+   "f0SdSt": [
+    2.84,
+    2.68
+   ],
+   "loudnessChangeDb": -5.72,
+   "wordsPerSec": [
+    2.62,
+    2.62
+   ],
+   "finalEndingSt": [
+    7.23,
+    6.97
+   ],
+   "finalWordHeard": [
+    "Monday?",
+    "Monday?"
+   ],
+   "wordsKept": 1.0,
+   "clippedSamples": 0,
+   "voiceSim": 0.935
+  }
+ },
+ "natural_medium": {
+  "source": "syn_will_endq",
+  "request": {
+   "call": "natural",
+   "style": "confident",
+   "mix": {
+    "confident": 1
+   },
+   "file": "out_d9f727.wav"
+  },
+  "before_dur": 6.8,
+  "after_dur": 6.355125,
+  "before_text": "Hey, it's me. I'll have the report done by Friday, and I can present it on Monday?",
+  "after_text": "Hey, it's me. I'll have the report done by Friday, and I can present it on Monday.",
+  "after_words": [
+   {
+    "w": "Hey,",
+    "s": 0.241,
+    "e": 0.982
+   },
+   {
+    "w": "it's",
+    "s": 1.022,
+    "e": 1.203
+   },
+   {
+    "w": "me.",
+    "s": 1.263,
+    "e": 2.827
+   },
+   {
+    "w": "I'll",
+    "s": 2.867,
+    "e": 3.027
+   },
+   {
+    "w": "have",
+    "s": 3.067,
+    "e": 3.168
+   },
+   {
+    "w": "the",
+    "s": 3.188,
+    "e": 3.268
+   },
+   {
+    "w": "report",
+    "s": 3.308,
+    "e": 3.568
+   },
+   {
+    "w": "done",
+    "s": 3.609,
+    "e": 3.749
+   },
+   {
+    "w": "by",
+    "s": 3.789,
+    "e": 3.909
+   },
+   {
+    "w": "Friday,",
+    "s": 3.949,
+    "e": 4.711
+   },
+   {
+    "w": "and",
+    "s": 4.791,
+    "e": 5.152
+   },
+   {
+    "w": "I",
+    "s": 5.232,
+    "e": 5.313
+   },
+   {
+    "w": "can",
+    "s": 5.353,
+    "e": 5.493
+   },
+   {
+    "w": "present",
+    "s": 5.513,
+    "e": 5.814
+   },
+   {
+    "w": "it",
+    "s": 5.834,
+    "e": 5.914
+   },
+   {
+    "w": "on",
+    "s": 5.934,
+    "e": 6.034
+   },
+   {
+    "w": "Monday.",
+    "s": 6.054,
+    "e": 6.295
+   }
+  ],
+  "metrics": {
+   "durPct": -6.5,
+   "f0Semitones": -1.1,
+   "f0MedianHz": [
+    102.7,
+    96.4
+   ],
+   "f0RangeSt": [
+    9.94,
+    7.2
+   ],
+   "f0SdSt": [
+    2.84,
+    2.2
+   ],
+   "loudnessChangeDb": 0.0,
+   "wordsPerSec": [
+    2.62,
+    2.81
+   ],
+   "finalEndingSt": [
+    7.23,
+    -1.27
+   ],
+   "finalWordHeard": [
+    "Monday?",
+    "Monday."
+   ],
+   "wordsKept": 1.0,
+   "clippedSamples": 0,
+   "voiceSim": 0.96
+  }
+ },
+ "runnerup_sarah_natural_strong": {
+  "source": "syn_sarah_endq",
+  "request": {
+   "call": "natural",
+   "style": "confident",
+   "mix": {
+    "confident": 1.5
+   },
+   "file": "out_175b5d.wav"
+  },
+  "before_dur": 5.12,
+  "after_dur": 4.625875,
+  "before_text": "Hey, it's me. I'll have the report done by Friday, and I can present it on Monday?",
+  "after_text": "Hey, it's me. I'll have the report done by Friday and I can present it on Monday.",
+  "after_words": [
+   {
+    "w": "Hey,",
+    "s": 0.16,
+    "e": 0.441
+   },
+   {
+    "w": "it's",
+    "s": 0.461,
+    "e": 0.641
+   },
+   {
+    "w": "me.",
+    "s": 0.681,
+    "e": 1.442
+   },
+   {
+    "w": "I'll",
+    "s": 1.482,
+    "e": 1.642
+   },
+   {
+    "w": "have",
+    "s": 1.662,
+    "e": 1.762
+   },
+   {
+    "w": "the",
+    "s": 1.802,
+    "e": 1.882
+   },
+   {
+    "w": "report",
+    "s": 1.922,
+    "e": 2.203
+   },
+   {
+    "w": "done",
+    "s": 2.243,
+    "e": 2.403
+   },
+   {
+    "w": "by",
+    "s": 2.423,
+    "e": 2.563
+   },
+   {
+    "w": "Friday",
+    "s": 2.603,
+    "e": 3.064
+   },
+   {
+    "w": "and",
+    "s": 3.124,
+    "e": 3.364
+   },
+   {
+    "w": "I",
+    "s": 3.404,
+    "e": 3.484
+   },
+   {
+    "w": "can",
+    "s": 3.504,
+    "e": 3.625
+   },
+   {
+    "w": "present",
+    "s": 3.665,
+    "e": 3.965
+   },
+   {
+    "w": "it",
+    "s": 4.005,
+    "e": 4.085
+   },
+   {
+    "w": "on",
+    "s": 4.105,
+    "e": 4.205
+   },
+   {
+    "w": "Monday.",
+    "s": 4.245,
+    "e": 4.526
+   }
+  ],
+  "metrics": {
+   "durPct": -9.6,
+   "f0Semitones": -1.25,
+   "f0MedianHz": [
+    199.5,
+    185.6
+   ],
+   "f0RangeSt": [
+    11.3,
+    7.29
+   ],
+   "f0SdSt": [
+    3.3,
+    2.18
+   ],
+   "loudnessChangeDb": 0.0,
+   "wordsPerSec": [
+    3.53,
+    3.89
+   ],
+   "finalEndingSt": [
+    8.07,
+    -2.0
+   ],
+   "finalWordHeard": [
+    "Monday?",
+    "Monday."
+   ],
+   "wordsKept": 1.0,
+   "clippedSamples": 0,
+   "voiceSim": 0.885
+  }
+ },
+ "runnerup_sarah_ai_confident": {
+  "source": "syn_sarah_endq",
+  "request": {
+   "call": "tone",
+   "style": "confident",
+   "file": "out_175b5d.wav"
+  },
+  "before_dur": 5.12,
+  "after_dur": 5.12,
+  "before_text": "Hey, it's me. I'll have the report done by Friday, and I can present it on Monday?",
+  "after_text": "Hey, it's me. I'll have the report done by Friday, and I can present it on Monday?",
+  "after_words": [
+   {
+    "w": "Hey,",
+    "s": 0.181,
+    "e": 0.482
+   },
+   {
+    "w": "it's",
+    "s": 0.522,
+    "e": 0.723
+   },
+   {
+    "w": "me.",
+    "s": 0.763,
+    "e": 1.606
+   },
+   {
+    "w": "I'll",
+    "s": 1.646,
+    "e": 1.807
+   },
+   {
+    "w": "have",
+    "s": 1.847,
+    "e": 1.968
+   },
+   {
+    "w": "the",
+    "s": 1.988,
+    "e": 2.088
+   },
+   {
+    "w": "report",
+    "s": 2.108,
+    "e": 2.45
+   },
+   {
+    "w": "done",
+    "s": 2.49,
+    "e": 2.67
+   },
+   {
+    "w": "by",
+    "s": 2.691,
+    "e": 2.851
+   },
+   {
+    "w": "Friday,",
+    "s": 2.891,
+    "e": 3.413
+   },
+   {
+    "w": "and",
+    "s": 3.474,
+    "e": 3.735
+   },
+   {
+    "w": "I",
+    "s": 3.795,
+    "e": 3.875
+   },
+   {
+    "w": "can",
+    "s": 3.895,
+    "e": 4.036
+   },
+   {
+    "w": "present",
+    "s": 4.056,
+    "e": 4.417
+   },
+   {
+    "w": "it",
+    "s": 4.437,
+    "e": 4.518
+   },
+   {
+    "w": "on",
+    "s": 4.558,
+    "e": 4.678
+   },
+   {
+    "w": "Monday?",
+    "s": 4.698,
+    "e": 5
+   }
+  ],
+  "metrics": {
+   "durPct": 0.0,
+   "f0Semitones": 0.1,
+   "f0MedianHz": [
+    199.5,
+    200.7
+   ],
+   "f0RangeSt": [
+    11.3,
+    11.5
+   ],
+   "f0SdSt": [
+    3.3,
+    3.43
+   ],
+   "loudnessChangeDb": -0.36,
+   "wordsPerSec": [
+    3.53,
+    3.53
+   ],
+   "finalEndingSt": [
+    8.07,
+    7.97
+   ],
+   "finalWordHeard": [
+    "Monday?",
+    "Monday?"
+   ],
+   "wordsKept": 1.0,
+   "clippedSamples": 0,
+   "voiceSim": 0.969
+  }
+ },
+ "real_expresso_ex04_natural_strong": {
+  "source": "exp_ex04_sad_00203",
+  "request": {
+   "call": "natural",
+   "style": "confident",
+   "mix": {
+    "confident": 1.5
+   },
+   "file": "out_d0ee84.wav"
+  },
+  "before_dur": 5.9852083333333335,
+  "after_dur": 5.407583333333333,
+  "before_text": "Well, Lisa and I were basically the same age, even though we were playing a couple of years apart.",
+  "after_text": "Well, Lisa and I were basically the same age, even though we were playing a couple of years apart.",
+  "after_words": [
+   {
+    "w": "Well,",
+    "s": 0.24,
+    "e": 0.761
+   },
+   {
+    "w": "Lisa",
+    "s": 0.801,
+    "e": 1.162
+   },
+   {
+    "w": "and",
+    "s": 1.202,
+    "e": 1.302
+   },
+   {
+    "w": "I",
+    "s": 1.362,
+    "e": 1.482
+   },
+   {
+    "w": "were",
+    "s": 1.522,
+    "e": 1.702
+   },
+   {
+    "w": "basically",
+    "s": 1.762,
+    "e": 2.283
+   },
+   {
+    "w": "the",
+    "s": 2.323,
+    "e": 2.423
+   },
+   {
+    "w": "same",
+    "s": 2.443,
+    "e": 2.644
+   },
+   {
+    "w": "age,",
+    "s": 2.724,
+    "e": 3.004
+   },
+   {
+    "w": "even",
+    "s": 3.064,
+    "e": 3.265
+   },
+   {
+    "w": "though",
+    "s": 3.285,
+    "e": 3.485
+   },
+   {
+    "w": "we",
+    "s": 3.505,
+    "e": 3.585
+   },
+   {
+    "w": "were",
+    "s": 3.625,
+    "e": 3.745
+   },
+   {
+    "w": "playing",
+    "s": 3.785,
+    "e": 4.066
+   },
+   {
+    "w": "a",
+    "s": 4.106,
+    "e": 4.146
+   },
+   {
+    "w": "couple",
+    "s": 4.166,
+    "e": 4.446
+   },
+   {
+    "w": "of",
+    "s": 4.486,
+    "e": 4.546
+   },
+   {
+    "w": "years",
+    "s": 4.586,
+    "e": 4.807
+   },
+   {
+    "w": "apart.",
+    "s": 4.847,
+    "e": 5.167
+   }
+  ],
+  "metrics": {
+   "durPct": -9.6,
+   "f0Semitones": -1.3,
+   "f0MedianHz": [
+    207.7,
+    192.7
+   ],
+   "f0RangeSt": [
+    8.1,
+    8.38
+   ],
+   "f0SdSt": [
+    3.32,
+    4.05
+   ],
+   "loudnessChangeDb": -0.09,
+   "wordsPerSec": [
+    3.49,
+    3.86
+   ],
+   "finalEndingSt": [
+    null,
+    -0.1
+   ],
+   "finalWordHeard": [
+    "apart.",
+    "apart."
+   ],
+   "wordsKept": 1.0,
+   "clippedSamples": 0,
+   "voiceSim": 0.932
+  }
+ },
+ "real_expresso_ex04_ai_confident": {
+  "source": "exp_ex04_sad_00203",
+  "request": {
+   "call": "tone",
+   "style": "confident",
+   "file": "out_d0ee84.wav"
+  },
+  "before_dur": 5.9852083333333335,
+  "after_dur": 5.98,
+  "before_text": "Well, Lisa and I were basically the same age, even though we were playing a couple of years apart.",
+  "after_text": "Well, Lisa and I were basically the same age, even though we were playing a couple of years apart.",
+  "after_words": [
+   {
+    "w": "Well,",
+    "s": 0.261,
+    "e": 0.843
+   },
+   {
+    "w": "Lisa",
+    "s": 0.883,
+    "e": 1.304
+   },
+   {
+    "w": "and",
+    "s": 1.344,
+    "e": 1.445
+   },
+   {
+    "w": "I",
+    "s": 1.505,
+    "e": 1.666
+   },
+   {
+    "w": "were",
+    "s": 1.686,
+    "e": 1.906
+   },
+   {
+    "w": "basically",
+    "s": 1.947,
+    "e": 2.549
+   },
+   {
+    "w": "the",
+    "s": 2.569,
+    "e": 2.689
+   },
+   {
+    "w": "same",
+    "s": 2.729,
+    "e": 2.95
+   },
+   {
+    "w": "age,",
+    "s": 3.01,
+    "e": 3.351
+   },
+   {
+    "w": "even",
+    "s": 3.411,
+    "e": 3.632
+   },
+   {
+    "w": "though",
+    "s": 3.652,
+    "e": 3.853
+   },
+   {
+    "w": "we",
+    "s": 3.893,
+    "e": 3.993
+   },
+   {
+    "w": "were",
+    "s": 4.013,
+    "e": 4.154
+   },
+   {
+    "w": "playing",
+    "s": 4.194,
+    "e": 4.515
+   },
+   {
+    "w": "a",
+    "s": 4.555,
+    "e": 4.595
+   },
+   {
+    "w": "couple",
+    "s": 4.636,
+    "e": 4.937
+   },
+   {
+    "w": "of",
+    "s": 4.977,
+    "e": 5.057
+   },
+   {
+    "w": "years",
+    "s": 5.077,
+    "e": 5.338
+   },
+   {
+    "w": "apart.",
+    "s": 5.378,
+    "e": 5.719
+   }
+  ],
+  "metrics": {
+   "durPct": -0.1,
+   "f0Semitones": -0.1,
+   "f0MedianHz": [
+    207.7,
+    206.5
+   ],
+   "f0RangeSt": [
+    8.1,
+    8.2
+   ],
+   "f0SdSt": [
+    3.32,
+    4.0
+   ],
+   "loudnessChangeDb": 1.17,
+   "wordsPerSec": [
+    3.49,
+    3.48
+   ],
+   "finalEndingSt": [
+    null,
+    null
+   ],
+   "finalWordHeard": [
+    "apart.",
+    "apart."
+   ],
+   "wordsKept": 1.0,
+   "clippedSamples": 0,
+   "voiceSim": 0.922
+  }
+ },
+ "flat_will_natural_strong": {
+  "source": "syn_will_flat",
+  "request": {
+   "call": "natural",
+   "style": "confident",
+   "mix": {
+    "confident": 1.5
+   },
+   "file": "out_787d21.wav"
+  },
+  "before_dur": 6.64,
+  "after_dur": 5.9991666666666665,
+  "before_text": "Hey, it's me. I'll have the report done by Friday, and I can present it on Monday.",
+  "after_text": "Hey, it's me. I'll have the report done by Friday, and I can present it on Monday.",
+  "after_words": [
+   {
+    "w": "Hey,",
+    "s": 0.241,
+    "e": 0.923
+   },
+   {
+    "w": "it's",
+    "s": 0.983,
+    "e": 1.144
+   },
+   {
+    "w": "me.",
+    "s": 1.184,
+    "e": 2.608
+   },
+   {
+    "w": "I'll",
+    "s": 2.669,
+    "e": 2.829
+   },
+   {
+    "w": "have",
+    "s": 2.849,
+    "e": 2.949
+   },
+   {
+    "w": "the",
+    "s": 2.969,
+    "e": 3.03
+   },
+   {
+    "w": "report",
+    "s": 3.07,
+    "e": 3.331
+   },
+   {
+    "w": "done",
+    "s": 3.371,
+    "e": 3.531
+   },
+   {
+    "w": "by",
+    "s": 3.551,
+    "e": 3.672
+   },
+   {
+    "w": "Friday,",
+    "s": 3.712,
+    "e": 4.494
+   },
+   {
+    "w": "and",
+    "s": 4.535,
+    "e": 4.635
+   },
+   {
+    "w": "I",
+    "s": 4.655,
+    "e": 4.715
+   },
+   {
+    "w": "can",
+    "s": 4.735,
+    "e": 4.856
+   },
+   {
+    "w": "present",
+    "s": 4.876,
+    "e": 5.156
+   },
+   {
+    "w": "it",
+    "s": 5.197,
+    "e": 5.257
+   },
+   {
+    "w": "on",
+    "s": 5.277,
+    "e": 5.357
+   },
+   {
+    "w": "Monday.",
+    "s": 5.397,
+    "e": 5.698
+   }
+  ],
+  "metrics": {
+   "durPct": -9.7,
+   "f0Semitones": -1.2,
+   "f0MedianHz": [
+    98.6,
+    92.0
+   ],
+   "f0RangeSt": [
+    6.7,
+    6.87
+   ],
+   "f0SdSt": [
+    2.24,
+    2.17
+   ],
+   "loudnessChangeDb": -0.03,
+   "wordsPerSec": [
+    2.82,
+    3.12
+   ],
+   "finalEndingSt": [
+    -4.87,
+    -3.47
+   ],
+   "finalWordHeard": [
+    "Monday.",
+    "Monday."
+   ],
+   "wordsKept": 1.0,
+   "clippedSamples": 0,
+   "voiceSim": 0.94
+  }
+ }
+}
