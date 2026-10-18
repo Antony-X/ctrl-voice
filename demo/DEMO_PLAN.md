@@ -15,11 +15,12 @@
 | 0:22–1:00 | **Live in Discord** | Real screen. Press Alt+\`, talk messy, say "scratch that". **Zoom on the pill**: the sentence strikes through and vanishes while you keep talking. Press Alt+\` again. "Cleaning up…", then the message lands in the channel. Press play: it's clean. | The live caption deleting the sentence you took back | Real screen recording, you talking live |
 | 1:00–1:35 | **Misspoken word** | You say a word everyone knows, wrong (picked from validated candidates, e.g. "pacifically" for "specifically"). The editor marks it *Misspoken* and re-says it in your voice. A/B: Original, then Fixed. Then the proof: the two waveforms overlaid, identical except one word-sized slice. | "Every other sample is my original recording" | Real app, real engine |
 | 1:35–2:00 | **Set it once: grumpy → confident** | Settings → Your sound: drag Confident up. A grumpy line ("ugh… fine, I'll do the slides") plays before and after. | The same words with a different attitude | Real app |
-| 2:00–2:25 | **Heavy accent → native accent** | A heavily accented speaker, then the same speaker with a native accent. | Same person, new accent | *Pending the accent prototype.* The segment is cut if it doesn't hold up. |
-| 2:25–2:45 | How it works | One animated line: **Find → Cut → Voice**, then "regenerate one word, not the clip". Voice similarity 0.976 vs 0.733. "Scratch that" in 351 ms. | | Motion graphics, numbers from RESULTS.md |
+| 2:00–2:40 | **Heavy accent → native accent** | A heavily accented speaker (EdAcc dataset speaker, Russian), then the same speaker with a native accent. | Same person, new accent | Real app (Native accent), AI voice |
 | 2:45–3:00 | Close | "Works in Discord, WhatsApp, Telegram, Slack." **Say it messy. Send it clean.** Team. | | |
 
-The ≤60 s film being built now provides the cold open and the problem shots (0:00–0:22) and the How-it-works animation.
+The ≤60 s film being built now provides the cold open and the problem shots (0:00–0:22).
+
+No architecture or technical detail (models, pipeline, metrics) in the pitch deck or this video: that is for the separate main presentation.
 
 ## Rules
 - Every voice in the demo is a real person: you, a teammate, or a dataset speaker, labeled on screen. The only AI-made audio is the words the app regenerates, and the video says so.
