@@ -56,10 +56,12 @@ class Session:
         if self.chunks: self.x = np.concatenate([self.x] + self.chunks); self.chunks = []
         return self.x
     def flags(self):
-        """per word: removal kind (time-based, so it survives re-transcription) or None."""
+        """per word: removal kind (time-based, so it survives re-transcription) or None.
+        A word is placed at its start + half its length capped at 0.4 s: whisper stretches the end of a
+        word through the pause after it, which would push its midpoint out of the cut that removed it."""
         out = []
         for w in self.words:
-            m = (w["s"] + w["e"]) / 2; out.append(next((r["kind"] for r in self.removed if r["t0"] <= m <= r["t1"]), None))
+            m = w["s"] + min(w["e"] - w["s"], 0.4) / 2; out.append(next((r["kind"] for r in self.removed if r["t0"] <= m <= r["t1"]), None))
         return out
     def active(self):
         return [w for w, f in zip(self.words, self.flags()) if f is None]

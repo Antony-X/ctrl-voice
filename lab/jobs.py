@@ -1,7 +1,8 @@
 # Edit jobs: replace a phrase (by words in the ASR transcript) with new text.
 import json, re
 import os
-W = json.load(open(os.environ.get("WORDS", "/workspace/data/clips/asr_words_aligned.json")))
+_WORDS = os.environ.get("WORDS", "/workspace/data/clips/asr_words_aligned.json")
+W = json.load(open(_WORDS)) if os.path.exists(_WORDS) else {}  # benchmark clips; absent on a serving-only pod
 JOBS = [
     ("libri_1320-122617-0000", "Hawkeye", "Michael"),
     ("libri_260-123440-0010", "fishes", "children"),
