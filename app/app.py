@@ -7,9 +7,9 @@ from fastapi.staticfiles import StaticFiles
 sys.path.insert(0, "/workspace/app"); sys.path.insert(0, "/workspace/lab")
 from faster_whisper import WhisperModel
 from speechbrain.inference.speaker import EncoderClassifier
-from brain import clean, last_thought, spoken_command, grammar, tighten, intent, norm
+from brain import clean, last_thought, spoken_command, grammar, tighten, intent, norm, FILLERS
 from render import render, gap_edges, quiet
-from align import align, emissions
+from align import align, emissions, spell, V as CTC_V, BLANK as CTC_BLANK
 from prosody import restyle, blend, PRESETS
 import pickle
 from pron import score as pscore, features as pfeat, phones as g2p, levenshtein, fit as afit
@@ -216,6 +216,11 @@ def extract(g16, gsr_audio, gsr, tw, ni, nj):
 async def api_replace(sid: str, r: dict):
     s = get(sid); W = s.words; i, j = r["i"], r["j"]; x = s.audio(); dur = len(x) / SR; t = time.time(); same = bool(r.get("same"))
     new = " ".join(re.sub(r"[.,!?;:]+$", "", w["w"]) for w in W[i:j + 1]) if same else r["new"].strip()
+    # Re-say the word together with the one before it: alone, the new word often keeps the old onset
+    # ("specific" spliced after "more" still sounded like "pacific"; "more specific" did not).
+    if (not same and r.get("widen", True) and i > 0 and s.flags()[i - 1] is None and norm(W[i - 1]["w"]) not in FILLERS
+            and not re.search(r"[.,!?;:]$", W[i - 1]["w"]) and W[i]["s"] - W[i - 1]["e"] < 0.3):
+        i -= 1; new = re.sub(r"[.,!?;:]+$", "", W[i]["w"]) + " " + new
     a, b, L, R = window(W, i, j, dur)
     win = x[int(L * SR):int(R * SR)]; wp = f"{s.dir}/win_{uuid.uuid4().hex[:6]}.wav"; sf.write(wp, win, SR)
     ww = [dict(w=w["w"], s=round(w["s"] - L, 3), e=round(w["e"] - L, 3)) for w in W[a:b + 1]]; wi, wj = i - a, j - a
@@ -256,13 +261,28 @@ async def score_cands(s, engines, outs, cands, tw, wi, nw, win, W, i, j, L, dur,
             heard = " ".join(w["w"] for w in await asyncio.to_thread(transcribe, test, 1))
             ht, nt = [norm(x) for x in heard.split() if norm(x)], [norm(x) for x in new.split() if norm(x)]
             ok = any(ht[k:k + len(nt)] == nt for k in range(len(ht) - len(nt) + 1))
+            margin = None
+            if not same:  # the recognizer also guesses from context; the sounds alone must favour the new words over the old
+                em = await asyncio.to_thread(emissions, librosa.resample(test, orig_sr=SR, target_sr=16000))
+                olds = [w["w"] for w in tw[:wi]] + [w["w"] for w in W[i:j + 1]] + [w["w"] for w in tw[wj + 1:]]
+                margin = round(ctc_logp(em, [w["w"] for w in tw]) - ctc_logp(em, olds), 2); ok = ok and margin > 0
             sim = float(embed(seg, SR) @ e0) if len(seg) > 0.3 * SR else 0.5
             if same:  # pronunciation fix: re-score the regenerated word(s) with the mispronunciation detector
                 tws = [dict(w=w["w"]) for w in tw]; al = align(librosa.resample(test, orig_sr=SR, target_sr=16000), [w["w"] for w in tws])
                 pa, _ = await asyncio.to_thread(pron_pred, test, SR, [dict(w=w["w"]) for w in tws]) if all(al) else ([None] * len(tws), None)
                 after = min([p for p in pa[wi:wj + 1] if p is not None], default=0.0); sim = after / 10 + (0.5 if ok else 0)
             iid = uuid.uuid4().hex[:8]; np.save(f"{s.dir}/ins_{iid}.npy", seg); s.inserts[iid] = seg
-            cands.append(dict(engine=e, ok=ok, sim=round(sim, 3), heard=heard, id=iid, sec=round(o["sec"], 2), **({"after": round(after, 2)} if same else {})))
+            cands.append(dict(engine=e, ok=ok, sim=round(sim, 3), heard=heard, id=iid, sec=round(o["sec"], 2), margin=margin, **({"after": round(after, 2)} if same else {})))
+
+
+def ctc_logp(em, words):
+    """log P(words | audio) under the character CTC model, which has no language model to fill in from context."""
+    toks = []
+    for w in words:
+        if spell(w): toks += [CTC_V[c] for c in spell(w)] + [CTC_V["|"]]
+    lp = torch.from_numpy(em)
+    return -torch.nn.functional.ctc_loss(lp[:, None], torch.tensor([toks[:-1]]), [lp.shape[0]], [len(toks) - 1], blank=CTC_BLANK,
+                                         reduction="sum", zero_infinity=True).item()
 
 
 @app.post("/api/s/{sid}/intent")

@@ -228,134 +228,136 @@
  },
  "after": {
   "src": "examples/clean/after.mp3",
-  "dur": 10.67,
+  "dur": 11.12,
   "words": [
    {
     "w": "Hey",
     "s": 0.18,
-    "e": 0.34
+    "e": 0.341
    },
    {
     "w": "Sam,",
-    "s": 0.38,
-    "e": 1.041
+    "s": 0.381,
+    "e": 1.042
    },
    {
     "w": "can",
-    "s": 1.061,
-    "e": 1.201
+    "s": 1.062,
+    "e": 1.202
    },
    {
     "w": "you",
-    "s": 1.241,
-    "e": 1.381
+    "s": 1.242,
+    "e": 1.382
    },
    {
     "w": "be",
-    "s": 1.421,
-    "e": 1.581
+    "s": 1.422,
+    "e": 1.542
    },
    {
     "w": "more",
-    "s": 1.621,
-    "e": 1.981
+    "s": 1.562,
+    "e": 1.843,
+    "tag": "regenerated"
    },
    {
     "w": "specific",
-    "s": 2.001,
-    "e": 2.742,
+    "s": 1.883,
+    "e": 3.004,
     "tag": "regenerated"
    },
    {
     "w": "about",
-    "s": 2.782,
-    "e": 3.042
+    "s": 3.045,
+    "e": 3.305
    },
    {
     "w": "game",
-    "s": 3.102,
-    "e": 3.342
+    "s": 3.365,
+    "e": 3.605
    },
    {
     "w": "night?",
-    "s": 3.402,
-    "e": 4.303
+    "s": 3.665,
+    "e": 4.567
    },
    {
     "w": "Is",
-    "s": 4.363,
-    "e": 4.443
+    "s": 4.627,
+    "e": 4.707
    },
    {
     "w": "it",
-    "s": 4.483,
-    "e": 4.603
+    "s": 4.747,
+    "e": 4.887
    },
    {
     "w": "Wednesday?",
-    "s": 4.663,
-    "e": 5.704
+    "s": 4.927,
+    "e": 5.969
    },
    {
     "w": "Anyway,",
-    "s": 5.764,
-    "e": 6.565
+    "s": 6.009,
+    "e": 6.83
    },
    {
     "w": "whatever",
-    "s": 6.605,
-    "e": 6.985
+    "s": 6.87,
+    "e": 7.251
    },
    {
     "w": "Jordan",
-    "s": 7.045,
-    "e": 7.385
+    "s": 7.291,
+    "e": 7.651
    },
    {
     "w": "said",
-    "s": 7.425,
-    "e": 7.665
+    "s": 7.691,
+    "e": 7.932
    },
    {
     "w": "is",
-    "s": 7.706,
-    "e": 7.806
+    "s": 7.972,
+    "e": 8.072
    },
    {
     "w": "a",
-    "s": 7.846,
-    "e": 7.886
+    "s": 8.112,
+    "e": 8.232,
+    "tag": "regenerated"
    },
    {
     "w": "moot",
-    "s": 7.926,
-    "e": 8.326,
+    "s": 8.292,
+    "e": 8.793,
     "tag": "regenerated"
    },
    {
     "w": "point",
-    "s": 8.366,
-    "e": 8.626
+    "s": 8.813,
+    "e": 9.094
    },
    {
     "w": "now.",
-    "s": 8.666,
-    "e": 9.627
+    "s": 9.134,
+    "e": 10.075
    },
    {
     "w": "Just",
-    "s": 9.667,
-    "e": 9.847
+    "s": 10.115,
+    "e": 10.295
    },
    {
     "w": "bring",
-    "s": 9.887,
-    "e": 10.127
+    "s": 10.335,
+    "e": 10.576
    },
    {
     "w": "snacks.",
-    "s": 10.167,
-    "e": 10.508
+    "s": 10.616,
+    "e": 10.976
    }
   ]
  },
@@ -373,15 +375,15 @@
    "type": "replace",
    "kind": "misspoken",
    "label": "Misspoken",
-   "t0": 2.983,
+   "t0": 2.542,
    "t1": 3.984,
-   "old": "pacific",
-   "new": "specific",
+   "old": "more pacific",
+   "new": "more specific",
    "verified": true,
    "engine": "f5",
    "out": [
-    2.021,
-    2.73
+    1.56,
+    2.99
    ]
   },
   {
@@ -406,15 +408,15 @@
    "type": "replace",
    "kind": "misspoken",
    "label": "Misspoken",
-   "t0": 18.078,
+   "t0": 17.997,
    "t1": 18.338,
-   "old": "mute",
-   "new": "moot",
+   "old": "a mute",
+   "new": "a moot",
    "verified": true,
    "engine": "f5",
    "out": [
-    7.917,
-    8.337
+    8.09,
+    8.79
    ]
   }
  ],
@@ -427,124 +429,18 @@
   },
   "fix_types": 4,
   "dur_before": 20.64,
-  "dur_after": 10.67,
-  "shorter_pct": 48.3,
+  "dur_after": 11.12,
   "mp3_dur_before": 20.64,
-  "mp3_dur_after": 10.668,
-  "kept_original_sec": 9.46,
-  "kept_sample_exact_pct": 100.0,
-  "render_reproduced_max_diff_lsb": 1.38,
   "retranscribed_after": "Hey Sam, can you be more specific about game night? Is it Wednesday? Anyway, whatever Jordan said is a moot point now. Just bring snacks.",
   "app_final_text": "Hey, Sam, can you be more specific about game night? Is it Wednesday? Anyway, whatever Jordan said is a moot point now. Just bring snacks.",
   "retranscription_wer": 0.0,
   "replacements_verified": true,
-  "joins": [
-   {
-    "kind": "cut",
-    "t_out": 1.02,
-    "level_db": -35.5,
-    "pause_s": 0.26,
-    "click_ratio": 0.01,
-    "f0_step_st": 3.78,
-    "cut_points_db": [
-     -32.7,
-     -53.9
-    ],
-    "pause_trimmed_s": 0.0
-   },
-   {
-    "kind": "replace in",
-    "t_out": 2.021,
-    "level_db": -52.3,
-    "pause_s": 0.14,
-    "click_ratio": 0.0,
-    "f0_step_st": -1.75
-   },
-   {
-    "kind": "replace out",
-    "t_out": 2.73,
-    "level_db": -32.9,
-    "pause_s": 0.07,
-    "click_ratio": 0.01,
-    "f0_step_st": -0.35
-   },
-   {
-    "kind": "cut",
-    "t_out": 4.633,
-    "level_db": -8.6,
-    "pause_s": 0.0,
-    "click_ratio": 0.05,
-    "f0_step_st": 2.92,
-    "cut_points_db": [
-     -8.4,
-     -15.2
-    ],
-    "pause_trimmed_s": 0.0
-   },
-   {
-    "kind": "cut",
-    "t_out": 5.709,
-    "level_db": -44.2,
-    "pause_s": 0.5,
-    "click_ratio": 0.0,
-    "f0_step_st": -10.2,
-    "cut_points_db": [
-     -48.4,
-     -53.1
-    ],
-    "pause_trimmed_s": 1.036
-   },
-   {
-    "kind": "replace in",
-    "t_out": 7.917,
-    "level_db": -5.2,
-    "pause_s": 0.0,
-    "click_ratio": 0.06,
-    "f0_step_st": -0.9
-   },
-   {
-    "kind": "replace out",
-    "t_out": 8.337,
-    "level_db": -22.4,
-    "pause_s": 0.0,
-    "click_ratio": 0.05,
-    "f0_step_st": -1.25
-   }
-  ],
   "natural_pause_median_s": 0.23,
-  "engine_autofix_ms": 10732,
-  "engine_sid": "af6d21fb",
+  "engine_sid": "862e9837",
   "pipeline": "Ctrl+Voice import + autoFix (main.js), default settings: cleanup, misspoken, grammar, pronunciation on; no tone/accent",
-  "inserts": [
-   {
-    "old": "pacific",
-    "new": "specific",
-    "kind": "misspoken",
-    "engine": "f5",
-    "f0_orig_hz": 181,
-    "f0_insert_hz": 179,
-    "f0_diff_st": -0.2,
-    "level_diff_db": 1.4,
-    "insert_sec": 0.71,
-    "next_word": "about",
-    "step_into_next_orig_st": -0.8,
-    "step_into_next_after_st": -0.6
-   },
-   {
-    "old": "mute",
-    "new": "moot",
-    "kind": "misspoken",
-    "engine": "f5",
-    "f0_orig_hz": 163,
-    "f0_insert_hz": 169,
-    "f0_diff_st": 0.55,
-    "level_diff_db": 0.6,
-    "insert_sec": 0.42,
-    "next_word": "point",
-    "step_into_next_orig_st": -0.05,
-    "step_into_next_after_st": -0.6
-   }
-  ]
+  "rerender": "2026-10-18: re-rendered with 'more specific' and 'a moot' (each re-said with the word before it), picked by a sound-only CTC check (no language model)",
+  "ctc_margin_specific": 32.56,
+  "ctc_margin_moot": 4.18
  },
  "caption": "One pass, five fixes: an um, a false start, a scratched sentence and two wrong words."
 };
