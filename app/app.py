@@ -377,6 +377,30 @@ async def api_tone(sid: str, r: dict):
                 words_kept=round(same_words(text, heard), 2), voice_sim=round(sim, 3))
 
 
+ACCENT = int(os.environ.get("ACCENT_PORT", "8106"))  # accent_service.py: ASR -> native F5 voice -> Seed-VC back to the speaker
+
+
+@app.post("/api/s/{sid}/accent")
+async def api_accent(sid: str, r: dict):
+    """Native-accent take of the whole current edit (AI voice). Checked as /tone: words kept (re-transcribed) and voice similarity."""
+    s = get(sid); t = time.time(); src = f"{s.dir}/{r['file']}" if r.get("file") else f"{s.dir}/orig.wav"; y0, _ = librosa.load(src, sr=SR)
+    text = (r.get("text") or "").strip()  # the client's kept words; transcribed only when missing
+    if not text:
+        async with GPU: text = " ".join(w["w"] for w in await asyncio.to_thread(transcribe, y0, 1))
+    raw = f"{s.dir}/accent_raw_{uuid.uuid4().hex[:6]}.wav"
+    try:
+        async with httpx.AsyncClient(timeout=300) as cl:
+            o = await cl.post(f"http://127.0.0.1:{ACCENT}/accent", json=dict(wav=src, text=text, out=raw))
+    except httpx.HTTPError: raise HTTPException(503, "the accent service is not running")
+    if o.status_code != 200: raise HTTPException(502, f"accent service: {o.text[:200]}")
+    y, gsr = sf.read(raw, dtype="float32"); y = librosa.resample(y.mean(1) if y.ndim > 1 else y, orig_sr=gsr, target_sr=SR)
+    async with GPU:
+        heard = " ".join(w["w"] for w in await asyncio.to_thread(transcribe, y, 1)); sim = float(embed(y, SR) @ embed(y0, SR))
+    name = f"accent_{uuid.uuid4().hex[:6]}.wav"; sf.write(f"{s.dir}/{name}", y, SR)
+    return dict(url=f"/api/s/{sid}/file/{name}", dur=round(len(y) / SR, 2), sec=round(time.time() - t, 2), engine="F5-TTS + Seed-VC",
+                words_kept=round(same_words(text, heard), 2), voice_sim=round(sim, 3))
+
+
 def tone_mix(r):  # {"mix": {style: amount}} from the sliders, or the older {"style": name, "amount": 1}
     mix = {k: float(v) for k, v in (r.get("mix") or {r.get("style"): r.get("amount", 1.0)}).items() if float(v) > 0}
     if not mix or any(k not in PRESETS for k in mix): raise HTTPException(400, "unknown tone")
