@@ -9,9 +9,9 @@ const DIR = __dirname;
 const SP = path.join(DIR, '..');
 const UD = path.join(DIR, 'userData');
 const OUT = path.join(DIR, 'out');
-const CV = 'C:/Users/Antony/Desktop/ctrl+voice';
-const AUDIO = path.join(SP, 'livetest', 'data', 'orig_pause.wav');
 const arg = (n, d) => (process.argv.find(a => a.startsWith(`--${n}=`)) || '').split('=').slice(1).join('=') || d;
+const CV = arg('cv', 'C:/Users/Antony/Desktop/ctrl+voice'); // --cv=<copy of the app> to A/B another version
+const AUDIO = path.join(SP, 'livetest', 'data', 'orig_pause.wav');
 const STEPS = arg('steps', 'rec,editor,cancel').split(',');
 const KEEP = process.argv.includes('--keep'); // reuse userData from a previous run (editor-only reruns)
 
@@ -58,6 +58,7 @@ const calls = [];
   const orig = Engine.prototype.request;
   Engine.prototype.request = async function (p, opts = {}) {
     const c = { p: String(p).replace(/^https?:\/\/[^/]+/, '').replace(/^\/api\/s\/\w+\//, ''), t0: Date.now() - T0 };
+    if (opts.json !== undefined && /render|natural|accent|tone/.test(c.p)) c.body = JSON.stringify(opts.json).slice(0, 300); // to compare old/new requests
     calls.push(c);
     try {
       const r = await orig.call(this, p, opts);
@@ -71,7 +72,22 @@ const calls = [];
     }
   };
 }
-const callsSince = (t) => calls.filter(c => c.t0 >= t).map(c => `${((c.t0 - t) / 1000).toFixed(2)}-${c.t1 == null ? '?' : ((c.t1 - t) / 1000).toFixed(2)}s ${c.p}${c.sec != null ? ` sec=${c.sec}` : ''}${c.bytes ? ` ${c.bytes}B` : ''}${c.err ? ` ERR ${c.err}` : ''}`);
+// --fault=natural404: the first natural call answers 404 (session gone); --fault=renderdl500: downloading a render fails.
+const FAULT = arg('fault', '');
+if (FAULT) {
+  const { EngineError } = require(`${CV}/src/main/engine.js`);
+  const nat = Engine.prototype.natural, dl = Engine.prototype.download;
+  let fired = false;
+  if (FAULT === 'natural404') Engine.prototype.natural = function (...a) {
+    if (!fired) { fired = true; calls.push({ p: 'FAULT natural 404', t0: Date.now() - T0, t1: Date.now() - T0 }); return Promise.reject(new EngineError('Not Found', 404)); }
+    return nat.apply(this, a);
+  };
+  if (FAULT === 'renderdl500') Engine.prototype.download = function (p, ...a) {
+    if (/\/out_/.test(p)) { calls.push({ p: 'FAULT render download 500', t0: Date.now() - T0, t1: Date.now() - T0 }); return Promise.reject(new EngineError('Engine error 500', 500)); }
+    return dl.call(this, p, ...a);
+  };
+}
+const callsSince = (t) => calls.filter(c => c.t0 >= t).map(c => `${((c.t0 - t) / 1000).toFixed(2)}-${c.t1 == null ? '?' : ((c.t1 - t) / 1000).toFixed(2)}s ${c.p}${c.sec != null ? ` sec=${c.sec}` : ''}${c.bytes ? ` ${c.bytes}B` : ''}${c.err ? ` ERR ${c.err}` : ''}${c.body ? ` body=${c.body}` : ''}`);
 
 const M = require(`${CV}/src/main/main.js`);
 for (const k of Object.keys(M.SEND_APPS)) delete M.SEND_APPS[k]; // never a send target
@@ -96,7 +112,7 @@ function hookWindow(win, name) {
 
 async function quit(code) {
   log('RESULTS', results.filter(r => r.step !== 'timing').map(r => `${r.ok ? 'PASS' : 'FAIL'} ${r.step}`));
-  fs.writeFileSync(path.join(OUT, `results-${runId}.json`), JSON.stringify({ results, consoleErrors, events, calls }, null, 2));
+  fs.writeFileSync(path.join(OUT, `results-${runId}.json`), JSON.stringify({ cv: CV, results, consoleErrors, events, calls }, null, 2));
   try { M.helper.stop(); } catch {}
   app.isQuitting = true;
   setTimeout(() => app.exit(code), 3000);

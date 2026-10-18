@@ -1,6 +1,6 @@
 # Ctrl+Voice — demo kit
 
-Everything for the hackathon demo that isn't app or engine code: the pitch deck, the video project, the demo script and the test harnesses. The plan is in [DEMO_PLAN.md](DEMO_PLAN.md).
+Everything for the hackathon demo that isn't app or engine code: the pitch deck, the video project, the demo script and the test harnesses. The pitch script is in [PITCH.md](PITCH.md), and how to record it is in [RECORDING.md](RECORDING.md).
 
 | Repo | What |
 |---|---|
@@ -42,4 +42,4 @@ Some scripts have absolute paths from the machine they were written on (`C:/User
      pkill -f "[u]vicorn app:app"
      ENGINES=playdiff:8101,f5:8103,auk:8102 nohup bash /workspace/app/start_app.sh </dev/null >/dev/null 2>&1 &
      ```
-4. **With Claude Code:** start it in the ctrl-voice folder and point it at this README, `DEMO_PLAN.md` and respeak `docs/HANDOFF.md`.
+4. **With Claude Code:** start it in the ctrl-voice folder and point it at this README, `PITCH.md`, `RECORDING.md` and respeak `docs/HANDOFF.md`.

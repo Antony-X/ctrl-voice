@@ -8,7 +8,7 @@ Voice messages you can edit like text: undo the last thought while recording, re
 - **Listening page with all test audio**: `docs/listening_page.html` · hosted copy: https://claude.ai/artifact/Vw2FXXNXYrhobJrQSNtQg2
 - **Start here (humans and agents)**: `CLAUDE.md`, `docs/PROJECT.md`, `docs/HANDOFF.md`, `docs/RESULTS.md`
 - **The app**: `desktop/README.md` (run with `cd desktop && npm install && npm start`)
-- **The demo**: `demo/README.md` and `demo/DEMO_PLAN.md` (deck, video, demo script, test harnesses)
+- **The demo**: `demo/PITCH.md` (the 3-minute pitch script and slides), `demo/RECORDING.md` (how to record it), `demo/README.md` (deck, demo script, test harnesses)
 - **Research reports**: `reports/ReSpeak voice editing feasibility.md` (round 1) and `reports/ReSpeak grammar pronunciation and accent.md` (round 2); sources in `research_notes/`
 
 ## Status (measured, see reports for details)
