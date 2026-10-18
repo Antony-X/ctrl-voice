@@ -124,7 +124,7 @@
     const paths = (g) => [...g.querySelectorAll('path')];
     function prep() {
       for (const it of items) {
-        it.g.style.opacity = '0';
+        it.g.style.transition = 'none'; it.g.style.opacity = '0';   // hide at once: a fade left over from play() would flash the old drawing
         for (const p of paths(it.g)) {
           // fills and dashed strokes fade in; a draw-on dash would overwrite their own dash pattern
           if (p.getAttribute('stroke-dasharray') || p.getAttribute('stroke') === 'none' || (!p.getAttribute('stroke') && p.getAttribute('fill') && p.getAttribute('fill') !== 'none')) { p.style.transition = 'none'; p.style.opacity = '0'; continue; }
@@ -136,7 +136,7 @@
     function show() {
       timers.forEach(clearTimeout); timers = [];
       for (const it of items) {
-        it.g.style.opacity = '1';
+        it.g.style.transition = 'none'; it.g.style.opacity = '1';
         for (const p of paths(it.g)) { p.style.transition = 'none'; p.style.strokeDashoffset = '0'; p.style.opacity = ''; }
       }
     }

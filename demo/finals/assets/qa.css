@@ -1,0 +1,31 @@
+/* Ctrl+Voice Q&A backup deck. Builds on deck.css (fonts, palette, #stage, .slide, #notes-overlay). */
+.slide { transition: opacity .18s ease, visibility 0s linear .18s; }
+.slide.active { transition: opacity .18s ease; }
+
+/* ---------------------------------------------------------------- index */
+.qa-index { padding: 70px 110px 0; }
+.ix-hd { display: flex; align-items: baseline; gap: 40px; margin-bottom: 44px; }
+.ix-hd h1 { margin: 0; font: 500 92px/1 var(--serif); letter-spacing: -0.02em; }
+.ix-hd p { margin: 0; font: 26px var(--sans); color: var(--ink3); }
+.ix-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 176px; gap: 26px; }
+.ix-card { display: flex; align-items: center; gap: 30px; padding: 0 34px; border-radius: 18px; background: var(--sheet); border: 2px solid var(--line); cursor: pointer; color: var(--ink); text-decoration: none; }
+.ix-card:hover { border-color: var(--ink3); }
+.ix-card b { flex: none; display: grid; place-items: center; width: 100px; height: 100px; border-radius: 50%; border: 3px solid var(--model); color: var(--model); font: 600 58px/1 var(--sans); }
+.ix-card span { font: 500 38px/1.18 var(--serif); }
+.ix-card.wide { grid-column: 1 / -1; border-color: #4cc89b55; }
+.ix-card.wide b { border-color: var(--made); color: var(--made); }
+
+/* ---------------------------------------------------------------- answer slides */
+.qh { position: absolute; left: 110px; right: 110px; top: 64px; height: 120px; display: flex; align-items: center; gap: 38px; }
+.qn { flex: none; display: grid; place-items: center; width: 110px; height: 110px; border-radius: 50%; border: 3px solid var(--model); color: var(--model); font: 600 62px/1 var(--sans); }
+.qn.wide { border-color: var(--made); color: var(--made); }
+.qh h2 { margin: 0; font: 500 76px/1.05 var(--serif); letter-spacing: -0.015em; white-space: nowrap; }
+.viz { position: absolute; left: 0; top: 220px; width: 1920px; height: 780px; overflow: visible; }
+
+.qa-foot { position: absolute; left: 110px; right: 110px; bottom: 30px; display: flex; justify-content: space-between; font: 22px var(--sans); color: var(--ink3); pointer-events: none; z-index: 4; }
+.qa-foot kbd { font: 600 20px var(--sans); color: var(--ink2); border: 1px solid var(--line); border-radius: 6px; padding: 1px 9px; margin: 0 4px; }
+
+#notes-overlay .say { border-left: 4px solid var(--made); padding-left: 14px; }
+#notes-overlay .en { color: var(--ink3); font-size: 21px; }
+#notes-overlay .sec { color: var(--ink2); font-size: 22px; }
+.qh h2.sm { font-size: 62px; }

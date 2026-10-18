@@ -92,164 +92,212 @@
     </aside>
   </section>
 
+  <!-- ─────────────────────────────────────────────── the problem: the re-record loop -->
+  <section class="slide s-loop" data-id="loop" data-title="The loop" data-steps="1" data-time="1:03–1:15">
+    <h2 class="lp-line">Record. Delete. <i>Repeat.</i></h2>
+    <svg class="lp-svg" id="lp-svg" viewBox="0 0 1920 1080" aria-hidden="true"></svg>
+    <aside class="notes">
+      <p class="sec">loop (1:03–1:15; პრობლემა: თავიდან ჩაწერის წრე)</p>
+      <p>&lt;!-- step 0 --&gt;</p>
+      <div class="st" data-k="0">
+      <p><b>step 0, 1:03</b>, წრე იხატება, წერტილი ტრიალებს, „take“ მატულობს 1, 2, 3; მერე „type it“:</p>
+      <p>„დღეს რას ვაკეთებთ? ვწერთ, ვუსმენთ, გვრცხვენია, ვშლით… და თავიდან. ან ვნებდებით და ვბეჭდავთ.“</p>
+      <p><span class="en">What do we do today? Record, listen, cringe, delete… and again. Or we give up and type it.</span></p>
+      <p>&lt;!-- step 1 --&gt;</p>
+      </div>
+      <div class="st" data-k="1">
+      <p><b>step 1, 1:10 →</b>: წრე წყდება, ერთი ჩანაწერი მწვანე ისრით გადის, „sent“.</p>
+      <p>„Ctrl+Voice ამ წრეს წყვეტს: ერთი ჩანაწერი, და გაგზავნილია.“</p>
+      <p><span class="en">Ctrl+Voice breaks the loop: one take, and it's sent.</span></p>
+      <p><b>1:15 →</b></p>
+      <p><em>რიცხვები აქ არ არის: მხოლოდ ის, რასაც ყველა აკეთებს.</em></p>
+      <p><span class="en">No statistics here: just what everyone does.</span></p>
+      </div>
+    </aside>
+  </section>
+
   <!-- ─────────────────────────────────────────────── the idea: edit the words, the audio follows -->
-  <section class="slide s-idea" data-id="idea" data-title="The idea" data-steps="1" data-time="1:03–1:16">
+  <section class="slide s-idea" data-id="idea" data-title="The idea" data-steps="1" data-time="1:15–1:28">
     <h2 class="id-line">Edit the words. <i>The audio follows.</i></h2>
     <svg class="id-svg" id="id-svg" viewBox="0 0 1920 1080" aria-hidden="true"></svg>
     <aside class="notes">
-      <p class="sec">idea (1:03–1:16; სიტყვები თავის ხმაზეა მიბმული)</p>
+      <p class="sec">idea (1:15–1:28; სიტყვები თავის ხმაზეა მიბმული)</p>
       <div class="st" data-k="0">
-      <p><b>step 0, 1:03</b>, ჩანაწერი იხატება, სიტყვები ზემოთ ჩნდება, შეცდომები წითლდება:</p>
+      <p><b>step 0, 1:15</b>, ჩანაწერი იხატება, სიტყვები ზემოთ ჩნდება, შეცდომები წითლდება:</p>
       <p>„როგორ? შენი ხმა სიტყვებად იქცევა, და თითოეული სიტყვა თავის ბგერაზე რჩება მიბმული.“</p>
       <p><span class="en">How? Your voice becomes words, and every word stays tied to its own sound.</span></p>
       </div>
       <div class="st" data-k="1">
-      <p><b>step 1, 1:08 →</b>: წითელი სიტყვები იხაზება, მათი ხმა ქრება, დანარჩენი ერთდება, „have“ მწვანე „has“ ხდება.</p>
+      <p><b>step 1, 1:20 →</b>: წითელი სიტყვები იხაზება, მათი ხმა ქრება, დანარჩენი ერთდება, „have“ მწვანე „has“ ხდება.</p>
       <p>„ჩვენ სიტყვებს ვასწორებთ, როგორც ტექსტს, და აუდიო მათ მიჰყვება. ახალია მხოლოდ შეცვლილი სიტყვა, შენივე ხმით. დანარჩენი შენი ნამდვილი ჩანაწერია.“</p>
       <p><span class="en">We edit the words, like a text, and the audio follows. Only the changed word is new, in your own voice. The rest is your real recording.</span></p>
-      <p><b>1:16 →</b></p>
-      <p><em>ტალღის ნაწილები ამ სიტყვებისთვის სარას ნამდვილი ჩანაწერიდანაა (ილუსტრაციაა). თუ ჰკითხავენ, რატომ არა მთელი მესიჯის ხელახლა გენერაცია: მაშინ ხმის მსგავსება 0.73-მდე ეცემა, ასე კი 0.98 რჩება.</em></p>
-      <p><span class="en">The waveform pieces are Sarah's real audio for these words, drawn as an illustration. If asked why not regenerate the whole message: voice similarity drops to 0.73; this way it stays 0.98.</span></p>
+      <p><b>1:28 →</b></p>
+      <p><em>ტალღის ნაწილები ამ სიტყვებისთვის სარას ნამდვილი ჩანაწერიდანაა (ილუსტრაციაა). თუ ჰკითხავენ, რატომ არა მთელი მესიჯის ხელახლა გენერაცია: მაშინ ხმის მსგავსება 73%-მდე ეცემა, ასე კი 98% რჩება.</em></p>
+      <p><span class="en">The waveform pieces are Sarah's real audio for these words, drawn as an illustration. If asked why not regenerate the whole message: voice similarity drops to 73%; this way it stays 98%.</span></p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ─────────────────────────────────────────────── why it's different: your voice, not a clone -->
+  <section class="slide s-clone" data-id="clone" data-title="Not a clone" data-steps="1" data-time="1:28–1:40">
+    <h2 class="cn-line">Your voice. <i>Not a clone.</i></h2>
+    <svg class="cn-svg" id="cn-svg" viewBox="0 0 1920 1080" aria-hidden="true"></svg>
+    <aside class="notes">
+      <p class="sec">clone (1:28–1:40; რატომ არის განსხვავებული: შენი ხმა, არა კლონი)</p>
+      <p>&lt;!-- step 0 --&gt;</p>
+      <div class="st" data-k="0">
+      <p><b>step 0, 1:28</b>, ზედა ზოლი („AI clone“) მთლიანად მწვანდება, 73%:</p>
+      <p>„თუ მთელ მესიჯს AI-ით თავიდან შევქმნით, ეს უკვე კლონია: ხმის მსგავსება 73%-მდე ეცემა.“</p>
+      <p><span class="en">Regenerate the whole message with AI and it's a clone: voice similarity drops to 73%.</span></p>
+      <p>&lt;!-- step 1 --&gt;</p>
+      </div>
+      <div class="st" data-k="1">
+      <p><b>step 1, 1:34 →</b>: ქვედა ზოლი („Ctrl+Voice“), მხოლოდ ორი ვიწრო მწვანე ნაწილი, 98%, ხაზი: „Your voice. Not a clone.“</p>
+      <p>„ჩვენთან შენი ნამდვილი ჩანაწერი რჩება. AI მხოლოდ შეცვლილ სიტყვებს ამბობს, დაახლოებით ერთ წამს ცხრიდან: 98%. ორიგინალი კი არასდროს იცვლება.“</p>
+      <p><span class="en">We keep your real recording. AI only says the changed words, about one second of nine: 98%. And the original never changes.</span></p>
+      <p><b>1:40 →</b></p>
+      <p><em>ზოლები სარას გასწორებული მესიჯია (9.2 წმ); მწვანე ნაწილები ზუსტად „Dan has“ და „a bit“ არის. 73% და 98% გაზომილია (SCRIPT.md, კითხვა-პასუხი).</em></p>
+      <p><span class="en">The bars are Sarah's fixed note (9.2 s); the green slivers are exactly "Dan has" and "a bit". 73% and 98% are measured (SCRIPT.md, Q&amp;A).</span></p>
       </div>
     </aside>
   </section>
 
   <!-- ─────────────────────────────────────────────── uses: one key, anywhere you talk -->
-  <section class="slide s-uses" data-id="uses" data-title="Anywhere" data-steps="1" data-time="1:16–1:28">
+  <section class="slide s-uses" data-id="uses" data-title="Anywhere" data-steps="1" data-time="1:40–1:52">
     <h2 class="us-line">One key. <i>Anywhere you talk.</i></h2>
     <svg class="us-svg" id="us-svg" viewBox="0 0 1920 1080" aria-hidden="true"></svg>
     <aside class="notes">
-      <p class="sec">uses (1:16–1:28; ერთი ღილაკი, ექვსი აპი, მერე ვიდეო და გამოსვლა)</p>
+      <p class="sec">uses (1:40–1:52; ერთი ღილაკი, ექვსი აპი, მერე ვიდეო და გამოსვლა)</p>
       <div class="st" data-k="0">
-      <p><b>step 0, 1:16</b>, ღილაკი ჩაიჭირება, აპები გარშემო ამოფრინდება:</p>
+      <p><b>step 0, 1:40</b>, ღილაკი ჩაიჭირება, აპები გარშემო ამოფრინდება:</p>
       <p>„და ის იქ მუშაობს, სადაც უკვე ლაპარაკობ: ერთი ღილაკით Discord-ში, WhatsApp-ში, Telegram-ში, Slack-ში, Signal-სა და Teams-ში. ინტეგრაცია არ სჭირდება.“</p>
       <p><span class="en">It works where you already talk: one hotkey, in Discord, WhatsApp, Telegram, Slack, Signal and Teams. No integration needed.</span></p>
       </div>
       <div class="st" data-k="1">
-      <p><b>step 1, 1:23 →</b>: ვიდეო და მიკროფონი.</p>
+      <p><b>step 1, 1:47 →</b>: ვიდეო და მიკროფონი.</p>
       <p>„და არა მხოლოდ ჩატში: ჩაწერილი ვიდეო ან გამოსვლა აპში ატვირთე და ზუსტად ისე გაასწორე.“</p>
       <p><span class="en">And not just chat: import a recorded video or a speech into the app and fix it the same way.</span></p>
-      <p><b>1:28 →</b></p>
+      <p><b>1:52 →</b></p>
       </div>
     </aside>
   </section>
 
   <!-- ─────────────────────────────────────────────── architecture map -->
-  <section class="slide s-arch" data-id="arch" data-title="Architecture map" data-steps="10" data-time="1:28–2:20">
+  <section class="slide s-arch" data-id="arch" data-title="Architecture map" data-steps="10" data-time="1:52–2:30">
     <div id="arch-host"></div>
     <div class="ar-stage" id="ar-stage"></div>
     <aside class="notes">
-      <p class="sec">arch (1:28–2:20; კამერა რომ დაჯდება, თქვი ერთი მოკლე ფრაზა, მეტი არა)</p>
+      <p class="sec">arch (1:52–2:30; კამერა რომ დაჯდება, თქვი რამდენიმე სიტყვა, მეტი არა)</p>
       <div class="st" data-k="0">
-      <p><b>step 0, 1:28</b>, რუკა თავისით იხატება:</p>
-      <p>„ამის უკან ცხრა მოდელი დგას, ერთად.“</p>
-      <p><span class="en">Behind it: nine models, working together.</span></p>
+      <p><b>step 0, 1:52</b>, რუკა თავისით იხატება:</p>
+      <p>„ამის უკან ცხრა მოდელია.“</p>
+      <p><span class="en">Behind it: nine models.</span></p>
       </div>
       <div class="st" data-k="1">
-      <p><b>step 1, 1:32 →, Hear (Whisper)</b></p>
-      <p>„Whisper ყველა სიტყვას ისმენს, სანამ ლაპარაკობ, „um“-ებიანად.“</p>
-      <p><span class="en">Whisper hears every word as you talk, ums included.</span></p>
+      <p><b>step 1, 1:56 →, Hear: Whisper</b></p>
+      <p>„Whisper ისმენს.“</p>
+      <p><span class="en">Whisper listens.</span></p>
       </div>
       <div class="st" data-k="2">
-      <p><b>step 2, 1:37 →, Align (wav2vec2)</b></p>
-      <p>„wav2vec2 ყველა სიტყვას აუდიოში ზუსტად თავის ადგილზე სვამს.“</p>
-      <p><span class="en">wav2vec2 pins every word to its exact place in the audio.</span></p>
+      <p><b>step 2, 1:59 →, Align: wav2vec2</b></p>
+      <p>„wav2vec2 სიტყვებს ადგილს უჩენს.“</p>
+      <p><span class="en">wav2vec2 places every word.</span></p>
       </div>
       <div class="st" data-k="3">
-      <p><b>step 3, 1:42 →, Decide (Qwen)</b></p>
-      <p>„Qwen წყვეტს, რა ამოიჭრას. აუდიოს არ ეხება.“</p>
-      <p><span class="en">Qwen decides what to cut. It never touches the audio.</span></p>
+      <p><b>step 3, 2:03 →, Decide: Qwen</b></p>
+      <p>„Qwen წყვეტს, რა ამოიჭრას.“</p>
+      <p><span class="en">Qwen decides what to cut.</span></p>
       </div>
       <div class="st" data-k="4">
-      <p><b>step 4, 1:48 →, Rules</b></p>
-      <p>„წესები: მხოლოდ წაშლა. „არა“, რიცხვი ან თარიღი რჩება, თუ თვითონ არ შეცვალე.“</p>
-      <p><span class="en">Hard rules: deletions only. A "not", a number or a date stays unless you replaced it yourself.</span></p>
+      <p><b>step 4, 2:06 →, Rules</b></p>
+      <p>„წესები: მხოლოდ წაშლა.“</p>
+      <p><span class="en">Rules: deletions only.</span></p>
       </div>
       <div class="st" data-k="5">
-      <p><b>step 5, 1:54 →, PlayDiffusion</b></p>
-      <p>„არასწორ სიტყვას PlayDiffusion შენი ხმით ამბობს თავიდან. ათიდან ცხრა სწორია.“</p>
-      <p><span class="en">PlayDiffusion re-says the wrong word in your voice. Nine of ten right.</span></p>
+      <p><b>step 5, 2:10 →, PlayDiffusion</b></p>
+      <p>„PlayDiffusion სიტყვას შენი ხმით ამბობს.“</p>
+      <p><span class="en">PlayDiffusion re-says a word in your voice.</span></p>
       </div>
       <div class="st" data-k="6">
-      <p><b>step 6, 1:59 →, F5-TTS</b></p>
+      <p><b>step 6, 2:13 →, F5-TTS</b></p>
       <p>„მეორე ხმის მოდელი, პარალელურად.“</p>
       <p><span class="en">A second voice model, in parallel.</span></p>
       </div>
       <div class="st" data-k="7">
-      <p><b>step 7, 2:03 →, Verify</b></p>
-      <p>„ორივეს ორჯერ ვამოწმებთ და ვსვამთ მხოლოდ ყველაზე მსგავს ხმას.“</p>
-      <p><span class="en">Both are checked twice; only the closest voice is spliced in.</span></p>
+      <p><b>step 7, 2:16 →, Verify</b></p>
+      <p>„ვამოწმებთ და ვიტოვებთ ყველაზე მსგავსს.“</p>
+      <p><span class="en">We check both and keep the closest.</span></p>
       </div>
       <div class="st" data-k="8">
-      <p><b>step 8, 2:08 →, Pronunciation (GOP)</b></p>
+      <p><b>step 8, 2:20 →, Pronunciation (GOP)</b></p>
       <p>„და გაუგებარ სიტყვებსაც ვიჭერთ.“</p>
       <p><span class="en">And we catch unclear words too.</span></p>
       </div>
       <div class="st" data-k="9">
-      <p><b>step 9, 2:12 →, Tone (PSOLA)</b></p>
-      <p>„Confident კი AI არ არის: შენსავე ჩანაწერს ტონს უცვლის.“</p>
-      <p><span class="en">And Confident isn't AI: it reshapes the pitch of your own recording.</span></p>
+      <p><b>step 9, 2:23 →, Tone (PSOLA)</b></p>
+      <p>„Confident: შენი ჩანაწერი, სხვა ტონით.“</p>
+      <p><span class="en">Confident: your own recording, a new tone.</span></p>
       </div>
       <div class="st" data-k="10">
-      <p><b>step 10, 2:16 →</b>, კამერა უკან, მთელ რუკაზე გადის:</p>
-      <p>„ეს არის მთელი სისტემა. ახლა ლაივში.“</p>
-      <p><span class="en">That's the whole system. Now, live.</span></p>
-      <p><b>2:20 →</b>, demo სლაიდი.</p>
-      <p><em>თითო რეგიონზე ერთი ფრაზა: ორი ახალი სლაიდის დრო აქედან მოდის. 6-ე და 8-ე რეგიონზე ყოველთვის მოკლე ფრაზა თქვი; თუ აგვიანებ, უბრალოდ დააჭირე →. AUC 0.88 მხოლოდ რუკაზე ჩანს: ხმამაღლა ნუ იტყვი, მხოლოდ თუ ჰკითხავენ.</em></p>
+      <p><b>step 10, 2:26 →</b>, კამერა უკან, მთელ რუკაზე გადის:</p>
+      <p>„ეს არის სისტემა. ახლა ლაივში.“</p>
+      <p><span class="en">That's the system. Now, live.</span></p>
+      <p><b>2:30 →</b>, demo სლაიდი.</p>
+      <p><em>თითო რეგიონზე რამდენიმე სიტყვა: ოთხი ისტორიის სლაიდის დრო აქედან მოდის. კამერას თავისი დრო აქვს, უბრალოდ დააჭირე →. 6-ე და 8-ე რეგიონზე ყოველთვის მოკლე ფრაზა თქვი; თუ აგვიანებ, უბრალოდ დააჭირე →. AUC 0.88 მხოლოდ რუკაზე ჩანს: ხმამაღლა ნუ იტყვი, მხოლოდ თუ ჰკითხავენ.</em></p>
       <p><em>„ცხრა მოდელი“, თუ ჰკითხავენ: Whisper, wav2vec2 (ასოები), Qwen3.6-35B-A3B, PlayDiffusion, F5-TTS, ECAPA, wav2vec2 (ფონემები), gradient boosting, Seed-VC.</em></p>
       <p><em>PSOLA-ს ნახატი და „three“/„tree“ ბადე ილუსტრაციებია. ზუსტ გაზომვად ნუ წარადგენ.</em></p>
-      <p><span class="en">One sentence per region: the two new slides' time comes from here. Regions 6 and 8 always get the short line; if late, just press →. AUC 0.88 stays on the map: say it only if asked. The nine models, if asked. The PSOLA and three/tree drawings are illustrations.</span></p>
+      <p><span class="en">A few words per region: the four story slides' time comes from here; the camera keeps its own timing. Regions 6 and 8 always get the short line; if late, just press →. AUC 0.88 stays on the map: say it only if asked. The nine models, if asked. The PSOLA and three/tree drawings are illustrations.</span></p>
       </div>
     </aside>
   </section>
 
   <!-- ─────────────────────────────────────────────── live demo -->
-  <section class="slide s-demo" data-id="demo" data-title="Live demo" data-time="2:20–4:40">
-    <h2 class="dm-title">Mistake bingo</h2>
-    <div class="dm-card" id="dm-card"></div>
+  <section class="slide s-demo" data-id="demo" data-title="Live demo" data-time="2:30–4:40">
+    <h2 class="dm-line on">Four mistakes. One take. <i>Live.</i></h2>
+    <div class="dc-card" id="dc-card">
+      <p class="dc-msg">Hey team. <span class="dc-m cut" data-k="1">Um, <span class="dc-lab">filler</span></span><span class="dc-cap"><span>w</span><span>W</span></span>e're on stage on <span class="dc-m cut" data-k="2">Saturday, no wait, <span class="dc-lab">changed my mind</span></span>Sunday. <span class="dc-m cut" data-k="3">I didn't rehearse at all. Scratch that. <span class="dc-lab">take-back</span></span>The judges <span class="dc-m swap" data-k="4"><s>is</s><ins>are</ins><span class="dc-lab">wrong word</span><span class="dc-ai">AI</span></span> really friendly, and I think we're ready?</p>
+      <div class="dc-chip">4 / 4 fixed, live</div>
+    </div>
     <aside class="notes">
-      <p class="sec">demo (2:20–4:40)</p>
+      <p class="sec">demo (2:30–4:40)</p>
       <p class="h">⚠ სამი წესი</p>
       <p>1. <b>Alt+`-მდე Discord-ის მესიჯის ველში დააწკაპუნე.</b> სხვა შემთხვევაში დეკში ჩასვამს და Enter-ს დააჭერს, ანუ სლაიდი წავა.</p>
       <p><span class="en">Click into the Discord box before Alt+`, or it pastes into the deck and presses Enter.</span></p>
       <p>2. <b>ჩაწერისას ჩუმად. რასაც იტყვი, მესიჯში მოხვდება.</b> ქართული კომენტარი მხოლოდ მეორე Alt+`-ის მერე.</p>
       <p><span class="en">While recording, everything you say is in the message. No Georgian asides.</span></p>
-      <p>3. <b>„Scratch that.“ და მერე სრული ერთი წამი სიჩუმე.</b> გადახაზვა მხოლოდ 0.5 წამზე მეტი პაუზის მერე ჩნდება. პლუს უბრალო „never mind“ დღეს ლაივში არ მუშაობს.</p>
-      <p><span class="en">After "scratch that", one full second of silence; the strike only fires after a pause over 0.5 s. Plain "never mind" doesn't strike live today.</span></p>
+      <p>3. <b>„Scratch that.“-ის მერე ჩუმად, 2 სრული წამი, ზოლს უყურე.</b> როგორც კი გადაიხაზება, გააგრძელე. თუ 3 წამში არ გადაიხაზა, ერთხელ დააჭირე <b>Ctrl+Z</b> და მერე გააგრძელე. გადახაზვის მერე Ctrl+Z არ დააჭირო.</p>
+      <p><span class="en">After "scratch that", stay silent for 2 s and watch the bar. Once it's struck through, carry on. Nothing struck after 3 s: press Ctrl+Z once, then carry on. Never press Ctrl+Z after a strike.</span></p>
       <p class="h">ინგლისური მესიჯი (ეს ზუსტად ასე თქვი; ქართული არ იმუშავებს: კოდში Whisper ინგლისურზეა მიბმული)</p>
       <p><b>C (რეკომენდებული):</b></p>
-      <p class="say">"Hey team. Um, the final is on Saturday, no wait, Sunday. I didn't rehearse at all. Scratch that. <em>(1 წმ პაუზა)</em> The judges is really friendly, and I think we're ready?"</p>
+      <p class="say">"Hey team. Um, we're on stage on Saturday, no wait, Sunday. I didn't rehearse at all. Scratch that. <em>(1 წმ პაუზა)</em> The judges is really friendly, and I think we're ready?"</p>
       <p><b>A:</b></p>
       <p class="say">"Hey guys. Um, so, the trip. We're leaving Friday, no wait, Saturday morning. I already ate all the snacks. Scratch that. <em>(1 წმ)</em> The tickets is in my bag, and I think dinner is pizza?"</p>
       <p><b>B:</b></p>
       <p class="say">"Hi Nika. Um, quick one about tonight. Let's meet at seven, no wait, eight. I'm bringing my cat. Scratch that. <em>(1 წმ)</em> We has a table by the window, and you're paying, right?"</p>
       <p><span class="en">The wrong word is a grammar slip ("judges is"). End on an unsure rising "?" so Confident has something to fix.</span></p>
       <p class="h">ნაბიჯ-ნაბიჯ</p>
-      <p><b>2:20</b>, ბინგოს სლაიდი:</p>
-      <p>„შეცდომების ბინგო: ოთხივე შეცდომა, ერთ მესიჯში. ინგლისურად: მოდელები ჯერ ინგლისურზეა მორგებული.“</p>
-      <p><span class="en">Mistake bingo: all four mistakes, in one message. In English: the models are tuned for English for now.</span></p>
-      <p><b>2:26</b>: <em>Alt+Tab, Discord, მესიჯის ველზე დააწკაპუნე.</em></p>
+      <p><b>2:30</b>, „dare“ ბარათი (მესიჯი, ოთხი შეცდომა მონიშნული):</p>
+      <p>„ახლა ოთხ შეცდომას დავუშვებ. განზრახ. ერთ ჩანაწერში, ლაივში. ინგლისურად: მოდელები ჯერ ინგლისურზეა მორგებული.“</p>
+      <p><span class="en">Now I'll make four mistakes. On purpose. In one take, live. In English: the models are tuned for English for now.</span></p>
+      <p><b>2:36</b>: <em>Alt+Tab, Discord, მესიჯის ველზე დააწკაპუნე.</em></p>
       <p>„აი, Discord.“</p>
       <p><span class="en">Here's Discord.</span></p>
-      <p><b>2:28</b>: <em>Alt+`. დაელოდე, სანამ ტაიმერი დაიძვრება (≈0.5 წმ). ამიერიდან ჩუმად.</em></p>
+      <p><b>2:38</b>: <em>Alt+`. დაელოდე, სანამ ტაიმერი დაიძვრება (≈0.5 წმ). ამიერიდან ჩუმად.</em></p>
       <p><span class="en">Alt+`; wait for the timer; silence from now on.</span></p>
-      <p><b>2:29</b>: <em>ინგლისური მესიჯი. „Scratch that.“-ის მერე ერთი წამი პაუზა, ზოლზე ხელით მიუთითე: გადაიხაზება, მერე გაქრება, ზოლზე ეწერება „Scratched that“.</em></p>
+      <p><b>2:39</b>: <em>ინგლისური მესიჯი. „Scratch that.“-ის მერე ჩუმად, 2 წამი, ზოლს უყურე: გადაიხაზება, მერე გაქრება („Scratched that“). 3 წამში თუ არ გადაიხაზა, ერთხელ Ctrl+Z და გააგრძელე. „Connection lost“ თუ გამოჩნდა, ყურადღება არ მიაქციო.</em></p>
       <p><span class="en">Say the message; after "scratch that", pause and point; it strikes, then vanishes.</span></p>
-      <p><b>2:43</b>: <em>Alt+` თავიდან. ზოლი: „Cleaning up…“, „Saying 'are'…“, „Sending to Discord…“, „Sent to Discord“.</em> ლოდინისას:</p>
+      <p><b>2:53</b>: <em>Alt+` თავიდან. ზოლი: „Cleaning up…“, „Saying 'are'…“, „Sending to Discord…“, „Sent to Discord“.</em> ლოდინისას:</p>
       <p>„„scratch that“ ხომ ნახეთ? ლაპარაკისას გაქრა. ახლა Whisper მესიჯს თავიდან ისმენს, LLM წყვეტს, რა ამოიჭრას, წესები ამოწმებს, ჩემს არასწორ სიტყვას კი ორი ხმის მოდელი ერთდროულად ამბობს, ჩემივე ხმით.“</p>
       <p><span class="en">Did you see "scratch that"? Gone while I talked. Now Whisper re-hears it, the LLM picks the cuts, the rules check, and two voice models re-say my wrong word at once, in my voice.</span></p>
-      <p><b>~2:53</b>: <em>▶-მდე, Discord-ში:</em></p>
+      <p><b>~3:03</b>: <em>▶-მდე, Discord-ში:</em></p>
       <p>„ერთი სიტყვა აქ AI-მ თქვა. მოუსმინეთ: რომელი?“ <em>(▶)</em></p>
       <p><span class="en">One word here was made by AI. Listen: which one?</span></p>
-      <p><b>3:04</b>:</p>
+      <p><b>3:14</b>:</p>
       <p>„რომელი?“ <em>(ერთი-ორი პასუხი)</em> „ვნახოთ.“</p>
       <p><span class="en">Which one? Let's look.</span></p>
-      <p><b>3:09</b>: <em>Alt+Shift+`, ზედა (უახლესი) მესიჯი.</em></p>
+      <p><b>3:19</b>: <em>Alt+Shift+`, ზედა (უახლესი) მესიჯი.</em></p>
       <p>„აი ისიც, მწვანით: „judges are“. გადახაზული ამოჭრილია. დანარჩენი ყველაფერი ჩემი ნამდვილი ხმაა, ხელუხლებელი.“</p>
       <p><span class="en">There it is, in green: "judges are". Struck through means cut. Everything else is my real voice, untouched.</span></p>
-      <p><b>3:19</b>: <em>„Original“, Space (≈5 წმ), Space, „Fixed“.</em></p>
-      <p>„ორიგინალი…“ <em>(გააჩერე)</em> „…გასწორებული კი უკვე მოისმინეთ. ორიგინალი ფაილი არასდროს იცვლება: ეს ცვლილებების სიაა, რომელიც მოსმენისას ან გაგზავნისას იწყობა.“</p>
-      <p><span class="en">The original… and you already heard the fixed one. The original file never changes; it's an edit list, built when you play or send.</span></p>
       <p><b>3:31, Replace</b>:</p>
       <p>„ახლა თქვენ აირჩიეთ: ჟიური „friendly“ იყოს… თუ „generous“?“</p>
       <p><em>(A: „pizza თუ sushi?“, B: „ვინ იხდის, შენ თუ მე?“)</em></p>
@@ -271,23 +319,23 @@
       <p><b>4:08, ჟიური: დღეს გამოტოვე.</b> ორი ახალი სლაიდის დრო აქედანაა; დარჩენილი ≈17 წამი ძრავის ლოდინისთვისაა. <em>(მხოლოდ თუ Confident 4:00-მდე დასრულდა: „ერთი წინადადება ჟიურიდან? ინგლისურად: თქვით რამე, მერე „scratch that“, პაუზა, და კიდევ ერთი რამე.“)</em></p>
       <p><span class="en">Juror sentence: skip it tonight; its time pays for the two new slides, and the ~17 s left is buffer for engine waits. Only if Confident finished by 4:00.</span></p>
       <p><b>4:25</b>: <em>Alt+Tab დეკზე (საჭიროების შემთხვევაში F), მერე 1, 2, 3, 4.</em></p>
-      <p>„„Um“. აზრის შეცვლა. „Scratch that“. არასწორი სიტყვა.“ <em>(მეოთხე)</em> „ბინგო.“</p>
-      <p><span class="en">Um. Change of mind. Scratch that. Wrong word. Bingo.</span></p>
-      <p><em>მხოლოდ ის მონიშნე, რაც მართლა მოხდა. თუ ერთი არ გამოვიდა:</em> „დღეს ოთხიდან სამი.“</p>
-      <p><span class="en">Stamp only what really happened: "three out of four tonight".</span></p>
+      <p><em>ერთი ღილაკი, ერთი ფრაზა:</em> „Um — წავიდა. აზრის შეცვლა — წავიდა. Scratch that — წავიდა. არასწორი სიტყვა — გასწორდა.“ <em>(მეოთხის მერე, „4 / 4 fixed, live“)</em> „ოთხიდან ოთხი.“</p>
+      <p><span class="en">Um: gone. Change of mind: gone. Scratch that: gone. Wrong word: fixed. Four out of four.</span></p>
+      <p><em>მხოლოდ ის გაასწორე, რაც მართლა მოხდა (მეორედ დაჭერა აუქმებს). თუ ერთი არ გამოვიდა:</em> „დღეს ოთხიდან სამი.“</p>
+      <p><span class="en">Fix only what really happened (pressing again undoes it): "three out of four tonight".</span></p>
       <p><b>4:38 →</b>, close.</p>
       <p class="h">დროის კარიბჭეები</p>
-      <p>- <b>3:03</b>: Discord-ში ჯერ არაფერია? Plan B, „ნელია“.</p>
+      <p>- <b>3:13</b>: Discord-ში ჯერ არაფერია? Plan B, „ნელია“.</p>
       <p>- <b>3:35</b>: Replace ჯერ არ დაწყებულა? გამოტოვე.</p>
       <p>- <b>4:12</b>: Confident ჯერ არ ჟღერდა? დეკზე დაბრუნდი.</p>
       <p>- <b>4:30</b>: რაც არ უნდა ხდებოდეს, დეკზე დაბრუნდი.</p>
-      <p><span class="en">Time gates: 3:03 engine slow; 3:35 skip Replace; 4:12 back to the deck; 4:30 hard stop.</span></p>
+      <p><span class="en">Time gates: 3:13 engine slow; 3:35 skip Replace; 4:12 back to the deck; 4:30 hard stop.</span></p>
       <p class="h">ლოდინის ფრაზები</p>
       <p>- ~2 წმ: „თითოეულ სიტყვას თავიდან ისმენს.“ / „აქ AI არ არის: ჩემი ჩანაწერია, გადაკეთებული.“</p>
       <p><span class="en">It's re-hearing every word. / No AI here: it's my own recording, reshaped.</span></p>
       <p>- ~3–5 წმ: „ორი ხმის მოდელი ერთდროულად ამბობს, ჩემი ხმით, და შედის მხოლოდ ის, რომელიც ორივე შემოწმებას გაივლის.“</p>
       <p><span class="en">Two voice models at once, in my voice; only the one that passes both checks gets in.</span></p>
-      <p>- ~6–10 წმ: 2:43-ის გრძელი ფრაზა, და კიდევ: „სარას მესიჯში, ორი სიტყვით, მთელ გასწორებას დაახლოებით ათი წამი დასჭირდა.“</p>
+      <p>- ~6–10 წმ: 2:53-ის გრძელი ფრაზა, და კიდევ: „სარას მესიჯში, ორი სიტყვით, მთელ გასწორებას დაახლოებით ათი წამი დასჭირდა.“</p>
       <p><span class="en">In Sarah's message, with two re-said words, the whole fix took about ten seconds.</span></p>
       <p>- 15 წამზე მეტი: „GPU ამ ოთახიდან საკმაოდ შორსაა.“ <em>(25 წამზე Plan B.)</em></p>
       <p><span class="en">The GPU is a long way from this room.</span></p>
@@ -320,9 +368,9 @@
   <!-- ─────────────────────────────────────────────── close -->
   <section class="slide s-close" data-id="close" data-title="Thank you" data-time="4:40–5:00">
     <div class="cl-nums">
-      <div class="cl-n"><b data-count="9">9</b><span>models</span></div>
-      <div class="cl-n"><b>≈1 s</b><span>to clean up</span></div>
-      <div class="cl-n"><b data-count="0.98" data-dec="2">0.98</b><span>voice match</span></div>
+      <div class="cl-n"><b data-count="9">9</b><span>AI models</span></div>
+      <div class="cl-n"><b><svg class="cl-approx" viewBox="0 0 100 64" role="img" aria-label="about"><path d="M8 24 C 24 8, 38 8, 50 24 S 76 40, 92 24"/><path d="M8 48 C 24 32, 38 32, 50 48 S 76 64, 92 48"/></svg>1 s</b><span>to clean up</span></div>
+      <div class="cl-n"><b data-count="98" data-suffix="%">98%</b><span>voice match</span></div>
     </div>
     <div class="cl-foot">
       <div class="cl-repo"><div class="cl-qr"><img src="media/qr_github.svg" alt="QR code for github.com/Antony-X/ctrl-voice"></div><span class="cl-url">github.com/Antony-X/ctrl-voice</span></div>
@@ -331,8 +379,8 @@
     <aside class="notes">
       <p class="sec">close (4:40–5:00)</p>
       <p><b>4:40 →</b></p>
-      <p>„ცხრა მოდელი. დაახლოებით ერთი წამი „um“-ებისა და უკან წაღებული სიტყვების ამოსაჭრელად. და 0.98: ხმის მსგავსება, როცა სიტყვას თავიდან ვამბობთ.“</p>
-      <p><span class="en">Nine models. About a second to cut the ums and the take-backs. And 0.98 voice similarity when we re-say a word.</span></p>
+      <p>„ცხრა მოდელი. დაახლოებით ერთი წამი „um“-ებისა და უკან წაღებული სიტყვების ამოსაჭრელად. და 98%: ხმის მსგავსება, როცა სიტყვას თავიდან ვამბობთ.“</p>
+      <p><span class="en">Nine models. About a second to cut the ums and the take-backs. And 98% voice similarity when we re-say a word.</span></p>
       <p><b>4:50</b></p>
       <p>„ყველაფერი GitHub-ზეა: დაასკანერეთ QR კოდი და სცადეთ.“ <em>(პაუზა)</em> „Ctrl+Voice. თქვი არეულად… გაგზავნე სუფთად.“ <em>(1 წმ)</em> „მადლობა.“</p>
       <p><span class="en">It's all on GitHub: scan the QR code and try it. <em>(beat)</em> Ctrl+Voice. Say it messy… send it clean. <em>(1 s)</em> Thank you.</span></p>
@@ -379,7 +427,7 @@
     <div><b>S</b>speaker notes window</div>
     <div><b>N</b>notes on the stage</div>
     <div><b>P / R</b>pause / replay this step</div>
-    <div><b>1–4</b>stamp a bingo square (demo slide)</div>
+    <div><b>1–4</b>fix one mistake on the dare card (press again to undo)</div>
     <div><b>B</b>backup clips</div>
     <div><b>X</b>skip this slide in the talk</div>
     <div><b>.</b>black screen</div>

@@ -6,7 +6,7 @@ How to read this file:
 - *Italics* are actions. "Quoted text" is what you say aloud.
 - Timestamps are cumulative and start at your first word.
 - The chat-slide timings were measured on the finished slide (steps about 15.4, 13.6, 1, 6.5 and 7.5 s), so the chat ends at about 0:53; the table uses that.
-- The two story slides (idea, uses: about 25 s) are paid for by the map (one short sentence per region: 67 s down to 52 s) and the demo (a shorter bingo intro and no juror sentence). Confirm at the first full rehearsal.
+- The four story slides (loop, idea, clone, uses: about 49 s) are paid for by the map (a few words per region: 67 s down to 38 s) and the demo (a shorter demo intro, no Original-vs-Fixed playback, no juror sentence). Confirm at the first full rehearsal.
 - A one-page practice version with only the spoken lines is in `PITCH.md`.
 
 | Clock | Slide | Clicks | What happens |
@@ -14,10 +14,12 @@ How to read this file:
 | before | title | | logo, sound check (A) |
 | 0:00–0:53 | chat | hook, then → ×5 | Sarah's messy note gets fixed, guess the AI words, Eric gets confident |
 | 0:53–1:03 | stat | → ×2 | 7 billion a day; you can't edit your voice |
-| 1:03–1:16 | idea | → ×2 | every word tied to its sound: edit the words, the audio follows |
-| 1:16–1:28 | uses | → ×2 | one key, six chat apps; then a video and a speech |
-| 1:28–2:20 | arch | → ×11 | map draws itself, the camera visits 9 regions (one sentence each), flies back out |
-| 2:20–4:40 | demo | → ×1, then the app | mistake bingo, live (no juror sentence tonight) |
+| 1:03–1:15 | loop | → ×2 | the problem: record, listen, cringe, delete, again (or give up and type it); the loop breaks, one take is sent |
+| 1:15–1:28 | idea | → ×2 | every word tied to its sound: edit the words, the audio follows |
+| 1:28–1:40 | clone | → ×2 | why it is different: regenerate it all = a clone, 73%; Ctrl+Voice keeps your recording, a sliver of AI, 98% |
+| 1:40–1:52 | uses | → ×2 | one key, six chat apps; then a video and a speech |
+| 1:52–2:30 | arch | → ×11 | map draws itself, the camera visits 9 regions (a few words each), flies back out |
+| 2:30–4:40 | demo | → ×1, then the app | the dare: four mistakes in one take, fixed live (no Original playback, no juror sentence tonight) |
 | 4:40–5:00 | close | → ×1 | three numbers, QR, thank you |
 
 ---
@@ -51,65 +53,81 @@ How to read this file:
 | 0:58 | → step 1 | text bubble with "edited" and a green ✓; voice note with a red ✗ | "You can edit a text." *(beat)* "You can't edit your voice." *(beat)* "Until now." |
 | 1:03 | → | | |
 
-### idea, 1:03–1:16 (the simple story: the idea in one picture)
+### loop, 1:03–1:15 (the problem, no numbers: what everyone does today)
 | Clock | Key | On screen | Say |
 |---|---|---|---|
-| 1:03 | (entered, step 0) | a recording draws itself; each word lands above its own piece of sound; the mistakes turn red | "How? Your voice becomes words, and every word stays tied to its own sound." |
-| 1:08 | → step 1 | the red words are struck, their sound drops out, the rest closes up; "have" becomes a green "has", tagged AI; line: "Edit the words. The audio follows." | "So we edit the words, like a text, and the audio follows. Only the changed word is new, in your own voice. The rest is your real recording." |
-| 1:16 | → | | |
+| 1:03 | (entered, step 0) | a loop draws itself: record, listen, cringe, delete; a dot runs round it faster and faster, "take" ticks 1, 2, 3; a dashed arrow leaks out to a keyboard, "type it"; line: "Record. Delete. Repeat." | "What do we do today? Record, listen, cringe, delete… and again. Or we give up and type it." |
+| 1:10 | → step 1 | the arc after "record" drops away, the rest of the loop dims; a green arrow, "one take", goes to a "sent" bubble | "Ctrl+Voice breaks the loop: one take, and it's sent." |
+| 1:15 | → | | |
+
+### idea, 1:15–1:28 (the simple story: the idea in one picture)
+| Clock | Key | On screen | Say |
+|---|---|---|---|
+| 1:15 | (entered, step 0) | a recording draws itself; each word lands above its own piece of sound; the mistakes turn red | "How? Your voice becomes words, and every word stays tied to its own sound." |
+| 1:20 | → step 1 | the red words are struck, their sound drops out, the rest closes up; "have" becomes a green "has", tagged AI; line: "Edit the words. The audio follows." | "So we edit the words, like a text, and the audio follows. Only the changed word is new, in your own voice. The rest is your real recording." |
+| 1:28 | → | | |
 
 - The waveform pieces are Sarah's real audio for those words (from the chat slide), drawn as an illustration.
-- If asked why not regenerate the whole message: voice similarity drops to 0.73; splicing only the new words keeps 0.98.
+- If asked why not regenerate the whole message: voice similarity drops to 73%; splicing only the new words keeps 98%.
 
-### uses, 1:16–1:28 (who it's for, where it works)
+### clone, 1:28–1:40 (why it is creative: your voice, not a clone)
 | Clock | Key | On screen | Say |
 |---|---|---|---|
-| 1:16 | (entered, step 0) | a key with the Ctrl+Voice logo is pressed; six chat apps burst out around it; line: "One key. Anywhere you talk." | "And it works where you already talk: one hotkey, in Discord, WhatsApp, Telegram, Slack, Signal and Teams. No integration needed." |
-| 1:23 | → step 1 | a video and a microphone ("speech") come in with arrows to the key | "And not just chat: import a recorded video or a speech into the app, and fix it the same way." |
-| 1:28 | → | | |
+| 1:28 | (entered, step 0) | "AI clone": the message's waveform turns green from end to end; 73% voice match (red) | "Regenerate the whole message with AI and it's a clone: voice similarity drops to 73%." |
+| 1:34 | → step 1 | "Ctrl+Voice": the same waveform, grey, with two thin green slivers tagged AI; 98% (green); line: "Your voice. Not a clone." | "We keep your real recording. AI only says the changed words, about one second of nine: 98%. And the original never changes." |
+| 1:40 | → | | |
+
+- The bars are Sarah's fixed note (9.2 s, real peaks); the green slivers are exactly the re-said words, "Dan has" and "a bit" (about 0.9 s). 73% and 98% are the measured numbers from Q&A.
+
+### uses, 1:40–1:52 (who it's for, where it works)
+| Clock | Key | On screen | Say |
+|---|---|---|---|
+| 1:40 | (entered, step 0) | a key with the Ctrl+Voice logo is pressed; six chat apps burst out around it; line: "One key. Anywhere you talk." | "And it works where you already talk: one hotkey, in Discord, WhatsApp, Telegram, Slack, Signal and Teams. No integration needed." |
+| 1:47 | → step 1 | a video and a microphone ("speech") come in with arrows to the key | "And not just chat: import a recorded video or a speech into the app, and fix it the same way." |
+| 1:52 | → | | |
 
 - If asked: Windows and macOS (the Mac version is newer and less tested). The app pastes into whichever window had focus, so no chat app needs a plug-in.
 
-### arch, 1:28–2:20 (one short sentence per region; start talking when the camera lands, about 1 s after the key)
+### arch, 1:52–2:30 (a few words per region; the camera keeps its timing, start talking when it lands)
 | Clock | Key | Region | Say |
 |---|---|---|---|
-| 1:28 | (entered, step 0) | whole map draws itself | "Behind it: nine models, working together." |
-| 1:32 | → 1 | Hear: Whisper | "Whisper hears every word as you talk, ums included." |
-| 1:37 | → 2 | Align: wav2vec2 | "wav2vec2 pins every word to its exact place in the audio." |
-| 1:42 | → 3 | Decide: Qwen | "Qwen decides what to cut. It never touches the audio." |
-| 1:48 | → 4 | Rules | "Hard rules: deletions only. A 'not', a number or a date stays unless you replaced it yourself." |
-| 1:54 | → 5 | PlayDiffusion | "A wrong word is re-said in your voice. Nine of ten right." |
-| 1:59 | → 6 | F5-TTS | "A second voice model, in parallel." |
-| 2:03 | → 7 | Verify | "Both are checked twice; only the closest voice is spliced in." |
-| 2:08 | → 8 | Pronunciation | "And we catch unclear words too." |
-| 2:12 | → 9 | Tone | "And Confident isn't AI: it reshapes the pitch of your own recording." |
-| 2:16 | → 10 | flies back to the whole map | "That's the stack. Now, live." |
-| 2:20 | → | demo slide | |
+| 1:52 | (entered, step 0) | whole map draws itself | "Behind it: nine models." |
+| 1:56 | → 1 | Hear: Whisper | "Whisper listens." |
+| 1:59 | → 2 | Align: wav2vec2 | "wav2vec2 places every word." |
+| 2:03 | → 3 | Decide: Qwen | "Qwen decides what to cut." |
+| 2:06 | → 4 | Rules | "Rules: deletions only." |
+| 2:10 | → 5 | PlayDiffusion | "PlayDiffusion re-says a word in your voice." |
+| 2:13 | → 6 | F5-TTS | "A second voice model, in parallel." |
+| 2:16 | → 7 | Verify | "We check both and keep the closest." |
+| 2:20 | → 8 | Pronunciation (GOP) | "And we catch unclear words too." |
+| 2:23 | → 9 | Tone (PSOLA) | "Confident: your own recording, a new tone." |
+| 2:26 | → 10 | flies back to the whole map | "That's the system. Now, live." |
+| 2:30 | → | demo slide | |
 
-- One sentence per region, no more: this is where the two story slides' time comes from. Fewer jargon words: regions 6 and 8 always get the short line, and if you are behind, press → on them without a word. AUC 0.88 stays on the map visual; say it only if a judge asks.
+- A few words per region, no more: this is where the four story slides' time comes from. Fewer jargon words: regions 6 and 8 always get the short line, and if you are behind, press → on them without a word. AUC 0.88 stays on the map visual; say it only if a judge asks.
 - "Nine models", if asked: Whisper large-v3-turbo, the wav2vec2 letter aligner, Qwen3.6-35B-A3B, PlayDiffusion, F5-TTS, the ECAPA speaker model, the wav2vec2 phoneme model, the gradient-boosting pronunciation scorer, and Seed-VC (accent).
 - The PSOLA grains and the "three"/"tree" lattice are illustrations (see section 7).
 
-### demo, 2:20–4:40
+### demo, 2:30–4:40
 The whole runbook is in section 2. The short version:
 
 | Clock | Beat |
 |---|---|
-| 2:20 | bingo card, then switch to Discord |
-| 2:28 | record the rehearsed message; "scratch that" strikes out live |
-| 2:43 | finish; it cleans up and sends into Discord |
-| 2:53 | play it in Discord: "Which word is AI?" |
-| 3:09 | editor: the green word, Original vs Fixed |
+| 2:30 | dare card (the message, its four mistakes labelled), then switch to Discord |
+| 2:38 | record the rehearsed message; "scratch that" strikes out live |
+| 2:53 | finish; it cleans up and sends into Discord |
+| 3:03 | play it in Discord: "Which word is AI?" |
+| 3:19 | editor: the green word (no Original playback tonight: the clone slide already said it) |
 | 3:31 | replace a word the room picks |
 | 3:58 | Confident |
 | 4:08 | no juror sentence tonight: the slack absorbs engine waits |
-| 4:25 | back to the deck: 1 2 3 4, Bingo |
+| 4:25 | back to the deck: 1 2 3 4 fix the card, "4 / 4 fixed, live" |
 | 4:40 | → close |
 
 ### close, 4:40–5:00
 | Clock | Key | On screen | Say |
 |---|---|---|---|
-| 4:40 | → | 9 / ≈1 s / 0.98 count up; QR | "Nine models. About a second to cut the ums and the take-backs. And 0.98 voice similarity when we re-say a word." Stress the scope ("the ums and the take-backs"): the room just watched a ~10 s wait. |
+| 4:40 | → | 9 / ≈1 s / 98% count up; QR | "Nine models. About a second to cut the ums and the take-backs. And 98% voice similarity when we re-say a word." Stress the scope ("the ums and the take-backs"): the room just watched a ~10 s wait. |
 | 4:50 | | | "It's all on GitHub: scan the QR code and try it. *(beat)* Ctrl+Voice. Say it messy… send it clean. *(1 s)* Thank you." The tagline comes last, then stop. |
 | 5:00 | | | *Stop. Smile. Wait for questions.* |
 
@@ -117,9 +135,9 @@ The whole runbook is in section 2. The short version:
 
 ---
 
-## 2. Live-demo runbook (2:20–4:40)
+## 2. Live-demo runbook (2:30–4:40)
 
-### 2.0 What must already be true at 2:20 (set it up in section 4)
+### 2.0 What must already be true at 2:30 (set it up in section 4)
 - Ctrl+Voice is running and unlocked. Settings → Engine → Check shows "Connected".
 - Discord is open on a clean demo channel. Everything else is closed or muted.
 - Settings → Automatic fixes:
@@ -134,7 +152,7 @@ The whole runbook is in section 2. The short version:
 **Rules that come from the code (rehearse them):**
 1. **Click into the Discord message box before you press Alt+`.** The app sends to whichever window had focus when recording started, and the browser counts as a target. Started from the deck, it would paste into the deck and press Enter, which advances a slide.
 2. **While the bar is recording, everything you say goes into the message.** Point, don't talk. No Georgian asides until you've pressed Alt+` again.
-3. **"Scratch that" must be the last thing you say, followed by a full one-second pause.** The live strike-out only fires once you have been silent for more than 0.5 s after it. Count "one-Mississippi" in your head and point at the bar: the cancelled sentence turns struck-through for about 1.4 s, then disappears, and the bar says "Scratched that".
+3. **After "Scratch that.", stay silent and watch the bar for 2 full seconds.** In tonight's tests the strike showed 1.1–1.6 s after "that.", and in 1 run of 3 it didn't fire. As soon as it is struck through, carry on; don't press Ctrl+Z after a strike. **Nothing struck after about 3 s: press Ctrl+Z once** (undo while recording; it removes the last thought), then carry on. If the bar says "Nothing to undo", just carry on. Without a strike or Ctrl+Z the sentence stays in the message: the finish step only suggests that cut. On the dare card, press 3 only if it really disappeared.
    - Phrases that strike live: "scratch that", "delete that", "undo that", "strike that", "never mind that", "start over", "let me start over".
    - Plain "never mind" does **not** strike live with today's engine.
 4. **Put the cancelled thought in its own sentence, right before "scratch that".** The engine removes the last thought: it chooses between sentence ends, pauses of 0.45 s or more, and ", and / but / so…".
@@ -142,9 +160,10 @@ The whole runbook is in section 2. The short version:
 6. **End on an unsure, rising "…?"** That gives Confident something to fix later: a rising ending of more than 12% is bent into a fall, like Eric's.
 
 **Message C (recommended; plays to the room):**
-> "Hey team. Um, the final is on Saturday, no wait, Sunday. I didn't rehearse at all. Scratch that. *(1 s pause)* The judges is really friendly, and I think we're ready?"
+> "Hey team. Um, we're on stage on Saturday, no wait, Sunday. I didn't rehearse at all. Scratch that. *(1 s pause)* The judges is really friendly, and I think we're ready?"
 
 - um: "Um,"
+- Tested on the live engine tonight (`DEMO_CHECK.md`): this wording is fully fixed, with the green word "judges are". The earlier wording "the final is on Saturday" made the grammar fix land on the first "is" ("final are"), so never put another "is" before "The judges is".
 - change of mind: Saturday → Sunday. Days are a protected type, and a same-type repair lets the old one go. Tonight, Sunday 18 October, it is even true.
 - scratch that: "I didn't rehearse at all." (gets a laugh)
 - wrong word: "The judges is" → "judges are". The engine re-says the word together with the word before it.
@@ -177,28 +196,27 @@ A Georgian message would come back as English-looking garbage. Say this on stage
 ### 2.2 Minute by minute
 | Clock | Do (exact keys and clicks) | Screen shows | Say |
 |---|---|---|---|
-| 2:20 | *(on the demo slide)* | "Mistake bingo" card, 4 squares | "Mistake bingo: all four mistakes, in one message. In English: the models are tuned for English for now." |
-| 2:26 | **Alt+Tab** to Discord. **Click in the message box.** | Discord demo channel | "Here's Discord." |
-| 2:28 | **Alt+`** (the key under Esc). Wait for the timer to run, about 0.5 s. | the bar: red dot, timer, "To Discord", "Listening…" | *Silence from now on.* |
-| 2:29 | **Say the message.** After "Scratch that." **pause one full second and point at the bar.** | your words appear live; the cancelled sentence turns struck-through, then vanishes; "Scratched that" | *(only the message)* |
-| 2:43 | Finish the message, then **Alt+`** again. | "Cleaning up…", "Saying 'are'…", "Finishing…", "Sending to Discord…", "Sent to Discord" | **Filler** (see 2.6): "Did you see 'scratch that'? Gone while I was still talking. Right now Whisper is re-hearing it, the LLM is choosing what to cut, the rules are checking it, and two voice models are re-saying my wrong word in my voice." |
-| ~2:53 | The audio file appears in the channel. **Click ▶ on it.** | inline audio player, about 9 s | Before you click: "One word in this was made by AI. Listen, and tell me which." |
-| 3:04 | *Let the room guess, about 5 s.* | | "Which one?" *(take one or two guesses)* "Let's look." |
-| 3:09 | **Alt+Shift+`** opens Ctrl+Voice. **Click the top message** (newest first). | editor: cuts struck through, the AI word in green, a summary like "3 cuts and 1 word changed, 4 seconds shorter" | "There it is, in green: 'judges are'. Everything struck through is cut. Everything else is my real voice, untouched." |
-| 3:19 | **Click "Original"**, then **Space**. After about 5 s ("um… Saturday, no wait…"), press **Space** to stop. **Click "Fixed"**. | player bar | "The original…" *(stop)* "…and you already heard the fixed one. The original file is never changed: it's an edit list, built when you play or send." |
+| 2:30 | *(on the demo slide)* | dare card: the real message, its four mistakes labelled (filler, changed my mind, take-back, wrong word) | "Now I'll make four mistakes. On purpose. In one take, live. In English: the models are tuned for English for now." |
+| 2:36 | **Alt+Tab** to Discord. **Click in the message box.** | Discord demo channel | "Here's Discord." |
+| 2:38 | **Alt+`** (the key under Esc). Wait for the timer to run, about 0.5 s. | the bar: red dot, timer, "To Discord", "Listening…" | *Silence from now on.* |
+| 2:39 | **Say the message.** After "Scratch that." **stay silent and watch the bar for 2 full seconds.** When it strikes through, carry on. Nothing struck after about 3 s: press **Ctrl+Z** once, then carry on. A brief "Connection lost. Recording locally" after the strike is normal; ignore it. | your words appear live; the cancelled sentence turns struck-through, then vanishes; "Scratched that" | *(only the message)* |
+| 2:53 | Finish the message, then **Alt+`** again. | "Cleaning up…", "Saying 'are'…", "Finishing…", "Sending to Discord…", "Sent to Discord" | **Filler** (see 2.6): "Did you see 'scratch that'? Gone while I was still talking. Right now Whisper is re-hearing it, the LLM is choosing what to cut, the rules are checking it, and two voice models are re-saying my wrong word in my voice." |
+| ~3:03 | The audio file appears in the channel. **Click ▶ on it.** | inline audio player, about 9 s | Before you click: "One word in this was made by AI. Listen, and tell me which." |
+| 3:14 | *Let the room guess, about 5 s.* | | "Which one?" *(take one or two guesses)* "Let's look." |
+| 3:19 | **Alt+Shift+`** opens Ctrl+Voice. **Click the top message** (newest first). | editor: cuts struck through, the AI word in green, a summary like "3 cuts and 1 word changed, 4 seconds shorter" | "There it is, in green: 'judges are'. Everything struck through is cut. Everything else is my real voice, untouched." |
 | 3:31 | **Replace** (2.3). | | |
 | 3:58 | **Confident** (2.4). | | |
 | 4:08 | **No juror tonight** (2.5). Use the slack for engine waits; go back to the deck at 4:25. | | |
-| 4:25 | **Alt+Tab** to the deck. If it has dropped out of fullscreen, press **F**. Press **1**, **2**, **3**, **4**: one stamp per square, and the fourth plays "Bingo!" with a sparkle. | the stamps | "Um. Change of mind. Scratch that. Wrong word." *(fourth stamp)* "Bingo." |
+| 4:25 | **Alt+Tab** to the deck. If it has dropped out of fullscreen, press **F**. Press **1**, **2**, **3**, **4**: each key fixes its mistake on the card (the red words are struck and collapse; "is" becomes a green "are", tagged AI); after the fourth, "4 / 4 fixed, live" pops with a sparkle. | the card cleans itself | "Um: gone. Change of mind: gone. Scratch that: gone. Wrong word: fixed." *(after the fourth)* "Four out of four." |
 | 4:38 | **→** | close | |
 
 **Time gates. Stick to them; a demo that overruns looks worse than a short one.**
-- **3:03**: nothing in Discord yet? Plan B "engine slow" (section 3).
+- **3:13**: nothing in Discord yet? Plan B "engine slow" (section 3).
 - **3:35**: Replace not started? Skip it and go to Confident.
 - **4:12**: Confident not played yet? Stop and go back to the deck.
 - **4:30**: hard stop. Go back to the deck, whatever is happening.
 
-**Stamp only what really happened.** If a square didn't fire, leave it empty and say "three out of four tonight". That is more credible than a fake bingo.
+**Fix only what really happened.** If a mistake wasn't fixed live, don't press its key (pressing it again undoes the fix) and say "three out of four tonight". That is more credible than a fake 4 / 4.
 
 ### 2.3 Replace a word: the room picks it (3:31–3:58)
 1. Say: "Now you choose. Should the judges be 'friendly'… or 'generous'?" For message A, use "Pizza or sushi?"; for B, "Who pays: you or me?"
@@ -292,7 +310,7 @@ It's tempting to let the whole room record, but three things make it fragile ton
 - **Venue Wi-Fi** with dozens of phones uploading at once is a coin toss.
 - **The engine does GPU work one job at a time** behind a single lock, and comfortably handles about two requests in flight. Thirty people pressing record together would queue for minutes, and a queued demo looks like a broken one.
 
-The presenter-run demo shows the same pipeline with none of that risk. **Later**, it can work: the engine already serves its own web page. Put that page behind a QR code with a visible queue ("you're #3") and per-person limits, and scale out to more GPU workers. Once the on-device version exists, every phone runs it itself, and the room can play mistake bingo together.
+The presenter-run demo shows the same pipeline with none of that risk. **Later**, it can work: the engine already serves its own web page. Put that page behind a QR code with a visible queue ("you're #3") and per-person limits, and scale out to more GPU workers. Once the on-device version exists, every phone runs it itself, and the room can take the dare together.
 
 ---
 
@@ -325,7 +343,8 @@ The presenter-run demo shows the same pipeline with none of that risk. **Later**
    - Then a distilled voice editor for the few re-said words.
    - The hosted engine stays as an optional boost for heavy extras like the accent.
 9. **Why not regenerate the whole message with TTS? And why two voice models?**
-   - Regenerating the whole clip drops voice similarity to 0.73. Splicing only the new words keeps it at 0.98, and keeps your real recording.
+   - Regenerating the whole clip drops voice similarity to 73%. Splicing only the new words keeps it at 98%, and keeps your real recording.
+   - "98% of what?" It's a voice-similarity score: speaker-embedding similarity, 0.98 out of 1, on 10 real recordings; regenerating the whole message gives 0.73. It is not a listener test. Don't claim listener tests.
    - PlayDiffusion gets 9 of 10 right in 1.5 s; F5-TTS gets 7 of 10 in 1.0 s. They run in parallel, both are verified, and the closest voice is kept. dots.tts got 10 of 10 but needs 12.7 s: too slow for a chat.
 10. **Isn't this a deepfake tool?**
     - Only your own voice, only the words you meant, and every AI word shown in green.

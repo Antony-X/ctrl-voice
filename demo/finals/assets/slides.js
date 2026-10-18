@@ -1,4 +1,4 @@
-/* The deck's own slides: title, stat, architecture map, demo bingo, close, backup. The chat slide lives in chat.js.
+/* The deck's own slides: title, stat, loop, idea, clone, uses, architecture map, demo (the dare card), close, backup. The chat slide lives in chat.js.
    window.HOOKS[data-id] = { init(slide), enter(slide, {back}), step(slide, k, {back}), leave(slide), key(slide, n) }. */
 (function () {
   const Sk = window.Sketch, { C, el, P } = Sk;
@@ -283,6 +283,203 @@
     leave() { this.clear(); },
   };
 
+  // ------------------------------------------------------------------ loop: the problem. Today you re-record until it's fine, or give up and type.
+  // Step 0: record -> listen -> cringe -> delete, round and round; the take counter ticks; "type it" leaks out.
+  // Step 1: the loop breaks after "record": one take goes straight out.
+  H.loop = {
+    CX: 820, CY: 610, R: 250, ND: 132,
+    NODES: [['record', -90], ['listen', 0], ['cringe', 90], ['delete', 180]],
+    init(s) {
+      this.s = s;
+      const svg = $('#lp-svg', s), { CX, CY, R, ND } = this, D = Math.PI / 180;
+      const at = (a) => [CX + R * Math.cos(a * D), CY + R * Math.sin(a * D)];
+      const icon = {
+        record: (p, x, y) => p.circle(x, y, 46, { color: C.cut, fill: C.cut, fillStyle: 'solid', sw: 2, rough: 0.5, seed: 500 }),
+        listen: (p, x, y) => p.poly([[x - 15, y - 24], [x + 25, y], [x - 15, y + 24]], { color: C.ink, fill: Sk.alpha(C.ink, 0.15), closed: true, sw: 3.5, rough: 0.6, seed: 501 }),
+        cringe: (p, x, y) => {
+          p.circle(x - 18, y - 13, 9, { color: C.ink, fill: C.ink, fillStyle: 'solid', sw: 1, rough: 0.3, seed: 502 });
+          p.circle(x + 18, y - 13, 9, { color: C.ink, fill: C.ink, fillStyle: 'solid', sw: 1, rough: 0.3, seed: 503 });
+          p.poly([[x - 27, y + 17], [x - 13.5, y + 9], [x, y + 17], [x + 13.5, y + 9], [x + 27, y + 17]], { color: C.ink, sw: 3.5, rough: 0.5, seed: 504 });
+        },
+        delete: (p, x, y) => {
+          p.rect(x - 19, y - 12, 38, 42, { color: C.ink, sw: 3.5, r: 5, rough: 0.6, seed: 505 });
+          p.line(x - 28, y - 20, x + 28, y - 20, { color: C.ink, sw: 4, seed: 506 });
+          p.rect(x - 9, y - 29, 18, 9, { color: C.ink, sw: 3, r: 3, rough: 0.5, seed: 507 });
+        },
+      };
+      const items = [];
+      // wrappers: the animator sets inline opacity on its items, so dimming and dropping happen one level up
+      const dimG = el('g', { class: 'lp-dim' }, svg);
+      this.arc0 = el('g', { class: 'lp-arc0' }, svg);
+      this.nodes = this.NODES.map(([name, a], i) => {
+        const [x, y] = at(a), g = el('g', { class: 'lp-node' }, i ? dimG : svg), p = P(g);
+        p.circle(x, y, ND, { color: C.ink2, fill: C.sheet, sw: 3, rough: 0.9, seed: 510 + i });
+        icon[name](p, x, y);
+        const lab = [[x, y - ND / 2 - 36, 'middle'], [x + ND / 2 + 26, y, 'start'], [x, y + ND / 2 + 44, 'middle'], [x - ND / 2 - 26, y, 'end']][i];
+        Sk.text(g, lab[0], lab[1], name, { fs: 42, font: 'hand', color: C.ink2, anchor: lab[2] });
+        items.push({ g, seq: 0 });
+        return g;
+      });
+      // four arcs, clockwise, each ending in an arrowhead at the next node
+      const off = 22;
+      this.arcs = this.NODES.map(([, a], i) => {
+        const a1 = a + off, a2 = a + 90 - off, [x1, y1] = at(a1), [x2, y2] = at(a2);
+        const g = el('g', { class: 'lp-arc' }, i ? dimG : this.arc0), p = P(g);
+        p.path(`M${x1.toFixed(1)} ${y1.toFixed(1)} A${R} ${R} 0 0 1 ${x2.toFixed(1)} ${y2.toFixed(1)}`, { color: C.ink3, sw: 3, rough: 0.5, seed: 520 + i });
+        const back = Math.atan2(-Math.cos(a2 * D), Math.sin(a2 * D));   // pointing back along the arc
+        for (const d of [-0.5, 0.5]) p.line(x2, y2, x2 + 20 * Math.cos(back + d), y2 + 20 * Math.sin(back + d), { color: C.ink3, sw: 3, rough: 0.4, seed: 530 + i });
+        items.push({ g, seq: 1 });
+        return g;
+      });
+      this.draw = Sk.animator(items, { dur: 420, per: 170 });
+      // the take counter in the middle
+      this.count = el('g', { class: 'lp-count lp-dim' }, svg);
+      Sk.text(this.count, CX, CY - 92, 'take', { fs: 34, font: 'sans', color: C.ink3 });
+      this.num = Sk.text(this.count, CX, CY + 24, '1', { fs: 150, font: 'serif', color: C.ink });
+      this.num.classList.add('lp-num');
+      this.dot = el('circle', { class: 'lp-dot', cx: CX, cy: CY - R, r: 13, fill: C.ink }, svg);
+      // the other way out: give up and type it
+      const esc = el('g', { class: 'lp-dim' }, svg), ep = P(esc), kx = 330, ky = 840;
+      const kb = el('g', {}, esc), kp = P(kb);
+      kp.rect(kx - 100, ky - 42, 200, 84, { color: C.ink3, fill: C.sheet, r: 12, sw: 2.6, rough: 0.8, seed: 540 });
+      for (let r = 0; r < 2; r++) for (let c = 0; c < 6; c++) kp.rect(kx - 80 + c * 27, ky - 28 + r * 22, 18, 14, { color: C.ink3, sw: 1.6, r: 3, rough: 0.4, seed: 541 + r * 6 + c });
+      kp.line(kx - 46, ky + 26, kx + 46, ky + 26, { color: C.ink3, sw: 3, rough: 0.4, seed: 555 });
+      Sk.text(kb, kx, ky + 82, 'type it', { fs: 40, font: 'hand', color: C.ink3 });
+      const ea = ep.arrow([[CX - R - 40, CY + 66], [CX - R - 120, CY + 150], [kx + 40, ky - 56]], { curve: true, color: C.ink3, sw: 2.4, hl: 16, dash: [6, 9], seed: 556 });
+      this.escape = Sk.animator([{ g: ea, seq: 0 }, { g: kb, seq: 1 }], { dur: 420, per: 300 });
+      // the way out with Ctrl+Voice: one take, sent
+      const [rx, ry] = at(-90), ex = 1360;
+      const exit = el('g', {}, svg), xp = P(exit);
+      const xa = xp.arrow([[rx + ND / 2 + 14, ry], [1110, ry - 14], [ex - 18, ry]], { curve: true, color: C.made, sw: 4, hl: 20, seed: 560 });
+      const xl = el('g', {}, exit); Sk.text(xl, 1120, ry - 52, 'one take', { fs: 42, font: 'hand', color: C.made });
+      this.exit = Sk.animator([{ g: xa, seq: 0 }, { g: xl, seq: 0 }], { dur: 480 });
+      this.sent = el('g', { class: 'lp-sent' }, svg);
+      const sp = P(this.sent), bx = ex, by = ry - 62, bw = 250, bh = 124;
+      sp.rect(bx, by, bw, bh, { color: C.made, fill: Sk.alpha(C.made, 0.14), r: 34, sw: 3.5, rough: 0.8, seed: 570 });
+      sp.poly([[bx + 92, by + 64], [bx + 116, by + 88], [bx + 162, by + 38]], { color: C.made, sw: 7, rough: 0.5, seed: 571 });
+      Sk.text(this.sent, bx + bw / 2, by + bh + 44, 'sent', { fs: 42, font: 'hand', color: C.made });
+      this.line = $('.lp-line', s);
+    },
+    /** 0: nothing; 1: the loop, take 3, "type it"; 2: the loop broken, one take sent. */
+    set(n) {
+      if (n >= 1) this.draw.show(); else this.draw.reset();
+      this.num.textContent = n >= 1 ? '3' : '1';
+      this.count.classList.toggle('on', n >= 1);
+      this.dot.classList.remove('on');
+      if (n >= 1) this.escape.show(); else this.escape.reset();
+      this.line.classList.toggle('on', n >= 1);
+      this.arc0.classList.toggle('gone', n >= 2);
+      this.s.classList.toggle('broke', n >= 2);
+      if (n >= 2) this.exit.show(); else this.exit.reset();
+      this.sent.classList.toggle('on', n >= 2);
+    },
+    clear() { (this.ts || []).forEach(clearTimeout); this.ts = []; cancelAnimationFrame(this.raf); },
+    /** The dot runs round the loop: each lap is faster; every lap back at "record" is another take. */
+    run() {
+      const laps = [[1300, 360], [1000, 360], [700, 270]], { CX, CY, R } = this, D = Math.PI / 180;
+      let lap = 0, t0 = performance.now();
+      this.dot.classList.add('on');
+      const tick = (now) => {
+        const [ms, deg] = laps[lap], f = Math.min(1, (now - t0) / ms), a = (-90 + deg * f) * D;
+        this.dot.setAttribute('cx', (CX + R * Math.cos(a)).toFixed(1)); this.dot.setAttribute('cy', (CY + R * Math.sin(a)).toFixed(1));
+        if (f < 1) { this.raf = requestAnimationFrame(tick); return; }
+        lap += 1;
+        if (lap < laps.length) {
+          this.num.textContent = String(lap + 1); sfx('tick');
+          this.num.classList.remove('bump'); this.num.getBoundingClientRect(); this.num.classList.add('bump');
+          t0 = now; this.raf = requestAnimationFrame(tick); return;
+        }
+        // third time round it stops at "delete", and leaks out to the keyboard
+        this.dot.classList.remove('on'); sfx('swoosh', false); this.escape.play();
+        this.ts.push(setTimeout(() => this.line.classList.add('on'), 700));
+      };
+      this.raf = requestAnimationFrame(tick);
+    },
+    step(s, k, { back }) {
+      this.clear();
+      const at = (ms, f) => this.ts.push(setTimeout(f, ms));
+      if (back || reduced()) { still(s, () => this.set(k + 1)); return; }
+      if (k === 0) {
+        still(s, () => this.set(0));
+        at(40, () => this.draw.play());
+        at(760, () => { this.count.classList.add('on'); this.run(); });
+        return;
+      }
+      still(s, () => this.set(1));
+      at(60, () => { this.arc0.classList.add('gone'); sfx('swoosh', false); });
+      at(520, () => s.classList.add('broke'));
+      at(700, () => { this.exit.play(); sfx('swoosh', true); });
+      at(1250, () => { this.sent.classList.add('on'); sfx('sparkle'); });
+    },
+    leave() { this.clear(); },
+  };
+
+  // ------------------------------------------------------------------ clone: your voice, not a clone
+  // Two bars of the same message (Sarah's fixed note, real peaks). Regenerated whole, it is all AI: 73% voice match.
+  // Ctrl+Voice keeps the real recording; only the re-said words (real spans from the clip) are green: 98%.
+  H.clone = {
+    X0: 470, X1: 1450, Y: [470, 770], HH: 76, N: 118,
+    init(s) {
+      this.s = s;
+      const svg = $('#cn-svg', s), clip = window.DATA.clips['clean.after'], pk = clip.peaks, dur = clip.dur;
+      const ai = clip.words.filter((w) => w.tag === 'regenerated');
+      const spans = [];   // merge touching re-said words into spans
+      ai.forEach((w) => { const l = spans[spans.length - 1]; if (l && w.s - l.e < 0.12) l.e = w.e; else spans.push({ s: w.s, e: w.e }); });
+      const { X0, X1, HH, N } = this, pitch = (X1 - X0) / N, bw = pitch * 0.6, xOf = (t) => X0 + (t / dur) * (X1 - X0);
+      this.rows = this.Y.map((y, r) => {
+        const g = el('g', { class: `cn-row cn-r${r}` }, svg);
+        Sk.text(g, X0 - 44, y, r ? 'Ctrl+Voice' : 'AI clone', { fs: 44, font: 'sans', weight: 600, color: r ? C.ink : C.ink2, anchor: 'end' });
+        el('line', { x1: X0 - 6, x2: X1 + 6, y1: y, y2: y, class: 'cn-mid' }, g);
+        for (let i = 0; i < N; i++) {
+          const t = ((i + 0.5) / N) * dur, v = pk[Math.min(pk.length - 1, Math.floor(((i + 0.5) / N) * pk.length))];
+          const h = Math.max(6, 2 * HH * (0.1 + 0.9 * v)), isAI = spans.some((sp) => t >= sp.s - 0.02 && t <= sp.e + 0.02);
+          const b = el('rect', { x: (X0 + i * pitch + (pitch - bw) / 2).toFixed(1), y: (y - h / 2).toFixed(1), width: bw.toFixed(1), height: h.toFixed(1), rx: (bw / 2).toFixed(1), class: 'cn-bar' + (isAI ? ' ai' : '') }, g);
+          b.style.setProperty('--i', i);
+        }
+        if (r) spans.forEach((sp) => {
+          const t = Sk.text(g, xOf((sp.s + sp.e) / 2), y - HH - 40, 'AI', { fs: 38, font: 'hand', color: C.made });
+          t.classList.add('cn-tag');
+        });
+        const score = Sk.text(g, X1 + 74, y + 4, '0%', { fs: 124, font: 'serif', color: r ? C.made : C.cut, anchor: 'start' });
+        score.classList.add('cn-score');
+        const lab = Sk.text(g, X1 + 78, y + 92, 'voice match', { fs: 30, font: 'sans', color: C.ink3, anchor: 'start' });
+        lab.classList.add('cn-score');
+        return { g, score, lab, to: r ? 98 : 73 };
+      });
+      this.line = $('.cn-line', s);
+    },
+    /** 0: nothing; 1: the AI clone row, 73%; 2: plus the Ctrl+Voice row, 98%, and the line. */
+    set(n) {
+      this.rows.forEach((r, i) => {
+        const on = n > i;
+        cancelAnimationFrame(r.score._raf);
+        r.g.classList.toggle('on', on); r.g.classList.toggle('lit', on);
+        r.score.textContent = on ? `${r.to}%` : '0%';
+      });
+      this.rows[0].g.classList.toggle('washed', n >= 1);
+      this.rows[1].g.classList.toggle('marked', n >= 2);
+      this.line.classList.toggle('on', n >= 2);
+    },
+    clear() { (this.ts || []).forEach(clearTimeout); this.ts = []; this.rows.forEach((r) => cancelAnimationFrame(r.score._raf)); },
+    step(s, k, { back }) {
+      this.clear();
+      const at = (ms, f) => this.ts.push(setTimeout(f, ms));
+      if (back || reduced()) { still(s, () => this.set(k + 1)); return; }
+      const r = this.rows[k], fmt = (v) => `${Math.round(v)}%`;
+      still(s, () => this.set(k));
+      at(40, () => { r.g.classList.add('on'); sfx('whoom'); });
+      if (k === 0) {
+        at(1150, () => { r.g.classList.add('washed'); sfx('swoosh', true); });
+        at(1950, () => { r.g.classList.add('lit'); countUp(r.score, r.to, 800, fmt); });
+        return;
+      }
+      at(1150, () => { r.g.classList.add('marked'); sfx('sparkle'); });
+      at(1500, () => { r.g.classList.add('lit'); countUp(r.score, r.to, 800, fmt); });
+      at(2350, () => this.line.classList.add('on'));
+    },
+    leave() { this.clear(); },
+  };
+
   // ------------------------------------------------------------------ architecture map: overview, nine regions, overview
   H.arch = {
     init(s) {
@@ -306,46 +503,40 @@
     leave() { this.map.halt(); },
   };
 
-  // ------------------------------------------------------------------ demo: mistake bingo, keys 1-4 stamp a square
-  // Each square is one example from Sarah's note, the mistake in red. A stamp strikes it out (or swaps "have" for "has").
+  // ------------------------------------------------------------------ demo: the dare card. The real message, its four mistakes labelled.
+  // Keys 1-4 fix one mistake each, the way the idea slide does: the red words are struck and collapse, "is" becomes a green "are".
+  // Pressing a key again undoes it (only fix what really happened). Entering forward resets; coming back keeps the state.
   H.demo = {
+    W: 1440, H: 640,
     init(s) {
-      const card = $('#dm-card', s);
-      const examples = [
-        '<div><s>Um,</s> quick update</div>',
-        '<div><s>Thursday. No,</s> Friday</div>',
-        '<div><s>Shrek all week.</s></div><div><s>Scratch that.</s></div>',
-        '<div>Dan <s class="swap">have</s><ins>has</ins> the tickets</div>',
-      ];
-      const W = 1240, Hh = 560, cw = W / 2, ch = Hh / 2;
-      const box = { width: W + 40, height: Hh + 40, viewBox: `-20 -20 ${W + 40} ${Hh + 40}` };
-      const svg = el('svg', box, card), pen = P(svg);
-      pen.rect(0, 0, W, Hh, { color: C.ink3, sw: 2.5, r: 22, rough: 0.7, fill: C.sheet });
-      pen.line(cw, 18, cw, Hh - 18, { color: C.line, sw: 2.5 }); pen.line(18, ch, W - 18, ch, { color: C.line, sw: 2.5 });
-      const cells = document.createElement('div'); cells.className = 'dm-cells'; card.appendChild(cells);
-      const top = el('svg', { ...box, class: 'top' }, card);         // stamps and the banner sit above the text
-      this.cells = examples.map((html, i) => {
-        const cell = document.createElement('div'); cell.className = 'dm-cell'; cell.innerHTML = html; cells.appendChild(cell);
-        const sx = i % 2 ? W - 70 : 70, sy = i < 2 ? 66 : Hh - 66;   // stamps sit in the card's outer corners, clear of the banner
-        const st = el('g', { class: 'dm-stamp', style: `transform-origin:${sx}px ${sy}px` }, top), sp = P(st);
-        sp.circle(sx, sy, 96, { color: C.made, sw: 5, fill: Sk.alpha(C.made, 0.22), fillStyle: 'hachure', gap: 9, rough: 1.4, seed: 70 + i });
-        sp.poly([[sx - 26, sy + 2], [sx - 7, sy + 23], [sx + 28, sy - 21]], { color: C.made, sw: 8, seed: 80 + i });
-        return { cell, st, on: false };
+      this.s = s;
+      const card = $('#dc-card', s), { W, H: Hh } = this;
+      const svg = el('svg', { class: 'dc-frame', width: W, height: Hh, viewBox: `0 0 ${W} ${Hh}` });
+      card.prepend(svg);
+      P(svg).rect(3, 3, W - 6, Hh - 6, { color: C.ink3, sw: 2.5, r: 22, rough: 0.7, fill: C.sheet, seed: 90 });
+      $$('.dc-lab', s).forEach((lab, i) => {   // a small sketch arrow from each label down to its mistake
+        const a = el('svg', { class: 'dc-arr', width: 30, height: 34, viewBox: '0 0 30 34' });
+        lab.prepend(a);
+        P(a).arrow([[27, 3], [15, 12], [6, 31]], { curve: true, color: lab.closest('.swap') ? C.check : C.cut, sw: 2.2, hl: 9, seed: 95 + i });
       });
-      this.bingo = el('g', { class: 'dm-bingo' }, top);
-      const bp = P(this.bingo);
-      bp.rect(W / 2 - 230, Hh / 2 - 70, 460, 140, { color: C.made, fill: C.sheet, sw: 4, r: 70, rough: 1, seed: 91 });
-      Sk.text(this.bingo, W / 2, Hh / 2 + 4, 'Bingo!', { fs: 76, font: 'serif', weight: 600, color: C.made, italic: true });
+      this.ms = $$('.dc-m', s).sort((a, b) => a.dataset.k - b.dataset.k);
+      this.on = this.ms.map(() => false);
     },
     paint() {
-      this.cells.forEach((c) => { c.st.classList.toggle('on', c.on); c.cell.classList.toggle('on', c.on); });
-      this.bingo.classList.toggle('on', this.cells.every((c) => c.on));
+      this.ms.forEach((m, i) => m.classList.toggle('fixed', this.on[i]));
+      this.s.classList.toggle('all', this.on.every(Boolean));
     },
-    enter() { this.cells.forEach((c) => { c.on = false; }); this.paint(); },
+    enter(s, { back } = {}) {
+      if (!back) this.on = this.on.map(() => false);
+      still(s, () => this.paint());
+    },
     key(s, n) {
-      const c = this.cells[n - 1]; if (!c) return;
-      c.on = !c.on; this.paint();
-      if (c.on) { sfx('pop'); if (this.cells.every((x) => x.on)) setTimeout(() => sfx('sparkle'), 380); }
+      const i = n - 1; if (!this.ms[i]) return;
+      this.on[i] = !this.on[i];
+      if (reduced()) still(s, () => this.paint()); else this.paint();
+      if (!this.on[i]) return;
+      if (i === 3) sfx('pop'); else sfx('swoosh', false);
+      if (this.on.every(Boolean)) setTimeout(() => sfx('sparkle'), 650);
     },
   };
 
@@ -366,7 +557,7 @@
     step(s, k, { back }) {
       this.underline(s).forEach((u, i) => { if (back) u.show(); else { u.reset(); setTimeout(() => u.play(), 500 + i * 220); } });
       $$('[data-count]', s).forEach((b, i) => {
-        const to = +b.dataset.count, dec = +(b.dataset.dec || 0), fmt = (v) => v.toFixed(dec);
+        const to = +b.dataset.count, dec = +(b.dataset.dec || 0), fmt = (v) => v.toFixed(dec) + (b.dataset.suffix || '');
         if (back) { b.textContent = fmt(to); return; }
         b.textContent = fmt(0); setTimeout(() => countUp(b, to, 1300, fmt), 150 + i * 220);
       });

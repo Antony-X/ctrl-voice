@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ctrl+Voice Q&amp;A</title>
+<link rel="stylesheet" href="assets/deck.css">
+<link rel="stylesheet" href="assets/qa.css">
+</head>
+<body>
+<div id="stage">
+
+  <!-- ─────────────────────────────── index -->
+  <section class="slide qa-index" data-id="idx" data-title="Questions">
+    <header class="ix-hd"><h1>Questions</h1><p>press the number · Esc or 0 comes back here</p></header>
+    <div class="ix-grid">
+      <a class="ix-card" data-go="1"><b>1</b><span>Where does my voice go?</span></a>
+      <a class="ix-card" data-go="2"><b>2</b><span>How fast is it?</span></a>
+      <a class="ix-card" data-go="3"><b>3</b><span>Languages? Georgian?</span></a>
+      <a class="ix-card" data-go="4"><b>4</b><span>What's AI, what's original?</span></a>
+      <a class="ix-card" data-go="5"><b>5</b><span>What if it cuts something important?</span></a>
+      <a class="ix-card" data-go="6"><b>6</b><span>Where does it fail?</span></a>
+      <a class="ix-card" data-go="7"><b>7</b><span>What does it cost to run?</span></a>
+      <a class="ix-card" data-go="8"><b>8</b><span>On-device roadmap?</span></a>
+      <a class="ix-card" data-go="9"><b>9</b><span>Why not regenerate it all? Why two voice models?</span></a>
+      <a class="ix-card wide" data-go="10"><b>D</b><span>Isn't this a deepfake tool?</span></a>
+    </div>
+    <aside class="notes">
+      <p class="sec">Q&amp;A index</p>
+      <p><em>კითხვის ნომერს დააჭირე (1–9, D = დიპფეიკი). Esc ან 0 აქ დაგაბრუნებს. თუ არ იცი: „ეს ჯერ არ გაგვიზომავს.“</em></p>
+      <p><span class="en">[Press the question's number (1–9, D = deepfake). Esc or 0 returns here. If unsure: "we haven't measured that."]</span></p>
+    </aside>
+  </section>
+
+  <!-- ─────────────────────────────── 1 privacy -->
+  <section class="slide qa" data-id="q1" data-n="1" data-title="Privacy">
+    <header class="qh"><span class="qn">1</span><h2>Where does my voice go?</h2></header>
+    <svg class="viz" id="v1" viewBox="0 0 1920 780"></svg>
+    <aside class="notes">
+      <p class="sec">1. პირადი მონაცემები: სად მიდის ჩემი ხმა?</p>
+      <p class="say">„დღეს აპი თხელი კლიენტია: აუდიო ჩვენს სერვერზე მიდის, რომელიც წვდომის კოდითაა დაცული. LLM-იც ჩვენსავე GPU-ზე მუშაობს, მესამე მხარის AI API არ გვაქვს. მესიჯები შენს კომპიუტერზე ინახება და ორიგინალი არასდროს იცვლება. სესიის ფაილები სერვერზეც ინახება. მთავარი შემდეგი ნაბიჯი ისაა, რომ ყველაფერი მოწყობილობაზე გადავიტანოთ.“</p>
+      <p><span class="en">[Today audio goes to our access-code-protected server; the LLM runs on our own GPU, with no third-party AI API. Messages are stored on your computer; the original is never changed. Session files are also kept on the server. The main next step: on-device.]</span></p>
+    </aside>
+  </section>
+
+  <!-- ─────────────────────────────── 2 speed -->
+  <section class="slide qa" data-id="q2" data-n="2" data-title="Speed">
+    <header class="qh"><span class="qn">2</span><h2>How fast is it?</h2></header>
+    <svg class="viz" id="v2" viewBox="0 0 1920 780"></svg>
+    <aside class="notes">
+      <p class="sec">2. რამდენად სწრაფია?</p>
+      <p class="say">„ლაივ ტრანსკრიპტი და „scratch that“ დაახლოებით 350 მილიწამით ჩამორჩება. ატვირთვა და ტრანსკრიფცია 0.4 წამია, გასუფთავება 0.5, ტონი 0.6. ჩვეულებრივი გზა, ჩაწერა, გასწორება, გაგზავნა, დაახლოებით წამს იღებს. სიტყვის თავიდან თქმას დაახლოებით 3 წამი სჭირდება: ორი მოდელი მუშაობს და ორჯერ ვამოწმებთ.“</p>
+      <p><span class="en">[Live transcript and "scratch that" about 350 ms behind; upload and transcribe 0.4 s; clean-up 0.5 s; tone 0.6 s. Record, clean, send takes about a second. Re-saying a word about 3 s.]</span></p>
+      <p><em>SCRIPT.md: measured warm on 10–15 s messages; native accent 2.8 s.</em></p>
+    </aside>
+  </section>
+
+  <!-- ─────────────────────────────── 3 languages -->
+  <section class="slide qa" data-id="q3" data-n="3" data-title="Languages">
+    <header class="qh"><span class="qn">3</span><h2>Languages? Georgian?</h2></header>
+    <svg class="viz" id="v3" viewBox="0 0 1920 780"></svg>
+    <aside class="notes">
+      <p class="sec">3. ენები? ქართული?</p>
+      <p class="say">„დღეს მხოლოდ ინგლისური. კოდში Whisper ინგლისურზეა მიბმული, ასოების მოდელი ინგლისური ანბანისაა, წარმოთქმის მოდელი ინგლისურ მონაცემებზეა ნასწავლი, და წესებიც („um“, „scratch that“, „not“) ინგლისურისთვისაა დაწერილი. Whisper და Qwen მრავალენოვანია, ამიტომ ახალ ენას ახალი ალაინერი, ახალი წარმოთქმის მოდელი და ახალი წესები სჭირდება. ყველაზე მეტად ქართული გვინდა.“</p>
+      <p><span class="en">[English only today: Whisper is pinned to English, the aligner is English letters, the pronunciation model is English, and so are the rules. Whisper and Qwen are multilingual, so a new language needs a new aligner, pronunciation model and rules. Georgian is the one we want most.]</span></p>
+    </aside>
+  </section>
+
+  <!-- ─────────────────────────────── 4 AI vs original -->
+  <section class="slide qa" data-id="q4" data-n="4" data-title="AI vs original">
+    <header class="qh"><span class="qn">4</span><h2>What's AI and what's original?</h2></header>
+    <svg class="viz" id="v4" viewBox="0 0 1920 780"></svg>
+    <aside class="notes">
+      <p class="sec">4. რა არის AI და რა ორიგინალი?</p>
+      <p class="say">„ამოჭრა შენს ნამდვილ ხმას ტოვებს. AI მხოლოდ შეცვლილ სიტყვებს ამბობს: სარას მესიჯში დაახლოებით ერთ წამს 9-დან. რედაქტორში AI-ს სიტყვები მწვანეა. Confident, Calm და Warm AI არ არის, შენი ჩანაწერის დამუშავებაა (Praat PSOLA). ნატიური აქცენტი AI-ა, ნაგულისხმევად გამორთულია და მონიშნულია. სარა და ერიკი ElevenLabs-ის ხმებია, ჩვენს ტექსტს კითხულობენ; გასწორებული აუდიო ძრავის ნამდვილი შედეგია.“</p>
+      <p><span class="en">[Cuts keep your real audio; AI says only the changed words: about one second of nine in Sarah's message, shown in green. The tones are processing of your own recording; the accent is AI, off by default, labelled. Sarah and Eric are ElevenLabs voices; the fixed audio is real engine output.]</span></p>
+      <p><em>პირდაპირ თუ იკითხავენ, შეასწორეთ თუ არა შესავალი აუდიო:</em> „სინთეზურ ჩანაწერში გრძელი პაუზები შევამოკლეთ; ყველაფერი მის შემდეგ ძრავის შედეგია.“</p>
+      <p><span class="en">[Only if asked directly: we tightened long pauses in the synthetic input; everything after that is engine output.]</span></p>
+    </aside>
+  </section>
+
+  <!-- ─────────────────────────────── 5 safety -->
+  <section class="slide qa" data-id="q5" data-n="5" data-title="Safety">
+    <header class="qh"><span class="qn">5</span><h2>What if it cuts something important?</h2></header>
+    <svg class="viz" id="v5" viewBox="0 0 1920 780"></svg>
+    <aside class="notes">
+      <p class="sec">5. თუ რამე მნიშვნელოვანს ამოჭრის?</p>
+      <p class="say">„LLM-ს მხოლოდ წაშლა შეუძლია. „არა“, რიცხვი, თარიღი ან დრო მხოლოდ მაშინ ქრება, თუ იმავე ტიპის შესწორება მოსდევს. ყველაფერი საეჭვო რჩევად რჩება. ათ მახე წინადადებაზე მნიშვნელობა არცერთში შეცვლილა; პირველ ვერსიაში ორში იცვლებოდა. 28-დან 24 გასუფთავება ზუსტია. სიტყვა, რომელიც სამ ცდაში შემოწმებას ვერ გაივლის, ავტომატურად არ ჩაჯდება.“</p>
+      <p><span class="en">[The LLM can only delete; negations, numbers, dates and times go only if a same-type repair replaces them; anything uncertain becomes a suggestion. 0 of 10 trick sentences changed meaning (2 in our first version). 24 of 28 exact. A re-said word that fails after 3 rounds is never auto-applied.]</span></p>
+    </aside>
+  </section>
+
+  <!-- ─────────────────────────────── 6 failures -->
+  <section class="slide qa" data-id="q6" data-n="6" data-title="Where it fails">
+    <header class="qh"><span class="qn">6</span><h2>Where does it fail?</h2></header>
+    <svg class="viz" id="v6" viewBox="0 0 1920 780"></svg>
+    <aside class="notes">
+      <p class="sec">6. სად ცდება?</p>
+      <p class="say">„წარმოთქმის დეტექტორი თავისუფალ საუბარში სუსტია: ტესტში ექსპერტის მიერ მონიშნული შეცდომების 19% დაიჭირა, რადგან ამომცნობი ხშირად იმას წერს, რაც რეალურად თქვი. ზოგჯერ შეერთება ისმის, ამაზე ვმუშაობთ. Discord-ში მესიჯი აუდიო ფაილად მიდის და არა ნატიურ ხმოვან ბუშტად, ამისთვის ოფიციალური ბოტები გვჭირდება.“</p>
+      <p><span class="en">[The pronunciation detector is weak in free speech: it flagged 19% of expert-labelled errors in our test. Seams are sometimes audible; we're working on it. In Discord it arrives as an audio file, not a native bubble; that needs official bots.]</span></p>
+    </aside>
+  </section>
+
+  <!-- ─────────────────────────────── 7 cost -->
+  <section class="slide qa" data-id="q7" data-n="7" data-title="Cost">
+    <header class="qh"><span class="qn">7</span><h2>What does it cost to run?</h2></header>
+    <svg class="viz" id="v7" viewBox="0 0 1920 780"></svg>
+    <aside class="notes">
+      <p class="sec">7. რა ღირს?</p>
+      <p class="say">„ყველაფერი, LLM-ის ჩათვლით, ერთ GPU-ზე მუშაობს. LLM არის MoE: ტოკენზე მხოლოდ 3 მილიარდი პარამეტრია აქტიური, მძიმე ნაწილები კი მხოლოდ საჭიროებისას ირთვება. LLM ნებისმიერი OpenAI-თავსებადი მოდელით იცვლება. მესიჯის ფასი ჯერ არ დაგვითვლია. მოწყობილობაზე სერვერის ხარჯი ქრება. პროდუქტისთვის ზოგ მოდელს კომერციული ლიცენზია სჭირდება, მაგალითად F5-TTS-ის წონები CC BY-NC-ია.“</p>
+      <p><span class="en">[One GPU runs everything, the LLM included; it's a mixture-of-experts with only 3B active per token, and heavy steps run only when used. The LLM can be swapped for any OpenAI-compatible model. Not priced per message yet; on-device removes the server cost. Some model licences need commercial terms (F5-TTS weights are CC BY-NC).]</span></p>
+      <p><em>GPU-ს მოდელი და მეხსიერება არ თქვა.</em> <span class="en">[Don't name the GPU model or its memory.]</span></p>
+    </aside>
+  </section>
+
+  <!-- ─────────────────────────────── 8 on-device -->
+  <section class="slide qa" data-id="q8" data-n="8" data-title="On-device roadmap">
+    <header class="qh"><span class="qn">8</span><h2>On-device roadmap?</h2></header>
+    <svg class="viz" id="v8" viewBox="0 0 1920 780"></svg>
+    <aside class="notes">
+      <p class="sec">8. მოწყობილობაზე გადატანა?</p>
+      <p class="say">„ჯერ პატარა ამომცნობი და კომპაქტური LLM: ტრანსკრიპტისთვის, undo-სთვის და გასუფთავებისთვის. მესიჯების უმეტესობას სხვა არაფერი სჭირდება. მერე დისტილირებული ხმის მოდელი იმ რამდენიმე სიტყვისთვის. სერვერი რჩება მძიმე დამატებებისთვის, მაგალითად აქცენტისთვის.“</p>
+      <p><span class="en">[First a small on-device recognizer and compact LLM for transcript, undo and clean-up, which is all most messages need; then a distilled voice editor for the few re-said words; the server stays for heavy extras like the accent.]</span></p>
+    </aside>
+  </section>
+
+  <!-- ─────────────────────────────── 9 splice vs regenerate, two models -->
+  <section class="slide qa" data-id="q9" data-n="9" data-title="Why splice, why two models">
+    <header class="qh"><span class="qn">9</span><h2 class="sm">Why not regenerate it all? Why two voice models?</h2></header>
+    <svg class="viz" id="v9" viewBox="0 0 1920 780"></svg>
+    <aside class="notes">
+      <p class="sec">9. რატომ არა მთლიანი მესიჯის ხელახლა გენერაცია? და რატომ ორი მოდელი?</p>
+      <p class="say">„მთლიანი კლიპის ხელახლა გენერაციისას ხმის მსგავსება 0.73-მდე ეცემა; მხოლოდ ახალი სიტყვის ჩასმით 0.98 რჩება, და შენი ნამდვილი ჩანაწერიც რჩება. PlayDiffusion ათიდან ცხრას ამბობს სწორად 1.5 წამში, F5-TTS ათიდან შვიდს წამში. პარალელურად ვუშვებთ, ორივეს ვამოწმებთ და ყველაზე მსგავს ხმას ვიტოვებთ. dots.tts-მა ათივე სწორად თქვა, მაგრამ 12.7 წამი დასჭირდა, ჩატისთვის ნელია.“</p>
+      <p><span class="en">[Regenerating the whole clip drops voice similarity to 0.73; splicing only the new word keeps 0.98 and your real recording. PlayDiffusion 9/10 in 1.5 s, F5-TTS 7/10 in 1.0 s; both run and are verified, and the closest voice is kept. dots.tts got 10/10 but took 12.7 s.]</span></p>
+    </aside>
+  </section>
+
+  <!-- ─────────────────────────────── 10 deepfake -->
+  <section class="slide qa" data-id="q10" data-n="10" data-title="Deepfake?">
+    <header class="qh"><span class="qn wide">D</span><h2>Isn't this a deepfake tool?</h2></header>
+    <svg class="viz" id="v10" viewBox="0 0 1920 780"></svg>
+    <aside class="notes">
+      <p class="sec">10. ეს დიპფეიკის ხელსაწყო ხომ არ არის?</p>
+      <p class="say">„მხოლოდ შენი ხმა, მხოლოდ ის სიტყვები, რაც გინდოდა, და ყველა AI სიტყვა მწვანით ჩანს. გეგმაშია AudioSeal-ის ვოტერმარკი ყველა გენერირებულ სიტყვაზე და მსმენელისთვის ხილული შენიშვნა „შეცვლილი სიტყვები“. მუშაობს Discord-ში, WhatsApp-ში, Telegram-ში, Slack-ში, Signal-სა და Teams-ში, Windows-ზე და macOS-ზე.“</p>
+      <p><span class="en">[Only your voice, only the words you meant, every AI word in green. Planned: an AudioSeal watermark on generated words and a visible "words changed" note. Works in Discord, WhatsApp, Telegram, Slack, Signal and Teams, on Windows and macOS.]</span></p>
+      <p><em>SCRIPT.md: the Mac version is newer and less tested. How we measured: 10 real recordings (LibriSpeech, AMI, DisfluencySpeech), 28 hand-written messages, speechocean762; small samples, engineering measurements, not paper results.</em></p>
+    </aside>
+  </section>
+
+  <div class="qa-foot" id="qa-foot"></div>
+  <div class="overlay" id="notes-overlay"></div>
+</div>
+<script src="assets/vendor/rough.js"></script>
+<script src="assets/sketch.js"></script>
+<script src="assets/qa.js"></script>
+</body>
+</html>

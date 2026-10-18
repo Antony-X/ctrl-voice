@@ -44,7 +44,7 @@
   /** Rewind: a falling sweep. */
   Sfx.rewind = () => { if (!ready()) return; const t = ac.currentTime; tone(1400, t, 0.42, { to: 180, gain: 0.18, type: 'sawtooth' }); noise(t, 0.42, { f0: 3000, f1: 300, gain: 0.18 }); };
   /** The camera lands on a part of the map. */
-  Sfx.tick = () => { if (!ready()) return; const t = ac.currentTime; tone(660, t, 0.06, { gain: 0.2, type: 'triangle' }); };
+  Sfx.tick = (f = 660) => { if (!ready()) return; const t = ac.currentTime; tone(f, t, 0.06, { gain: 0.2, type: 'triangle' }); };   // f: the map's build cascade climbs a scale
   /** A big reveal (the number counter, the whole map). */
   Sfx.whoom = () => { if (!ready()) return; const t = ac.currentTime; tone(110, t, 0.9, { to: 55, gain: 0.5 }); noise(t, 0.7, { f0: 200, f1: 1800, gain: 0.12 }); };
   /** Sound check: two clear notes, then the same at the other ear's pitch, about 1.2 s. */

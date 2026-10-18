@@ -38,75 +38,88 @@ If you are running late, drop the "Normally she'd delete that" line. Never drop 
   [You can edit a text. Not your voice. Until now.]
 - **→**
 
-## 4. The idea (1:03–1:16): the recording draws itself, words land on their sound
+## 4. The loop (1:03–1:15): the problem, what everyone does today
+- **The loop runs, the take counter ticks:** „დღეს რას ვაკეთებთ? ვწერთ, ვუსმენთ, გვრცხვენია, ვშლით… და თავიდან. ან ვნებდებით და ვბეჭდავთ.“
+  [What do we do today? Record, listen, cringe, delete… and again. Or we give up and type it.]
+- **→** The loop breaks; one take goes out: „Ctrl+Voice ამ წრეს წყვეტს: ერთი ჩანაწერი, და გაგზავნილია.“
+  [Ctrl+Voice breaks the loop: one take, and it's sent.]
+- **→**
+
+## 5. The idea (1:15–1:28): the recording draws itself, words land on their sound
 - **Mistakes turn red:** „როგორ? შენი ხმა სიტყვებად იქცევა, და თითოეული სიტყვა თავის ბგერაზე რჩება მიბმული.“
   [How? Your voice becomes words, and every word stays tied to its own sound.]
 - **→** The red words drop out, "have" becomes a green "has": „ჩვენ სიტყვებს ვასწორებთ, როგორც ტექსტს, და აუდიო მათ მიჰყვება. ახალია მხოლოდ შეცვლილი სიტყვა, შენივე ხმით. დანარჩენი შენი ნამდვილი ჩანაწერია.“
   [We edit the words, like a text, and the audio follows. Only the changed word is new, in your own voice. The rest is your real recording.]
 - **→**
 
-## 5. Anywhere (1:16–1:28): one key, six apps
+## 6. Not a clone (1:28–1:40): why it is different
+- **The whole bar turns green, 73%:** „თუ მთელ მესიჯს AI-ით თავიდან შევქმნით, ეს უკვე კლონია: ხმის მსგავსება 73%-მდე ეცემა.“
+  [Regenerate the whole message with AI and it's a clone: voice similarity drops to 73%.]
+- **→** Only two slivers are green, 98%: „ჩვენთან შენი ნამდვილი ჩანაწერი რჩება. AI მხოლოდ შეცვლილ სიტყვებს ამბობს, დაახლოებით ერთ წამს ცხრიდან: 98%. ორიგინალი კი არასდროს იცვლება.“
+  [We keep your real recording. AI only says the changed words, about one second of nine: 98%. And the original never changes.]
+- **→**
+
+## 7. Anywhere (1:40–1:52): one key, six apps
 - **The key is pressed, the apps burst out:** „და ის იქ მუშაობს, სადაც უკვე ლაპარაკობ: ერთი ღილაკით Discord-ში, WhatsApp-ში, Telegram-ში, Slack-ში, Signal-სა და Teams-ში. ინტეგრაცია არ სჭირდება.“
   [It works where you already talk: one hotkey, in Discord, WhatsApp, Telegram, Slack, Signal and Teams. No integration needed.]
 - **→** A video and a microphone appear: „და არა მხოლოდ ჩატში: ჩაწერილი ვიდეო ან გამოსვლა აპში ატვირთე და ზუსტად ისე გაასწორე.“
   [And not just chat: import a recorded video or a speech into the app and fix it the same way.]
 - **→**
 
-## 6. Architecture map (1:28–2:20): one short sentence per model; start talking when the camera lands
-- **The map draws itself:** „ამის უკან ცხრა მოდელი დგას, ერთად.“ [Behind it: nine models, working together.]
-- **→ Hear:** „Whisper ყველა სიტყვას ისმენს, სანამ ლაპარაკობ, „um“-ებიანად.“ [Whisper hears every word as you talk, ums included.]
-- **→ Align:** „wav2vec2 ყველა სიტყვას აუდიოში ზუსტად თავის ადგილზე სვამს.“ [wav2vec2 pins every word to its exact place in the audio.]
-- **→ Decide:** „Qwen წყვეტს, რა ამოიჭრას. აუდიოს არ ეხება.“ [Qwen decides what to cut. It never touches the audio.]
-- **→ Guard:** „წესები: მხოლოდ წაშლა. „არა“, რიცხვი ან თარიღი რჩება, თუ თვითონ არ შეცვალე.“ [Deletions only; a "not", a number or a date stays unless you replaced it.]
-- **→ Re-say:** „არასწორ სიტყვას PlayDiffusion შენი ხმით ამბობს თავიდან. ათიდან ცხრა სწორია.“ [PlayDiffusion re-says the wrong word in your voice. Nine of ten right.]
-- **→ Re-say, in parallel:** „მეორე ხმის მოდელი, პარალელურად.“ [A second voice model, in parallel.]
-- **→ Verify:** „ორივეს ორჯერ ვამოწმებთ და ვსვამთ მხოლოდ ყველაზე მსგავს ხმას.“ [Both are checked twice; only the closest voice is spliced in.]
-- **→ Pronunciation:** „და გაუგებარ სიტყვებსაც ვიჭერთ.“ [And we catch unclear words too.] *(AUC 0.88 stays on the map; say it only if asked.)*
-- **→ Tone:** „Confident კი AI არ არის: შენსავე ჩანაწერს ტონს უცვლის.“ [Confident isn't AI: it reshapes the pitch of your own recording.]
-- **→ The camera flies back out:** „ეს არის მთელი სისტემა. ახლა ლაივში.“ [That's the whole system. Now, live.]
+## 8. Architecture map (1:52–2:30): a few words per model; the camera keeps its timing
+- **The map draws itself:** „ამის უკან ცხრა მოდელია.“ [Behind it: nine models.]
+- **→ Hear: Whisper:** „Whisper ისმენს.“ [Whisper listens.]
+- **→ Align: wav2vec2:** „wav2vec2 სიტყვებს ადგილს უჩენს.“ [wav2vec2 places every word.]
+- **→ Decide: Qwen:** „Qwen წყვეტს, რა ამოიჭრას.“ [Qwen decides what to cut.]
+- **→ Rules:** „წესები: მხოლოდ წაშლა.“ [Rules: deletions only.]
+- **→ PlayDiffusion:** „PlayDiffusion სიტყვას შენი ხმით ამბობს.“ [PlayDiffusion re-says a word in your voice.]
+- **→ F5-TTS:** „მეორე ხმის მოდელი, პარალელურად.“ [A second voice model, in parallel.]
+- **→ Verify:** „ვამოწმებთ და ვიტოვებთ ყველაზე მსგავსს.“ [We check both and keep the closest.]
+- **→ Pronunciation (GOP):** „და გაუგებარ სიტყვებსაც ვიჭერთ.“ [And we catch unclear words too.]
+- **→ Tone (PSOLA):** „Confident: შენი ჩანაწერი, სხვა ტონით.“ [Confident: your own recording, a new tone.]
+- **→ The camera flies back out:** „ეს არის სისტემა. ახლა ლაივში.“ [That's the system. Now, live.]
 - **→** to the demo slide.
 
-One sentence per model, no more. If you are behind, press → on "Re-say, in parallel" and "Pronunciation" without a word.
+A few words per model, no more. If you are behind, press → on "Re-say, in parallel" and "Pronunciation" without a word.
 
-## 7. Live demo (2:20–4:40)
+## 9. Live demo (2:30–4:40)
 **The message.** Say it in English, exactly like this:
-> "Hey team. Um, the final is on Saturday, no wait, Sunday. I didn't rehearse at all. Scratch that. *(one full second of silence)* The judges is really friendly, and I think we're ready?"
+> "Hey team. Um, we're on stage on Saturday, no wait, Sunday. I didn't rehearse at all. Scratch that. *(one full second of silence)* The judges is really friendly, and I think we're ready?"
 
 **Three rules:**
 1. Click into the Discord message box before you press Alt+`.
 2. While it records, say nothing but the message.
-3. After "Scratch that", stay silent for one full second.
+3. After "Scratch that", stay silent and watch the bar for 2 s. Once it's struck through, carry on. Nothing struck after 3 s: press **Ctrl+Z** once, then carry on. Ignore a brief "Connection lost".
+4. Before the talk: Ctrl+Voice → Settings → Automatic fixes → **Re-say unclear words: off**.
 
 **Step by step:**
-- **2:20, bingo card on screen:** „შეცდომების ბინგო: ოთხივე შეცდომა, ერთ მესიჯში. ინგლისურად: მოდელები ჯერ ინგლისურზეა მორგებული.“
-  [Mistake bingo: all four mistakes, in one message. In English: the models are tuned for English for now.]
-- **2:26:** *Alt+Tab to Discord and click in the message box.* „აი, Discord.“ [Here's Discord.]
-- **2:28:** *Alt+`, wait half a second, then say the message. After "Scratch that", pause and point at the bar.*
-- **2:43:** *Alt+` again.* While it works: „„scratch that“ ხომ ნახეთ? ლაპარაკისას გაქრა. ახლა Whisper მესიჯს თავიდან ისმენს, LLM წყვეტს, რა ამოიჭრას, წესები ამოწმებს, ჩემს არასწორ სიტყვას კი ორი ხმის მოდელი ერთდროულად ამბობს, ჩემივე ხმით.“
+- **2:30, dare card on screen:** „ახლა ოთხ შეცდომას დავუშვებ. განზრახ. ერთ ჩანაწერში, ლაივში. ინგლისურად: მოდელები ჯერ ინგლისურზეა მორგებული.“
+  [Now I'll make four mistakes. On purpose. In one take, live. In English: the models are tuned for English for now.]
+- **2:36:** *Alt+Tab to Discord and click in the message box.* „აი, Discord.“ [Here's Discord.]
+- **2:38:** *Alt+`, wait half a second, then say the message. After "Scratch that", stay silent until the bar strikes it through; nothing after 3 s, press Ctrl+Z once.*
+- **2:53:** *Alt+` again.* While it works: „„scratch that“ ხომ ნახეთ? ლაპარაკისას გაქრა. ახლა Whisper მესიჯს თავიდან ისმენს, LLM წყვეტს, რა ამოიჭრას, წესები ამოწმებს, ჩემს არასწორ სიტყვას კი ორი ხმის მოდელი ერთდროულად ამბობს, ჩემივე ხმით.“
   [Did you see "scratch that"? Gone while I talked. Now the models re-hear it, pick the cuts, check them, and re-say my wrong word in my voice.]
-- **~2:53, before ▶ in Discord:** „ერთი სიტყვა აქ AI-მ თქვა. მოუსმინეთ: რომელი?“ [One word here was made by AI. Listen: which one?]
-- **3:04:** „რომელი?“ *(take one or two guesses)* „ვნახოთ.“ [Which one? Let's look.]
-- **3:09:** *Alt+Shift+`, click the top message.* „აი ისიც, მწვანით: „judges are“. გადახაზული ამოჭრილია. დანარჩენი ყველაფერი ჩემი ნამდვილი ხმაა, ხელუხლებელი.“
+- **~3:03, before ▶ in Discord:** „ერთი სიტყვა აქ AI-მ თქვა. მოუსმინეთ: რომელი?“ [One word here was made by AI. Listen: which one?]
+- **3:14:** „რომელი?“ *(take one or two guesses)* „ვნახოთ.“ [Which one? Let's look.]
+- **3:19:** *Alt+Shift+`, click the top message.* „აი ისიც, მწვანით: „judges are“. გადახაზული ამოჭრილია. დანარჩენი ყველაფერი ჩემი ნამდვილი ხმაა, ხელუხლებელი.“
   [There it is, in green. Struck through means cut. Everything else is my real voice.]
-- **3:19:** *Original, Space, about 5 s, Space.* „ორიგინალი…“ „…გასწორებული კი უკვე მოისმინეთ. ორიგინალი ფაილი არასდროს იცვლება.“
-  [The original… and you already heard the fixed one. The original file never changes.]
 - **3:31, Replace:** „ახლა თქვენ აირჩიეთ: ჟიური „friendly“ იყოს… თუ „generous“?“ *Click the word, then Replace…, type it, press Enter.* While it waits: „ამ სიტყვას ახლა ორი მოდელი ამბობს ჩემი ხმით, და შედის მხოლოდ ის, რომელიც ორივე შემოწმებას გაივლის.“ *Space to play.* „ეს სიტყვა მე არასდროს მითქვამს.“ *(hold 2 s of silence)*
   [You choose the word. Two models say it in my voice; only the one that passes both checks gets in. I never said that word.]
 - **3:58, Confident:** *Tone, then click Confident once.* „ბოლოს, Confident. აქ AI საერთოდ არ არის: ეს ჩემივე ჩანაწერია, შეცვლილი ტონით და ტემპით.“ After it plays: „„ready?“ გახდა „ready.“ იგივე ხმა, იგივე სიტყვები.“
   [No AI here: my own recording, reshaped. "Ready?" became "ready." Same voice, same words.]
-- **4:25:** *Alt+Tab to the deck, then press 1, 2, 3, 4.* „„Um“. აზრის შეცვლა. „Scratch that“. არასწორი სიტყვა.“ *(fourth stamp)* „ბინგო.“
-  [Um. Change of mind. Scratch that. Wrong word. Bingo.] Stamp only what really happened; if one square failed, say „დღეს ოთხიდან სამი.“ [three out of four tonight].
+- **4:25:** *Alt+Tab to the deck, then press 1, 2, 3, 4.* „Um — წავიდა. აზრის შეცვლა — წავიდა. Scratch that — წავიდა. არასწორი სიტყვა — გასწორდა.“ *(after the fourth)* „ოთხიდან ოთხი.“
+  [Um: gone. Change of mind: gone. Scratch that: gone. Wrong word: fixed. Four out of four.] Fix only what really happened (pressing a key again undoes it); if one failed, say „დღეს ოთხიდან სამი.“ [three out of four tonight].
 - **→** to the close.
 
 **Time gates:**
-- 3:03, nothing in Discord yet: go to the backup clips (B).
+- 3:13, nothing in Discord yet: go to the backup clips (B).
 - 3:35, Replace not started: skip it.
 - 4:12, Confident not played: go back to the deck.
 - 4:30: back to the deck, whatever is happening.
 
-## 8. Close (4:40–5:00)
-- **→** „ცხრა მოდელი. დაახლოებით ერთი წამი „um“-ებისა და უკან წაღებული სიტყვების ამოსაჭრელად. და 0.98: ხმის მსგავსება, როცა სიტყვას თავიდან ვამბობთ.“
-  [Nine models. About a second to cut the ums and the take-backs. And 0.98 voice similarity when we re-say a word.]
+## 10. Close (4:40–5:00)
+- **→** „ცხრა მოდელი. დაახლოებით ერთი წამი „um“-ებისა და უკან წაღებული სიტყვების ამოსაჭრელად. და 98%: ხმის მსგავსება, როცა სიტყვას თავიდან ვამბობთ.“
+  [Nine models. About a second to cut the ums and the take-backs. And 98% voice similarity when we re-say a word.]
 - „ყველაფერი GitHub-ზეა: დაასკანერეთ QR კოდი და სცადეთ.“ *(პაუზა)* „Ctrl+Voice. თქვი არეულად… გაგზავნე სუფთად.“ *(1 წმ)* „მადლობა.“
   [It's all on GitHub: scan the QR code and try it. *(beat)* Ctrl+Voice. Say it messy… send it clean. *(1 s)* Thank you.]
 - *Stop, smile, and wait for questions.*
@@ -115,6 +128,6 @@ One sentence per model, no more. If you are behind, press → on "Re-say, in par
 ---
 
 ## Practising without the app
-- Press **T** on the title to start the clock. Targets: chat done by about 0:53, idea and uses done by 1:28, map done by 2:20, back on the deck by 4:25. No juror sentence tonight.
-- On the demo slide, say the demo lines anyway and press **1 2 3 4** to stamp the card.
+- Press **T** on the title to start the clock. Targets: chat done by about 0:53, story slides done by 1:52, map done by 2:30, back on the deck by 4:25. No juror sentence tonight.
+- On the demo slide, say the demo lines anyway and press **1 2 3 4** to fix the card.
 - **B** shows backup clips from an earlier run. Never call them "live".

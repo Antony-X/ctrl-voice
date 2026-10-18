@@ -11,7 +11,7 @@ Open `index.html` in Chrome. It works straight from the file, with no server and
 | F | Fullscreen |
 | S | Speaker notes in a second window, with a timer |
 | N | Speaker notes over the slide |
-| 1–4 | Stamp a square on the "Mistake bingo" demo slide |
+| 1–4 | Fix one mistake on the demo slide's dare card (press again to undo) |
 | B | Jump to the backup videos |
 | X | Skip this slide (remembered in this browser) |
 | P | Pause or play the current clip or video |
@@ -23,11 +23,13 @@ The slides are:
 1. title;
 2. two voice notes in a chat, played and fixed (real engine output);
 3. 7 billion;
-4. the idea: every word tied to its sound, edit the words and the audio follows;
-5. anywhere: one key, six chat apps, then a video and a speech;
-6. the architecture map (each click flies to the next region);
-7. mistake bingo (the live demo);
-8. thank you.
+4. the loop: record, listen, cringe, delete, again, until one take goes out;
+5. the idea: every word tied to its sound, edit the words and the audio follows;
+6. not a clone: regenerating it all (73%) vs your recording with a sliver of AI (98%);
+7. anywhere: one key, six chat apps, then a video and a speech;
+8. the architecture map (each click flies to the next region);
+9. the dare card: four mistakes, one take, fixed live (the live demo);
+10. thank you.
 
 The backup videos are reached only with B.
 

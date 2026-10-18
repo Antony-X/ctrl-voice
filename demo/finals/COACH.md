@@ -15,7 +15,7 @@ Each tip is marked **[research]**, with a source, or **[practice]**, which is co
 4. **Map, region 8: drop "AUC 0.88".** It invites "how good is it in free speech?", and the honest answer is 19% (Q&A sheet 6). The feature is also switched off in the live demo. [practice]
 5. **2:10: the time gates are not optional.** People remember a talk's strongest moment and its ending much more than its length or its middle. A demo beat you skip costs little; a close you rush costs a lot. [research] The peak-end rule (Fredrickson & Kahneman 1993; a 2022 meta-analysis of 174 effects supports it in the lab, but field evidence is mixed).
 6. **3:26, after the replaced word plays: "ეს სიტყვა მე არასდროს მითქვამს."** Then hold 2 s of silence before Tone. This is the peak of the talk, so let it land. [research] Peak-end, as in tip 5.
-7. **4:25, Bingo: stamp only what fired.** If one didn't, say „დღეს ოთხიდან სამი“ calmly. [research] In a lab experiment and a field study, investors' funding decisions followed perceived *preparedness*, not displayed passion (Chen, Yao & Kotha 2009, Academy of Management Journal). Being visibly honest and prepared beats hype.
+7. **4:25, the dare card: fix only what fired.** If one didn't, say „დღეს ოთხიდან სამი“ calmly. [research] In a lab experiment and a field study, investors' funding decisions followed perceived *preparedness*, not displayed passion (Chen, Yao & Kotha 2009, Academy of Management Journal). Being visibly honest and prepared beats hype.
 8. **4:40, close: watch the phrase "about a second".** The room has just watched a ~10 s wait. Stress the scope, "the ums and the take-backs", and you can add the fact from Q&A 2: "a re-said word takes about 3 s". [practice]
 9. **Last 10 s: end on the tagline and the name, not on the GitHub line.** Then stop talking. [research] Peak-end, as in tip 5. The new wording is below.
 10. **Q&A: give a one-sentence answer, then one piece of evidence, then stop.** "We haven't measured that" is a complete answer. [practice] I could not verify a study for this tonight, so treat it as coaching habit.
@@ -35,7 +35,7 @@ The order changes so the tagline comes last. "QR კოდი" is clearer than "
 ## If the demo fails
 1. Say what happened in **one** calm line, with **one** joke (use the existing „სერვერმა ძილისთვის კარგი მომენტი შეარჩია.“). Don't debug on stage and don't apologise twice. [research] After someone has shown competence, a small blunder can make them *more* likeable (Aronson et al. 1966, the pratfall effect: one old study, with mixed follow-ups). By 2:10 you have already shown competence.
 2. Keep to the gates: at 25 s, **Alt+Tab, then B**, and say „ადრინდელი გაშვებიდან“, never „ლაივი“.
-3. Go back to the story: stamp only what really happened, then give the close **on time**. The ending is what they remember, not the glitch.
+3. Go back to the story: fix only what really happened, then give the close **on time**. The ending is what they remember, not the glitch.
 
 ## The 5 most likely judge questions (answer first, then one fact)
 **1. Georgian?**
@@ -49,9 +49,9 @@ The order changes so the tagline comes last. "QR კოდი" is clearer than "
 [No: only your voice, only the words you meant, and every AI word shown in green. The original file is never changed. Planned: an AudioSeal watermark on every generated word and a "words changed" note the listener can see.]
 
 **3. What did *you* build? The models already exist.**
-„ცალკეული მოდელები ცნობილია: Whisper, Qwen, PlayDiffusion, F5-TTS. ჩვენია ის, რაც მათ შორისაა: Whisper-ს „um“-ებით ვაპრომპტავთ, LLM-ს მხოლოდ წაშლა შეუძლია და წესები ამოწმებს, ორ ხმის მოდელს ორჯერ ვამოწმებთ, და ვსვამთ მხოლოდ ახალ სიტყვას. ასე ხმის მსგავსება 0.98-ია; მთლიანი გენერაციისას 0.73-მდე ეცემა.“
+„ცალკეული მოდელები ცნობილია: Whisper, Qwen, PlayDiffusion, F5-TTS. ჩვენია ის, რაც მათ შორისაა: Whisper-ს „um“-ებით ვაპრომპტავთ, LLM-ს მხოლოდ წაშლა შეუძლია და წესები ამოწმებს, ორ ხმის მოდელს ორჯერ ვამოწმებთ, და ვსვამთ მხოლოდ ახალ სიტყვას. ასე ხმის მსგავსება 98%-ია; მთლიანი გენერაციისას 73%-მდე ეცემა.“
 
-[The individual models are known ones. Ours is what sits between them: we prompt Whisper with ums, the LLM can only delete and the rules check it, both voice models are checked twice, and we splice in only the new word. That keeps voice similarity at 0.98; regenerating the whole clip drops it to 0.73.]
+[The individual models are known ones. Ours is what sits between them: we prompt Whisper with ums, the LLM can only delete and the rules check it, both voice models are checked twice, and we splice in only the new word. That keeps voice similarity at 98%; regenerating the whole clip drops it to 73%.]
 
 **4. What if it cuts something important?**
 „მხოლოდ წაშლა შეუძლია, და სახიფათო სიტყვები დაცულია: „არა“, რიცხვი, თარიღი ან დრო მხოლოდ მაშინ ქრება, თუ იმავე ტიპის შესწორება მოსდევს. საეჭვო რჩევად რჩება. ათ მახე წინადადებაზე აზრი არცერთში შეცვლილა.“
@@ -70,7 +70,7 @@ These are all **[practice]**.
 - Keep your feet planted while you talk. Move only at transitions, such as walking to the laptop.
 - Talk to the judges, not to the projector. Turn to the screen only to point, then turn back.
 - End your own Georgian sentences with a **falling** pitch. Don't uptalk: your product's Confident feature makes exactly this point.
-- Pause for a full beat after „ხმის — ვერა.“, „აქამდე.“, „ეს სიტყვა მე არასდროს მითქვამს.“ and „ბინგო.“.
+- Pause for a full beat after „ხმის — ვერა.“, „აქამდე.“, „ეს სიტყვა მე არასდროს მითქვამს.“ and „ოთხიდან ოთხი.“.
 - Speak louder and slower than feels natural, especially on the map: one idea per breath.
 
 ## Sources and how strong they are

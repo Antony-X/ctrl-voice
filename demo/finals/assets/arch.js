@@ -56,20 +56,22 @@
   };
 
   // ------------------------------------------------------------------ the map: flow arrows between regions
+  /** The arrows, one <g> each, in tour order; `to` is the region an arrow leads into (it draws just before that region). */
   function links(parent) {
-    const g = el('g', {}, parent), p = Sk.P(g), o = { color: C.ink2, sw: 7, hl: 40, rough: 0.9 };
+    const o = { color: C.ink2, sw: 7, hl: 40, rough: 0.9 }, out = [];
     const cx = (c) => c * RW + RW / 2, cy = (r) => r * RH + RH / 2;
     const E = 78;                                                            // how far an arrow reaches into each sheet
-    p.arrow([[RW - E, cy(0)], [RW + E, cy(0)]], o);                         // hear → align
-    p.arrow([[2 * RW - E, cy(0)], [2 * RW + E, cy(0)]], o);                 // align → decide
-    p.arrow([[cx(2), RH - E], [cx(2), RH + E]], o);                         // decide → rules
-    p.arrow([[2 * RW + E, cy(1)], [2 * RW - E, cy(1)]], o);                 // rules → playdiff
-    p.arrow([[2 * RW + 300, RH + 14], [RW + RW / 2, RH - 2], [RW / 2 + 420, RH + 6], [RW / 2 + 180, RH + 64]], { ...o, dash: [16, 14], curve: true });  // rules → f5, in parallel (lands right of the title)
-    p.arrow([[cx(0), 2 * RH - E], [cx(0), 2 * RH + E]], o);                 // f5 → verify
-    p.arrow([[RW + 140, 2 * RH - E], [RW - 140, 2 * RH + E]], o);           // playdiff → verify
-    p.arrow([[RW - E, cy(2)], [RW + E, cy(2)]], o);                         // verify → pron
-    p.arrow([[2 * RW - E, cy(2)], [2 * RW + E, cy(2)]], o);                 // pron → tone
-    return g;
+    const arrow = (to, pts, extra) => { const g = el('g', {}, parent); Sk.P(g).arrow(pts, { ...o, ...extra }); out.push({ g, to }); };
+    arrow(1, [[RW - E, cy(0)], [RW + E, cy(0)]]);                           // hear → align
+    arrow(2, [[2 * RW - E, cy(0)], [2 * RW + E, cy(0)]]);                   // align → decide
+    arrow(3, [[cx(2), RH - E], [cx(2), RH + E]]);                           // decide → rules
+    arrow(4, [[2 * RW + E, cy(1)], [2 * RW - E, cy(1)]]);                   // rules → playdiff
+    arrow(5, [[2 * RW + 300, RH + 14], [RW + RW / 2, RH - 2], [RW / 2 + 420, RH + 6], [RW / 2 + 180, RH + 64]], { dash: [16, 14], curve: true });  // rules → f5, in parallel (lands right of the title)
+    arrow(6, [[cx(0), 2 * RH - E], [cx(0), 2 * RH + E]]);                   // f5 → verify
+    arrow(6, [[RW + 140, 2 * RH - E], [RW - 140, 2 * RH + E]]);             // playdiff → verify
+    arrow(7, [[RW - E, cy(2)], [RW + E, cy(2)]]);                           // verify → pron
+    arrow(8, [[2 * RW - E, cy(2)], [2 * RW + E, cy(2)]]);                   // pron → tone
+    return out;
   }
 
   // ------------------------------------------------------------------ camera
@@ -87,9 +89,13 @@
     const svg = el('svg', { width: 3 * RW, height: 3 * RH, viewBox: `0 0 ${3 * RW} ${3 * RH}` });
     cam.appendChild(svg);
     const regions = ARCH.meta.map((m, n) => ARCH.mountRegion(svg, m, n));
-    const linkG = links(svg);                                 // on top of the sheets
-    const anims = regions.map((r) => Sk.animator(r.items, { per: 55, dur: 480 }));
-    const linkAnim = Sk.animator([{ g: linkG, seq: 0 }], { dur: 700 });
+    const arrows = links(svg);                                // on top of the sheets
+    // The build: region 1 draws on its own (about 1 s), then the other eight cascade in fast, each with its arrow.
+    const FIRST = 1100, REST = 380, GAP = 140, AFTER = 1250;  // ms: region 1's draw, each later region's draw, cascade step, cascade start
+    const seqs = (r) => new Set(r.items.map((i) => i.seq)).size;
+    const anims = regions.map((r, i) => Sk.animator(r.items, i === 0 ? { per: FIRST / seqs(r), dur: 520 } : { per: REST / seqs(r), dur: 300 }));
+    const linkAnims = arrows.map((a) => Sk.animator([{ g: a.g, seq: 0 }], { dur: 260 }));
+    const linkAnim = { show: () => linkAnims.forEach((a) => a.show()), reset: () => linkAnims.forEach((a) => a.reset()) };
 
     let view = { ...OVER }, raf = 0, stop = null, at = -1, timers = [];
     function apply(v) { cam.style.transform = `translate(${960 - v.s * v.cx}px, ${540 - v.s * v.cy}px) scale(${v.s})`; }
@@ -116,8 +122,17 @@
       /** Overview, everything drawing itself region by region. */
       build() {
         halt(); at = -1; cancelAnimationFrame(raf); view = { ...OVER }; apply(view);
-        linkAnim.play();
-        anims.forEach((a, i) => timers.push(setTimeout(() => a.play(), 120 + i * 230)));
+        anims.forEach((a) => a.reset()); linkAnim.reset();    // start from an empty canvas, even if the map was shown before
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) { anims.forEach((a) => a.show()); linkAnim.show(); return; }
+        const at0 = (ms, fn) => timers.push(setTimeout(fn, ms));
+        at0(100, () => anims[0].play());
+        const scale = [0, 2, 4, 5, 7, 9, 11, 12];               // semitones: the cascade's ticks climb a major scale
+        for (let i = 1; i < anims.length; i++) {
+          const t = AFTER + (i - 1) * GAP;
+          at0(t - 120, () => arrows.forEach((a, j) => { if (a.to === i) linkAnims[j].play(); }));
+          at0(t, () => { anims[i].play(); window.Sfx?.tick?.(660 * Math.pow(2, scale[i - 1] / 12)); });
+        }
+        at0(AFTER + (anims.length - 2) * GAP + 420, () => window.Sfx?.sparkle?.());
       },
       show() { halt(); anims.forEach((a) => a.show()); linkAnim.show(); },
       /** k = -1: the overview; 0..8: a region (its arrival animation starts when the camera lands). */

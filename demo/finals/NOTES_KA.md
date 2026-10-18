@@ -67,105 +67,143 @@
 
 ---
 
-## idea (1:03–1:16; სიტყვები თავის ხმაზეა მიბმული)
+## loop (1:03–1:15; პრობლემა: თავიდან ჩაწერის წრე)
 
-**step 0, 1:03**, ჩანაწერი იხატება, სიტყვები ზემოთ ჩნდება, შეცდომები წითლდება:
+<!-- step 0 -->
+**step 0, 1:03**, წრე იხატება, წერტილი ტრიალებს, „take“ მატულობს 1, 2, 3; მერე „type it“:
+„დღეს რას ვაკეთებთ? ვწერთ, ვუსმენთ, გვრცხვენია, ვშლით… და თავიდან. ან ვნებდებით და ვბეჭდავთ.“
+[What do we do today? Record, listen, cringe, delete… and again. Or we give up and type it.]
+
+<!-- step 1 -->
+**step 1, 1:10 →**: წრე წყდება, ერთი ჩანაწერი მწვანე ისრით გადის, „sent“.
+„Ctrl+Voice ამ წრეს წყვეტს: ერთი ჩანაწერი, და გაგზავნილია.“
+[Ctrl+Voice breaks the loop: one take, and it's sent.]
+
+**1:15 →**
+
+*რიცხვები აქ არ არის: მხოლოდ ის, რასაც ყველა აკეთებს.*
+[No statistics here: just what everyone does.]
+
+---
+
+## idea (1:15–1:28; სიტყვები თავის ხმაზეა მიბმული)
+
+**step 0, 1:15**, ჩანაწერი იხატება, სიტყვები ზემოთ ჩნდება, შეცდომები წითლდება:
 „როგორ? შენი ხმა სიტყვებად იქცევა, და თითოეული სიტყვა თავის ბგერაზე რჩება მიბმული.“
 [How? Your voice becomes words, and every word stays tied to its own sound.]
 
-**step 1, 1:08 →**: წითელი სიტყვები იხაზება, მათი ხმა ქრება, დანარჩენი ერთდება, „have“ მწვანე „has“ ხდება.
+**step 1, 1:20 →**: წითელი სიტყვები იხაზება, მათი ხმა ქრება, დანარჩენი ერთდება, „have“ მწვანე „has“ ხდება.
 „ჩვენ სიტყვებს ვასწორებთ, როგორც ტექსტს, და აუდიო მათ მიჰყვება. ახალია მხოლოდ შეცვლილი სიტყვა, შენივე ხმით. დანარჩენი შენი ნამდვილი ჩანაწერია.“
 [We edit the words, like a text, and the audio follows. Only the changed word is new, in your own voice. The rest is your real recording.]
 
-**1:16 →**
+**1:28 →**
 
-*ტალღის ნაწილები ამ სიტყვებისთვის სარას ნამდვილი ჩანაწერიდანაა (ილუსტრაციაა). თუ ჰკითხავენ, რატომ არა მთელი მესიჯის ხელახლა გენერაცია: მაშინ ხმის მსგავსება 0.73-მდე ეცემა, ასე კი 0.98 რჩება.*
-[The waveform pieces are Sarah's real audio for these words, drawn as an illustration. If asked why not regenerate the whole message: voice similarity drops to 0.73; this way it stays 0.98.]
+*ტალღის ნაწილები ამ სიტყვებისთვის სარას ნამდვილი ჩანაწერიდანაა (ილუსტრაციაა). თუ ჰკითხავენ, რატომ არა მთელი მესიჯის ხელახლა გენერაცია: მაშინ ხმის მსგავსება 73%-მდე ეცემა, ასე კი 98% რჩება.*
+[The waveform pieces are Sarah's real audio for these words, drawn as an illustration. If asked why not regenerate the whole message: voice similarity drops to 73%; this way it stays 98%.]
 
 ---
 
-## uses (1:16–1:28; ერთი ღილაკი, ექვსი აპი, მერე ვიდეო და გამოსვლა)
+## clone (1:28–1:40; რატომ არის განსხვავებული: შენი ხმა, არა კლონი)
 
-**step 0, 1:16**, ღილაკი ჩაიჭირება, აპები გარშემო ამოფრინდება:
+<!-- step 0 -->
+**step 0, 1:28**, ზედა ზოლი („AI clone“) მთლიანად მწვანდება, 73%:
+„თუ მთელ მესიჯს AI-ით თავიდან შევქმნით, ეს უკვე კლონია: ხმის მსგავსება 73%-მდე ეცემა.“
+[Regenerate the whole message with AI and it's a clone: voice similarity drops to 73%.]
+
+<!-- step 1 -->
+**step 1, 1:34 →**: ქვედა ზოლი („Ctrl+Voice“), მხოლოდ ორი ვიწრო მწვანე ნაწილი, 98%, ხაზი: „Your voice. Not a clone.“
+„ჩვენთან შენი ნამდვილი ჩანაწერი რჩება. AI მხოლოდ შეცვლილ სიტყვებს ამბობს, დაახლოებით ერთ წამს ცხრიდან: 98%. ორიგინალი კი არასდროს იცვლება.“
+[We keep your real recording. AI only says the changed words, about one second of nine: 98%. And the original never changes.]
+
+**1:40 →**
+
+*ზოლები სარას გასწორებული მესიჯია (9.2 წმ); მწვანე ნაწილები ზუსტად „Dan has“ და „a bit“ არის. 73% და 98% გაზომილია (SCRIPT.md, კითხვა-პასუხი).*
+[The bars are Sarah's fixed note (9.2 s); the green slivers are exactly "Dan has" and "a bit". 73% and 98% are measured (SCRIPT.md, Q&A).]
+
+---
+
+## uses (1:40–1:52; ერთი ღილაკი, ექვსი აპი, მერე ვიდეო და გამოსვლა)
+
+**step 0, 1:40**, ღილაკი ჩაიჭირება, აპები გარშემო ამოფრინდება:
 „და ის იქ მუშაობს, სადაც უკვე ლაპარაკობ: ერთი ღილაკით Discord-ში, WhatsApp-ში, Telegram-ში, Slack-ში, Signal-სა და Teams-ში. ინტეგრაცია არ სჭირდება.“
 [It works where you already talk: one hotkey, in Discord, WhatsApp, Telegram, Slack, Signal and Teams. No integration needed.]
 
-**step 1, 1:23 →**: ვიდეო და მიკროფონი.
+**step 1, 1:47 →**: ვიდეო და მიკროფონი.
 „და არა მხოლოდ ჩატში: ჩაწერილი ვიდეო ან გამოსვლა აპში ატვირთე და ზუსტად ისე გაასწორე.“
 [And not just chat: import a recorded video or a speech into the app and fix it the same way.]
 
-**1:28 →**
+**1:52 →**
 
 ---
 
-## arch (1:28–2:20; კამერა რომ დაჯდება, თქვი ერთი მოკლე ფრაზა, მეტი არა)
+## arch (1:52–2:30; კამერა რომ დაჯდება, თქვი რამდენიმე სიტყვა, მეტი არა)
 
-**step 0, 1:28**, რუკა თავისით იხატება:
-„ამის უკან ცხრა მოდელი დგას, ერთად.“
-[Behind it: nine models, working together.]
+**step 0, 1:52**, რუკა თავისით იხატება:
+„ამის უკან ცხრა მოდელია.“
+[Behind it: nine models.]
 
-**step 1, 1:32 →, Hear (Whisper)**
-„Whisper ყველა სიტყვას ისმენს, სანამ ლაპარაკობ, „um“-ებიანად.“
-[Whisper hears every word as you talk, ums included.]
+**step 1, 1:56 →, Hear: Whisper**
+„Whisper ისმენს.“
+[Whisper listens.]
 
-**step 2, 1:37 →, Align (wav2vec2)**
-„wav2vec2 ყველა სიტყვას აუდიოში ზუსტად თავის ადგილზე სვამს.“
-[wav2vec2 pins every word to its exact place in the audio.]
+**step 2, 1:59 →, Align: wav2vec2**
+„wav2vec2 სიტყვებს ადგილს უჩენს.“
+[wav2vec2 places every word.]
 
-**step 3, 1:42 →, Decide (Qwen)**
-„Qwen წყვეტს, რა ამოიჭრას. აუდიოს არ ეხება.“
-[Qwen decides what to cut. It never touches the audio.]
+**step 3, 2:03 →, Decide: Qwen**
+„Qwen წყვეტს, რა ამოიჭრას.“
+[Qwen decides what to cut.]
 
-**step 4, 1:48 →, Rules**
-„წესები: მხოლოდ წაშლა. „არა“, რიცხვი ან თარიღი რჩება, თუ თვითონ არ შეცვალე.“
-[Hard rules: deletions only. A "not", a number or a date stays unless you replaced it yourself.]
+**step 4, 2:06 →, Rules**
+„წესები: მხოლოდ წაშლა.“
+[Rules: deletions only.]
 
-**step 5, 1:54 →, PlayDiffusion**
-„არასწორ სიტყვას PlayDiffusion შენი ხმით ამბობს თავიდან. ათიდან ცხრა სწორია.“
-[PlayDiffusion re-says the wrong word in your voice. Nine of ten right.]
+**step 5, 2:10 →, PlayDiffusion**
+„PlayDiffusion სიტყვას შენი ხმით ამბობს.“
+[PlayDiffusion re-says a word in your voice.]
 
-**step 6, 1:59 →, F5-TTS**
+**step 6, 2:13 →, F5-TTS**
 „მეორე ხმის მოდელი, პარალელურად.“
 [A second voice model, in parallel.]
 
-**step 7, 2:03 →, Verify**
-„ორივეს ორჯერ ვამოწმებთ და ვსვამთ მხოლოდ ყველაზე მსგავს ხმას.“
-[Both are checked twice; only the closest voice is spliced in.]
+**step 7, 2:16 →, Verify**
+„ვამოწმებთ და ვიტოვებთ ყველაზე მსგავსს.“
+[We check both and keep the closest.]
 
-**step 8, 2:08 →, Pronunciation (GOP)**
+**step 8, 2:20 →, Pronunciation (GOP)**
 „და გაუგებარ სიტყვებსაც ვიჭერთ.“
 [And we catch unclear words too.]
 
-**step 9, 2:12 →, Tone (PSOLA)**
-„Confident კი AI არ არის: შენსავე ჩანაწერს ტონს უცვლის.“
-[And Confident isn't AI: it reshapes the pitch of your own recording.]
+**step 9, 2:23 →, Tone (PSOLA)**
+„Confident: შენი ჩანაწერი, სხვა ტონით.“
+[Confident: your own recording, a new tone.]
 
-**step 10, 2:16 →**, კამერა უკან, მთელ რუკაზე გადის:
-„ეს არის მთელი სისტემა. ახლა ლაივში.“
-[That's the whole system. Now, live.]
+**step 10, 2:26 →**, კამერა უკან, მთელ რუკაზე გადის:
+„ეს არის სისტემა. ახლა ლაივში.“
+[That's the system. Now, live.]
 
-**2:20 →**, demo სლაიდი.
+**2:30 →**, demo სლაიდი.
 
-*თითო რეგიონზე ერთი ფრაზა: ორი ახალი სლაიდის დრო აქედან მოდის. 6-ე და 8-ე რეგიონზე ყოველთვის მოკლე ფრაზა თქვი; თუ აგვიანებ, უბრალოდ დააჭირე →. AUC 0.88 მხოლოდ რუკაზე ჩანს: ხმამაღლა ნუ იტყვი, მხოლოდ თუ ჰკითხავენ.*
+*თითო რეგიონზე რამდენიმე სიტყვა: ოთხი ისტორიის სლაიდის დრო აქედან მოდის. კამერას თავისი დრო აქვს, უბრალოდ დააჭირე →. 6-ე და 8-ე რეგიონზე ყოველთვის მოკლე ფრაზა თქვი; თუ აგვიანებ, უბრალოდ დააჭირე →. AUC 0.88 მხოლოდ რუკაზე ჩანს: ხმამაღლა ნუ იტყვი, მხოლოდ თუ ჰკითხავენ.*
 *„ცხრა მოდელი“, თუ ჰკითხავენ: Whisper, wav2vec2 (ასოები), Qwen3.6-35B-A3B, PlayDiffusion, F5-TTS, ECAPA, wav2vec2 (ფონემები), gradient boosting, Seed-VC.*
 *PSOLA-ს ნახატი და „three“/„tree“ ბადე ილუსტრაციებია. ზუსტ გაზომვად ნუ წარადგენ.*
-[One sentence per region: the two new slides' time comes from here. Regions 6 and 8 always get the short line; if late, just press →. AUC 0.88 stays on the map: say it only if asked. The nine models, if asked. The PSOLA and three/tree drawings are illustrations.]
+[A few words per region: the four story slides' time comes from here; the camera keeps its own timing. Regions 6 and 8 always get the short line; if late, just press →. AUC 0.88 stays on the map: say it only if asked. The nine models, if asked. The PSOLA and three/tree drawings are illustrations.]
 
 ---
 
-## demo (2:20–4:40)
+## demo (2:30–4:40)
 
 ### ⚠ სამი წესი
 1. **Alt+`-მდე Discord-ის მესიჯის ველში დააწკაპუნე.** სხვა შემთხვევაში დეკში ჩასვამს და Enter-ს დააჭერს, ანუ სლაიდი წავა.
    [Click into the Discord box before Alt+`, or it pastes into the deck and presses Enter.]
 2. **ჩაწერისას ჩუმად. რასაც იტყვი, მესიჯში მოხვდება.** ქართული კომენტარი მხოლოდ მეორე Alt+`-ის მერე.
    [While recording, everything you say is in the message. No Georgian asides.]
-3. **„Scratch that.“ და მერე სრული ერთი წამი სიჩუმე.** გადახაზვა მხოლოდ 0.5 წამზე მეტი პაუზის მერე ჩნდება. პლუს უბრალო „never mind“ დღეს ლაივში არ მუშაობს.
-   [After "scratch that", one full second of silence; the strike only fires after a pause over 0.5 s. Plain "never mind" doesn't strike live today.]
+3. **„Scratch that.“-ის მერე ჩუმად, 2 სრული წამი, ზოლს უყურე.** როგორც კი გადაიხაზება, გააგრძელე. თუ 3 წამში არ გადაიხაზა, ერთხელ დააჭირე **Ctrl+Z** და მერე გააგრძელე. გადახაზვის მერე Ctrl+Z არ დააჭირო.
+   [After "scratch that", stay silent for 2 s and watch the bar. Once it's struck through, carry on. Nothing struck after 3 s: press Ctrl+Z once, then carry on. Never press Ctrl+Z after a strike.]
 
 ### ინგლისური მესიჯი (ეს ზუსტად ასე თქვი; ქართული არ იმუშავებს: კოდში Whisper ინგლისურზეა მიბმული)
 **C (რეკომენდებული):**
-> "Hey team. Um, the final is on Saturday, no wait, Sunday. I didn't rehearse at all. Scratch that. *(1 წმ პაუზა)* The judges is really friendly, and I think we're ready?"
+> "Hey team. Um, we're on stage on Saturday, no wait, Sunday. I didn't rehearse at all. Scratch that. *(1 წმ პაუზა)* The judges is really friendly, and I think we're ready?"
 
 **A:**
 > "Hey guys. Um, so, the trip. We're leaving Friday, no wait, Saturday morning. I already ate all the snacks. Scratch that. *(1 წმ)* The tickets is in my bag, and I think dinner is pizza?"
@@ -177,39 +215,35 @@
 
 ### ნაბიჯ-ნაბიჯ
 
-**2:20**, ბინგოს სლაიდი:
-„შეცდომების ბინგო: ოთხივე შეცდომა, ერთ მესიჯში. ინგლისურად: მოდელები ჯერ ინგლისურზეა მორგებული.“
-[Mistake bingo: all four mistakes, in one message. In English: the models are tuned for English for now.]
+**2:30**, „dare“ ბარათი (მესიჯი, ოთხი შეცდომა მონიშნული):
+„ახლა ოთხ შეცდომას დავუშვებ. განზრახ. ერთ ჩანაწერში, ლაივში. ინგლისურად: მოდელები ჯერ ინგლისურზეა მორგებული.“
+[Now I'll make four mistakes. On purpose. In one take, live. In English: the models are tuned for English for now.]
 
-**2:26**: *Alt+Tab, Discord, მესიჯის ველზე დააწკაპუნე.*
+**2:36**: *Alt+Tab, Discord, მესიჯის ველზე დააწკაპუნე.*
 „აი, Discord.“
 [Here's Discord.]
 
-**2:28**: *Alt+`. დაელოდე, სანამ ტაიმერი დაიძვრება (≈0.5 წმ). ამიერიდან ჩუმად.*
+**2:38**: *Alt+`. დაელოდე, სანამ ტაიმერი დაიძვრება (≈0.5 წმ). ამიერიდან ჩუმად.*
 [Alt+`; wait for the timer; silence from now on.]
 
-**2:29**: *ინგლისური მესიჯი. „Scratch that.“-ის მერე ერთი წამი პაუზა, ზოლზე ხელით მიუთითე: გადაიხაზება, მერე გაქრება, ზოლზე ეწერება „Scratched that“.*
+**2:39**: *ინგლისური მესიჯი. „Scratch that.“-ის მერე ჩუმად, 2 წამი, ზოლს უყურე: გადაიხაზება, მერე გაქრება („Scratched that“). 3 წამში თუ არ გადაიხაზა, ერთხელ Ctrl+Z და გააგრძელე. „Connection lost“ თუ გამოჩნდა, ყურადღება არ მიაქციო.*
 [Say the message; after "scratch that", pause and point; it strikes, then vanishes.]
 
-**2:43**: *Alt+` თავიდან. ზოლი: „Cleaning up…“, „Saying 'are'…“, „Sending to Discord…“, „Sent to Discord“.* ლოდინისას:
+**2:53**: *Alt+` თავიდან. ზოლი: „Cleaning up…“, „Saying 'are'…“, „Sending to Discord…“, „Sent to Discord“.* ლოდინისას:
 „„scratch that“ ხომ ნახეთ? ლაპარაკისას გაქრა. ახლა Whisper მესიჯს თავიდან ისმენს, LLM წყვეტს, რა ამოიჭრას, წესები ამოწმებს, ჩემს არასწორ სიტყვას კი ორი ხმის მოდელი ერთდროულად ამბობს, ჩემივე ხმით.“
 [Did you see "scratch that"? Gone while I talked. Now Whisper re-hears it, the LLM picks the cuts, the rules check, and two voice models re-say my wrong word at once, in my voice.]
 
-**~2:53**: *▶-მდე, Discord-ში:*
+**~3:03**: *▶-მდე, Discord-ში:*
 „ერთი სიტყვა აქ AI-მ თქვა. მოუსმინეთ: რომელი?“ *(▶)*
 [One word here was made by AI. Listen: which one?]
 
-**3:04**:
+**3:14**:
 „რომელი?“ *(ერთი-ორი პასუხი)* „ვნახოთ.“
 [Which one? Let's look.]
 
-**3:09**: *Alt+Shift+`, ზედა (უახლესი) მესიჯი.*
+**3:19**: *Alt+Shift+`, ზედა (უახლესი) მესიჯი.*
 „აი ისიც, მწვანით: „judges are“. გადახაზული ამოჭრილია. დანარჩენი ყველაფერი ჩემი ნამდვილი ხმაა, ხელუხლებელი.“
 [There it is, in green: "judges are". Struck through means cut. Everything else is my real voice, untouched.]
-
-**3:19**: *„Original“, Space (≈5 წმ), Space, „Fixed“.*
-„ორიგინალი…“ *(გააჩერე)* „…გასწორებული კი უკვე მოისმინეთ. ორიგინალი ფაილი არასდროს იცვლება: ეს ცვლილებების სიაა, რომელიც მოსმენისას ან გაგზავნისას იწყობა.“
-[The original… and you already heard the fixed one. The original file never changes; it's an edit list, built when you play or send.]
 
 **3:31, Replace**:
 „ახლა თქვენ აირჩიეთ: ჟიური „friendly“ იყოს… თუ „generous“?“
@@ -235,27 +269,27 @@
 [Juror sentence: skip it tonight; its time pays for the two new slides, and the ~17 s left is buffer for engine waits. Only if Confident finished by 4:00.]
 
 **4:25**: *Alt+Tab დეკზე (საჭიროების შემთხვევაში F), მერე 1, 2, 3, 4.*
-„„Um“. აზრის შეცვლა. „Scratch that“. არასწორი სიტყვა.“ *(მეოთხე)* „ბინგო.“
-[Um. Change of mind. Scratch that. Wrong word. Bingo.]
-*მხოლოდ ის მონიშნე, რაც მართლა მოხდა. თუ ერთი არ გამოვიდა:* „დღეს ოთხიდან სამი.“
-[Stamp only what really happened: "three out of four tonight".]
+*ერთი ღილაკი, ერთი ფრაზა:* „Um — წავიდა. აზრის შეცვლა — წავიდა. Scratch that — წავიდა. არასწორი სიტყვა — გასწორდა.“ *(მეოთხის მერე, „4 / 4 fixed, live“)* „ოთხიდან ოთხი.“
+[Um: gone. Change of mind: gone. Scratch that: gone. Wrong word: fixed. Four out of four.]
+*მხოლოდ ის გაასწორე, რაც მართლა მოხდა (მეორედ დაჭერა აუქმებს). თუ ერთი არ გამოვიდა:* „დღეს ოთხიდან სამი.“
+[Fix only what really happened (pressing again undoes it): "three out of four tonight".]
 
 **4:38 →**, close.
 
 ### დროის კარიბჭეები
-- **3:03**: Discord-ში ჯერ არაფერია? Plan B, „ნელია“.
+- **3:13**: Discord-ში ჯერ არაფერია? Plan B, „ნელია“.
 - **3:35**: Replace ჯერ არ დაწყებულა? გამოტოვე.
 - **4:12**: Confident ჯერ არ ჟღერდა? დეკზე დაბრუნდი.
 - **4:30**: რაც არ უნდა ხდებოდეს, დეკზე დაბრუნდი.
 
-[Time gates: 3:03 engine slow; 3:35 skip Replace; 4:12 back to the deck; 4:30 hard stop.]
+[Time gates: 3:13 engine slow; 3:35 skip Replace; 4:12 back to the deck; 4:30 hard stop.]
 
 ### ლოდინის ფრაზები
 - ~2 წმ: „თითოეულ სიტყვას თავიდან ისმენს.“ / „აქ AI არ არის: ჩემი ჩანაწერია, გადაკეთებული.“
   [It's re-hearing every word. / No AI here: it's my own recording, reshaped.]
 - ~3–5 წმ: „ორი ხმის მოდელი ერთდროულად ამბობს, ჩემი ხმით, და შედის მხოლოდ ის, რომელიც ორივე შემოწმებას გაივლის.“
   [Two voice models at once, in my voice; only the one that passes both checks gets in.]
-- ~6–10 წმ: 2:43-ის გრძელი ფრაზა, და კიდევ: „სარას მესიჯში, ორი სიტყვით, მთელ გასწორებას დაახლოებით ათი წამი დასჭირდა.“
+- ~6–10 წმ: 2:53-ის გრძელი ფრაზა, და კიდევ: „სარას მესიჯში, ორი სიტყვით, მთელ გასწორებას დაახლოებით ათი წამი დასჭირდა.“
   [In Sarah's message, with two re-said words, the whole fix took about ten seconds.]
 - 15 წამზე მეტი: „GPU ამ ოთახიდან საკმაოდ შორსაა.“ *(25 წამზე Plan B.)*
   [The GPU is a long way from this room.]
@@ -265,8 +299,8 @@
 ## close (4:40–5:00)
 
 **4:40 →**
-„ცხრა მოდელი. დაახლოებით ერთი წამი „um“-ებისა და უკან წაღებული სიტყვების ამოსაჭრელად. და 0.98: ხმის მსგავსება, როცა სიტყვას თავიდან ვამბობთ.“
-[Nine models. About a second to cut the ums and the take-backs. And 0.98 voice similarity when we re-say a word.]
+„ცხრა მოდელი. დაახლოებით ერთი წამი „um“-ებისა და უკან წაღებული სიტყვების ამოსაჭრელად. და 98%: ხმის მსგავსება, როცა სიტყვას თავიდან ვამბობთ.“
+[Nine models. About a second to cut the ums and the take-backs. And 98% voice similarity when we re-say a word.]
 
 **4:50**
 „ყველაფერი GitHub-ზეა: დაასკანერეთ QR კოდი და სცადეთ.“ *(პაუზა)* „Ctrl+Voice. თქვი არეულად… გაგზავნე სუფთად.“ *(1 წმ)* „მადლობა.“
@@ -372,8 +406,12 @@
 [First a small on-device recognizer and compact LLM for transcript, undo and clean-up, which is all most messages need; then a distilled voice editor for the few re-said words; the server stays for heavy extras like the accent.]
 
 **9. რატომ არა მთლიანი მესიჯის ხელახლა გენერაცია? და რატომ ორი მოდელი?**
-„მთლიანი კლიპის ხელახლა გენერაციისას ხმის მსგავსება 0.73-მდე ეცემა; მხოლოდ ახალი სიტყვის ჩასმით 0.98 რჩება, და შენი ნამდვილი ჩანაწერიც რჩება. PlayDiffusion ათიდან ცხრას ამბობს სწორად 1.5 წამში, F5-TTS ათიდან შვიდს წამში. პარალელურად ვუშვებთ, ორივეს ვამოწმებთ და ყველაზე მსგავს ხმას ვიტოვებთ. dots.tts-მა ათივე სწორად თქვა, მაგრამ 12.7 წამი დასჭირდა, ჩატისთვის ნელია.“
-[Regenerating the whole clip drops voice similarity to 0.73; splicing only the new word keeps 0.98 and your real recording. PlayDiffusion 9/10 in 1.5 s, F5-TTS 7/10 in 1.0 s; both run and are verified, and the closest voice is kept. dots.tts got 10/10 but took 12.7 s.]
+„მთლიანი კლიპის ხელახლა გენერაციისას ხმის მსგავსება 73%-მდე ეცემა; მხოლოდ ახალი სიტყვის ჩასმით 98% რჩება, და შენი ნამდვილი ჩანაწერიც რჩება. PlayDiffusion ათიდან ცხრას ამბობს სწორად 1.5 წამში, F5-TTS ათიდან შვიდს წამში. პარალელურად ვუშვებთ, ორივეს ვამოწმებთ და ყველაზე მსგავს ხმას ვიტოვებთ. dots.tts-მა ათივე სწორად თქვა, მაგრამ 12.7 წამი დასჭირდა, ჩატისთვის ნელია.“
+[Regenerating the whole clip drops voice similarity to 73%; splicing only the new word keeps 98% and your real recording. PlayDiffusion 9/10 in 1.5 s, F5-TTS 7/10 in 1.0 s; both run and are verified, and the closest voice is kept. dots.tts got 10/10 but took 12.7 s.]
+
+**„98% რისი?“**
+„ეს ხმის მსგავსების ქულაა: ხმის ემბედინგების მსგავსება, 0.98 ერთიდან, 10 ნამდვილ ჩანაწერზე; მთელი მესიჯის თავიდან გენერაციისას — 0.73.“
+[It's a voice-similarity score: speaker-embedding similarity, 0.98 out of 1, on 10 real recordings; regenerating the whole message gives 0.73. It is not a listener test.]
 
 **10. ეს დიპფეიკის ხელსაწყო ხომ არ არის?**
 „მხოლოდ შენი ხმა, მხოლოდ ის სიტყვები, რაც გინდოდა, და ყველა AI სიტყვა მწვანით ჩანს. გეგმაშია AudioSeal-ის ვოტერმარკი ყველა გენერირებულ სიტყვაზე და მსმენელისთვის ხილული შენიშვნა „შეცვლილი სიტყვები“. მუშაობს Discord-ში, WhatsApp-ში, Telegram-ში, Slack-ში, Signal-სა და Teams-ში, Windows-ზე და macOS-ზე.“
