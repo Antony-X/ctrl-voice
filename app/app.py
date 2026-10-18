@@ -19,7 +19,7 @@ FUNC = set("a an the of to in on at is it i you he she we they and or but be am 
 SR = 24000; DATA = "/workspace/app_data"; os.makedirs(DATA, exist_ok=True)
 ENGINES = {k: int(v) for k, v in (e.split(":") for e in os.environ.get("ENGINES", "playdiff:8101,f5:8103,auk:8102,dots:8104").split(","))}
 FAST = [e for e in os.environ.get("FAST_ENGINES", "playdiff,f5").split(",") if e in ENGINES]
-PROMPT = "Umm, so, uh, I was like, you know, thinking... Hmm, okay, I mean, no wait, actually."
+PROMPT = "Um, so, uh, um, I was, uh, like, um, thinking, uh. Um. Uh. Hmm, um, okay, uh, I mean, um."  # filler-dense: whisper writes the ums it hears
 asr = WhisperModel(os.environ.get("ASR", "large-v3-turbo"), device="cuda", compute_type="float16")
 spk = EncoderClassifier.from_hparams("speechbrain/spkrec-ecapa-voxceleb", savedir="/workspace/hf/ecapa", run_opts={"device": "cuda"})
 GPU = asyncio.Lock()

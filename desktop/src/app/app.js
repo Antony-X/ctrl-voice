@@ -990,7 +990,8 @@ function renderTone() {
           aria-label="How ${s}" aria-valuetext="${levelName(v)}" ${locked} />
       </div>`;
     }).join('')}</div>
-    <div class="tone-foot"><span class="grow tone-read">${esc(describeMix(mixOf(TONE.levels)))}</span><span class="tone-status"></span></div>`;
+    <div class="tone-foot"><span class="grow tone-read">${esc(describeMix(mixOf(TONE.levels)))}</span>
+      <button class="text-btn" data-action="tone-accent" aria-pressed="${take?.engine === 'accent'}" title="Said again with a native English accent by an AI voice" ${locked}>${take?.engine === 'accent' ? 'Native accent ✓' : 'Native accent'}</button><span class="tone-status"></span></div>`;
   } else {
     body = `<div class="tone-cards ai">${AI_STYLES.map((s) => {
       const on = take?.engine === 'tone' && take.style === s;
