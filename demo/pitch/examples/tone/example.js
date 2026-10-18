@@ -4,9 +4,9 @@
  "synthetic": true,
  "speaker": {
   "label": "AI-generated demo voice",
-  "dataset": "ElevenLabs eleven_v3, stock voice \"Will\"",
-  "license": "ElevenLabs free tier output (no commercial licence on the free plan)",
-  "attribution": "AI-generated demo voice (ElevenLabs)",
+  "dataset": "ElevenLabs voice \"Will\", our script",
+  "license": "Made with ElevenLabs (elevenlabs.io)",
+  "attribution": "Made with ElevenLabs (elevenlabs.io). Tone by Ctrl+Voice.",
   "url": "https://elevenlabs.io"
  },
  "before": {
