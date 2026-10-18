@@ -91,8 +91,8 @@
     },
 
     v4(p) {   // AI vs original
-      const x0 = 160, Wd = 1600, pxs = Wd / 9.2, ai = pxs * 1.0;
-      p.text(x0, 60, "Sarah's message: 9.2 s", sans({ fs: 30, anchor: 'start', color: C.ink2 }));
+      const x0 = 160, Wd = 1600, pxs = Wd / 8.5, ai = pxs * 0.9;
+      p.text(x0, 60, "Sarah's message: 8.5 s", sans({ fs: 30, anchor: 'start', color: C.ink2 }));
       p.text(x0 + Wd - ai / 2, 60, '≈ 1 s AI', sans({ fs: 32, color: C.made, weight: 600 }));
       p.rect(x0, 110, Wd - ai - 6, 90, { color: C.ink2, fill: A(C.ink2, 0.22), r: 6 });
       p.rect(x0 + Wd - ai, 110, ai, 90, { color: C.made, fill: A(C.made, 0.55), r: 6 });
@@ -125,7 +125,7 @@
       p.text(1440, 275, 'exact clean-ups', { fs: 36 });
       p.text(1440, 325, 'on 28 hand-written messages', sans({ fs: 27, color: C.ink2 }));
       const chips = [
-        ['the LLM can\nonly delete', '', C.cut],
+        ['the clean-up can\nonly delete', '', C.cut],
         ['not · numbers ·\ndates · times', 'kept unless a same-type\nrepair replaces them', C.check],
         ['unsure?', 'it becomes\na suggestion', C.model],
         ['fails both checks\nafter 3 rounds', 'a re-said word is never\napplied automatically', C.made],
@@ -233,7 +233,7 @@
       const ox = 1040, oy = 560, sx = 52, sy = 40;
       const X = (s) => ox + s * sx, Y = (n) => oy - n * sy;
       p.text(1420, 10, 're-saying a word: right of 10, against seconds', { fs: 30 });
-      p.arrow([[ox, oy], [X(14.4), oy]], { color: C.ink3, sw: 2 });
+      p.arrow([[ox, oy], [X(13.8), oy]], { color: C.ink3, sw: 2 });
       p.arrow([[ox, oy], [ox, Y(11.2)]], { color: C.ink3, sw: 2 });
       [0, 5, 10].forEach((n) => p.text(ox - 18, Y(n), String(n), sans({ fs: 22, anchor: 'end', color: C.ink3 })));
       [0, 5, 10].forEach((s) => p.text(X(s), oy + 30, `${s} s`, sans({ fs: 22, color: C.ink3 })));

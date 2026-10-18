@@ -28,11 +28,11 @@
   const SP = 9;                              // a space at 30 px (SVG drops leading spaces)
 
   // The proposals: the three real cuts of Sarah's message (DATA.clean.edits), then the illustration.
-  // ("Shrek… Scratch that." abbreviates the real cut "Also, I've been watching Shrek all week. Scratch that.")
+  // ("Shrek… Scratch that." abbreviates the real cut "Also, I've been watching Shrek all week. Delete that!")
   const CHIPS = [
     { type: 'cut', words: 'Um,', w: TW.um },
     { type: 'cut', words: 'Thursday. No, sorry,', w: TW.thu },
-    { type: 'cut', words: 'Shrek… Scratch that.', w: TW.shrek },
+    { type: 'cut', words: 'Shrek… Delete that!', w: TW.shrek },
     { type: 'danger' },
   ];
   const DANGER = CHIPS.length - 1;

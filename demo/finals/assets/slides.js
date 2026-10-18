@@ -199,7 +199,7 @@
 
   // ------------------------------------------------------------------ uses: one key, anywhere you talk
   // The keycap is the app's own logo. Step 0: it is pressed and six chat apps burst out around it.
-  // Step 1: beyond chat, a video and a speech come in (recordings can be imported and fixed the same way).
+  // Step 1: beyond chat, a podcast and a speech come in (recorded audio files can be imported and fixed the same way).
   H.uses = {
     APPS: ['Discord', 'WhatsApp', 'Telegram', 'Slack', 'Signal', 'Teams'],
     CX: 960, CY: 600, RX: 500, RY: 285, K: 250,
@@ -237,12 +237,12 @@
         g.style.transitionDelay = `${i * 85}ms`;
         return g;
       });
-      // beyond chat: a video and a speech, each brought in to the key
+      // beyond chat: a podcast and a speech, each brought in to the key
       const more = el('g', { class: 'us-more' }, svg), mp = P(more), items = [];
       const vid = el('g', {}, more), vp = P(vid), vx = 215, vy = 592;
       vp.rect(vx - 118, vy - 76, 236, 152, { color: C.ink2, fill: C.sheet, r: 16, sw: 3, rough: 0.9, seed: 450 });
       vp.poly([[vx - 22, vy - 32], [vx + 30, vy], [vx - 22, vy + 32]], { color: C.ink, fill: Sk.alpha(C.ink, 0.12), closed: true, sw: 3.5, rough: 0.7, seed: 451 });
-      Sk.text(vid, vx, vy + 128, 'video', { fs: 40, font: 'hand', color: C.ink2 });
+      Sk.text(vid, vx, vy + 128, 'podcast', { fs: 40, font: 'hand', color: C.ink2 });
       const mic = el('g', {}, more), cp = P(mic), mx = 1705, my = 592;
       cp.rect(mx - 32, my - 86, 64, 108, { color: C.ink, fill: Sk.alpha(C.ink, 0.12), r: 32, sw: 3.5, rough: 0.8, seed: 460 });
       cp.path(`M${mx - 54} ${my - 14} Q${mx - 54} ${my + 54} ${mx} ${my + 54} Q${mx + 54} ${my + 54} ${mx + 54} ${my - 14}`, { color: C.ink2, sw: 3, rough: 0.6, seed: 461 });
@@ -255,7 +255,7 @@
       this.more = Sk.animator(items, { dur: 520, per: 260 });
       this.line = $('.us-line', this.s);
     },
-    /** 0: nothing; 1: key and apps; 2: plus video and speech. */
+    /** 0: nothing; 1: key and apps; 2: plus podcast and speech. */
     set(n) {
       if (n >= 1) this.keyAnim.show(); else this.keyAnim.reset();
       this.apps.forEach((g) => g.classList.toggle('on', n >= 1));
@@ -542,6 +542,7 @@
 
   // ------------------------------------------------------------------ close
   H.close = {
+    init(s) { const m = $('.cl-mark', s); if (m) m.innerHTML = mark; },
     // a hand-drawn underline under each number, drawn on as it counts up
     underline(s) {
       if (this.uls) return this.uls;

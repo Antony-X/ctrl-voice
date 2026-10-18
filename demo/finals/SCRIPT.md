@@ -5,19 +5,19 @@ How to read this file:
 - `→` means press Right arrow, Space or Enter in the deck. **Keys, not clicks**: the first click after switching back to the browser is ignored.
 - *Italics* are actions. "Quoted text" is what you say aloud.
 - Timestamps are cumulative and start at your first word.
-- The chat-slide timings were measured on the finished slide (steps about 15.4, 13.6, 1, 6.5 and 7.5 s), so the chat ends at about 0:53; the table uses that.
+- The chat-slide timings were measured on the finished slide (steps about 15.4, 13.6, 1, 6.5 and 7.5 s), so the chat ends at about 1:15; the table uses that.
 - The four story slides (loop, idea, clone, uses: about 49 s) are paid for by the map (a few words per region: 67 s down to 38 s) and the demo (a shorter demo intro, no Original-vs-Fixed playback, no juror sentence). Confirm at the first full rehearsal.
 - A one-page practice version with only the spoken lines is in `PITCH.md`.
 
 | Clock | Slide | Clicks | What happens |
 |---|---|---|---|
 | before | title | | logo, sound check (A) |
-| 0:00–0:53 | chat | hook, then → ×5 | Sarah's messy note gets fixed, guess the AI words, Eric gets confident |
-| 0:53–1:03 | stat | → ×2 | 7 billion a day; you can't edit your voice |
-| 1:03–1:15 | loop | → ×2 | the problem: record, listen, cringe, delete, again (or give up and type it); the loop breaks, one take is sent |
+| 0:00–0:15 | loop | hook, then → ×2 | the problem: record, listen, cringe, delete, again (or give up and type it); the loop breaks, one take is sent |
+| 0:15–0:25 | stat | → ×2 | 7 billion a day; you can't edit your voice |
+| 0:25–1:15 | chat | → ×5 | Sarah's messy note gets fixed, guess the AI words, Eric gets confident |
 | 1:15–1:28 | idea | → ×2 | every word tied to its sound: edit the words, the audio follows |
 | 1:28–1:40 | clone | → ×2 | why it is different: regenerate it all = a clone, 73%; Ctrl+Voice keeps your recording, a sliver of AI, 98% |
-| 1:40–1:52 | uses | → ×2 | one key, six chat apps; then a video and a speech |
+| 1:40–1:52 | uses | → ×2 | one key, six chat apps; then a speech and a podcast |
 | 1:52–2:30 | arch | → ×11 | map draws itself, the camera visits 9 regions (a few words each), flies back out |
 | 2:30–4:40 | demo | → ×1, then the app | the dare: four mistakes in one take, fixed live (no Original playback, no juror sentence tonight) |
 | 4:40–5:00 | close | → ×1 | three numbers, QR, thank you |
@@ -29,36 +29,36 @@ How to read this file:
 ### title (before 0:00)
 *The logo is on screen while people settle. Do the sound check before this (section 4). When the room is quiet, give the hook, then press →.*
 
-### chat, 0:00–0:53 (the clips play by themselves; keep the lines between them short)
-| Clock | Key | On screen / audio | Say |
+### loop, 0:03–0:15 (the problem, no numbers: what everyone does today)
+| Clock | Key | On screen | Say |
 |---|---|---|---|
 | 0:00 | | title | **Hook:** "We've all recorded a voice message… listened back… and hit delete." *(beat)* "This is Ctrl+Voice." |
-| 0:03 | → step 0 | Sarah's note pops in and plays (14.4 s). Mistakes turn red as they are said: um, changed her mind, took it back, wrong word. | *Nothing. Let it play. Smile at the "Shrek" line.* |
-| 0:18 | | clip ends | "Normally, she'd delete that. Watch." |
-| 0:20 | → step 1 | rewind, the red parts collapse, 0:14 becomes 0:09, the fixed note plays (9.2 s) | *Nothing.* |
-| 0:31 | | prompt "2 words here are AI. Which?" | "Five seconds shorter. Two of those words are AI. Which two?" *Wait for one or two guesses, at most 2 s.* |
-| 0:36 | → step 2 | "Dan has" and "a bit" glow green | "'Dan has.' 'A bit.' One second of AI, in her own voice." |
-| 0:39 | → step 3 | swipe to Eric; his note plays (5.3 s); the pitch line rises on "tomorrow?" | *Nothing.* |
-| 0:45 | → step 4 | the Confident slider rises; the fixed note plays (4.7 s); the ending falls | Say it as the slider moves, before the audio starts: "Confident." |
-| 0:53 | → | | |
+| 0:03 | (entered, step 0) | a loop draws itself: record, listen, cringe, delete; a dot runs round it faster and faster, "take" ticks 1, 2, 3; a dashed arrow leaks out to a keyboard, "type it"; line: "Record. Delete. Repeat." | "What do we do today? Record, listen, cringe, delete… and again. Or we give up and type it." |
+| 0:10 | → step 1 | the arc after "record" drops away, the rest of the loop dims; a green arrow, "one take", goes to a "sent" bubble | "Ctrl+Voice breaks the loop: one take, and it's sent." |
+| 0:15 | → | | |
 
-- Alternative hook, if you want the room involved: "Hands up if you've ever re-recorded a voice message." *(beat)* "Keep it up if it took three tries." It costs about 4 s, so drop the 0:18 line to pay for it.
-- If you are late, the 0:18 line can go: press → as soon as Sarah's clip ends. Never cut the "Which two?" question; it is the best moment of the opening.
-- If someone asks what was AI in the first note: the two green phrases. "In this message" about 1.0 s of the 9.2 s was generated. Everything else is her recording.
-
-### stat, 0:53–1:03
+### stat, 0:15–0:25
 | Clock | Key | On screen | Say |
 |---|---|---|---|
-| 0:53 | (entered) | 7,000,000,000 counts up | "Seven billion voice messages. Every day. On WhatsApp alone." |
-| 0:58 | → step 1 | text bubble with "edited" and a green ✓; voice note with a red ✗ | "You can edit a text." *(beat)* "You can't edit your voice." *(beat)* "Until now." |
-| 1:03 | → | | |
+| 0:15 | (entered) | 7,000,000,000 counts up | "Seven billion voice messages. Every day. On WhatsApp alone." |
+| 0:20 | → step 1 | text bubble with "edited" and a green ✓; voice note with a red ✗ | "You can edit a text." *(beat)* "You can't edit your voice." *(beat)* "Until now." |
+| 0:25 | → | | |
 
-### loop, 1:03–1:15 (the problem, no numbers: what everyone does today)
-| Clock | Key | On screen | Say |
+### chat, 0:25–1:15 (the clips play by themselves; keep the lines between them short)
+| Clock | Key | On screen / audio | Say |
 |---|---|---|---|
-| 1:03 | (entered, step 0) | a loop draws itself: record, listen, cringe, delete; a dot runs round it faster and faster, "take" ticks 1, 2, 3; a dashed arrow leaks out to a keyboard, "type it"; line: "Record. Delete. Repeat." | "What do we do today? Record, listen, cringe, delete… and again. Or we give up and type it." |
-| 1:10 | → step 1 | the arc after "record" drops away, the rest of the loop dims; a green arrow, "one take", goes to a "sent" bubble | "Ctrl+Voice breaks the loop: one take, and it's sent." |
+| 0:25 | → step 0 | Sarah's note pops in and plays (13.8 s). Mistakes turn red as they are said: um, changed her mind, took it back, wrong word. | "Watch." *Then nothing: let it play. Smile at the "Shrek" line.* |
+| 0:40 | | clip ends | "Normally, she'd delete that. Watch." |
+| 0:42 | → step 1 | rewind, the red parts collapse, 0:14 becomes 0:08, the fixed note plays (8.5 s) | *Nothing.* |
+| 0:53 | | prompt "2 words here are AI. Which?" | "Five seconds shorter. Two of those words are AI. Which two?" *Wait for one or two guesses, at most 2 s.* |
+| 0:58 | → step 2 | "Dan has" and "a bit" glow green | "'Dan has.' 'A bit.' One second of AI, in her own voice." |
+| 1:01 | → step 3 | swipe to Eric; his note plays (5.3 s); the pitch line rises on "tomorrow?" | *Nothing.* |
+| 1:07 | → step 4 | the Confident slider rises; the fixed note plays (4.7 s); the ending falls | Say it as the slider moves, before the audio starts: "Confident." |
 | 1:15 | → | | |
+
+- Alternative hook, if you want the room involved: "Hands up if you've ever re-recorded a voice message." *(beat)* "Keep it up if it took three tries." It costs about 4 s, so drop the 0:40 line to pay for it.
+- If you are late, the 0:40 line can go: press → as soon as Sarah's clip ends. Never cut the "Which two?" question; it is the best moment of the opening.
+- If someone asks what was AI in the first note: the two green phrases. "In this message" about 0.9 s of the 8.5 s was generated. Everything else is her recording.
 
 ### idea, 1:15–1:28 (the simple story: the idea in one picture)
 | Clock | Key | On screen | Say |
@@ -74,16 +74,16 @@ How to read this file:
 | Clock | Key | On screen | Say |
 |---|---|---|---|
 | 1:28 | (entered, step 0) | "AI clone": the message's waveform turns green from end to end; 73% voice match (red) | "Regenerate the whole message with AI and it's a clone: voice similarity drops to 73%." |
-| 1:34 | → step 1 | "Ctrl+Voice": the same waveform, grey, with two thin green slivers tagged AI; 98% (green); line: "Your voice. Not a clone." | "We keep your real recording. AI only says the changed words, about one second of nine: 98%. And the original never changes." |
+| 1:34 | → step 1 | "Ctrl+Voice": the same waveform, grey, with two thin green slivers tagged AI; 98% (green); line: "Your voice. Not a clone." | "We keep your real recording. AI only says the changed words, about one second in the whole message: 98%. And the original never changes." |
 | 1:40 | → | | |
 
-- The bars are Sarah's fixed note (9.2 s, real peaks); the green slivers are exactly the re-said words, "Dan has" and "a bit" (about 0.9 s). 73% and 98% are the measured numbers from Q&A.
+- The bars are Sarah's fixed note (8.5 s, real peaks); the green slivers are exactly the re-said words, "Dan has" and "a bit" (about 0.9 s). 73% and 98% are the measured numbers from Q&A.
 
 ### uses, 1:40–1:52 (who it's for, where it works)
 | Clock | Key | On screen | Say |
 |---|---|---|---|
 | 1:40 | (entered, step 0) | a key with the Ctrl+Voice logo is pressed; six chat apps burst out around it; line: "One key. Anywhere you talk." | "And it works where you already talk: one hotkey, in Discord, WhatsApp, Telegram, Slack, Signal and Teams. No integration needed." |
-| 1:47 | → step 1 | a video and a microphone ("speech") come in with arrows to the key | "And not just chat: import a recorded video or a speech into the app, and fix it the same way." |
+| 1:47 | → step 1 | a podcast and a microphone ("speech") come in with arrows to the key | "And not just chat: import a recorded speech or a podcast into the app, and fix it the same way." |
 | 1:52 | → | | |
 
 - If asked: Windows and macOS (the Mac version is newer and less tested). The app pastes into whichever window had focus, so no chat app needs a plug-in.
@@ -95,7 +95,7 @@ How to read this file:
 | 1:56 | → 1 | Hear: Whisper | "Whisper listens." |
 | 1:59 | → 2 | Align: wav2vec2 | "wav2vec2 places every word." |
 | 2:03 | → 3 | Decide: Qwen | "Qwen decides what to cut." |
-| 2:06 | → 4 | Rules | "Rules: deletions only." |
+| 2:06 | → 4 | Rules | "Rules: the clean-up only deletes." |
 | 2:10 | → 5 | PlayDiffusion | "PlayDiffusion re-says a word in your voice." |
 | 2:13 | → 6 | F5-TTS | "A second voice model, in parallel." |
 | 2:16 | → 7 | Verify | "We check both and keep the closest." |
@@ -128,10 +128,10 @@ The whole runbook is in section 2. The short version:
 | Clock | Key | On screen | Say |
 |---|---|---|---|
 | 4:40 | → | 9 / ≈1 s / 98% count up; QR | "Nine models. About a second to cut the ums and the take-backs. And 98% voice similarity when we re-say a word." Stress the scope ("the ums and the take-backs"): the room just watched a ~10 s wait. |
-| 4:50 | | | "It's all on GitHub: scan the QR code and try it. *(beat)* Ctrl+Voice. Say it messy… send it clean. *(1 s)* Thank you." The tagline comes last, then stop. |
+| 4:50 | | | "It's all on GitHub: scan the QR code, the code and the results are there. *(beat)* Ctrl+Voice. Say it messy… send it clean. *(1 s)* Thank you." The tagline comes last, then stop. |
 | 5:00 | | | *Stop. Smile. Wait for questions.* |
 
-- If a judge asks about the voices: they are ElevenLabs voices (Sarah, Eric) reading our script, and the fixed audio is real engine output. There is no credit line on the slide any more, so say it plainly when asked.
+- If a judge asks about the voices: they are ElevenLabs voices (Sarah, Eric) reading our script, and the fixed audio is real engine output.
 
 ---
 
@@ -323,11 +323,11 @@ The presenter-run demo shows the same pipeline with none of that risk. **Later**
    - English only today. The code pins Whisper to English, the aligner only knows English letters, the pronunciation model is trained on English (speechocean762), and the rules (fillers, "scratch that", negations, numbers, days) are written for English.
    - Whisper and the LLM are multilingual, so a new language means a new aligner, a new pronunciation model and new rules. Georgian is the one we want most.
 4. **What's AI and what's original?**
-   - Cuts keep your real audio. Only re-said words are generated: in Sarah's message, about one second of 9.2. The editor shows AI words in green, and the original file is never changed.
+   - Cuts keep your real audio. Only re-said words are generated: in Sarah's message, about one second of 8.5. The editor shows AI words in green, and the original file is never changed.
    - Confident, Calm and Warm are signal processing of your own recording (Praat PSOLA), not generation. The native accent is AI: off by default and labelled.
-   - The example voices, Sarah and Eric, are ElevenLabs voices reading our script (say so if asked; there is no credit line on the slides). The fixed audio is real engine output.
+   - The example voices, Sarah and Eric, are ElevenLabs voices reading our script (say so if asked). The fixed audio is real engine output.
 5. **What if it cuts something important?**
-   - The LLM can only delete. A negation, number, date or time can go only if a same-type repair replaces it. Anything uncertain becomes a suggestion.
+   - In the clean-up the LLM can only delete. Word fixes like "judges are" are generated, verified, and shown green. A negation, number, date or time can go only if a same-type repair replaces it. Anything uncertain becomes a suggestion.
    - On 10 trick sentences: 0 meaning-changing edits, down from 2 in our first version. 24 of 28 exact clean-ups.
    - A re-said word that fails both checks after 3 rounds is never applied automatically.
 6. **Where does it fail?**
@@ -356,13 +356,13 @@ The presenter-run demo shows the same pipeline with none of that risk. **Later**
 
 ## 7. Honesty notes (for you, not for the stage)
 - The "after" audio on every slide is real engine output.
-- The example voices are ElevenLabs voices (Sarah, Eric). The close slide no longer carries a credit line: if a judge asks, say they are ElevenLabs voices reading our script, and the fixed audio is real engine output.
-  - The synthetic inputs had their long pauses tightened before the engine ran. Don't mention this on stage. If a judge asks directly whether the input was edited, say yes: "We tightened long pauses in the synthetic input; everything after that is engine output."
+- The example voices are ElevenLabs voices (Sarah, Eric). If a judge asks, say they are ElevenLabs voices reading our script, and the fixed audio is real engine output.
+  - If a judge asks whether the input was edited, say yes: we shortened long pauses in the synthetic inputs before the engine ran; the engine output is unedited.
 - The backup clips are "from an earlier run", with a synthetic voice. Never "live".
 - The PSOLA drawing and the GOP "three"/"tree" lattice are illustrations. The PSOLA grains come from a real Praat run on Eric's "ready", but the picture is illustrative.
-- Numbers measured on one clip are said as "in this message": 14 → 9 s, about 1 s of AI, −2 semitones, ending rise → fall, the about 10 s auto-fix.
+- Numbers measured on one clip are said as "in this message": 14 → 8.5 s, about 1 s of AI, −2 semitones, ending rise → fall, the about 10 s auto-fix.
 - If you use a prerecorded take (import or demo-mic), say so: "this is a recording; everything after it is live".
-- Don't quote any disfluency-rate statistic. Don't name the GPU model or its memory size.
+- Don't quote any disfluency-rate statistic. Hardware details aren't part of the talk.
 
 ---
 

@@ -21,12 +21,12 @@ Open `index.html` in Chrome. It works straight from the file, with no server and
 
 The slides are:
 1. title;
-2. two voice notes in a chat, played and fixed (real engine output);
-3. 7 billion;
-4. the loop: record, listen, cringe, delete, again, until one take goes out;
+2. the loop: record, listen, cringe, delete, again, until one take goes out;
+3. 7 billion: you can edit a text, not your voice;
+4. two voice notes in a chat, played and fixed (real engine output);
 5. the idea: every word tied to its sound, edit the words and the audio follows;
 6. not a clone: regenerating it all (73%) vs your recording with a sliver of AI (98%);
-7. anywhere: one key, six chat apps, then a video and a speech;
+7. anywhere: one key, six chat apps, then a speech and a podcast;
 8. the architecture map (each click flies to the next region);
 9. the dare card: four mistakes, one take, fixed live (the live demo);
 10. thank you.

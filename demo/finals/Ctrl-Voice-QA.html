@@ -227,6 +227,29 @@ body { color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: anti
   opacity: 0; transform: translateX(-50%) scale(.4); transition: opacity .2s ease, transform .45s cubic-bezier(.2, 1.7, .4, 1); }
 .s-demo.all .dc-chip { opacity: 1; transform: translateX(-50%); transition-delay: .55s; }
 
+/* ---------------------------------------------------------------- round 5: newcomer captions, title line, close as the brand */
+.s-title .t-what { margin: 58px 0 0 10px; font: 400 40px var(--sans); color: var(--ink2); }
+.s-chat .ch-cap { position: absolute; left: 800px; right: 112px; bottom: 32px;   /* under the waveform panel, clear of the phone */ margin: 0; text-align: center; font: 500 30px var(--sans); color: var(--ink2); opacity: 0; transition: opacity .35s ease; pointer-events: none; }
+.s-chat .ch-cap.on { opacity: 1; }
+.s-chat .ch-cap.c1.on ~ .ch-cap.c0, .s-chat .ch-off.on ~ .ch-cap { opacity: 0; }
+.s-demo .dc-say { position: absolute; left: 76px; top: 26px; font: 500 26px var(--sans); color: var(--ink3); }
+.s-close .cl-brand { position: absolute; left: 0; right: 0; top: 96px; display: flex; flex-direction: column; align-items: center; }
+.s-close .cl-logo { display: flex; align-items: center; gap: 46px; }
+.s-close .cl-mark { width: 150px; height: 150px; color: var(--ink); }
+.s-close .cl-mark svg { width: 100%; height: 100%; display: block; }
+.s-close .cl-name { margin: 0; font: 500 176px/0.9 var(--serif); letter-spacing: -0.025em; }
+.s-close .cl-tag { margin: 44px 0 0; font: italic 300 92px var(--serif); color: var(--ink); }
+.s-close .cl-nums { left: 330px; right: 330px; top: 520px; gap: 60px; }
+.s-close .cl-n { justify-self: center; width: max-content; }
+.s-close .cl-n b { font-size: 88px; }
+.s-close .cl-n svg.ul { top: 80px; }
+.s-close .cl-n span { margin-top: 26px; font-size: 30px; }
+.s-close .cl-foot { left: 330px; right: 330px; top: 744px; display: flex; justify-content: space-between; align-items: center; gap: 60px; }
+.s-close .cl-qr { width: 196px; height: 196px; padding: 13px; border-radius: 18px; }
+.s-close .cl-repo { gap: 34px; }
+.s-close .cl-url { font-size: 30px; }
+.s-close .cl-thanks { margin-left: 0; font-size: 104px; }
+
 </style>
 <style data-from="assets/qa.css">
 /* Ctrl+Voice Q&A backup deck. Builds on deck.css (fonts, palette, #stage, .slide, #notes-overlay). */
@@ -685,8 +708,8 @@ var rough=function(){"use strict";function t(t,e,s){if(t&&t.length){const[n,o]=e
     },
 
     v4(p) {   // AI vs original
-      const x0 = 160, Wd = 1600, pxs = Wd / 9.2, ai = pxs * 1.0;
-      p.text(x0, 60, "Sarah's message: 9.2 s", sans({ fs: 30, anchor: 'start', color: C.ink2 }));
+      const x0 = 160, Wd = 1600, pxs = Wd / 8.5, ai = pxs * 0.9;
+      p.text(x0, 60, "Sarah's message: 8.5 s", sans({ fs: 30, anchor: 'start', color: C.ink2 }));
       p.text(x0 + Wd - ai / 2, 60, '≈ 1 s AI', sans({ fs: 32, color: C.made, weight: 600 }));
       p.rect(x0, 110, Wd - ai - 6, 90, { color: C.ink2, fill: A(C.ink2, 0.22), r: 6 });
       p.rect(x0 + Wd - ai, 110, ai, 90, { color: C.made, fill: A(C.made, 0.55), r: 6 });
@@ -719,7 +742,7 @@ var rough=function(){"use strict";function t(t,e,s){if(t&&t.length){const[n,o]=e
       p.text(1440, 275, 'exact clean-ups', { fs: 36 });
       p.text(1440, 325, 'on 28 hand-written messages', sans({ fs: 27, color: C.ink2 }));
       const chips = [
-        ['the LLM can\nonly delete', '', C.cut],
+        ['the clean-up can\nonly delete', '', C.cut],
         ['not · numbers ·\ndates · times', 'kept unless a same-type\nrepair replaces them', C.check],
         ['unsure?', 'it becomes\na suggestion', C.model],
         ['fails both checks\nafter 3 rounds', 'a re-said word is never\napplied automatically', C.made],
@@ -827,7 +850,7 @@ var rough=function(){"use strict";function t(t,e,s){if(t&&t.length){const[n,o]=e
       const ox = 1040, oy = 560, sx = 52, sy = 40;
       const X = (s) => ox + s * sx, Y = (n) => oy - n * sy;
       p.text(1420, 10, 're-saying a word: right of 10, against seconds', { fs: 30 });
-      p.arrow([[ox, oy], [X(14.4), oy]], { color: C.ink3, sw: 2 });
+      p.arrow([[ox, oy], [X(13.8), oy]], { color: C.ink3, sw: 2 });
       p.arrow([[ox, oy], [ox, Y(11.2)]], { color: C.ink3, sw: 2 });
       [0, 5, 10].forEach((n) => p.text(ox - 18, Y(n), String(n), sans({ fs: 22, anchor: 'end', color: C.ink3 })));
       [0, 5, 10].forEach((s) => p.text(X(s), oy + 30, `${s} s`, sans({ fs: 22, color: C.ink3 })));

@@ -218,3 +218,26 @@ body { color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: anti
 .s-demo .dc-chip { position: absolute; left: 50%; bottom: 46px; padding: 12px 36px; border: 3px solid var(--made); border-radius: 40px; background: rgba(76, 200, 155, .12); font: 600 40px var(--sans); color: var(--made); white-space: nowrap;
   opacity: 0; transform: translateX(-50%) scale(.4); transition: opacity .2s ease, transform .45s cubic-bezier(.2, 1.7, .4, 1); }
 .s-demo.all .dc-chip { opacity: 1; transform: translateX(-50%); transition-delay: .55s; }
+
+/* ---------------------------------------------------------------- round 5: newcomer captions, title line, close as the brand */
+.s-title .t-what { margin: 58px 0 0 10px; font: 400 40px var(--sans); color: var(--ink2); }
+.s-chat .ch-cap { position: absolute; left: 800px; right: 112px; bottom: 32px;   /* under the waveform panel, clear of the phone */ margin: 0; text-align: center; font: 500 30px var(--sans); color: var(--ink2); opacity: 0; transition: opacity .35s ease; pointer-events: none; }
+.s-chat .ch-cap.on { opacity: 1; }
+.s-chat .ch-cap.c1.on ~ .ch-cap.c0, .s-chat .ch-off.on ~ .ch-cap { opacity: 0; }
+.s-demo .dc-say { position: absolute; left: 76px; top: 26px; font: 500 26px var(--sans); color: var(--ink3); }
+.s-close .cl-brand { position: absolute; left: 0; right: 0; top: 96px; display: flex; flex-direction: column; align-items: center; }
+.s-close .cl-logo { display: flex; align-items: center; gap: 46px; }
+.s-close .cl-mark { width: 150px; height: 150px; color: var(--ink); }
+.s-close .cl-mark svg { width: 100%; height: 100%; display: block; }
+.s-close .cl-name { margin: 0; font: 500 176px/0.9 var(--serif); letter-spacing: -0.025em; }
+.s-close .cl-tag { margin: 44px 0 0; font: italic 300 92px var(--serif); color: var(--ink); }
+.s-close .cl-nums { left: 330px; right: 330px; top: 520px; gap: 60px; }
+.s-close .cl-n { justify-self: center; width: max-content; }
+.s-close .cl-n b { font-size: 88px; }
+.s-close .cl-n svg.ul { top: 80px; }
+.s-close .cl-n span { margin-top: 26px; font-size: 30px; }
+.s-close .cl-foot { left: 330px; right: 330px; top: 744px; display: flex; justify-content: space-between; align-items: center; gap: 60px; }
+.s-close .cl-qr { width: 196px; height: 196px; padding: 13px; border-radius: 18px; }
+.s-close .cl-repo { gap: 34px; }
+.s-close .cl-url { font-size: 30px; }
+.s-close .cl-thanks { margin-left: 0; font-size: 104px; }

@@ -5,8 +5,8 @@ Each tip is marked **[research]**, with a source, or **[practice]**, which is co
 
 ## 10 tips for tonight
 1. **Title, before 0:00: stand still, look at the judges for 2 s, then give the hook.** Say the product's name: nobody says "Ctrl+Voice" aloud anywhere in the current script. [research] Judges form impressions in seconds: silent clips under 30 s, and even 6 to 15 s, predicted teachers' end-of-term ratings (Ambady & Rosenthal 1993, JPSP).
-2. **Chat, 0:03 to 0:53: keep quiet while the audio plays.** "Which two?" is your first peak, so ask it, wait, and don't explain. [research] Narration that duplicates what the audience is already taking in lowers learning (Mayer, Heiser & Lonn 2001, redundancy). Applying that to a pitch is my inference.
-3. **Map, 1:03 to 2:10: this is the biggest risk in the talk.** Nine regions in 67 s, each with jargon. Cut the second technical detail from each line:
+2. **Chat, 0:25 to 1:15: keep quiet while the audio plays.** "Which two?" is your first peak, so ask it, wait, and don't explain. [research] Narration that duplicates what the audience is already taking in lowers learning (Mayer, Heiser & Lonn 2001, redundancy). Applying that to a pitch is my inference.
+3. **Map, 1:52 to 2:30: this is the biggest risk in the talk.** Nine regions in 38 s, each with jargon. Cut the second technical detail from each line:
    - "CTC-ით" and "ენის მოდელის გარეშე" (Align);
    - "35 მილიარდი პარამეტრი…" (Decide);
    - "MASK ტოკენებს…" (Re-say).
@@ -26,9 +26,9 @@ Each tip is marked **[research]**, with a source, or **[practice]**, which is co
 [Ever recorded a voice message… listened back… and deleted it? *(pause)* We all have. *(beat)* This is Ctrl+Voice.]
 
 ## Last 10 seconds (after the three numbers)
-> „ყველაფერი GitHub-ზეა: დაასკანერეთ QR კოდი და სცადეთ.“ *(beat)* „Ctrl+Voice. თქვი არეულად… გაგზავნე სუფთად.“ *(1 s)* „მადლობა.“ *(stop, smile, wait)*
+> „ყველაფერი GitHub-ზეა: დაასკანერეთ QR, იქ არის კოდიც და შედეგებიც.“ *(beat)* „Ctrl+Voice. თქვი არეულად… გაგზავნე სუფთად.“ *(1 s)* „მადლობა.“ *(stop, smile, wait)*
 
-[It's all on GitHub: scan the QR code and try it. *(beat)* Ctrl+Voice. Say it messy… send it clean. *(1 s)* Thank you.]
+[It's all on GitHub: scan the QR code, the code and the results are there. *(beat)* Ctrl+Voice. Say it messy… send it clean. *(1 s)* Thank you.]
 
 The order changes so the tagline comes last. "QR კოდი" is clearer than "კოდი", which can also mean source code.
 
@@ -49,14 +49,14 @@ The order changes so the tagline comes last. "QR კოდი" is clearer than "
 [No: only your voice, only the words you meant, and every AI word shown in green. The original file is never changed. Planned: an AudioSeal watermark on every generated word and a "words changed" note the listener can see.]
 
 **3. What did *you* build? The models already exist.**
-„ცალკეული მოდელები ცნობილია: Whisper, Qwen, PlayDiffusion, F5-TTS. ჩვენია ის, რაც მათ შორისაა: Whisper-ს „um“-ებით ვაპრომპტავთ, LLM-ს მხოლოდ წაშლა შეუძლია და წესები ამოწმებს, ორ ხმის მოდელს ორჯერ ვამოწმებთ, და ვსვამთ მხოლოდ ახალ სიტყვას. ასე ხმის მსგავსება 98%-ია; მთლიანი გენერაციისას 73%-მდე ეცემა.“
+„ცალკეული მოდელები ცნობილია: Whisper, Qwen, PlayDiffusion, F5-TTS. ჩვენია ის, რაც მათ შორისაა: Whisper-ს „um“-ებით ვაპრომპტავთ, გასუფთავებისას LLM-ს მხოლოდ წაშლა შეუძლია და წესები ამოწმებს (სიტყვის შესწორება, მაგალითად „judges are“, გენერირდება, მოწმდება და მწვანით ჩანს), ორ ხმის მოდელს ორჯერ ვამოწმებთ, და ვსვამთ მხოლოდ ახალ სიტყვას. ასე ხმის მსგავსება 98%-ია; მთლიანი გენერაციისას 73%-მდე ეცემა.“
 
-[The individual models are known ones. Ours is what sits between them: we prompt Whisper with ums, the LLM can only delete and the rules check it, both voice models are checked twice, and we splice in only the new word. That keeps voice similarity at 98%; regenerating the whole clip drops it to 73%.]
+[The individual models are known ones. Ours is what sits between them: we prompt Whisper with ums, in the clean-up the LLM can only delete and the rules check it (word fixes like "judges are" are generated, verified, and shown green), both voice models are checked twice, and we splice in only the new word. That keeps voice similarity at 98%; regenerating the whole clip drops it to 73%.]
 
 **4. What if it cuts something important?**
-„მხოლოდ წაშლა შეუძლია, და სახიფათო სიტყვები დაცულია: „არა“, რიცხვი, თარიღი ან დრო მხოლოდ მაშინ ქრება, თუ იმავე ტიპის შესწორება მოსდევს. საეჭვო რჩევად რჩება. ათ მახე წინადადებაზე აზრი არცერთში შეცვლილა.“
+„გასუფთავებისას მხოლოდ წაშლა შეუძლია (სიტყვის შესწორება გენერირდება, მოწმდება და მწვანით ჩანს), და სახიფათო სიტყვები დაცულია: „არა“, რიცხვი, თარიღი ან დრო მხოლოდ მაშინ ქრება, თუ იმავე ტიპის შესწორება მოსდევს. საეჭვო რჩევად რჩება. ათ მახე წინადადებაზე აზრი არცერთში შეცვლილა.“
 
-[It can only delete, and the risky words are protected: a "not", a number, a date or a time only goes if a same-type repair replaces it. Anything uncertain becomes a suggestion. On 10 trick sentences, none changed meaning.]
+[In the clean-up it can only delete (word fixes like "judges are" are generated, verified, and shown green), and the risky words are protected: a "not", a number, a date or a time only goes if a same-type repair replaces it. Anything uncertain becomes a suggestion. On 10 trick sentences, none changed meaning.]
 
 **5. What does it cost, and what's the business?**
 „მესიჯის ფასი ჯერ არ დაგვითვლია. ყველაფერი, LLM-ის ჩათვლით, ერთ GPU-ზე მუშაობს: ტოკენზე მხოლოდ 3 მილიარდი პარამეტრია აქტიური, მძიმე ნაწილები კი მხოლოდ საჭიროებისას ირთვება. შემდეგი ნაბიჯი მოწყობილობაზე გადატანაა, და მაშინ სერვერის ხარჯი ქრება.“

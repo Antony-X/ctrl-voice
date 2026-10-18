@@ -13,76 +13,76 @@
 „ხმოვანი მესიჯი ჩაგიწერიათ… მოგისმენიათ… და მერე წაგიშლიათ?“ *(პაუზა)* „ყველას გვიქნია.“ *(პაუზა)* „ეს არის Ctrl+Voice.“ **→**
 [Ever recorded a voice message, listened back, and deleted it? We all have. This is Ctrl+Voice.]
 
-*სხვა ვარიანტი, დარბაზთან ერთად (≈4 წმ; ამ შემთხვევაში 0:18-ის ფრაზა გამოტოვე):*
+*სხვა ვარიანტი, დარბაზთან ერთად (≈4 წმ; ამ შემთხვევაში 0:40-ის ფრაზა გამოტოვე):*
 „ხელი ასწიეთ, ვისაც ხმოვანი მესიჯი თავიდან ჩაუწერია.“ *(პაუზა)* „დატოვეთ, თუ სამჯერ მოგიწიათ.“
 [Hands up if you've ever re-recorded a voice message. Keep it up if it took three tries.]
 
 ---
 
-## chat (0:00–0:53; აუდიო თავისით უკრავს, ფრაზები მოკლეა)
-
-**step 0, 0:03 →**: სარას მესიჯი თავისით ჟღერს (14 წმ). *ჩუმად იყავი.*
-[Sarah's note plays by itself. Stay silent.]
-
-**0:18**, კლიპის მერე:
-„ჩვეულებრივ, ამას წაშლიდა. ნახეთ.“
-[Normally she'd delete that. Watch.]
-
-**step 1, 0:20 →**: გადახვევა, წითელი ნაწილები ქრება, გასწორებული მესიჯი ჟღერს (9 წმ). *ჩუმად.*
-[Rewind; the red parts collapse; the fixed note plays.]
-
-**0:31**, კლიპის მერე:
-„ხუთი წამით მოკლეა. აქ ორი სიტყვა AI-მ თქვა. რომელი ორი?“ *(1–2 წამი პასუხისთვის)*
-[Five seconds shorter. Two of these words are AI. Which two?]
-
-**step 2, 0:36 →**: მწვანდება.
-„„Dan has“ და „a bit“. სულ ერთი წამია AI, თანაც მისივე ხმით.“
-['Dan has' and 'a bit'. One second of AI, in her own voice.]
-
-**step 3, 0:39 →**: ერიკის მესიჯი (5 წმ), ბოლო მაღლა მიდის. *ჩუმად.*
-[Eric's note; the ending rises.]
-
-**step 4, 0:45 →**, სლაიდერის აწევისას, აუდიომდე:
-„Confident.“
-[Confident.]
-
-**0:53 →**
-
-*თუ აგვიანებ: 0:18-ის ფრაზა გამოტოვე. „რომელი ორი?“ არასდროს გამოტოვო.*
-[If late, drop the 0:18 line. Never drop the "which two?" question.]
-
----
-
-## stat (0:53–1:03)
-
-**step 0, 0:53**, რიცხვი იზრდება:
-„შვიდი მილიარდი ხმოვანი მესიჯი. ყოველდღე. მარტო WhatsApp-ზე.“
-[Seven billion voice messages. Every day. On WhatsApp alone.]
-
-**step 1, 0:58 →**
-„ტექსტის შესწორება შეგიძლია.“ *(პაუზა)* „ხმის — ვერა.“ *(პაუზა)* „აქამდე.“
-[You can edit a text. Not your voice. Until now.]
-
-**1:03 →**
-
----
-
-## loop (1:03–1:15; პრობლემა: თავიდან ჩაწერის წრე)
+## loop (0:03–0:15; პრობლემა: თავიდან ჩაწერის წრე)
 
 <!-- step 0 -->
-**step 0, 1:03**, წრე იხატება, წერტილი ტრიალებს, „take“ მატულობს 1, 2, 3; მერე „type it“:
+**step 0, 0:03**, წრე იხატება, წერტილი ტრიალებს, „take“ მატულობს 1, 2, 3; მერე „type it“:
 „დღეს რას ვაკეთებთ? ვწერთ, ვუსმენთ, გვრცხვენია, ვშლით… და თავიდან. ან ვნებდებით და ვბეჭდავთ.“
 [What do we do today? Record, listen, cringe, delete… and again. Or we give up and type it.]
 
 <!-- step 1 -->
-**step 1, 1:10 →**: წრე წყდება, ერთი ჩანაწერი მწვანე ისრით გადის, „sent“.
+**step 1, 0:10 →**: წრე წყდება, ერთი ჩანაწერი მწვანე ისრით გადის, „sent“.
 „Ctrl+Voice ამ წრეს წყვეტს: ერთი ჩანაწერი, და გაგზავნილია.“
 [Ctrl+Voice breaks the loop: one take, and it's sent.]
 
-**1:15 →**
+**0:15 →**
 
 *რიცხვები აქ არ არის: მხოლოდ ის, რასაც ყველა აკეთებს.*
 [No statistics here: just what everyone does.]
+
+---
+
+## stat (0:15–0:25)
+
+**step 0, 0:15**, რიცხვი იზრდება:
+„შვიდი მილიარდი ხმოვანი მესიჯი. ყოველდღე. მარტო WhatsApp-ზე.“
+[Seven billion voice messages. Every day. On WhatsApp alone.]
+
+**step 1, 0:20 →**
+„ტექსტის შესწორება შეგიძლია.“ *(პაუზა)* „ხმის — ვერა.“ *(პაუზა)* „აქამდე.“
+[You can edit a text. Not your voice. Until now.]
+
+**0:25 →**
+
+---
+
+## chat (0:25–1:15; აუდიო თავისით უკრავს, ფრაზები მოკლეა)
+
+**step 0, 0:25 →**: „ნახეთ.“ *მერე* სარას მესიჯი თავისით ჟღერს (14 წმ). *ჩუმად იყავი.*
+[Watch. Then Sarah's note plays by itself. Stay silent.]
+
+**0:40**, კლიპის მერე:
+„ჩვეულებრივ, ამას წაშლიდა. ნახეთ.“
+[Normally she'd delete that. Watch.]
+
+**step 1, 0:42 →**: გადახვევა, წითელი ნაწილები ქრება, გასწორებული მესიჯი ჟღერს (8.5 წმ). *ჩუმად.*
+[Rewind; the red parts collapse; the fixed note plays.]
+
+**0:53**, კლიპის მერე:
+„ხუთი წამით მოკლეა. აქ ორი სიტყვა AI-მ თქვა. რომელი ორი?“ *(1–2 წამი პასუხისთვის)*
+[Five seconds shorter. Two of these words are AI. Which two?]
+
+**step 2, 0:58 →**: მწვანდება.
+„„Dan has“ და „a bit“. სულ ერთი წამია AI, თანაც მისივე ხმით.“
+['Dan has' and 'a bit'. One second of AI, in her own voice.]
+
+**step 3, 1:01 →**: ერიკის მესიჯი (5 წმ), ბოლო მაღლა მიდის. *ჩუმად.*
+[Eric's note; the ending rises.]
+
+**step 4, 1:07 →**, სლაიდერის აწევისას, აუდიომდე:
+„Confident.“
+[Confident.]
+
+**1:15 →**
+
+*თუ აგვიანებ: 0:40-ის ფრაზა გამოტოვე. „რომელი ორი?“ არასდროს გამოტოვო.*
+[If late, drop the 0:40 line. Never drop the "which two?" question.]
 
 ---
 
@@ -112,25 +112,25 @@
 
 <!-- step 1 -->
 **step 1, 1:34 →**: ქვედა ზოლი („Ctrl+Voice“), მხოლოდ ორი ვიწრო მწვანე ნაწილი, 98%, ხაზი: „Your voice. Not a clone.“
-„ჩვენთან შენი ნამდვილი ჩანაწერი რჩება. AI მხოლოდ შეცვლილ სიტყვებს ამბობს, დაახლოებით ერთ წამს ცხრიდან: 98%. ორიგინალი კი არასდროს იცვლება.“
-[We keep your real recording. AI only says the changed words, about one second of nine: 98%. And the original never changes.]
+„ჩვენთან შენი ნამდვილი ჩანაწერი რჩება. AI მხოლოდ შეცვლილ სიტყვებს ამბობს, მთელ მესიჯში დაახლოებით ერთ წამს: 98%. ორიგინალი კი არასდროს იცვლება.“
+[We keep your real recording. AI only says the changed words, about one second in the whole message: 98%. And the original never changes.]
 
 **1:40 →**
 
-*ზოლები სარას გასწორებული მესიჯია (9.2 წმ); მწვანე ნაწილები ზუსტად „Dan has“ და „a bit“ არის. 73% და 98% გაზომილია (SCRIPT.md, კითხვა-პასუხი).*
-[The bars are Sarah's fixed note (9.2 s); the green slivers are exactly "Dan has" and "a bit". 73% and 98% are measured (SCRIPT.md, Q&A).]
+*ზოლები სარას გასწორებული მესიჯია (8.5 წმ); მწვანე ნაწილები ზუსტად „Dan has“ და „a bit“ არის. 73% და 98% გაზომილია (SCRIPT.md, კითხვა-პასუხი).*
+[The bars are Sarah's fixed note (8.5 s); the green slivers are exactly "Dan has" and "a bit". 73% and 98% are measured (SCRIPT.md, Q&A).]
 
 ---
 
-## uses (1:40–1:52; ერთი ღილაკი, ექვსი აპი, მერე ვიდეო და გამოსვლა)
+## uses (1:40–1:52; ერთი ღილაკი, ექვსი აპი, მერე გამოსვლა და პოდკასტი)
 
 **step 0, 1:40**, ღილაკი ჩაიჭირება, აპები გარშემო ამოფრინდება:
 „და ის იქ მუშაობს, სადაც უკვე ლაპარაკობ: ერთი ღილაკით Discord-ში, WhatsApp-ში, Telegram-ში, Slack-ში, Signal-სა და Teams-ში. ინტეგრაცია არ სჭირდება.“
 [It works where you already talk: one hotkey, in Discord, WhatsApp, Telegram, Slack, Signal and Teams. No integration needed.]
 
-**step 1, 1:47 →**: ვიდეო და მიკროფონი.
-„და არა მხოლოდ ჩატში: ჩაწერილი ვიდეო ან გამოსვლა აპში ატვირთე და ზუსტად ისე გაასწორე.“
-[And not just chat: import a recorded video or a speech into the app and fix it the same way.]
+**step 1, 1:47 →**: პოდკასტი და მიკროფონი.
+„და არა მხოლოდ ჩატში: ჩაწერილი გამოსვლა ან პოდკასტი აპში ატვირთე და ზუსტად ისე გაასწორე.“
+[And not just chat: import a recorded speech or a podcast into the app and fix it the same way.]
 
 **1:52 →**
 
@@ -155,8 +155,8 @@
 [Qwen decides what to cut.]
 
 **step 4, 2:06 →, Rules**
-„წესები: მხოლოდ წაშლა.“
-[Rules: deletions only.]
+„წესები: გასუფთავება მხოლოდ შლის.“
+[Rules: the clean-up only deletes.]
 
 **step 5, 2:10 →, PlayDiffusion**
 „PlayDiffusion სიტყვას შენი ხმით ამბობს.“
@@ -303,8 +303,8 @@
 [Nine models. About a second to cut the ums and the take-backs. And 98% voice similarity when we re-say a word.]
 
 **4:50**
-„ყველაფერი GitHub-ზეა: დაასკანერეთ QR კოდი და სცადეთ.“ *(პაუზა)* „Ctrl+Voice. თქვი არეულად… გაგზავნე სუფთად.“ *(1 წმ)* „მადლობა.“
-[It's all on GitHub: scan the QR code and try it. *(beat)* Ctrl+Voice. Say it messy… send it clean. *(1 s)* Thank you.]
+„ყველაფერი GitHub-ზეა: დაასკანერეთ QR, იქ არის კოდიც და შედეგებიც.“ *(პაუზა)* „Ctrl+Voice. თქვი არეულად… გაგზავნე სუფთად.“ *(1 წმ)* „მადლობა.“
+[It's all on GitHub: scan the QR code, the code and the results are there. *(beat)* Ctrl+Voice. Say it messy… send it clean. *(1 s)* Thank you.]
 
 **5:00**: *გაჩერდი. გაიღიმე. დაელოდე კითხვებს.* თუ ჟიური ხმებზე იკითხავს: „ეს ElevenLabs-ის ხმებია, ჩვენს ტექსტს კითხულობენ. გასწორებული აუდიო ძრავის ნამდვილი შედეგია.“
 [Stop, smile, wait for questions. If a judge asks about the voices: they are ElevenLabs voices reading our script; the fixed audio is real engine output.]
@@ -384,14 +384,14 @@
 [English only today: Whisper is pinned to English, the aligner is English letters, the pronunciation model is English, and so are the rules. Whisper and Qwen are multilingual, so a new language needs a new aligner, pronunciation model and rules. Georgian is the one we want most.]
 
 **4. რა არის AI და რა ორიგინალი?**
-„ამოჭრა შენს ნამდვილ ხმას ტოვებს. AI მხოლოდ შეცვლილ სიტყვებს ამბობს: სარას მესიჯში დაახლოებით ერთ წამს 9-დან. რედაქტორში AI-ს სიტყვები მწვანეა. Confident, Calm და Warm AI არ არის, შენი ჩანაწერის დამუშავებაა (Praat PSOLA). ნატიური აქცენტი AI-ა, ნაგულისხმევად გამორთულია და მონიშნულია. სარა და ერიკი ElevenLabs-ის ხმებია, ჩვენს ტექსტს კითხულობენ; გასწორებული აუდიო ძრავის ნამდვილი შედეგია.“
-[Cuts keep your real audio; AI says only the changed words: about one second of nine in Sarah's message, shown in green. The tones are processing of your own recording; the accent is AI, off by default, labelled. Sarah and Eric are ElevenLabs voices; the fixed audio is real engine output.]
+„ამოჭრა შენს ნამდვილ ხმას ტოვებს. AI მხოლოდ შეცვლილ სიტყვებს ამბობს: სარას მესიჯში დაახლოებით ერთ წამს 8.5-დან. რედაქტორში AI-ს სიტყვები მწვანეა. Confident, Calm და Warm AI არ არის, შენი ჩანაწერის დამუშავებაა (Praat PSOLA). ნატიური აქცენტი AI-ა, ნაგულისხმევად გამორთულია და მონიშნულია. სარა და ერიკი ElevenLabs-ის ხმებია, ჩვენს ტექსტს კითხულობენ; გასწორებული აუდიო ძრავის ნამდვილი შედეგია.“
+[Cuts keep your real audio; AI says only the changed words: about one second of 8.5 in Sarah's message, shown in green. The tones are processing of your own recording; the accent is AI, off by default, labelled. Sarah and Eric are ElevenLabs voices; the fixed audio is real engine output.]
 *პირდაპირ თუ იკითხავენ, შეასწორეთ თუ არა შესავალი აუდიო:* „სინთეზურ ჩანაწერში გრძელი პაუზები შევამოკლეთ; ყველაფერი მის შემდეგ ძრავის შედეგია.“
 [Only if asked directly: we tightened long pauses in the synthetic input; everything after that is engine output.]
 
 **5. თუ რამე მნიშვნელოვანს ამოჭრის?**
-„LLM-ს მხოლოდ წაშლა შეუძლია. „არა“, რიცხვი, თარიღი ან დრო მხოლოდ მაშინ ქრება, თუ იმავე ტიპის შესწორება მოსდევს. ყველაფერი საეჭვო რჩევად რჩება. ათ მახე წინადადებაზე მნიშვნელობა არცერთში შეცვლილა; პირველ ვერსიაში ორში იცვლებოდა. 28-დან 24 გასუფთავება ზუსტია. სიტყვა, რომელიც სამ ცდაში შემოწმებას ვერ გაივლის, ავტომატურად არ ჩაჯდება.“
-[The LLM can only delete; negations, numbers, dates and times go only if a same-type repair replaces them; anything uncertain becomes a suggestion. 0 of 10 trick sentences changed meaning (2 in our first version). 24 of 28 exact. A re-said word that fails after 3 rounds is never auto-applied.]
+„გასუფთავებისას LLM-ს მხოლოდ წაშლა შეუძლია. სიტყვის შესწორება, მაგალითად „judges are“, გენერირდება, მოწმდება და მწვანით ჩანს. „არა“, რიცხვი, თარიღი ან დრო მხოლოდ მაშინ ქრება, თუ იმავე ტიპის შესწორება მოსდევს. ყველაფერი საეჭვო რჩევად რჩება. ათ მახე წინადადებაზე მნიშვნელობა არცერთში შეცვლილა; პირველ ვერსიაში ორში იცვლებოდა. 28-დან 24 გასუფთავება ზუსტია. სიტყვა, რომელიც სამ ცდაში შემოწმებას ვერ გაივლის, ავტომატურად არ ჩაჯდება.“
+[In the clean-up the LLM can only delete; word fixes like 'judges are' are generated, verified, and shown green; negations, numbers, dates and times go only if a same-type repair replaces them; anything uncertain becomes a suggestion. 0 of 10 trick sentences changed meaning (2 in our first version). 24 of 28 exact. A re-said word that fails after 3 rounds is never auto-applied.]
 
 **6. სად ცდება?**
 „წარმოთქმის დეტექტორი თავისუფალ საუბარში სუსტია: ტესტში ექსპერტის მიერ მონიშნული შეცდომების 19% დაიჭირა, რადგან ამომცნობი ხშირად იმას წერს, რაც რეალურად თქვი. ზოგჯერ შეერთება ისმის, ამაზე ვმუშაობთ. Discord-ში მესიჯი აუდიო ფაილად მიდის და არა ნატიურ ხმოვან ბუშტად, ამისთვის ოფიციალური ბოტები გვჭირდება.“

@@ -16,11 +16,25 @@ When the room is quiet, give the hook, then press **→**.
 
 [Ever recorded a voice message, listened back, and deleted it? We all have. This is Ctrl+Voice.]
 
-## 2. Chat (0:00–0:53): the clips play by themselves, so stay quiet while they do
-- **→** Sarah's voice note plays (14 s). *Say nothing.*
+## 2. The loop (0:03–0:15): the problem, what everyone does today
+- **The loop runs, the take counter ticks:** „დღეს რას ვაკეთებთ? ვწერთ, ვუსმენთ, გვრცხვენია, ვშლით… და თავიდან. ან ვნებდებით და ვბეჭდავთ.“
+  [What do we do today? Record, listen, cringe, delete… and again. Or we give up and type it.]
+- **→** The loop breaks; one take goes out: „Ctrl+Voice ამ წრეს წყვეტს: ერთი ჩანაწერი, და გაგზავნილია.“
+  [Ctrl+Voice breaks the loop: one take, and it's sent.]
+- **→**
+
+## 3. Stat (0:15–0:25)
+- **The number counts up:** „შვიდი მილიარდი ხმოვანი მესიჯი. ყოველდღე. მარტო WhatsApp-ზე.“
+  [Seven billion voice messages. Every day. On WhatsApp alone.]
+- **→** „ტექსტის შესწორება შეგიძლია.“ *(pause)* „ხმის — ვერა.“ *(pause)* „აქამდე.“
+  [You can edit a text. Not your voice. Until now.]
+- **→**
+
+## 4. Chat (0:25–1:15): the clips play by themselves, so stay quiet while they do
+- **→** „ნახეთ.“ [Watch.] Sarah's voice note plays (14 s). *Then say nothing.*
 - **When it ends:** „ჩვეულებრივ, ამას წაშლიდა. ნახეთ.“
   [Normally she'd delete that. Watch.]
-- **→** The red parts collapse and the fixed note plays (9 s). *Say nothing.*
+- **→** The red parts collapse and the fixed note plays (8.5 s). *Say nothing.*
 - **When "Which 2 words are AI?" appears:** „ხუთი წამით მოკლეა. აქ ორი სიტყვა AI-მ თქვა. რომელი ორი?“ *(wait 1–2 s for guesses)*
   [Five seconds shorter. Two of these words are AI. Which two?]
 - **→** Two words turn green: „„Dan has“ და „a bit“. სულ ერთი წამია AI, თანაც მისივე ხმით.“
@@ -30,20 +44,6 @@ When the room is quiet, give the hook, then press **→**.
 - **When his audio ends, →.**
 
 If you are running late, drop the "Normally she'd delete that" line. Never drop "Which two?".
-
-## 3. Stat (0:53–1:03)
-- **The number counts up:** „შვიდი მილიარდი ხმოვანი მესიჯი. ყოველდღე. მარტო WhatsApp-ზე.“
-  [Seven billion voice messages. Every day. On WhatsApp alone.]
-- **→** „ტექსტის შესწორება შეგიძლია.“ *(pause)* „ხმის — ვერა.“ *(pause)* „აქამდე.“
-  [You can edit a text. Not your voice. Until now.]
-- **→**
-
-## 4. The loop (1:03–1:15): the problem, what everyone does today
-- **The loop runs, the take counter ticks:** „დღეს რას ვაკეთებთ? ვწერთ, ვუსმენთ, გვრცხვენია, ვშლით… და თავიდან. ან ვნებდებით და ვბეჭდავთ.“
-  [What do we do today? Record, listen, cringe, delete… and again. Or we give up and type it.]
-- **→** The loop breaks; one take goes out: „Ctrl+Voice ამ წრეს წყვეტს: ერთი ჩანაწერი, და გაგზავნილია.“
-  [Ctrl+Voice breaks the loop: one take, and it's sent.]
-- **→**
 
 ## 5. The idea (1:15–1:28): the recording draws itself, words land on their sound
 - **Mistakes turn red:** „როგორ? შენი ხმა სიტყვებად იქცევა, და თითოეული სიტყვა თავის ბგერაზე რჩება მიბმული.“
@@ -55,15 +55,15 @@ If you are running late, drop the "Normally she'd delete that" line. Never drop 
 ## 6. Not a clone (1:28–1:40): why it is different
 - **The whole bar turns green, 73%:** „თუ მთელ მესიჯს AI-ით თავიდან შევქმნით, ეს უკვე კლონია: ხმის მსგავსება 73%-მდე ეცემა.“
   [Regenerate the whole message with AI and it's a clone: voice similarity drops to 73%.]
-- **→** Only two slivers are green, 98%: „ჩვენთან შენი ნამდვილი ჩანაწერი რჩება. AI მხოლოდ შეცვლილ სიტყვებს ამბობს, დაახლოებით ერთ წამს ცხრიდან: 98%. ორიგინალი კი არასდროს იცვლება.“
-  [We keep your real recording. AI only says the changed words, about one second of nine: 98%. And the original never changes.]
+- **→** Only two slivers are green, 98%: „ჩვენთან შენი ნამდვილი ჩანაწერი რჩება. AI მხოლოდ შეცვლილ სიტყვებს ამბობს, მთელ მესიჯში დაახლოებით ერთ წამს: 98%. ორიგინალი კი არასდროს იცვლება.“
+  [We keep your real recording. AI only says the changed words, about one second in the whole message: 98%. And the original never changes.]
 - **→**
 
 ## 7. Anywhere (1:40–1:52): one key, six apps
 - **The key is pressed, the apps burst out:** „და ის იქ მუშაობს, სადაც უკვე ლაპარაკობ: ერთი ღილაკით Discord-ში, WhatsApp-ში, Telegram-ში, Slack-ში, Signal-სა და Teams-ში. ინტეგრაცია არ სჭირდება.“
   [It works where you already talk: one hotkey, in Discord, WhatsApp, Telegram, Slack, Signal and Teams. No integration needed.]
-- **→** A video and a microphone appear: „და არა მხოლოდ ჩატში: ჩაწერილი ვიდეო ან გამოსვლა აპში ატვირთე და ზუსტად ისე გაასწორე.“
-  [And not just chat: import a recorded video or a speech into the app and fix it the same way.]
+- **→** A podcast and a microphone appear: „და არა მხოლოდ ჩატში: ჩაწერილი გამოსვლა ან პოდკასტი აპში ატვირთე და ზუსტად ისე გაასწორე.“
+  [And not just chat: import a recorded speech or a podcast into the app and fix it the same way.]
 - **→**
 
 ## 8. Architecture map (1:52–2:30): a few words per model; the camera keeps its timing
@@ -71,7 +71,7 @@ If you are running late, drop the "Normally she'd delete that" line. Never drop 
 - **→ Hear: Whisper:** „Whisper ისმენს.“ [Whisper listens.]
 - **→ Align: wav2vec2:** „wav2vec2 სიტყვებს ადგილს უჩენს.“ [wav2vec2 places every word.]
 - **→ Decide: Qwen:** „Qwen წყვეტს, რა ამოიჭრას.“ [Qwen decides what to cut.]
-- **→ Rules:** „წესები: მხოლოდ წაშლა.“ [Rules: deletions only.]
+- **→ Rules:** „წესები: გასუფთავება მხოლოდ შლის.“ [Rules: the clean-up only deletes.]
 - **→ PlayDiffusion:** „PlayDiffusion სიტყვას შენი ხმით ამბობს.“ [PlayDiffusion re-says a word in your voice.]
 - **→ F5-TTS:** „მეორე ხმის მოდელი, პარალელურად.“ [A second voice model, in parallel.]
 - **→ Verify:** „ვამოწმებთ და ვიტოვებთ ყველაზე მსგავსს.“ [We check both and keep the closest.]
@@ -120,14 +120,14 @@ A few words per model, no more. If you are behind, press → on "Re-say, in para
 ## 10. Close (4:40–5:00)
 - **→** „ცხრა მოდელი. დაახლოებით ერთი წამი „um“-ებისა და უკან წაღებული სიტყვების ამოსაჭრელად. და 98%: ხმის მსგავსება, როცა სიტყვას თავიდან ვამბობთ.“
   [Nine models. About a second to cut the ums and the take-backs. And 98% voice similarity when we re-say a word.]
-- „ყველაფერი GitHub-ზეა: დაასკანერეთ QR კოდი და სცადეთ.“ *(პაუზა)* „Ctrl+Voice. თქვი არეულად… გაგზავნე სუფთად.“ *(1 წმ)* „მადლობა.“
-  [It's all on GitHub: scan the QR code and try it. *(beat)* Ctrl+Voice. Say it messy… send it clean. *(1 s)* Thank you.]
+- „ყველაფერი GitHub-ზეა: დაასკანერეთ QR, იქ არის კოდიც და შედეგებიც.“ *(პაუზა)* „Ctrl+Voice. თქვი არეულად… გაგზავნე სუფთად.“ *(1 წმ)* „მადლობა.“
+  [It's all on GitHub: scan the QR code, the code and the results are there. *(beat)* Ctrl+Voice. Say it messy… send it clean. *(1 s)* Thank you.]
 - *Stop, smile, and wait for questions.*
 - If a judge asks about the voices: „ეს ElevenLabs-ის ხმებია, ჩვენს ტექსტს კითხულობენ. გასწორებული აუდიო ძრავის ნამდვილი შედეგია.“ [They are ElevenLabs voices reading our script; the fixed audio is real engine output.]
 
 ---
 
 ## Practising without the app
-- Press **T** on the title to start the clock. Targets: chat done by about 0:53, story slides done by 1:52, map done by 2:30, back on the deck by 4:25. No juror sentence tonight.
+- Press **T** on the title to start the clock. Targets: loop and stat done by 0:25, chat by about 1:15, story slides done by 1:52, map done by 2:30, back on the deck by 4:25. No juror sentence tonight.
 - On the demo slide, say the demo lines anyway and press **1 2 3 4** to fix the card.
 - **B** shows backup clips from an earlier run. Never call them "live".
