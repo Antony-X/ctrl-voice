@@ -5,7 +5,8 @@ How to read this file:
 - `→` means press Right arrow, Space or Enter in the deck. **Keys, not clicks**: the first click after switching back to the browser is ignored.
 - *Italics* are actions. "Quoted text" is what you say aloud.
 - Timestamps are cumulative and start at your first word.
-- The chat-slide timings were checked against `chat.js`'s timers and clip lengths: the step 1 prompt appears at about 0:32 and Confident ends at about 0:51, within about 1 s of the table. Confirm them at the first full rehearsal.
+- The chat-slide timings were measured on the finished slide: steps take about 15.4, 13.6, 1, 6.5 and 7.5 s, so the "Which 2 words are AI?" prompt appears at about 0:34 and Confident ends at about 0:53, about 3 s later than the table. Absorb it in the map (short versions of regions 6 and 8). Confirm at the first full rehearsal.
+- A one-page practice version with only the spoken lines is in `PITCH.md`.
 
 | Clock | Slide | Clicks | What happens |
 |---|---|---|---|
@@ -335,4 +336,4 @@ Rehearse against whatever is **actually deployed** tonight; the live engine must
 4. **The grammar fix still catches your exact planted slip** ("The judges is"). Run the rehearsed message three times after the change, and re-time the finish wait.
 5. A new optional `denoise.py` (DeepFilterNet) appeared in the worktree. If it gets switched on by default, re-listen to the Fixed audio and re-time.
 6. The Settings labels and defaults used in 2.0 still exist, and MAX_AUTO_REPLACE is still 3 per fix type.
-7. Chat slide: going by the `chat.js` timers, Sarah's clip ends about 15.4 s after the step 0 press, the "Which 2 words are AI?" prompt appears about 12.3 s after the step 1 press, Eric's clip takes about 6 s and the Confident step about 6.3 s. So say "Which two?" at about 0:32, not 0:31, and press → to the stat slide only after the Confident audio ends (about 0:51). If `chat.js` changes, re-check.
+7. Chat slide, measured on the finished slide: Sarah's clip ends about 15.4 s after the step 0 press, the "Which 2 words are AI?" prompt appears about 13.6 s after the step 1 press, Eric's step takes about 6.5 s and the Confident step about 7.5 s. So say "Which two?" when the prompt appears (about 0:34), and press → to the stat slide only after the Confident audio ends (about 0:53). If `chat.js` changes, re-check.

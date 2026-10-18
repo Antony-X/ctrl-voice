@@ -58,7 +58,10 @@
   function fx(el, kf, o) {
     if (RM || !el || !el.animate) return null;
     const a = el.animate(kf, { fill: 'backwards', easing: 'ease-out', ...o });
-    anims.add(a); a.finished.then(() => anims.delete(a), () => anims.delete(a));
+    anims.add(a);
+    // a forwards-filled animation keeps holding its end state after it finishes, so it stays
+    // registered until cancelAll(); the others are forgotten once done
+    if (!/forwards|both/.test(a.effect.getTiming().fill)) a.finished.then(() => anims.delete(a), () => anims.delete(a));
     return a;
   }
   const popIn = (el, o = {}) => fx(el, [{ opacity: 0, transform: `translate(${o.dx || 0}px, ${o.dy ?? 18}px) scale(${o.s ?? 0.6})` }, { opacity: 1, transform: 'none' }],

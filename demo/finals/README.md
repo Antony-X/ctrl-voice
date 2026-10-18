@@ -1,6 +1,6 @@
 # Finals presentation
 
-Open `index.html` in Chrome. It works straight from the file, with no server and no internet. Press **F** for fullscreen and **S** for the speaker notes window. The talk script and the live-demo runbook are in `SCRIPT.md`.
+Open `index.html` in Chrome. It works straight from the file, with no server and no internet. Press **F** for fullscreen and **S** for the speaker notes window. The talk script and the live-demo runbook are in `SCRIPT.md`. `PITCH.md` is a one-page practice sheet with only the spoken lines (Georgian, with the English meaning), and `NOTES_KA.md` has the full Georgian notes.
 
 **Before the talk:** on the start screen, click **Sound check** (or press **A** at any time). You should hear three rising notes from the room speakers. If they come from the laptop instead, fix the Windows output device before you start.
 
