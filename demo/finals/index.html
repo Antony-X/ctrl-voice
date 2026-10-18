@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ctrl+Voice Finals</title>
+<link rel="stylesheet" href="assets/deck.css">
+</head>
+<body>
+<template id="mark"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="3.5" y="3.5" width="93" height="93" rx="20" fill="none" stroke="#fff" stroke-width="7"/><g stroke="#fff" stroke-width="6" stroke-linecap="round"><line x1="22.6" y1="40.5" x2="22.6" y2="59.5"/><line x1="36.1" y1="30" x2="36.1" y2="70"/><line x1="50" y1="18.5" x2="50" y2="81.5"/><line x1="63.9" y1="31" x2="63.9" y2="69"/><line x1="77.4" y1="41" x2="77.4" y2="59"/></g></svg></template>
+<div id="stage">
+
+  <!-- 1 ─────────────────────────────────────────── title -->
+  <section class="slide s-title" data-id="title" data-title="Title" data-time="0:00">
+    <div class="logo"><span class="mk"></span>Ctrl+Voice</div>
+    <div class="tag">Say it messy. Send it clean.</div>
+    <aside class="notes">
+      <p>Wait for quiet. Then press → straight away: the next slide plays a voice message by itself.</p>
+    </aside>
+  </section>
+
+  <!-- 2 ─────────────────────────────────────────── hook -->
+  <section class="slide s-hook" data-id="hook" data-title="Is this ever you?" data-time="0:00–0:30">
+    <h1 class="title one">Is this ever you?</h1>
+    <div class="chat">
+      <div class="who"><div class="avatar">S</div>You <span class="time">to Sam, 6:58 PM</span></div>
+      <div class="vnote" id="hook-vnote"></div>
+      <div class="karaoke" id="hook-words"></div>
+    </div>
+    <div class="side">
+      <p data-step="1">You record a voice message. An <b>um</b>. A <b>“Monday? No, wait, Wednesday”</b>. A sentence you <b>regret</b>. A word that comes out <b>wrong</b>.</p>
+      <p data-step="2">Then you either <b>send it messy</b>, or delete it and <b>record it again</b>. And again.</p>
+    </div>
+    <aside class="notes">
+      <p><em>On entering, the message plays by itself (20 s). Stay quiet and let the room hear it. Each mistake turns red as it’s said.</em></p>
+      <p><em>Click</em> after it ends: “Is this ever you? You record a voice message. An um. A ‘Monday, no wait, Wednesday’. A sentence you regret. A word that comes out wrong.”</p>
+      <p><em>Click:</em> “Then you either send it messy, or delete it and record it again. And again.”</p>
+    </aside>
+  </section>
+
+  <!-- 3 ─────────────────────────────────────────── stats -->
+  <section class="slide s-stats" data-id="stats" data-title="It's everywhere" data-time="0:30–0:50">
+    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
+    <div class="stats">
+      <div class="stat" data-step="0">
+        <div class="big">7 billion</div>
+        <div class="cap">voice messages are sent <b>every day</b>, on WhatsApp alone</div>
+        <div class="who">WhatsApp, 2022</div>
+      </div>
+      <div class="stat" data-step="1">
+        <div class="dotgrid" id="dotgrid"></div>
+        <div class="cap"><b>≈6 of every 100 words</b> we say are disfluencies: ums, repeats, restarts</div>
+        <div class="who">Lickley, 2017</div>
+      </div>
+      <div class="stat" data-step="2">
+        <div class="big">44%</div>
+        <div class="cap">of people play voice notes at <b>double speed</b> to get through them</div>
+        <div class="who">Sky Mobile survey, 2,000 UK adults, 2025</div>
+      </div>
+    </div>
+    <div class="punch" data-step="3">Text has spellcheck, autocorrect and Grammarly.<br>Voice messages can’t even be edited.</div>
+    <div class="src"><a href="https://blog.whatsapp.com/making-voice-messages-better">blog.whatsapp.com/making-voice-messages-better</a><br>
+      <a href="https://www.skygroup.sky/article/voice-no-brits-call-time-on-long-voice-notes">skygroup.sky/article/voice-no-brits-call-time-on-long-voice-notes</a></div>
+    <aside class="notes">
+      <p>“And it isn’t rare. WhatsApp alone carries seven billion voice messages a day.”</p>
+      <p><em>Click:</em> “In normal speech, about six of every hundred words are disfluencies: ums, repeats, restarts. So a 30-second message has a few.”</p>
+      <p><em>Click:</em> “Listeners feel it: 44% of people in a UK survey play voice notes at double speed.”</p>
+      <p><em>Click:</em> “Text has spellcheck, autocorrect and Grammarly. Voice messages can’t even be edited.”</p>
+      <p><em>If asked:</em> about 6 per 100 words is the usual figure for adult conversation (Lickley 2017); it varies a lot between people and situations. The 44% is from a survey Sky Mobile ran of 2,000 UK mobile users (May 2025).</p>
+    </aside>
+  </section>
+
+  <!-- 4 ─────────────────────────────────────────── product -->
+  <section class="slide s-product" data-id="product" data-title="Ctrl+Voice" data-time="0:50–1:10">
+    <div class="logo"><span class="mk"></span>Ctrl+Voice</div>
+    <h2>Grammarly for your voice.</h2>
+    <div class="lead">It cuts the ums and false starts, deletes what you take back, and re-says the words you got wrong, <b>in your own voice</b>, before you hit send.</div>
+    <div class="after" data-step="1">
+      <div class="vnote" id="prod-vnote"></div>
+      <div class="karaoke" id="prod-words"></div>
+      <div class="facts"><span><b>20.6 s → 10.2 s</b></span><span><b>5 fixes</b> in one pass</span><span>re-transcribed: <b>word-perfect</b></span></div>
+    </div>
+    <aside class="notes">
+      <p>“So we built Ctrl+Voice: Grammarly for your voice. It cuts the ums and false starts, deletes what you take back, and re-says the words you got wrong, in your own voice, before you send.”</p>
+      <p><em>Click:</em> the same message, fixed, plays by itself (10 s).</p>
+      <p>“Same message. The um, the false start and the sentence they took back are cut. ‘Pacific’ and ‘mute’ are re-said as ‘specific’ and ‘moot’ in the same voice: those are the two green words. Twenty seconds became ten.”</p>
+      <p><em>Honest framing: the example voice is an ElevenLabs voice reading our script (credited on the last slide). Don’t call it someone’s real recording. The fixed version is real engine output.</em></p>
+    </aside>
+  </section>
+
+  <!-- 5 ─────────────────────────────────────────── why hard -->
+  <section class="slide s-hard" data-id="hard" data-title="Why this is hard" data-time="1:10–1:35">
+    <h1 class="title one">Why this is hard</h1>
+    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
+    <div class="hard">
+      <svg class="fig" id="hard-svg" width="1760" height="720" viewBox="0 0 1760 720" style="left:0;top:0"></svg>
+      <div class="card" data-step="0" style="left:0;top:0;width:560px">
+        <div class="num">Hidden</div>
+        <h3>Recognizers hide mistakes</h3>
+        <p>Whisper is trained to write clean text: it drops ums and guesses words from context.</p>
+        <div class="ex">said: “Nikoloz, um, big news”<br>Whisper: “Nikoloz, big news”</div>
+      </div>
+      <div class="card" data-step="1" style="left:600px;top:0;width:560px">
+        <div class="num">0.1–0.4 s</div>
+        <h3>Timestamps drift</h3>
+        <p>Whisper’s word times are off by this much. Cut on them and you slice words in half.</p>
+      </div>
+      <div class="card" data-step="2" style="left:1200px;top:0;width:560px">
+        <div class="num">2 of 10</div>
+        <h3>LLMs change the meaning</h3>
+        <p>trick sentences where a cleanup LLM deleted words that carried meaning (our first, Qwen3-8B version).</p>
+      </div>
+      <div class="card" data-step="3" style="left:0;top:390px;width:860px">
+        <div class="num">7–9 of 10</div>
+        <h3>Voice models say the wrong word</h3>
+        <p>words the fast voice editors got right on real recordings. And regenerating the whole clip drops voice similarity from 0.98 to 0.73.</p>
+      </div>
+      <div class="card" data-step="4" style="left:900px;top:390px;width:860px">
+        <div class="num">&lt; 0.4 s</div>
+        <h3>And it has to be live</h3>
+        <p>“Scratch that” has to strike out the last thought while you’re still talking.</p>
+      </div>
+    </div>
+    <aside class="notes">
+      <p>“Why doesn’t this exist already? Because every piece fights you.”</p>
+      <p>“Speech recognizers are trained to write clean text, so they hide exactly the mistakes we need to find.”</p>
+      <p><em>Click:</em> “Their word timestamps drift by up to 0.4 seconds, so if you cut there you slice words in half.”</p>
+      <p><em>Click:</em> “Ask an LLM to clean up a transcript and it happily deletes a ‘not’. Our first version did that on 2 of 10 trick sentences.”</p>
+      <p><em>Click:</em> “Voice models say the wrong word, and regenerating a whole sentence makes it sound like someone else.”</p>
+      <p><em>Click:</em> “And undo has to work while you’re still talking.”</p>
+      <p><em>Numbers: RESULTS.md round 1 (Qwen3-8B 2/10 wrong deletions; F5 7/10, PlayDiffusion 9/10; PlayDiffusion raw 0.733 vs spliced 0.976 voice similarity; live undo 351 ms).</em></p>
+    </aside>
+  </section>
+
+  <!-- 6 ─────────────────────────────────────────── architecture overview -->
+  <section class="slide s-arch" data-id="arch" data-title="Architecture" data-time="1:35–1:55">
+    <h1 class="title">Architecture<br>The whole pipeline</h1>
+    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
+    <svg class="fig" id="arch-svg" width="1760" height="760" viewBox="0 0 1760 760" style="left:80px;top:290px"></svg>
+    <aside class="notes">
+      <p><em>The diagram draws itself.</em></p>
+      <p>“Here’s the whole system. The app on your laptop streams the microphone over a WebSocket. Every 0.7 seconds Whisper re-transcribes, and a second model re-times every word.</p>
+      <p>An LLM decides what to change, but it never touches audio: it only picks words, and hard-coded validators check every choice. Then there are three paths: cut, re-say a word in your voice, or restyle. Everything lands in an edit list. Your original recording is never modified, and the renderer builds the message only when you play or send it.”</p>
+    </aside>
+  </section>
+
+  <!-- 7 ─────────────────────────────────────────── step 1 -->
+  <section class="slide s-step1" data-id="step1" data-title="Step 1: hear every word" data-time="1:55–2:20">
+    <h1 class="title">Architecture<br>Step 1: hear every word</h1>
+    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
+    <svg class="fig" id="step1-svg" width="1120" height="640" viewBox="0 0 1120 640" style="left:80px;top:330px"></svg>
+    <div class="side-copy copy" style="top:330px;width:600px;font-size:27px">
+      <p>Every <b>0.7 s</b>, <b>Whisper large-v3-turbo</b> re-transcribes everything said so far. A filler-heavy prompt makes it write the ums it hears.</p>
+      <p data-step="1">Its word times drift, so a <b>wav2vec2 character CTC model</b> re-times every word: <span class="hl">Viterbi forced alignment</span> on its CTC trellis.</p>
+      <div data-step="2">
+        <p style="margin-bottom:10px">That model has <b>no language model</b>, so it spells what you <i>really</i> said. An extra filler-shaped word that the alignment can’t explain is an um Whisper dropped, and we put it back.</p>
+        <div class="mini"><span class="k">Whisper</span>“Nikoloz, big news”<br><span class="k">CTC</span><code>NICLOS ON BIG NEWS</code><br><span class="k">Ours</span>“Nikoloz, <span class="red">um</span>, big news”</div>
+      </div>
+    </div>
+    <aside class="notes">
+      <p>“Step one: hear every word, exactly where it is. While you talk, we stream 24 kHz audio in 100 ms chunks, and every 0.7 seconds Whisper large-v3-turbo re-transcribes everything so far. We prompt it with filler-heavy text, so it writes the ums it hears.”</p>
+      <p><em>Click:</em> “But look at the grey boxes: Whisper’s word times. They’re early by a tenth to four tenths of a second. ‘About’ is 0.4 seconds off. So a second model, a wav2vec2 character CTC model, re-times every word with Viterbi forced alignment. Those are the white boxes, and they sit on the actual sound.”</p>
+      <p><em>Click:</em> “That model has no language model: it spells literally what it hears. So when Whisper smooths away an um, the character model still spells it, here as ‘ON’. An edit-distance alignment finds words it can only explain as extras, and if they’re spelled like a filler, we put the um back.”</p>
+      <p><em>Detail if asked:</em> the DP charges 0.6 to insert a filler-spelled token vs 1.0 for any other word, and 2·(1 − similarity) to substitute; split-word pieces (“AM”+“AZON”) are glued back first. The figure is this exact clip: Whisper and alignment times from the engine’s code, run on CPU.</p>
+    </aside>
+  </section>
+
+  <!-- 8 ─────────────────────────────────────────── step 2 -->
+  <section class="slide s-step2" data-id="step2" data-title="Step 2: decide what to cut" data-time="2:20–2:45">
+    <h1 class="title">Architecture<br>Step 2: decide what to cut</h1>
+    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
+    <div class="fig" id="step2-sent" style="left:80px;top:360px;width:1150px;font:500 58px/1 var(--sans);display:flex;gap:30px;justify-content:center">
+      <span>Is it</span><span id="rp">Monday?</span><span id="ip">No, wait,</span><span id="rr">Wednesday?</span>
+    </div>
+    <svg class="fig" id="step2-svg" width="1150" height="700" viewBox="0 0 1150 700" style="left:80px;top:300px"></svg>
+    <div class="side-copy" style="top:330px;width:560px">
+      <svg id="step2-chart" width="560" height="420" viewBox="0 0 560 420" style="overflow:visible"></svg>
+      <div class="copy" style="font-size:25px;margin-top:6px" data-step="2">
+        <p>Meaning-changing edits on 10 trick sentences: <b>2 → 0 → 0</b>.</p>
+        <p><b>Live undo</b>: the LLM picks where the last thought began from ≤ 5 candidates (sentence ends, pauses ≥ 0.45 s, “and / but / so…”): <b class="hl">351 ms</b>.</p>
+      </div>
+    </div>
+    <aside class="notes">
+      <p>“Step two: decide what to cut. Linguists describe a self-correction in three parts: the reparandum, the words you take back; an interregnum like ‘no, wait’; and the repair. This is Shriberg’s model, from her 1994 thesis.”</p>
+      <p><em>Click:</em> “We don’t let the LLM output indices: it copies the transcript and tags what to cut, which is far more reliable. Code maps the tags back to words. Then deterministic validators: deletions only; a negation, number, date or time can only go if a repair of the same type replaces it; and each span is reshaped into Shriberg form. Anything uncertain becomes a suggestion, not a cut.”</p>
+      <p><em>Click:</em> “That took us from 9 to 24 exact clean-ups out of 28, with zero meaning-changing edits on the trick sentences. And live undo, choosing where your last thought began, takes 351 milliseconds.”</p>
+    </aside>
+  </section>
+
+  <!-- 9 ─────────────────────────────────────────── step 3 -->
+  <section class="slide s-step3" data-id="step3" data-title="Step 3: re-say it in your voice" data-time="2:45–3:10">
+    <h1 class="title">Architecture<br>Step 3: re-say it in your voice</h1>
+    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
+    <svg class="fig" id="step3-svg" width="1250" height="740" viewBox="0 0 1250 740" style="left:60px;top:300px"></svg>
+    <div class="side-copy copy" style="top:330px;width:470px;font-size:26px" data-step="1">
+      <p>Two checks, because each one can be fooled:</p>
+      <p><b>1.</b> Whisper re-transcribes the spliced window and must hear the new words.</p>
+      <p><b>2.</b> Whisper guesses from context. The CTC model can’t, and it must prefer the new words:</p>
+      <p class="formula">log P(new | audio) − log P(old | audio) &gt; 0</p>
+      <p>For “specific” the margin was <b class="hl">+29.4</b>.</p>
+    </div>
+    <aside class="notes">
+      <p>“Step three: re-say a word in your voice, only the word. If you meant ‘specific’ and said ‘pacific’, we re-say it with the word before it, ‘more specific’, because alone the new word kept the old onset.”</p>
+      <p>“We cut a window of up to four seconds at word gaps, and set the target length from your own speaking rate. Two voice-editing models, PlayDiffusion and F5-TTS, fill in the gap in parallel. We force-align their output, keep only the new words, cut at the quietest 10 milliseconds, match the loudness, and splice with an equal-power crossfade.”</p>
+      <p><em>Click:</em> “Then we verify, twice. Whisper must hear the new words. But Whisper guesses from context, so the character model, which can’t, must score the new words above the old ones. If both pass we keep the candidate whose voice is closest to yours, measured with an ECAPA speaker embedding. If not, new seed, up to three rounds. Nothing unverified is sent.”</p>
+      <p><em>Detail:</em> if no candidate passes after 3 rounds, the engine returns the best one with <code>verified: false</code>; the app only auto-applies verified replacements.</p>
+    </aside>
+  </section>
+
+  <!-- 10 ────────────────────────────────────────── close-up -->
+  <section class="slide s-closeup" data-id="closeup" data-title="One word, close up" data-time="3:10–3:25">
+    <h1 class="title one">One word, close up</h1>
+    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
+    <div class="closeup">
+      <div class="wrow"><div class="lbl">Before <span>what was said</span></div><svg id="cu-before" width="1180" height="190" viewBox="0 0 1180 190"></svg></div>
+      <div class="wrow" data-step="1"><div class="lbl">After <span>green: the only regenerated audio</span></div><svg id="cu-after" width="1180" height="190" viewBox="0 0 1180 190"></svg></div>
+    </div>
+    <div class="cards3" data-step="1">
+      <div class="kpi"><div class="v green">0.8 s</div><div class="d">regenerated. Everything else is the original recording.</div></div>
+      <div class="kpi"><div class="v hl">+29.4</div><div class="d">CTC margin, new word over old</div></div>
+      <div class="kpi"><div class="v">F5-TTS</div><div class="d">won this one; PlayDiffusion ran in parallel</div></div>
+    </div>
+    <aside class="notes">
+      <p><em>Before plays by itself:</em> “Here’s the original…”</p>
+      <p><em>Click, after plays:</em> “…and the fix. Only the green 0.8 seconds were generated. Everything around it is the original recording.”</p>
+    </aside>
+  </section>
+
+  <!-- 11 ────────────────────────────────────────── step 4 -->
+  <section class="slide s-step4" data-id="step4" data-title="Step 4: catch mispronunciations" data-time="3:25–3:45">
+    <h1 class="title">Architecture<br>Step 4: catch mispronunciations</h1>
+    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
+    <svg class="fig" id="step4-svg" width="1160" height="700" viewBox="0 0 1160 700" style="left:80px;top:310px"></svg>
+    <div class="side-copy" style="top:350px;width:560px" data-step="1">
+      <svg id="step4-chart" width="560" height="300" viewBox="0 0 560 300" style="overflow:visible"></svg>
+      <div class="copy" style="font-size:24px;margin-top:10px">
+        <p>Correlation with expert scores: <b class="hl">0.53</b>, level with published GOPT (0.53); Azure 0.62 and 3MH 0.68 are higher.</p>
+        <p class="mute">In free speech the recognizer often writes what you said (“boomings”), so a text check catches those instead.</p>
+      </div>
+    </div>
+    <aside class="notes">
+      <p>“Step four: catch the words that came out wrong. We know which sounds you should have made: espeak turns the word into phones. A wav2vec2 phoneme model listens, and CTC alignment lines up each phone. Then a ‘goodness of pronunciation’ score: how much better does the expected phone explain the audio than the best wrong phone or a deletion. That’s one batched CTC loss.”</p>
+      <p>“A gradient-boosting model on top, trained on speechocean762 expert scores, predicts the 0-to-10 score an expert would give each word.”</p>
+      <p><em>Click:</em> “AUC 0.88 against expert labels, versus 0.73 without training. And if you get the same sound wrong every time, that’s your accent: we turn it into a tip, not an error.”</p>
+      <p><em>Honest, if asked:</em> that’s measured on read sentences where the intended words are known. In free speech the recognizer often writes what you actually said, e.g. “boomings”, and then the text checks (misspoken/grammar) catch it; the audio detector alone flagged 19% of expert-labelled errors in our free-run test.</p>
+    </aside>
+  </section>
+
+  <!-- 12 ────────────────────────────────────────── step 5 -->
+  <section class="slide s-step5" data-id="step5" data-title="Step 5: tone and accent" data-time="3:45–4:05">
+    <h1 class="title">Architecture<br>Step 5: tone and accent</h1>
+    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
+    <svg class="fig" id="step5-svg" width="1150" height="560" viewBox="0 0 1150 560" style="left:80px;top:320px"></svg>
+    <svg class="fig" id="step5-accent" width="1150" height="150" viewBox="0 0 1150 150" style="left:80px;top:905px" data-step="2"></svg>
+    <div class="side-copy copy" style="top:330px;width:560px;font-size:25px">
+      <p><b>Confident</b> edits your own recording with <span class="hl">Praat PSOLA</span>. No neural regeneration.</p>
+      <p class="formula" style="font-size:25px">f′ = median · (f / median)<sup>range</sup> · shift</p>
+      <p>A phrase ending that rises more than 12% (uptalk) is bent into a gentle fall. Pauses over 0.45 s are squeezed; speech that trails off is sped up.</p>
+      <p data-step="1"><b class="hl">−1.5</b> semitones, <b class="hl">23%</b> shorter, every word kept, voice similarity <b class="hl">0.95</b>.</p>
+    </div>
+    <aside class="notes">
+      <p>“Step five: tone. Say you’re tired. ‘Confident’ doesn’t regenerate anything: it edits your own recording with Praat’s PSOLA. Here’s the pitch of the tired take.” <em>(Tired plays; grey curve.)</em> “Hear the ending go up on ‘Monday?’”</p>
+      <p><em>Click:</em> “Confident.” <em>(Plays; cyan curve.)</em> “Lower, quicker, and the rising ending is bent into a fall, so it sounds like a statement. Same words, same voice.”</p>
+      <p><em>Click:</em> “And optionally, a native accent: Whisper gets the words, F5-TTS says them with a native reference voice, and Seed-VC converts that back to your timbre. It’s off by default, and the app labels it as AI.”</p>
+      <p><em>The tone example voice is an ElevenLabs voice (credited on the last slide). Numbers are measured on this clip.</em></p>
+    </aside>
+  </section>
+
+  <!-- 13 ────────────────────────────────────────── results -->
+  <section class="slide s-results" data-id="results" data-title="Results" data-time="4:05–4:25">
+    <h1 class="title one">Results</h1>
+    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
+    <svg class="fig" id="results-svg" width="1760" height="700" viewBox="0 0 1760 700" style="left:80px;top:290px"></svg>
+    <div class="src">Re-saying: 10 real recordings (LibriSpeech, AMI, DisfluencySpeech). Clean-up: 28 hand-written messages. Small samples: engineering measurements, not paper results.</div>
+    <aside class="notes">
+      <p>“We measured every piece before building the app. Top left: the four voice editors we tested on real recordings. dots.tts gets 10 out of 10 but takes 13 seconds, so we run the two fast ones, PlayDiffusion and F5, in parallel and verify both.”</p>
+      <p>“Top right: splicing only the new words instead of regenerating the clip keeps the voice: similarity 0.98 instead of 0.73.”</p>
+      <p>“Bottom: clean-up went from 9 to 24 exact out of 28. And the everyday path, record, clean, send, takes about a second.”</p>
+    </aside>
+  </section>
+
+  <!-- 14 ────────────────────────────────────────── roadmap -->
+  <section class="slide s-roadmap" data-id="roadmap" data-title="Roadmap" data-time="4:25–4:40">
+    <h1 class="title one">Roadmap</h1>
+    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
+    <svg class="fig" id="roadmap-svg" width="1760" height="700" viewBox="0 0 1760 700" style="left:80px;top:300px"></svg>
+    <aside class="notes">
+      <p>“Our core focus next is running it all on your own device. Most messages only need the recognizer, the aligner and a small LLM, and those fit on a phone. Then a distilled voice editor for the few re-said words, and the hosted engine becomes an optional boost for heavy extras like the accent. Your messages never leave your phone.”</p>
+      <p>“After that: real voice-message bubbles through a Telegram bot and a Discord app, seams nobody can hear, a watermark on every AI word, more languages, and a mobile keyboard.”</p>
+    </aside>
+  </section>
+
+  <!-- 15 ────────────────────────────────────────── demo -->
+  <section class="slide s-demo" data-id="demo" data-title="DEMO" data-time="4:40–6:40">
+    <div class="word">Demo</div>
+    <div class="hint">B: backup clips</div>
+    <aside class="notes">
+      <p><b>Before the talk:</b> Ctrl+Voice running, unlocked with the access code; Discord open in the demo channel; engine warm (send one test message in the last 10 minutes); mic checked.</p>
+      <p><b>1. Record in Discord.</b> Click into the message box, press Alt+` and say a message with an um, a “Monday, no wait, Wednesday”, a sentence you then cancel with “scratch that”, and one wrong word. Point at the bar: the words appear live and the cancelled sentence is struck out while you’re still talking. Press Alt+` again: it cleans up and pastes into Discord. Play it in Discord.</p>
+      <p><b>2. The editor.</b> Open Ctrl+Voice on that message. Play Original, then Fixed. Point at the struck-through cuts and the green re-said word.</p>
+      <p><b>3. Replace a word.</b> Select a word, type a new one, play it: it’s in your voice and was verified.</p>
+      <p><b>4. Tone.</b> Raise Confident and play.</p>
+      <p><em>If you use the demo-mic take instead of speaking live, say so: “this is a prerecorded take played into the app; everything after that is live.”</em></p>
+      <p><em>If anything fails: press B for the backup clips, say “here’s a run from earlier”, and continue.</em></p>
+      <p><em>Come back to the deck (the first click after switching windows is ignored) and press → for the last slide.</em></p>
+    </aside>
+  </section>
+
+  <!-- 16 ────────────────────────────────────────── backup -->
+  <section class="slide s-backup" data-id="backup" data-backup data-steps="2" data-title="Backup clips" data-time="if needed">
+    <h1 class="title one">From the app</h1>
+    <video id="bk0" data-v="0" src="media/video/pill.mp4" poster="media/video/pill_poster.png" preload="auto" playsinline></video>
+    <video id="bk1" data-v="1" src="media/video/editor.mp4" poster="media/video/editor_poster.png" preload="auto" playsinline></video>
+    <video id="bk2" data-v="2" src="media/video/tone.mp4" poster="media/video/tone_poster.png" preload="auto" playsinline muted></video>
+    <aside class="notes">
+      <p><em>Only reached with B from the DEMO slide; normal navigation skips it.</em></p>
+      <p>1. The recording bar over a chat: live words, “scratch that” struck out, cleaned and sent.</p>
+      <p><em>Click:</em> 2. The editor: replace a word; it turns green and the engine’s real audio for that phrase plays.</p>
+      <p><em>Click:</em> 3. Tone: the characters light up as the sliders rise.</p>
+      <p><em>These clips were rendered from the real app UI with real engine output (demo/deck/build/make_videos.py) on an older sample message whose voice is synthetic. Say “from an earlier run”, not “live”. Better: record your own rehearsal run (Win+Alt+R) and save it as media/video/live_backup.mp4. The first clip then plays that instead.</em></p>
+    </aside>
+  </section>
+
+  <!-- 17 ────────────────────────────────────────── thanks -->
+  <section class="slide s-thanks" data-id="thanks" data-title="Thanks" data-time="end">
+    <div class="big">Thanks for your<br>attention!</div>
+    <div class="repo"><img src="media/qr_github.svg" alt="QR code for github.com/Antony-X/ctrl-voice"><div><b>github.com/Antony-X/ctrl-voice</b><br>Clone it, run <b>npm start</b>, and try it yourself.</div></div>
+    <div class="credits">Example voices: ElevenLabs; speechocean762 (CC BY 4.0); Speech Accent Archive (CC BY-NC-SA 4.0).</div>
+    <aside class="notes">
+      <p>“Thank you. Everything is open on GitHub: clone it, run npm start, and try it on our server. We’re happy to take questions.”</p>
+    </aside>
+  </section>
+
+  <div id="notes-overlay" class="overlay"></div>
+  <div id="help" class="overlay">
+    <div><b>→ Space click</b>next step</div>
+    <div><b>← right-click</b>previous step</div>
+    <div><b>F</b>fullscreen</div>
+    <div><b>S</b>speaker notes window</div>
+    <div><b>N</b>notes on the stage</div>
+    <div><b>P / R</b>pause / replay this step</div>
+    <div><b>X</b>skip this slide in the talk</div>
+    <div><b>B</b>backup clips</div>
+    <div><b>.</b>black screen</div>
+    <div><b>T</b>reset the talk clock</div>
+  </div>
+  <div id="toast" class="overlay"></div>
+  <div id="blank" class="overlay"></div>
+  <div id="start" class="overlay"><div>Click to start<small>F fullscreen · S speaker notes · ? keys</small></div></div>
+</div>
+
+<script src="assets/vendor/rough.js"></script>
+<script src="media/data.js"></script>
+<script src="assets/sketch.js"></script>
+<script src="assets/slides.js"></script>
+<script src="assets/deck.js"></script>
+</body>
+</html>
