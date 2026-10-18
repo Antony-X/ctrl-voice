@@ -228,136 +228,132 @@
  },
  "after": {
   "src": "examples/clean/after.mp3",
-  "dur": 11.12,
+  "dur": 10.23,
   "words": [
    {
     "w": "Hey",
     "s": 0.18,
-    "e": 0.341
+    "e": 0.34
    },
    {
     "w": "Sam,",
-    "s": 0.381,
-    "e": 1.042
+    "s": 0.38,
+    "e": 1.041
    },
    {
     "w": "can",
-    "s": 1.062,
-    "e": 1.202
+    "s": 1.061,
+    "e": 1.221
    },
    {
     "w": "you",
-    "s": 1.242,
-    "e": 1.382
+    "s": 1.241,
+    "e": 1.381
    },
    {
     "w": "be",
-    "s": 1.422,
-    "e": 1.542
+    "s": 1.421,
+    "e": 1.561
    },
    {
     "w": "more",
-    "s": 1.562,
-    "e": 1.843,
-    "tag": "regenerated"
+    "s": 1.601,
+    "e": 1.841
    },
    {
     "w": "specific",
-    "s": 1.883,
-    "e": 3.004,
-    "tag": "regenerated"
+    "s": 1.881,
+    "e": 2.401
    },
    {
     "w": "about",
-    "s": 3.045,
-    "e": 3.305
+    "s": 2.441,
+    "e": 2.702
    },
    {
     "w": "game",
-    "s": 3.365,
-    "e": 3.605
+    "s": 2.742,
+    "e": 3.002
    },
    {
     "w": "night?",
-    "s": 3.665,
-    "e": 4.567
+    "s": 3.042,
+    "e": 3.962
    },
    {
     "w": "Is",
-    "s": 4.627,
-    "e": 4.707
+    "s": 4.002,
+    "e": 4.082
    },
    {
     "w": "it",
-    "s": 4.747,
-    "e": 4.887
+    "s": 4.122,
+    "e": 4.242
    },
    {
     "w": "Wednesday?",
-    "s": 4.927,
-    "e": 5.969
+    "s": 4.322,
+    "e": 5.343
    },
    {
     "w": "Anyway,",
-    "s": 6.009,
-    "e": 6.83
+    "s": 5.403,
+    "e": 6.224
    },
    {
     "w": "whatever",
-    "s": 6.87,
-    "e": 7.251
+    "s": 6.244,
+    "e": 6.624
    },
    {
     "w": "Jordan",
-    "s": 7.291,
-    "e": 7.651
+    "s": 6.684,
+    "e": 7.044
    },
    {
     "w": "said",
-    "s": 7.691,
-    "e": 7.932
+    "s": 7.064,
+    "e": 7.304
    },
    {
     "w": "is",
-    "s": 7.972,
-    "e": 8.072
+    "s": 7.344,
+    "e": 7.584
    },
    {
     "w": "a",
-    "s": 8.112,
-    "e": 8.232,
-    "tag": "regenerated"
+    "s": 7.604,
+    "e": 7.624
    },
    {
     "w": "moot",
-    "s": 8.292,
-    "e": 8.793,
-    "tag": "regenerated"
+    "s": 7.684,
+    "e": 7.905
    },
    {
     "w": "point",
-    "s": 8.813,
-    "e": 9.094
+    "s": 7.945,
+    "e": 8.185
    },
    {
     "w": "now.",
-    "s": 9.134,
-    "e": 10.075
+    "s": 8.225,
+    "e": 9.185
    },
    {
     "w": "Just",
-    "s": 10.115,
-    "e": 10.295
+    "s": 9.225,
+    "e": 9.405
    },
    {
     "w": "bring",
-    "s": 10.335,
-    "e": 10.576
+    "s": 9.445,
+    "e": 9.686
    },
    {
     "w": "snacks.",
-    "s": 10.616,
-    "e": 10.976
+    "s": 9.726,
+    "e": 10.066
    }
   ]
  },
@@ -383,7 +379,7 @@
    "engine": "f5",
    "out": [
     1.56,
-    2.99
+    2.38
    ]
   },
   {
@@ -393,7 +389,7 @@
    "t0": 5.846,
    "t1": 7.147,
    "text": "Monday? No, wait,",
-   "out_at": 4.633
+   "out_at": 4.023
   },
   {
    "type": "cut",
@@ -402,7 +398,7 @@
    "t0": 9.269,
    "t1": 15.885,
    "text": "Also, I still sleep with a teddy bear. Scratch that.",
-   "out_at": 5.709
+   "out_at": 5.099
   },
   {
    "type": "replace",
@@ -415,8 +411,8 @@
    "verified": true,
    "engine": "f5",
    "out": [
-    8.09,
-    8.79
+    7.48,
+    7.9
    ]
   }
  ],
@@ -429,18 +425,18 @@
   },
   "fix_types": 4,
   "dur_before": 20.64,
-  "dur_after": 11.12,
+  "dur_after": 10.23,
   "mp3_dur_before": 20.64,
   "retranscribed_after": "Hey Sam, can you be more specific about game night? Is it Wednesday? Anyway, whatever Jordan said is a moot point now. Just bring snacks.",
   "app_final_text": "Hey, Sam, can you be more specific about game night? Is it Wednesday? Anyway, whatever Jordan said is a moot point now. Just bring snacks.",
   "retranscription_wer": 0.0,
   "replacements_verified": true,
   "natural_pause_median_s": 0.23,
-  "engine_sid": "862e9837",
+  "engine_sid": "51c62afc",
   "pipeline": "Ctrl+Voice import + autoFix (main.js), default settings: cleanup, misspoken, grammar, pronunciation on; no tone/accent",
-  "rerender": "2026-10-18: re-rendered with 'more specific' and 'a moot' (each re-said with the word before it), picked by a sound-only CTC check (no language model)",
-  "ctc_margin_specific": 32.56,
-  "ctc_margin_moot": 4.18
+  "rerender": "2026-10-18: re-rendered through the engine API after the speaking-rate fix (re-said words at the speaker's own pace)",
+  "ctc_margin_specific": 29.35,
+  "ctc_margin_moot": 13.07
  },
  "caption": "One pass, five fixes: an um, a false start, a scratched sentence and two wrong words."
 };

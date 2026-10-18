@@ -102,7 +102,7 @@
 
   const KIND = {
     undo: 'Undone', command: 'Scratched', cut: 'Cut', filler: 'Filler', correction: 'Self-correction', restart: 'Restart',
-    repetition: 'Repeat', tighten: 'Shortened', replace: 'Replaced', grammar: 'Grammar', misspoken: 'Misspoken', pronunciation: 'Pronunciation',
+    repetition: 'Repeat', redundant: 'Said twice', aside: 'Aside', tighten: 'Shortened', replace: 'Replaced', grammar: 'Grammar', misspoken: 'Misspoken', pronunciation: 'Pronunciation',
   };
   function label(op) {
     if (KIND[op.kind]) return KIND[op.kind];

@@ -226,7 +226,10 @@ async def api_replace(sid: str, r: dict):
     ww = [dict(w=w["w"], s=round(w["s"] - L, 3), e=round(w["e"] - L, 3)) for w in W[a:b + 1]]; wi, wj = i - a, j - a
     tail = re.sub(r"^.*?([.,!?;:]*)$", r"\1", W[j]["w"]); nw = new.split(); nw[-1] += tail
     tw = [dict(w=w["w"]) for w in ww[:wi]] + [dict(w=x_) for x_ in nw] + [dict(w=w["w"]) for w in ww[wj + 1:]]
-    rate = sum(len(norm(w["w"])) for w in W) / max(1e-3, sum(w["e"] - w["s"] for w in W))  # chars/sec of this speaker
+    # chars/sec of this speaker. An aligned word runs on into the pause after it, so only count words followed straight by another word
+    inner = [w for w, w2 in zip(W, W[1:]) if not re.search(r"[.,!?;:]$", w["w"]) and w2["s"] - w["e"] < 0.15]
+    ws = inner if len(inner) >= 4 else W
+    rate = sum(len(norm(w["w"])) for w in ws) / max(1e-3, sum(w["e"] - w["s"] for w in ws))
     req = dict(path=wp, words=ww, i=wi, j=wj, old=" ".join(w["w"] for w in ww[wi:wj + 1]).strip(".,!?;:"), new=new,
                text=" ".join(w["w"] for w in ww), new_text=" ".join(w["w"] for w in tw), new_dur=max(0.25, len(norm(new.replace(" ", ""))) / rate + 0.08 * (len(nw) - 1)), same=same)
     if same: req["new_dur"] = W[j]["e"] - W[i]["s"]
