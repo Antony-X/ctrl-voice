@@ -160,6 +160,7 @@ function renderEmpty() {
       <h1>Press ${keycaps(S.settings.shortcuts.toggle)} in any chat to record</h1>
       <p>Talk like you normally would. Ctrl+Voice cuts the ums and false starts, re-says words that came out unclear, and sends the message in your own voice.</p>
       <p>Say “scratch that” to drop the last thing you said.</p>
+      <p>Already have a voice note? <button class="link-btn" data-action="import">Import it</button>, or drop it here.</p>
     </div></div>`;
 }
 
@@ -237,7 +238,7 @@ function renderEditor() {
   if (S.route !== 'editor' || !S.meta) return;
   const m = S.meta;
   const scroll = mainEl.querySelector('.col') ? mainEl.scrollTop : 0;
-  const where = m.sentTo ? `, sent to ${esc(m.sentTo)}` : m.from ? `, recorded in ${esc(m.from)}` : '';
+  const where = m.sentTo ? `, sent to ${esc(m.sentTo)}` : m.from ? `, recorded in ${esc(m.from)}` : m.imported ? ', imported' : '';
   mainEl.innerHTML = `
     <div class="col">
       <div class="head">
@@ -1227,7 +1228,7 @@ function renderSettings() {
       </div></section>
 
       <section class="section"><h2>Recording</h2><div class="group">
-        ${row('Microphone', '', `<select class="field" id="micId">${mics}</select>`)}
+        ${row('Microphone', S.demoMic ? `Demo mic on: recordings play ${esc(S.demoMic)} instead` : '', `<select class="field" id="micId">${mics}</select>`)}
         ${row('When you finish', 'Sending works in Discord, WhatsApp, Telegram, Slack, Signal and Teams. Anywhere else, the editor opens.', `
           <div class="seg">
             <button class="${s.finishAction === 'send' ? 'on' : ''}" data-action="finish" data-value="send">Send it</button>
@@ -1308,8 +1309,9 @@ async function setSetting(patch) {
   if (S.route === 'settings') renderSettings();
 }
 
-function applySettingsPayload({ settings, shortcutStatus, defaults }) {
+function applySettingsPayload({ settings, shortcutStatus, defaults, demoMic }) {
   S.settings = settings;
+  if (demoMic !== undefined) S.demoMic = demoMic;
   S.shortcutStatus = shortcutStatus || {};
   if (defaults) S.defaults = defaults;
   renderRecordButton();
@@ -1352,6 +1354,7 @@ const ACTIONS = {
   'win-close': () => api.send('win:close'),
   'rec-toggle': () => api.send('rec:toggle'),
   'go-settings': () => openSettings(),
+  import: () => importNote(),
   open: (el) => openMessage(el.dataset.id),
   retry: () => (S.notice?.retry === 'fix' ? fixIt() : openMessage(S.id)),
   delete: async () => {
@@ -1420,6 +1423,46 @@ const ACTIONS = {
   'reset-shortcuts': () => setSetting({ shortcuts: S.defaults.shortcuts }),
   quit: () => api.send('app:quit'),
 };
+
+// ---------- import ----------
+// The main process opens the editor on the imported note, which is fixed like a recording.
+async function importNote(file) {
+  if (S.importing) return;
+  S.importing = true;
+  renderImportButton();
+  try {
+    await api.invoke('messages:import', file);
+  } catch (err) {
+    toast(`Couldn't import that file. ${errText(err)}`, true);
+  }
+  S.importing = false;
+  renderImportButton();
+}
+
+function renderImportButton() {
+  $('importBtn').disabled = !!S.importing;
+  $('importLabel').textContent = S.importing ? 'Importing…' : 'Import a voice note';
+}
+
+// Drop a voice note anywhere on the window to import it.
+const draggingFiles = (e) => [...(e.dataTransfer?.types || [])].includes('Files');
+document.addEventListener('dragover', (e) => {
+  if (!draggingFiles(e)) return;
+  e.preventDefault();
+  document.body.classList.add('dropping');
+});
+document.addEventListener('dragleave', (e) => {
+  if (!e.relatedTarget) document.body.classList.remove('dropping');
+});
+document.addEventListener('drop', (e) => {
+  if (!draggingFiles(e)) return;
+  e.preventDefault(); // otherwise the window navigates to the file
+  document.body.classList.remove('dropping');
+  const file = e.dataTransfer.files[0];
+  const where = file && api.pathFor(file); // empty for a file that isn't on disk, e.g. dragged from a browser
+  if (where) importNote(where);
+  else if (file) toast('Save the voice note to your computer first, then drop it here', true);
+});
 
 document.addEventListener('click', (e) => {
   const el = e.target.closest('[data-action]');
