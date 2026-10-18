@@ -23,6 +23,7 @@ const OVERLAY_W = 680;
 const OVERLAY_H = 240;
 
 const SHORTCUTS_VERSION = 3;
+const FIX_VERSION = 2;      // 2: "Re-say unclear words" off by default
 const DEFAULT_SETTINGS = {
   shortcuts: {
     toggle: 'Alt+`',                             // start / finish & send (global) — the key under Esc
@@ -36,7 +37,8 @@ const DEFAULT_SETTINGS = {
   accessCode: '',           // the engine's access code, asked for on first launch
   finishAction: 'send',     // 'send' = fix and paste into the app you recorded from, 'review' = open the editor
   autoSend: true,           // press Enter after pasting
-  fix: { cleanup: true, grammar: true, misspoken: true, pronunciation: true }, // applied before sending
+  fix: { cleanup: true, grammar: true, misspoken: true, pronunciation: false }, // applied before sending
+  fixVersion: FIX_VERSION,
   tone: { confident: 0, calm: 0, warm: 0 }, // your-voice tone for every message, slider positions 0..1 as in the editor
   accent: false,            // every message said again with a native accent (AI voice), before the tone
   showIdleBar: true,
@@ -118,6 +120,10 @@ function loadSettings() {
       s.shortcutsVersion = SHORTCUTS_VERSION;
     }
     if (raw.cutFillers === false && !raw.fix) s.fix.cleanup = false;
+    if ((raw.fixVersion || 1) < FIX_VERSION) {   // turned off once on upgrade; the user can turn it back on
+      s.fix.pronunciation = false;
+      s.fixVersion = FIX_VERSION;
+    }
     for (const k of RETIRED_SETTINGS) delete s[k];
     return s;
   } catch {
