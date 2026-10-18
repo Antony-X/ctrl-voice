@@ -7,6 +7,7 @@ const $ = (id) => document.getElementById(id);
 const mainEl = $('main');
 const popEl = $('pop');
 const menuEl = $('menu');
+const toneEl = $('tone');
 
 // ---------- helpers ----------
 const ICON = {
@@ -44,6 +45,14 @@ const timeOf = (ts) => new Date(ts).toLocaleTimeString(undefined, { hour: 'numer
 
 const NATURAL_STYLES = ['confident', 'calm', 'warm'];
 const AI_STYLES = ['calm', 'friendly', 'excited', 'confident'];
+// The engine's natural presets (PRESETS in respeak app/prosody.py), to describe
+// what a mix of sliders does. A slider at full is MAX_AMOUNT times the preset.
+const NATURAL_PRESETS = {
+  confident: { shift: 0.95, range: 1.0, speed: 1.07, fall: true, blurb: 'Lower and quicker' },
+  calm: { shift: 0.97, range: 0.7, speed: 0.95, fall: true, blurb: 'Slower and steadier' },
+  warm: { shift: 1.04, range: 1.15, speed: 1.0, fall: false, blurb: 'Brighter and livelier' },
+};
+const MAX_AMOUNT = 1.5;
 const SEND_APPS = ['Discord', 'WhatsApp', 'Telegram', 'Slack', 'Signal', 'Teams'];
 
 // ---------- state ----------
@@ -126,6 +135,7 @@ function renderList() {
 function render() {
   renderList();
   closeMenu();
+  closeTone();
   if (S.route === 'settings') return renderSettings();
   if (S.route === 'editor' && S.meta) return renderEditor();
   renderEmpty();
@@ -298,7 +308,10 @@ function summaryHtml() {
   if (changed) parts.push(`${plural(changed, 'word')} changed`);
   if (resaid) parts.push(`${plural(resaid, 'word')} re-said`);
   if (restyled) parts.push(`${plural(restyled, 'part')} in a new tone`);
-  if (S.meta.take) parts.push(`${S.meta.take.style} tone`);
+  if (S.meta.take) {
+    const tones = takeTones(S.meta.take);
+    parts.push(`${/^[aeiou]/.test(tones[0]) ? 'an' : 'a'} ${tones.join(', ')} tone${S.meta.take.engine === 'tone' ? ' (AI voice)' : ''}`);
+  }
   let what = parts.length ? cap(joinAnd(parts)) : S.meta.fixed ? 'Nothing needed fixing' : 'No changes yet';
   const outDur = S.meta.take?.dur ?? S.meta.output?.dur;
   if (outDur && !S.dirty && S.meta.dur - outDur >= 1) what += `, ${Math.round(S.meta.dur - outDur)} seconds shorter`;
@@ -364,7 +377,8 @@ function popHtml() {
       <button class="go" data-action="replace-go">Say it</button></div>`;
   }
   if (S.pop === 'tone') {
-    const opts = (engine, styles) => styles.map(s => btn('tone-sel', cap(s), `data-engine="${engine}" data-style="${s}"`)).join('');
+    const opts = (engine, styles) => styles.map(s => `<button data-action="tone-sel" data-engine="${engine}" data-style="${s}">
+      ${avatar(s, engine === 'tone')}${cap(s)}</button>`).join('');
     return `<div class="pop-styles">
       <span class="lab">Your voice</span><div class="opts">${opts('natural', NATURAL_STYLES)}</div>
       <span class="lab">AI voice</span><div class="opts">${opts('tone', AI_STYLES)}</div></div>`;
@@ -470,6 +484,8 @@ document.addEventListener('mouseup', () => {
 document.addEventListener('mousedown', (e) => {
   if (!popEl.hidden && !popEl.contains(e.target) && !e.target.closest('.w')) clearSelection();
   if (!menuEl.hidden && !menuEl.contains(e.target) && !e.target.closest('[data-menu]')) closeMenu();
+  // the player bar stays usable while the tone panel is open
+  if (!toneEl.hidden && !toneEl.contains(e.target) && !e.target.closest('.dock')) closeTone();
 });
 
 // ---------- editor: changing the edit list ----------
@@ -768,7 +784,9 @@ function renderBar() {
   const playing = !player.paused;
   const time = updating ? 'Updating…' : playing || player.currentTime > 0 ? fmt(player.currentTime) : fmt(dur);
   const take = S.meta.take;
-  const toneLabel = take ? `${cap(take.style)} tone` : 'Tone';
+  const tones = take ? takeTones(take) : [];
+  const toneLabel = !tones.length ? 'Tone' : tones.length === 1 ? cap(tones[0]) : `${tones.length} tones`;
+  const avatars = tones.length ? `<span class="avs">${tones.slice(0, 3).map(s => avatar(s, take.engine === 'tone')).join('')}</span>` : '';
   const target = sendTarget();
   const busy = !canEdit() ? 'disabled' : '';
   bar.innerHTML = `
@@ -782,13 +800,14 @@ function renderBar() {
       <button class="${S.view === 'output' ? 'on' : ''}" data-action="view" data-view="output">Fixed</button>
     </div>
     <div class="bar-group">
-      <button class="pill-btn" data-action="tone-menu" data-menu ${busy}>${esc(toneLabel)}${svg('chevron')}</button>
+      <button class="pill-btn" data-action="tone-panel" data-menu aria-expanded="${!toneEl.hidden}" ${busy}>${avatars}${esc(toneLabel)}${svg('chevron')}</button>
       <div class="send">
         <button data-action="send" ${busy}>${target ? `Send to ${esc(target)}` : 'Copy audio'}</button>
         <button class="more" data-action="send-menu" data-menu title="More ways to send" aria-label="More ways to send" ${busy}>${svg('chevron')}</button>
       </div>
     </div>`;
   drawWave();
+  paintToneStatus();
 }
 
 function sendTarget() {
@@ -842,7 +861,7 @@ mainEl.addEventListener('click', (e) => {
   tick();
 });
 
-window.addEventListener('resize', () => { drawWave(); closePop(); closeMenu(); });
+window.addEventListener('resize', () => { drawWave(); closePop(); closeMenu(); if (!toneEl.hidden) placeTone(); });
 
 // ---------- menus ----------
 function openMenu(anchor, html) {
@@ -855,21 +874,6 @@ function openMenu(anchor, html) {
 }
 function closeMenu() { menuEl.hidden = true; }
 
-function toneMenuHtml() {
-  const take = S.meta.take;
-  const item = (engine, style) => {
-    const on = take && take.engine === engine && take.style === style;
-    return `<button class="menu-item" data-action="tone-all" data-engine="${engine}" data-style="${style}">
-      <span class="check">${on ? svg('check') : ''}</span>${cap(style)}</button>`;
-  };
-  return `
-    <div class="menu-lab">Your voice</div>
-    ${NATURAL_STYLES.map(s => item('natural', s)).join('')}
-    <div class="menu-lab">AI voice, sounds less like you</div>
-    ${AI_STYLES.map(s => item('tone', s)).join('')}
-    ${take ? `<div class="menu-sep"></div><button class="menu-item" data-action="tone-clear"><span class="check"></span>No tone change</button>` : ''}`;
-}
-
 function sendMenuHtml() {
   const target = sendTarget();
   return `
@@ -877,27 +881,253 @@ function sendMenuHtml() {
     ${target ? '<div class="menu-sep"></div><button class="menu-item" data-action="send-to" data-app="">Copy audio</button>' : ''}`;
 }
 
-async function toneAll(engine, style) {
+// ---------- tone panel ----------
+// Your voice: a slider per tone, mixed into one pitch-and-pace change of your
+// own recording. AI voice: one tone at a time, re-made by the AI voice.
+// Letting go of a slider (or picking an AI tone) makes the new take and plays it.
+const TONE = {
+  id: null,                                  // the message the panel was opened for
+  tab: 'natural',                            // natural | ai
+  levels: { confident: 0, calm: 0, warm: 0 }, // slider positions, 0..1
+  timer: 0,
+  busy: false,                               // a take is being made
+  again: false,                              // the sliders moved while it was
+};
+
+// The tones in a take, strongest first.
+function takeTones(take) {
+  const mix = take.mix || { [take.style]: 1 };
+  return Object.entries(mix).filter(([, a]) => a > 0).sort((a, b) => b[1] - a[1]).map(([k]) => k);
+}
+
+const avatar = (tone, ai = false) => `<span class="av k-${tone}${ai ? ' ai' : ''}">${character(tone, true)}</span>`;
+
+const levelName = (v) => (v <= 0 ? 'Off' : v < 0.4 ? 'Light' : v < 0.8 ? 'Medium' : 'Strong');
+
+function levelsOf(take) {
+  const levels = { confident: 0, calm: 0, warm: 0 };
+  if (take?.engine !== 'natural') return levels;
+  for (const [k, a] of Object.entries(take.mix || { [take.style]: 1 })) if (k in levels) levels[k] = Math.min(1, a / MAX_AMOUNT);
+  return levels;
+}
+
+// Slider positions to what the engine takes: {style: amount}, 1 = the preset.
+function mixOf(levels) {
+  const mix = {};
+  for (const [k, v] of Object.entries(levels)) if (v > 0) mix[k] = Math.round(v * MAX_AMOUNT * 100) / 100;
+  return mix;
+}
+
+// What the mix does, in plain words: "Pitch 5% lower, 7% faster, firm endings".
+function describeMix(mix) {
+  let shift = 1, range = 1, speed = 1, fall = false;
+  for (const [k, a] of Object.entries(mix)) {
+    const p = NATURAL_PRESETS[k];
+    shift *= p.shift ** a; range *= p.range ** a; speed *= p.speed ** a;
+    fall ||= p.fall;
+  }
+  const pct = (x) => Math.round(Math.abs(x - 1) * 100);
+  const parts = [];
+  if (pct(shift)) parts.push(`pitch ${pct(shift)}% ${shift < 1 ? 'lower' : 'higher'}`);
+  if (pct(speed)) parts.push(`${pct(speed)}% ${speed > 1 ? 'faster' : 'slower'}`);
+  if (range < 0.95) parts.push('steadier');
+  else if (range > 1.05) parts.push('more lively');
+  if (fall) parts.push('firm endings');
+  return parts.length ? cap(parts.join(', ')) : 'Move a slider to change how you sound';
+}
+
+function openTone() {
+  if (!canEdit()) return;
   closeMenu();
-  if (!canEdit() || !(await ensureRendered())) return;
+  const take = S.meta.take;
+  TONE.id = S.id;
+  TONE.tab = take?.engine === 'tone' ? 'ai' : 'natural';
+  TONE.levels = levelsOf(take);
+  toneEl.hidden = false;
+  renderTone();
+  renderBar();
+}
+
+function closeTone() {
+  if (toneEl.hidden) return;
+  toneEl.hidden = true;
+  renderBar();
+}
+
+function renderTone() {
+  if (toneEl.hidden) return;
+  const take = S.meta?.take;
+  const locked = S.fixing || S.opening ? 'disabled' : '';
+  const tab = (key, label) => `<button class="${TONE.tab === key ? 'on' : ''}" data-action="tone-tab" data-tab="${key}">${label}</button>`;
+  let body;
+  if (TONE.tab === 'natural') {
+    body = `<div class="tone-cards">${NATURAL_STYLES.map((s) => {
+      const v = TONE.levels[s];
+      return `<div class="tc k-${s} ${v > 0 ? 'on' : ''}" data-tone="${s}" style="--a:${v}">
+        <button class="tc-art" data-action="tone-bump" data-tone="${s}" title="Click to step through Off, Medium and Strong" ${locked}>${character(s)}</button>
+        <div class="tc-name"><span>${cap(s)}</span><span class="lvl">${levelName(v)}</span></div>
+        <div class="tc-blurb">${NATURAL_PRESETS[s].blurb}</div>
+        <input class="tc-range" type="range" min="0" max="100" value="${Math.round(v * 100)}" data-tone="${s}"
+          aria-label="How ${s}" aria-valuetext="${levelName(v)}" ${locked} />
+      </div>`;
+    }).join('')}</div>
+    <div class="tone-foot"><span class="grow tone-read">${esc(describeMix(mixOf(TONE.levels)))}</span><span class="tone-status"></span></div>`;
+  } else {
+    body = `<div class="tone-cards ai">${AI_STYLES.map((s) => {
+      const on = take?.engine === 'tone' && take.style === s;
+      return `<button class="tc k-${s} ${on ? 'on' : ''}" data-action="tone-ai" data-tone="${s}" style="--a:${on ? 1 : 0}" aria-pressed="${on}" ${locked}>
+        <span class="tc-art">${character(s)}</span><span class="tc-name">${cap(s)}</span></button>`;
+    }).join('')}</div>
+    <div class="tone-foot"><span class="grow">Re-made by an AI voice, so it sounds less like you</span><span class="tone-status"></span></div>`;
+  }
+  toneEl.innerHTML = `
+    <div class="tone-head">
+      <div class="seg" role="group" aria-label="Which voice">${tab('natural', 'Your voice')}${tab('ai', 'AI voice')}</div>
+      <button class="text-btn" data-action="tone-reset">No tone change</button>
+    </div>
+    ${body}`;
+  paintToneStatus();
+  placeTone();
+}
+
+// Above the player bar, at its right end, so it stays put as the Tone button's label changes.
+function placeTone() {
+  const bar = $('bar');
+  if (!bar) return closeTone();
+  const r = bar.getBoundingClientRect();
+  const w = toneEl.offsetWidth;
+  toneEl.style.left = `${Math.max(8, Math.min(r.right - w, window.innerWidth - w - 8))}px`;
+  toneEl.style.top = `${Math.max(8, r.top - toneEl.offsetHeight - 10)}px`;
+}
+
+// Updates a card while its slider moves, without re-rendering the panel.
+function paintToneCard(tone) {
+  const card = toneEl.querySelector(`.tc[data-tone="${tone}"]`);
+  if (!card) return;
+  const v = TONE.levels[tone];
+  card.style.setProperty('--a', v);
+  card.classList.toggle('on', v > 0);
+  card.querySelector('.lvl').textContent = levelName(v);
+  const input = card.querySelector('.tc-range');
+  if (+input.value !== Math.round(v * 100)) input.value = Math.round(v * 100);
+  input.setAttribute('aria-valuetext', levelName(v));
+  const read = toneEl.querySelector('.tone-read');
+  if (read) read.textContent = describeMix(mixOf(TONE.levels));
+  paintToneStatus();
+}
+
+// What the engine is doing, and whether there is a tone to remove.
+function paintToneStatus() {
+  const el = toneEl.hidden ? null : toneEl.querySelector('.tone-status');
+  if (!el) return;
+  const text = S.job || S.fixing;
+  el.innerHTML = text ? `<span class="spin"></span>${esc(text)}` : '';
+  toneEl.querySelector('[data-action="tone-reset"]').disabled = !S.meta?.take && !Object.values(TONE.levels).some(v => v > 0);
+}
+
+// Makes the take for the sliders once they settle; if they move while a take
+// is being made, the newest positions win.
+function scheduleTone(delay = 280) {
+  clearTimeout(TONE.timer);
+  TONE.timer = setTimeout(applyTone, delay);
+}
+
+async function applyTone() {
+  if (TONE.busy) { TONE.again = true; return; }
+  if (S.id !== TONE.id || !S.meta) return;
+  const want = mixOf(TONE.levels);
+  const have = mixOf(levelsOf(S.meta.take));
+  if (JSON.stringify(want) === JSON.stringify(have)) return;
+  TONE.busy = true;
+  let ok = false;
+  try {
+    if (!Object.keys(want).length) ok = await clearTone();
+    else {
+      const tones = Object.keys(want).sort((a, b) => want[b] - want[a]);
+      ok = await toneAll('natural', tones[0], want);
+    }
+  } finally {
+    TONE.busy = false;
+  }
+  if (TONE.again) { TONE.again = false; return applyTone(); }
+  if (ok) preview();
+}
+
+// Plays the new take from the start.
+function preview() {
+  if (S.id !== TONE.id || !S.audio.output) return;
+  player.currentTime = 0;
+  player.play().catch(() => {});
+}
+
+async function pickAiTone(style) {
+  if (TONE.busy || !S.meta) return;
+  const take = S.meta.take;
+  if (take?.engine === 'tone' && take.style === style) return preview();
+  TONE.busy = true;
+  let ok = false;
+  try {
+    ok = await toneAll('tone', style);
+  } finally {
+    TONE.busy = false;
+  }
+  TONE.levels = levelsOf(S.meta.take);
+  renderTone();
+  if (ok) preview();
+}
+
+async function resetTone() {
+  clearTimeout(TONE.timer);
+  TONE.levels = { confident: 0, calm: 0, warm: 0 };
+  renderTone();
+  if (!S.meta?.take || TONE.busy) return;
+  TONE.busy = true;
+  try {
+    await clearTone();
+  } finally {
+    TONE.busy = false;
+  }
+  renderTone();
+}
+
+// A take of the whole message: natural (a mix of presets, in your own voice)
+// or tone (the AI voice). Resolves true when there is a new take.
+async function toneAll(engine, style, mix) {
+  if (!canEdit() || !(await ensureRendered())) return false;
   const id = S.id;
-  const text = engine === 'tone' ? `Making it ${style} with the AI voice…` : `Making it ${style}…`;
-  const r = await job(text, () => api.invoke('edit:restyle', { id, engine, style }));
-  if (!r || !adopt(r.meta)) return;
+  const what = mix ? joinAnd(Object.keys(mix).sort((a, b) => mix[b] - mix[a])) : style;
+  const text = engine === 'tone' ? `Making it ${what} with the AI voice…` : `Making it ${what}…`;
+  const r = await job(text, () => api.invoke('edit:restyle', { id, engine, style, mix }));
+  if (!r || !adopt(r.meta)) return false;
+  renderEditor();
   setView('output');
   setAudio('output', r.audio);
   if (engine === 'tone' && r.meta.take?.wordsKept != null && r.meta.take.wordsKept < 0.9) {
     toast('Some words changed in the restyle. Listen before sending', true);
   }
+  return true;
 }
 
 async function clearTone() {
-  closeMenu();
   const id = S.id;
   const r = await job('Removing the tone…', () => api.invoke('edit:clear-take', id));
-  if (!r || !adopt(r.meta)) return;
+  if (!r || !adopt(r.meta)) return false;
+  renderEditor();
   setAudio('output', r.audio);
+  return true;
 }
+
+toneEl.addEventListener('input', (e) => {
+  const tone = e.target.matches('.tc-range') && e.target.dataset.tone;
+  if (!tone) return;
+  clearTimeout(TONE.timer);
+  TONE.levels[tone] = e.target.value / 100;
+  paintToneCard(tone);
+});
+// change fires when the slider is let go (or after a key press on it)
+toneEl.addEventListener('change', (e) => {
+  if (e.target.matches('.tc-range')) scheduleTone();
+});
 
 async function send(appName) {
   closeMenu();
@@ -1111,9 +1341,18 @@ const ACTIONS = {
   misheard: () => checkMisheard(),
   play: () => togglePlay(),
   view: (el) => setView(el.dataset.view),
-  'tone-menu': (el) => (menuEl.hidden ? openMenu(el, toneMenuHtml()) : closeMenu()),
-  'tone-all': (el) => toneAll(el.dataset.engine, el.dataset.style),
-  'tone-clear': () => clearTone(),
+  'tone-panel': () => (toneEl.hidden ? openTone() : closeTone()),
+  'tone-tab': (el) => { TONE.tab = el.dataset.tab; renderTone(); },
+  // clicking a character steps it Off, Medium (the preset), Strong
+  'tone-bump': (el) => {
+    const tone = el.dataset.tone;
+    const v = TONE.levels[tone];
+    TONE.levels[tone] = v < 0.66 ? 2 / 3 : v < 1 ? 1 : 0;
+    paintToneCard(tone);
+    scheduleTone(450);
+  },
+  'tone-ai': (el) => pickAiTone(el.dataset.tone),
+  'tone-reset': () => resetTone(),
   send: () => send(sendTarget()),
   'send-menu': (el) => (menuEl.hidden ? openMenu(el, sendMenuHtml()) : closeMenu()),
   'send-to': (el) => send(el.dataset.app),
@@ -1162,6 +1401,7 @@ document.addEventListener('keydown', (e) => {
     return;
   }
   if (e.target.id === 'title' && (e.key === 'Enter' || e.key === 'Escape')) { e.target.blur(); return; }
+  if (e.key === 'Escape' && !toneEl.hidden) { closeTone(); return; }
   if (typing) return;
   if (e.key === 'Escape') { closeMenu(); clearSelection(); return; }
   if (S.route !== 'editor') return;

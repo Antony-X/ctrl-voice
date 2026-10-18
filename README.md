@@ -43,7 +43,8 @@ If the engine can't be reached while recording, the bar keeps recording locally 
 - The transcript shows what changed: cut words are crossed out, words the engine made are purple, words that came out unclear are underlined in amber.
 - Select words to **Replace** them (typed, then said in your voice), **Say clearly**, **Cut**, or change their **Tone**. Click a changed word to undo it or try again.
 - The summary line offers **Fix it**, **Shorten it** (suggested cuts you can take one by one) and **Check for misheard words**.
-- The player bar: play with waveform, **Original / Fixed**, **Tone** for the whole message (your voice: confident, calm, warm — pitch and pace only; AI voice: calm, friendly, excited, confident — sounds less like you), and **Send** with a menu for other apps or copying the audio.
+- The player bar: play with waveform, **Original / Fixed**, **Tone** for the whole message, and **Send** with a menu for other apps or copying the audio.
+- **Tone** opens a panel with a character per tone. *Your voice*: Confident (a superhero), Calm (meditating) and Warm (beanie and a mug), each with a strength slider. They mix into one pitch-and-pace change of your own recording, and the panel says what the mix does ("Pitch 5% lower, 7% faster, firm endings"). Click a character to step it through Off, Medium and Strong. Letting go of a slider makes the new take and plays it. *AI voice*: Calm, Friendly, Excited or Confident, re-made by the AI voice, so it sounds less like you. **No tone change** removes it.
 - `Ctrl+Z` / `Ctrl+Y` undo and redo edits, `Space` plays, `Delete` cuts the selection.
 
 ## Layout
@@ -65,3 +66,5 @@ Messages are stored in `%APPDATA%/Ctrl+Voice/messages`: the untouched original r
 ## Engine API used
 
 `/ws/{sid}` (live 24 kHz PCM, words, undo), `/api/upload`, and per session `/api/s/{sid}/` `clean`, `tighten`, `grammar`, `pron`, `intent`, `replace`, `render`, `natural`, `tone`, `state`. HTTP calls run in the main process (the engine sends no CORS headers).
+
+The tone sliders send `natural` a `mix` (`{"confident": 1.0, "warm": 0.6}`, 1 = the preset, up to 1.5) along with `style`, the strongest tone. An engine from before mixing ignores `mix` and applies that one preset at full strength.

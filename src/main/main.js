@@ -641,19 +641,22 @@ function wireIpc() {
   });
   // engine: natural (pitch and timing, own voice) | tone (AI). With i/j it
   // returns an op for those words; without, a take of the whole message.
-  ipcMain.handle('edit:restyle', async (_e, { id, engine: kind, style, i, j }) => {
+  // mix ({style: amount}, natural only) blends the tone sliders; an engine
+  // without mixing reads just style, the strongest of them, at full preset.
+  ipcMain.handle('edit:restyle', async (_e, { id, engine: kind, style, mix, i, j }) => {
     const meta = messageOrThrow(id);
     const call = kind === 'tone' ? 'tone' : 'natural';
+    const blend = kind === 'natural' && mix ? { mix } : {};
     if (i != null) {
-      const r = await withSession(meta, (sid) => engine[call](sid, { style, i, j }));
+      const r = await withSession(meta, (sid) => engine[call](sid, { style, ...blend, i, j }));
       return { meta, op: r.op };
     }
     const r = await withSession(meta, async (sid) => {
       if (!meta.output) await renderMessage(meta); // the session was re-created
-      return engine[call](sid, { style, file: meta.output.file });
+      return engine[call](sid, { style, ...blend, file: meta.output.file });
     });
     fs.writeFileSync(msgFile(meta.id, 'take.wav'), await engine.download(r.url));
-    meta.take = { engine: kind, style, dur: r.dur, by: r.engine || 'praat', wordsKept: r.words_kept ?? null, voiceSim: r.voice_sim ?? null };
+    meta.take = { engine: kind, style, ...blend, dur: r.dur, by: r.engine || 'praat', wordsKept: r.words_kept ?? null, voiceSim: r.voice_sim ?? null };
     saveMessage(meta);
     return { meta, audio: readAudio(meta, 'output') };
   });

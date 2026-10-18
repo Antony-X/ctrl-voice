@@ -274,6 +274,122 @@ kbd + kbd { margin-left: 3px; }
 .menu-item .check { width: 14px; color: var(--iris); }
 .menu-sep { height: 1px; margin: 5px 8px; background: var(--hair); }
 
+/* ---------- tone panel ----------
+   One character per tone. The slider sets --a on the card (0 off, 1 strongest);
+   the character fills with colour and its props react as it rises. */
+.tone {
+  position: fixed; z-index: 40; width: 476px; border-radius: 22px; padding: 10px;
+  background: var(--glass-solid); animation: pop .18s cubic-bezier(.2, .9, .3, 1.2);
+}
+.tone-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.tone-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.tone-cards.ai { grid-template-columns: repeat(4, 1fr); }
+.tc {
+  position: relative; display: flex; flex-direction: column; border-radius: 16px; padding: 6px 10px 8px;
+  background: var(--fill); transition: background .25s, box-shadow .25s;
+}
+.tc.on { background: color-mix(in srgb, var(--c) 13%, transparent); }
+.tc-art { display: block; width: 100%; aspect-ratio: 1 / 1; padding: 4px 6px 0; border-radius: 12px; }
+.tc-art:disabled { opacity: 1; }
+.tc-name { display: flex; align-items: baseline; justify-content: space-between; gap: 6px; font-weight: 600; font-size: 13.5px; }
+.tc-name .lvl { font-weight: 500; font-size: 12px; color: var(--ink-3); transition: color .2s; }
+.tc.on .tc-name .lvl { color: var(--c); }
+.tc-blurb { font-size: 12px; color: var(--ink-3); margin-top: 1px; }
+.tone-cards.ai .tc { padding: 6px 8px 10px; align-items: center; }
+.tone-cards.ai .tc-art { padding: 2px 4px 0; }
+.tone-cards.ai .tc.on { box-shadow: inset 0 0 0 1.5px var(--c); }
+.tone-cards.ai .tc:not(.on):not(:disabled):hover .char { --on: .7; }
+
+.tc-range { -webkit-appearance: none; appearance: none; width: 100%; height: 22px; margin-top: 4px; background: none; cursor: pointer; }
+.tc-range::-webkit-slider-runnable-track {
+  height: 6px; border-radius: 3px;
+  background: linear-gradient(90deg, var(--c) calc(9px + var(--a) * (100% - 18px)), var(--fill-2) 0);
+}
+.tc-range::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 18px; height: 18px; margin-top: -6px; border-radius: 50%;
+  background: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, .3), 0 0 0 .5px rgba(0, 0, 0, .14); transition: transform .12s;
+}
+.tc-range:active::-webkit-slider-thumb { transform: scale(1.15); }
+.tc-range:focus-visible { outline: none; }
+.tc-range:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 3px var(--iris-soft), 0 0 0 1.5px var(--iris); }
+.tc-range:disabled { cursor: default; opacity: .5; }
+
+.tone-foot { display: flex; align-items: center; gap: 10px; min-height: 30px; padding: 8px 6px 0; font-size: 12.5px; color: var(--ink-2); }
+.tone-foot .grow { flex: 1; }
+.tone-status { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+
+/* tone colours: --c is the slider and card tint, --c1…--c4 the outfit */
+.k-confident { --c: #3d5ad6; --c1: #3d5ad6; --c1d: #2b42a6; --c2: #e0483e; --c3: #f4b62d; }
+.k-calm { --c: #2f9a86; --c1: #3aa58f; --c1d: #2a7f6e; --c2: #2a7f6e; }
+.k-warm { --c: #d9862b; --c1: #e8a23a; --c2: #d65a3c; --c2d: #b9472d; --c3: #f8f0e3; --c4: #7a6656; }
+.k-friendly { --c: #d9577f; --c1: #e66b91; --c1d: #b94d6e; }
+.k-excited { --c: #8259e3; --c1: #8a64e6; --c1d: #6648c4; --c3: #f4b62d; }
+@media (prefers-color-scheme: dark) {
+  .k-confident { --c: #7088ff; } .k-calm { --c: #4cc2aa; } .k-warm { --c: #f0a24a; }
+  .k-friendly { --c: #f27aa0; } .k-excited { --c: #a48bff; }
+}
+
+.char { display: block; width: 100%; height: 100%; stroke: none; overflow: visible; --on: clamp(0, calc(var(--a, 1) * 3), 1); }
+.tc .char { filter: grayscale(calc(1 - var(--on))); opacity: calc(.62 + var(--on) * .38); transition: filter .25s, opacity .25s; }
+.char .c-shadow { fill: var(--fill-2); }
+.char .c-face { fill: #f1d2b6; }
+.char .c-hair { fill: #3b2e28; }
+.char .c-eye { fill: #fff; }
+.char .c-dot, .char .c-mouth { fill: #2b221e; }
+.char .c-line { fill: none; stroke: #2b221e; stroke-width: 1.6; stroke-linecap: round; }
+.char .c-1 { fill: var(--c1); } .char .c-1d { fill: var(--c1d); }
+.char .c-2 { fill: var(--c2); } .char .c-2d { fill: var(--c2d); }
+.char .c-3 { fill: var(--c3); } .char .c-4 { fill: var(--c4); }
+.char .c-arm { fill: none; stroke: var(--c1); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+.char .c-mugh { fill: none; stroke: var(--c3); stroke-width: 2.2; }
+.char .c-fig, .char .c-cape, .char .c-shadow, .char .c-badge, .char .c-aura, .char .c-steam, .char .c-sparks {
+  transition: transform .4s cubic-bezier(.3, 1.5, .5, 1), opacity .3s;
+}
+.char .c-shadow, .char .c-badge, .char .c-aura { transform-box: fill-box; transform-origin: center; }
+
+.k-confident .c-fig { transform: translateY(calc(var(--a) * -3px)); }
+.k-confident .c-cape { transform-box: fill-box; transform-origin: 50% 0; transform: rotate(calc(var(--a) * 9deg)) scaleX(calc(1 + var(--a) * .32)); }
+.k-confident .c-flap { transform-box: fill-box; transform-origin: 50% 0; animation: flap 1.6s ease-in-out infinite; }
+.k-confident .c-rays { fill: none; stroke: var(--c3); stroke-width: 2.4; stroke-linecap: round; opacity: calc(var(--a) * 1.2 - .2); }
+.k-confident .c-badge { transform: scale(calc(.9 + var(--a) * .22)); }
+@keyframes flap { 50% { transform: skewX(-4deg) scaleY(.98); } }
+
+.k-calm .c-fig { transform: translateY(calc(var(--a) * -8px)); }
+.k-calm .c-shadow { transform: scale(calc(1 - var(--a) * .4)); opacity: calc(1 - var(--a) * .4); }
+.k-calm .c-aura { fill: none; stroke: var(--c); stroke-width: 1.4; opacity: calc(var(--a) * .6); transform: scale(calc(.82 + var(--a) * .18)); }
+.k-calm .c-aura circle { transform-box: fill-box; transform-origin: center; animation: breathe 4s ease-in-out infinite; }
+.k-calm .c-aura circle + circle { animation-delay: -2s; }
+@keyframes breathe { 50% { transform: scale(.95); } }
+
+.k-warm .c-steam { fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; opacity: var(--a); transform: translateY(calc(var(--a) * -2px)); }
+.k-warm .c-steam path { animation: steam 2.4s ease-out infinite; }
+.k-warm .c-steam path + path { animation-delay: -1.2s; }
+.k-warm .c-blush { fill: #ef8a86; opacity: calc(var(--a) * .85); transition: opacity .3s; }
+@keyframes steam { 0% { opacity: 0; transform: translateY(2px); } 35% { opacity: 1; } 100% { opacity: 0; transform: translateY(-5px); } }
+
+.k-friendly .c-wave { transform-box: fill-box; transform-origin: 0 100%; }
+.tc.on.k-friendly .c-wave { animation: wave 1.1s ease-in-out infinite; }
+@keyframes wave { 50% { transform: rotate(-16deg); } }
+.k-excited .c-sparks { fill: var(--c3); opacity: var(--a); }
+.tc.on.k-excited .c-fig { animation: jump .8s cubic-bezier(.3, 0, .5, 1) infinite; }
+.tc.on.k-excited .c-sparks path { transform-box: fill-box; transform-origin: center; animation: twinkle 1.6s ease-in-out infinite; }
+.tc.on.k-excited .c-sparks path:nth-child(2n) { animation-delay: -.8s; }
+@keyframes jump { 50% { transform: translateY(-5px); } }
+@keyframes twinkle { 50% { transform: scale(.6) rotate(20deg); opacity: .6; } }
+
+/* character heads in buttons and the Tone button; an iris ring marks the AI voice */
+.av {
+  width: 22px; height: 22px; border-radius: 50%; flex: none; overflow: hidden;
+  background: color-mix(in srgb, var(--c) 24%, var(--glass-solid));
+  box-shadow: 0 0 0 1.5px var(--glass-solid);
+}
+.av .char { --a: 0; --on: 1; }
+.av.ai { box-shadow: 0 0 0 1.5px var(--glass-solid), 0 0 0 3px var(--iris); }
+.avs { display: flex; }
+.avs .av + .av { margin-left: -7px; }
+.pill-btn .avs { margin-left: -6px; }
+.pop-styles button { display: flex; align-items: center; gap: 7px; padding-left: 6px; }
+
 .toast {
   position: fixed; z-index: 50; bottom: 86px; left: calc(var(--side-w) + 16px + (100vw - var(--side-w) - 16px) / 2);
   transform: translateX(-50%); max-width: 520px; padding: 9px 16px; border-radius: 999px;
