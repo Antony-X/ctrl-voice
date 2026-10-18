@@ -1,36 +1,39 @@
 // Floating recording bar (Wispr Flow-style), lives at the bottom of the screen.
+// While recording it streams the mic to the ReSpeak engine (LiveSession) and
+// shows the live transcript; undo and a spoken "scratch that" cut the last
+// thought on the engine side. Finishing hands everything to the main process,
+// which fixes the message and sends it.
 const api = window.respeak;
 const $ = (id) => document.getElementById(id);
 
 const pill = $('pill');
 const caption = $('caption');
-const captionLines = $('captionLines');
-const toast = $('toast');
+const capText = $('capText');
 const wave = $('wave');
 const wctx = wave.getContext('2d');
 
-let config = { demoMode: true, micId: 'default', showIdleBar: true, shortcuts: {} };
+let config = { server: '', micId: 'default', showIdleBar: true, shortcuts: {}, finishAction: 'send' };
 let session = null;
 let state = 'idle';
 let raf = 0;
 let lastBroadcast = 0;
-let leaving = new Set();
-let toastTimer = 0;
-let lastUndone = null;
-let undoCount = 0;
-const history = []; // rolling level history for the waveform
+let words = [];
+let offline = false;
+let recentCut = null;     // { t0, t1 } of the last removal, shown struck for a moment
+let restoreTimer = 0;
+let doneTimer = 0;
 
-const KEY_LABELS = { '`': '~`', Escape: 'Esc' };
+const KEY_LABELS = { '`': '`', Escape: 'Esc' };
 const prettyKey = (a = '') => a.replace('CommandOrControl', 'Ctrl').split('+').map(k => KEY_LABELS[k] || k).join(' ');
 const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
+const escapeHtml = (s) => s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 function setState(next) {
   state = next;
-  pill.classList.remove('idle', 'rec', 'proc', 'hidden-idle');
+  pill.classList.remove('idle', 'rec', 'proc', 'ok', 'failed', 'hidden-idle');
   pill.classList.add(next);
   if (next === 'idle' && !config.showIdleBar) pill.classList.add('hidden-idle');
   caption.hidden = next !== 'rec';
-  if (next !== 'rec') hideToast();
 }
 
 // ---------- mouse pass-through: only the glass surfaces catch clicks ----------
@@ -42,68 +45,54 @@ document.querySelectorAll('.interactive').forEach((el) => {
 // ---------- recording lifecycle ----------
 async function start() {
   if (state !== 'idle') return;
-  undoCount = 0;
-  leaving = new Set();
-  history.length = 0;
-  $('capTarget').hidden = true;
-  session = new RecordingSession({ demoMode: config.demoMode, micId: config.micId });
-  session.on('change', renderCaption);
-  session.on('undo', onUndo);
+  words = [];
+  offline = false;
+  recentCut = null;
+  showRestore(false);
+  $('capNote').textContent = 'Connecting…';
+  session = new LiveSession({ server: config.server, micId: config.micId });
+  session.on('words', (m) => { words = m.words; renderCaption(); });
+  session.on('undone', onUndone);
+  session.on('status', onStatus);
   setState('rec');
   renderCaption();
-  await session.start();
+  try {
+    await session.start();
+  } catch (err) {
+    console.error('Recording failed to start', err);
+    session = null;
+    setState('proc');
+    result("Couldn't use the microphone", false);
+    return;
+  }
   api.send('rec:started');
   loop();
 }
 
-// mode: 'send' (default action) or 'review' (open the editor instead)
+// mode: 'review' opens the editor instead of sending
 async function finish(opts) {
   if (state !== 'rec' || !session) return;
   const mode = opts?.mode || 'default';
   cancelAnimationFrame(raf);
   setState('proc');
-  setProc(mode === 'review' ? 'Opening the editor…' : 'Polishing your message…');
-  const result = await session.stop();
+  setProc(offline ? 'Saving…' : 'Finishing up…');
+  const s = session;
   session = null;
+  let res;
+  try {
+    res = await s.stop();
+  } catch (err) {
+    console.error('Recording failed to stop', err);
+    api.send('rec:ended');
+    result("Couldn't save the recording", false);
+    return;
+  }
   broadcast(true, 'proc');
   api.send('rec:ended');
-  const kept = result.segments.filter(s => !s.undone && s.words.length);
-  const meta = {
-    id: `m${Date.now().toString(36)}`,
-    type: 'voice',
-    title: kept.length ? makeTitle(kept[0].words.map(w => w.w).join(' ')) : `Voice message · ${fmt(result.duration)}`,
-    createdAt: Date.now(),
-    duration: result.duration,
-    demoMode: config.demoMode,
-    segments: result.segments,
-    undoCount,
-    edits: [],
-    tone: null,
-  };
-  api.send('rec:finished', { meta, audio: result.audio, mode });
+  api.send('rec:finished', { ...res, mode });
   // main replies with overlay:status / overlay:done; never hang if it doesn't
   clearTimeout(doneTimer);
-  doneTimer = setTimeout(() => done({ text: 'Saved', ok: true }), 50000);
-}
-
-let doneTimer = 0;
-function setProc(text, icon = '✦', spin = true) {
-  $('procText').textContent = text;
-  const s = pill.querySelector('.spark');
-  s.textContent = icon;
-  s.classList.toggle('still', !spin);
-}
-function done({ text, ok }) {
-  if (state !== 'proc') return;
-  clearTimeout(doneTimer);
-  setProc(text, ok ? '✓' : '!', false);
-  pill.classList.toggle('failed', !ok);
-  setTimeout(() => {
-    if (state !== 'proc') return;
-    pill.classList.remove('failed');
-    setState('idle');
-    broadcast(true, 'idle');
-  }, ok ? 1800 : 3200);
+  doneTimer = setTimeout(() => result('Saved in Ctrl+Voice', true), 90000);
 }
 
 function cancel() {
@@ -116,88 +105,105 @@ function cancel() {
   api.send('rec:ended');
 }
 
+function setProc(text) {
+  pill.classList.remove('ok', 'failed');
+  $('procText').textContent = text;
+}
+
+function result(text, ok) {
+  if (state !== 'proc') return;
+  clearTimeout(doneTimer);
+  $('procText').textContent = text;
+  pill.classList.add(ok ? 'ok' : 'failed');
+  setTimeout(() => {
+    if (state !== 'proc') return;
+    setState('idle');
+    broadcast(true, 'idle');
+  }, ok ? 1800 : 3600);
+}
+
+// ---------- undo / restore ----------
 function undo() {
   if (state !== 'rec' || !session) return;
+  if (offline) { flash($('undoBtn')); return; }
   session.undo();
-  const btn = $('undoBtn');
-  btn.classList.add('flash');
-  setTimeout(() => btn.classList.remove('flash'), 260);
+  flash($('undoBtn'));
 }
 
-function onUndo(seg) {
-  undoCount++;
-  lastUndone = seg;
-  leaving.add(seg.id);
-  setTimeout(() => { leaving.delete(seg.id); renderCaption(); }, 650);
-  const text = seg.words.length ? `“${seg.words.map(w => w.w).join(' ')}”` : `thought ${seg.id.slice(1)} (${fmt(seg.start)})`;
-  $('toastText').textContent = text;
-  toast.hidden = false;
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(hideToast, 3200);
+function restore() {
+  if (!session) return;
+  session.redo();
+  recentCut = null;
+  showRestore(false);
 }
 
-function hideToast() { toast.hidden = true; }
-
-$('toastRestore').addEventListener('click', () => {
-  if (!lastUndone || !session) return;
-  lastUndone.undone = false;
-  undoCount = Math.max(0, undoCount - 1);
-  hideToast();
+function onUndone({ r }) {
+  if (!r) { $('capNote').textContent = 'Nothing to undo'; return; }
+  recentCut = { t0: r.t0, t1: r.t1 };
+  setTimeout(() => { if (recentCut?.t0 === r.t0) { recentCut = null; renderCaption(); } }, 1400);
+  $('capNote').textContent = r.kind === 'command' ? 'Scratched that' : 'Undone';
+  showRestore(true);
   renderCaption();
-});
+}
+
+// The undo button turns into Restore for a few seconds after a removal.
+function showRestore(on) {
+  clearTimeout(restoreTimer);
+  const btn = $('undoBtn');
+  btn.classList.toggle('restore', on);
+  $('undoLabel').textContent = on ? 'Restore' : 'Undo';
+  btn.title = on ? 'Put it back' : `Undo the last thought (${prettyKey(config.shortcuts.undo)})`;
+  if (on) restoreTimer = setTimeout(() => { showRestore(false); if (state === 'rec') $('capNote').textContent = noteText(); }, 3500);
+}
+
+function flash(el) {
+  el.classList.remove('flash');
+  void el.offsetWidth;
+  el.classList.add('flash');
+}
+
+function onStatus({ state: s }) {
+  offline = s === 'offline' || s === 'error';
+  $('capNote').textContent = noteText();
+  renderCaption();
+}
+
+function noteText() {
+  if (offline) return 'Engine offline. Recording without live text';
+  return `Say “scratch that” or press ${prettyKey(config.shortcuts.undo)} to undo`;
+}
 
 // ---------- rendering ----------
 function renderCaption() {
-  if (!session) return;
-  const segs = session.segments.filter(s => !s.undone || leaving.has(s.id));
-  const shown = segs.slice(-3);
-  const live = session.current;
-
+  if (state !== 'rec') return;
+  const inCut = (w) => recentCut && recentCut.t0 <= (w.s + w.e) / 2 && (w.s + w.e) / 2 <= recentCut.t1;
+  const shown = words.filter(w => !w.x || inCut(w)).slice(-28);
   if (!shown.length) {
-    const next = config.demoMode ? DEMO_SCRIPT[session.scriptIdx] : null;
-    captionLines.innerHTML = next
-      ? `<div class="cap-empty">Listening… <b>Demo script:</b> “${next}”</div>`
-      : `<div class="cap-empty">Listening… speak naturally. Press <b>${prettyKey(config.shortcuts.undo)}</b> to undo the last thought.</div>`;
+    capText.innerHTML = `<span class="line empty">${offline ? 'Recording. Fixes run when you finish' : 'Listening…'}</span>`;
     return;
   }
-
-  captionLines.innerHTML = shown.map((s) => {
-    const cls = ['cap-line'];
-    if (s === live) cls.push('live');
-    if (s.undone) cls.push('leaving');
-    const n = `<span class="num">${s.id.slice(1)}</span>`;
-    const body = s.words.length
-      ? s.words.map(w => `<span class="w">${escapeHtml(w.w)}</span>`).join(' ')
-      : (s === live ? 'Speaking…' : `Thought · ${fmt(s.start)}–${fmt(s.end ?? session.elapsed)}`);
-    return `<div class="${cls.join(' ')}">${n}${body}</div>`;
-  }).join('');
-
-  // teleprompter hint for the next line of the demo script
-  if (config.demoMode && !live && session.scriptIdx < DEMO_SCRIPT.length) {
-    captionLines.insertAdjacentHTML('beforeend', `<div class="cap-line" style="opacity:.45"><span class="num">›</span>${DEMO_SCRIPT[session.scriptIdx]}</div>`);
-  }
+  const html = shown.map(w => (w.x ? `<span class="cut">${escapeHtml(w.w)}</span>` : escapeHtml(w.w))).join(' ');
+  capText.innerHTML = `<span class="line">${html}</span>`;
 }
 
 function drawWave() {
   const dpr = window.devicePixelRatio || 1;
   const w = wave.clientWidth, h = wave.clientHeight;
-  if (wave.width !== w * dpr) { wave.width = w * dpr; wave.height = h * dpr; }
+  if (wave.width !== Math.round(w * dpr)) { wave.width = Math.round(w * dpr); wave.height = Math.round(h * dpr); }
   wctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   wctx.clearRect(0, 0, w, h);
-
-  const levels = session.levels(36);
-  const n = levels.length;
-  const gap = 3;
-  const bw = Math.max(2, (w - gap * (n - 1)) / n);
-  wctx.fillStyle = '#ffffff';
+  const n = Math.max(8, Math.floor(w / 6));
+  const levels = session.levels(n);
+  const bw = 3, gap = (w - n * bw) / Math.max(1, n - 1);
+  wctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--wave');
   levels.forEach((v, i) => {
-    const bh = Math.max(3, v * h);
-    const x = i * (bw + gap);
-    const y = (h - bh) / 2;
+    const bh = Math.max(3, Math.min(1, v) * h);
+    wctx.globalAlpha = 0.35 + 0.65 * (i / n);
     wctx.beginPath();
-    wctx.roundRect(x, y, bw, bh, bw / 2);
+    wctx.roundRect(i * (bw + gap), (h - bh) / 2, bw, bh, 1.5);
     wctx.fill();
   });
+  wctx.globalAlpha = 1;
 }
 
 function loop() {
@@ -208,35 +214,17 @@ function loop() {
   raf = requestAnimationFrame(loop);
 }
 
-// Mirror live state to the main window (Compose page) ~12x per second.
+// Mirror live state to the main window a few times per second.
 function broadcast(force = false, status = state) {
   const now = performance.now();
-  if (!force && now - lastBroadcast < 80) return;
+  if (!force && now - lastBroadcast < 250) return;
   lastBroadcast = now;
-  api.send('rec:state', {
-    status,
-    elapsed: session?.elapsed ?? 0,
-    levels: session ? session.levels(24) : [],
-    segments: session ? session.segments.map(s => ({ id: s.id, undone: s.undone, complete: s.complete, start: s.start, end: s.end, text: s.words.map(w => w.w).join(' ') })) : [],
-    next: session && config.demoMode ? DEMO_SCRIPT[session.scriptIdx] ?? null : null,
-    undoCount,
-  });
-}
-
-// First sentence, cut at a word boundary around 42 chars.
-function makeTitle(text) {
-  const t = text.replace(/[.!?…]+$/, '');
-  if (t.length <= 42) return t;
-  return t.slice(0, 42).replace(/\s+\S*$/, '') + '…';
-}
-
-function escapeHtml(s) {
-  return s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  api.send('rec:state', { status, elapsed: session?.elapsed ?? 0 });
 }
 
 // ---------- wiring ----------
 $('idleHit').addEventListener('click', () => api.send('rec:toggle'));
-$('undoBtn').addEventListener('click', undo);
+$('undoBtn').addEventListener('click', () => ($('undoBtn').classList.contains('restore') ? restore() : undo()));
 $('cancelBtn').addEventListener('click', cancel);
 $('doneBtn').addEventListener('click', () => finish());
 $('reviewBtn').addEventListener('click', () => finish({ mode: 'review' }));
@@ -248,18 +236,17 @@ api.on('rec:cancel', cancel);
 api.on('overlay:config', (cfg) => {
   config = cfg;
   $('hintToggle').textContent = prettyKey(cfg.shortcuts.toggle);
-  $('hintUndo').textContent = prettyKey(cfg.shortcuts.undo);
-  $('doneBtn').title = `Finish & send (${prettyKey(cfg.shortcuts.toggle)})`;
-  $('reviewBtn').title = `Finish & review (${prettyKey(cfg.shortcuts.review)})`;
+  $('doneBtn').title = `${cfg.finishAction === 'send' ? 'Finish and send' : 'Finish'} (${prettyKey(cfg.shortcuts.toggle)})`;
+  $('reviewBtn').title = `Finish and review (${prettyKey(cfg.shortcuts.review)})`;
+  $('cancelBtn').title = `Discard (${prettyKey(cfg.shortcuts.cancel)})`;
+  showRestore(false);
   if (state === 'idle') setState('idle');
 });
-// Where the message will go, e.g. "→ Discord"
+// Where the message will go, e.g. "To Discord"
 api.on('overlay:target', ({ label, finishAction }) => {
-  const chip = $('capTarget');
-  chip.hidden = !(label && finishAction === 'send' && state === 'rec');
-  chip.textContent = label ? `→ ${label}` : '';
+  $('capTarget').textContent = label && finishAction === 'send' ? `To ${label}` : '';
 });
 api.on('overlay:status', ({ text }) => state === 'proc' && setProc(text));
-api.on('overlay:done', done);
+api.on('overlay:done', ({ text, ok }) => result(text, ok));
 
 setState('idle');

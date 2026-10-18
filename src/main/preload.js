@@ -1,6 +1,6 @@
 const { contextBridge, ipcRenderer } = require('electron');
 
-const ALLOWED = /^(win|app|rec|overlay|settings|shortcuts|messages|message|nav|export|voice|send):/;
+const ALLOWED = /^(win|app|rec|overlay|settings|shortcuts|messages|message|nav|engine|edit|send):/;
 
 contextBridge.exposeInMainWorld('respeak', {
   send: (channel, data) => ALLOWED.test(channel) && ipcRenderer.send(channel, data),
