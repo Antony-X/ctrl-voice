@@ -1,0 +1,14 @@
+{
+  "page": "C:/Users/Antony/Desktop/ctrl+voice/src/app/index.html",
+  "width": 1180, "height": 780,
+  "transparent": false,
+  "backgroundColor": "#08080a",
+  "stub": "ctrlvoice-stub.js",
+  "colorScheme": "dark",
+  "shots": [
+    {"wait": 800, "out": "../out/app-home.png"},
+    {"wait": 0, "js": "document.querySelector('[data-route=library]')?.click()", "settle": 500, "out": "../out/app-library.png"},
+    {"wait": 0, "js": "document.querySelector('[data-route=shortcuts]')?.click()", "settle": 500, "out": "../out/app-shortcuts.png"},
+    {"wait": 0, "js": "document.querySelector('[data-route=settings]')?.click()", "settle": 500, "out": "../out/app-settings.png"}
+  ]
+}

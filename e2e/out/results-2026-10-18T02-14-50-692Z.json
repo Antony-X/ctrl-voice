@@ -1,0 +1,114 @@
+{
+  "results": [
+    {
+      "step": "offline: overlay says engine offline",
+      "cap": "Recording. Fixes run when you finish",
+      "note": "Engine offline. Recording without live text",
+      "ok": true
+    },
+    {
+      "step": "offline: recording saved locally",
+      "wavBytes": 261164,
+      "dur": 5.44,
+      "ok": true
+    },
+    {
+      "step": "offline: overlay ends with a true result",
+      "procTexts": [
+        {
+          "pill": "pill interactive proc",
+          "proc": "Saving…"
+        },
+        {
+          "pill": "pill interactive proc ok",
+          "proc": "Opened in Ctrl+Voice"
+        },
+        {
+          "pill": "pill interactive idle hidden-idle",
+          "proc": "Opened in Ctrl+Voice"
+        }
+      ],
+      "ok": true
+    },
+    {
+      "step": "offline: editor shows the fix error with Try again",
+      "notice": {
+        "text": "Couldn't fix it: The engine isn't running",
+        "retry": "fix"
+      },
+      "fixError": "The engine isn't running",
+      "ok": true
+    },
+    {
+      "step": "offline: original audio playable",
+      "outDur": 5.44,
+      "ok": true
+    },
+    {
+      "step": "offline: health check reports it",
+      "ok": true,
+      "ms": 292,
+      "message": "The server answered 404. Is the engine running?",
+      "url": "https://zaa3ajj8o85hhq-7860.proxy.runpod.net"
+    }
+  ],
+  "consoleErrors": [],
+  "events": [
+    {
+      "t": 459,
+      "ch": "rec:recording",
+      "brief": true
+    },
+    {
+      "t": 5894,
+      "ch": "rec:recording",
+      "brief": false
+    },
+    {
+      "t": 5896,
+      "ch": "message:new",
+      "brief": {
+        "id": "mvd70cp7oq2h",
+        "title": "Voice message"
+      }
+    },
+    {
+      "t": 5897,
+      "ch": "edit:status",
+      "brief": {
+        "id": "mvd70cp7oq2h",
+        "text": "Starting…"
+      }
+    },
+    {
+      "t": 5897,
+      "ch": "edit:status",
+      "brief": {
+        "id": "mvd70cp7oq2h",
+        "text": "Cleaning up…"
+      }
+    },
+    {
+      "t": 5939,
+      "ch": "nav:go",
+      "brief": "editor:mvd70cp7oq2h"
+    },
+    {
+      "t": 6383,
+      "ch": "edit:status",
+      "brief": {
+        "id": "mvd70cp7oq2h",
+        "text": null,
+        "error": "The engine isn't running"
+      }
+    },
+    {
+      "t": 6384,
+      "ch": "message:new",
+      "brief": {
+        "id": "mvd70cp7oq2h",
+        "title": "Voice message"
+      }
+    }
+  ]
+}

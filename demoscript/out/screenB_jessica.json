@@ -1,0 +1,242 @@
+{
+ "tag": "screenB_jessica",
+ "input": "screen/TEST_SYNTH_screenB_jessica.wav",
+ "timing": {
+  "upload": 1166,
+  "checks": 2683
+ },
+ "sid": "df73e4ff",
+ "words": [
+  {
+   "w": "Irregardless,",
+   "s": 0.14,
+   "e": 1.222,
+   "p": 0.95
+  },
+  {
+   "w": "I",
+   "s": 1.282,
+   "e": 1.343,
+   "p": 1
+  },
+  {
+   "w": "want",
+   "s": 1.363,
+   "e": 1.483,
+   "p": 0.96
+  },
+  {
+   "w": "to",
+   "s": 1.523,
+   "e": 1.583,
+   "p": 1
+  },
+  {
+   "w": "ask",
+   "s": 1.683,
+   "e": 1.904,
+   "p": 0.75
+  },
+  {
+   "w": "you",
+   "s": 1.944,
+   "e": 2.064,
+   "p": 1
+  },
+  {
+   "w": "something.",
+   "s": 2.104,
+   "e": 3.166,
+   "p": 1
+  },
+  {
+   "w": "Are",
+   "s": 3.226,
+   "e": 3.326,
+   "p": 1
+  },
+  {
+   "w": "we",
+   "s": 3.366,
+   "e": 3.567,
+   "p": 1
+  },
+  {
+   "w": "pacifically",
+   "s": 3.627,
+   "e": 4.569,
+   "p": 0.77
+  },
+  {
+   "w": "doing",
+   "s": 4.609,
+   "e": 4.949,
+   "p": 1
+  },
+  {
+   "w": "the",
+   "s": 4.969,
+   "e": 5.11,
+   "p": 0.98
+  },
+  {
+   "w": "board",
+   "s": 5.17,
+   "e": 5.551,
+   "p": 0.94
+  },
+  {
+   "w": "game",
+   "s": 5.591,
+   "e": 5.851,
+   "p": 1
+  },
+  {
+   "w": "night",
+   "s": 5.911,
+   "e": 6.613,
+   "p": 1
+  },
+  {
+   "w": "or",
+   "s": 6.673,
+   "e": 6.773,
+   "p": 0.93
+  },
+  {
+   "w": "the",
+   "s": 6.793,
+   "e": 6.913,
+   "p": 1
+  },
+  {
+   "w": "nuclear",
+   "s": 6.973,
+   "e": 7.474,
+   "p": 1
+  },
+  {
+   "w": "plant",
+   "s": 7.514,
+   "e": 7.895,
+   "p": 1
+  },
+  {
+   "w": "tour?",
+   "s": 7.955,
+   "e": 8.837,
+   "p": 1
+  },
+  {
+   "w": "I",
+   "s": 8.897,
+   "e": 8.997,
+   "p": 1
+  },
+  {
+   "w": "just",
+   "s": 9.037,
+   "e": 9.217,
+   "p": 1
+  },
+  {
+   "w": "need",
+   "s": 9.237,
+   "e": 9.418,
+   "p": 1
+  },
+  {
+   "w": "to",
+   "s": 9.438,
+   "e": 9.518,
+   "p": 1
+  },
+  {
+   "w": "escape",
+   "s": 9.558,
+   "e": 9.999,
+   "p": 1
+  },
+  {
+   "w": "the",
+   "s": 10.019,
+   "e": 10.119,
+   "p": 1
+  },
+  {
+   "w": "house.",
+   "s": 10.159,
+   "e": 10.42,
+   "p": 1
+  }
+ ],
+ "dur": 10.56,
+ "transcript": "Irregardless, I want to ask you something. Are we pacifically doing the board game night or the nuclear plant tour? I just need to escape the house.",
+ "clean": [],
+ "grammar": [
+  {
+   "i": 9,
+   "j": 9,
+   "old": "pacifically",
+   "new": "specifically"
+  }
+ ],
+ "intent": [
+  {
+   "i": 9,
+   "j": 9,
+   "old": "pacifically",
+   "new": "specifically",
+   "heard": "pɐsɪfɪkli",
+   "intended": "spəsɪfɪkli",
+   "fit": -0.82,
+   "dist": 0.2,
+   "alts": [
+    "actually",
+    "officially"
+   ]
+  }
+ ],
+ "pron": {
+  "items": [
+   {
+    "i": 4,
+    "word": "ask",
+    "acc": 4.4,
+    "canon": "æsk",
+    "heard": "æksiː",
+    "sub": "iː",
+    "phone": "k"
+   }
+  ],
+  "median": 9.9,
+  "accent": []
+ },
+ "replaced": [
+  {
+   "kind": "misspoken",
+   "old": "pacifically",
+   "new": "specifically",
+   "verified": true,
+   "engine": "playdiff",
+   "after": null,
+   "ms": 4401,
+   "t0": 3.597,
+   "t1": 4.589,
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.561,
+     "heard": "Irregardless, I want to ask you something. Are we specifically doing the board game night or the nuclear plant?"
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.44,
+     "heard": "Irregardless, I want to ask you something. Are we specifically doing the board game night or the nuclear plant tour?"
+    }
+   ]
+  }
+ ]
+}

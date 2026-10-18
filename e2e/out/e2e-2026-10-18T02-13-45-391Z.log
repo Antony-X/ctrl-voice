@@ -1,0 +1,27 @@
+[   0.38] windows [{"x":940,"y":1194,"width":680,"height":240},{"x":690,"y":330,"width":1180,"height":780}]
+[   0.46] -> hub rec:recording true
+[   1.90] overlay {"cap":"Recording. Fixes run when you finish","note":"Engine offline. Recording without live text"}
+[   5.90] overlay {"pill":"pill interactive proc","proc":"Saving…"}
+[   5.90] -> hub rec:recording false
+[   5.90] -> hub message:new {"id":"mvd6yybh2fal","title":"Voice message"}
+[   5.90] -> hub edit:status {"id":"mvd6yybh2fal","text":"Starting…"}
+[   5.90] -> hub edit:status {"id":"mvd6yybh2fal","text":"Cleaning up…"}
+[   5.94] -> hub nav:go editor:mvd6yybh2fal
+[   6.10] overlay {"pill":"pill interactive proc ok","proc":"Opened in Ctrl+Voice"}
+[   6.53] [main:error] Fix failed Error: Engine error 404
+[   6.53] -> hub edit:status {"id":"mvd6yybh2fal","text":null,"error":"Engine error 404"}
+[   6.53] -> hub message:new {"id":"mvd6yybh2fal","title":"Voice message"}
+[   7.94] overlay {"pill":"pill interactive idle hidden-idle","proc":"Opened in Ctrl+Voice"}
+[   8.75] offline hub {"route":"editor","id":"mvd6yybh2fal","fixing":null,"notice":{"text":"Couldn't fix it: Engine error 404","retry":"fix"},"words":0,"empty":true,"retry":true,"outDur":5.445333333333333} {"wavBytes":261420,"sid":null,"dur":5.445333333333333}
+[   8.75] PASS offline: overlay says engine offline {"cap":"Recording. Fixes run when you finish","note":"Engine offline. Recording without live text"}
+[   8.75] PASS offline: recording saved locally {"wavBytes":261420,"dur":5.445333333333333}
+[   8.75] PASS offline: overlay ends with a true result {"procTexts":[{"pill":"pill interactive proc","proc":"Saving…"},{"pill":"pill interactive proc ok","proc":"Opened in Ctrl+Voice"},{"pill":"pill interactive idle hidden-idle","proc":"Opened in Ctrl+Voice"}]}
+[   8.75] PASS offline: editor shows the fix error with Try again {"notice":{"text":"Couldn't fix it: Engine error 404","retry":"fix"},"fixError":"Engine error 404"}
+[   8.75] PASS offline: original audio playable {"outDur":5.445333333333333}
+[   8.78] screenshot C:\Users\Antony\AppData\Local\Temp\claude\C--Users-Antony-Desktop-ctrl-voice\5985905e-4572-4f19-a6ec-0c1ce1de5723\scratchpad\e2e\out\2026-10-18T02-13-45-391Z-offline-editor.png {"width":1180,"height":780}
+[   9.22] PASS offline: health check reports it {"ok":false,"ms":438,"message":"The server answered 404. Is the engine running?","url":"https://zaa3ajj8o85hhq-7860.proxy.runpod.net"}
+[   9.27] -> hub rec:recording true
+[  12.74] -> hub rec:recording false
+[  15.24] PASS cancel leaves no message {"before":1,"after":1,"rec":"pill interactive rec","pillAfter":"pill interactive idle hidden-idle"}
+[  15.26] screenshot C:\Users\Antony\AppData\Local\Temp\claude\C--Users-Antony-Desktop-ctrl-voice\5985905e-4572-4f19-a6ec-0c1ce1de5723\scratchpad\e2e\out\2026-10-18T02-13-45-391Z-final.png {"width":1180,"height":780}
+[  15.26] RESULTS ["PASS offline: overlay says engine offline","PASS offline: recording saved locally","PASS offline: overlay ends with a true result","PASS offline: editor shows the fix error with Try again","PASS offline: original audio playable","FAIL offline: health check reports it","PASS cancel leaves no message"]

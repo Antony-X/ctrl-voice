@@ -1,0 +1,94 @@
+{
+  "results": [
+    {
+      "step": "settings: Your sound slider saves",
+      "lvl": "Medium",
+      "note": "Pitch 7% lower, 4% faster, steadier, firm endings. Every message, in your own voice.",
+      "misspokenOn": true,
+      "savedTone": {
+        "confident": 0.7,
+        "calm": 0.4,
+        "warm": 0
+      },
+      "fix": {
+        "cleanup": true,
+        "grammar": true,
+        "misspoken": true,
+        "pronunciation": true
+      },
+      "ok": true
+    }
+  ],
+  "consoleErrors": [],
+  "events": [
+    {
+      "t": 1222,
+      "ch": "settings:changed",
+      "brief": {
+        "settings": {
+          "shortcuts": {
+            "toggle": "Control+Alt+Shift+F9",
+            "open": "Control+Alt+Shift+F10",
+            "undo": "Control+Alt+Shift+F11",
+            "review": "Control+Alt+Shift+F12",
+            "cancel": "Control+Alt+Shift+F8"
+          },
+          "shortcutsVersion": 3,
+          "backendUrl": "https://xjdypx6zst9jkd-7860.proxy.runpod.net",
+          "finishAction": "review",
+          "autoSend": true,
+          "fix": {
+            "cleanup": true,
+            "grammar": true,
+            "misspoken": true,
+            "pronunciation": true
+          },
+          "tone": {
+            "confident": 0.7,
+            "calm": 0.4,
+            "warm": 0
+          },
+          "showIdleBar": false,
+          "launchAtStartup": false,
+          "startHidden": true,
+          "micId": "default"
+        },
+        "shortcutStatus": {
+          "toggle": true,
+          "open": true,
+          "undo": null,
+          "review": null,
+          "cancel": null
+        },
+        "defaults": {
+          "shortcuts": {
+            "toggle": "Alt+`",
+            "open": "Alt+Shift+`",
+            "undo": "CommandOrControl+Z",
+            "review": "CommandOrControl+Alt+Enter",
+            "cancel": "Escape"
+          },
+          "shortcutsVersion": 3,
+          "backendUrl": "https://xjdypx6zst9jkd-7860.proxy.runpod.net",
+          "finishAction": "send",
+          "autoSend": true,
+          "fix": {
+            "cleanup": true,
+            "grammar": true,
+            "misspoken": true,
+            "pronunciation": true
+          },
+          "tone": {
+            "confident": 0,
+            "calm": 0,
+            "warm": 0
+          },
+          "showIdleBar": true,
+          "launchAtStartup": false,
+          "startHidden": false,
+          "micId": "default"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+# The scratchpad holds much more; only these are the demo kit.
+/*
+!/.gitignore
+!/README.md
+!/DEMO_PLAN.md
+!/deck/
+!/video/
+!/demoscript/
+!/e2e/
+!/harness/
+!/sample/
+!/notes/
+!/accent/
+!/latency/
+
+# Secrets: copied by hand, never committed
+**/.elevenlabs_key
+**/*.key
+**/.env
+**/.env.*
+
+# Generated or bulky
+**/node_modules/
+**/__pycache__/
+e2e/userData/
+**/*.bak
+**/*.bak_*
+deck/render/vframes/
+deck/render/vf*/
+deck/test/
+deck/src/unz/
+deck/build/work/
+video/.remotion/
+harness/harness-data/
+**/userData/

@@ -1,0 +1,447 @@
+// End-to-end test of the real Ctrl+Voice app (real main.js, renderer, overlay,
+// engine). Fake mic from a WAV, own userData, nothing is ever sent or pasted,
+// no window is focused. Usage: electron.exe e2e/main.js [--steps=rec,editor,cancel]
+const { app, BrowserWindow, ipcMain } = require('electron');
+const fs = require('fs');
+const path = require('path');
+
+const DIR = __dirname;
+const SP = path.join(DIR, '..');
+const UD = path.join(DIR, 'userData');
+const OUT = path.join(DIR, 'out');
+const CV = 'C:/Users/Antony/Desktop/ctrl+voice';
+const AUDIO = path.join(SP, 'livetest', 'data', 'orig_pause.wav');
+const arg = (n, d) => (process.argv.find(a => a.startsWith(`--${n}=`)) || '').split('=').slice(1).join('=') || d;
+const STEPS = arg('steps', 'rec,editor,cancel').split(',');
+const KEEP = process.argv.includes('--keep'); // reuse userData from a previous run (editor-only reruns)
+
+if (!KEEP) fs.rmSync(UD, { recursive: true, force: true });
+fs.mkdirSync(UD, { recursive: true });
+fs.mkdirSync(OUT, { recursive: true });
+if (!KEEP) {
+  fs.writeFileSync(path.join(UD, 'settings.json'), JSON.stringify({
+    shortcutsVersion: 3, finishAction: 'review', startHidden: true, showIdleBar: false,
+    tone: { calm: 0.4 }, // Your sound: every message gets a light calm take
+    shortcuts: {
+      toggle: 'Control+Alt+Shift+F9', open: 'Control+Alt+Shift+F10', undo: 'Control+Alt+Shift+F11',
+      review: 'Control+Alt+Shift+F12', cancel: 'Control+Alt+Shift+F8',
+    },
+  }, null, 2));
+}
+
+const runId = new Date().toISOString().replace(/[:.]/g, '-');
+const LOG = path.join(OUT, `e2e-${runId}.log`);
+const T0 = Date.now();
+const ts = () => ((Date.now() - T0) / 1000).toFixed(2).padStart(7);
+function log(...a) {
+  const line = `[${ts()}] ${a.map(x => (typeof x === 'string' ? x : JSON.stringify(x))).join(' ')}`;
+  process.stdout.write(line + '\n');
+  fs.appendFileSync(LOG, line + '\n');
+}
+for (const k of ['error', 'warn']) {
+  const orig = console[k];
+  console[k] = (...a) => { log(`[main:${k}]`, ...a.map(x => (x instanceof Error ? `${x.name}: ${x.message}` : x))); orig(...a); };
+}
+process.on('uncaughtException', (e) => log('[main:uncaught]', e.stack || String(e)));
+process.on('unhandledRejection', (e) => log('[main:unhandled]', e?.stack || String(e)));
+
+app.setPath('userData', UD);
+app.commandLine.appendSwitch('use-fake-device-for-media-stream');
+app.commandLine.appendSwitch('use-fake-ui-for-media-stream');
+app.commandLine.appendSwitch('use-file-for-fake-audio-capture', `${AUDIO}%noloop`);
+
+const M = require(`${CV}/src/main/main.js`);
+for (const k of Object.keys(M.SEND_APPS)) delete M.SEND_APPS[k]; // never a send target
+
+const results = [];
+const record = (step, ok, info) => { results.push({ step, ...info, ok }); log(ok ? 'PASS' : 'FAIL', step, info); };
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+
+let mainWin, overlay;
+const events = []; // what main sends to the main window
+const consoleErrors = [];
+
+function hookWindow(win, name) {
+  win.webContents.on('console-message', (_e, level, message, line, src) => {
+    const s = `[${name}:${level}] ${message} (${path.basename(src || '')}:${line})`;
+    if (level >= 2) consoleErrors.push(s);
+    log(s);
+  });
+  win.webContents.on('render-process-gone', (_e, d) => log(`[${name}] RENDERER GONE`, d));
+  win.webContents.on('preload-error', (_e, p, err) => log(`[${name}] PRELOAD ERROR`, p, String(err)));
+}
+
+async function quit(code) {
+  log('RESULTS', results.map(r => `${r.ok ? 'PASS' : 'FAIL'} ${r.step}`));
+  fs.writeFileSync(path.join(OUT, `results-${runId}.json`), JSON.stringify({ results, consoleErrors, events }, null, 2));
+  try { M.helper.stop(); } catch {}
+  app.isQuitting = true;
+  setTimeout(() => app.exit(code), 3000);
+  app.quit();
+}
+setTimeout(() => { log('GLOBAL TIMEOUT'); quit(2); }, 9 * 60e3);
+
+const R = (js) => mainWin.webContents.executeJavaScript(js, true);
+const O = (js) => overlay.webContents.executeJavaScript(js, true);
+
+async function waitFor(fn, timeout, every = 250) {
+  const t = Date.now();
+  while (Date.now() - t < timeout) {
+    const v = await fn();
+    if (v) return v;
+    await sleep(every);
+  }
+  return null;
+}
+
+app.whenReady().then(async () => {
+  // main.js's whenReady ran first and made its windows
+  await sleep(300);
+  const wins = BrowserWindow.getAllWindows();
+  log('windows', wins.map(w => w.getBounds()));
+  await waitFor(() => wins.every(w => w.webContents.getURL() && !w.webContents.isLoading()), 15000);
+  mainWin = wins.find(w => /app[\\/]index\.html/.test(decodeURIComponent(w.webContents.getURL())));
+  overlay = wins.find(w => /overlay\.html/.test(w.webContents.getURL()));
+  if (!mainWin || !overlay) { log('windows not found', wins.map(w => w.webContents.getURL())); return quit(3); }
+  hookWindow(mainWin, 'hub');
+  hookWindow(overlay, 'overlay');
+
+  // Keep everything off-screen and unfocused: the real showMain() calls show() + focus().
+  mainWin.setSkipTaskbar(true);
+  mainWin.setBounds({ x: -4000, y: 0, width: 1180, height: 780 });
+  mainWin.show = () => mainWin.showInactive();
+  mainWin.focus = () => {};
+  mainWin.webContents.setBackgroundThrottling(false);
+  overlay.setBounds({ x: -4000, y: 0, width: 680, height: 240 });
+  const origSend = mainWin.webContents.send.bind(mainWin.webContents);
+  mainWin.webContents.send = (ch, payload) => {
+    const brief = ch === 'edit:status' ? { id: payload.id, text: payload.text, error: payload.error }
+      : ch === 'message:new' ? { id: payload.id, title: payload.title }
+      : ch === 'rec:state' ? undefined : payload;
+    if (ch !== 'rec:state') { events.push({ t: Date.now() - T0, ch, brief }); log('-> hub', ch, brief ?? ''); }
+    return origSend(ch, payload);
+  };
+
+  // Record every toast the hub shows.
+  await R(`window.__toasts = []; { const t = toast; window.toast = (text, bad = false) => { __toasts.push({ text, bad, t: Date.now() }); t(text, bad); }; } true`);
+
+  try {
+    if (STEPS.includes('offline')) await stepOffline();
+    if (STEPS.includes('rec')) await stepRecord();
+    if (STEPS.includes('editor')) await stepEditor();
+    if (STEPS.includes('settings')) await stepSettings();
+    if (STEPS.includes('cancel')) await stepCancel();
+  } catch (e) {
+    log('DRIVER ERROR', e.stack || String(e));
+    record('driver', false, { error: String(e) });
+  }
+  await screenshot('final');
+  quit(0);
+});
+
+async function screenshot(name) {
+  try {
+    // A hidden window keeps its last frame; show it off-screen, without focus, so the capture is current.
+    if (!mainWin.isVisible()) { mainWin.setPosition(-5000, 0); mainWin.showInactive(); await sleep(500); }
+    mainWin.webContents.invalidate();
+    await sleep(150);
+    const img = await mainWin.webContents.capturePage();
+    const size = img.getSize();
+    if (!size.width) { log('screenshot empty', name); return; }
+    const file = path.join(OUT, `${runId}-${name}.png`);
+    fs.writeFileSync(file, img.toPNG());
+    log('screenshot', file, size);
+  } catch (e) { log('screenshot failed', name, String(e)); }
+}
+
+const messagesDir = () => path.join(UD, 'messages');
+const listMsgs = () => (fs.existsSync(messagesDir()) ? fs.readdirSync(messagesDir()).filter(f => f.endsWith('.json')) : []);
+
+// ---------- 1. live recording -> review -> auto-fix ----------
+async function stepRecord() {
+  const before = listMsgs().length;
+  log('== record: start');
+  const tStart = Date.now();
+  M.toggleRecording();
+  let firstWords = null, lastCap = '', sawScratchGone = false, capLog = [];
+  const poll = async () => {
+    const s = await O(`({ cap: capText.textContent, note: document.getElementById('capNote').textContent, pill: pill.className, proc: document.getElementById('procText').textContent })`);
+    if (s.cap !== lastCap || capLog.length === 0) { log('overlay', s); capLog.push({ t: Date.now() - tStart, ...s }); lastCap = s.cap; }
+    if (!firstWords && s.cap && !/Listening|Recording/.test(s.cap)) firstWords = Date.now() - tStart;
+    return s;
+  };
+  while (Date.now() - tStart < 18000) { await poll(); await sleep(500); }
+  const lastRec = capLog[capLog.length - 1]?.cap || '';
+  // The scratched thought must be gone from the live caption by the end.
+  sawScratchGone = /see you then/i.test(lastRec) && !/Jake/i.test(lastRec) && !/scratch/i.test(lastRec) && !/\bthat\.\s*Okay/i.test(lastRec);
+  const sawJake = capLog.some(c => /Jake/i.test(c.cap));
+  record('live words arrive', !!firstWords, { firstWordsMs: firstWords });
+  record('scratch that removed live', sawScratchGone && sawJake, { sawJakeEarlier: sawJake, finalCaption: lastRec });
+
+  log('== record: finish');
+  const tStop = Date.now();
+  M.toggleRecording();
+  // overlay processing text, then message:new and the fix result
+  const procPoll = (async () => {
+    let last = '';
+    while (Date.now() - tStop < 120000) {
+      const s = await O(`({ pill: pill.className, proc: document.getElementById('procText').textContent })`).catch(() => null);
+      if (s && s.proc + s.pill !== last) { log('overlay', s); last = s.proc + s.pill; }
+      if (s && /idle/.test(s.pill) && Date.now() - tStop > 3000) break;
+      await sleep(300);
+    }
+  })();
+  const msgNew = await waitFor(() => events.find(e => e.ch === 'message:new' && e.t > tStop - T0), 30000, 100);
+  const done = await waitFor(() => events.find(e => e.ch === 'edit:status' && e.brief.text === null && e.t > tStop - T0), 150000, 200);
+  await procPoll;
+  record('message saved after stop', !!msgNew, { stopToMessageMs: msgNew && msgNew.t - (tStop - T0) });
+  record('auto-fix finished', !!done && !done.brief.error, { stopToFixedMs: done && done.t - (tStop - T0), error: done?.brief.error });
+  const statuses = events.filter(e => e.ch === 'edit:status' && e.t > tStop - T0).map(e => `${((e.t - (tStop - T0)) / 1000).toFixed(1)}s ${e.brief.text}`);
+  log('fix statuses', statuses);
+
+  const files = fs.readdirSync(messagesDir());
+  const id = listMsgs()[0]?.replace(/\.json$/, '');
+  const meta = id && JSON.parse(fs.readFileSync(path.join(messagesDir(), `${id}.json`), 'utf8'));
+  if (!meta) return record('stored message', false, { files });
+  const E = require(`${CV}/src/shared/edits.js`);
+  const cuts = meta.ops.filter(o => E.isCut(o) && o.on);
+  const reps = meta.ops.filter(o => !E.isCut(o));
+  const summary = {
+    id, title: meta.title, sid: meta.sid, words: meta.words.length, dur: meta.dur, outDur: meta.output?.dur,
+    removedLive: meta.removed?.length, cuts: cuts.map(o => `${o.kind || 'cut'}:"${meta.words.filter(w => E.cutFor(w, [o])).map(w => w.w).join(' ')}"`),
+    replacements: reps.map(o => ({ kind: o.kind, i: o.i, j: o.j, old: o.old, new: o.new, on: o.on, verified: o.verified, after: o.after })),
+    pron: meta.pron?.items, fixed: !!meta.fixed, files: files.filter(f => f.startsWith(id)),
+    kept: E.keptText(meta.words, meta.ops),
+  };
+  log('stored message', summary);
+  const scratchedClean = !/Jake|scratch|\bthat\.\s*Okay/i.test(summary.kept);
+  const ok = scratchedClean && meta.sid && meta.words.length > 20 && meta.fixed && meta.output && meta.output.dur < meta.dur
+    && files.includes(`${id}.wav`) && files.includes(`${id}.edit.wav`) && listMsgs().length === before + 1;
+  record('default tone applied (Your sound: calm)', meta.take?.engine === 'natural' && meta.take.mix?.calm > 0 && files.includes(`${id}.take.wav`), { take: meta.take, tone: meta.tone });
+  record('stored message', !!ok, { scratchedClean, title: meta.title, dur: meta.dur, outDur: meta.output?.dur, cuts: cuts.length, replacements: reps.length });
+  const hubState = await R(`({ route: S.route, id: S.id, fixing: S.fixing, words: document.querySelectorAll('#transcript .w').length, notice: S.notice, out: S.audio.output && S.audio.output.dur })`);
+  record('editor opened on the new message', hubState.route === 'editor' && hubState.id === id && !hubState.fixing && hubState.words > 0, hubState);
+  await screenshot('after-fix');
+}
+
+// ---------- 2. editor actions ----------
+const IDLE = `(S.route === 'editor' && !S.job && !S.fixing && !S.rendering && !S.dirty && !S.opening && !renderPromise)`;
+async function idle(timeout = 180000) { return waitFor(() => R(IDLE), timeout, 200); }
+async function newToasts(since) { return R(`__toasts.filter(t => t.t > ${since})`); }
+
+async function select(i, j) {
+  return R(`(() => {
+    const a = document.querySelector('#transcript .w[data-k="${i}"]') || [...document.querySelectorAll('#transcript .w')].find(s => +s.dataset.k <= ${i} && ${i} <= +s.dataset.end);
+    const b = document.querySelector('#transcript .w[data-k="${j}"]') || [...document.querySelectorAll('#transcript .w')].find(s => +s.dataset.k <= ${j} && ${j} <= +s.dataset.end);
+    if (!a || !b) return 'no span';
+    a.dispatchEvent(new MouseEvent('mousedown', { bubbles: true, button: 0 }));
+    if (b !== a) b.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));
+    document.dispatchEvent(new MouseEvent('mouseup', { bubbles: true, button: 0 }));
+    return { sel: S.sel, pop: !document.getElementById('pop').hidden, buttons: [...document.querySelectorAll('#pop [data-action]')].map(b => b.dataset.action) };
+  })()`);
+}
+const click = (sel) => R(`(() => { const el = document.querySelector(${JSON.stringify(sel)}); if (!el) return false; el.click(); return true; })()`);
+
+async function action(name, run, check) {
+  await idle(30000);
+  const since = await R('Date.now()');
+  const errsBefore = consoleErrors.length;
+  const t = Date.now();
+  let info = {};
+  try {
+    info.run = await run();
+    await sleep(150);
+    await idle();
+    await waitFor(() => R(`!!(S.audio.output && S.audio.output.dur > 0)`), 5000, 50); // dur is filled in once the audio is decoded
+    info.ms = Date.now() - t;
+    const st = await R(`({ job: S.job, notice: S.notice, outDur: S.audio.output && S.audio.output.dur, view: S.view, take: S.meta.take, ops: S.ops.length, version: S.version, hist: S.history.length, fut: S.future.length })`);
+    info.state = st;
+    info.toasts = await newToasts(since);
+    info.consoleErrors = consoleErrors.slice(errsBefore);
+    const extra = check ? (await check(st, info)) === true : true;
+    const ok = extra !== false && !info.toasts.some(x => x.bad) && !info.consoleErrors.length && !st.job && st.outDur > 0;
+    record(name, ok, info);
+  } catch (e) {
+    record(name, false, { ...info, error: String(e.stack || e) });
+  }
+}
+
+async function stepEditor() {
+  const id = listMsgs()[0]?.replace(/\.json$/, '');
+  if (!id) return record('editor', false, { error: 'no message' });
+  await R(`player.muted = true; true`);
+  const t = Date.now();
+  await R(`openMessage(${JSON.stringify(id)}); true`);
+  const opened = await idle(60000);
+  record('open message', !!opened, { ms: Date.now() - t, words: await R(`document.querySelectorAll('#transcript .w').length`) });
+  const words = await R(`S.meta.words.map((w, k) => ({ k, w: w.w, cut: !!Edits.cutFor(w, S.ops) }))`);
+  const find = (re) => words.find(w => re.test(w.w) && !w.cut)?.k;
+  log('kept words', words.filter(w => !w.cut).map(w => `${w.k}:${w.w}`).join(' '));
+
+  // replace Wednesday -> Thursday through the popover
+  const kWed = find(/^Wednesday/i);
+  await action('replace word (Wednesday -> Thursday)', async () => {
+    const s = await select(kWed, kWed);
+    await click('#pop [data-action="replace"]');
+    await R(`document.getElementById('popInput').value = 'Thursday'; true`);
+    await click('#pop [data-action="replace-go"]');
+    return s;
+  }, async () => R(`S.ops.some(o => o.on && o.new === 'Thursday') && /Thursday/.test(document.getElementById('transcript').textContent)`));
+  await screenshot('replaced');
+
+  // say clearly on a word
+  const kCafe = find(/^caf/i) ?? find(/^board/i);
+  await action('say clearly', async () => {
+    const s = await select(kCafe, kCafe);
+    await click('#pop [data-action="say-clearly"]');
+    return s;
+  }, async () => R(`S.ops.some(o => o.on && o.kind === 'pronunciation' && o.i === ${kCafe})`));
+
+  // natural tone on a few words
+  const kSee = find(/^see/i), kThen = find(/^then/i);
+  await action('tone words (natural confident)', async () => {
+    const s = await select(kSee, kThen);
+    await click('#pop [data-action="tone"]');
+    const ok = await click('#pop [data-action="tone-sel"][data-engine="natural"][data-style="confident"]');
+    return { s, ok };
+  }, async () => R(`S.ops.some(o => o.on && /confident/.test(o.kind || ''))`));
+
+  // Tone panel: characters step Off -> Medium -> Strong; the take is made ~0.45 s after the last click.
+  const TAKE = `(S.meta.take ? { engine: S.meta.take.engine, style: S.meta.take.style, mix: S.meta.take.mix || null } : null)`;
+  await action('tone whole message (your voice: confident strong + warm medium)', async () => {
+    const opened = await click('[data-action="tone-panel"]');
+    await click('#tone [data-action="tone-tab"][data-tab="natural"]');
+    await click('#tone [data-action="tone-bump"][data-tone="confident"]');
+    await click('#tone [data-action="tone-bump"][data-tone="confident"]');
+    await click('#tone [data-action="tone-bump"][data-tone="warm"]');
+    const read = await R(`document.querySelector('#tone .tone-read')?.textContent`);
+    const take = await waitFor(() => R(`(S.meta.take && S.meta.take.engine === 'natural' && S.meta.take.mix && S.meta.take.mix.warm > 0) ? ${TAKE} : null`), 90000, 200);
+    return { opened, read, take };
+  }, async (st, info) => !!info.run.opened && !!info.run.take && info.run.take.mix.confident > info.run.take.mix.warm && /\d+%/.test(info.run.read || ''));
+  // the editor keeps a your-voice tone through later edits (re-applied after each render)
+
+  await action('tone whole message (AI calm)', async () => {
+    await click('#tone [data-action="tone-tab"][data-tab="ai"]');
+    const ok = await click('#tone [data-action="tone-ai"][data-tone="calm"]');
+    const take = await waitFor(() => R(`(S.meta.take && S.meta.take.engine === 'tone') ? ${TAKE} : null`), 180000, 250);
+    return { ok, take };
+  }, async (st, info) => info.run.ok && st.take && st.take.engine === 'tone' && st.take.style === 'calm');
+  await screenshot('ai-tone');
+
+  await action('no tone change (clear take)', async () => {
+    const ok = await click('#tone [data-action="tone-reset"]');
+    await waitFor(() => R(`!S.meta.take`), 30000, 200);
+    return ok;
+  }, async (st, info) => info.run && !st.take);
+  await R(`closeTone(); true`);
+
+  await action('shorten', async () => (await click('[data-action="shorten"]')) || R(`shorten(); 'called directly'`));
+
+  await action('check for misheard words', async () => click('[data-action="misheard"]'), async () => R(`Array.isArray(S.hints)`));
+
+  await action('undo then redo', async () => {
+    const ops = `JSON.stringify(S.ops.map(o => [o.id, o.on]))`;
+    const before = await R(ops);
+    await R(`document.body.dispatchEvent(new KeyboardEvent('keydown', { key: 'z', ctrlKey: true, bubbles: true })); true`);
+    await sleep(200); await idle();
+    const undone = await R(ops);
+    await R(`document.body.dispatchEvent(new KeyboardEvent('keydown', { key: 'y', ctrlKey: true, bubbles: true })); true`);
+    await sleep(200); await idle();
+    const redone = await R(ops);
+    return { undoChanged: undone !== before, redoRestored: redone === before };
+  }, async (st, info) => info.run.undoChanged && info.run.redoRestored && !st.take); // "No tone change" stays off after re-renders
+
+  await action('rename title', async () => R(`(() => { const t = document.getElementById('title'); t.value = 'Demo: plans for Thursday'; t.dispatchEvent(new Event('change', { bubbles: true })); return true; })()`),
+    async () => { await sleep(400); return JSON.parse(fs.readFileSync(path.join(messagesDir(), `${id}.json`), 'utf8')).title === 'Demo: plans for Thursday'; });
+
+  await action('original / fixed switch', async () => {
+    await click('[data-action="view"][data-view="original"]');
+    await waitFor(() => R(`!!(S.audio.original && S.audio.original.dur > 0)`), 10000, 50);
+    const orig = await R(`({ view: S.view, dur: S.audio.original && S.audio.original.dur })`);
+    await click('[data-action="view"][data-view="output"]');
+    return orig;
+  }, async (st, info) => info.run.view === 'original' && info.run.dur > 0 && st.view === 'output');
+
+  await action('play / pause (muted)', async () => {
+    await click('[data-action="play"]');
+    await sleep(1200);
+    const playing = await R(`({ paused: player.paused, t: player.currentTime })`);
+    await click('[data-action="play"]');
+    return playing;
+  }, async (_st, info) => !info.run.paused && info.run.t > 0.3);
+
+  const meta = JSON.parse(fs.readFileSync(path.join(messagesDir(), `${id}.json`), 'utf8'));
+  log('final stored ops', meta.ops.map(o => ({ kind: o.kind, on: o.on, new: o.new, i: o.i, j: o.j })));
+  log('final kept text', require(`${CV}/src/shared/edits.js`).keptText(meta.words, meta.ops));
+}
+
+// ---------- 3. settings: Your sound slider and the misspoken-words switch ----------
+async function stepSettings() {
+  await R(`navigate('settings'); true`);
+  await sleep(800);
+  const r = await R(`(() => {
+    const el = document.querySelector('[data-set-tone="confident"]');
+    if (!el) return null;
+    el.value = 70;
+    el.dispatchEvent(new Event('input', { bubbles: true }));
+    el.dispatchEvent(new Event('change', { bubbles: true }));
+    document.getElementById('toneNote').scrollIntoView({ block: 'center' });
+    return { lvl: document.querySelector('[data-lvl="confident"]').textContent, note: document.getElementById('toneNote').textContent,
+      misspokenOn: !!document.querySelector('[data-key="fix.misspoken"].on') };
+  })()`);
+  await sleep(700);
+  const saved = JSON.parse(fs.readFileSync(path.join(UD, 'settings.json'), 'utf8'));
+  await screenshot('settings');
+  record('settings: Your sound slider saves', !!r && saved.tone?.confident === 0.7 && saved.tone?.calm === 0.4 && /lower|higher|faster|slower/i.test(r.note) && r.misspokenOn,
+    { ...r, savedTone: saved.tone, fix: saved.fix });
+}
+
+// ---------- 1b. engine unreachable: record, save locally, open with a notice ----------
+async function stepOffline() {
+  const before = listMsgs().length;
+  const tStart = Date.now();
+  M.toggleRecording();
+  await sleep(1500);
+  const rec = await O(`({ cap: capText.textContent, note: document.getElementById('capNote').textContent })`);
+  log('overlay', rec);
+  await sleep(4000);
+  const tStop = Date.now();
+  M.toggleRecording();
+  let last = '', procTexts = [];
+  while (Date.now() - tStop < 15000) {
+    const s = await O(`({ pill: pill.className, proc: document.getElementById('procText').textContent })`);
+    if (s.proc + s.pill !== last) { log('overlay', s); procTexts.push(s); last = s.proc + s.pill; }
+    if (/idle/.test(s.pill)) break;
+    await sleep(200);
+  }
+  const done = await waitFor(() => events.find(e => e.ch === 'edit:status' && e.brief.text === null && e.t > tStop - T0), 60000, 200);
+  await sleep(800);
+  const ids = listMsgs().map(f => f.replace(/\.json$/, ''));
+  const metas = ids.map(id => JSON.parse(fs.readFileSync(path.join(messagesDir(), `${id}.json`), 'utf8')));
+  const meta = metas.sort((a, b) => b.createdAt - a.createdAt)[0];
+  const wav = meta && path.join(messagesDir(), `${meta.id}.wav`);
+  const wavBytes = wav && fs.existsSync(wav) ? fs.statSync(wav).size : 0;
+  const hub = await R(`({ route: S.route, id: S.id, fixing: S.fixing, notice: S.notice, words: document.querySelectorAll('#transcript .w').length, empty: !!document.querySelector('.transcript-empty'), retry: !!document.querySelector('[data-action="retry"]'), outDur: S.audio.output && S.audio.output.dur })`);
+  log('offline hub', hub, { wavBytes, sid: meta?.sid, dur: meta?.dur });
+  record('offline: overlay says engine offline', /offline/i.test(rec.note), rec);
+  record('offline: recording saved locally', listMsgs().length === before + 1 && wavBytes > 44 + 24000 * 2 * 4 && meta.sid === null, { wavBytes, dur: meta?.dur });
+  record('offline: overlay ends with a true result', procTexts.some(p => /Opened in Ctrl\+Voice/.test(p.proc)) && !procTexts.some(p => /Saved in Ctrl\+Voice/.test(p.proc)), { procTexts });
+  record('offline: editor shows the fix error with Try again', hub.route === 'editor' && hub.id === meta?.id && !hub.fixing && !!hub.notice && hub.retry, { notice: hub.notice, fixError: done?.brief.error });
+  record('offline: original audio playable', hub.outDur > 4, { outDur: hub.outDur });
+  await screenshot('offline-editor');
+  const health = await R(`api.invoke('engine:health')`);
+  record('offline: health check reports it', health.ok === false, health);
+}
+
+// ---------- 3. cancel leaves nothing ----------
+async function stepCancel() {
+  const before = listMsgs().length;
+  M.toggleRecording();
+  await sleep(3500);
+  const rec = await O(`pill.className`);
+  ipcMain.emit('rec:cancel');
+  await sleep(2500);
+  const after = listMsgs().length;
+  const pillAfter = await O(`pill.className`);
+  record('cancel leaves no message', after === before && /rec/.test(rec) && /idle/.test(pillAfter), { before, after, rec, pillAfter });
+}

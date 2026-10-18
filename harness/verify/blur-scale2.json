@@ -1,0 +1,3 @@
+{ "page": "blurtest.html", "width": 680, "height": 240, "transparent": true, "scale": 2,
+  "backdrop": "wallpaper-dark",
+  "shots": [ {"wait": 300, "js": "devicePixelRatio", "out": "../out/blur-scale2.png"} ] }

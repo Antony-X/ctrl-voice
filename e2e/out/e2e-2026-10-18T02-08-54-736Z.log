@@ -1,0 +1,32 @@
+[   0.37] windows [{"x":940,"y":1194,"width":680,"height":240},{"x":690,"y":330,"width":1180,"height":780}]
+[   0.38] == record: start
+[   0.41] overlay {"cap":"Listening…","note":"Say “scratch that” or press Control Alt Shift F11 to undo","pill":"pill interactive rec","proc":"Cleaning up…"}
+[   0.47] -> hub rec:recording true
+[   0.92] overlay {"cap":"Recording. Fixes run when you finish","note":"Engine offline. Recording without live text","pill":"pill interactive rec","proc":"Cleaning up…"}
+[  18.74] FAIL live words arrive {"firstWordsMs":null}
+[  18.74] FAIL scratch that removed live {"sawJakeEarlier":false,"finalCaption":"Recording. Fixes run when you finish"}
+[  18.75] == record: finish
+[  18.75] overlay {"pill":"pill interactive proc","proc":"Saving…"}
+[  18.75] -> hub rec:recording false
+[  18.75] [main:unhandled] Error: ENOENT: no such file or directory, open 'C:\Users\Antony\AppData\Local\Temp\claude\C--Users-Antony-Desktop-ctrl-voice\5985905e-4572-4f19-a6ec-0c1ce1de5723\scratchpad\e2e\userData\messages\mvd6szyk7gyo.wav'
+    at Object.openSync (node:fs:574:18)
+    at Object.func [as openSync] (node:electron/js2c/node_init:2:2559)
+    at Object.writeFileSync (node:fs:2381:35)
+    at finishRecording (C:\Users\Antony\Desktop\ctrl+voice\src\main\main.js:427:15)
+    at IpcMainImpl.<anonymous> (C:\Users\Antony\Desktop\ctrl+voice\src\main\main.js:592:61)
+    at IpcMainImpl.emit (node:events:518:28)
+    at WebContents.<anonymous> (node:electron/js2c/browser_init:2:86667)
+    at WebContents.emit (node:events:518:28)
+[ 108.78] overlay {"pill":"pill interactive proc ok","proc":"Saved in Ctrl+Voice"}
+[ 110.65] overlay {"pill":"pill interactive idle hidden-idle","proc":"Saved in Ctrl+Voice"}
+[ 198.85] FAIL message saved after stop {"stopToMessageMs":null}
+[ 198.85] FAIL auto-fix finished {"stopToFixedMs":null}
+[ 198.85] fix statuses []
+[ 198.85] DRIVER ERROR Error: ENOENT: no such file or directory, scandir 'C:\Users\Antony\AppData\Local\Temp\claude\C--Users-Antony-Desktop-ctrl-voice\5985905e-4572-4f19-a6ec-0c1ce1de5723\scratchpad\e2e\userData\messages'
+    at Object.readdirSync (node:fs:1507:26)
+    at t.readdirSync (node:electron/js2c/node_init:2:13703)
+    at stepRecord (C:\Users\Antony\AppData\Local\Temp\claude\C--Users-Antony-Desktop-ctrl-voice\5985905e-4572-4f19-a6ec-0c1ce1de5723\scratchpad\e2e\main.js:195:20)
+    at async C:\Users\Antony\AppData\Local\Temp\claude\C--Users-Antony-Desktop-ctrl-voice\5985905e-4572-4f19-a6ec-0c1ce1de5723\scratchpad\e2e\main.js:128:32
+[ 198.85] FAIL driver {"error":"Error: ENOENT: no such file or directory, scandir 'C:\\Users\\Antony\\AppData\\Local\\Temp\\claude\\C--Users-Antony-Desktop-ctrl-voice\\5985905e-4572-4f19-a6ec-0c1ce1de5723\\scratchpad\\e2e\\userData\\messages'"}
+[ 198.90] screenshot C:\Users\Antony\AppData\Local\Temp\claude\C--Users-Antony-Desktop-ctrl-voice\5985905e-4572-4f19-a6ec-0c1ce1de5723\scratchpad\e2e\out\2026-10-18T02-08-54-736Z-final.png {"width":1180,"height":780}
+[ 198.90] RESULTS ["FAIL live words arrive","FAIL scratch that removed live","FAIL message saved after stop","FAIL auto-fix finished","FAIL driver"]

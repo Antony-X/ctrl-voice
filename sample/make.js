@@ -1,0 +1,31 @@
+// Builds realistic stub data for the hub screenshots from the live engine.
+const path = require('path');
+const fs = require('fs');
+const ROOT = 'C:/Users/Antony/Desktop/ctrl+voice';
+const { Engine } = require(path.join(ROOT, 'src/main/engine.js'));
+const Edits = require(path.join(ROOT, 'src/shared/edits.js'));
+const e = new Engine(() => 'https://zaa3ajj8o85hhq-7860.proxy.runpod.net');
+const OUT = __dirname;
+(async () => {
+  const orig = fs.readFileSync(path.join(OUT, '..', 'enginetest', 'orig.wav'));
+  const up = await e.upload(orig, 'message.wav');
+  const sid = up.sid;
+  const ops = Edits.fromRemoved(up.removed);
+  const cl = await e.clean(sid);
+  ops.push(...Edits.fromCuts(cl.items, ops));
+  const ti = await e.tighten(sid);
+  ops.push(...Edits.fromCuts(ti.items, ops).map(o => ({ ...o, on: false, auto: false })));
+  const pr = await e.pron(sid);
+  const gr = await e.grammar(sid);
+  const rn = await e.render(sid, Edits.forRender(ops));
+  const out = await e.download(rn.url);
+  fs.writeFileSync(path.join(OUT, 'output.wav'), out);
+  fs.copyFileSync(path.join(OUT, '..', 'enginetest', 'orig.wav'), path.join(OUT, 'original.wav'));
+  fs.writeFileSync(path.join(OUT, 'sample.json'), JSON.stringify({ sid, words: up.words, removed: up.removed, dur: up.dur, clean: cl.items, tighten: ti.items, pron: pr, grammar: gr.items, render: rn, ops }, null, 2));
+  console.log('words', up.words.map((w, k) => `${k}:${w.w}`).join(' '));
+  console.log('clean', cl.items.map(c => `${c.kind}[${c.i}-${c.j}]${c.text}:${c.auto}`));
+  console.log('tighten', ti.items.map(c => `${c.kind}[${c.i}-${c.j}]${c.text}`));
+  console.log('pron', pr.items.map(x => `${x.i}:${x.word}(${x.acc})`));
+  console.log('grammar', gr.items);
+  console.log('render', rn);
+})().catch(err => { console.error('FAILED', err); process.exit(1); });

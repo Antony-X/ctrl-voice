@@ -1,0 +1,302 @@
+{
+ "tag": "screenD_jessica",
+ "input": "screen/TEST_SYNTH_screenD_jessica.wav",
+ "timing": {
+  "upload": 1161,
+  "checks": 1701
+ },
+ "sid": "cf158b45",
+ "words": [
+  {
+   "w": "That's",
+   "s": 0.08,
+   "e": 0.301,
+   "p": 0.94
+  },
+  {
+   "w": "a",
+   "s": 0.321,
+   "e": 0.341,
+   "p": 1
+  },
+  {
+   "w": "mute",
+   "s": 0.421,
+   "e": 0.661,
+   "p": 0.99
+  },
+  {
+   "w": "point",
+   "s": 0.701,
+   "e": 0.962,
+   "p": 1
+  },
+  {
+   "w": "now.",
+   "s": 1.002,
+   "e": 2.345,
+   "p": 0.98
+  },
+  {
+   "w": "Let",
+   "s": 2.385,
+   "e": 2.505,
+   "p": 0.98
+  },
+  {
+   "w": "me",
+   "s": 2.545,
+   "e": 2.646,
+   "p": 1
+  },
+  {
+   "w": "cut",
+   "s": 2.686,
+   "e": 2.846,
+   "p": 1
+  },
+  {
+   "w": "to",
+   "s": 2.886,
+   "e": 2.946,
+   "p": 1
+  },
+  {
+   "w": "the",
+   "s": 3.006,
+   "e": 3.086,
+   "p": 1
+  },
+  {
+   "w": "cheese.",
+   "s": 3.127,
+   "e": 4.048,
+   "p": 1
+  },
+  {
+   "w": "Honestly,",
+   "s": 4.109,
+   "e": 4.83,
+   "p": 1
+  },
+  {
+   "w": "it",
+   "s": 4.89,
+   "e": 4.99,
+   "p": 1
+  },
+  {
+   "w": "was",
+   "s": 5.03,
+   "e": 5.191,
+   "p": 1
+  },
+  {
+   "w": "a",
+   "s": 5.231,
+   "e": 5.351,
+   "p": 1
+  },
+  {
+   "w": "blessing",
+   "s": 5.391,
+   "e": 5.992,
+   "p": 1
+  },
+  {
+   "w": "in",
+   "s": 6.033,
+   "e": 6.113,
+   "p": 1
+  },
+  {
+   "w": "the",
+   "s": 6.133,
+   "e": 6.273,
+   "p": 1
+  },
+  {
+   "w": "skies,",
+   "s": 6.293,
+   "e": 7.195,
+   "p": 1
+  },
+  {
+   "w": "and",
+   "s": 7.255,
+   "e": 7.355,
+   "p": 1
+  },
+  {
+   "w": "the",
+   "s": 7.375,
+   "e": 7.516,
+   "p": 1
+  },
+  {
+   "w": "dip",
+   "s": 7.556,
+   "e": 8.177,
+   "p": 1
+  },
+  {
+   "w": "didn't",
+   "s": 8.217,
+   "e": 8.438,
+   "p": 1
+  },
+  {
+   "w": "even",
+   "s": 8.478,
+   "e": 8.658,
+   "p": 1
+  },
+  {
+   "w": "pass",
+   "s": 8.698,
+   "e": 8.999,
+   "p": 1
+  },
+  {
+   "w": "mustard.",
+   "s": 9.039,
+   "e": 9.42,
+   "p": 1
+  }
+ ],
+ "dur": 9.6,
+ "transcript": "That's a mute point now. Let me cut to the cheese. Honestly, it was a blessing in the skies, and the dip didn't even pass mustard.",
+ "clean": [
+  {
+   "i": 2,
+   "j": 2,
+   "kind": "correction",
+   "text": "mute",
+   "auto": false,
+   "t0": 0.381,
+   "t1": 0.681
+  },
+  {
+   "i": 25,
+   "j": 25,
+   "kind": "correction",
+   "text": "mustard.",
+   "auto": false,
+   "t0": 9.019,
+   "t1": 9.46
+  }
+ ],
+ "grammar": [
+  {
+   "i": 24,
+   "j": 24,
+   "old": "pass",
+   "new": "meet"
+  }
+ ],
+ "intent": [
+  {
+   "i": 2,
+   "j": 2,
+   "old": "mute",
+   "new": "moot",
+   "heard": "mjuːt",
+   "intended": "muːt",
+   "fit": -0.65,
+   "dist": 0.33,
+   "alts": []
+  },
+  {
+   "i": 25,
+   "j": 25,
+   "old": "mustard.",
+   "new": "muster",
+   "heard": "mʌstɚd",
+   "intended": "mʌstɚ",
+   "fit": -0.43,
+   "dist": 0.2,
+   "alts": []
+  }
+ ],
+ "pron": {
+  "items": [],
+  "median": 9.9,
+  "accent": []
+ },
+ "replaced": [
+  {
+   "kind": "misspoken",
+   "old": "mute",
+   "new": "moot",
+   "verified": true,
+   "engine": "playdiff",
+   "after": null,
+   "ms": 2427,
+   "t0": 0.381,
+   "t1": 0.681,
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.17,
+     "heard": "That's a moot point now. Let me cut to the cheese."
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.085,
+     "heard": "That's a moot point now. Let me cut to the cheese."
+    }
+   ]
+  },
+  {
+   "kind": "misspoken",
+   "old": "mustard.",
+   "new": "muster",
+   "verified": false,
+   "engine": "playdiff",
+   "after": null,
+   "ms": 6354,
+   "t0": 9.019,
+   "t1": 9.46,
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": false,
+     "sim": 0.474,
+     "heard": "A blessing in the skies, and the dip didn't even pass mustard."
+    },
+    {
+     "engine": "f5",
+     "ok": false,
+     "sim": 0.427,
+     "heard": "A blessing in the skies. And the dip didn't even pass mustard."
+    },
+    {
+     "engine": "playdiff",
+     "ok": false,
+     "sim": 0.441,
+     "heard": "A blessing in the skies, and the dip didn't even pass mustard."
+    },
+    {
+     "engine": "f5",
+     "ok": false,
+     "sim": 0.269,
+     "heard": "A blessing in the skies. And the dip didn't even pass mustard."
+    },
+    {
+     "engine": "playdiff",
+     "ok": false,
+     "sim": 0.358,
+     "heard": "A blessing in the skies, and the dip didn't even pass mustard."
+    },
+    {
+     "engine": "f5",
+     "ok": false,
+     "sim": 0.334,
+     "heard": "A blessing in the skies. And the dip didn't even pass mustard."
+    }
+   ]
+  }
+ ]
+}

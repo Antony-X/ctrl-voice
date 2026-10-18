@@ -1,0 +1,46 @@
+{
+  "page": "C:/Users/Antony/Desktop/ctrl+voice/src/overlay/overlay.html",
+  "width": 680,
+  "height": 240,
+  "transparent": true,
+  "backdrop": "wallpaper-dark",
+  "stub": "ctrlvoice-stub.js",
+  "colorScheme": "dark",
+  "scale": 2,
+  "shots": [
+    {
+      "wait": 800,
+      "out": "../out/overlay-dark-1-idle.png"
+    },
+    {
+      "wait": 0,
+      "js": "pill.classList.add('force-hover'); document.querySelector('.pill').style.cssText = 'width:214px;height:34px;opacity:1'; document.querySelector('.idle-line').style.opacity = 0; document.querySelector('.idle-hint').style.opacity = 1",
+      "settle": 500,
+      "out": "../out/overlay-dark-2-hover.png"
+    },
+    {
+      "wait": 0,
+      "js": "document.querySelector('.pill').style.cssText = ''; document.querySelector('.idle-line').style.opacity = ''; document.querySelector('.idle-hint').style.opacity = ''; \n  session = { elapsed: 7.4, levels: (n) => Array.from({ length: n }, (_, i) => {\n    const x = i / n; return x < .12 ? .05 : .1 + .85 * Math.abs(Math.sin(i * 1.7) * Math.sin(i * .37 + 1)); }) };\n  const text = \"Hey Maya, so about this weekend, I'll meet you on Monday, no wait, Wednesday at five\";\n  let t = 0; words = text.split(' ').map((w) => { const o = { w, s: t, e: t + .3 }; t += .35; return o; });\n  for (const k of [10, 11, 12]) words[k].x = true;\n  recentCut = { t0: words[10].s, t1: words[12].e };\n  setState('rec'); $('capTarget').textContent = 'To Discord'; $('capNote').textContent = noteText();\n  renderCaption(); setTimeout(drawWave, 600); $('time').textContent = '0:07';",
+      "settle": 900,
+      "out": "../out/overlay-dark-3-rec.png"
+    },
+    {
+      "wait": 0,
+      "js": "showRestore(true); $('capNote').textContent = 'Scratched that'",
+      "settle": 300,
+      "out": "../out/overlay-dark-4-restore.png"
+    },
+    {
+      "wait": 0,
+      "js": "showRestore(false); setState('proc'); $('procText').textContent = 'Cleaning up…'",
+      "settle": 700,
+      "out": "../out/overlay-dark-5-proc.png"
+    },
+    {
+      "wait": 0,
+      "js": "pill.classList.add('ok'); $('procText').textContent = 'Sent to Discord'",
+      "settle": 400,
+      "out": "../out/overlay-dark-6-sent.png"
+    }
+  ]
+}

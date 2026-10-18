@@ -1,0 +1,16 @@
+{
+  "page": "C:/Users/Antony/Desktop/ctrl+voice/src/overlay/overlay.html",
+  "width": 680, "height": 240,
+  "transparent": true,
+  "backdrop": "wallpaper-dark",
+  "keepRaw": true,
+  "stub": "ctrlvoice-stub.js",
+  "colorScheme": "dark",
+  "shots": [
+    {"wait": 800, "out": "../out/overlay-idle-dark.png"},
+    {"wait": 0, "backdrop": "wallpaper-light", "out": "../out/overlay-idle-light.png"},
+    {"wait": 0, "js": "document.querySelector('.pill')?.classList.replace('idle', 'proc')", "settle": 600, "out": "../out/overlay-proc-dark.png"},
+    {"wait": 0, "backdrop": "wallpaper-light", "out": "../out/overlay-proc-light.png"},
+    {"wait": 0, "js": "document.getElementById('idleHit')?.click()", "settle": 1500, "out": "../out/overlay-after-click.png"}
+  ]
+}

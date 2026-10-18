@@ -1,0 +1,324 @@
+{
+ "tag": "screenC_chris",
+ "input": "screen/TEST_SYNTH_screenC_chris.wav",
+ "timing": {
+  "upload": 1816,
+  "checks": 1758
+ },
+ "sid": "5b092814",
+ "words": [
+  {
+   "w": "Okay,",
+   "s": 0.08,
+   "e": 0.281,
+   "p": 0.92
+  },
+  {
+   "w": "for",
+   "s": 0.321,
+   "e": 0.421,
+   "p": 1
+  },
+  {
+   "w": "all",
+   "s": 0.461,
+   "e": 0.581,
+   "p": 1
+  },
+  {
+   "w": "intents",
+   "s": 0.602,
+   "e": 0.842,
+   "p": 0.96
+  },
+  {
+   "w": "and",
+   "s": 0.862,
+   "e": 0.962,
+   "p": 0.99
+  },
+  {
+   "w": "purposes,",
+   "s": 0.982,
+   "e": 1.363,
+   "p": 1
+  },
+  {
+   "w": "the",
+   "s": 1.383,
+   "e": 1.484,
+   "p": 1
+  },
+  {
+   "w": "party",
+   "s": 1.504,
+   "e": 1.764,
+   "p": 1
+  },
+  {
+   "w": "is",
+   "s": 1.805,
+   "e": 1.905,
+   "p": 1
+  },
+  {
+   "w": "off.",
+   "s": 1.965,
+   "e": 2.787,
+   "p": 1
+  },
+  {
+   "w": "It's",
+   "s": 2.827,
+   "e": 2.947,
+   "p": 1
+  },
+  {
+   "w": "a",
+   "s": 2.988,
+   "e": 3.188,
+   "p": 1
+  },
+  {
+   "w": "dog",
+   "s": 3.248,
+   "e": 3.449,
+   "p": 0.95
+  },
+  {
+   "w": "-y",
+   "s": 3.509,
+   "e": 3.569,
+   "p": 0.46
+  },
+  {
+   "w": "-dog",
+   "s": 3.589,
+   "e": 3.83,
+   "p": 0.91
+  },
+  {
+   "w": "world",
+   "s": 3.85,
+   "e": 4.05,
+   "p": 1
+  },
+  {
+   "w": "out",
+   "s": 4.09,
+   "e": 4.211,
+   "p": 1
+  },
+  {
+   "w": "there,",
+   "s": 4.231,
+   "e": 4.772,
+   "p": 1
+  },
+  {
+   "w": "so",
+   "s": 4.792,
+   "e": 5.133,
+   "p": 1
+  },
+  {
+   "w": "let's",
+   "s": 5.173,
+   "e": 5.414,
+   "p": 1
+  },
+  {
+   "w": "nip",
+   "s": 5.474,
+   "e": 5.594,
+   "p": 1
+  },
+  {
+   "w": "it",
+   "s": 5.634,
+   "e": 5.694,
+   "p": 1
+  },
+  {
+   "w": "in",
+   "s": 5.714,
+   "e": 5.775,
+   "p": 1
+  },
+  {
+   "w": "the",
+   "s": 5.795,
+   "e": 5.895,
+   "p": 1
+  },
+  {
+   "w": "butt",
+   "s": 5.935,
+   "e": 6.176,
+   "p": 1
+  },
+  {
+   "w": "before",
+   "s": 6.216,
+   "e": 6.436,
+   "p": 1
+  },
+  {
+   "w": "they",
+   "s": 6.476,
+   "e": 6.617,
+   "p": 1
+  },
+  {
+   "w": "make",
+   "s": 6.637,
+   "e": 6.857,
+   "p": 1
+  },
+  {
+   "w": "me",
+   "s": 6.897,
+   "e": 7.078,
+   "p": 1
+  },
+  {
+   "w": "the",
+   "s": 7.118,
+   "e": 7.218,
+   "p": 1
+  },
+  {
+   "w": "escape",
+   "s": 7.238,
+   "e": 7.619,
+   "p": 0.91
+  },
+  {
+   "w": "goat.",
+   "s": 7.639,
+   "e": 7.82,
+   "p": 0.98
+  }
+ ],
+ "dur": 7.92,
+ "transcript": "Okay, for all intents and purposes, the party is off. It's a dog -y -dog world out there, so let's nip it in the butt before they make me the escape goat.",
+ "clean": [
+  {
+   "i": 13,
+   "j": 13,
+   "kind": "filler",
+   "text": "-y",
+   "auto": false,
+   "t0": 3.479,
+   "t1": 3.579
+  }
+ ],
+ "grammar": [],
+ "intent": [
+  {
+   "i": 12,
+   "j": 14,
+   "old": "dog -y -dog",
+   "new": "doggy-dog",
+   "heard": "dɑːɡwaɪdɑːɡ",
+   "intended": "dɑːɡɪdɑːɡ",
+   "fit": 1.36,
+   "dist": 0.29,
+   "alts": [
+    "dog-eat-dog"
+   ]
+  },
+  {
+   "i": 24,
+   "j": 24,
+   "old": "butt",
+   "new": "bud",
+   "heard": "bʌt",
+   "intended": "bʌd",
+   "fit": -0.63,
+   "dist": 0.33,
+   "alts": []
+  }
+ ],
+ "pron": {
+  "items": [],
+  "median": 9.9,
+  "accent": []
+ },
+ "replaced": [
+  {
+   "kind": "misspoken",
+   "old": "dog -y -dog",
+   "new": "doggy-dog",
+   "verified": false,
+   "engine": "playdiff",
+   "after": null,
+   "ms": 8282,
+   "t0": 3.218,
+   "t1": 3.84,
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": false,
+     "sim": 0.338,
+     "heard": "Okay, for all intents and purposes, the party is off. It's a dog -e -dog world out there, so let's nip it in the butt before they make me the escape goat."
+    },
+    {
+     "engine": "f5",
+     "ok": false,
+     "sim": 0.293,
+     "heard": "Okay, for all intents and purposes, the party is off. It's a doggy -dog world out there, so let's nip it in the butt before they make me the escape goat."
+    },
+    {
+     "engine": "playdiff",
+     "ok": false,
+     "sim": 0.378,
+     "heard": "Okay, for all intents and purposes, the party is off. It's a doggy -dog world out there, so let's nip it in the butt before they make me the escape goat."
+    },
+    {
+     "engine": "f5",
+     "ok": false,
+     "sim": 0.254,
+     "heard": "Okay, for all intents and purposes, the party is off. It's a doggy -dog world out there, so let's nip it in the butt before they make me the escape goat."
+    },
+    {
+     "engine": "playdiff",
+     "ok": false,
+     "sim": 0.467,
+     "heard": "Okay, for all intents and purposes, the party is off. It's a dog -e -dog world out there, so let's nip it in the butt before they make me the escape goat."
+    },
+    {
+     "engine": "f5",
+     "ok": false,
+     "sim": 0.316,
+     "heard": "Okay, for all intents and purposes, the party is off. It's a doggy -dog world out there, so let's nip it in the butt before they make me the escape goat."
+    }
+   ]
+  },
+  {
+   "kind": "misspoken",
+   "old": "butt",
+   "new": "bud",
+   "verified": true,
+   "engine": "f5",
+   "after": null,
+   "ms": 2969,
+   "t0": 5.915,
+   "t1": 6.196,
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.332,
+     "heard": "It's a dog -y -dog world out there, so let's nip it in the bud before they make me the escape goat."
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.5,
+     "heard": "It's a dog -y -dog world out there, so let's nip it in the bud before they make me the escape goat."
+    }
+   ]
+  }
+ ]
+}

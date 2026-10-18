@@ -1,0 +1,49 @@
+{
+  "_note": "Deck settings that are not in the engine output. Edit, then rebuild (see SWAP.md).",
+  "placeholder_audio": true,
+  "placeholder_audio_note": "Interim voice note: synthetic (F5-TTS cloning a DisfluencySpeech voice, respeak docs/HANDOFF.md). Replace with your own recording before presenting.",
+  "contact": "Maya",
+  "incoming_message": "Are we still on for this weekend?",
+  "send_target": "Discord",
+  "clean_seconds": null,
+  "clean_seconds_source": "RESULTS.md's 0.7 s was the earlier engine on this message (4 cuts). The current engine run (5 cuts, sid in media/sample.json) took 1.2 s for /clean through the public proxy (build/engine_out). Set a number here only if you want it on screen.",
+  "replace": {
+    "phrase": [
+      1.94,
+      4.7
+    ],
+    "_note": "media/replace.json (engine /replace result) + media/replace.wav (engine render with the new word). 'phrase' = the stretch of replace.wav played in the editor clip, in seconds.",
+    "source": "real engine run on the current engine (F5-TTS take chosen, ASR-verified, 4.47 s); RESULTS.md: cafe -> park in 3.1-4.2 s on the earlier engine"
+  },
+  "event": "Lovable Hackathon",
+  "track": "Make It Better",
+  "tagline": "Say it messy. Send it clean.",
+  "team": [
+    {
+      "name": "Antony",
+      "role": "ML Engineer"
+    },
+    {
+      "name": "Nikoloz",
+      "role": "ML Engineer"
+    },
+    {
+      "name": "[Name]",
+      "role": "Data Analyst"
+    },
+    {
+      "name": "[Name]",
+      "role": "MLOps / API Engineer"
+    },
+    {
+      "name": "[Name]",
+      "role": "Software Engineer"
+    }
+  ],
+  "placeholders": {
+    "_note": "Slots waiting for validated files from the team. Leave null until the real files exist; the slide shows an amber PLACEHOLDER.",
+    "misspoken": null,
+    "your_sound_audio": null,
+    "accent": null
+  }
+}

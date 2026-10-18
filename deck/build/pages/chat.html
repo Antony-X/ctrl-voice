@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>chat backdrop</title>
+<style>
+  /* A generic chat window (no real brand) that the recording-bar clip sits on. */
+  :root { --stage: #171716; --desk: #0f0f0e; --win: #1c1c1b; --side: #161615; --line: #2a2926;
+          --ink: #f3f2ee; --ink2: #a8a49c; --ink3: #75716a; --bubble: #262624; --made: #4cc89b; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1920px; height: 1080px; background: var(--stage); overflow: hidden;
+               font-family: "Segoe UI Variable Text", "Segoe UI", sans-serif; color: var(--ink); }
+  .screen { position: absolute; inset: 24px; border-radius: 22px; overflow: hidden; background: var(--desk);
+            box-shadow: inset 0 0 0 1px var(--line); }
+  .win { position: absolute; inset: 0; display: grid; grid-template-columns: 300px 1fr; background: var(--win); }
+  .side { background: var(--side); border-right: 1px solid var(--line); padding: 28px 18px; }
+  .side .me { display: flex; align-items: center; gap: 12px; padding: 10px 12px; color: var(--ink2); font-size: 21px; }
+  .conv { display: flex; align-items: center; gap: 14px; padding: 12px; border-radius: 12px; margin-top: 6px; font-size: 23px; color: var(--ink2); }
+  .conv.on { background: #242422; color: var(--ink); }
+  .av { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; font-weight: 600; font-size: 22px; flex: none; }
+  .av.m { background: #3d5a4f; color: #d7efe6; }
+  .av.g1 { background: #4a4238; color: #eadfcd; }
+  .av.g2 { background: #3b4150; color: #d9dfee; }
+  .av.you { background: #4b3b3b; color: #f0dede; }
+  .main { position: relative; display: flex; flex-direction: column; }
+  .head { height: 92px; display: flex; align-items: center; gap: 14px; padding: 0 40px; border-bottom: 1px solid var(--line); font-size: 26px; font-weight: 600; }
+  .head .sub { font-weight: 400; color: var(--ink3); font-size: 19px; margin-left: 6px; }
+  .msgs { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; padding: 40px 40px 26px; gap: 28px; }
+  .day { align-self: center; color: var(--ink3); font-size: 19px; margin-bottom: 4px; }
+  .msg { display: flex; gap: 16px; align-items: flex-start; }
+  .msg .who { font-weight: 600; font-size: 23px; }
+  .msg .who time { font-weight: 400; color: var(--ink3); font-size: 18px; margin-left: 12px; }
+  .msg .text { margin-top: 4px; font-size: 28px; line-height: 1.45; color: #e4e2dc; }
+  .file { margin-top: 12px; width: 820px; padding: 20px 22px; border-radius: 14px; background: var(--bubble);
+          box-shadow: inset 0 0 0 1px var(--line); display: grid; grid-template-columns: 64px 1fr; gap: 8px 18px; align-items: center; }
+  .play { grid-row: span 2; width: 64px; height: 64px; border-radius: 50%; background: var(--ink); display: grid; place-items: center; }
+  .play::after { content: ""; margin-left: 5px; border-left: 19px solid #161615; border-top: 11px solid transparent; border-bottom: 11px solid transparent; }
+  .fname { font-size: 22px; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .fmeta { display: flex; align-items: center; gap: 16px; color: var(--ink3); font-size: 19px; }
+  .bars { display: flex; align-items: center; gap: 4px; height: 34px; flex: 1; }
+  .bars i { display: block; width: 3px; border-radius: 2px; background: #6f6b64; }
+  #sent { opacity: 0; transform: translateY(calc(16px * (1 - var(--p, 0)))); }
+  body.sent #sent { opacity: var(--p, 1); }
+  .composer { margin: 0 40px 34px; height: 70px; border-radius: 14px; background: #242422; display: flex; align-items: center;
+              padding: 0 24px; color: var(--ink3); font-size: 22px; box-shadow: inset 0 0 0 1px var(--line); }
+  .key { position: absolute; left: 1150px; top: 922px; display: flex; gap: 8px; align-items: center; opacity: var(--k, 0);
+         transform: translateY(calc(8px * (1 - var(--k, 0)))); }
+  .key kbd { font: 600 26px "Segoe UI Variable Text", "Segoe UI", sans-serif; color: #1a1a1a; background: #f3f2ee; padding: 10px 16px;
+             border-radius: 10px; box-shadow: inset 0 -4px 0 #c9c6be, 0 6px 18px rgba(0,0,0,.45); min-width: 52px; text-align: center; }
+  .key span { color: var(--ink3); font-size: 24px; }
+</style>
+</head>
+<body>
+  <div class="screen"><div class="win">
+    <aside class="side">
+      <div class="me"><div class="av you">Y</div>Direct messages</div>
+      <div class="conv on"><div class="av m" id="avM">M</div><span id="convName">Maya</span></div>
+      <div class="conv"><div class="av g1">J</div>Jake</div>
+      <div class="conv"><div class="av g2">S</div>Study group</div>
+    </aside>
+    <section class="main">
+      <div class="head"><div class="av m" id="avM2">M</div><span id="headName">Maya</span><span class="sub">online</span></div>
+      <div class="msgs">
+        <div class="day">Today</div>
+        <div class="msg"><div class="av m" id="avM3">M</div><div>
+          <div class="who"><span id="whoName">Maya</span><time>6:58 PM</time></div>
+          <div class="text" id="incoming">Are we still on for this weekend?</div></div></div>
+        <div class="msg" id="sent"><div class="av you">Y</div><div>
+          <div class="who">You<time>6:59 PM</time></div>
+          <div class="file"><div class="play"></div>
+            <div class="fname" id="fname">voice message.wav</div>
+            <div class="fmeta"><span id="fdur">0:08</span><div class="bars" id="bars"></div></div>
+          </div></div></div>
+      </div>
+      <div class="composer" id="composer">Message Maya</div>
+      <div class="key"><kbd>Alt</kbd><span>+</span><kbd>`</kbd></div>
+    </section>
+  </div></div>
+<script>
+  // setup({contact, incoming, file, dur, bars}) is called by the clip plan.
+  window.setup = function (o) {
+    const c = o.contact || 'Maya';
+    for (const id of ['convName', 'headName', 'whoName']) document.getElementById(id).textContent = c;
+    for (const id of ['avM', 'avM2', 'avM3']) document.getElementById(id).textContent = c[0].toUpperCase();
+    document.getElementById('composer').textContent = `Message ${c}`;
+    document.getElementById('incoming').textContent = o.incoming || '';
+    document.getElementById('fname').textContent = o.file || 'voice message.wav';
+    document.getElementById('fdur').textContent = o.dur || '0:00';
+    document.getElementById('bars').innerHTML = (o.bars || []).map(v => `<i style="height:${Math.max(3, Math.round(v * 34))}px"></i>`).join('');
+  };
+</script>
+</body>
+</html>

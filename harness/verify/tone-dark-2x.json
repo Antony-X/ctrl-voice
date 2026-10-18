@@ -1,0 +1,61 @@
+{
+  "page": "C:/Users/Antony/Desktop/ctrl+voice/src/app/index.html",
+  "width": 1180,
+  "height": 780,
+  "transparent": false,
+  "backgroundColor": "#1c1f24",
+  "stub": "hub-stub.js",
+  "colorScheme": "dark",
+  "scale": 2,
+  "timeout": 60000,
+  "shots": [
+    {
+      "wait": 1800,
+      "js": "HTMLMediaElement.prototype.play = function () { return Promise.resolve(); }; document.querySelector('[data-action=tone-panel]').click()",
+      "settle": 400,
+      "out": "../out/tone-dark-1-open@2x.png"
+    },
+    {
+      "wait": 0,
+      "js": "{ const r = document.querySelector('.tc-range[data-tone=confident]'); r.value = 67;\n  r.dispatchEvent(new Event('input', { bubbles: true })); r.dispatchEvent(new Event('change', { bubbles: true })); }",
+      "settle": 450,
+      "out": "../out/tone-dark-2-working@2x.png"
+    },
+    {
+      "wait": 0,
+      "js": "0",
+      "settle": 1100,
+      "out": "../out/tone-dark-3-confident@2x.png"
+    },
+    {
+      "wait": 0,
+      "js": "{ const r = document.querySelector('.tc-range[data-tone=calm]'); r.value = 30;\n  r.dispatchEvent(new Event('input', { bubbles: true })); } { const r = document.querySelector('.tc-range[data-tone=warm]'); r.value = 100;\n  r.dispatchEvent(new Event('input', { bubbles: true })); } { const r = document.querySelector('.tc-range[data-tone=confident]'); r.value = 100;\n  r.dispatchEvent(new Event('input', { bubbles: true })); }",
+      "settle": 600,
+      "out": "../out/tone-dark-4-mix-dragging@2x.png"
+    },
+    {
+      "wait": 0,
+      "js": "{ const r = document.querySelector('.tc-range[data-tone=warm]'); r.value = 100;\n  r.dispatchEvent(new Event('input', { bubbles: true })); r.dispatchEvent(new Event('change', { bubbles: true })); }",
+      "settle": 1600,
+      "out": "../out/tone-dark-5-mix-applied@2x.png"
+    },
+    {
+      "wait": 0,
+      "js": "document.querySelector('[data-action=tone-tab][data-tab=ai]').click()",
+      "settle": 400,
+      "out": "../out/tone-dark-6-ai@2x.png"
+    },
+    {
+      "wait": 0,
+      "js": "document.querySelector('[data-action=tone-ai][data-tone=excited]').click()",
+      "settle": 1500,
+      "out": "../out/tone-dark-7-ai-excited@2x.png"
+    },
+    {
+      "wait": 0,
+      "js": "closeTone()",
+      "settle": 300,
+      "out": "../out/tone-dark-8-closed@2x.png"
+    }
+  ]
+}
