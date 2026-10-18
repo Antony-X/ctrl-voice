@@ -292,7 +292,7 @@ function createMainWindow(show) {
     minHeight: 600,
     show: false,
     frame: false,
-    backgroundColor: nativeTheme.shouldUseDarkColors ? '#1c1f24' : '#e9edf1',
+    backgroundColor: nativeTheme.shouldUseDarkColors ? '#171716' : '#f3f2ee',
     icon: ICON,
     title: 'Ctrl+Voice',
     webPreferences: {

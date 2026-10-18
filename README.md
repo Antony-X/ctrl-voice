@@ -40,7 +40,7 @@ If the engine can't be reached while recording, the bar keeps recording locally 
 
 ## The editor
 
-- The transcript shows what changed: cut words are crossed out, words the engine made are purple, words that came out unclear are underlined in amber.
+- The transcript shows what changed: cut words are crossed out, words the engine made are green, words that came out unclear are underlined in amber.
 - Select words to **Replace** them (typed, then said in your voice), **Say clearly**, **Cut**, or change their **Tone**. Click a changed word to undo it or try again.
 - The summary line offers **Fix it**, **Shorten it** (suggested cuts you can take one by one) and **Check for misheard words**.
 - The player bar: play with waveform, **Original / Fixed**, **Tone** for the whole message, and **Send** with a menu for other apps or copying the audio.

@@ -16,6 +16,7 @@ const ICON = {
   trash: '<path d="M4 7h16M9.5 7V4.5h5V7M6.5 7l1 13h9l1-13"/>',
   chevron: '<path d="m6 9 6 6 6-6"/>',
   check: '<path d="M20 6 9 17l-5-5"/>',
+  x: '<path d="M18 6 6 18M6 6l12 12"/>',
 };
 const svg = (name) => `<svg viewBox="0 0 24 24">${ICON[name]}</svg>`;
 const esc = (s = '') => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -141,10 +142,21 @@ function render() {
   renderEmpty();
 }
 
+// A still of the recording bar on the empty page, so you know what to look for.
+const STILL_BARS = [5, 9, 15, 8, 19, 12, 6, 14, 21, 10, 5, 13, 17, 8, 11, 5];
+function stillHtml() {
+  const bars = STILL_BARS.map(h => `<i style="height:${h}px"></i>`).join('');
+  return `<div class="still" aria-hidden="true">
+    <div class="still-say">I'll meet you on <s>Monday, no wait,</s> Wednesday</div>
+    <div class="still-pill"><span class="x">${svg('x')}</span><span class="still-wave">${bars}</span><span class="ok">${svg('check')}</span></div>
+  </div>`;
+}
+
 function renderEmpty() {
   stopAudio();
   mainEl.innerHTML = `
     <div class="empty"><div class="empty-inner">
+      ${stillHtml()}
       <h1>Press ${keycaps(S.settings.shortcuts.toggle)} in any chat to record</h1>
       <p>Talk like you normally would. Ctrl+Voice cuts the ums and false starts, re-says words that came out unclear, and sends the message in your own voice.</p>
       <p>Say “scratch that” to drop the last thing you said.</p>
@@ -319,7 +331,7 @@ function summaryHtml() {
   const suggestions = S.ops.filter(o => !o.on && o.auto === false && Edits.isCut(o)).length;
   const can = canEdit() ? '' : 'disabled';
   const actions = [];
-  if (!S.meta.fixed) actions.push(`<button class="text-btn" data-action="fix" ${can}>Fix it</button>`);
+  if (!S.meta.fixed) actions.push(`<button class="text-btn primary" data-action="fix" ${can}>Fix it</button>`);
   if (suggestions) actions.push(`<button class="text-btn" data-action="take-suggestions" ${can}>Cut ${plural(suggestions, 'suggestion')}</button>`);
   else actions.push(`<button class="text-btn" data-action="shorten" ${can}>Shorten it</button>`);
   actions.push(`<button class="text-btn" data-action="misheard" ${can}>Check for misheard words</button>`);
@@ -835,16 +847,16 @@ function drawWave() {
   const dur = a?.dur || 1;
   const progress = player.src && a && player.src === a.url ? player.currentTime / dur : 0;
   const ai = S.view !== 'output' ? [] : S.meta.take?.engine === 'tone' ? [[0, dur]] : S.meta.take ? [] : S.meta.output?.ai || [];
-  const ink = cssVar('--ink'), soft = cssVar('--ink-3'), iris = cssVar('--iris');
+  const ink = cssVar('--ink'), soft = cssVar('--ink-3'), made = cssVar('--made');
   const stale = S.view === 'output' && (S.dirty || S.rendering);
   for (let b = 0; b < n; b++) {
     const v = a?.peaks ? a.peaks[Math.floor((b / n) * a.peaks.length)] : 0.08;
     const bh = Math.max(2, v * h);
     const t = ((b + 0.5) / n) * dur;
-    const made = ai.some(([s, e]) => s <= t && t <= e);
+    const isMade = ai.some(([s, e]) => s <= t && t <= e);
     const played = b / n < progress;
-    g.fillStyle = made ? iris : played ? ink : soft;
-    g.globalAlpha = stale ? 0.3 : made ? (played ? 1 : 0.6) : played ? 1 : 0.55;
+    g.fillStyle = isMade ? made : played ? ink : soft;
+    g.globalAlpha = stale ? 0.3 : isMade ? (played ? 1 : 0.6) : played ? 1 : 0.55;
     g.beginPath();
     g.roundRect(b * (bw + gap), (h - bh) / 2, bw, bh, 1);
     g.fill();
