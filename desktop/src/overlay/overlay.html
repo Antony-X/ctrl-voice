@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; media-src 'self' blob:; connect-src 'self' https: wss: http: ws:;" />
+  <title>Ctrl+Voice Bar</title>
+  <link rel="stylesheet" href="overlay.css" />
+</head>
+<body>
+  <div class="stack">
+    <div class="caption interactive" id="caption" hidden>
+      <div class="cap-head">
+        <span class="cap-target" id="capTarget"></span>
+        <span class="cap-note" id="capNote"></span>
+      </div>
+      <p class="cap-text" id="capText"></p>
+    </div>
+
+    <div class="pill interactive idle" id="pill">
+      <!-- idle -->
+      <button class="idle-hit" id="idleHit" title="Record a voice message">
+        <span class="idle-line"></span>
+        <span class="idle-hint"><span class="mic"></span>Press <kbd id="hintToggle">Alt `</kbd> to record</span>
+      </button>
+
+      <!-- recording -->
+      <div class="rec-row">
+        <button class="pill-btn cancel" id="cancelBtn" title="Discard (Esc)">
+          <svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <span class="rec-dot"></span>
+        <span class="rec-time" id="time">0:00</span>
+        <canvas class="wave" id="wave"></canvas>
+        <button class="pill-btn undo" id="undoBtn">
+          <svg viewBox="0 0 24 24"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg>
+          <span id="undoLabel">Undo</span>
+        </button>
+        <button class="pill-btn icon" id="reviewBtn" title="Finish and review">
+          <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h12M3 18h7"/><path d="m16 17 2 2 4-4"/></svg>
+        </button>
+        <button class="pill-btn done" id="doneBtn" title="Finish and send">
+          <svg viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></svg>
+        </button>
+      </div>
+
+      <!-- working / result -->
+      <div class="proc-row">
+        <span class="proc-icon" id="procIcon"></span>
+        <span class="proc-text" id="procText">Cleaning up…</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="session.js"></script>
+  <script src="overlay.js"></script>
+</body>
+</html>
