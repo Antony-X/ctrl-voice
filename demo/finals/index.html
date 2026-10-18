@@ -5,329 +5,333 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ctrl+Voice Finals</title>
 <link rel="stylesheet" href="assets/deck.css">
+<link rel="stylesheet" href="assets/chat.css">
 </head>
 <body>
-<template id="mark"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="3.5" y="3.5" width="93" height="93" rx="20" fill="none" stroke="#fff" stroke-width="7"/><g stroke="#fff" stroke-width="6" stroke-linecap="round"><line x1="22.6" y1="40.5" x2="22.6" y2="59.5"/><line x1="36.1" y1="30" x2="36.1" y2="70"/><line x1="50" y1="18.5" x2="50" y2="81.5"/><line x1="63.9" y1="31" x2="63.9" y2="69"/><line x1="77.4" y1="41" x2="77.4" y2="59"/></g></svg></template>
+<template id="mark"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="3.5" y="3.5" width="93" height="93" rx="20" fill="none" stroke="currentColor" stroke-width="7"/><g stroke="currentColor" stroke-width="6" stroke-linecap="round"><line x1="22.6" y1="40.5" x2="22.6" y2="59.5"/><line x1="36.1" y1="30" x2="36.1" y2="70"/><line x1="50" y1="18.5" x2="50" y2="81.5"/><line x1="63.9" y1="31" x2="63.9" y2="69"/><line x1="77.4" y1="41" x2="77.4" y2="59"/></g></svg></template>
 <div id="stage">
 
-  <!-- 1 ─────────────────────────────────────────── title -->
-  <section class="slide s-title" data-id="title" data-title="Title" data-time="0:00">
-    <div class="logo"><span class="mk"></span>Ctrl+Voice</div>
-    <div class="tag">Say it messy. Send it clean.</div>
+  <!-- ─────────────────────────────────────────────── title -->
+  <section class="slide s-title" data-id="title" data-title="Title" data-time="before 0:00">
+    <div class="t-mark" id="title-mark"></div>
+    <h1 class="t-name">Ctrl+Voice</h1>
+    <p class="t-tag">Say it messy. Send it clean.</p>
     <aside class="notes">
-      <p>Wait for quiet. Then press → straight away: the next slide plays a voice message by itself.</p>
+      <p class="sec">title (0:00-მდე)</p>
+      <p><em>ლოგო ჩანს, სანამ ხალხი სხდება. ხმის შემოწმება (A) აქამდე უკვე გაკეთებული უნდა იყოს. დარბაზი რომ გაჩუმდება, თქვი ჰუკი და დააჭირე →.</em></p>
+      <p><b>0:00, ჰუკი</b></p>
+      <p>„ხმოვანი მესიჯი ჩაგიწერიათ… მოგისმენიათ… და მერე წაგიშლიათ?“ <em>(პაუზა)</em> „ყველას გვიქნია.“ <b>→</b></p>
+      <p><span class="en">Ever recorded a voice message, listened back, and deleted it? We all have.</span></p>
+      <p><em>სხვა ვარიანტი, დარბაზთან ერთად (≈4 წმ; ამ შემთხვევაში 0:18-ის ფრაზა გამოტოვე):</em></p>
+      <p>„ხელი ასწიეთ, ვისაც ხმოვანი მესიჯი თავიდან ჩაუწერია.“ <em>(პაუზა)</em> „დატოვეთ, თუ სამჯერ მოგიწიათ.“</p>
+      <p><span class="en">Hands up if you've ever re-recorded a voice message. Keep it up if it took three tries.</span></p>
     </aside>
   </section>
 
-  <!-- 2 ─────────────────────────────────────────── hook -->
-  <section class="slide s-hook" data-id="hook" data-title="Is this ever you?" data-time="0:00–0:30">
-    <h1 class="title one">Is this ever you?</h1>
-    <div class="chat">
-      <div class="who"><div class="avatar">S</div>You <span class="time">to Sam, 6:58 PM</span></div>
-      <div class="vnote" id="hook-vnote"></div>
-      <div class="karaoke" id="hook-words"></div>
-    </div>
-    <div class="side">
-      <p data-step="1">You record a voice message. An <b>um</b>. A <b>“Monday? No, wait, Wednesday”</b>. A sentence you <b>regret</b>. A word that comes out <b>wrong</b>.</p>
-      <p data-step="2">Then you either <b>send it messy</b>, or delete it and <b>record it again</b>. And again.</p>
-    </div>
+  <!-- ─────────────────────────────────────────────── chat: two voice notes, fixed -->
+  <section class="slide s-chat" data-id="chat" data-title="Two voice notes" data-steps="4" data-time="0:00–0:50">
+    <div id="chat-root"></div>
     <aside class="notes">
-      <p><em>On entering, the message plays by itself (20 s). Stay quiet and let the room hear it. Each mistake turns red as it’s said.</em></p>
-      <p><em>Click</em> after it ends: “Is this ever you? You record a voice message. An um. A ‘Monday, no wait, Wednesday’. A sentence you regret. A word that comes out wrong.”</p>
-      <p><em>Click:</em> “Then you either send it messy, or delete it and record it again. And again.”</p>
-    </aside>
-  </section>
-
-  <!-- 3 ─────────────────────────────────────────── stats -->
-  <section class="slide s-stats" data-id="stats" data-title="It's everywhere" data-time="0:30–0:50">
-    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
-    <div class="stats">
-      <div class="stat" data-step="0">
-        <div class="big">7 billion</div>
-        <div class="cap">voice messages are sent <b>every day</b>, on WhatsApp alone</div>
-        <div class="who">WhatsApp, 2022</div>
+      <p class="sec">chat (0:00–0:50; აუდიო თავისით უკრავს, ფრაზები მოკლეა)</p>
+      <div class="st" data-k="0">
+      <p><b>step 0, 0:03 →</b>: სარას მესიჯი თავისით ჟღერს (14 წმ). <em>ჩუმად იყავი.</em></p>
+      <p><span class="en">Sarah's note plays by itself. Stay silent.</span></p>
+      <p><b>0:18</b>, კლიპის მერე:</p>
+      <p>„ჩვეულებრივ, ამას წაშლიდა. ნახეთ.“</p>
+      <p><span class="en">Normally she'd delete that. Watch.</span></p>
       </div>
-      <div class="stat" data-step="1">
-        <div class="dotgrid" id="dotgrid"></div>
-        <div class="cap"><b>≈6 of every 100 words</b> we say are disfluencies: ums, repeats, restarts</div>
-        <div class="who">Lickley, 2017</div>
+      <div class="st" data-k="1">
+      <p><b>step 1, 0:20 →</b>: გადახვევა, წითელი ნაწილები ქრება, გასწორებული მესიჯი ჟღერს (9 წმ). <em>ჩუმად.</em></p>
+      <p><span class="en">Rewind; the red parts collapse; the fixed note plays.</span></p>
+      <p><b>0:31</b>, კლიპის მერე:</p>
+      <p>„ხუთი წამით მოკლეა. აქ ორი სიტყვა AI-მ თქვა. რომელი ორი?“ <em>(1–2 წამი პასუხისთვის)</em></p>
+      <p><span class="en">Five seconds shorter. Two of these words are AI. Which two?</span></p>
       </div>
-      <div class="stat" data-step="2">
-        <div class="big">44%</div>
-        <div class="cap">of people play voice notes at <b>double speed</b> to get through them</div>
-        <div class="who">Sky Mobile survey, 2,000 UK adults, 2025</div>
+      <div class="st" data-k="2">
+      <p><b>step 2, 0:36 →</b>: მწვანდება.</p>
+      <p>„„Dan has“ და „a bit“. სულ ერთი წამია AI, თანაც მისივე ხმით.“</p>
+      <p><span class="en">'Dan has' and 'a bit'. One second of AI, in her own voice.</span></p>
       </div>
-    </div>
-    <div class="punch" data-step="3">Text has spellcheck, autocorrect and Grammarly.<br>Voice messages can’t even be edited.</div>
-    <div class="src"><a href="https://blog.whatsapp.com/making-voice-messages-better">blog.whatsapp.com/making-voice-messages-better</a><br>
-      <a href="https://www.skygroup.sky/article/voice-no-brits-call-time-on-long-voice-notes">skygroup.sky/article/voice-no-brits-call-time-on-long-voice-notes</a></div>
-    <aside class="notes">
-      <p>“And it isn’t rare. WhatsApp alone carries seven billion voice messages a day.”</p>
-      <p><em>Click:</em> “In normal speech, about six of every hundred words are disfluencies: ums, repeats, restarts. So a 30-second message has a few.”</p>
-      <p><em>Click:</em> “Listeners feel it: 44% of people in a UK survey play voice notes at double speed.”</p>
-      <p><em>Click:</em> “Text has spellcheck, autocorrect and Grammarly. Voice messages can’t even be edited.”</p>
-      <p><em>If asked:</em> about 6 per 100 words is the usual figure for adult conversation (Lickley 2017); it varies a lot between people and situations. The 44% is from a survey Sky Mobile ran of 2,000 UK mobile users (May 2025).</p>
-    </aside>
-  </section>
-
-  <!-- 4 ─────────────────────────────────────────── product -->
-  <section class="slide s-product" data-id="product" data-title="Ctrl+Voice" data-time="0:50–1:10">
-    <div class="logo"><span class="mk"></span>Ctrl+Voice</div>
-    <h2>Grammarly for your voice.</h2>
-    <div class="lead">It cuts the ums and false starts, deletes what you take back, and re-says the words you got wrong, <b>in your own voice</b>, before you hit send.</div>
-    <div class="after" data-step="1">
-      <div class="vnote" id="prod-vnote"></div>
-      <div class="karaoke" id="prod-words"></div>
-      <div class="facts"><span><b>20.6 s → 10.2 s</b></span><span><b>5 fixes</b> in one pass</span><span>re-transcribed: <b>word-perfect</b></span></div>
-    </div>
-    <aside class="notes">
-      <p>“So we built Ctrl+Voice: Grammarly for your voice. It cuts the ums and false starts, deletes what you take back, and re-says the words you got wrong, in your own voice, before you send.”</p>
-      <p><em>Click:</em> the same message, fixed, plays by itself (10 s).</p>
-      <p>“Same message. The um, the false start and the sentence they took back are cut. ‘Pacific’ and ‘mute’ are re-said as ‘specific’ and ‘moot’ in the same voice: those are the two green words. Twenty seconds became ten.”</p>
-      <p><em>Honest framing: the example voice is an ElevenLabs voice reading our script (credited on the last slide). Don’t call it someone’s real recording. The fixed version is real engine output.</em></p>
-    </aside>
-  </section>
-
-  <!-- 5 ─────────────────────────────────────────── why hard -->
-  <section class="slide s-hard" data-id="hard" data-title="Why this is hard" data-time="1:10–1:35">
-    <h1 class="title one">Why this is hard</h1>
-    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
-    <div class="hard">
-      <svg class="fig" id="hard-svg" width="1760" height="720" viewBox="0 0 1760 720" style="left:0;top:0"></svg>
-      <div class="card" data-step="0" style="left:0;top:0;width:560px">
-        <div class="num">Hidden</div>
-        <h3>Recognizers hide mistakes</h3>
-        <p>Whisper is trained to write clean text: it drops ums and guesses words from context.</p>
-        <div class="ex">said: “Nikoloz, um, big news”<br>Whisper: “Nikoloz, big news”</div>
+      <div class="st" data-k="3">
+      <p><b>step 3, 0:39 →</b>: ერიკის მესიჯი (5 წმ), ბოლო მაღლა მიდის. <em>ჩუმად.</em></p>
+      <p><span class="en">Eric's note; the ending rises.</span></p>
       </div>
-      <div class="card" data-step="1" style="left:600px;top:0;width:560px">
-        <div class="num">0.1–0.4 s</div>
-        <h3>Timestamps drift</h3>
-        <p>Whisper’s word times are off by this much. Cut on them and you slice words in half.</p>
+      <div class="st" data-k="4">
+      <p><b>step 4, 0:45 →</b>, სლაიდერის აწევისას, აუდიომდე:</p>
+      <p>„Confident.“</p>
+      <p><span class="en">Confident.</span></p>
+      <p><b>0:50 →</b></p>
+      <p><em>თუ აგვიანებ: 0:18-ის ფრაზა გამოტოვე. „რომელი ორი?“ არასდროს გამოტოვო.</em></p>
+      <p><span class="en">If late, drop the 0:18 line. Never drop the "which two?" question.</span></p>
       </div>
-      <div class="card" data-step="2" style="left:1200px;top:0;width:560px">
-        <div class="num">2 of 10</div>
-        <h3>LLMs change the meaning</h3>
-        <p>trick sentences where a cleanup LLM deleted words that carried meaning (our first, Qwen3-8B version).</p>
+    </aside>
+  </section>
+
+  <!-- ─────────────────────────────────────────────── stat -->
+  <section class="slide s-stat" data-id="stat" data-title="7 billion" data-steps="1" data-time="0:50–1:00">
+    <div class="st-num"><span id="st-count">0</span></div>
+    <div class="st-cap">voice messages a day</div>
+    <div class="st-src">WhatsApp, 2022</div>
+    <div class="st-pair" data-step="1">
+      <div class="st-col"><div class="st-bubble txt">see you at <span class="st-old">6</span><span class="st-new">7</span><span class="st-edited">edited</span></div><svg class="st-mark ok" id="st-ok" viewBox="0 0 120 120"></svg></div>
+      <div class="st-col"><div class="st-bubble vn" id="st-vn"></div><svg class="st-mark no" id="st-no" viewBox="0 0 120 120"></svg></div>
+    </div>
+    <aside class="notes">
+      <p class="sec">stat (0:50–1:00)</p>
+      <div class="st" data-k="0">
+      <p><b>step 0, 0:50</b>, რიცხვი იზრდება:</p>
+      <p>„შვიდი მილიარდი ხმოვანი მესიჯი. ყოველდღე. მარტო WhatsApp-ზე.“</p>
+      <p><span class="en">Seven billion voice messages. Every day. On WhatsApp alone.</span></p>
       </div>
-      <div class="card" data-step="3" style="left:0;top:390px;width:860px">
-        <div class="num">7–9 of 10</div>
-        <h3>Voice models say the wrong word</h3>
-        <p>words the fast voice editors got right on real recordings. And regenerating the whole clip drops voice similarity from 0.98 to 0.73.</p>
+      <div class="st" data-k="1">
+      <p><b>step 1, 0:55 →</b></p>
+      <p>„ტექსტის შესწორება შეგიძლია.“ <em>(პაუზა)</em> „ხმის — ვერა.“ <em>(პაუზა)</em> „აქამდე.“</p>
+      <p><span class="en">You can edit a text. Not your voice. Until now.</span></p>
+      <p><b>1:00 →</b></p>
       </div>
-      <div class="card" data-step="4" style="left:900px;top:390px;width:860px">
-        <div class="num">&lt; 0.4 s</div>
-        <h3>And it has to be live</h3>
-        <p>“Scratch that” has to strike out the last thought while you’re still talking.</p>
+    </aside>
+  </section>
+
+  <!-- ─────────────────────────────────────────────── architecture map -->
+  <section class="slide s-arch" data-id="arch" data-title="Architecture map" data-steps="10" data-time="1:00–2:10">
+    <div id="arch-host"></div>
+    <div class="ar-stage" id="ar-stage"></div>
+    <aside class="notes">
+      <p class="sec">arch (1:00–2:10; კამერა რომ დაჯდება, მაშინ დაიწყე ლაპარაკი, კლიკიდან ≈1 წამში)</p>
+      <div class="st" data-k="0">
+      <p><b>step 0, 1:00</b>, რუკა თავისით იხატება:</p>
+      <p>„აი, რა დგას ამის უკან: ცხრა მოდელი, ერთად.“</p>
+      <p><span class="en">Here's what runs behind that: nine models, working together.</span></p>
       </div>
-    </div>
-    <aside class="notes">
-      <p>“Why doesn’t this exist already? Because every piece fights you.”</p>
-      <p>“Speech recognizers are trained to write clean text, so they hide exactly the mistakes we need to find.”</p>
-      <p><em>Click:</em> “Their word timestamps drift by up to 0.4 seconds, so if you cut there you slice words in half.”</p>
-      <p><em>Click:</em> “Ask an LLM to clean up a transcript and it happily deletes a ‘not’. Our first version did that on 2 of 10 trick sentences.”</p>
-      <p><em>Click:</em> “Voice models say the wrong word, and regenerating a whole sentence makes it sound like someone else.”</p>
-      <p><em>Click:</em> “And undo has to work while you’re still talking.”</p>
-      <p><em>Numbers: RESULTS.md round 1 (Qwen3-8B 2/10 wrong deletions; F5 7/10, PlayDiffusion 9/10; PlayDiffusion raw 0.733 vs spliced 0.976 voice similarity; live undo 351 ms).</em></p>
-    </aside>
-  </section>
-
-  <!-- 6 ─────────────────────────────────────────── architecture overview -->
-  <section class="slide s-arch" data-id="arch" data-title="Architecture" data-time="1:35–1:55">
-    <h1 class="title">Architecture<br>The whole pipeline</h1>
-    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
-    <svg class="fig" id="arch-svg" width="1760" height="760" viewBox="0 0 1760 760" style="left:80px;top:290px"></svg>
-    <aside class="notes">
-      <p><em>The diagram draws itself.</em></p>
-      <p>“Here’s the whole system. The app on your laptop streams the microphone over a WebSocket. Every 0.7 seconds Whisper re-transcribes, and a second model re-times every word.</p>
-      <p>An LLM decides what to change, but it never touches audio: it only picks words, and hard-coded validators check every choice. Then there are three paths: cut, re-say a word in your voice, or restyle. Everything lands in an edit list. Your original recording is never modified, and the renderer builds the message only when you play or send it.”</p>
-    </aside>
-  </section>
-
-  <!-- 7 ─────────────────────────────────────────── step 1 -->
-  <section class="slide s-step1" data-id="step1" data-title="Step 1: hear every word" data-time="1:55–2:20">
-    <h1 class="title">Architecture<br>Step 1: hear every word</h1>
-    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
-    <svg class="fig" id="step1-svg" width="1120" height="640" viewBox="0 0 1120 640" style="left:80px;top:330px"></svg>
-    <div class="side-copy copy" style="top:330px;width:600px;font-size:27px">
-      <p>Every <b>0.7 s</b>, <b>Whisper large-v3-turbo</b> re-transcribes everything said so far. A filler-heavy prompt makes it write the ums it hears.</p>
-      <p data-step="1">Its word times drift, so a <b>wav2vec2 character CTC model</b> re-times every word: <span class="hl">Viterbi forced alignment</span> on its CTC trellis.</p>
-      <div data-step="2">
-        <p style="margin-bottom:10px">That model has <b>no language model</b>, so it spells what you <i>really</i> said. An extra filler-shaped word that the alignment can’t explain is an um Whisper dropped, and we put it back.</p>
-        <div class="mini"><span class="k">Whisper</span>“Nikoloz, big news”<br><span class="k">CTC</span><code>NICLOS ON BIG NEWS</code><br><span class="k">Ours</span>“Nikoloz, <span class="red">um</span>, big news”</div>
+      <div class="st" data-k="1">
+      <p><b>step 1, 1:05 →, Hear (Whisper)</b></p>
+      <p>„Whisper გისმენს, სანამ ლაპარაკობ, და ყოველ 0.7 წამში ყველაფერს თავიდან ისმენს. პრომპტს „um“-ებით ვავსებთ, ამიტომ შენს „um“-ებს არ მალავს.“</p>
+      <p><span class="en">Whisper listens while you talk and re-hears everything every 0.7 s. We fill its prompt with ums, so it doesn't hide yours.</span></p>
       </div>
-    </div>
-    <aside class="notes">
-      <p>“Step one: hear every word, exactly where it is. While you talk, we stream 24 kHz audio in 100 ms chunks, and every 0.7 seconds Whisper large-v3-turbo re-transcribes everything so far. We prompt it with filler-heavy text, so it writes the ums it hears.”</p>
-      <p><em>Click:</em> “But look at the grey boxes: Whisper’s word times. They’re early by a tenth to four tenths of a second. ‘About’ is 0.4 seconds off. So a second model, a wav2vec2 character CTC model, re-times every word with Viterbi forced alignment. Those are the white boxes, and they sit on the actual sound.”</p>
-      <p><em>Click:</em> “That model has no language model: it spells literally what it hears. So when Whisper smooths away an um, the character model still spells it, here as ‘ON’. An edit-distance alignment finds words it can only explain as extras, and if they’re spelled like a filler, we put the um back.”</p>
-      <p><em>Detail if asked:</em> the DP charges 0.6 to insert a filler-spelled token vs 1.0 for any other word, and 2·(1 − similarity) to substitute; split-word pieces (“AM”+“AZON”) are glued back first. The figure is this exact clip: Whisper and alignment times from the engine’s code, run on CPU.</p>
-    </aside>
-  </section>
-
-  <!-- 8 ─────────────────────────────────────────── step 2 -->
-  <section class="slide s-step2" data-id="step2" data-title="Step 2: decide what to cut" data-time="2:20–2:45">
-    <h1 class="title">Architecture<br>Step 2: decide what to cut</h1>
-    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
-    <div class="fig" id="step2-sent" style="left:80px;top:360px;width:1150px;font:500 58px/1 var(--sans);display:flex;gap:30px;justify-content:center">
-      <span>Is it</span><span id="rp">Monday?</span><span id="ip">No, wait,</span><span id="rr">Wednesday?</span>
-    </div>
-    <svg class="fig" id="step2-svg" width="1150" height="700" viewBox="0 0 1150 700" style="left:80px;top:300px"></svg>
-    <div class="side-copy" style="top:330px;width:560px">
-      <svg id="step2-chart" width="560" height="420" viewBox="0 0 560 420" style="overflow:visible"></svg>
-      <div class="copy" style="font-size:25px;margin-top:6px" data-step="2">
-        <p>Meaning-changing edits on 10 trick sentences: <b>2 → 0 → 0</b>.</p>
-        <p><b>Live undo</b>: the LLM picks where the last thought began from ≤ 5 candidates (sentence ends, pauses ≥ 0.45 s, “and / but / so…”): <b class="hl">351 ms</b>.</p>
+      <div class="st" data-k="2">
+      <p><b>step 2, 1:12 →, Align (wav2vec2, CTC)</b></p>
+      <p>„მაგრამ Whisper-ის დროები 0.4 წამამდე ცდება. ამიტომ wav2vec2 ასო-ასო წერს, რასაც ისმენს, ენის მოდელის გარეშე, და CTC-ით ყველა სიტყვას თავის ზუსტ ადგილზე სვამს.“</p>
+      <p><span class="en">But Whisper's timings drift up to 0.4 s. So wav2vec2 spells letter by letter what it hears, with no language model, and CTC pins every word where it really is.</span></p>
       </div>
-    </div>
-    <aside class="notes">
-      <p>“Step two: decide what to cut. Linguists describe a self-correction in three parts: the reparandum, the words you take back; an interregnum like ‘no, wait’; and the repair. This is Shriberg’s model, from her 1994 thesis.”</p>
-      <p><em>Click:</em> “We don’t let the LLM output indices: it copies the transcript and tags what to cut, which is far more reliable. Code maps the tags back to words. Then deterministic validators: deletions only; a negation, number, date or time can only go if a repair of the same type replaces it; and each span is reshaped into Shriberg form. Anything uncertain becomes a suggestion, not a cut.”</p>
-      <p><em>Click:</em> “That took us from 9 to 24 exact clean-ups out of 28, with zero meaning-changing edits on the trick sentences. And live undo, choosing where your last thought began, takes 351 milliseconds.”</p>
-    </aside>
-  </section>
-
-  <!-- 9 ─────────────────────────────────────────── step 3 -->
-  <section class="slide s-step3" data-id="step3" data-title="Step 3: re-say it in your voice" data-time="2:45–3:10">
-    <h1 class="title">Architecture<br>Step 3: re-say it in your voice</h1>
-    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
-    <svg class="fig" id="step3-svg" width="1250" height="740" viewBox="0 0 1250 740" style="left:60px;top:300px"></svg>
-    <div class="side-copy copy" style="top:330px;width:470px;font-size:26px" data-step="1">
-      <p>Two checks, because each one can be fooled:</p>
-      <p><b>1.</b> Whisper re-transcribes the spliced window and must hear the new words.</p>
-      <p><b>2.</b> Whisper guesses from context. The CTC model can’t, and it must prefer the new words:</p>
-      <p class="formula">log P(new | audio) − log P(old | audio) &gt; 0</p>
-      <p>For “specific” the margin was <b class="hl">+29.4</b>.</p>
-    </div>
-    <aside class="notes">
-      <p>“Step three: re-say a word in your voice, only the word. If you meant ‘specific’ and said ‘pacific’, we re-say it with the word before it, ‘more specific’, because alone the new word kept the old onset.”</p>
-      <p>“We cut a window of up to four seconds at word gaps, and set the target length from your own speaking rate. Two voice-editing models, PlayDiffusion and F5-TTS, fill in the gap in parallel. We force-align their output, keep only the new words, cut at the quietest 10 milliseconds, match the loudness, and splice with an equal-power crossfade.”</p>
-      <p><em>Click:</em> “Then we verify, twice. Whisper must hear the new words. But Whisper guesses from context, so the character model, which can’t, must score the new words above the old ones. If both pass we keep the candidate whose voice is closest to yours, measured with an ECAPA speaker embedding. If not, new seed, up to three rounds. Nothing unverified is sent.”</p>
-      <p><em>Detail:</em> if no candidate passes after 3 rounds, the engine returns the best one with <code>verified: false</code>; the app only auto-applies verified replacements.</p>
-    </aside>
-  </section>
-
-  <!-- 10 ────────────────────────────────────────── close-up -->
-  <section class="slide s-closeup" data-id="closeup" data-title="One word, close up" data-time="3:10–3:25">
-    <h1 class="title one">One word, close up</h1>
-    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
-    <div class="closeup">
-      <div class="wrow"><div class="lbl">Before <span>what was said</span></div><svg id="cu-before" width="1180" height="190" viewBox="0 0 1180 190"></svg></div>
-      <div class="wrow" data-step="1"><div class="lbl">After <span>green: the only regenerated audio</span></div><svg id="cu-after" width="1180" height="190" viewBox="0 0 1180 190"></svg></div>
-    </div>
-    <div class="cards3" data-step="1">
-      <div class="kpi"><div class="v green">0.8 s</div><div class="d">regenerated. Everything else is the original recording.</div></div>
-      <div class="kpi"><div class="v hl">+29.4</div><div class="d">CTC margin, new word over old</div></div>
-      <div class="kpi"><div class="v">F5-TTS</div><div class="d">won this one; PlayDiffusion ran in parallel</div></div>
-    </div>
-    <aside class="notes">
-      <p><em>Before plays by itself:</em> “Here’s the original…”</p>
-      <p><em>Click, after plays:</em> “…and the fix. Only the green 0.8 seconds were generated. Everything around it is the original recording.”</p>
-    </aside>
-  </section>
-
-  <!-- 11 ────────────────────────────────────────── step 4 -->
-  <section class="slide s-step4" data-id="step4" data-title="Step 4: catch mispronunciations" data-time="3:25–3:45">
-    <h1 class="title">Architecture<br>Step 4: catch mispronunciations</h1>
-    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
-    <svg class="fig" id="step4-svg" width="1160" height="700" viewBox="0 0 1160 700" style="left:80px;top:310px"></svg>
-    <div class="side-copy" style="top:350px;width:560px" data-step="1">
-      <svg id="step4-chart" width="560" height="300" viewBox="0 0 560 300" style="overflow:visible"></svg>
-      <div class="copy" style="font-size:24px;margin-top:10px">
-        <p>Correlation with expert scores: <b class="hl">0.53</b>, level with published GOPT (0.53); Azure 0.62 and 3MH 0.68 are higher.</p>
-        <p class="mute">In free speech the recognizer often writes what you said (“boomings”), so a text check catches those instead.</p>
+      <div class="st" data-k="3">
+      <p><b>step 3, 1:19 →, Decide (Qwen)</b></p>
+      <p>„მერე Qwen წყვეტს, რა ამოიჭრას: 35 მილიარდი პარამეტრი, ტოკენზე მხოლოდ 3 მილიარდი აქტიური. აუდიოს არ ეხება, მხოლოდ ტექსტზე სვამს ნიშნებს.“</p>
+      <p><span class="en">Then Qwen decides what to cut: 35B parameters, only 3B active per token. It never touches the audio; it only tags the text.</span></p>
       </div>
+      <div class="st" data-k="4">
+      <p><b>step 4, 1:26 →, Rules</b></p>
+      <p>„ოღონდ ბოლო სიტყვა მას არ ეკუთვნის. წესი ასეთია: მხოლოდ წაშლა. „არა“, რიცხვი, თარიღი ან დრო მხოლოდ მაშინ ქრება, თუ თვითონ შეცვალე.“</p>
+      <p><span class="en">But it doesn't get the last word. The rule: deletions only. A "not", a number, a date or a time only goes if you replaced it yourself.</span></p>
+      </div>
+      <div class="st" data-k="5">
+      <p><b>step 5, 1:33 →, PlayDiffusion</b></p>
+      <p>„არასწორ სიტყვას PlayDiffusion შენივე ხმით ამბობს თავიდან: MASK ტოკენებს გარშემო ხმის მიხედვით ავსებს. ათიდან ცხრა სწორია.“</p>
+      <p><span class="en">PlayDiffusion re-says the wrong word in your own voice, filling masked tokens from the audio around them. Nine out of ten right.</span></p>
+      </div>
+      <div class="st" data-k="6">
+      <p><b>step 6, 1:40 →, F5-TTS</b></p>
+      <p>„პარალელურად მეორე ხმის მოდელი, F5-TTS, თავის ვერსიას აკეთებს, დაახლოებით ერთ წამში.“</p>
+      <p><span class="en">In parallel, a second voice model, F5-TTS, makes its own take, in about a second.</span></p>
+      <p><em>მოკლე ვარიანტი: „მეორე ხმის მოდელი, პარალელურად.“</em></p>
+      </div>
+      <div class="st" data-k="7">
+      <p><b>step 7, 1:47 →, Verify</b></p>
+      <p>„მერე ორივეს ორჯერ ვამოწმებთ: Whisper-მა ახალი სიტყვა უნდა გაიგოს, ასოების მოდელმა კი ძველს ახალი უნდა ამჯობინოს. იგებს ყველაზე მსგავსი ხმა, და ვსვამთ მხოლოდ ახალ სიტყვას.“</p>
+      <p><span class="en">We check both, twice: Whisper must hear the new word, and the letter model must prefer it to the old one. The closest voice wins, and only the new word is spliced in.</span></p>
+      </div>
+      <div class="st" data-k="8">
+      <p><b>step 8, 1:54 →, Pronunciation (GOP)</b></p>
+      <p>„ვიჭერთ იმ სიტყვასაც, რომელიც გაუგებრად გამოგივიდა: ფონემების მოდელი ყველა ბგერას აფასებს. ექსპერტებთან შედარებით AUC 0.88-ია.“</p>
+      <p><span class="en">We also catch words that came out unclear: a phoneme model scores every sound. AUC 0.88 against experts.</span></p>
+      <p><em>მოკლე ვარიანტი: „და გაუგებარ სიტყვებსაც ვიჭერთ.“</em></p>
+      </div>
+      <div class="st" data-k="9">
+      <p><b>step 9, 2:01 →, Tone (PSOLA)</b></p>
+      <p>„Confident კი საერთოდ არ არის AI: შენსავე ჩანაწერს ტონს უცვლის და ნერვიულ კითხვის ნიშანს წერტილად აქცევს.“</p>
+      <p><span class="en">And Confident isn't AI at all: it reshapes the pitch of your own recording and turns a nervous question mark into a full stop.</span></p>
+      </div>
+      <div class="st" data-k="10">
+      <p><b>step 10, 2:07 →</b>, კამერა უკან, მთელ რუკაზე გადის:</p>
+      <p>„ეს არის მთელი სისტემა. ახლა ლაივში ვცადოთ.“</p>
+      <p><span class="en">That's the whole system. Now let's try it live.</span></p>
+      <p><b>2:10 →</b>, demo სლაიდი.</p>
+      <p><em>თუ 1:40-ზე აგვიანებ, 6-ე და 8-ე რეგიონზე მოკლე ვარიანტი თქვი.</em></p>
+      <p><em>„ცხრა მოდელი“, თუ ჰკითხავენ: Whisper, wav2vec2 (ასოები), Qwen3.6-35B-A3B, PlayDiffusion, F5-TTS, ECAPA, wav2vec2 (ფონემები), gradient boosting, Seed-VC.</em></p>
+      <p><em>PSOLA-ს ნახატი და „three“/„tree“ ბადე ილუსტრაციებია. ზუსტ გაზომვად ნუ წარადგენ.</em></p>
+      <p><span class="en">If late at 1:40, shorten regions 6 and 8. The nine models, if asked. The PSOLA and three/tree drawings are illustrations.</span></p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ─────────────────────────────────────────────── live demo -->
+  <section class="slide s-demo" data-id="demo" data-title="Live demo" data-time="2:10–4:40">
+    <h2 class="dm-title">Mistake bingo</h2>
+    <div class="dm-card" id="dm-card"></div>
+    <aside class="notes">
+      <p class="sec">demo (2:10–4:40)</p>
+      <p class="h">⚠ სამი წესი</p>
+      <p>1. <b>Alt+`-მდე Discord-ის მესიჯის ველში დააწკაპუნე.</b> სხვა შემთხვევაში დეკში ჩასვამს და Enter-ს დააჭერს, ანუ სლაიდი წავა.</p>
+      <p><span class="en">Click into the Discord box before Alt+`, or it pastes into the deck and presses Enter.</span></p>
+      <p>2. <b>ჩაწერისას ჩუმად. რასაც იტყვი, მესიჯში მოხვდება.</b> ქართული კომენტარი მხოლოდ მეორე Alt+`-ის მერე.</p>
+      <p><span class="en">While recording, everything you say is in the message. No Georgian asides.</span></p>
+      <p>3. <b>„Scratch that.“ და მერე სრული ერთი წამი სიჩუმე.</b> გადახაზვა მხოლოდ 0.5 წამზე მეტი პაუზის მერე ჩნდება. პლუს უბრალო „never mind“ დღეს ლაივში არ მუშაობს.</p>
+      <p><span class="en">After "scratch that", one full second of silence; the strike only fires after a pause over 0.5 s. Plain "never mind" doesn't strike live today.</span></p>
+      <p class="h">ინგლისური მესიჯი (ეს ზუსტად ასე თქვი; ქართული არ იმუშავებს: კოდში Whisper ინგლისურზეა მიბმული)</p>
+      <p><b>C (რეკომენდებული):</b></p>
+      <p class="say">"Hey team. Um, the final is on Saturday, no wait, Sunday. I didn't rehearse at all. Scratch that. <em>(1 წმ პაუზა)</em> The judges is really friendly, and I think we're ready?"</p>
+      <p><b>A:</b></p>
+      <p class="say">"Hey guys. Um, so, the trip. We're leaving Friday, no wait, Saturday morning. I already ate all the snacks. Scratch that. <em>(1 წმ)</em> The tickets is in my bag, and I think dinner is pizza?"</p>
+      <p><b>B:</b></p>
+      <p class="say">"Hi Nika. Um, quick one about tonight. Let's meet at seven, no wait, eight. I'm bringing my cat. Scratch that. <em>(1 წმ)</em> We has a table by the window, and you're paying, right?"</p>
+      <p><span class="en">The wrong word is a grammar slip ("judges is"). End on an unsure rising "?" so Confident has something to fix.</span></p>
+      <p class="h">ნაბიჯ-ნაბიჯ</p>
+      <p><b>2:10</b>, ბინგოს სლაიდი:</p>
+      <p>„შეცდომების ბინგო. ერთ მესიჯში ოთხივე შეცდომას განზრახ დავუშვებ: „um“, აზრის შეცვლა, „scratch that“ და ერთი არასწორი სიტყვა. ინგლისურად, რადგან მოდელები ჯერჯერობით ინგლისურზეა მორგებული.“</p>
+      <p><span class="en">Mistake bingo. In one message I'll make all four on purpose: an um, a change of mind, a "scratch that", one wrong word. In English: the models are tuned for English for now.</span></p>
+      <p><b>2:18</b>: <em>Alt+Tab, Discord, მესიჯის ველზე დააწკაპუნე.</em></p>
+      <p>„აი, Discord.“</p>
+      <p><span class="en">Here's Discord.</span></p>
+      <p><b>2:20</b>: <em>Alt+`. დაელოდე, სანამ ტაიმერი დაიძვრება (≈0.5 წმ). ამიერიდან ჩუმად.</em></p>
+      <p><span class="en">Alt+`; wait for the timer; silence from now on.</span></p>
+      <p><b>2:21</b>: <em>ინგლისური მესიჯი. „Scratch that.“-ის მერე ერთი წამი პაუზა, ზოლზე ხელით მიუთითე: გადაიხაზება, მერე გაქრება, ზოლზე ეწერება „Scratched that“.</em></p>
+      <p><span class="en">Say the message; after "scratch that", pause and point; it strikes, then vanishes.</span></p>
+      <p><b>2:35</b>: <em>Alt+` თავიდან. ზოლი: „Cleaning up…“, „Saying 'are'…“, „Sending to Discord…“, „Sent to Discord“.</em> ლოდინისას:</p>
+      <p>„„scratch that“ ხომ ნახეთ? ლაპარაკისას გაქრა. ახლა Whisper მესიჯს თავიდან ისმენს, LLM წყვეტს, რა ამოიჭრას, წესები ამოწმებს, ჩემს არასწორ სიტყვას კი ორი ხმის მოდელი ერთდროულად ამბობს, ჩემივე ხმით.“</p>
+      <p><span class="en">Did you see "scratch that"? Gone while I talked. Now Whisper re-hears it, the LLM picks the cuts, the rules check, and two voice models re-say my wrong word at once, in my voice.</span></p>
+      <p><b>~2:45</b>: <em>▶-მდე, Discord-ში:</em></p>
+      <p>„ერთი სიტყვა აქ AI-მ თქვა. მოუსმინეთ: რომელი?“ <em>(▶)</em></p>
+      <p><span class="en">One word here was made by AI. Listen: which one?</span></p>
+      <p><b>2:56</b>:</p>
+      <p>„რომელი?“ <em>(ერთი-ორი პასუხი)</em> „ვნახოთ.“</p>
+      <p><span class="en">Which one? Let's look.</span></p>
+      <p><b>3:01</b>: <em>Alt+Shift+`, ზედა (უახლესი) მესიჯი.</em></p>
+      <p>„აი ისიც, მწვანით: „judges are“. გადახაზული ამოჭრილია. დანარჩენი ყველაფერი ჩემი ნამდვილი ხმაა, ხელუხლებელი.“</p>
+      <p><span class="en">There it is, in green: "judges are". Struck through means cut. Everything else is my real voice, untouched.</span></p>
+      <p><b>3:11</b>: <em>„Original“, Space (≈5 წმ), Space, „Fixed“.</em></p>
+      <p>„ორიგინალი…“ <em>(გააჩერე)</em> „…გასწორებული კი უკვე მოისმინეთ. ორიგინალი ფაილი არასდროს იცვლება: ეს ცვლილებების სიაა, რომელიც მოსმენისას ან გაგზავნისას იწყობა.“</p>
+      <p><span class="en">The original… and you already heard the fixed one. The original file never changes; it's an edit list, built when you play or send.</span></p>
+      <p><b>3:26, Replace</b>:</p>
+      <p>„ახლა თქვენ აირჩიეთ: ჟიური „friendly“ იყოს… თუ „generous“?“</p>
+      <p><em>(A: „pizza თუ sushi?“, B: „ვინ იხდის, შენ თუ მე?“)</em></p>
+      <p><span class="en">Now you choose: should the judges be "friendly"… or "generous"?</span></p>
+      <p><em>სიტყვაზე დააწკაპუნე, Replace…, აკრიფე, Enter. ≈3 წმ ლოდინისას:</em></p>
+      <p>„ამ სიტყვას ახლა ორი მოდელი ამბობს ჩემი ხმით, და შედის მხოლოდ ის, რომელიც ორივე შემოწმებას გაივლის.“</p>
+      <p><span class="en">Two models are saying it in my voice right now; only the one that passes both checks gets in.</span></p>
+      <p><em>მწვანდება. „Fixed“ არჩეულია? Space.</em> მოსმენის მერე:</p>
+      <p>„ეს სიტყვა მე არასდროს მითქვამს.“</p>
+      <p><span class="en">I never said that word.</span></p>
+      <p><em>თუ გამოჩნდა „It may not sound quite right“:</em> „ამაში დარწმუნებული არ არის და თვითონვე გეუბნება.“</p>
+      <p><span class="en">If unverified: it isn't sure, and it tells you.</span></p>
+      <p><b>3:55, Confident</b>: <em>Tone ღილაკი, Confident პერსონაჟზე ერთი კლიკი (თვითონ ჩაირთვება).</em></p>
+      <p>„ბოლოს, Confident. აქ AI საერთოდ არ არის: ეს ჩემივე ჩანაწერია, შეცვლილი ტონით და ტემპით.“</p>
+      <p><span class="en">Last one: Confident. No AI here: it's my own recording, with the pitch and pace reshaped.</span></p>
+      <p>მოსმენის მერე:</p>
+      <p>„„ready?“ გახდა „ready.“ იგივე ხმა, იგივე სიტყვები.“</p>
+      <p><span class="en">"Ready?" became "ready." Same voice, same words.</span></p>
+      <p><b>4:05, ჟიური (მხოლოდ თუ Confident 4:05-მდე დასრულდა):</b></p>
+      <p>„ერთი წინადადება ჟიურიდან? ინგლისურად: თქვით რამე, მერე „scratch that“, პაუზა, და კიდევ ერთი რამე.“</p>
+      <p><span class="en">One sentence from the jury? In English: say anything, then "scratch that", a pause, then one more thing.</span></p>
+      <p><em>Discord-ის ველი, Alt+<code>, ლეპტოპი ≈30 სმ-ზე, Alt+</code>, ▶.</em></p>
+      <p>„თქვენი სიტყვები, თქვენი ხმა, ოღონდ იმის გარეშე, რაც უკან წაიღეთ.“</p>
+      <p><span class="en">Your words, your voice, minus what you took back.</span></p>
+      <p><b>4:25</b>: <em>Alt+Tab დეკზე (საჭიროების შემთხვევაში F), მერე 1, 2, 3, 4.</em></p>
+      <p>„„Um“. აზრის შეცვლა. „Scratch that“. არასწორი სიტყვა.“ <em>(მეოთხე)</em> „ბინგო.“</p>
+      <p><span class="en">Um. Change of mind. Scratch that. Wrong word. Bingo.</span></p>
+      <p><em>მხოლოდ ის მონიშნე, რაც მართლა მოხდა. თუ ერთი არ გამოვიდა:</em> „დღეს ოთხიდან სამი.“</p>
+      <p><span class="en">Stamp only what really happened: "three out of four tonight".</span></p>
+      <p><b>4:38 →</b>, close.</p>
+      <p class="h">დროის კარიბჭეები</p>
+      <p>- <b>2:55</b>: Discord-ში ჯერ არაფერია? Plan B, „ნელია“.</p>
+      <p>- <b>3:30</b>: Replace ჯერ არ დაწყებულა? გამოტოვე.</p>
+      <p>- <b>4:10</b>: Confident ჯერ არ ჟღერდა? დეკზე დაბრუნდი.</p>
+      <p>- <b>4:30</b>: რაც არ უნდა ხდებოდეს, დეკზე დაბრუნდი.</p>
+      <p><span class="en">Time gates: 2:55 engine slow; 3:30 skip Replace; 4:10 back to the deck; 4:30 hard stop.</span></p>
+      <p class="h">ლოდინის ფრაზები</p>
+      <p>- ~2 წმ: „თითოეულ სიტყვას თავიდან ისმენს.“ / „აქ AI არ არის: ჩემი ჩანაწერია, გადაკეთებული.“</p>
+      <p><span class="en">It's re-hearing every word. / No AI here: it's my own recording, reshaped.</span></p>
+      <p>- ~3–5 წმ: „ორი ხმის მოდელი ერთდროულად ამბობს, ჩემი ხმით, და შედის მხოლოდ ის, რომელიც ორივე შემოწმებას გაივლის.“</p>
+      <p><span class="en">Two voice models at once, in my voice; only the one that passes both checks gets in.</span></p>
+      <p>- ~6–10 წმ: 2:35-ის გრძელი ფრაზა, და კიდევ: „სარას მესიჯში, ორი სიტყვით, მთელ გასწორებას დაახლოებით ათი წამი დასჭირდა.“</p>
+      <p><span class="en">In Sarah's message, with two re-said words, the whole fix took about ten seconds.</span></p>
+      <p>- 15 წამზე მეტი: „GPU ამ ოთახიდან საკმაოდ შორსაა.“ <em>(25 წამზე Plan B.)</em></p>
+      <p><span class="en">The GPU is a long way from this room.</span></p>
+      <p class="sec">Plan B (ზუსტი სიტყვები)</p>
+      <p><b>ხმა არ ისმის.</b> <em>Win+Ctrl+V-ით გამოსავალი აირჩიე, მერე R. ერთხელ სცადე, მეტჯერ არა.</em></p>
+      <p>„დინამიკები დღეს მორცხვობენ, ამიტომ ჩემთან ერთად წაიკითხეთ: წითელი ქრება, მწვანე AI-ა.“</p>
+      <p>დემოში: „თვალს უნდა ენდოთ: უყურეთ ზოლს.“</p>
+      <p><span class="en">The speakers are shy tonight, so read along: red disappears, green is AI. / Trust your eyes: watch the bar.</span></p>
+      <p><b>ძრავა ნელია</b> <em>(15 წამზე მეტი)</em>:</p>
+      <p>„ფიქრობს. GPU შორსაა.“ 25 წამზე: „იგივეს გაჩვენებთ ადრინდელი გაშვებიდან.“ <em>(Alt+Tab, B)</em></p>
+      <p><span class="en">It's thinking; the GPU is far away. At 25 s: let me show you the same from an earlier run.</span></p>
+      <p><b>ძრავა არ მუშაობს</b> („Engine offline“, „Can't reach the engine“):</p>
+      <p>„სერვერმა ძილისთვის კარგი მომენტი შეარჩია. აი იგივე, ადრინდელი გაშვებიდან.“ <em>(Esc, Alt+Tab, B)</em></p>
+      <p><span class="en">The server picked a great moment to nap. Here's the same from an earlier run.</span></p>
+      <p><b>მიკროფონი არ იჭერს</b> (ზოლზე ტალღა არ მოძრაობს, სიტყვები არ ჩნდება):</p>
+      <p>„მიკროფონი მორცხვობს. ერთი წამი.“ <em>(Esc, Settings, Microphone, ერთხელ თავიდან სცადე)</em></p>
+      <p>თუ რეპეტიციის ფაილს „Import it“-ით ატვირთავ: „ეს ჩემი რეპეტიციის ჩანაწერია, ამის მერე ყველაფერი ლაივია.“</p>
+      <p><span class="en">My mic is being modest. One second. / If importing: this is my rehearsal recording; everything after it is live.</span></p>
+      <p><b>ჟიურის წინადადება არ გასწორდა:</b></p>
+      <p>- სუფთა წინადადება: „აქ გასასწორებელი არაფერი იყო. იცის, როდის არ უნდა შეგეხოს.“</p>
+      <p><span class="en">Nothing to fix there. It knows when to leave you alone.</span></p>
+      <p>- „never mind“ დარჩა: „როცა დარწმუნებული არ არის, არ ჭრის, მხოლოდ გთავაზობს. შენს სიტყვებს ვარაუდით არასდროს ჭრის.“</p>
+      <p><span class="en">When unsure, it doesn't cut; it suggests. It never cuts your words on a guess.</span></p>
+      <p><b>Wi-Fi გაითიშა:</b></p>
+      <p>„Wi-Fi-მ ჩატი დატოვა. აპი ჩაწერას აგრძელებს და ძრავის დაბრუნებისას გაასწორებს. მანამდე, ადრინდელი გაშვება.“ <em>(Alt+`, Alt+Tab, B)</em></p>
+      <p><span class="en">The Wi-Fi left the chat. The app keeps recording and fixes it when the engine is back. Meanwhile, an earlier run.</span></p>
+    </aside>
+  </section>
+
+  <!-- ─────────────────────────────────────────────── close -->
+  <section class="slide s-close" data-id="close" data-title="Thank you" data-time="4:40–5:00">
+    <div class="cl-nums">
+      <div class="cl-n"><b data-count="9">9</b><span>models</span></div>
+      <div class="cl-n"><b>≈1 s</b><span>to clean up</span></div>
+      <div class="cl-n"><b data-count="0.98" data-dec="2">0.98</b><span>voice match</span></div>
     </div>
-    <aside class="notes">
-      <p>“Step four: catch the words that came out wrong. We know which sounds you should have made: espeak turns the word into phones. A wav2vec2 phoneme model listens, and CTC alignment lines up each phone. Then a ‘goodness of pronunciation’ score: how much better does the expected phone explain the audio than the best wrong phone or a deletion. That’s one batched CTC loss.”</p>
-      <p>“A gradient-boosting model on top, trained on speechocean762 expert scores, predicts the 0-to-10 score an expert would give each word.”</p>
-      <p><em>Click:</em> “AUC 0.88 against expert labels, versus 0.73 without training. And if you get the same sound wrong every time, that’s your accent: we turn it into a tip, not an error.”</p>
-      <p><em>Honest, if asked:</em> that’s measured on read sentences where the intended words are known. In free speech the recognizer often writes what you actually said, e.g. “boomings”, and then the text checks (misspoken/grammar) catch it; the audio detector alone flagged 19% of expert-labelled errors in our free-run test.</p>
-    </aside>
-  </section>
-
-  <!-- 12 ────────────────────────────────────────── step 5 -->
-  <section class="slide s-step5" data-id="step5" data-title="Step 5: tone and accent" data-time="3:45–4:05">
-    <h1 class="title">Architecture<br>Step 5: tone and accent</h1>
-    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
-    <svg class="fig" id="step5-svg" width="1150" height="560" viewBox="0 0 1150 560" style="left:80px;top:320px"></svg>
-    <svg class="fig" id="step5-accent" width="1150" height="150" viewBox="0 0 1150 150" style="left:80px;top:905px" data-step="2"></svg>
-    <div class="side-copy copy" style="top:330px;width:560px;font-size:25px">
-      <p><b>Confident</b> edits your own recording with <span class="hl">Praat PSOLA</span>. No neural regeneration.</p>
-      <p class="formula" style="font-size:25px">f′ = median · (f / median)<sup>range</sup> · shift</p>
-      <p>A phrase ending that rises more than 12% (uptalk) is bent into a gentle fall. Pauses over 0.45 s are squeezed; speech that trails off is sped up.</p>
-      <p data-step="1"><b class="hl">−1.5</b> semitones, <b class="hl">23%</b> shorter, every word kept, voice similarity <b class="hl">0.95</b>.</p>
+    <div class="cl-foot">
+      <div class="cl-repo"><div class="cl-qr"><img src="media/qr_github.svg" alt="QR code for github.com/Antony-X/ctrl-voice"></div><span class="cl-url">github.com/Antony-X/ctrl-voice</span></div>
+      <div class="cl-thanks">Thank you</div>
     </div>
+    <div class="cl-credit">Example voices: ElevenLabs (Sarah, Eric). Pronunciation scorer trained on speechocean762 (CC BY 4.0).</div>
     <aside class="notes">
-      <p>“Step five: tone. Say you’re tired. ‘Confident’ doesn’t regenerate anything: it edits your own recording with Praat’s PSOLA. Here’s the pitch of the tired take.” <em>(Tired plays; grey curve.)</em> “Hear the ending go up on ‘Monday?’”</p>
-      <p><em>Click:</em> “Confident.” <em>(Plays; cyan curve.)</em> “Lower, quicker, and the rising ending is bent into a fall, so it sounds like a statement. Same words, same voice.”</p>
-      <p><em>Click:</em> “And optionally, a native accent: Whisper gets the words, F5-TTS says them with a native reference voice, and Seed-VC converts that back to your timbre. It’s off by default, and the app labels it as AI.”</p>
-      <p><em>The tone example voice is an ElevenLabs voice (credited on the last slide). Numbers are measured on this clip.</em></p>
+      <p class="sec">close (4:40–5:00)</p>
+      <p><b>4:40 →</b></p>
+      <p>„ცხრა მოდელი. დაახლოებით ერთი წამი, და „um“-ები და უკან წაღებული სიტყვები ქრება. და 0.98: ხმის მსგავსება, როცა სიტყვას თავიდან ვამბობთ.“</p>
+      <p><span class="en">Nine models. About a second, and the ums and take-backs are gone. And 0.98 voice similarity when we re-say a word.</span></p>
+      <p><b>4:50</b></p>
+      <p>„თქვი არეულად. გაგზავნე სუფთად. ყველაფერი GitHub-ზეა: დაასკანერეთ კოდი და სცადეთ. მადლობა!“</p>
+      <p><span class="en">Say it messy. Send it clean. It's all on GitHub: scan the code and try it. Thank you!</span></p>
+      <p><b>5:00</b>: <em>გაჩერდი. გაიღიმე. დაელოდე კითხვებს.</em> კრედიტის ხაზს ხმამაღლა ნუ წაიკითხავ.</p>
+      <p><span class="en">Stop, smile, wait for questions. Don't read the credit line.</span></p>
     </aside>
   </section>
 
-  <!-- 13 ────────────────────────────────────────── results -->
-  <section class="slide s-results" data-id="results" data-title="Results" data-time="4:05–4:25">
-    <h1 class="title one">Results</h1>
-    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
-    <svg class="fig" id="results-svg" width="1760" height="700" viewBox="0 0 1760 700" style="left:80px;top:290px"></svg>
-    <div class="src">Re-saying: 10 real recordings (LibriSpeech, AMI, DisfluencySpeech). Clean-up: 28 hand-written messages. Small samples: engineering measurements, not paper results.</div>
-    <aside class="notes">
-      <p>“We measured every piece before building the app. Top left: the four voice editors we tested on real recordings. dots.tts gets 10 out of 10 but takes 13 seconds, so we run the two fast ones, PlayDiffusion and F5, in parallel and verify both.”</p>
-      <p>“Top right: splicing only the new words instead of regenerating the clip keeps the voice: similarity 0.98 instead of 0.73.”</p>
-      <p>“Bottom: clean-up went from 9 to 24 exact out of 28. And the everyday path, record, clean, send, takes about a second.”</p>
-    </aside>
-  </section>
-
-  <!-- 14 ────────────────────────────────────────── roadmap -->
-  <section class="slide s-roadmap" data-id="roadmap" data-title="Roadmap" data-time="4:25–4:40">
-    <h1 class="title one">Roadmap</h1>
-    <div class="brandmark"><span class="mk"></span>Ctrl+Voice</div>
-    <svg class="fig" id="roadmap-svg" width="1760" height="700" viewBox="0 0 1760 700" style="left:80px;top:300px"></svg>
-    <aside class="notes">
-      <p>“Our core focus next is running it all on your own device. Most messages only need the recognizer, the aligner and a small LLM, and those fit on a phone. Then a distilled voice editor for the few re-said words, and the hosted engine becomes an optional boost for heavy extras like the accent. Your messages never leave your phone.”</p>
-      <p>“After that: real voice-message bubbles through a Telegram bot and a Discord app, seams nobody can hear, a watermark on every AI word, more languages, and a mobile keyboard.”</p>
-    </aside>
-  </section>
-
-  <!-- 15 ────────────────────────────────────────── demo -->
-  <section class="slide s-demo" data-id="demo" data-title="DEMO" data-time="4:40–6:40">
-    <div class="word">Demo</div>
-    <div class="hint">B: backup clips</div>
-    <aside class="notes">
-      <p><b>Before the talk:</b> Ctrl+Voice running, unlocked with the access code; Discord open in the demo channel; engine warm (send one test message in the last 10 minutes); mic checked.</p>
-      <p><b>1. Record in Discord.</b> Click into the message box, press Alt+` and say a message with an um, a “Monday, no wait, Wednesday”, a sentence you then cancel with “scratch that”, and one wrong word. Point at the bar: the words appear live and the cancelled sentence is struck out while you’re still talking. Press Alt+` again: it cleans up and pastes into Discord. Play it in Discord.</p>
-      <p><b>2. The editor.</b> Open Ctrl+Voice on that message. Play Original, then Fixed. Point at the struck-through cuts and the green re-said word.</p>
-      <p><b>3. Replace a word.</b> Select a word, type a new one, play it: it’s in your voice and was verified.</p>
-      <p><b>4. Tone.</b> Raise Confident and play.</p>
-      <p><em>If you use the demo-mic take instead of speaking live, say so: “this is a prerecorded take played into the app; everything after that is live.”</em></p>
-      <p><em>If anything fails: press B for the backup clips, say “here’s a run from earlier”, and continue.</em></p>
-      <p><em>Come back to the deck (the first click after switching windows is ignored) and press → for the last slide.</em></p>
-    </aside>
-  </section>
-
-  <!-- 16 ────────────────────────────────────────── backup -->
+  <!-- ─────────────────────────────────────────────── backup (B only) -->
   <section class="slide s-backup" data-id="backup" data-backup data-steps="2" data-title="Backup clips" data-time="if needed">
-    <h1 class="title one">From the app</h1>
-    <video id="bk0" data-v="0" src="media/video/pill.mp4" poster="media/video/pill_poster.png" preload="auto" playsinline></video>
-    <video id="bk1" data-v="1" src="media/video/editor.mp4" poster="media/video/editor_poster.png" preload="auto" playsinline></video>
-    <video id="bk2" data-v="2" src="media/video/tone.mp4" poster="media/video/tone_poster.png" preload="auto" playsinline muted></video>
+    <h2 class="bk-title">From an earlier run</h2>
+    <video data-v="0" src="media/video/pill.mp4" poster="media/video/pill_poster.png" preload="auto" playsinline></video>
+    <video data-v="1" src="media/video/editor.mp4" poster="media/video/editor_poster.png" preload="auto" playsinline></video>
+    <video data-v="2" src="media/video/tone.mp4" poster="media/video/tone_poster.png" preload="auto" playsinline muted></video>
     <aside class="notes">
-      <p><em>Only reached with B from the DEMO slide; normal navigation skips it.</em></p>
-      <p>1. The recording bar over a chat: live words, “scratch that” struck out, cleaned and sent.</p>
-      <p><em>Click:</em> 2. The editor: replace a word; it turns green and the engine’s real audio for that phrase plays.</p>
-      <p><em>Click:</em> 3. Tone: the characters light up as the sliders rise.</p>
-      <p><em>These clips were rendered from the real app UI with real engine output (demo/deck/build/make_videos.py) on an older sample message whose voice is synthetic. Say “from an earlier run”, not “live”. Better: record your own rehearsal run (Win+Alt+R) and save it as media/video/live_backup.mp4. The first clip then plays that instead.</em></p>
-    </aside>
-  </section>
-
-  <!-- 17 ────────────────────────────────────────── thanks -->
-  <section class="slide s-thanks" data-id="thanks" data-title="Thanks" data-time="end">
-    <div class="big">Thanks for your<br>attention!</div>
-    <div class="repo"><img src="media/qr_github.svg" alt="QR code for github.com/Antony-X/ctrl-voice"><div><b>github.com/Antony-X/ctrl-voice</b><br>Clone it, run <b>npm start</b>, and try it yourself.</div></div>
-    <div class="credits">Example voices: ElevenLabs; speechocean762 (CC BY 4.0); Speech Accent Archive (CC BY-NC-SA 4.0).</div>
-    <aside class="notes">
-      <p>“Thank you. Everything is open on GitHub: clone it, run npm start, and try it on our server. We’re happy to take questions.”</p>
+      <p class="sec">backup (მხოლოდ B-თი)</p>
+      <div class="st" data-k="0">
+      <p><b>step 0</b></p>
+      <p>„აი, იგივე, ადრინდელი გაშვებიდან.“</p>
+      <p>„ჩაწერის ზოლი ჩატის თავზე: სიტყვები ლაპარაკისას ჩნდება, „scratch that“ იხაზება, და მესიჯი იგზავნება.“</p>
+      <p><span class="en">Here's the same thing, from an earlier run. The recording bar over a chat: words appear as you talk, "scratch that" is struck out, and it's sent.</span></p>
+      </div>
+      <div class="st" data-k="1">
+      <p><b>step 1 →</b></p>
+      <p>„რედაქტორი: სიტყვას ვცვლით, ის მწვანდება, და ძრავის ნამდვილი აუდიო ჟღერს.“</p>
+      <p><span class="en">The editor: we replace a word, it turns green, and the engine's real audio plays.</span></p>
+      </div>
+      <div class="st" data-k="2">
+      <p><b>step 2 →</b></p>
+      <p>„ტონი: სლაიდერები მაღლა მიდის, პერსონაჟები ნათდებიან.“</p>
+      <p><span class="en">Tone: the sliders go up, the characters light up.</span></p>
+      <p><em>„ლაივი“ არასდროს თქვა. ამ კლიპებში ხმა სინთეზურია (ძველი სანიმუშო მესიჯი). მერე Home/End ან → და close სლაიდზე გადადი.</em></p>
+      <p><span class="en">Never say "live". The voice in these clips is synthetic. Then Home/End or → to the close.</span></p>
+      </div>
     </aside>
   </section>
 
@@ -335,23 +339,37 @@
   <div id="help" class="overlay">
     <div><b>→ Space click</b>next step</div>
     <div><b>← right-click</b>previous step</div>
+    <div><b>A</b>sound check (three notes)</div>
     <div><b>F</b>fullscreen</div>
     <div><b>S</b>speaker notes window</div>
     <div><b>N</b>notes on the stage</div>
     <div><b>P / R</b>pause / replay this step</div>
-    <div><b>X</b>skip this slide in the talk</div>
+    <div><b>1–4</b>stamp a bingo square (demo slide)</div>
     <div><b>B</b>backup clips</div>
+    <div><b>X</b>skip this slide in the talk</div>
     <div><b>.</b>black screen</div>
     <div><b>T</b>reset the talk clock</div>
   </div>
   <div id="toast" class="overlay"></div>
   <div id="blank" class="overlay"></div>
-  <div id="start" class="overlay"><div>Click to start<small>F fullscreen · S speaker notes · ? keys</small></div></div>
+  <div id="start" class="overlay"><div>Click to start<small>F fullscreen, S speaker notes, ? keys</small><span class="check" role="button">Sound check</span></div></div>
 </div>
 
 <script src="assets/vendor/rough.js"></script>
 <script src="media/data.js"></script>
 <script src="assets/sketch.js"></script>
+<script src="assets/sfx.js"></script>
+<script src="assets/arch.js"></script>
+<script src="assets/arch/hear.js"></script>
+<script src="assets/arch/align.js"></script>
+<script src="assets/arch/decide.js"></script>
+<script src="assets/arch/rules.js"></script>
+<script src="assets/arch/playdiff.js"></script>
+<script src="assets/arch/f5.js"></script>
+<script src="assets/arch/verify.js"></script>
+<script src="assets/arch/pron.js"></script>
+<script src="assets/arch/tone.js"></script>
+<script src="assets/chat.js"></script>
 <script src="assets/slides.js"></script>
 <script src="assets/deck.js"></script>
 </body>

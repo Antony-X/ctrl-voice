@@ -8,12 +8,13 @@ def peaks(path, n=360):
     x, sr = librosa.load(path, sr=16000); k = len(x) // n
     p = np.array([np.abs(x[i * k:(i + 1) * k]).max() for i in range(n)]); return [round(float(v), 3) for v in p / p.max()]
 D = dict(clips={})
-for ex in ("clean", "tone", "mispron", "accent"):
+for ex in ("clean", "tone"):
     e = example(ex)
     for side in ("before", "after"):
         D["clips"][f"{ex}.{side}"] = dict(src=f"media/audio/{ex}_{side}.mp3", dur=e[side]["dur"], words=e[side]["words"],
                                          peaks=peaks(f"{EX}/{ex}/{side}.wav"))
     D[ex] = dict(edits=e.get("edits"), metrics=e.get("metrics"))
-D["figs"] = json.load(open(f"{MEDIA}/figs_a.json")); D["tone_f0"] = json.load(open(f"{MEDIA}/figs_tone.json"))
+D["figs"] = json.load(open(f"{MEDIA}/figs_a.json")); D["figs"]["psola"] = json.load(open(f"{MEDIA}/figs_psola.json"))
+D["tone_f0"] = json.load(open(f"{MEDIA}/figs_tone.json"))
 open(f"{MEDIA}/data.js", "w", encoding="utf8").write("window.DATA = " + json.dumps(D, ensure_ascii=False) + ";\n")
 print({k: len(v["peaks"]) for k, v in D["clips"].items()})

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Architecture region preview</title>
+<link rel="stylesheet" href="assets/deck.css">
+<style>#host{position:absolute;inset:0;overflow:hidden}</style>
+</head>
+<body>
+<!-- Preview one region at 1:1, or the whole map:  arch_preview.html?r=hear   ?r=hear&arrive=1   ?r=all
+     All region files are loaded; a missing one shows a placeholder. -->
+<div id="stage"><div id="host"></div></div>
+<script src="assets/vendor/rough.js"></script>
+<script src="media/data.js"></script>
+<script src="assets/sketch.js"></script>
+<script src="assets/sfx.js"></script>
+<script src="assets/arch.js"></script>
+<script>
+  const IDS = ['hear', 'align', 'decide', 'rules', 'playdiff', 'f5', 'verify', 'pron', 'tone'];
+  IDS.forEach((id) => document.write(`<script src="assets/arch/${id}.js" onerror="console.warn('no region file ${id}')"><\/script>`));
+</script>
+<script>
+  const q = new URLSearchParams(location.search), r = q.get('r') || 'all';
+  const stage = document.getElementById('stage');
+  const fit = () => { stage.style.transform = `translate(-50%, -50%) scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; };
+  addEventListener('resize', fit); fit();
+  document.fonts.ready.then(() => {
+    const map = ARCH.mount(document.getElementById('host'));
+    window.MAP = map;
+    if (r === 'all') { q.get('build') ? map.build() : map.show(); return; }
+    const k = ARCH.meta.findIndex((m) => m.id === r);
+    map.show();
+    map.goTo(k, { instant: true, noLand: !q.get('arrive') });
+    window.READY = true;
+  });
+</script>
+</body>
+</html>

@@ -102,12 +102,14 @@
   function stepsOf(s) { return Math.max(0, ...$$('[data-step]', s).map((e) => +e.dataset.step), +(s.dataset.steps || 0)); }
   function applySteps(s, k) { $$('[data-step]', s).forEach((e) => e.classList.toggle('on', +e.dataset.step <= k)); }
 
+  /** A slide's hook must never break navigation: log the error and carry on. */
+  function safe(f) { try { f(); } catch (e) { console.error(e); } }
   let entered = -1;                 // the slide whose enter hook last ran
   function go(i, k = 0, dir = 1) {
     const prevS = slides[cur];
     if (i !== cur) {
       stopAudio();
-      HOOKS[prevS.dataset.id]?.leave?.(prevS);
+      safe(() => HOOKS[prevS.dataset.id]?.leave?.(prevS));
       prevS.classList.remove('active');
     }
     const enteringNew = i !== entered;
@@ -117,8 +119,8 @@
     s.classList.add('active');
     applySteps(s, step);
     const h = HOOKS[s.dataset.id];
-    if (enteringNew) h?.enter?.(s, { back: dir < 0, step });
-    h?.step?.(s, step, { back: dir < 0 });
+    if (enteringNew) safe(() => h?.enter?.(s, { back: dir < 0, step }));
+    safe(() => h?.step?.(s, step, { back: dir < 0 }));
     try { history.replaceState(null, '', `#${cur + 1}`); } catch (e) { /* file:// */ }
     renderNotes();
   }
@@ -143,20 +145,31 @@
     return `<div class="hd"><b>${cur + 1}/${slides.length} · ${s.dataset.title}</b> <span>step ${step}/${stepsOf(s)}</span> <span>${s.dataset.time || ''}</span> <span class="clock">${mm}:${String(ss).padStart(2, '0')}</span>${skip.has(s.dataset.id) ? ' <span class="sk">SKIPPED</span>' : ''}</div>
       <div class="body">${n ? n.innerHTML : ''}</div><div class="nx">Next: ${nextTitle()}</div>`;
   }
+  // The notes are re-rendered every second (for the clock). The current step's block is highlighted, and it is
+  // scrolled into view only when the step changes, so the presenter can still scroll freely.
+  let notesAt = '';
+  function markStep(root, moved) {
+    const b = root.querySelector(`.st[data-k="${step}"]`);
+    if (!b) return;
+    b.classList.add('cur');
+    if (moved) b.scrollIntoView({ block: 'start' });
+  }
   function renderNotes() {
-    if (notesWin && !notesWin.closed) $('#n', notesWin.document).innerHTML = notesHTML();
+    const at = `${cur}:${step}`, moved = at !== notesAt;
+    notesAt = at;
+    if (notesWin && !notesWin.closed) { const n = $('#n', notesWin.document); n.innerHTML = notesHTML(); markStep(n, moved); }
     const ov = $('#notes-overlay');
-    if (ov.style.display === 'block') ov.innerHTML = notesHTML();
+    if (ov.style.display === 'block') { ov.innerHTML = notesHTML(); markStep(ov, moved); }
   }
   setInterval(renderNotes, 1000);
   function openNotes() {
     notesWin = open('', 'cv-notes', 'width=900,height=760');
     if (!notesWin) return toast('Pop-up blocked: allow pop-ups for the speaker notes, or press N');
     notesWin.document.title = 'Speaker notes';
-    notesWin.document.body.innerHTML = `<style>body{background:#111;color:#eee;font:22px/1.5 Segoe UI,system-ui,sans-serif;margin:26px}
-      .hd{display:flex;gap:22px;align-items:baseline;border-bottom:1px solid #333;padding-bottom:10px;margin-bottom:14px}.hd span{color:#999}
-      .clock{margin-left:auto;font-size:30px;color:#5ce1e6!important}.sk{color:#f5b94a!important}em{color:#9ad}.nx{margin-top:20px;color:#999;border-top:1px solid #333;padding-top:10px}
-      p{margin:0 0 12px}</style><div id="n"></div>`;
+    notesWin.document.body.innerHTML = `<style>body{background:#171716;color:#f3f2ee;font:23px/1.55 'Segoe UI','Noto Sans Georgian',Sylfaen,system-ui,sans-serif;margin:26px}
+      .hd{display:flex;gap:22px;align-items:baseline;border-bottom:1px solid #3a3836;padding-bottom:10px;margin-bottom:14px}.hd span{color:#a8a49c}
+      .clock{margin-left:auto;font-size:32px;color:#7088ff!important}.sk{color:#f0a73a!important}em{color:#a8a49c}b{color:#fff}.en{color:#75716a;font-size:18px}
+      .nx{margin-top:20px;color:#a8a49c;border-top:1px solid #3a3836;padding-top:10px}p{margin:0 0 12px}.sec{color:#a8a49c;font-size:19px}.h{color:#f0a73a;font-weight:600;margin-top:18px}.say{border-left:4px solid #4cc89b;padding-left:14px}code{font-size:.9em;color:#a8a49c}.st{border-left:4px solid transparent;padding-left:12px;margin-left:-16px}.st.cur{border-left-color:#7088ff;background:#7088ff14}</style><div id="n"></div>`;
     notesWin.addEventListener('keydown', onKey);
     renderNotes();
   }
@@ -185,6 +198,8 @@
       toast(skip.has(id) ? 'This slide is skipped in the talk' : 'This slide is back in the talk');
     }
     else if (k === '.' ) { const b = $('#blank'); b.style.display = b.style.display === 'block' ? 'none' : 'block'; }
+    else if (k === 'a' || k === 'A') { window.Sfx?.check(); toast('Sound check: you should hear three notes'); }
+    else if (/^[1-9]$/.test(k)) { const s = slides[cur]; safe(() => HOOKS[s.dataset.id]?.key?.(s, +k)); }
     else if (k === '?' || k === 'h' || k === 'H') { const h = $('#help'); h.style.display = h.style.display === 'block' ? 'none' : 'block'; }
   }
   addEventListener('keydown', onKey);
@@ -201,13 +216,15 @@
   function start() {
     if (started) return;
     started = true; $('#start').classList.add('gone'); t0.talk = performance.now();
+    window.Sfx?.unlock();
     go(cur, step);
   }
   $('#start').addEventListener('click', (e) => { e.stopPropagation(); start(); });
+  $('#start .check')?.addEventListener('click', (e) => { e.stopPropagation(); window.Sfx?.check(); });
 
   window.Deck = { play, stopAudio, onAudio, vnote, karaoke, toast, get step() { return step; } };
   // HOOKS run their setup once the deck API exists
-  for (const id in HOOKS) HOOKS[id].init?.($(`.slide[data-id="${id}"]`));
+  for (const id in HOOKS) safe(() => HOOKS[id].init?.($(`.slide[data-id="${id}"]`)));
   const m = /^#(\d+)/.exec(location.hash);
   cur = m ? Math.min(slides.length - 1, Math.max(0, +m[1] - 1)) : 0;
   slides[cur].classList.add('active'); applySteps(slides[cur], 0);
