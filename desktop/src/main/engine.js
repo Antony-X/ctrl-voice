@@ -10,8 +10,10 @@ class EngineError extends Error {
 }
 
 class Engine {
-  constructor(getBase) {
+  // getCode: the access code the engine asks for (empty when it has none).
+  constructor(getBase, getCode = () => '') {
     this.getBase = getBase;
+    this.getCode = getCode;
   }
 
   url(p) {
@@ -20,7 +22,7 @@ class Engine {
   }
 
   async request(p, { method = 'POST', json, form, timeout = 60000, raw = false } = {}) {
-    const opts = { method, signal: AbortSignal.timeout(timeout), headers: {} };
+    const opts = { method, signal: AbortSignal.timeout(timeout), headers: { 'x-access-code': this.getCode() || '' } };
     if (json !== undefined) { opts.body = JSON.stringify(json); opts.headers['content-type'] = 'application/json'; }
     if (form) opts.body = form;
     let res;
@@ -35,7 +37,7 @@ class Engine {
       // proxy saying the pod (or the engine on it) isn't running.
       let body = null;
       try { body = await res.json(); } catch {}
-      const detail = typeof body?.detail === 'string' ? body.detail : '';
+      const detail = res.status === 401 ? 'Wrong access code. Enter it in Settings' : typeof body?.detail === 'string' ? body.detail : '';
       throw new EngineError(detail || (body ? `Engine error ${res.status}` : "The engine isn't running"), res.status);
     }
     return raw ? Buffer.from(await res.arrayBuffer()) : res.json();
@@ -48,9 +50,22 @@ class Engine {
     try {
       const res = await fetch(this.url('/'), { redirect: 'manual', signal: AbortSignal.timeout(8000) });
       const ok = res.status >= 300 && res.status < 400 && /static/.test(res.headers.get('location') || '');
-      return { ok, ms: Date.now() - t, message: ok ? 'Connected' : `The server answered ${res.status}. Is the engine running?` };
+      if (!ok) return { ok, ms: Date.now() - t, message: `The server answered ${res.status}. Is the engine running?` };
+      const auth = await this.auth(this.getCode());
+      return { ok: auth.ok, locked: auth.locked, ms: Date.now() - t, message: auth.ok ? 'Connected' : auth.message };
     } catch {
       return { ok: false, ms: Date.now() - t, message: "Can't reach the engine" };
+    }
+  }
+
+  // Whether the engine accepts this access code. An engine from before access codes has no /api/auth (404) and needs none.
+  async auth(code) {
+    try {
+      const res = await fetch(this.url('/api/auth'), { headers: { 'x-access-code': code || '' }, signal: AbortSignal.timeout(8000) });
+      if (res.status === 401) return { ok: false, locked: true, message: code ? 'That access code is wrong' : 'The engine needs an access code' };
+      return { ok: true, locked: false };
+    } catch {
+      return { ok: false, locked: false, message: "Can't reach the engine" };
     }
   }
 

@@ -5,7 +5,8 @@ from openai import OpenAI
 LLM = OpenAI(base_url=os.environ.get("LLM_URL", "http://localhost:8011/v1"), api_key=os.environ.get("LLM_KEY", "x"))
 MODEL = os.environ.get("LLM_MODEL", "llm")
 norm = lambda s: re.sub(r"[^a-z0-9']", "", s.lower())
-FILLERS = {"um", "uh", "er", "ah", "hmm", "mm", "erm", "uhm", "umm", "uhh"}
+FILL = re.compile(r"u+h*m*|e+r+m*|a+h+|e+h+|h+m+|m{2,}")  # um, uhm, ummm, uhh, er, erm, ah, eh, hmm, mm
+filler = lambda w: bool(FILL.fullmatch(norm(w)))
 CATS = [("neg", r"not|never|no|nothing|nobody|none|cannot|can't|won't|don't|doesn't|didn't|isn't|aren't|wasn't|weren't|shouldn't|wouldn't|couldn't"),
         ("num", r"\d.*|zero|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|fifteen|twenty|thirty|forty|fifty|hundred|thousand|half|noon|midnight"),
         ("day", r"monday|tuesday|wednesday|thursday|friday|saturday|sunday|today|tomorrow|tonight|yesterday|morning|evening|afternoon")]
@@ -109,7 +110,7 @@ def repair(words, s):
 def clean(words, kinds=("filler", "correction", "restart", "repetition", "command")):
     if not words: return []
     try: tags = map_tokens(words, parse(chat(CLEAN_SYS, " ".join(w["w"] for w in words))))
-    except Exception as e: print("llm error", e); return []
+    except Exception as e: print("llm error", e); tags = [None] * len(words)
     out = []
     for s in spans(words, tags):
         if s["kind"] not in kinds: continue
@@ -120,8 +121,12 @@ def clean(words, kinds=("filler", "correction", "restart", "repetition", "comman
         for w in words[s["i"]:s["j"] + 1]:  # deleting a meaning-bearing word is only auto-applied if a same-type replacement follows
             c = cat(w["w"])
             if c and not (s["kind"] == "correction" and any(cat(x["w"]) == c for x in words[s["j"] + 1:s["j"] + 7])): risky = True
-        if s["kind"] == "filler" and not all(norm(w["w"]) in FILLERS for w in words[s["i"]:s["j"] + 1]): risky = True
+        if s["kind"] == "filler" and not all(filler(w["w"]) for w in words[s["i"]:s["j"] + 1]): risky = True
         out.append(dict(s, auto=not risky))
+    if "filler" in kinds:  # the model skips some ums; every one it left goes too
+        cov = {k for s in out for k in range(s["i"], s["j"] + 1)}
+        out += [dict(kind="filler", i=k, j=k, text=w["w"], auto=True) for k, w in enumerate(words) if k not in cov and filler(w["w"])]
+        out.sort(key=lambda s: s["i"])
     # A word said again across a filler ("bring the, uh, the board game") is a repetition the model
     # usually misses, since the copies aren't adjacent; cut the first copy.
     if "repetition" in kinds:

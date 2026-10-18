@@ -51,7 +51,7 @@ async function start() {
   showRestore(false);
   $('capNote').textContent = 'Connecting…';
   const demoAudio = config.demoMic ? await api.invoke('overlay:demo-mic').catch(() => null) : null;
-  session = new LiveSession({ server: config.server, micId: config.micId, testAudio: demoAudio, audible: !!demoAudio });
+  session = new LiveSession({ server: config.server, accessCode: config.accessCode, micId: config.micId, testAudio: demoAudio, audible: !!demoAudio });
   session.on('words', (m) => { words = m.words; renderCaption(); });
   session.on('undone', onUndone);
   session.on('status', onStatus);

@@ -1,6 +1,6 @@
 # Ctrl+Voice — voice messages you can fix before you send
 
-Say it messy, send it clean. Record a voice message in any chat; Ctrl+Voice cuts the ums, false starts and things you took back, re-says words that came out wrong, and sends it in your own voice. A Windows tray app with a floating recording bar, backed by the engine in [`app/`](../app) of this repo.
+Say it messy, send it clean. Record a voice message in any chat; Ctrl+Voice cuts the ums, false starts and things you took back, re-says words that came out wrong, and sends it in your own voice. A Windows and macOS tray app with a floating recording bar, backed by the engine in [`app/`](../app) of this repo.
 
 ## Run
 

@@ -5,14 +5,16 @@
 // recorded from (Discord, WhatsApp, …).
 const {
   app, BrowserWindow, Tray, Menu, globalShortcut, ipcMain,
-  nativeImage, nativeTheme, screen, session, Notification, dialog,
+  nativeImage, nativeTheme, screen, session, Notification, dialog, systemPreferences,
 } = require('electron');
 const path = require('path');
 const fs = require('fs');
 const { WinHelper } = require('./winhelper');
+const { MacHelper } = require('./machelper');
 const { Engine, EngineError } = require('./engine');
 const Edits = require('../shared/edits');
 
+const IS_MAC = process.platform === 'darwin';
 const ROOT = path.join(__dirname, '..', '..');
 const ICON = path.join(ROOT, 'assets', 'icon.png');
 const TRAY_ICON = path.join(ROOT, 'assets', 'tray.png');
@@ -31,6 +33,7 @@ const DEFAULT_SETTINGS = {
   },
   shortcutsVersion: SHORTCUTS_VERSION,
   backendUrl: 'https://xjdypx6zst9jkd-7860.proxy.runpod.net',
+  accessCode: '',           // the engine's access code, asked for on first launch
   finishAction: 'send',     // 'send' = fix and paste into the app you recorded from, 'review' = open the editor
   autoSend: true,           // press Enter after pasting
   fix: { cleanup: true, grammar: true, misspoken: true, pronunciation: true }, // applied before sending
@@ -58,10 +61,12 @@ const SEND_APPS = {
   whatsapp: 'WhatsApp', 'whatsapp.root': 'WhatsApp',
   telegram: 'Telegram', slack: 'Slack', signal: 'Signal', 'ms-teams': 'Teams', teams: 'Teams',
   chrome: 'your browser', msedge: 'your browser', firefox: 'your browser', brave: 'your browser', opera: 'your browser',
+  // macOS process names
+  'microsoft teams': 'Teams', 'google chrome': 'your browser', safari: 'your browser', arc: 'your browser', 'brave browser': 'your browser',
 };
 const APP_PROCESSES = {
   Discord: ['Discord', 'DiscordPTB', 'DiscordCanary', 'vesktop', 'Equibop', 'legcord'], WhatsApp: ['WhatsApp', 'WhatsApp.Root'], Telegram: ['Telegram'],
-  Slack: ['slack'], Signal: ['Signal'], Teams: ['ms-teams', 'Teams'],
+  Slack: ['slack'], Signal: ['Signal'], Teams: ['ms-teams', 'Teams', 'Microsoft Teams'],
 };
 
 let mainWin = null;
@@ -72,8 +77,8 @@ let hiddenNoticeShown = false;
 let settings = null;
 let shortcutStatus = {};
 let recordTarget = null;   // window that had focus when recording started
-const helper = new WinHelper();
-const engine = new Engine(() => settings.backendUrl);
+const helper = IS_MAC ? new MacHelper() : new WinHelper();
+const engine = new Engine(() => settings.backendUrl, () => settings.accessCode);
 
 // ---------- persistence ----------
 const dataDir = () => path.join(app.getPath('userData'), 'messages');
@@ -412,7 +417,7 @@ function createMainWindow(show) {
     minWidth: 900,
     minHeight: 600,
     show: false,
-    frame: false,
+    ...(IS_MAC ? { titleBarStyle: 'hiddenInset', trafficLightPosition: { x: 16, y: 15 } } : { frame: false }),
     backgroundColor: nativeTheme.shouldUseDarkColors ? '#171716' : '#f3f2ee',
     icon: ICON,
     title: 'Ctrl+Voice',
@@ -463,6 +468,7 @@ function createOverlay() {
     },
   });
   overlay.setAlwaysOnTop(true, 'screen-saver');
+  if (IS_MAC) overlay.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
   overlay.setIgnoreMouseEvents(true, { forward: true });
   positionOverlay();
   overlay.loadFile(path.join(ROOT, 'src', 'overlay', 'overlay.html'));
@@ -487,6 +493,7 @@ function positionOverlay() {
 function sendOverlayConfig() {
   overlay?.webContents.send('overlay:config', {
     server: settings.backendUrl,
+    accessCode: settings.accessCode,
     micId: settings.micId,
     showIdleBar: settings.showIdleBar,
     shortcuts: settings.shortcuts,
@@ -663,7 +670,8 @@ function registerGlobalShortcuts() {
 }
 
 function pretty(accel) {
-  return (accel || '').replace('CommandOrControl', 'Ctrl').replace(/\+/g, ' + ');
+  const keys = IS_MAC ? { CommandOrControl: 'Cmd', Alt: 'Option' } : { CommandOrControl: 'Ctrl' };
+  return (accel || '').split('+').map(k => keys[k] || k).join(' + ');
 }
 
 // ---------- tray ----------
@@ -758,6 +766,13 @@ function wireIpc() {
 
   // Engine, from the main window
   ipcMain.handle('engine:health', async () => ({ ...(await engine.health()), url: settings.backendUrl }));
+  // The access-code screen: a code is kept only once the engine accepts it.
+  ipcMain.handle('engine:unlock', async (_e, code) => {
+    code = String(code || '').trim();
+    const r = await engine.auth(code);
+    if (r.ok) applySettings({ accessCode: code });
+    return r;
+  });
 
   ipcMain.handle('edit:open', async (_e, id) => {
     const meta = messageOrThrow(id);
@@ -867,7 +882,7 @@ if (!app.requestSingleInstanceLock()) {
   app.quit();
 } else {
   app.on('second-instance', () => showMain());
-  app.setAppUserModelId('com.ctrlvoice.app');
+  if (process.platform === 'win32') app.setAppUserModelId('com.ctrlvoice.app');
 
   app.whenReady().then(() => {
     migrateLegacyData();
@@ -875,6 +890,7 @@ if (!app.requestSingleInstanceLock()) {
     saveSettings();
     session.defaultSession.setPermissionRequestHandler((_wc, perm, cb) => cb(perm === 'media'));
     session.defaultSession.setPermissionCheckHandler((_wc, perm) => perm === 'media');
+    if (IS_MAC) systemPreferences.askForMediaAccess('microphone').catch(() => {});
 
     const startHidden = process.argv.includes('--hidden') || settings.startHidden;
     wireIpc();

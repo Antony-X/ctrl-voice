@@ -119,6 +119,9 @@ kbd + kbd { margin-left: 3px; }
 }
 .win-controls button:hover { background: var(--fill-2); color: var(--ink); }
 .win-controls .close:hover { background: #c42b1c; color: #fff; }
+.mac .win-controls { display: none; }
+.mac .win-drag { right: 0; }
+.mac .brand { padding-left: 68px; } /* room for the traffic lights */
 
 /* ---------- sidebar ---------- */
 .side {
@@ -551,3 +554,22 @@ select.field { width: 260px; padding-right: 6px; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* ---------- access code ---------- */
+.gate {
+  position: fixed; inset: 0; z-index: 29; display: grid; place-items: center; /* under the window buttons */
+  background: var(--canvas); -webkit-app-region: drag;
+}
+.gate[hidden] { display: none; }
+.gate-card {
+  width: min(380px, calc(100vw - 32px)); padding: 36px 32px 30px; border-radius: 18px;
+  background: var(--sheet); box-shadow: 0 0 0 1px var(--sheet-edge), var(--glass-shadow);
+  display: flex; flex-direction: column; align-items: center; text-align: center; -webkit-app-region: no-drag;
+}
+.gate-card .logo { width: 44px; height: 44px; fill: none; stroke: var(--ink); stroke-linecap: round; margin-bottom: 18px; }
+.gate-card h1 { font: 600 24px var(--display); color: var(--ink); margin: 0 0 8px; }
+.gate-card p { font: 14px/1.45 var(--ui); color: var(--ink-2); margin: 0 0 20px; }
+.gate-card .field { width: 100%; text-align: center; font-size: 15px; height: 40px; }
+.gate-card .gate-error { min-height: 20px; margin: 8px 0 12px; color: var(--danger); font-size: 13px; }
+.gate-card .text-btn.primary { width: 100%; height: 40px; justify-content: center; font-size: 14px; }
+.gate-card .text-btn.primary:disabled { opacity: 0.6; }

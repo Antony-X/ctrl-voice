@@ -8,6 +8,8 @@ const mainEl = $('main');
 const popEl = $('pop');
 const menuEl = $('menu');
 const toneEl = $('tone');
+const MAC = api.platform === 'darwin';
+if (MAC) document.body.classList.add('mac'); // native traffic lights instead of the drawn window buttons
 
 // ---------- helpers ----------
 const ICON = {
@@ -29,7 +31,8 @@ const errText = (err) => String(err?.message || err)
   .replace(/^Error invoking remote method '[^']+': /, '')
   .replace(/^\w*Error: /, '');
 
-const KEY_LABELS = { CommandOrControl: 'Ctrl', Super: 'Win', Escape: 'Esc', Up: '↑', Down: '↓', Left: '←', Right: '→' };
+const KEY_LABELS = { CommandOrControl: MAC ? '⌘' : 'Ctrl', Super: 'Win', Escape: 'Esc', Up: '↑', Down: '↓', Left: '←', Right: '→',
+  ...(MAC ? { Alt: '⌥', Shift: '⇧', Control: '⌃' } : {}) };
 const keycaps = (accel) => (accel || '').split('+').filter(Boolean).map(k => `<kbd>${esc(KEY_LABELS[k] || k)}</kbd>`).join('');
 
 function dayOf(ts) {
@@ -1225,6 +1228,7 @@ function renderSettings() {
 
       <section class="section"><h2>Engine</h2><div class="group">
         ${row('Server address', 'The ReSpeak engine that fixes your messages', `<input class="field url" id="backendUrl" value="${esc(s.backendUrl)}" spellcheck="false" />`)}
+        ${row('Access code', 'The code you were given for this engine', `<input class="field" id="accessCode" type="password" value="${esc(s.accessCode || '')}" spellcheck="false" autocomplete="off" />`)}
         ${row('Status', '', `${status}<button class="small-btn" data-action="health">Check</button>`)}
       </div></section>
 
@@ -1296,6 +1300,11 @@ function renderSettings() {
     await setSetting({ backendUrl: url });
     checkHealth();
   });
+  $('accessCode').addEventListener('change', async (e) => {
+    const r = await api.invoke('engine:unlock', e.target.value).catch(() => ({ ok: false, message: "Can't reach the engine" }));
+    toast(r.ok ? 'Access code saved' : r.message, !r.ok);
+    checkHealth();
+  });
 }
 
 // What the Your sound sliders do to every message.
@@ -1320,10 +1329,11 @@ function applySettingsPayload({ settings, shortcutStatus, defaults, demoMic }) {
 
 function accelFromEvent(e) {
   const parts = [];
-  if (e.ctrlKey) parts.push('CommandOrControl');
+  if (MAC ? e.metaKey : e.ctrlKey) parts.push('CommandOrControl');
+  if (MAC && e.ctrlKey) parts.push('Control');
   if (e.altKey) parts.push('Alt');
   if (e.shiftKey) parts.push('Shift');
-  if (e.metaKey) parts.push('Super');
+  if (!MAC && e.metaKey) parts.push('Super');
   const c = e.code;
   let key = null;
   if (/^Key[A-Z]$/.test(c)) key = c.slice(3);
@@ -1554,9 +1564,38 @@ api.on('win:state', ({ maximized }) => {
   $('maxBtn').title = maximized ? 'Restore' : 'Maximize';
 });
 
+// ---------- access code ----------
+// Shown over everything when the engine asks for a code the app doesn't have.
+function showGate(message = '') {
+  const gate = $('gate');
+  gate.innerHTML = `
+    <form class="gate-card" id="gateForm">
+      <svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><rect x="3.5" y="3.5" width="93" height="93" rx="22" stroke-width="7"/><path d="M22.6 40.5v19M36.1 30v40M50 18.5v63M63.9 31v38M77.4 41v18" stroke-width="6"/></svg>
+      <h1>Welcome to Ctrl+Voice</h1>
+      <p>Enter the access code you were given to connect to the engine.</p>
+      <input class="field" id="gateCode" type="password" placeholder="Access code" spellcheck="false" autocomplete="off" autofocus />
+      <p class="gate-error" id="gateError" role="alert">${esc(message)}</p>
+      <button class="text-btn primary" type="submit" id="gateBtn">Unlock</button>
+    </form>`;
+  gate.hidden = false;
+  $('gateCode').focus();
+  $('gateForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    $('gateBtn').disabled = true;
+    $('gateError').textContent = '';
+    const r = await api.invoke('engine:unlock', $('gateCode').value).catch(() => ({ ok: false, message: "Can't reach the engine" }));
+    if (r.ok) { gate.hidden = true; gate.innerHTML = ''; checkHealth(); return; }
+    $('gateError').textContent = r.message;
+    $('gateBtn').disabled = false;
+    $('gateCode').select();
+  });
+}
+
 // ---------- boot ----------
 (async function boot() {
   applySettingsPayload(await api.invoke('settings:get'));
   S.messages = (await api.invoke('messages:list')) || [];
   goHome();
+  const h = await api.invoke('engine:health').catch(() => null);
+  if (h?.locked) showGate(S.settings?.accessCode ? 'That access code no longer works' : '');
 })();

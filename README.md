@@ -23,22 +23,27 @@ Cuts keep your real audio. Only the few words you change are generated, from the
 | **Grammar** | Suggested fixes, rendered in your own voice and verified the same way. |
 | **Pronunciation coach** | Flags words that came out unclear (a detector trained on speechocean762 expert scores) and re-says them clearly. |
 | **Tone** | Confident, Calm and Warm sliders that mix into one pitch-and-pace change of your own recording (Praat PSOLA): no neural regeneration, so the voice stays yours. Confident also shortens hesitation pauses and tightens speech that trails off. An optional AI restyle has more styles. |
-| **Native accent** | The whole message said again with a native English accent by an AI voice, then converted back toward your voice (F5-TTS + Seed-VC). Clearly labelled as AI in the app. |
+| **Native accent** (optional) | Off by default. The whole message said again with a native English accent by an AI voice, then converted back toward your voice (F5-TTS + Seed-VC). Labelled as AI in the app. |
 
 The original recording is never modified. Every edit is a time range in an edit list (`cut` or `insert`), rendered when you play or send, so any change can be undone.
 
 ## How fast
 
-Measured on the running engine (one A100 80 GB, warm), for a 10–15 s message:
+The everyday path, record → clean → send, takes about a second. Measured on our hosted engine (warm) for a 10–15 s message:
 
 | Step | Time |
 |---|---|
 | Live transcript and "scratch that" | ~350 ms behind speech |
 | Upload and transcribe | 0.4 s |
 | Clean up (LLM + validators) | 0.5 s |
-| Natural tone (pitch and pace) | 0.6 s round trip |
-| Native accent, whole message | 2.8 s |
-| Replace a word (two models in parallel + verification) | ~3 s |
+| Tone in your own voice (pitch and pace) | 0.6 s |
+
+Only when you use them:
+
+| Optional | Time |
+|---|---|
+| Replace or re-say a word in your voice (two models in parallel + verification) | ~3 s |
+| Native accent, whole message (off by default) | 2.8 s |
 
 ## How it works
 
@@ -67,19 +72,27 @@ flowchart LR
 
 ## Run it
 
-### The app (Windows)
+### The app (Windows or macOS)
+
+The app is a thin client: all the AI runs on the engine, so it runs on any recent laptop. You need [Node.js](https://nodejs.org) 18 or newer and git.
 
 ```
-cd desktop
+git clone https://github.com/Antony-X/ctrl-voice.git
+cd ctrl-voice/desktop
 npm install
 npm start
 ```
 
-Set the engine address in **Settings → Engine** and press **Check**. Then open a chat and press `` Alt+` `` (the key under Esc) to record; press it again to send. Full shortcut list and behaviour: [`desktop/README.md`](desktop/README.md).
+On first launch the app asks for an **access code**: our hosted engine is already set as the server, and the code unlocks it (ask the team for it). Then open a chat and press `` Alt+` `` (Windows) or `` Option+` `` (macOS), the key under Esc, to record; press it again to send. Full shortcut list and behaviour: [`desktop/README.md`](desktop/README.md).
+
+On macOS:
+- Allow the microphone when asked.
+- To let Ctrl+Voice paste and send into Discord, WhatsApp or Telegram, allow **Terminal** (or whichever app you ran `npm start` from) in System Settings → Privacy & Security → **Accessibility**, and allow it to control **System Events** when asked. Without that, messages open in the editor and **Send** puts the audio on the clipboard.
+- The Mac version is new and has had less testing than the Windows one.
 
 ### The engine (Linux, NVIDIA GPU)
 
-Tested on Ubuntu 24.04, CUDA 12.8, one A100 80 GB. The paths assume a `/workspace` root (the RunPod default); on your own machine, create it or symlink it (`sudo ln -s ~/cv-workspace /workspace`).
+Tested on Ubuntu 24.04 with CUDA 12.8 on a single NVIDIA GPU. The paths assume a `/workspace` root (the RunPod default); on your own machine, create it or symlink it (`sudo ln -s ~/cv-workspace /workspace`).
 
 ```
 /workspace/app    <- app/           /workspace/lab   <- lab/
@@ -103,7 +116,7 @@ Tested on Ubuntu 24.04, CUDA 12.8, one A100 80 GB. The paths assume a `/workspac
    ```
 5. Open `http://<host>:7860` for the engine's own web UI ("Try a sample message" works without a mic), or point the desktop app at it.
 
-With 48 GB, leave out AuK. On a smaller card (24–32 GB), use a hosted LLM through `LLM_URL` and run only `playdiff f5`; we have not measured that setup yet.
+To protect a public engine, put an access code in `/workspace/app/.access_key`; the app and the web UI then ask for it. The biggest part of the engine's memory is the LLM: point `LLM_URL` at a hosted model and run only `playdiff f5` for a much smaller setup (not measured yet).
 
 Engine API: `/ws/{sid}` (live PCM, words, undo), `/api/upload`, and per session `/api/s/{sid}/` `clean`, `tighten`, `grammar`, `pron`, `intent`, `replace`, `render`, `natural`, `tone`, `accent`, `state`.
 
@@ -121,13 +134,17 @@ Two long research reports cover the model landscape, grammar, pronunciation and 
 
 ## Roadmap
 
+**Core focus: run it all on your own device.** The app already does no AI on the laptop; the next step is to move the engine there too, so messages never leave your machine and it works offline:
+- a small on-device recognizer and a compact LLM for the live transcript, undo and clean-up (most messages need nothing else);
+- a distilled voice editor for the few words said again in your voice;
+- the hosted engine stays as an optional boost for heavy extras like the native accent.
+
+Next:
 - **Native voice-message bubble.** Messages arrive as audio attachments today. Next: official integrations (a Telegram bot, a Discord app) that return the cleaned note as a real voice message.
-- **On-device first pass.** Live transcript, undo and clean-up on the laptop (whisper + a small LLM); the GPU is only needed for words said in your voice.
-- **Hosted LLM by default.** Frees about 40 GB of GPU for the most accurate voice editor (dots.tts.edit) and makes the engine fit on a single 24 GB card.
 - **Seams nobody can hear.** Room-tone fill and pitch smoothing at joins, measured with a blind "spot the edit" listening test.
 - **Provenance.** An AudioSeal watermark on every generated word, and a "words changed" note the listener can see.
 - **More languages.** The pipeline is language-agnostic except the aligner and the pronunciation model.
-- **macOS and mobile keyboards.** The same record → fix → send flow as a keyboard extension.
+- **Mobile.** The same record → fix → send flow as an iOS and Android keyboard.
 
 ## Repo layout
 

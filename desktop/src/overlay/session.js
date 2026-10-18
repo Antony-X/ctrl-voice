@@ -56,9 +56,10 @@
   }
 
   class LiveSession extends Emitter {
-    constructor({ server, micId = 'default', testAudio = null, audible = false } = {}) {
+    constructor({ server, accessCode = '', micId = 'default', testAudio = null, audible = false } = {}) {
       super();
       this.server = server;
+      this.accessCode = accessCode;
       this.micId = micId;
       this.testAudio = testAudio;
       this.audible = audible; // play the test audio out loud (demos)
@@ -296,7 +297,8 @@
         const url = new URL(this.server);
         url.protocol = url.protocol === 'https:' ? 'wss:' : 'ws:';
         url.pathname = `${url.pathname.replace(/\/+$/, '')}/ws/${this.sid}`;
-        url.search = url.hash = '';
+        url.search = this.accessCode ? `?key=${encodeURIComponent(this.accessCode)}` : '';
+        url.hash = '';
         ws = new WebSocket(url.href);
       } catch (err) {
         this._goOffline(`Can't connect (${err.message}). Recording locally`);

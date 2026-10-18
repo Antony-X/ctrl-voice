@@ -1,13 +1,13 @@
 # ReSpeak demo server: live transcript + semantic undo while recording, cut-only cleanup, AI word replacement, tone takes.
-import asyncio, gzip, json, os, re, sys, time, uuid
+import asyncio, difflib, gzip, hmac, json, os, re, sys, time, uuid
 import numpy as np, soundfile as sf, librosa, torch, httpx
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect, UploadFile, File, HTTPException, Request
-from fastapi.responses import FileResponse, RedirectResponse, Response
+from fastapi.responses import FileResponse, JSONResponse, RedirectResponse, Response
 from fastapi.staticfiles import StaticFiles
 sys.path.insert(0, "/workspace/app"); sys.path.insert(0, "/workspace/lab")
 from faster_whisper import WhisperModel
 from speechbrain.inference.speaker import EncoderClassifier
-from brain import clean, last_thought, spoken_command, grammar, tighten, intent, norm, FILLERS
+from brain import clean, last_thought, spoken_command, grammar, tighten, intent, norm, filler
 from render import render, gap_edges, quiet
 from align import align, emissions, spell, V as CTC_V, BLANK as CTC_BLANK
 from prosody import restyle, blend, PRESETS
@@ -24,15 +24,77 @@ asr = WhisperModel(os.environ.get("ASR", "large-v3-turbo"), device="cuda", compu
 spk = EncoderClassifier.from_hparams("speechbrain/spkrec-ecapa-voxceleb", savedir="/workspace/hf/ecapa", run_opts={"device": "cuda"})
 GPU = asyncio.Lock()
 app = FastAPI()
+# Access code: when /workspace/app/.access_key exists, every /api call and the live socket need it
+# (x-access-code header, ?key= or the cv_access cookie the web page sets), so a public URL doesn't hand out the GPU.
+ACCESS_FILE = os.environ.get("ACCESS_FILE", "/workspace/app/.access_key")
+ACCESS = open(ACCESS_FILE).read().strip() if os.path.exists(ACCESS_FILE) else ""
 
 
-def transcribe(x, beam=1):
+def allowed(conn):
+    k = conn.headers.get("x-access-code") or conn.query_params.get("key") or conn.cookies.get("cv_access") or ""
+    return not ACCESS or hmac.compare_digest(k.strip().encode(), ACCESS.encode())
+
+
+@app.middleware("http")
+async def gate(req: Request, call_next):
+    if req.url.path.startswith("/api") and not allowed(req): return JSONResponse({"detail": "Wrong access code"}, 401)
+    return await call_next(req)
+
+
+@app.get("/api/auth")
+def auth(): return {"ok": True}
+
+
+def transcribe(x, beam=1, fill=False):
     x16 = librosa.resample(x, orig_sr=SR, target_sr=16000) if len(x) else x
     if len(x16) < 8000: return []
     segs, _ = asr.transcribe(x16, language="en", word_timestamps=True, initial_prompt=PROMPT, beam_size=beam, condition_on_previous_text=False)
     ws = [dict(w=w.word.strip(), s=round(w.start, 3), e=round(w.end, 3), p=round(w.probability, 2)) for s in segs for w in s.words if w.word.strip()]
-    al = align(x16, [w["w"] for w in ws]) if ws else []  # CTC forced alignment: whisper's own word times are off by 0.1-0.4 s
+    if not ws: return []
+    em = emissions(x16); sp = [w["w"] for w in ws]
+    if fill:
+        for k, t, s, e in sorted(lost_fillers(em, ws, len(x16) / 16000 / em.shape[0]), reverse=True):
+            ws.insert(k, dict(w="um" if re.search("[MN]", t) else "uh", s=s, e=e, p=0.0)); sp.insert(k, t)
+    al = align(x16, sp, em)  # CTC forced alignment: whisper's own word times are off by 0.1-0.4 s
     return [dict(w, s=round(a[0], 3), e=round(a[1], 3)) if a else w for w, a in zip(ws, al)]
+
+
+CTC_FILL = re.compile(r"U+H*M*|[AEO]+[HMN]+|E+R+M*|H+M+|M+")  # how the char model spells um / uh ("um" often comes out as ON)
+CTC_INV = {v: k for k, v in CTC_V.items()}
+
+
+def lost_fillers(em, ws, fs):
+    """Ums Whisper left out: it writes fluent text even when prompted with fillers, but the char CTC model, which has no
+    language model, still spells them ("Nikoloz, um, big news" -> NICLOS ON BIG NEWS). Each CTC word that the word-level
+    alignment can only explain as an extra word, and that is spelled like a filler, becomes one. -> [(index, spelling, s, e)]"""
+    b, cur, prev = [], None, None
+    for t, c in enumerate(em.argmax(-1)):
+        if c != prev and c != CTC_BLANK:
+            if CTC_INV[c] == "|": cur = None
+            elif cur is None: cur = [CTC_INV[c], t, t]; b.append(cur)
+            else: cur[0] += CTC_INV[c]; cur[2] = t
+        prev = c
+    a, bs = [spell(w["w"]) for w in ws], [w[0] for w in b]
+    sim = lambda p, q: difflib.SequenceMatcher(None, p, q).ratio()
+    out = []
+    for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, bs, autojunk=False).get_opcodes():
+        if op not in ("insert", "replace"): continue
+        A, B = a[i1:i2], bs[j1:j2]; ins = [0.6 if CTC_FILL.fullmatch(t) else 1.0 for t in B]
+        sub = lambda p, q: 0.0 if ins[q] < 1 and CTC_FILL.fullmatch(A[p]) else 2 * (1 - sim(A[p], B[q]))  # a wrong word costs a missed one plus an extra one
+        D = np.zeros((len(A) + 1, len(B) + 1)); D[:, 0] = np.arange(len(A) + 1); D[0, 1:] = np.cumsum(ins)
+        for p in range(1, len(A) + 1):
+            for q in range(1, len(B) + 1): D[p, q] = min(D[p - 1, q - 1] + sub(p - 1, q - 1), D[p - 1, q] + 1, D[p, q - 1] + ins[q - 1])
+        p, q = len(A), len(B)
+        while q > 0:
+            if p > 0 and np.isclose(D[p, q], D[p - 1, q - 1] + sub(p - 1, q - 1)): p, q = p - 1, q - 1
+            elif p > 0 and np.isclose(D[p, q], D[p - 1, q] + 1): p -= 1
+            else:
+                q -= 1; k, jj, t = i1 + p, j1 + q, B[q]
+                # a filler-like piece of a split word ("AM" + "AZON" = Amazon) matches its neighbour better when glued back on
+                split = (k > 0 and jj > 0 and sim(a[k - 1], bs[jj - 1] + t) > sim(a[k - 1], bs[jj - 1])) or \
+                        (k < len(a) and jj + 1 < len(bs) and sim(a[k], t + bs[jj + 1]) > sim(a[k], bs[jj + 1]))
+                if ins[q] < 1 and not split: out.append((k, t, round(b[jj][1] * fs, 3), round((b[jj][2] + 1) * fs, 3)))
+    return out
 
 
 def pron_pred(x, sr, words):
@@ -82,7 +144,7 @@ def get(sid):
 
 
 async def refresh(s, beam=1):
-    async with GPU: s.words = await asyncio.to_thread(transcribe, s.audio().copy(), beam)
+    async with GPU: s.words = await asyncio.to_thread(transcribe, s.audio().copy(), beam, True)  # the message itself: put back the ums Whisper drops
 
 
 def cut_range(words, k, end):
@@ -101,6 +163,7 @@ async def do_undo(s, kind="undo"):
 
 @app.websocket("/ws/{sid}")
 async def ws(sock: WebSocket, sid: str):
+    if not allowed(sock): return await sock.close(code=4401)
     await sock.accept(); s = S[sid] = Session(sid); busy = False; last_cmd = 0
 
     async def live():
@@ -218,7 +281,7 @@ async def api_replace(sid: str, r: dict):
     new = " ".join(re.sub(r"[.,!?;:]+$", "", w["w"]) for w in W[i:j + 1]) if same else r["new"].strip()
     # Re-say the word together with the one before it: alone, the new word often keeps the old onset
     # ("specific" spliced after "more" still sounded like "pacific"; "more specific" did not).
-    if (not same and r.get("widen", True) and i > 0 and s.flags()[i - 1] is None and norm(W[i - 1]["w"]) not in FILLERS
+    if (not same and r.get("widen", True) and i > 0 and s.flags()[i - 1] is None and not filler(W[i - 1]["w"])
             and not re.search(r"[.,!?;:]$", W[i - 1]["w"]) and W[i]["s"] - W[i - 1]["e"] < 0.3):
         i -= 1; new = re.sub(r"[.,!?;:]+$", "", W[i]["w"]) + " " + new
     a, b, L, R = window(W, i, j, dur)
