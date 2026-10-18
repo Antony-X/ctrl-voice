@@ -1,0 +1,137 @@
+{
+ "file": "so762_1236_2116.wav",
+ "t": {
+  "upload": 1730,
+  "checks": 2336,
+  "replace": 0,
+  "render": 1629
+ },
+ "sid": "2d1db601",
+ "words": [
+  {
+   "w": "Follow",
+   "s": 0.582,
+   "e": 0.944,
+   "p": 0.81
+  },
+  {
+   "w": "the",
+   "s": 0.984,
+   "e": 1.105,
+   "p": 1
+  },
+  {
+   "w": "link",
+   "s": 1.145,
+   "e": 1.607,
+   "p": 0.99
+  },
+  {
+   "w": "below",
+   "s": 1.627,
+   "e": 2.069,
+   "p": 0.98
+  },
+  {
+   "w": "to",
+   "s": 2.109,
+   "e": 2.33,
+   "p": 1
+  },
+  {
+   "w": "register.",
+   "s": 2.41,
+   "e": 3.093,
+   "p": 0.87
+  }
+ ],
+ "dur": 3.997,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.9,
+   10,
+   9.1,
+   9.9,
+   10,
+   9.6
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 4,
+  "ai": [],
+  "file": "out_b14dfa.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "Follow the link below to register.",
+ "label": {
+  "row": 1236,
+  "speaker": "2116",
+  "age": 20,
+  "gender": "f",
+  "text": "FOLLOW THE LINK BELOW TO REGISTER",
+  "dur": 4,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 8,
+  "fluency": 8,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 5,
+    "w": "REGISTER",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 1,
+      "pronounced-phone": "IH"
+     }
+    ],
+    "phones": [
+     "R",
+     "EH1",
+     "JH",
+     "IH0",
+     "S",
+     "T",
+     "ER0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "FOLLOW",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "LINK",
+    "acc": 10
+   },
+   {
+    "w": "BELOW",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "REGISTER",
+    "acc": 5
+   }
+  ],
+  "id": "so762_1236_2116"
+ }
+}

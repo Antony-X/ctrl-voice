@@ -1,0 +1,133 @@
+{
+ "file": "so762_365_0457.wav",
+ "t": {
+  "upload": 728,
+  "checks": 2178,
+  "replace": 0,
+  "render": 1583
+ },
+ "sid": "975593e4",
+ "words": [
+  {
+   "w": "Or",
+   "s": 0.624,
+   "e": 0.785,
+   "p": 0.44
+  },
+  {
+   "w": "when",
+   "s": 0.805,
+   "e": 1.027,
+   "p": 0.93
+  },
+  {
+   "w": "you",
+   "s": 1.067,
+   "e": 1.269,
+   "p": 1
+  },
+  {
+   "w": "open",
+   "s": 1.349,
+   "e": 1.671,
+   "p": 0.99
+  },
+  {
+   "w": "the",
+   "s": 1.692,
+   "e": 1.893,
+   "p": 0.97
+  },
+  {
+   "w": "oven,",
+   "s": 1.973,
+   "e": 2.296,
+   "p": 0.99
+  }
+ ],
+ "dur": 2.94,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.8,
+   9.6,
+   9.9,
+   9.6,
+   9.4,
+   9
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 2.94,
+  "ai": [],
+  "file": "out_f5bfbb.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "Or when you open the oven,",
+ "label": {
+  "row": 365,
+  "speaker": "0457",
+  "age": 21,
+  "gender": "f",
+  "text": "OR WHEN YOU OPEN THE OVEN",
+  "dur": 2.94,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 5,
+    "w": "OVEN",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 0,
+      "pronounced-phone": "OW"
+     }
+    ],
+    "phones": [
+     "AH1",
+     "V",
+     "N"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "OR",
+    "acc": 10
+   },
+   {
+    "w": "WHEN",
+    "acc": 10
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "OPEN",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "OVEN",
+    "acc": 5
+   }
+  ],
+  "id": "so762_365_0457"
+ }
+}

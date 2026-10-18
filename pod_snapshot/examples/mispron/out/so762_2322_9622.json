@@ -1,0 +1,404 @@
+{
+ "file": "so762_2322_9622.wav",
+ "t": {
+  "upload": 970,
+  "checks": 2222,
+  "replace": 13138,
+  "render": 1563
+ },
+ "sid": "3c3db550",
+ "words": [
+  {
+   "w": "See,",
+   "s": 0.643,
+   "e": 1.528,
+   "p": 0.04
+  },
+  {
+   "w": "sort",
+   "s": 1.568,
+   "e": 1.849,
+   "p": 0.64
+  },
+  {
+   "w": "of,",
+   "s": 1.91,
+   "e": 2.332,
+   "p": 0.77
+  },
+  {
+   "w": "four,",
+   "s": 2.352,
+   "e": 2.814,
+   "p": 0.22
+  },
+  {
+   "w": "uh,",
+   "s": 2.935,
+   "e": 3.357,
+   "p": 0.03
+  },
+  {
+   "w": "motor.",
+   "s": 3.377,
+   "e": 3.779,
+   "p": 0.42
+  }
+ ],
+ "dur": 4.342,
+ "clean": [
+  {
+   "i": 4,
+   "j": 4,
+   "kind": "filler",
+   "text": "uh,",
+   "auto": true,
+   "t0": 2.875,
+   "t1": 3.367
+  }
+ ],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 3,
+    "word": "four,",
+    "acc": 6.2,
+    "canon": "foːɹ",
+    "heard": "sɑɑ",
+    "sub": "∅",
+    "phone": "oːɹ"
+   },
+   {
+    "i": 5,
+    "word": "motor.",
+    "acc": 4.8,
+    "canon": "moʊɾɚ",
+    "heard": "mata",
+    "sub": "∅",
+    "phone": "ɚ"
+   }
+  ],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.8,
+   9.2,
+   8.9,
+   6.2,
+   9.2,
+   4.8
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 3,
+    "word": "four,",
+    "acc": 6.2,
+    "canon": "foːɹ",
+    "heard": "sɑɑ",
+    "sub": "∅",
+    "phone": "oːɹ"
+   },
+   "on": true,
+   "op": {
+    "t0": 2.342,
+    "t1": 2.875,
+    "insert": "71f9ba17",
+    "i": 3,
+    "j": 3,
+    "old": "four,",
+    "new": "four",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 7.7
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": false,
+     "sim": 0.397,
+     "heard": "Si, sota, for, uh, mata.",
+     "id": "34d25ace",
+     "sec": 3.43,
+     "after": 3.97
+    },
+    {
+     "engine": "f5",
+     "ok": false,
+     "sim": 0.694,
+     "heard": "See, sort of, for, uh, mother.",
+     "id": "11ee0a18",
+     "sec": 1.07,
+     "after": 6.94
+    },
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.27,
+     "heard": "Si, sota, four, uh, mata.",
+     "id": "71f9ba17",
+     "sec": 3.13,
+     "after": 7.7
+    },
+    {
+     "engine": "f5",
+     "ok": false,
+     "sim": 0.661,
+     "heard": "See, sort of, for, uh, mother.",
+     "id": "d47e565c",
+     "sec": 1.18,
+     "after": 6.61
+    }
+   ],
+   "sec": 8.35
+  },
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 5,
+    "word": "motor.",
+    "acc": 4.8,
+    "canon": "moʊɾɚ",
+    "heard": "mata",
+    "sub": "∅",
+    "phone": "ɚ"
+   },
+   "on": true,
+   "op": {
+    "t0": 3.367,
+    "t1": 3.819,
+    "insert": "ff16d164",
+    "i": 5,
+    "j": 5,
+    "old": "motor.",
+    "new": "motor",
+    "engine": "f5",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 8.55
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.344,
+     "heard": "Si, sa, ta, fa, o, motor.",
+     "id": "5183b28d",
+     "sec": 3.59,
+     "after": 8.44
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.355,
+     "heard": "C, Sata, 4, uh, motor.",
+     "id": "ff16d164",
+     "sec": 1.28,
+     "after": 8.55
+    }
+   ],
+   "sec": 4.3
+  }
+ ],
+ "render": {
+  "dur": 4.37,
+  "ai": [
+   [
+    2.37,
+    3.4
+   ],
+   [
+    3.4,
+    3.9
+   ]
+  ],
+  "file": "out_41f14d.wav"
+ },
+ "ops": [
+  {
+   "id": "mvde8qomi",
+   "type": "cut",
+   "t0": 2.875,
+   "t1": 3.367,
+   "i": 4,
+   "j": 4,
+   "kind": "filler",
+   "text": "uh,",
+   "on": true,
+   "auto": true
+  },
+  {
+   "id": "mvde8x9rj",
+   "type": "replace",
+   "t0": 2.342,
+   "t1": 2.875,
+   "insert": "71f9ba17",
+   "i": 3,
+   "j": 3,
+   "old": "four,",
+   "new": "four",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 7.7,
+   "on": true
+  },
+  {
+   "id": "mvde90tkk",
+   "type": "replace",
+   "t0": 3.367,
+   "t1": 3.819,
+   "insert": "ff16d164",
+   "i": 5,
+   "j": 5,
+   "old": "motor.",
+   "new": "motor",
+   "engine": "f5",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 8.55,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 2.875,
+   "t1": 3.367,
+   "insert": null
+  },
+  {
+   "t0": 3.367,
+   "t1": 3.819,
+   "insert": "ff16d164"
+  },
+  {
+   "t0": 2.342,
+   "t1": 2.875,
+   "insert": "71f9ba17"
+  }
+ ],
+ "finalText": "See, sort of, four motor",
+ "afterCheck": {
+  "sid": "01485c84",
+  "words": [
+   {
+    "w": "Si,",
+    "s": 0.642,
+    "e": 1.525,
+    "p": 0.07,
+    "x": null
+   },
+   {
+    "w": "sata,",
+    "s": 1.565,
+    "e": 2.348,
+    "p": 0.47,
+    "x": null
+   },
+   {
+    "w": "fur,",
+    "s": 2.388,
+    "e": 3.391,
+    "p": 0.27,
+    "x": null
+   },
+   {
+    "w": "mota.",
+    "s": 3.431,
+    "e": 3.773,
+    "p": 0.71,
+    "x": null
+   }
+  ],
+  "dur": 4.374458333333333,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.7,
+    8.3,
+    8.6,
+    9.3
+   ]
+  }
+ },
+ "label": {
+  "row": 2322,
+  "speaker": "9622",
+  "age": 20,
+  "gender": "f",
+  "text": "SHE THOUGHT FOR A MOMENT.",
+  "dur": 4.34,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 5,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "MOMENT",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "OW",
+      "index": 1,
+      "pronounced-phone": "AH"
+     },
+     {
+      "canonical-phone": "M",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "N",
+      "index": 4,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "M",
+     "OW1",
+     "M",
+     "AH0",
+     "N",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "SHE",
+    "acc": 10
+   },
+   {
+    "w": "THOUGHT",
+    "acc": 10
+   },
+   {
+    "w": "FOR",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "MOMENT",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2322_9622"
+ }
+}

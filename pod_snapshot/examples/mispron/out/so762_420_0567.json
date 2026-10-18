@@ -1,0 +1,126 @@
+{
+ "file": "so762_420_0567.wav",
+ "t": {
+  "upload": 863,
+  "checks": 1681,
+  "replace": 0,
+  "render": 985
+ },
+ "sid": "a4092c01",
+ "words": [
+  {
+   "w": "Who",
+   "s": 0.542,
+   "e": 0.742,
+   "p": 0.26
+  },
+  {
+   "w": "knows",
+   "s": 0.782,
+   "e": 1.164,
+   "p": 0.96
+  },
+  {
+   "w": "what",
+   "s": 1.204,
+   "e": 1.444,
+   "p": 0.94
+  },
+  {
+   "w": "to",
+   "s": 1.464,
+   "e": 1.765,
+   "p": 0.66
+  },
+  {
+   "w": "expect?",
+   "s": 1.826,
+   "e": 2.528,
+   "p": 0.98
+  }
+ ],
+ "dur": 3.31,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.8,
+   7.3,
+   9.2,
+   9.9,
+   9.4
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 3.31,
+  "ai": [],
+  "file": "out_799c05.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "Who knows what to expect?",
+ "label": {
+  "row": 420,
+  "speaker": "0567",
+  "age": 21,
+  "gender": "f",
+  "text": "WHO KNOWS WHAT TO EXPECT",
+  "dur": 3.31,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "EXPECT",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 4,
+      "pronounced-phone": "EY"
+     }
+    ],
+    "phones": [
+     "IH0",
+     "K",
+     "S",
+     "P",
+     "EH1",
+     "K",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "WHO",
+    "acc": 10
+   },
+   {
+    "w": "KNOWS",
+    "acc": 8
+   },
+   {
+    "w": "WHAT",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "EXPECT",
+    "acc": 5
+   }
+  ],
+  "id": "so762_420_0567"
+ }
+}

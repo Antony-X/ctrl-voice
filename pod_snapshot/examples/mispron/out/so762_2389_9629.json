@@ -1,0 +1,277 @@
+{
+ "file": "so762_2389_9629.wav",
+ "t": {
+  "upload": 1458,
+  "checks": 836,
+  "replace": 3851,
+  "render": 1501
+ },
+ "sid": "a49fd881",
+ "words": [
+  {
+   "w": "I",
+   "s": 0.601,
+   "e": 0.882,
+   "p": 0.89
+  },
+  {
+   "w": "can",
+   "s": 0.922,
+   "e": 1.583,
+   "p": 0.99
+  },
+  {
+   "w": "get",
+   "s": 1.623,
+   "e": 2.725,
+   "p": 0.98
+  },
+  {
+   "w": "her",
+   "s": 2.785,
+   "e": 3.566,
+   "p": 0.95
+  },
+  {
+   "w": "back.",
+   "s": 3.626,
+   "e": 3.927,
+   "p": 0.87
+  }
+ ],
+ "dur": 4.648,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 1,
+    "word": "can",
+    "acc": 6.4,
+    "canon": "kæn",
+    "heard": "kak",
+    "sub": "k",
+    "phone": "n"
+   }
+  ],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.4,
+   6.4,
+   8.4,
+   7.6,
+   9.1
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 1,
+    "word": "can",
+    "acc": 6.4,
+    "canon": "kæn",
+    "heard": "kak",
+    "sub": "k",
+    "phone": "n"
+   },
+   "on": true,
+   "op": {
+    "t0": 0.902,
+    "t1": 1.603,
+    "insert": "63956510",
+    "i": 1,
+    "j": 1,
+    "old": "can",
+    "new": "can",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 9.19
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.419,
+     "heard": "I can get her, her, back her.",
+     "id": "63956510",
+     "sec": 2.93,
+     "after": 9.19
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.281,
+     "heard": "I can get her back.",
+     "id": "bd6613ec",
+     "sec": 1.83,
+     "after": 7.81
+    }
+   ],
+   "sec": 3.67
+  }
+ ],
+ "render": {
+  "dur": 4.18,
+  "ai": [
+   [
+    0.87,
+    1.12
+   ]
+  ],
+  "file": "out_a9067f.wav"
+ },
+ "ops": [
+  {
+   "id": "mvde9hyen",
+   "type": "replace",
+   "t0": 0.902,
+   "t1": 1.603,
+   "insert": "63956510",
+   "i": 1,
+   "j": 1,
+   "old": "can",
+   "new": "can",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 9.19,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 0.902,
+   "t1": 1.603,
+   "insert": "63956510"
+  }
+ ],
+ "finalText": "I can get her back.",
+ "afterCheck": {
+  "sid": "557e5551",
+  "words": [
+   {
+    "w": "I",
+    "s": 0.603,
+    "e": 0.845,
+    "p": 0.89,
+    "x": null
+   },
+   {
+    "w": "can",
+    "s": 0.885,
+    "e": 1.126,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "get",
+    "s": 1.167,
+    "e": 1.448,
+    "p": 0.97,
+    "x": null
+   },
+   {
+    "w": "her,",
+    "s": 1.489,
+    "e": 2.273,
+    "p": 0.85,
+    "x": null
+   },
+   {
+    "w": "her,",
+    "s": 2.333,
+    "e": 3.118,
+    "p": 0.76,
+    "x": null
+   },
+   {
+    "w": "back",
+    "s": 3.158,
+    "e": 3.5,
+    "p": 0.83,
+    "x": null
+   },
+   {
+    "w": "her.",
+    "s": 3.54,
+    "e": 3.621,
+    "p": 0.9,
+    "x": null
+   }
+  ],
+  "dur": 4.183958333333333,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.9,
+    9.2,
+    9.5,
+    6,
+    7.1,
+    9.3,
+    6.5
+   ]
+  }
+ },
+ "label": {
+  "row": 2389,
+  "speaker": "9629",
+  "age": 25,
+  "gender": "f",
+  "text": "I CAN GET HER BACK.",
+  "dur": 4.65,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 5,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "BACK",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AE",
+      "index": 1,
+      "pronounced-phone": "AH"
+     }
+    ],
+    "phones": [
+     "B",
+     "AE0",
+     "K"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "CAN",
+    "acc": 10
+   },
+   {
+    "w": "GET",
+    "acc": 10
+   },
+   {
+    "w": "HER",
+    "acc": 10
+   },
+   {
+    "w": "BACK",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2389_9629"
+ }
+}

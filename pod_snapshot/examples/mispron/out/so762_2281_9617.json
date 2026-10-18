@@ -1,0 +1,340 @@
+{
+ "file": "so762_2281_9617.wav",
+ "t": {
+  "upload": 396,
+  "checks": 1459,
+  "replace": 4768,
+  "render": 1472
+ },
+ "sid": "0cb44fff",
+ "words": [
+  {
+   "w": "The",
+   "s": 0.562,
+   "e": 1.223,
+   "p": 0.14
+  },
+  {
+   "w": "on",
+   "s": 1.544,
+   "e": 1.785,
+   "p": 0.16
+  },
+  {
+   "w": "the",
+   "s": 1.805,
+   "e": 1.945,
+   "p": 0.36
+  },
+  {
+   "w": "back",
+   "s": 1.965,
+   "e": 2.367,
+   "p": 0.98
+  },
+  {
+   "w": "door",
+   "s": 2.407,
+   "e": 2.647,
+   "p": 0.97
+  },
+  {
+   "w": "of",
+   "s": 2.748,
+   "e": 2.868,
+   "p": 1
+  },
+  {
+   "w": "the",
+   "s": 2.948,
+   "e": 3.229,
+   "p": 0.98
+  },
+  {
+   "w": "house.",
+   "s": 3.289,
+   "e": 3.69,
+   "p": 0.99
+  }
+ ],
+ "dur": 4.352,
+ "clean": [
+  {
+   "i": 0,
+   "j": 1,
+   "kind": "restart",
+   "text": "The on",
+   "auto": true,
+   "t0": 0.522,
+   "t1": 1.795
+  }
+ ],
+ "grammar": [
+  {
+   "i": 1,
+   "j": 4,
+   "old": "on the back door",
+   "new": "is on the back door"
+  }
+ ],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 4,
+    "word": "door",
+    "acc": 6.2,
+    "canon": "doːɹ",
+    "heard": "tuːaʔa",
+    "sub": "uː",
+    "phone": "oːɹ"
+   }
+  ],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   8.5,
+   9.4,
+   9.7,
+   9.3,
+   6.2,
+   8.3,
+   9.7,
+   9.7
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 4,
+    "word": "door",
+    "acc": 6.2,
+    "canon": "doːɹ",
+    "heard": "tuːaʔa",
+    "sub": "uː",
+    "phone": "oːɹ"
+   },
+   "on": true,
+   "op": {
+    "t0": 2.387,
+    "t1": 2.697,
+    "insert": "8011b066",
+    "i": 4,
+    "j": 4,
+    "old": "door",
+    "new": "door",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 8.61
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.361,
+     "heard": "The un -out -the -back door of the house.",
+     "id": "8011b066",
+     "sec": 3.57,
+     "after": 8.61
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.332,
+     "heard": "The un -out -the -back door of the house.",
+     "id": "d4641910",
+     "sec": 1.71,
+     "after": 8.32
+    }
+   ],
+   "sec": 4.59
+  }
+ ],
+ "render": {
+  "dur": 2.99,
+  "ai": [
+   [
+    1.09,
+    1.32
+   ]
+  ],
+  "file": "out_483f65.wav"
+ },
+ "ops": [
+  {
+   "id": "mvde940dl",
+   "type": "cut",
+   "t0": 0.522,
+   "t1": 1.795,
+   "i": 0,
+   "j": 1,
+   "kind": "restart",
+   "text": "The on",
+   "on": true,
+   "auto": true
+  },
+  {
+   "id": "mvde97otm",
+   "type": "replace",
+   "t0": 2.387,
+   "t1": 2.697,
+   "insert": "8011b066",
+   "i": 4,
+   "j": 4,
+   "old": "door",
+   "new": "door",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 8.61,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 0.522,
+   "t1": 1.795,
+   "insert": null
+  },
+  {
+   "t0": 2.387,
+   "t1": 2.697,
+   "insert": "8011b066"
+  }
+ ],
+ "finalText": "the back door of the house.",
+ "afterCheck": {
+  "sid": "03c46715",
+  "words": [
+   {
+    "w": "The",
+    "s": 0.461,
+    "e": 0.621,
+    "p": 0.37,
+    "x": null
+   },
+   {
+    "w": "back",
+    "s": 0.661,
+    "e": 1.062,
+    "p": 0.97,
+    "x": null
+   },
+   {
+    "w": "door",
+    "s": 1.082,
+    "e": 1.303,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "of",
+    "s": 1.363,
+    "e": 1.483,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "the",
+    "s": 1.603,
+    "e": 1.864,
+    "p": 0.94,
+    "x": null
+   },
+   {
+    "w": "house.",
+    "s": 1.904,
+    "e": 2.325,
+    "p": 0.99,
+    "x": null
+   }
+  ],
+  "dur": 2.9864166666666665,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.8,
+    9.5,
+    8.6,
+    8.8,
+    9.3,
+    9.7
+   ]
+  }
+ },
+ "label": {
+  "row": 2281,
+  "speaker": "9617",
+  "age": 35,
+  "gender": "f",
+  "text": "THEN ON OUT THE BACK DOOR OF THE HOUSE.",
+  "dur": 4.35,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 6,
+  "fluency": 6,
+  "n_words": 9,
+  "bad": [
+   {
+    "i": 0,
+    "w": "THEN",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "N",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "DH",
+     "EH0",
+     "N"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THEN",
+    "acc": 3
+   },
+   {
+    "w": "ON",
+    "acc": 10
+   },
+   {
+    "w": "OUT",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "BACK",
+    "acc": 10
+   },
+   {
+    "w": "DOOR",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "HOUSE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2281_9617"
+ }
+}

@@ -1,0 +1,133 @@
+{
+ "file": "so762_2256_9610.wav",
+ "t": {
+  "upload": 1515,
+  "checks": 1068,
+  "replace": 0,
+  "render": 1816
+ },
+ "sid": "1a5f84e3",
+ "words": [
+  {
+   "w": "Here",
+   "s": 0.681,
+   "e": 1.442,
+   "p": 0.44
+  },
+  {
+   "w": "was",
+   "s": 1.502,
+   "e": 2.745,
+   "p": 0.97
+  },
+  {
+   "w": "nothing",
+   "s": 2.805,
+   "e": 3.786,
+   "p": 0.83
+  },
+  {
+   "w": "left",
+   "s": 3.826,
+   "e": 4.588,
+   "p": 0.99
+  },
+  {
+   "w": "for",
+   "s": 4.628,
+   "e": 5.169,
+   "p": 0.97
+  },
+  {
+   "w": "me.",
+   "s": 5.209,
+   "e": 5.329,
+   "p": 1
+  }
+ ],
+ "dur": 6.01,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   8.4,
+   9.3,
+   9,
+   9.7,
+   8.3,
+   9.9
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 6.01,
+  "ai": [],
+  "file": "out_401213.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "Here was nothing left for me.",
+ "label": {
+  "row": 2256,
+  "speaker": "9610",
+  "age": 22,
+  "gender": "f",
+  "text": "THERE WAS NOTHING LEFT FOR ME.",
+  "dur": 6.01,
+  "sr": 16000,
+  "utt_acc": 5,
+  "utt_total": 4,
+  "fluency": 5,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 0,
+    "w": "THERE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "DH",
+      "index": 0,
+      "pronounced-phone": "HH"
+     }
+    ],
+    "phones": [
+     "DH",
+     "EH0",
+     "R"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THERE",
+    "acc": 3
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "NOTHING",
+    "acc": 10
+   },
+   {
+    "w": "LEFT",
+    "acc": 10
+   },
+   {
+    "w": "FOR",
+    "acc": 10
+   },
+   {
+    "w": "ME",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2256_9610"
+ }
+}

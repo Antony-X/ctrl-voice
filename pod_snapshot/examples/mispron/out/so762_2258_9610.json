@@ -1,0 +1,144 @@
+{
+ "file": "so762_2258_9610.wav",
+ "t": {
+  "upload": 1054,
+  "checks": 1399,
+  "replace": 0,
+  "render": 1075
+ },
+ "sid": "7d330580",
+ "words": [
+  {
+   "w": "It",
+   "s": 0.641,
+   "e": 1.362,
+   "p": 0.62
+  },
+  {
+   "w": "was",
+   "s": 1.402,
+   "e": 2.263,
+   "p": 1
+  },
+  {
+   "w": "when",
+   "s": 2.303,
+   "e": 3.064,
+   "p": 0.96
+  },
+  {
+   "w": "I",
+   "s": 3.204,
+   "e": 3.565,
+   "p": 0.99
+  },
+  {
+   "w": "was",
+   "s": 3.605,
+   "e": 4.145,
+   "p": 1
+  },
+  {
+   "w": "very",
+   "s": 4.186,
+   "e": 5.227,
+   "p": 0.99
+  },
+  {
+   "w": "young.",
+   "s": 5.267,
+   "e": 5.547,
+   "p": 1
+  }
+ ],
+ "dur": 6.068,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.5,
+   9.8,
+   8.4,
+   10,
+   9.9,
+   9.1,
+   9.8
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 6.07,
+  "ai": [],
+  "file": "out_21fb78.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "It was when I was very young.",
+ "label": {
+  "row": 2258,
+  "speaker": "9610",
+  "age": 22,
+  "gender": "f",
+  "text": "IT WAS WHEN I WAS VERY YOUNG.",
+  "dur": 6.07,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 5,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 2,
+    "w": "WHEN",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 1,
+      "pronounced-phone": "IH"
+     }
+    ],
+    "phones": [
+     "W",
+     "EH0",
+     "N"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "WHEN",
+    "acc": 3
+   },
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "VERY",
+    "acc": 10
+   },
+   {
+    "w": "YOUNG",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2258_9610"
+ }
+}

@@ -1,0 +1,133 @@
+{
+ "file": "so762_1403_2538.wav",
+ "t": {
+  "upload": 851,
+  "checks": 1452,
+  "replace": 0,
+  "render": 1443
+ },
+ "sid": "cc237d96",
+ "words": [
+  {
+   "w": "It",
+   "s": 0.642,
+   "e": 0.763,
+   "p": 0.82
+  },
+  {
+   "w": "is",
+   "s": 0.823,
+   "e": 1.064,
+   "p": 0.97
+  },
+  {
+   "w": "an",
+   "s": 1.144,
+   "e": 1.847,
+   "p": 0.96
+  },
+  {
+   "w": "international",
+   "s": 1.907,
+   "e": 2.69,
+   "p": 0.96
+  },
+  {
+   "w": "word.",
+   "s": 2.73,
+   "e": 2.991,
+   "p": 0.94
+  }
+ ],
+ "dur": 3.694,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.8,
+   9.9,
+   9.9,
+   9.8,
+   10
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 3.69,
+  "ai": [],
+  "file": "out_e1011f.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "It is an international word.",
+ "label": {
+  "row": 1403,
+  "speaker": "2538",
+  "age": 21,
+  "gender": "f",
+  "text": "IT IS AN INNER INTERNATIONAL WORD",
+  "dur": 3.69,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 4,
+    "w": "INTERNATIONAL",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AE",
+      "index": 5,
+      "pronounced-phone": "EY"
+     }
+    ],
+    "phones": [
+     "IH2",
+     "N",
+     "T",
+     "ER0",
+     "N",
+     "AE1",
+     "SH",
+     "N",
+     "AH0",
+     "L"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "AN",
+    "acc": 10
+   },
+   {
+    "w": "INNER",
+    "acc": 10
+   },
+   {
+    "w": "INTERNATIONAL",
+    "acc": 5
+   },
+   {
+    "w": "WORD",
+    "acc": 10
+   }
+  ],
+  "id": "so762_1403_2538"
+ }
+}

@@ -1,0 +1,161 @@
+{
+ "file": "so762_2383_9629.wav",
+ "t": {
+  "upload": 1181,
+  "checks": 1619,
+  "replace": 0,
+  "render": 1285
+ },
+ "sid": "7a4fee90",
+ "words": [
+  {
+   "w": "Then,",
+   "s": 0.582,
+   "e": 1.104,
+   "p": 0.39
+  },
+  {
+   "w": "it,",
+   "s": 1.204,
+   "e": 1.906,
+   "p": 0.19
+  },
+  {
+   "w": "water,",
+   "s": 1.947,
+   "e": 2.89,
+   "p": 0.94
+  },
+  {
+   "w": "or,",
+   "s": 3.03,
+   "e": 3.733,
+   "p": 0.38
+  },
+  {
+   "w": "beer,",
+   "s": 3.773,
+   "e": 4.796,
+   "p": 0.96
+  },
+  {
+   "w": "or.",
+   "s": 4.937,
+   "e": 5.298,
+   "p": 0.61
+  }
+ ],
+ "dur": 5.94,
+ "clean": [
+  {
+   "i": 2,
+   "j": 3,
+   "kind": "filler",
+   "text": "water, or,",
+   "auto": false,
+   "t0": 1.926,
+   "t1": 3.753
+  }
+ ],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.3,
+   9.3,
+   7.4,
+   8.8,
+   8.9,
+   9.1
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 5.94,
+  "ai": [],
+  "file": "out_3cc886.wav"
+ },
+ "ops": [
+  {
+   "id": "mvdeapjtr",
+   "type": "cut",
+   "t0": 1.926,
+   "t1": 3.753,
+   "i": 2,
+   "j": 3,
+   "kind": "filler",
+   "text": "water, or,",
+   "on": false,
+   "auto": false
+  }
+ ],
+ "renderOps": [],
+ "finalText": "Then, it, water, or, beer, or.",
+ "label": {
+  "row": 2383,
+  "speaker": "9629",
+  "age": 25,
+  "gender": "f",
+  "text": "THEN IT WOULD ALL BE OVER.",
+  "dur": 5.94,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 5,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 5,
+    "w": "OVER",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "OW",
+      "index": 0,
+      "pronounced-phone": "AO"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "OW1",
+     "V",
+     "AH0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THEN",
+    "acc": 10
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "WOULD",
+    "acc": 10
+   },
+   {
+    "w": "ALL",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "OVER",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2383_9629"
+ }
+}

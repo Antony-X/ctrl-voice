@@ -1,0 +1,123 @@
+{
+ "file": "so762_2478_9640.wav",
+ "t": {
+  "upload": 784,
+  "checks": 1151,
+  "replace": 0,
+  "render": 1522
+ },
+ "sid": "2a0e7ac6",
+ "words": [
+  {
+   "w": "You",
+   "s": 0.582,
+   "e": 0.823,
+   "p": 0.41
+  },
+  {
+   "w": "may",
+   "s": 0.843,
+   "e": 1.165,
+   "p": 0.98
+  },
+  {
+   "w": "continue,",
+   "s": 1.205,
+   "e": 2.329,
+   "p": 0.99
+  },
+  {
+   "w": "Gantreen.",
+   "s": 2.39,
+   "e": 3.093,
+   "p": 0.2
+  }
+ ],
+ "dur": 3.695,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   8.9,
+   9.8,
+   7.1,
+   5.4
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 3.69,
+  "ai": [],
+  "file": "out_4695ad.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "You may continue, Gantreen.",
+ "label": {
+  "row": 2478,
+  "speaker": "9640",
+  "age": 29,
+  "gender": "f",
+  "text": "YOU MAY CONTINUE GUN TRAINING.",
+  "dur": 3.69,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "TRAINING",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "IH",
+      "index": 4,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "NG",
+      "index": 5,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "T",
+     "R",
+     "EY1",
+     "N",
+     "IH0",
+     "NG"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "MAY",
+    "acc": 10
+   },
+   {
+    "w": "CONTINUE",
+    "acc": 10
+   },
+   {
+    "w": "GUN",
+    "acc": 10
+   },
+   {
+    "w": "TRAINING",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2478_9640"
+ }
+}

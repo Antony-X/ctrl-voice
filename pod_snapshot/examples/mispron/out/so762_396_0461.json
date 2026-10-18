@@ -1,0 +1,277 @@
+{
+ "file": "so762_396_0461.wav",
+ "t": {
+  "upload": 429,
+  "checks": 1266,
+  "replace": 3058,
+  "render": 1904
+ },
+ "sid": "12dbba2c",
+ "words": [
+  {
+   "w": "What's",
+   "s": 0.522,
+   "e": 0.763,
+   "p": 0.48
+  },
+  {
+   "w": "the",
+   "s": 0.783,
+   "e": 0.944,
+   "p": 0.89
+  },
+  {
+   "w": "place",
+   "s": 1.004,
+   "e": 1.426,
+   "p": 0.99
+  },
+  {
+   "w": "in",
+   "s": 1.486,
+   "e": 1.687,
+   "p": 0.99
+  },
+  {
+   "w": "the",
+   "s": 1.707,
+   "e": 1.868,
+   "p": 0.97
+  },
+  {
+   "w": "diffusion?",
+   "s": 1.908,
+   "e": 2.41,
+   "p": 0.71
+  }
+ ],
+ "dur": 2.993,
+ "clean": [],
+ "grammar": [],
+ "intent": [
+  {
+   "i": 5,
+   "j": 5,
+   "old": "diffusion?",
+   "new": "division",
+   "heard": "dᵻfjuːʒən",
+   "intended": "dᵻvɪʒən",
+   "fit": 0.79,
+   "dist": 0.43,
+   "alts": [
+    "definition"
+   ]
+  }
+ ],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   8.7,
+   9.8,
+   9.9,
+   9.9,
+   9.8,
+   8
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "misspoken",
+   "item": {
+    "i": 5,
+    "j": 5,
+    "old": "diffusion?",
+    "new": "division",
+    "heard": "dᵻfjuːʒən",
+    "intended": "dᵻvɪʒən",
+    "fit": 0.79,
+    "dist": 0.43,
+    "alts": [
+     "definition"
+    ]
+   },
+   "on": true,
+   "op": {
+    "t0": 1.888,
+    "t1": 2.45,
+    "insert": "0b027dd2",
+    "i": 5,
+    "j": 5,
+    "old": "diffusion?",
+    "new": "division",
+    "engine": "f5",
+    "verified": true,
+    "kind": "misspoken",
+    "after": null
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.318,
+     "heard": "That's a place in the division.",
+     "id": "f5a9b2e3",
+     "sec": 2.31
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.499,
+     "heard": "First place in the division.",
+     "id": "0b027dd2",
+     "sec": 1.77
+    }
+   ],
+   "sec": 2.88
+  }
+ ],
+ "render": {
+  "dur": 2.86,
+  "ai": [
+   [
+    1.87,
+    2.37
+   ]
+  ],
+  "file": "out_6c2a1d.wav"
+ },
+ "ops": [
+  {
+   "id": "mvdegr431f",
+   "type": "replace",
+   "t0": 1.888,
+   "t1": 2.45,
+   "insert": "0b027dd2",
+   "i": 5,
+   "j": 5,
+   "old": "diffusion?",
+   "new": "division",
+   "engine": "f5",
+   "verified": true,
+   "kind": "misspoken",
+   "after": null,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 1.888,
+   "t1": 2.45,
+   "insert": "0b027dd2"
+  }
+ ],
+ "finalText": "What's the place in the division",
+ "afterCheck": {
+  "sid": "1d5bbe56",
+  "words": [
+   {
+    "w": "First",
+    "s": 0.524,
+    "e": 0.947,
+    "p": 0.12,
+    "x": null
+   },
+   {
+    "w": "place",
+    "s": 1.008,
+    "e": 1.411,
+    "p": 0.95,
+    "x": null
+   },
+   {
+    "w": "in",
+    "s": 1.491,
+    "e": 1.693,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "the",
+    "s": 1.713,
+    "e": 1.874,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "division.",
+    "s": 1.915,
+    "e": 2.297,
+    "p": 1,
+    "x": null
+   }
+  ],
+  "dur": 2.8617083333333335,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.4,
+    9.9,
+    10,
+    9.8,
+    9.9
+   ]
+  }
+ },
+ "label": {
+  "row": 396,
+  "speaker": "0461",
+  "age": 23,
+  "gender": "m",
+  "text": "FIRST PLACE IN THE DIVISION",
+  "dur": 2.99,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "DIVISION",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "V",
+      "index": 2,
+      "pronounced-phone": "F"
+     }
+    ],
+    "phones": [
+     "D",
+     "IH0",
+     "V",
+     "IH1",
+     "ZH",
+     "N"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "FIRST",
+    "acc": 10
+   },
+   {
+    "w": "PLACE",
+    "acc": 10
+   },
+   {
+    "w": "IN",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "DIVISION",
+    "acc": 5
+   }
+  ],
+  "id": "so762_396_0461"
+ }
+}

@@ -1,0 +1,138 @@
+{
+ "file": "so762_2423_9633.wav",
+ "t": {
+  "upload": 723,
+  "checks": 862,
+  "replace": 0,
+  "render": 1380
+ },
+ "sid": "a7b163f8",
+ "words": [
+  {
+   "w": "There",
+   "s": 0.623,
+   "e": 1.165,
+   "p": 0.29
+  },
+  {
+   "w": "are",
+   "s": 1.266,
+   "e": 1.748,
+   "p": 0.92
+  },
+  {
+   "w": "going",
+   "s": 1.808,
+   "e": 2.431,
+   "p": 0.98
+  },
+  {
+   "w": "to",
+   "s": 2.471,
+   "e": 2.993,
+   "p": 1
+  },
+  {
+   "w": "be",
+   "s": 3.054,
+   "e": 3.576,
+   "p": 0.99
+  },
+  {
+   "w": "more.",
+   "s": 3.616,
+   "e": 3.897,
+   "p": 0.99
+  }
+ ],
+ "dur": 4.46,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   7.7,
+   8.9,
+   8.6,
+   9.9,
+   9.9,
+   7.9
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 4.46,
+  "ai": [],
+  "file": "out_e0eaa4.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "There are going to be more.",
+ "label": {
+  "row": 2423,
+  "speaker": "9633",
+  "age": 21,
+  "gender": "f",
+  "text": "THERE ARE GOING TO BE MORE.",
+  "dur": 4.46,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 5,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 0,
+    "w": "THERE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 1,
+      "pronounced-phone": "ER"
+     },
+     {
+      "canonical-phone": "R",
+      "index": 2,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "DH",
+     "EH0",
+     "R"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THERE",
+    "acc": 3
+   },
+   {
+    "w": "ARE",
+    "acc": 10
+   },
+   {
+    "w": "GOING",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "MORE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2423_9633"
+ }
+}

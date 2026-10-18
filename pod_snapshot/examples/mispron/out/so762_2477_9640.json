@@ -1,0 +1,337 @@
+{
+ "file": "so762_2477_9640.wav",
+ "t": {
+  "upload": 742,
+  "checks": 1208,
+  "replace": 3277,
+  "render": 1394
+ },
+ "sid": "d49db77b",
+ "words": [
+  {
+   "w": "My",
+   "s": 0.601,
+   "e": 0.942,
+   "p": 0.65
+  },
+  {
+   "w": "own,",
+   "s": 1.062,
+   "e": 1.623,
+   "p": 0.95
+  },
+  {
+   "w": "own,",
+   "s": 1.703,
+   "e": 2.084,
+   "p": 0.97
+  },
+  {
+   "w": "darling,",
+   "s": 2.124,
+   "e": 2.705,
+   "p": 0.9
+  },
+  {
+   "w": "darling,",
+   "s": 2.745,
+   "e": 3.205,
+   "p": 0.99
+  },
+  {
+   "w": "darling",
+   "s": 3.245,
+   "e": 3.967,
+   "p": 0.99
+  },
+  {
+   "w": "job.",
+   "s": 4.027,
+   "e": 4.247,
+   "p": 0.57
+  }
+ ],
+ "dur": 4.748,
+ "clean": [
+  {
+   "i": 1,
+   "j": 1,
+   "kind": "repetition",
+   "text": "own,",
+   "auto": true,
+   "t0": 1.002,
+   "t1": 1.663
+  },
+  {
+   "i": 3,
+   "j": 3,
+   "kind": "repetition",
+   "text": "darling,",
+   "auto": true,
+   "t0": 2.104,
+   "t1": 2.725
+  }
+ ],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 6,
+    "word": "job.",
+    "acc": 3.2,
+    "canon": "dʒɑːb",
+    "heard": "ts.ɑu5",
+    "sub": "∅",
+    "phone": "b"
+   }
+  ],
+  "accent": [],
+  "median": 9.5,
+  "scores": [
+   9.9,
+   9.9,
+   9.9,
+   9.5,
+   9.5,
+   8.7,
+   3.2
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 6,
+    "word": "job.",
+    "acc": 3.2,
+    "canon": "dʒɑːb",
+    "heard": "ts.ɑu5",
+    "sub": "∅",
+    "phone": "b"
+   },
+   "on": true,
+   "op": {
+    "t0": 3.997,
+    "t1": 4.287,
+    "insert": "a54fdee2",
+    "i": 6,
+    "j": 6,
+    "old": "job.",
+    "new": "job",
+    "engine": "f5",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 9.88
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": false,
+     "sim": 0.899,
+     "heard": "My own own darling darling darling dog.",
+     "id": "3bf4fd80",
+     "sec": 2.41,
+     "after": 8.99
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.488,
+     "heard": "My own, own, darling, darling, darling job.",
+     "id": "a54fdee2",
+     "sec": 1.5,
+     "after": 9.88
+    }
+   ],
+   "sec": 3.1
+  }
+ ],
+ "render": {
+  "dur": 3.4,
+  "ai": [
+   [
+    2.65,
+    2.95
+   ]
+  ],
+  "file": "out_aac3c1.wav"
+ },
+ "ops": [
+  {
+   "id": "mvde6go84",
+   "type": "cut",
+   "t0": 1.002,
+   "t1": 1.663,
+   "i": 1,
+   "j": 1,
+   "kind": "repetition",
+   "text": "own,",
+   "on": true,
+   "auto": true
+  },
+  {
+   "id": "mvde6go85",
+   "type": "cut",
+   "t0": 2.104,
+   "t1": 2.725,
+   "i": 3,
+   "j": 3,
+   "kind": "repetition",
+   "text": "darling,",
+   "on": true,
+   "auto": true
+  },
+  {
+   "id": "mvde6j796",
+   "type": "replace",
+   "t0": 3.997,
+   "t1": 4.287,
+   "insert": "a54fdee2",
+   "i": 6,
+   "j": 6,
+   "old": "job.",
+   "new": "job",
+   "engine": "f5",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 9.88,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 1.002,
+   "t1": 1.663,
+   "insert": null
+  },
+  {
+   "t0": 2.104,
+   "t1": 2.725,
+   "insert": null
+  },
+  {
+   "t0": 3.997,
+   "t1": 4.287,
+   "insert": "a54fdee2"
+  }
+ ],
+ "finalText": "My own, darling, darling job",
+ "afterCheck": {
+  "sid": "79da8b19",
+  "words": [
+   {
+    "w": "My",
+    "s": 0.604,
+    "e": 0.946,
+    "p": 0.51,
+    "x": null
+   },
+   {
+    "w": "own",
+    "s": 1.026,
+    "e": 1.389,
+    "p": 0.97,
+    "x": null
+   },
+   {
+    "w": "darling,",
+    "s": 1.429,
+    "e": 1.892,
+    "p": 0.84,
+    "x": null
+   },
+   {
+    "w": "darling",
+    "s": 1.932,
+    "e": 2.637,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "job.",
+    "s": 2.697,
+    "e": 2.898,
+    "p": 0.98,
+    "x": null
+   }
+  ],
+  "dur": 3.401375,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.9,
+    9.9,
+    9.9,
+    9.6,
+    9.8
+   ]
+  }
+ },
+ "label": {
+  "row": 2477,
+  "speaker": "9640",
+  "age": 29,
+  "gender": "f",
+  "text": "MY OWN OWN DARLING, DARLING, DARLING JEWEL.",
+  "dur": 4.75,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 6,
+    "w": "JEWEL",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "UW",
+      "index": 1,
+      "pronounced-phone": "AA"
+     }
+    ],
+    "phones": [
+     "JH",
+     "UW1",
+     "AH0",
+     "L"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "MY",
+    "acc": 10
+   },
+   {
+    "w": "OWN",
+    "acc": 10
+   },
+   {
+    "w": "OWN",
+    "acc": 10
+   },
+   {
+    "w": "DARLING",
+    "acc": 10
+   },
+   {
+    "w": "DARLING",
+    "acc": 10
+   },
+   {
+    "w": "DARLING",
+    "acc": 10
+   },
+   {
+    "w": "JEWEL",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2477_9640"
+ }
+}

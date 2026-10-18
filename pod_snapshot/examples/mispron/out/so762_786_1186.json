@@ -1,0 +1,139 @@
+{
+ "file": "so762_786_1186.wav",
+ "t": {
+  "upload": 676,
+  "checks": 1009,
+  "replace": 0,
+  "render": 1888
+ },
+ "sid": "ea1a0394",
+ "words": [
+  {
+   "w": "All",
+   "s": 1.024,
+   "e": 1.266,
+   "p": 0.29
+  },
+  {
+   "w": "that",
+   "s": 1.306,
+   "e": 1.728,
+   "p": 0.96
+  },
+  {
+   "w": "can",
+   "s": 1.768,
+   "e": 2.129,
+   "p": 0.99
+  },
+  {
+   "w": "be",
+   "s": 2.169,
+   "e": 2.531,
+   "p": 0.99
+  },
+  {
+   "w": "very",
+   "s": 2.591,
+   "e": 3.495,
+   "p": 0.98
+  },
+  {
+   "w": "costly.",
+   "s": 3.556,
+   "e": 4.018,
+   "p": 0.99
+  }
+ ],
+ "dur": 4.58,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.6,
+   9.5,
+   9.9,
+   9.9,
+   9.6,
+   9.8
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 4.58,
+  "ai": [],
+  "file": "out_cc2f50.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "All that can be very costly.",
+ "label": {
+  "row": 786,
+  "speaker": "1186",
+  "age": 23,
+  "gender": "m",
+  "text": "ALL THAT CAN BE VERY COSTLY",
+  "dur": 4.58,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 4,
+    "w": "VERY",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 1,
+      "pronounced-phone": "EH*"
+     },
+     {
+      "canonical-phone": "R",
+      "index": 2,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "V",
+     "EH1",
+     "R",
+     "IY0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "ALL",
+    "acc": 10
+   },
+   {
+    "w": "THAT",
+    "acc": 10
+   },
+   {
+    "w": "CAN",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "VERY",
+    "acc": 3
+   },
+   {
+    "w": "COSTLY",
+    "acc": 10
+   }
+  ],
+  "id": "so762_786_1186"
+ }
+}

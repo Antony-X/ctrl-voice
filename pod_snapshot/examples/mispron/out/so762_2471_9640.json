@@ -1,0 +1,129 @@
+{
+ "file": "so762_2471_9640.wav",
+ "t": {
+  "upload": 864,
+  "checks": 1056,
+  "replace": 0,
+  "render": 1281
+ },
+ "sid": "49e6d65e",
+ "words": [
+  {
+   "w": "Please",
+   "s": 0.421,
+   "e": 1.183,
+   "p": 0.63
+  },
+  {
+   "w": "give",
+   "s": 1.223,
+   "e": 1.564,
+   "p": 0.95
+  },
+  {
+   "w": "me",
+   "s": 1.605,
+   "e": 2.668,
+   "p": 0.97
+  },
+  {
+   "w": "my",
+   "s": 2.708,
+   "e": 2.948,
+   "p": 0.86
+  },
+  {
+   "w": "friend.",
+   "s": 2.988,
+   "e": 3.269,
+   "p": 0.93
+  }
+ ],
+ "dur": 3.911,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.9,
+   9.9,
+   9.9,
+   10,
+   9.9
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 3.91,
+  "ai": [],
+  "file": "out_882980.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "Please give me my friend.",
+ "label": {
+  "row": 2471,
+  "speaker": "9640",
+  "age": 29,
+  "gender": "f",
+  "text": "PLEASE FORGIVE ME, MY FRIEND?",
+  "dur": 3.91,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 1,
+    "w": "FORGIVE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "F",
+      "index": 0,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 1,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "F",
+     "AH0",
+     "G",
+     "IH0",
+     "V"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "PLEASE",
+    "acc": 10
+   },
+   {
+    "w": "FORGIVE",
+    "acc": 3
+   },
+   {
+    "w": "ME",
+    "acc": 10
+   },
+   {
+    "w": "MY",
+    "acc": 10
+   },
+   {
+    "w": "FRIEND",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2471_9640"
+ }
+}

@@ -1,0 +1,9027 @@
+[
+ {
+  "row": 2261,
+  "speaker": "9612",
+  "age": 20,
+  "gender": "f",
+  "text": "I WANT TO SEE HIM MYSELF.",
+  "dur": 3.81,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 8,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 1,
+    "w": "WANT",
+    "acc": 2,
+    "mis": [
+     {
+      "canonical-phone": "W",
+      "index": 0,
+      "pronounced-phone": "G"
+     },
+     {
+      "canonical-phone": "AA",
+      "index": 1,
+      "pronounced-phone": "OW"
+     },
+     {
+      "canonical-phone": "N",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "T",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "W",
+     "AA0",
+     "N",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "WANT",
+    "acc": 2
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "SEE",
+    "acc": 10
+   },
+   {
+    "w": "HIM",
+    "acc": 10
+   },
+   {
+    "w": "MYSELF",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2261_9612"
+ },
+ {
+  "row": 38,
+  "speaker": "0024",
+  "age": 25,
+  "gender": "f",
+  "text": "IT WAS A PROOF OF HIS FRIENDSHIP",
+  "dur": 2.83,
+  "sr": 16000,
+  "utt_acc": 9,
+  "utt_total": 8,
+  "fluency": 9,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 3,
+    "w": "PROOF",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "UW",
+      "index": 2,
+      "pronounced-phone": "OW"
+     }
+    ],
+    "phones": [
+     "P",
+     "R",
+     "UW0",
+     "F"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "PROOF",
+    "acc": 3
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "HIS",
+    "acc": 10
+   },
+   {
+    "w": "FRIENDSHIP",
+    "acc": 10
+   }
+  ],
+  "id": "so762_38_0024"
+ },
+ {
+  "row": 1193,
+  "speaker": "2031",
+  "age": 21,
+  "gender": "f",
+  "text": "WELL THEN A LOT OF PEOPLE ARE CLEARLY WRONG",
+  "dur": 4.24,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 8,
+  "fluency": 9,
+  "n_words": 9,
+  "bad": [
+   {
+    "i": 7,
+    "w": "CLEARLY",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "L",
+      "index": 1,
+      "pronounced-phone": "L*"
+     },
+     {
+      "canonical-phone": "IH",
+      "index": 2,
+      "pronounced-phone": "AH"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "K",
+     "L",
+     "IH",
+     "AH1",
+     "L",
+     "IY0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "WELL",
+    "acc": 10
+   },
+   {
+    "w": "THEN",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "LOT",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "PEOPLE",
+    "acc": 10
+   },
+   {
+    "w": "ARE",
+    "acc": 10
+   },
+   {
+    "w": "CLEARLY",
+    "acc": 3
+   },
+   {
+    "w": "WRONG",
+    "acc": 10
+   }
+  ],
+  "id": "so762_1193_2031"
+ },
+ {
+  "row": 409,
+  "speaker": "0563",
+  "age": 22,
+  "gender": "f",
+  "text": "BUT FOR A GOOD CAUSE",
+  "dur": 2.6,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 3,
+    "w": "GOOD",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "UH",
+      "index": 1,
+      "pronounced-phone": "OW"
+     }
+    ],
+    "phones": [
+     "G",
+     "UH0",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "BUT",
+    "acc": 10
+   },
+   {
+    "w": "FOR",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "GOOD",
+    "acc": 3
+   },
+   {
+    "w": "CAUSE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_409_0563"
+ },
+ {
+  "row": 2308,
+  "speaker": "9618",
+  "age": 24,
+  "gender": "f",
+  "text": "THIS IS THE WAY OF LIFE.",
+  "dur": 2.88,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 8,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 5,
+    "w": "LIFE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AY",
+      "index": 1,
+      "pronounced-phone": "IH"
+     }
+    ],
+    "phones": [
+     "L",
+     "AY0",
+     "F"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THIS",
+    "acc": 10
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "WAY",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "LIFE",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2308_9618"
+ },
+ {
+  "row": 383,
+  "speaker": "0461",
+  "age": 23,
+  "gender": "m",
+  "text": "WORRY IS PART OF LIFE",
+  "dur": 3.0,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 6,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 0,
+    "w": "WORRY",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "W",
+      "index": 0,
+      "pronounced-phone": "B"
+     }
+    ],
+    "phones": [
+     "W",
+     "ER1",
+     "IY0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "WORRY",
+    "acc": 3
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "PART",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "LIFE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_383_0461"
+ },
+ {
+  "row": 791,
+  "speaker": "1186",
+  "age": 23,
+  "gender": "m",
+  "text": "I TELL YOU IT IS DEATH",
+  "dur": 3.27,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 5,
+    "w": "DEATH",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "TH",
+      "index": 2,
+      "pronounced-phone": "T"
+     }
+    ],
+    "phones": [
+     "D",
+     "EH0",
+     "TH"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "TELL",
+    "acc": 8
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "DEATH",
+    "acc": 3
+   }
+  ],
+  "id": "so762_791_1186"
+ },
+ {
+  "row": 2475,
+  "speaker": "9640",
+  "age": 29,
+  "gender": "f",
+  "text": "ALL HEADS TURNED THEIR WAY.",
+  "dur": 3.52,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 1,
+    "w": "HEADS",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 1,
+      "pronounced-phone": "AE"
+     },
+     {
+      "canonical-phone": "D",
+      "index": 2,
+      "pronounced-phone": "D*"
+     },
+     {
+      "canonical-phone": "Z",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "HH",
+     "EH1",
+     "D",
+     "Z"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "ALL",
+    "acc": 10
+   },
+   {
+    "w": "HEADS",
+    "acc": 3
+   },
+   {
+    "w": "TURNED",
+    "acc": 10
+   },
+   {
+    "w": "THEIR",
+    "acc": 10
+   },
+   {
+    "w": "WAY",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2475_9640"
+ },
+ {
+  "row": 766,
+  "speaker": "1181",
+  "age": 23,
+  "gender": "m",
+  "text": "THERE IS STAT TIME FOR YOU TO JOIN US TOO",
+  "dur": 3.55,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 8,
+  "n_words": 10,
+  "bad": [
+   {
+    "i": 3,
+    "w": "TIME",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AY",
+      "index": 1,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "T",
+     "AY0",
+     "M"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THERE",
+    "acc": 10
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "STAT",
+    "acc": 8
+   },
+   {
+    "w": "TIME",
+    "acc": 3
+   },
+   {
+    "w": "FOR",
+    "acc": 10
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "JOIN",
+    "acc": 10
+   },
+   {
+    "w": "US",
+    "acc": 10
+   },
+   {
+    "w": "TOO",
+    "acc": 10
+   }
+  ],
+  "id": "so762_766_1181"
+ },
+ {
+  "row": 2467,
+  "speaker": "9640",
+  "age": 29,
+  "gender": "f",
+  "text": "TOO LONG, TOO SHORT, TOO BORING?",
+  "dur": 3.55,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 5,
+    "w": "BORING",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "R",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "IH",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "NG",
+      "index": 4,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "B",
+     "AO1",
+     "R",
+     "IH0",
+     "NG"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "TOO",
+    "acc": 10
+   },
+   {
+    "w": "LONG",
+    "acc": 10
+   },
+   {
+    "w": "TOO",
+    "acc": 10
+   },
+   {
+    "w": "SHORT",
+    "acc": 10
+   },
+   {
+    "w": "TOO",
+    "acc": 10
+   },
+   {
+    "w": "BORING",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2467_9640"
+ },
+ {
+  "row": 395,
+  "speaker": "0461",
+  "age": 23,
+  "gender": "m",
+  "text": "CHEERS TO A GREAT GROUP",
+  "dur": 3.61,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 0,
+    "w": "CHEERS",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "IH",
+      "index": 1,
+      "pronounced-phone": "EH"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 2,
+      "pronounced-phone": "AH*"
+     }
+    ],
+    "phones": [
+     "CH",
+     "IH",
+     "AH0",
+     "Z"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "CHEERS",
+    "acc": 3
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "GREAT",
+    "acc": 10
+   },
+   {
+    "w": "GROUP",
+    "acc": 10
+   }
+  ],
+  "id": "so762_395_0461"
+ },
+ {
+  "row": 2478,
+  "speaker": "9640",
+  "age": 29,
+  "gender": "f",
+  "text": "YOU MAY CONTINUE GUN TRAINING.",
+  "dur": 3.69,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "TRAINING",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "IH",
+      "index": 4,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "NG",
+      "index": 5,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "T",
+     "R",
+     "EY1",
+     "N",
+     "IH0",
+     "NG"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "MAY",
+    "acc": 10
+   },
+   {
+    "w": "CONTINUE",
+    "acc": 10
+   },
+   {
+    "w": "GUN",
+    "acc": 10
+   },
+   {
+    "w": "TRAINING",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2478_9640"
+ },
+ {
+  "row": 442,
+  "speaker": "0736",
+  "age": 21,
+  "gender": "f",
+  "text": "I THOUGHT IT WOULD FIT RIGHT IN",
+  "dur": 3.7,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 4,
+    "w": "FIT",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "IH",
+      "index": 1,
+      "pronounced-phone": "EH"
+     }
+    ],
+    "phones": [
+     "F",
+     "IH0",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "THOUGHT",
+    "acc": 10
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "WOULD",
+    "acc": 10
+   },
+   {
+    "w": "FIT",
+    "acc": 3
+   },
+   {
+    "w": "RIGHT",
+    "acc": 10
+   },
+   {
+    "w": "IN",
+    "acc": 10
+   }
+  ],
+  "id": "so762_442_0736"
+ },
+ {
+  "row": 734,
+  "speaker": "1135",
+  "age": 25,
+  "gender": "m",
+  "text": "WILL BE FUN TO THAT'S THEM ALL YEAR",
+  "dur": 3.89,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 4,
+    "w": "THAT'S",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "DH",
+      "index": 0,
+      "pronounced-phone": "W"
+     },
+     {
+      "canonical-phone": "AE",
+      "index": 1,
+      "pronounced-phone": "AA"
+     }
+    ],
+    "phones": [
+     "DH",
+     "AE0",
+     "T",
+     "S"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "WILL",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "FUN",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "THAT'S",
+    "acc": 3
+   },
+   {
+    "w": "THEM",
+    "acc": 10
+   },
+   {
+    "w": "ALL",
+    "acc": 10
+   },
+   {
+    "w": "YEAR",
+    "acc": 10
+   }
+  ],
+  "id": "so762_734_1135"
+ },
+ {
+  "row": 2471,
+  "speaker": "9640",
+  "age": 29,
+  "gender": "f",
+  "text": "PLEASE FORGIVE ME, MY FRIEND?",
+  "dur": 3.91,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 1,
+    "w": "FORGIVE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "F",
+      "index": 0,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 1,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "F",
+     "AH0",
+     "G",
+     "IH0",
+     "V"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "PLEASE",
+    "acc": 10
+   },
+   {
+    "w": "FORGIVE",
+    "acc": 3
+   },
+   {
+    "w": "ME",
+    "acc": 10
+   },
+   {
+    "w": "MY",
+    "acc": 10
+   },
+   {
+    "w": "FRIEND",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2471_9640"
+ },
+ {
+  "row": 1409,
+  "speaker": "2538",
+  "age": 21,
+  "gender": "f",
+  "text": "PUTTING ALL OF US AT RISK OF A NUCLEAR WAR",
+  "dur": 4.35,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 8,
+  "n_words": 10,
+  "bad": [
+   {
+    "i": 9,
+    "w": "WAR",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AO",
+      "index": 1,
+      "pronounced-phone": "EY"
+     }
+    ],
+    "phones": [
+     "W",
+     "AO0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "PUTTING",
+    "acc": 10
+   },
+   {
+    "w": "ALL",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "US",
+    "acc": 10
+   },
+   {
+    "w": "AT",
+    "acc": 10
+   },
+   {
+    "w": "RISK",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "NUCLEAR",
+    "acc": 10
+   },
+   {
+    "w": "WAR",
+    "acc": 3
+   }
+  ],
+  "id": "so762_1409_2538"
+ },
+ {
+  "row": 2423,
+  "speaker": "9633",
+  "age": 21,
+  "gender": "f",
+  "text": "THERE ARE GOING TO BE MORE.",
+  "dur": 4.46,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 5,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 0,
+    "w": "THERE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 1,
+      "pronounced-phone": "ER"
+     },
+     {
+      "canonical-phone": "R",
+      "index": 2,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "DH",
+     "EH0",
+     "R"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THERE",
+    "acc": 3
+   },
+   {
+    "w": "ARE",
+    "acc": 10
+   },
+   {
+    "w": "GOING",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "MORE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2423_9633"
+ },
+ {
+  "row": 2426,
+  "speaker": "9633",
+  "age": 21,
+  "gender": "f",
+  "text": "THEY HAD TO GET OUT OF THERE.",
+  "dur": 4.5,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 1,
+    "w": "HAD",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "D",
+      "index": 2,
+      "pronounced-phone": "V"
+     }
+    ],
+    "phones": [
+     "HH",
+     "AE0",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THEY",
+    "acc": 10
+   },
+   {
+    "w": "HAD",
+    "acc": 3
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "GET",
+    "acc": 10
+   },
+   {
+    "w": "OUT",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "THERE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2426_9633"
+ },
+ {
+  "row": 786,
+  "speaker": "1186",
+  "age": 23,
+  "gender": "m",
+  "text": "ALL THAT CAN BE VERY COSTLY",
+  "dur": 4.58,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 4,
+    "w": "VERY",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 1,
+      "pronounced-phone": "EH*"
+     },
+     {
+      "canonical-phone": "R",
+      "index": 2,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "V",
+     "EH1",
+     "R",
+     "IY0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "ALL",
+    "acc": 10
+   },
+   {
+    "w": "THAT",
+    "acc": 10
+   },
+   {
+    "w": "CAN",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "VERY",
+    "acc": 3
+   },
+   {
+    "w": "COSTLY",
+    "acc": 10
+   }
+  ],
+  "id": "so762_786_1186"
+ },
+ {
+  "row": 2477,
+  "speaker": "9640",
+  "age": 29,
+  "gender": "f",
+  "text": "MY OWN OWN DARLING, DARLING, DARLING JEWEL.",
+  "dur": 4.75,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 6,
+    "w": "JEWEL",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "UW",
+      "index": 1,
+      "pronounced-phone": "AA"
+     }
+    ],
+    "phones": [
+     "JH",
+     "UW1",
+     "AH0",
+     "L"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "MY",
+    "acc": 10
+   },
+   {
+    "w": "OWN",
+    "acc": 10
+   },
+   {
+    "w": "OWN",
+    "acc": 10
+   },
+   {
+    "w": "DARLING",
+    "acc": 10
+   },
+   {
+    "w": "DARLING",
+    "acc": 10
+   },
+   {
+    "w": "DARLING",
+    "acc": 10
+   },
+   {
+    "w": "JEWEL",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2477_9640"
+ },
+ {
+  "row": 2411,
+  "speaker": "9631",
+  "age": 26,
+  "gender": "m",
+  "text": "I THOUGHT MY LIFE WAS ABOUT TO END.",
+  "dur": 5.0,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 1,
+    "w": "THOUGHT",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "TH",
+      "index": 0,
+      "pronounced-phone": "D"
+     },
+     {
+      "canonical-phone": "AO",
+      "index": 1,
+      "pronounced-phone": "<unk>"
+     },
+     {
+      "canonical-phone": "T",
+      "index": 2,
+      "pronounced-phone": "T*"
+     }
+    ],
+    "phones": [
+     "TH",
+     "AO0",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "THOUGHT",
+    "acc": 3
+   },
+   {
+    "w": "MY",
+    "acc": 10
+   },
+   {
+    "w": "LIFE",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "ABOUT",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "END",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2411_9631"
+ },
+ {
+  "row": 380,
+  "speaker": "0461",
+  "age": 23,
+  "gender": "m",
+  "text": "BUT THAT'S ANOTHER STORY ALTOGETHER",
+  "dur": 5.27,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 1,
+    "w": "THAT'S",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "DH",
+      "index": 0,
+      "pronounced-phone": "S"
+     }
+    ],
+    "phones": [
+     "DH",
+     "AE0",
+     "T",
+     "S"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "BUT",
+    "acc": 10
+   },
+   {
+    "w": "THAT'S",
+    "acc": 3
+   },
+   {
+    "w": "ANOTHER",
+    "acc": 10
+   },
+   {
+    "w": "STORY",
+    "acc": 10
+   },
+   {
+    "w": "ALTOGETHER",
+    "acc": 10
+   }
+  ],
+  "id": "so762_380_0461"
+ },
+ {
+  "row": 2424,
+  "speaker": "9633",
+  "age": 21,
+  "gender": "f",
+  "text": "YOU NEED TO COME WITH ME.",
+  "dur": 5.33,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 5,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 3,
+    "w": "COME",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 1,
+      "pronounced-phone": "EY"
+     }
+    ],
+    "phones": [
+     "K",
+     "AH0",
+     "M"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "NEED",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "COME",
+    "acc": 3
+   },
+   {
+    "w": "WITH",
+    "acc": 10
+   },
+   {
+    "w": "ME",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2424_9633"
+ },
+ {
+  "row": 2425,
+  "speaker": "9633",
+  "age": 21,
+  "gender": "f",
+  "text": "I WOULD NEVER HAVE LEFT.",
+  "dur": 5.36,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 3,
+    "w": "HAVE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "V",
+      "index": 2,
+      "pronounced-phone": "D"
+     }
+    ],
+    "phones": [
+     "HH",
+     "AE0",
+     "V"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "WOULD",
+    "acc": 10
+   },
+   {
+    "w": "NEVER",
+    "acc": 10
+   },
+   {
+    "w": "HAVE",
+    "acc": 3
+   },
+   {
+    "w": "LEFT",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2425_9633"
+ },
+ {
+  "row": 2450,
+  "speaker": "9635",
+  "age": 24,
+  "gender": "f",
+  "text": "I PUT THEM ON AND I SAW WHERE WE WERE.",
+  "dur": 7.07,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 6,
+  "n_words": 10,
+  "bad": [
+   {
+    "i": 6,
+    "w": "SAW",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AO",
+      "index": 1,
+      "pronounced-phone": "IY"
+     }
+    ],
+    "phones": [
+     "S",
+     "AO0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "PUT",
+    "acc": 10
+   },
+   {
+    "w": "THEM",
+    "acc": 10
+   },
+   {
+    "w": "ON",
+    "acc": 10
+   },
+   {
+    "w": "AND",
+    "acc": 10
+   },
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "SAW",
+    "acc": 3
+   },
+   {
+    "w": "WHERE",
+    "acc": 10
+   },
+   {
+    "w": "WE",
+    "acc": 10
+   },
+   {
+    "w": "WERE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2450_9635"
+ },
+ {
+  "row": 438,
+  "speaker": "0567",
+  "age": 21,
+  "gender": "f",
+  "text": "I WILL KNOW WHAT TO DO",
+  "dur": 2.74,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 6,
+  "fluency": 8,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 2,
+    "w": "KNOW",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "OW",
+      "index": 1,
+      "pronounced-phone": "AW"
+     }
+    ],
+    "phones": [
+     "N",
+     "OW0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "WILL",
+    "acc": 10
+   },
+   {
+    "w": "KNOW",
+    "acc": 3
+   },
+   {
+    "w": "WHAT",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "DO",
+    "acc": 10
+   }
+  ],
+  "id": "so762_438_0567"
+ },
+ {
+  "row": 2406,
+  "speaker": "9631",
+  "age": 26,
+  "gender": "m",
+  "text": "BUT THE EYES WERE RIGHT.",
+  "dur": 3.21,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 2,
+    "w": "EYES",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AY",
+      "index": 0,
+      "pronounced-phone": "IY"
+     }
+    ],
+    "phones": [
+     "AY0",
+     "Z"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "BUT",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "EYES",
+    "acc": 3
+   },
+   {
+    "w": "WERE",
+    "acc": 10
+   },
+   {
+    "w": "RIGHT",
+    "acc": 8
+   }
+  ],
+  "id": "so762_2406_9631"
+ },
+ {
+  "row": 368,
+  "speaker": "0457",
+  "age": 21,
+  "gender": "f",
+  "text": "CREATE TO BE HAPPY AND GOOD",
+  "dur": 3.5,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 6,
+  "fluency": 6,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 0,
+    "w": "CREATE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "K",
+      "index": 0,
+      "pronounced-phone": "G"
+     },
+     {
+      "canonical-phone": "EY",
+      "index": 3,
+      "pronounced-phone": "EY*"
+     }
+    ],
+    "phones": [
+     "K",
+     "R",
+     "IY0",
+     "EY1",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "CREATE",
+    "acc": 3
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "HAPPY",
+    "acc": 10
+   },
+   {
+    "w": "AND",
+    "acc": 10
+   },
+   {
+    "w": "GOOD",
+    "acc": 10
+   }
+  ],
+  "id": "so762_368_0457"
+ },
+ {
+  "row": 399,
+  "speaker": "0461",
+  "age": 23,
+  "gender": "m",
+  "text": "IT WAS DIFFICULT TO GET THERE",
+  "dur": 3.76,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 5,
+    "w": "THERE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "DH",
+      "index": 0,
+      "pronounced-phone": "TH"
+     }
+    ],
+    "phones": [
+     "DH",
+     "EH0",
+     "R"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "DIFFICULT",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "GET",
+    "acc": 10
+   },
+   {
+    "w": "THERE",
+    "acc": 3
+   }
+  ],
+  "id": "so762_399_0461"
+ },
+ {
+  "row": 798,
+  "speaker": "1186",
+  "age": 23,
+  "gender": "m",
+  "text": "LEGAL PROTECTION IS A MUST",
+  "dur": 3.8,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 1,
+    "w": "PROTECTION",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "T",
+      "index": 3,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "P",
+     "R",
+     "AH0",
+     "T",
+     "EH1",
+     "K",
+     "SH",
+     "N"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "LEGAL",
+    "acc": 10
+   },
+   {
+    "w": "PROTECTION",
+    "acc": 3
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "MUST",
+    "acc": 10
+   }
+  ],
+  "id": "so762_798_1186"
+ },
+ {
+  "row": 2357,
+  "speaker": "9623",
+  "age": 21,
+  "gender": "m",
+  "text": "NO, IT WAS THE EYES.",
+  "dur": 3.88,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "EYES",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AY",
+      "index": 0,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "AY0",
+     "Z"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "NO",
+    "acc": 10
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "EYES",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2357_9623"
+ },
+ {
+  "row": 367,
+  "speaker": "0457",
+  "age": 21,
+  "gender": "f",
+  "text": "THANKS GOD I GET TO SLEEP IN TOMORROW",
+  "dur": 4.08,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 1,
+    "w": "GOD",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 1,
+      "pronounced-phone": "AH*"
+     }
+    ],
+    "phones": [
+     "G",
+     "AH0",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THANKS",
+    "acc": 10
+   },
+   {
+    "w": "GOD",
+    "acc": 3
+   },
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "GET",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "SLEEP",
+    "acc": 10
+   },
+   {
+    "w": "IN",
+    "acc": 10
+   },
+   {
+    "w": "TOMORROW",
+    "acc": 10
+   }
+  ],
+  "id": "so762_367_0457"
+ },
+ {
+  "row": 2322,
+  "speaker": "9622",
+  "age": 20,
+  "gender": "f",
+  "text": "SHE THOUGHT FOR A MOMENT.",
+  "dur": 4.34,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 5,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "MOMENT",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "OW",
+      "index": 1,
+      "pronounced-phone": "AH"
+     },
+     {
+      "canonical-phone": "M",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "N",
+      "index": 4,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "M",
+     "OW1",
+     "M",
+     "AH0",
+     "N",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "SHE",
+    "acc": 10
+   },
+   {
+    "w": "THOUGHT",
+    "acc": 10
+   },
+   {
+    "w": "FOR",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "MOMENT",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2322_9622"
+ },
+ {
+  "row": 2281,
+  "speaker": "9617",
+  "age": 35,
+  "gender": "f",
+  "text": "THEN ON OUT THE BACK DOOR OF THE HOUSE.",
+  "dur": 4.35,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 6,
+  "fluency": 6,
+  "n_words": 9,
+  "bad": [
+   {
+    "i": 0,
+    "w": "THEN",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "N",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "DH",
+     "EH0",
+     "N"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THEN",
+    "acc": 3
+   },
+   {
+    "w": "ON",
+    "acc": 10
+   },
+   {
+    "w": "OUT",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "BACK",
+    "acc": 10
+   },
+   {
+    "w": "DOOR",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "HOUSE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2281_9617"
+ },
+ {
+  "row": 2225,
+  "speaker": "9608",
+  "age": 30,
+  "gender": "f",
+  "text": "BUT STILL I WOULD DO MY BEST.",
+  "dur": 4.43,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 6,
+  "fluency": 6,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 6,
+    "w": "BEST",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 1,
+      "pronounced-phone": "AH"
+     },
+     {
+      "canonical-phone": "S",
+      "index": 2,
+      "pronounced-phone": "CH"
+     },
+     {
+      "canonical-phone": "T",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "B",
+     "EH0",
+     "S",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "BUT",
+    "acc": 10
+   },
+   {
+    "w": "STILL",
+    "acc": 10
+   },
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "WOULD",
+    "acc": 10
+   },
+   {
+    "w": "DO",
+    "acc": 10
+   },
+   {
+    "w": "MY",
+    "acc": 10
+   },
+   {
+    "w": "BEST",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2225_9608"
+ },
+ {
+  "row": 2389,
+  "speaker": "9629",
+  "age": 25,
+  "gender": "f",
+  "text": "I CAN GET HER BACK.",
+  "dur": 4.65,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 5,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "BACK",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AE",
+      "index": 1,
+      "pronounced-phone": "AH"
+     }
+    ],
+    "phones": [
+     "B",
+     "AE0",
+     "K"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "CAN",
+    "acc": 10
+   },
+   {
+    "w": "GET",
+    "acc": 10
+   },
+   {
+    "w": "HER",
+    "acc": 10
+   },
+   {
+    "w": "BACK",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2389_9629"
+ },
+ {
+  "row": 2294,
+  "speaker": "9617",
+  "age": 35,
+  "gender": "f",
+  "text": "HE WAS TALENTED IN MORE THINGS THAN I WAS.",
+  "dur": 4.83,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 9,
+  "bad": [
+   {
+    "i": 2,
+    "w": "TALENTED",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AE",
+      "index": 1,
+      "pronounced-phone": "AH"
+     },
+     {
+      "canonical-phone": "L",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "N",
+      "index": 4,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "T",
+     "AE1",
+     "L",
+     "AH0",
+     "N",
+     "T",
+     "IH0",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "HE",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "TALENTED",
+    "acc": 3
+   },
+   {
+    "w": "IN",
+    "acc": 10
+   },
+   {
+    "w": "MORE",
+    "acc": 10
+   },
+   {
+    "w": "THINGS",
+    "acc": 10
+   },
+   {
+    "w": "THAN",
+    "acc": 10
+   },
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 8
+   }
+  ],
+  "id": "so762_2294_9617"
+ },
+ {
+  "row": 2292,
+  "speaker": "9617",
+  "age": 35,
+  "gender": "f",
+  "text": "SHE WALKED OUT OF THE ROOM AGAIN.",
+  "dur": 4.84,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 7,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 1,
+    "w": "WALKED",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AO",
+      "index": 1,
+      "pronounced-phone": "<unk>"
+     },
+     {
+      "canonical-phone": "K",
+      "index": 2,
+      "pronounced-phone": "T"
+     }
+    ],
+    "phones": [
+     "W",
+     "AO0",
+     "K",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "SHE",
+    "acc": 10
+   },
+   {
+    "w": "WALKED",
+    "acc": 3
+   },
+   {
+    "w": "OUT",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "ROOM",
+    "acc": 10
+   },
+   {
+    "w": "AGAIN",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2292_9617"
+ },
+ {
+  "row": 2496,
+  "speaker": "9647",
+  "age": 20,
+  "gender": "f",
+  "text": "MAYBE WE SHOULD GET SOME CAKE?",
+  "dur": 4.86,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 5,
+    "w": "CAKE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EY",
+      "index": 1,
+      "pronounced-phone": "AA"
+     },
+     {
+      "canonical-phone": "K",
+      "index": 2,
+      "pronounced-phone": "T"
+     }
+    ],
+    "phones": [
+     "K",
+     "EY0",
+     "K"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "MAYBE",
+    "acc": 10
+   },
+   {
+    "w": "WE",
+    "acc": 10
+   },
+   {
+    "w": "SHOULD",
+    "acc": 10
+   },
+   {
+    "w": "GET",
+    "acc": 10
+   },
+   {
+    "w": "SOME",
+    "acc": 10
+   },
+   {
+    "w": "CAKE",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2496_9647"
+ },
+ {
+  "row": 2388,
+  "speaker": "9629",
+  "age": 25,
+  "gender": "f",
+  "text": "I WALKED UP TO MY ROOM.",
+  "dur": 4.91,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 5,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 5,
+    "w": "ROOM",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "UH",
+      "index": 1,
+      "pronounced-phone": "AA"
+     }
+    ],
+    "phones": [
+     "R",
+     "UH0",
+     "M"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "WALKED",
+    "acc": 10
+   },
+   {
+    "w": "UP",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "MY",
+    "acc": 10
+   },
+   {
+    "w": "ROOM",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2388_9629"
+ },
+ {
+  "row": 2285,
+  "speaker": "9617",
+  "age": 35,
+  "gender": "f",
+  "text": "AND ONCE MORE SHE WAS ALL HIS OWN.",
+  "dur": 5.67,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 6,
+  "fluency": 6,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 7,
+    "w": "OWN",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "OW",
+      "index": 0,
+      "pronounced-phone": "<unk>"
+     },
+     {
+      "canonical-phone": "N",
+      "index": 1,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "OW0",
+     "N"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "AND",
+    "acc": 10
+   },
+   {
+    "w": "ONCE",
+    "acc": 10
+   },
+   {
+    "w": "MORE",
+    "acc": 10
+   },
+   {
+    "w": "SHE",
+    "acc": 8
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "ALL",
+    "acc": 10
+   },
+   {
+    "w": "HIS",
+    "acc": 8
+   },
+   {
+    "w": "OWN",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2285_9617"
+ },
+ {
+  "row": 2383,
+  "speaker": "9629",
+  "age": 25,
+  "gender": "f",
+  "text": "THEN IT WOULD ALL BE OVER.",
+  "dur": 5.94,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 5,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 5,
+    "w": "OVER",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "OW",
+      "index": 0,
+      "pronounced-phone": "AO"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "OW1",
+     "V",
+     "AH0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THEN",
+    "acc": 10
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "WOULD",
+    "acc": 10
+   },
+   {
+    "w": "ALL",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "OVER",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2383_9629"
+ },
+ {
+  "row": 2258,
+  "speaker": "9610",
+  "age": 22,
+  "gender": "f",
+  "text": "IT WAS WHEN I WAS VERY YOUNG.",
+  "dur": 6.07,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 5,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 2,
+    "w": "WHEN",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 1,
+      "pronounced-phone": "IH"
+     }
+    ],
+    "phones": [
+     "W",
+     "EH0",
+     "N"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "WHEN",
+    "acc": 3
+   },
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "VERY",
+    "acc": 10
+   },
+   {
+    "w": "YOUNG",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2258_9610"
+ },
+ {
+  "row": 2371,
+  "speaker": "9626",
+  "age": 37,
+  "gender": "m",
+  "text": "I NEED TO BE HERE.",
+  "dur": 3.35,
+  "sr": 16000,
+  "utt_acc": 5,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "HERE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "HH",
+      "index": 0,
+      "pronounced-phone": "Z"
+     }
+    ],
+    "phones": [
+     "HH",
+     "IH",
+     "AH0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "NEED",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "HERE",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2371_9626"
+ },
+ {
+  "row": 347,
+  "speaker": "0306",
+  "age": 21,
+  "gender": "f",
+  "text": "WHAT WHAT WOULD HAVE YOU HAPPEN",
+  "dur": 3.71,
+  "sr": 16000,
+  "utt_acc": 5,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 2,
+    "w": "WOULD",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "W",
+      "index": 0,
+      "pronounced-phone": "HH"
+     }
+    ],
+    "phones": [
+     "W",
+     "UH0",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "WHAT",
+    "acc": 8
+   },
+   {
+    "w": "WHAT",
+    "acc": 8
+   },
+   {
+    "w": "WOULD",
+    "acc": 3
+   },
+   {
+    "w": "HAVE",
+    "acc": 10
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "HAPPEN",
+    "acc": 10
+   }
+  ],
+  "id": "so762_347_0306"
+ },
+ {
+  "row": 2458,
+  "speaker": "9635",
+  "age": 24,
+  "gender": "f",
+  "text": "I LOOKED OVER TO THE SIDE.",
+  "dur": 4.3,
+  "sr": 16000,
+  "utt_acc": 5,
+  "utt_total": 5,
+  "fluency": 5,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 5,
+    "w": "SIDE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AY",
+      "index": 1,
+      "pronounced-phone": "EY"
+     }
+    ],
+    "phones": [
+     "S",
+     "AY0",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "LOOKED",
+    "acc": 10
+   },
+   {
+    "w": "OVER",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "SIDE",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2458_9635"
+ },
+ {
+  "row": 2393,
+  "speaker": "9629",
+  "age": 25,
+  "gender": "f",
+  "text": "I MADE IT TO HER HOUSE!",
+  "dur": 4.39,
+  "sr": 16000,
+  "utt_acc": 5,
+  "utt_total": 5,
+  "fluency": 5,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 1,
+    "w": "MADE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EY",
+      "index": 1,
+      "pronounced-phone": "AH"
+     }
+    ],
+    "phones": [
+     "M",
+     "EY0",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "MADE",
+    "acc": 3
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "HER",
+    "acc": 10
+   },
+   {
+    "w": "HOUSE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2393_9629"
+ },
+ {
+  "row": 2399,
+  "speaker": "9629",
+  "age": 25,
+  "gender": "f",
+  "text": "IT WAS NOT YET TIME.",
+  "dur": 4.92,
+  "sr": 16000,
+  "utt_acc": 5,
+  "utt_total": 5,
+  "fluency": 5,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "TIME",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AY",
+      "index": 1,
+      "pronounced-phone": "IY"
+     }
+    ],
+    "phones": [
+     "T",
+     "AY0",
+     "M"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "NOT",
+    "acc": 10
+   },
+   {
+    "w": "YET",
+    "acc": 10
+   },
+   {
+    "w": "TIME",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2399_9629"
+ },
+ {
+  "row": 2256,
+  "speaker": "9610",
+  "age": 22,
+  "gender": "f",
+  "text": "THERE WAS NOTHING LEFT FOR ME.",
+  "dur": 6.01,
+  "sr": 16000,
+  "utt_acc": 5,
+  "utt_total": 4,
+  "fluency": 5,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 0,
+    "w": "THERE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "DH",
+      "index": 0,
+      "pronounced-phone": "HH"
+     }
+    ],
+    "phones": [
+     "DH",
+     "EH0",
+     "R"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THERE",
+    "acc": 3
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "NOTHING",
+    "acc": 10
+   },
+   {
+    "w": "LEFT",
+    "acc": 10
+   },
+   {
+    "w": "FOR",
+    "acc": 10
+   },
+   {
+    "w": "ME",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2256_9610"
+ },
+ {
+  "row": 2259,
+  "speaker": "9610",
+  "age": 22,
+  "gender": "f",
+  "text": "I ASKED TO BE SURE.",
+  "dur": 4.07,
+  "sr": 16000,
+  "utt_acc": 4,
+  "utt_total": 4,
+  "fluency": 5,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "SURE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "SH",
+      "index": 0,
+      "pronounced-phone": "SH*"
+     },
+     {
+      "canonical-phone": "UH",
+      "index": 1,
+      "pronounced-phone": "IH"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 2,
+      "pronounced-phone": "AH*"
+     }
+    ],
+    "phones": [
+     "SH",
+     "UH",
+     "AH0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "ASKED",
+    "acc": 8
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "SURE",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2259_9610"
+ },
+ {
+  "row": 2484,
+  "speaker": "9647",
+  "age": 20,
+  "gender": "f",
+  "text": "WERE THESE YOUNG PEOPLE EVIL?",
+  "dur": 4.44,
+  "sr": 16000,
+  "utt_acc": 4,
+  "utt_total": 4,
+  "fluency": 5,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "EVIL",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "V",
+      "index": 1,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "IH",
+      "index": 2,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "IY1",
+     "V",
+     "IH0",
+     "L"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "WERE",
+    "acc": 10
+   },
+   {
+    "w": "THESE",
+    "acc": 10
+   },
+   {
+    "w": "YOUNG",
+    "acc": 10
+   },
+   {
+    "w": "PEOPLE",
+    "acc": 10
+   },
+   {
+    "w": "EVIL",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2484_9647"
+ },
+ {
+  "row": 2400,
+  "speaker": "9631",
+  "age": 26,
+  "gender": "m",
+  "text": "HE COULD, BUT WHAT WOULD HE DO?",
+  "dur": 4.98,
+  "sr": 16000,
+  "utt_acc": 4,
+  "utt_total": 4,
+  "fluency": 5,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 1,
+    "w": "COULD",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "UH",
+      "index": 1,
+      "pronounced-phone": "AA"
+     }
+    ],
+    "phones": [
+     "K",
+     "UH0",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "HE",
+    "acc": 10
+   },
+   {
+    "w": "COULD",
+    "acc": 3
+   },
+   {
+    "w": "BUT",
+    "acc": 10
+   },
+   {
+    "w": "WHAT",
+    "acc": 10
+   },
+   {
+    "w": "WOULD",
+    "acc": 10
+   },
+   {
+    "w": "HE",
+    "acc": 10
+   },
+   {
+    "w": "DO",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2400_9631"
+ },
+ {
+  "row": 2408,
+  "speaker": "9631",
+  "age": 26,
+  "gender": "m",
+  "text": "I HAVE BETTER GET OUT OF HERE.",
+  "dur": 3.66,
+  "sr": 16000,
+  "utt_acc": 3,
+  "utt_total": 3,
+  "fluency": 7,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 6,
+    "w": "HERE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "IH",
+      "index": 1,
+      "pronounced-phone": "ER"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "HH",
+     "IH",
+     "AH0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "HAVE",
+    "acc": 10
+   },
+   {
+    "w": "BETTER",
+    "acc": 8
+   },
+   {
+    "w": "GET",
+    "acc": 10
+   },
+   {
+    "w": "OUT",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "HERE",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2408_9631"
+ },
+ {
+  "row": 1440,
+  "speaker": "2892",
+  "age": 24,
+  "gender": "m",
+  "text": "SENDING YOU LOVE AND BLESSINGS",
+  "dur": 2.62,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 7,
+  "fluency": 8,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "BLESSINGS",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 2,
+      "pronounced-phone": "AH"
+     }
+    ],
+    "phones": [
+     "B",
+     "L",
+     "EH1",
+     "S",
+     "IH0",
+     "NG",
+     "Z"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "SENDING",
+    "acc": 10
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "LOVE",
+    "acc": 10
+   },
+   {
+    "w": "AND",
+    "acc": 10
+   },
+   {
+    "w": "BLESSINGS",
+    "acc": 5
+   }
+  ],
+  "id": "so762_1440_2892"
+ },
+ {
+  "row": 834,
+  "speaker": "1292",
+  "age": 37,
+  "gender": "m",
+  "text": "ALSO THANKS TO ALL SPONSORS",
+  "dur": 2.72,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 8,
+  "fluency": 9,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "SPONSORS",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "S",
+      "index": 4,
+      "pronounced-phone": "D"
+     }
+    ],
+    "phones": [
+     "S",
+     "P",
+     "AA1",
+     "N",
+     "S",
+     "ER0",
+     "S"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "ALSO",
+    "acc": 10
+   },
+   {
+    "w": "THANKS",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "ALL",
+    "acc": 10
+   },
+   {
+    "w": "SPONSORS",
+    "acc": 5
+   }
+  ],
+  "id": "so762_834_1292"
+ },
+ {
+  "row": 365,
+  "speaker": "0457",
+  "age": 21,
+  "gender": "f",
+  "text": "OR WHEN YOU OPEN THE OVEN",
+  "dur": 2.94,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 5,
+    "w": "OVEN",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 0,
+      "pronounced-phone": "OW"
+     }
+    ],
+    "phones": [
+     "AH1",
+     "V",
+     "N"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "OR",
+    "acc": 10
+   },
+   {
+    "w": "WHEN",
+    "acc": 10
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "OPEN",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "OVEN",
+    "acc": 5
+   }
+  ],
+  "id": "so762_365_0457"
+ },
+ {
+  "row": 496,
+  "speaker": "0811",
+  "age": 20,
+  "gender": "f",
+  "text": "SORRY NOT A FAN OF THAT DECISION",
+  "dur": 2.96,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 8,
+  "fluency": 10,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 6,
+    "w": "DECISION",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "S",
+      "index": 2,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "D",
+     "IH0",
+     "S",
+     "IH1",
+     "ZH",
+     "N"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "SORRY",
+    "acc": 10
+   },
+   {
+    "w": "NOT",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "FAN",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "THAT",
+    "acc": 10
+   },
+   {
+    "w": "DECISION",
+    "acc": 5
+   }
+  ],
+  "id": "so762_496_0811"
+ },
+ {
+  "row": 928,
+  "speaker": "1420",
+  "age": 25,
+  "gender": "m",
+  "text": "IT WAS A BEAUTIFUL DAY FOR A FLOAT",
+  "dur": 3.07,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 8,
+  "fluency": 9,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 7,
+    "w": "FLOAT",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "L",
+      "index": 1,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "F",
+     "L",
+     "OW0",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "BEAUTIFUL",
+    "acc": 10
+   },
+   {
+    "w": "DAY",
+    "acc": 10
+   },
+   {
+    "w": "FOR",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "FLOAT",
+    "acc": 5
+   }
+  ],
+  "id": "so762_928_1420"
+ },
+ {
+  "row": 472,
+  "speaker": "0765",
+  "age": 20,
+  "gender": "m",
+  "text": "EVERYTHING IS IN GOD'S WORD",
+  "dur": 3.53,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 7,
+  "fluency": 8,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 3,
+    "w": "GOD'S",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 1,
+      "pronounced-phone": "AH*"
+     }
+    ],
+    "phones": [
+     "G",
+     "AH0",
+     "D",
+     "Z"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "EVERYTHING",
+    "acc": 10
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "IN",
+    "acc": 10
+   },
+   {
+    "w": "GOD'S",
+    "acc": 5
+   },
+   {
+    "w": "WORD",
+    "acc": 10
+   }
+  ],
+  "id": "so762_472_0765"
+ },
+ {
+  "row": 1302,
+  "speaker": "2438",
+  "age": 21,
+  "gender": "f",
+  "text": "PLEASE LET ME KNOW HOW I CAN BE OF SERVICE",
+  "dur": 3.58,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 7,
+  "fluency": 8,
+  "n_words": 10,
+  "bad": [
+   {
+    "i": 9,
+    "w": "SERVICE",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "IH",
+      "index": 3,
+      "pronounced-phone": "AY"
+     }
+    ],
+    "phones": [
+     "S",
+     "ER1",
+     "V",
+     "IH0",
+     "S"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "PLEASE",
+    "acc": 10
+   },
+   {
+    "w": "LET",
+    "acc": 10
+   },
+   {
+    "w": "ME",
+    "acc": 10
+   },
+   {
+    "w": "KNOW",
+    "acc": 10
+   },
+   {
+    "w": "HOW",
+    "acc": 10
+   },
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "CAN",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "SERVICE",
+    "acc": 5
+   }
+  ],
+  "id": "so762_1302_2438"
+ },
+ {
+  "row": 1403,
+  "speaker": "2538",
+  "age": 21,
+  "gender": "f",
+  "text": "IT IS AN INNER INTERNATIONAL WORD",
+  "dur": 3.69,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 4,
+    "w": "INTERNATIONAL",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AE",
+      "index": 5,
+      "pronounced-phone": "EY"
+     }
+    ],
+    "phones": [
+     "IH2",
+     "N",
+     "T",
+     "ER0",
+     "N",
+     "AE1",
+     "SH",
+     "N",
+     "AH0",
+     "L"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "AN",
+    "acc": 10
+   },
+   {
+    "w": "INNER",
+    "acc": 10
+   },
+   {
+    "w": "INTERNATIONAL",
+    "acc": 5
+   },
+   {
+    "w": "WORD",
+    "acc": 10
+   }
+  ],
+  "id": "so762_1403_2538"
+ },
+ {
+  "row": 1236,
+  "speaker": "2116",
+  "age": 20,
+  "gender": "f",
+  "text": "FOLLOW THE LINK BELOW TO REGISTER",
+  "dur": 4.0,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 8,
+  "fluency": 8,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 5,
+    "w": "REGISTER",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 1,
+      "pronounced-phone": "IH"
+     }
+    ],
+    "phones": [
+     "R",
+     "EH1",
+     "JH",
+     "IH0",
+     "S",
+     "T",
+     "ER0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "FOLLOW",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "LINK",
+    "acc": 10
+   },
+   {
+    "w": "BELOW",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "REGISTER",
+    "acc": 5
+   }
+  ],
+  "id": "so762_1236_2116"
+ },
+ {
+  "row": 1502,
+  "speaker": "2937",
+  "age": 19,
+  "gender": "m",
+  "text": "POLICE HAVE YET TO CHARGE ANYONE IN BOMBINGS",
+  "dur": 4.02,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 8,
+  "fluency": 8,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 7,
+    "w": "BOMBINGS",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 1,
+      "pronounced-phone": "UH"
+     }
+    ],
+    "phones": [
+     "B",
+     "AH1",
+     "M",
+     "IH0",
+     "NG",
+     "S"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "POLICE",
+    "acc": 10
+   },
+   {
+    "w": "HAVE",
+    "acc": 10
+   },
+   {
+    "w": "YET",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "CHARGE",
+    "acc": 10
+   },
+   {
+    "w": "ANYONE",
+    "acc": 10
+   },
+   {
+    "w": "IN",
+    "acc": 10
+   },
+   {
+    "w": "BOMBINGS",
+    "acc": 5
+   }
+  ],
+  "id": "so762_1502_2937"
+ },
+ {
+  "row": 241,
+  "speaker": "0120",
+  "age": 19,
+  "gender": "f",
+  "text": "HE'S HAD A TRAFFIC HIGH SCHOOL CAREER",
+  "dur": 4.54,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 7,
+  "fluency": 8,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 6,
+    "w": "CAREER",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 1,
+      "pronounced-phone": "AE"
+     }
+    ],
+    "phones": [
+     "K",
+     "AH0",
+     "R",
+     "IH",
+     "AH1"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "HE'S",
+    "acc": 10
+   },
+   {
+    "w": "HAD",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "TRAFFIC",
+    "acc": 10
+   },
+   {
+    "w": "HIGH",
+    "acc": 10
+   },
+   {
+    "w": "SCHOOL",
+    "acc": 10
+   },
+   {
+    "w": "CAREER",
+    "acc": 5
+   }
+  ],
+  "id": "so762_241_0120"
+ },
+ {
+  "row": 1343,
+  "speaker": "2448",
+  "age": 19,
+  "gender": "f",
+  "text": "THURSDAY IS THE LAST DAY OF THIS YEAR'S DEBATE",
+  "dur": 4.58,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 8,
+  "fluency": 8,
+  "n_words": 9,
+  "bad": [
+   {
+    "i": 8,
+    "w": "DEBATE",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "EY",
+      "index": 3,
+      "pronounced-phone": "EH"
+     }
+    ],
+    "phones": [
+     "D",
+     "IH0",
+     "B",
+     "EY1",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THURSDAY",
+    "acc": 8
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "LAST",
+    "acc": 10
+   },
+   {
+    "w": "DAY",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "THIS",
+    "acc": 10
+   },
+   {
+    "w": "YEAR'S",
+    "acc": 10
+   },
+   {
+    "w": "DEBATE",
+    "acc": 5
+   }
+  ],
+  "id": "so762_1343_2448"
+ },
+ {
+  "row": 785,
+  "speaker": "1186",
+  "age": 23,
+  "gender": "m",
+  "text": "NO IT IS YOU WHO MUST BE THANKED",
+  "dur": 4.74,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 7,
+    "w": "THANKED",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "TH",
+      "index": 0,
+      "pronounced-phone": "T"
+     }
+    ],
+    "phones": [
+     "TH",
+     "AE0",
+     "NG",
+     "K",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "NO",
+    "acc": 10
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "WHO",
+    "acc": 10
+   },
+   {
+    "w": "MUST",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "THANKED",
+    "acc": 5
+   }
+  ],
+  "id": "so762_785_1186"
+ },
+ {
+  "row": 1362,
+  "speaker": "2451",
+  "age": 23,
+  "gender": "f",
+  "text": "IT'S TOO PRECIOUS TO US TO LET IT DIE",
+  "dur": 5.07,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 9,
+  "bad": [
+   {
+    "i": 2,
+    "w": "PRECIOUS",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 2,
+      "pronounced-phone": "IH"
+     }
+    ],
+    "phones": [
+     "P",
+     "R",
+     "EH1",
+     "SH",
+     "AH0",
+     "S"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT'S",
+    "acc": 10
+   },
+   {
+    "w": "TOO",
+    "acc": 10
+   },
+   {
+    "w": "PRECIOUS",
+    "acc": 5
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "US",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "LET",
+    "acc": 10
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "DIE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_1362_2451"
+ },
+ {
+  "row": 379,
+  "speaker": "0457",
+  "age": 21,
+  "gender": "f",
+  "text": "IT WILL HAVE A BODY AGAIN",
+  "dur": 3.12,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 4,
+    "w": "BODY",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 1,
+      "pronounced-phone": "AH*"
+     }
+    ],
+    "phones": [
+     "B",
+     "AH1",
+     "D",
+     "IY0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "WILL",
+    "acc": 10
+   },
+   {
+    "w": "HAVE",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "BODY",
+    "acc": 5
+   },
+   {
+    "w": "AGAIN",
+    "acc": 10
+   }
+  ],
+  "id": "so762_379_0457"
+ },
+ {
+  "row": 420,
+  "speaker": "0567",
+  "age": 21,
+  "gender": "f",
+  "text": "WHO KNOWS WHAT TO EXPECT",
+  "dur": 3.31,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "EXPECT",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 4,
+      "pronounced-phone": "EY"
+     }
+    ],
+    "phones": [
+     "IH0",
+     "K",
+     "S",
+     "P",
+     "EH1",
+     "K",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "WHO",
+    "acc": 10
+   },
+   {
+    "w": "KNOWS",
+    "acc": 8
+   },
+   {
+    "w": "WHAT",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "EXPECT",
+    "acc": 5
+   }
+  ],
+  "id": "so762_420_0567"
+ },
+ {
+  "row": 911,
+  "speaker": "1408",
+  "age": 22,
+  "gender": "m",
+  "text": "HAPPY SUNDAY IS A DAY OF PRAISE",
+  "dur": 3.69,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 8,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 6,
+    "w": "PRAISE",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "EY",
+      "index": 2,
+      "pronounced-phone": "AY"
+     }
+    ],
+    "phones": [
+     "P",
+     "R",
+     "EY0",
+     "Z"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "HAPPY",
+    "acc": 10
+   },
+   {
+    "w": "SUNDAY",
+    "acc": 10
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "DAY",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "PRAISE",
+    "acc": 5
+   }
+  ],
+  "id": "so762_911_1408"
+ },
+ {
+  "row": 2286,
+  "speaker": "9617",
+  "age": 35,
+  "gender": "f",
+  "text": "IT NEVER HAPPENED AND IT NEVER WILL.",
+  "dur": 3.8,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 6,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 2,
+    "w": "HAPPENED",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 3,
+      "pronounced-phone": "AE"
+     }
+    ],
+    "phones": [
+     "HH",
+     "AE1",
+     "P",
+     "AH0",
+     "N",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "NEVER",
+    "acc": 10
+   },
+   {
+    "w": "HAPPENED",
+    "acc": 5
+   },
+   {
+    "w": "AND",
+    "acc": 10
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "NEVER",
+    "acc": 10
+   },
+   {
+    "w": "WILL",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2286_9617"
+ },
+ {
+  "row": 501,
+  "speaker": "0981",
+  "age": 25,
+  "gender": "m",
+  "text": "BUT IT'S JUST A MATTER OF TIME",
+  "dur": 3.82,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 4,
+    "w": "MATTER",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AE",
+      "index": 1,
+      "pronounced-phone": "AH"
+     }
+    ],
+    "phones": [
+     "M",
+     "AE1",
+     "T",
+     "AH0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "BUT",
+    "acc": 10
+   },
+   {
+    "w": "IT'S",
+    "acc": 10
+   },
+   {
+    "w": "JUST",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "MATTER",
+    "acc": 5
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "TIME",
+    "acc": 10
+   }
+  ],
+  "id": "so762_501_0981"
+ },
+ {
+  "row": 722,
+  "speaker": "1135",
+  "age": 25,
+  "gender": "m",
+  "text": "STARTING ON TUESDAY IT'S BACK TO WORK",
+  "dur": 4.28,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 8,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 2,
+    "w": "TUESDAY",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "Z",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "T",
+     "Y",
+     "UW1",
+     "Z",
+     "D",
+     "EY0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "STARTING",
+    "acc": 10
+   },
+   {
+    "w": "ON",
+    "acc": 10
+   },
+   {
+    "w": "TUESDAY",
+    "acc": 5
+   },
+   {
+    "w": "IT'S",
+    "acc": 10
+   },
+   {
+    "w": "BACK",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "WORK",
+    "acc": 10
+   }
+  ],
+  "id": "so762_722_1135"
+ },
+ {
+  "row": 723,
+  "speaker": "1135",
+  "age": 25,
+  "gender": "m",
+  "text": "IN COLLEGE YOU COULD GET AWAY WITH THINGS",
+  "dur": 4.34,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 8,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 1,
+    "w": "COLLEGE",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "L",
+      "index": 2,
+      "pronounced-phone": "R"
+     }
+    ],
+    "phones": [
+     "K",
+     "AH1",
+     "L",
+     "IH0",
+     "JH"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IN",
+    "acc": 10
+   },
+   {
+    "w": "COLLEGE",
+    "acc": 5
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "COULD",
+    "acc": 10
+   },
+   {
+    "w": "GET",
+    "acc": 10
+   },
+   {
+    "w": "AWAY",
+    "acc": 10
+   },
+   {
+    "w": "WITH",
+    "acc": 10
+   },
+   {
+    "w": "THINGS",
+    "acc": 10
+   }
+  ],
+  "id": "so762_723_1135"
+ },
+ {
+  "row": 2296,
+  "speaker": "9617",
+  "age": 35,
+  "gender": "f",
+  "text": "SO THAT IS WHAT I WANT TO BE CALLED.",
+  "dur": 4.34,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 9,
+  "bad": [
+   {
+    "i": 8,
+    "w": "CALLED",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AO",
+      "index": 1,
+      "pronounced-phone": "OW"
+     }
+    ],
+    "phones": [
+     "K",
+     "AO0",
+     "L",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "SO",
+    "acc": 10
+   },
+   {
+    "w": "THAT",
+    "acc": 10
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "WHAT",
+    "acc": 10
+   },
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "WANT",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "CALLED",
+    "acc": 5
+   }
+  ],
+  "id": "so762_2296_9617"
+ },
+ {
+  "row": 737,
+  "speaker": "1135",
+  "age": 25,
+  "gender": "m",
+  "text": "IT WAS ONLY A NOTE A FEW LINES",
+  "dur": 4.42,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 7,
+    "w": "LINES",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "N",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "L",
+     "AY0",
+     "N",
+     "Z"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "ONLY",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "NOTE",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "FEW",
+    "acc": 10
+   },
+   {
+    "w": "LINES",
+    "acc": 5
+   }
+  ],
+  "id": "so762_737_1135"
+ },
+ {
+  "row": 2418,
+  "speaker": "9631",
+  "age": 26,
+  "gender": "m",
+  "text": "THE THING HAD COME, AND SO IT MUST BE.",
+  "dur": 4.46,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 9,
+  "bad": [
+   {
+    "i": 7,
+    "w": "MUST",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 1,
+      "pronounced-phone": "OW"
+     }
+    ],
+    "phones": [
+     "M",
+     "AH0",
+     "S",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "THING",
+    "acc": 10
+   },
+   {
+    "w": "HAD",
+    "acc": 10
+   },
+   {
+    "w": "COME",
+    "acc": 10
+   },
+   {
+    "w": "AND",
+    "acc": 10
+   },
+   {
+    "w": "SO",
+    "acc": 10
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "MUST",
+    "acc": 5
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2418_9631"
+ },
+ {
+  "row": 780,
+  "speaker": "1186",
+  "age": 23,
+  "gender": "m",
+  "text": "THANKFUL FOR SO MANY OF YOU",
+  "dur": 5.28,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 6,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 0,
+    "w": "THANKFUL",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "TH",
+      "index": 0,
+      "pronounced-phone": "T"
+     }
+    ],
+    "phones": [
+     "TH",
+     "AE1",
+     "NG",
+     "K",
+     "F",
+     "L"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THANKFUL",
+    "acc": 5
+   },
+   {
+    "w": "FOR",
+    "acc": 10
+   },
+   {
+    "w": "SO",
+    "acc": 10
+   },
+   {
+    "w": "MANY",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   }
+  ],
+  "id": "so762_780_1186"
+ },
+ {
+  "row": 2310,
+  "speaker": "9618",
+  "age": 24,
+  "gender": "f",
+  "text": "I WANTED TO FIND MORE OUT ABOUT YOU.",
+  "dur": 5.44,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 1,
+    "w": "WANTED",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "IH",
+      "index": 4,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "D",
+      "index": 5,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "W",
+     "AA1",
+     "N",
+     "T",
+     "IH0",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "WANTED",
+    "acc": 5
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "FIND",
+    "acc": 10
+   },
+   {
+    "w": "MORE",
+    "acc": 10
+   },
+   {
+    "w": "OUT",
+    "acc": 10
+   },
+   {
+    "w": "ABOUT",
+    "acc": 10
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2310_9618"
+ },
+ {
+  "row": 396,
+  "speaker": "0461",
+  "age": 23,
+  "gender": "m",
+  "text": "FIRST PLACE IN THE DIVISION",
+  "dur": 2.99,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "DIVISION",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "V",
+      "index": 2,
+      "pronounced-phone": "F"
+     }
+    ],
+    "phones": [
+     "D",
+     "IH0",
+     "V",
+     "IH1",
+     "ZH",
+     "N"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "FIRST",
+    "acc": 10
+   },
+   {
+    "w": "PLACE",
+    "acc": 10
+   },
+   {
+    "w": "IN",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "DIVISION",
+    "acc": 5
+   }
+  ],
+  "id": "so762_396_0461"
+ },
+ {
+  "row": 478,
+  "speaker": "0765",
+  "age": 20,
+  "gender": "m",
+  "text": "I SHALL BE AT HAND FOR THE TRIAL",
+  "dur": 4.33,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 7,
+    "w": "TRIAL",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AY",
+      "index": 2,
+      "pronounced-phone": "IH"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "T",
+     "R",
+     "AY1",
+     "AH0",
+     "L"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "SHALL",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "AT",
+    "acc": 10
+   },
+   {
+    "w": "HAND",
+    "acc": 10
+   },
+   {
+    "w": "FOR",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "TRIAL",
+    "acc": 5
+   }
+  ],
+  "id": "so762_478_0765"
+ },
+ {
+  "row": 2343,
+  "speaker": "9623",
+  "age": 21,
+  "gender": "m",
+  "text": "THIS WAS WHERE SHE HAD LEFT THEM.",
+  "dur": 6.82,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 5,
+    "w": "LEFT",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 1,
+      "pronounced-phone": "IH"
+     }
+    ],
+    "phones": [
+     "L",
+     "EH0",
+     "F",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THIS",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "WHERE",
+    "acc": 10
+   },
+   {
+    "w": "SHE",
+    "acc": 10
+   },
+   {
+    "w": "HAD",
+    "acc": 10
+   },
+   {
+    "w": "LEFT",
+    "acc": 5
+   },
+   {
+    "w": "THEM",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2343_9623"
+ },
+ {
+  "row": 2390,
+  "speaker": "9629",
+  "age": 25,
+  "gender": "f",
+  "text": "THE BOY LOOKED FROM THE HAND TO HER.",
+  "dur": 7.08,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 2,
+    "w": "LOOKED",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "UH",
+      "index": 1,
+      "pronounced-phone": "AA"
+     }
+    ],
+    "phones": [
+     "L",
+     "UH0",
+     "K",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "BOY",
+    "acc": 10
+   },
+   {
+    "w": "LOOKED",
+    "acc": 5
+   },
+   {
+    "w": "FROM",
+    "acc": 8
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "HAND",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "HER",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2390_9629"
+ },
+ {
+  "row": 461,
+  "speaker": "0765",
+  "age": 20,
+  "gender": "m",
+  "text": "NEARLY ALL REPUBLICANS VOTED AGAINST THE MEASURE",
+  "dur": 7.67,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 6,
+    "w": "MEASURE",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "ZH",
+      "index": 2,
+      "pronounced-phone": "Y"
+     }
+    ],
+    "phones": [
+     "M",
+     "EH1",
+     "ZH",
+     "ER0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "NEARLY",
+    "acc": 10
+   },
+   {
+    "w": "ALL",
+    "acc": 10
+   },
+   {
+    "w": "REPUBLICANS",
+    "acc": 10
+   },
+   {
+    "w": "VOTED",
+    "acc": 10
+   },
+   {
+    "w": "AGAINST",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "MEASURE",
+    "acc": 5
+   }
+  ],
+  "id": "so762_461_0765"
+ },
+ {
+  "row": 441,
+  "speaker": "0736",
+  "age": 21,
+  "gender": "f",
+  "text": "HE'S JUST BEING HIMSELF AND THAT'S ALL WE NEED",
+  "dur": 6.96,
+  "sr": 16000,
+  "utt_acc": 5,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 9,
+  "bad": [
+   {
+    "i": 2,
+    "w": "BEING",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "NG",
+      "index": 3,
+      "pronounced-phone": "NG*"
+     }
+    ],
+    "phones": [
+     "B",
+     "IY1",
+     "IH0",
+     "NG"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "HE'S",
+    "acc": 8
+   },
+   {
+    "w": "JUST",
+    "acc": 10
+   },
+   {
+    "w": "BEING",
+    "acc": 5
+   },
+   {
+    "w": "HIMSELF",
+    "acc": 10
+   },
+   {
+    "w": "AND",
+    "acc": 10
+   },
+   {
+    "w": "THAT'S",
+    "acc": 10
+   },
+   {
+    "w": "ALL",
+    "acc": 10
+   },
+   {
+    "w": "WE",
+    "acc": 10
+   },
+   {
+    "w": "NEED",
+    "acc": 10
+   }
+  ],
+  "id": "so762_441_0736"
+ },
+ {
+  "row": 2274,
+  "speaker": "9612",
+  "age": 20,
+  "gender": "f",
+  "text": "HE SHOULD BE ABLE TO SEE IT FROM HERE!",
+  "dur": 4.8,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 9,
+  "bad": [
+   {
+    "i": 5,
+    "w": "SEE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "IY",
+      "index": 1,
+      "pronounced-phone": "AA"
+     }
+    ],
+    "phones": [
+     "S",
+     "IY0"
+    ]
+   },
+   {
+    "i": 8,
+    "w": "HERE",
+    "acc": 2,
+    "mis": [
+     {
+      "canonical-phone": "HH",
+      "index": 0,
+      "pronounced-phone": "DH"
+     }
+    ],
+    "phones": [
+     "HH",
+     "IH",
+     "AH0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "HE",
+    "acc": 10
+   },
+   {
+    "w": "SHOULD",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "ABLE",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "SEE",
+    "acc": 3
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "FROM",
+    "acc": 10
+   },
+   {
+    "w": "HERE",
+    "acc": 2
+   }
+  ],
+  "id": "so762_2274_9612"
+ },
+ {
+  "row": 2397,
+  "speaker": "9629",
+  "age": 25,
+  "gender": "f",
+  "text": "AND THE FIRST THOUGH IN MY HEAD WAS.",
+  "dur": 6.51,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 5,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 2,
+    "w": "FIRST",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "ER",
+      "index": 1,
+      "pronounced-phone": "IH"
+     }
+    ],
+    "phones": [
+     "F",
+     "ER0",
+     "S",
+     "T"
+    ]
+   },
+   {
+    "i": 3,
+    "w": "THOUGH",
+    "acc": 2,
+    "mis": [
+     {
+      "canonical-phone": "DH",
+      "index": 0,
+      "pronounced-phone": "S"
+     },
+     {
+      "canonical-phone": "OW",
+      "index": 1,
+      "pronounced-phone": "AO"
+     }
+    ],
+    "phones": [
+     "DH",
+     "OW0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "AND",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "FIRST",
+    "acc": 5
+   },
+   {
+    "w": "THOUGH",
+    "acc": 2
+   },
+   {
+    "w": "IN",
+    "acc": 10
+   },
+   {
+    "w": "MY",
+    "acc": 10
+   },
+   {
+    "w": "HEAD",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2397_9629"
+ },
+ {
+  "row": 2206,
+  "speaker": "9601",
+  "age": 25,
+  "gender": "m",
+  "text": "SO HE CALLED AND ASKED ONE MORE TIME.",
+  "dur": 7.89,
+  "sr": 16000,
+  "utt_acc": 3,
+  "utt_total": 3,
+  "fluency": 5,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 2,
+    "w": "CALLED",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AO",
+      "index": 1,
+      "pronounced-phone": "<unk>"
+     },
+     {
+      "canonical-phone": "L",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "K",
+     "AO0",
+     "L",
+     "D"
+    ]
+   },
+   {
+    "i": 4,
+    "w": "ASKED",
+    "acc": 2,
+    "mis": [
+     {
+      "canonical-phone": "AA",
+      "index": 0,
+      "pronounced-phone": "AH"
+     },
+     {
+      "canonical-phone": "S",
+      "index": 1,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "K",
+      "index": 2,
+      "pronounced-phone": "<unk>"
+     },
+     {
+      "canonical-phone": "T",
+      "index": 3,
+      "pronounced-phone": "D"
+     }
+    ],
+    "phones": [
+     "AA0",
+     "S",
+     "K",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "SO",
+    "acc": 10
+   },
+   {
+    "w": "HE",
+    "acc": 10
+   },
+   {
+    "w": "CALLED",
+    "acc": 3
+   },
+   {
+    "w": "AND",
+    "acc": 10
+   },
+   {
+    "w": "ASKED",
+    "acc": 2
+   },
+   {
+    "w": "ONE",
+    "acc": 10
+   },
+   {
+    "w": "MORE",
+    "acc": 8
+   },
+   {
+    "w": "TIME",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2206_9601"
+ },
+ {
+  "row": 2283,
+  "speaker": "9617",
+  "age": 35,
+  "gender": "f",
+  "text": "YOU MAY NOT BE WHO YOU THINK YOU ARE.",
+  "dur": 6.62,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 9,
+  "bad": [
+   {
+    "i": 1,
+    "w": "MAY",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EY",
+      "index": 1,
+      "pronounced-phone": "AY"
+     }
+    ],
+    "phones": [
+     "M",
+     "EY0"
+    ]
+   },
+   {
+    "i": 6,
+    "w": "THINK",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "IH",
+      "index": 1,
+      "pronounced-phone": "AE"
+     }
+    ],
+    "phones": [
+     "TH",
+     "IH0",
+     "NG",
+     "K"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "MAY",
+    "acc": 3
+   },
+   {
+    "w": "NOT",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "WHO",
+    "acc": 10
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "THINK",
+    "acc": 5
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "ARE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2283_9617"
+ },
+ {
+  "row": 2434,
+  "speaker": "9633",
+  "age": 21,
+  "gender": "f",
+  "text": "THAT DAY WAS THE FIRST TIME I SAW HIM.",
+  "dur": 6.69,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 6,
+  "n_words": 9,
+  "bad": [
+   {
+    "i": 7,
+    "w": "SAW",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AO",
+      "index": 1,
+      "pronounced-phone": "IY"
+     }
+    ],
+    "phones": [
+     "S",
+     "AO0"
+    ]
+   },
+   {
+    "i": 8,
+    "w": "HIM",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "M",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "HH",
+     "IH0",
+     "M"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THAT",
+    "acc": 8
+   },
+   {
+    "w": "DAY",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "FIRST",
+    "acc": 10
+   },
+   {
+    "w": "TIME",
+    "acc": 10
+   },
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "SAW",
+    "acc": 3
+   },
+   {
+    "w": "HIM",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2434_9633"
+ },
+ {
+  "row": 2244,
+  "speaker": "9610",
+  "age": 22,
+  "gender": "f",
+  "text": "SHOULD I KNOW HER AGAIN IF I SAW HER?",
+  "dur": 7.0,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 5,
+  "n_words": 9,
+  "bad": [
+   {
+    "i": 0,
+    "w": "SHOULD",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "SH",
+      "index": 0,
+      "pronounced-phone": "K"
+     }
+    ],
+    "phones": [
+     "SH",
+     "UH0",
+     "D"
+    ]
+   },
+   {
+    "i": 4,
+    "w": "AGAIN",
+    "acc": 5,
+    "mis": [],
+    "phones": [
+     "AH0",
+     "G",
+     "EH0",
+     "N"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "SHOULD",
+    "acc": 3
+   },
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "KNOW",
+    "acc": 10
+   },
+   {
+    "w": "HER",
+    "acc": 10
+   },
+   {
+    "w": "AGAIN",
+    "acc": 5
+   },
+   {
+    "w": "IF",
+    "acc": 10
+   },
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "SAW",
+    "acc": 10
+   },
+   {
+    "w": "HER",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2244_9610"
+ },
+ {
+  "row": 444,
+  "speaker": "0736",
+  "age": 21,
+  "gender": "f",
+  "text": "WE LOOK FORWARD TO HAVING THEM CAME ON",
+  "dur": 3.88,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 5,
+    "w": "THEM",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 1,
+      "pronounced-phone": "IH"
+     },
+     {
+      "canonical-phone": "M",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "DH",
+     "EH0",
+     "M"
+    ]
+   },
+   {
+    "i": 6,
+    "w": "CAME",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EY",
+      "index": 1,
+      "pronounced-phone": "EY*"
+     }
+    ],
+    "phones": [
+     "K",
+     "EY0",
+     "M"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "WE",
+    "acc": 10
+   },
+   {
+    "w": "LOOK",
+    "acc": 10
+   },
+   {
+    "w": "FORWARD",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "HAVING",
+    "acc": 10
+   },
+   {
+    "w": "THEM",
+    "acc": 3
+   },
+   {
+    "w": "CAME",
+    "acc": 3
+   },
+   {
+    "w": "ON",
+    "acc": 10
+   }
+  ],
+  "id": "so762_444_0736"
+ },
+ {
+  "row": 2319,
+  "speaker": "9618",
+  "age": 24,
+  "gender": "f",
+  "text": "HE HAD CALLED THEM THAT HIMSELF IN HIS DAY.",
+  "dur": 6.23,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 9,
+  "bad": [
+   {
+    "i": 2,
+    "w": "CALLED",
+    "acc": 5,
+    "mis": [],
+    "phones": [
+     "K",
+     "AO0",
+     "L",
+     "D"
+    ]
+   },
+   {
+    "i": 5,
+    "w": "HIMSELF",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "M",
+      "index": 2,
+      "pronounced-phone": "Z"
+     }
+    ],
+    "phones": [
+     "HH",
+     "IH0",
+     "M",
+     "S",
+     "EH1",
+     "L",
+     "F"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "HE",
+    "acc": 10
+   },
+   {
+    "w": "HAD",
+    "acc": 10
+   },
+   {
+    "w": "CALLED",
+    "acc": 5
+   },
+   {
+    "w": "THEM",
+    "acc": 10
+   },
+   {
+    "w": "THAT",
+    "acc": 10
+   },
+   {
+    "w": "HIMSELF",
+    "acc": 3
+   },
+   {
+    "w": "IN",
+    "acc": 10
+   },
+   {
+    "w": "HIS",
+    "acc": 10
+   },
+   {
+    "w": "DAY",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2319_9618"
+ },
+ {
+  "row": 2395,
+  "speaker": "9629",
+  "age": 25,
+  "gender": "f",
+  "text": "THIS WAS THE WAY IT SHOULD ALWAYS BE.",
+  "dur": 6.62,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 5,
+    "w": "SHOULD",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "UH",
+      "index": 1,
+      "pronounced-phone": "AA"
+     }
+    ],
+    "phones": [
+     "SH",
+     "UH0",
+     "D"
+    ]
+   },
+   {
+    "i": 6,
+    "w": "ALWAYS",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "EY",
+      "index": 3,
+      "pronounced-phone": "AA"
+     }
+    ],
+    "phones": [
+     "AO1",
+     "L",
+     "W",
+     "EY0",
+     "Z"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THIS",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "WAY",
+    "acc": 10
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "SHOULD",
+    "acc": 3
+   },
+   {
+    "w": "ALWAYS",
+    "acc": 5
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2395_9629"
+ },
+ {
+  "row": 2454,
+  "speaker": "9635",
+  "age": 24,
+  "gender": "f",
+  "text": "BUT THEN I THOUGHT, THERE WAS LITTLE NEED.",
+  "dur": 6.91,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 5,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 3,
+    "w": "THOUGHT",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AO",
+      "index": 1,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "TH",
+     "AO0",
+     "T"
+    ]
+   },
+   {
+    "i": 7,
+    "w": "NEED",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "N",
+      "index": 0,
+      "pronounced-phone": "L"
+     }
+    ],
+    "phones": [
+     "N",
+     "IY0",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "BUT",
+    "acc": 10
+   },
+   {
+    "w": "THEN",
+    "acc": 10
+   },
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "THOUGHT",
+    "acc": 3
+   },
+   {
+    "w": "THERE",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "LITTLE",
+    "acc": 10
+   },
+   {
+    "w": "NEED",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2454_9635"
+ },
+ {
+  "row": 2328,
+  "speaker": "9622",
+  "age": 20,
+  "gender": "f",
+  "text": "I TURNED TO FACE THEM.",
+  "dur": 7.19,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 5,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 1,
+    "w": "TURNED",
+    "acc": 5,
+    "mis": [],
+    "phones": [
+     "T",
+     "ER0",
+     "N",
+     "D"
+    ]
+   },
+   {
+    "i": 4,
+    "w": "THEM",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "M",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "DH",
+     "AH0",
+     "M"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "TURNED",
+    "acc": 5
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "FACE",
+    "acc": 10
+   },
+   {
+    "w": "THEM",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2328_9622"
+ },
+ {
+  "row": 341,
+  "speaker": "0306",
+  "age": 21,
+  "gender": "f",
+  "text": "SO MUCH FOR A UNITED FRONT",
+  "dur": 3.41,
+  "sr": 16000,
+  "utt_acc": 5,
+  "utt_total": 5,
+  "fluency": 7,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 4,
+    "w": "UNITED",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AY",
+      "index": 3,
+      "pronounced-phone": "IH"
+     }
+    ],
+    "phones": [
+     "Y",
+     "UW0",
+     "N",
+     "AY1",
+     "T",
+     "IH0",
+     "D"
+    ]
+   },
+   {
+    "i": 5,
+    "w": "FRONT",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "T",
+      "index": 4,
+      "pronounced-phone": "M"
+     }
+    ],
+    "phones": [
+     "F",
+     "R",
+     "AH0",
+     "N",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "SO",
+    "acc": 10
+   },
+   {
+    "w": "MUCH",
+    "acc": 10
+   },
+   {
+    "w": "FOR",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "UNITED",
+    "acc": 5
+   },
+   {
+    "w": "FRONT",
+    "acc": 3
+   }
+  ],
+  "id": "so762_341_0306"
+ },
+ {
+  "row": 2489,
+  "speaker": "9647",
+  "age": 20,
+  "gender": "f",
+  "text": "WOMAN NO, IT'S ALL RIGHT.",
+  "dur": 3.52,
+  "sr": 16000,
+  "utt_acc": 5,
+  "utt_total": 5,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 2,
+    "w": "IT'S",
+    "acc": 6,
+    "mis": [],
+    "phones": [
+     "IH0",
+     "T",
+     "S"
+    ]
+   },
+   {
+    "i": 4,
+    "w": "RIGHT",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AY",
+      "index": 1,
+      "pronounced-phone": "IH"
+     }
+    ],
+    "phones": [
+     "R",
+     "AY0",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "WOMAN",
+    "acc": 10
+   },
+   {
+    "w": "NO",
+    "acc": 10
+   },
+   {
+    "w": "IT'S",
+    "acc": 6
+   },
+   {
+    "w": "ALL",
+    "acc": 10
+   },
+   {
+    "w": "RIGHT",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2489_9647"
+ },
+ {
+  "row": 2205,
+  "speaker": "9601",
+  "age": 25,
+  "gender": "m",
+  "text": "YOU MAY NOT WANT TO KNOW.",
+  "dur": 3.61,
+  "sr": 16000,
+  "utt_acc": 5,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 1,
+    "w": "MAY",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EY",
+      "index": 1,
+      "pronounced-phone": "AY"
+     }
+    ],
+    "phones": [
+     "M",
+     "EY0"
+    ]
+   },
+   {
+    "i": 5,
+    "w": "KNOW",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "OW",
+      "index": 1,
+      "pronounced-phone": "AA"
+     }
+    ],
+    "phones": [
+     "N",
+     "OW0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "MAY",
+    "acc": 3
+   },
+   {
+    "w": "NOT",
+    "acc": 10
+   },
+   {
+    "w": "WANT",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "KNOW",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2205_9601"
+ },
+ {
+  "row": 2360,
+  "speaker": "9626",
+  "age": 37,
+  "gender": "m",
+  "text": "I LOOKED OVER AT HIM.",
+  "dur": 4.31,
+  "sr": 16000,
+  "utt_acc": 5,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 1,
+    "w": "LOOKED",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "UH",
+      "index": 1,
+      "pronounced-phone": "IH"
+     }
+    ],
+    "phones": [
+     "L",
+     "UH0",
+     "K",
+     "T"
+    ]
+   },
+   {
+    "i": 4,
+    "w": "HIM",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "M",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "HH",
+     "IH0",
+     "M"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "LOOKED",
+    "acc": 5
+   },
+   {
+    "w": "OVER",
+    "acc": 10
+   },
+   {
+    "w": "AT",
+    "acc": 10
+   },
+   {
+    "w": "HIM",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2360_9626"
+ },
+ {
+  "row": 2462,
+  "speaker": "9640",
+  "age": 29,
+  "gender": "f",
+  "text": "AND AFTER HE LEFT, I FEEL EMPTY.",
+  "dur": 5.26,
+  "sr": 16000,
+  "utt_acc": 5,
+  "utt_total": 5,
+  "fluency": 7,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 3,
+    "w": "LEFT",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 1,
+      "pronounced-phone": "IY"
+     },
+     {
+      "canonical-phone": "F",
+      "index": 2,
+      "pronounced-phone": "F*"
+     },
+     {
+      "canonical-phone": "T",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "L",
+     "EH0",
+     "F",
+     "T"
+    ]
+   },
+   {
+    "i": 6,
+    "w": "EMPTY",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "IY",
+      "index": 4,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "EH1",
+     "M",
+     "P",
+     "T",
+     "IY0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "AND",
+    "acc": 10
+   },
+   {
+    "w": "AFTER",
+    "acc": 10
+   },
+   {
+    "w": "HE",
+    "acc": 10
+   },
+   {
+    "w": "LEFT",
+    "acc": 3
+   },
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "FEEL",
+    "acc": 10
+   },
+   {
+    "w": "EMPTY",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2462_9640"
+ },
+ {
+  "row": 2267,
+  "speaker": "9612",
+  "age": 20,
+  "gender": "f",
+  "text": "I LOOKED OVER AT THEM.",
+  "dur": 3.12,
+  "sr": 16000,
+  "utt_acc": 4,
+  "utt_total": 4,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 1,
+    "w": "LOOKED",
+    "acc": 5,
+    "mis": [],
+    "phones": [
+     "L",
+     "UH0",
+     "K",
+     "T"
+    ]
+   },
+   {
+    "i": 4,
+    "w": "THEM",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 1,
+      "pronounced-phone": "EY"
+     },
+     {
+      "canonical-phone": "M",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "DH",
+     "EH0",
+     "M"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "LOOKED",
+    "acc": 5
+   },
+   {
+    "w": "OVER",
+    "acc": 10
+   },
+   {
+    "w": "AT",
+    "acc": 10
+   },
+   {
+    "w": "THEM",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2267_9612"
+ },
+ {
+  "row": 2299,
+  "speaker": "9617",
+  "age": 35,
+  "gender": "f",
+  "text": "NOW, SHE HAD TO DO THE SAME.",
+  "dur": 3.81,
+  "sr": 16000,
+  "utt_acc": 4,
+  "utt_total": 4,
+  "fluency": 7,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 2,
+    "w": "HAD",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AE",
+      "index": 1,
+      "pronounced-phone": "ER"
+     }
+    ],
+    "phones": [
+     "HH",
+     "AE0",
+     "D"
+    ]
+   },
+   {
+    "i": 6,
+    "w": "SAME",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EY",
+      "index": 1,
+      "pronounced-phone": "AH"
+     }
+    ],
+    "phones": [
+     "S",
+     "EY0",
+     "M"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "NOW",
+    "acc": 10
+   },
+   {
+    "w": "SHE",
+    "acc": 10
+   },
+   {
+    "w": "HAD",
+    "acc": 3
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "DO",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "SAME",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2299_9617"
+ },
+ {
+  "row": 2476,
+  "speaker": "9640",
+  "age": 29,
+  "gender": "f",
+  "text": "BUT THIS WANTS FARTHER EXPLANATION.",
+  "dur": 3.89,
+  "sr": 16000,
+  "utt_acc": 4,
+  "utt_total": 4,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 2,
+    "w": "WANTS",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "T",
+      "index": 3,
+      "pronounced-phone": "T*"
+     },
+     {
+      "canonical-phone": "S",
+      "index": 4,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "W",
+     "AH1",
+     "N",
+     "T",
+     "S"
+    ]
+   },
+   {
+    "i": 4,
+    "w": "EXPLANATION",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 0,
+      "pronounced-phone": "<unk>"
+     },
+     {
+      "canonical-phone": "K",
+      "index": 1,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "S",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 5,
+      "pronounced-phone": "AH*"
+     },
+     {
+      "canonical-phone": "N",
+      "index": 6,
+      "pronounced-phone": "N*"
+     },
+     {
+      "canonical-phone": "EY",
+      "index": 7,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "SH",
+      "index": 8,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "N",
+      "index": 9,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "EH2",
+     "K",
+     "S",
+     "P",
+     "L",
+     "AH0",
+     "N",
+     "EY1",
+     "SH",
+     "N"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "BUT",
+    "acc": 10
+   },
+   {
+    "w": "THIS",
+    "acc": 10
+   },
+   {
+    "w": "WANTS",
+    "acc": 5
+   },
+   {
+    "w": "FARTHER",
+    "acc": 10
+   },
+   {
+    "w": "EXPLANATION",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2476_9640"
+ },
+ {
+  "row": 2403,
+  "speaker": "9631",
+  "age": 26,
+  "gender": "m",
+  "text": "IT WILL ONLY BE A MOMENT.",
+  "dur": 3.96,
+  "sr": 16000,
+  "utt_acc": 4,
+  "utt_total": 4,
+  "fluency": 6,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 1,
+    "w": "WILL",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "IH",
+      "index": 1,
+      "pronounced-phone": "ER"
+     },
+     {
+      "canonical-phone": "L",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "W",
+     "IH0",
+     "L"
+    ]
+   },
+   {
+    "i": 5,
+    "w": "MOMENT",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "M",
+      "index": 2,
+      "pronounced-phone": "M*"
+     },
+     {
+      "canonical-phone": "T",
+      "index": 5,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "M",
+     "OW1",
+     "M",
+     "AH0",
+     "N",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "WILL",
+    "acc": 3
+   },
+   {
+    "w": "ONLY",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "MOMENT",
+    "acc": 5
+   }
+  ],
+  "id": "so762_2403_9631"
+ },
+ {
+  "row": 2485,
+  "speaker": "9647",
+  "age": 20,
+  "gender": "f",
+  "text": "YOU CAN JUMP WITHOUT ME.",
+  "dur": 3.97,
+  "sr": 16000,
+  "utt_acc": 4,
+  "utt_total": 4,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 2,
+    "w": "JUMP",
+    "acc": 3,
+    "mis": [],
+    "phones": [
+     "JH",
+     "AH0",
+     "M",
+     "P"
+    ]
+   },
+   {
+    "i": 3,
+    "w": "WITHOUT",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AW",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "T",
+      "index": 4,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "W",
+     "IH0",
+     "DH",
+     "AW1",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "CAN",
+    "acc": 10
+   },
+   {
+    "w": "JUMP",
+    "acc": 3
+   },
+   {
+    "w": "WITHOUT",
+    "acc": 3
+   },
+   {
+    "w": "ME",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2485_9647"
+ },
+ {
+  "row": 2473,
+  "speaker": "9640",
+  "age": 29,
+  "gender": "f",
+  "text": "AUTHOR NOTE: HELLO AGAIN EVERYONE!",
+  "dur": 4.22,
+  "sr": 16000,
+  "utt_acc": 4,
+  "utt_total": 4,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 0,
+    "w": "AUTHOR",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AO",
+      "index": 0,
+      "pronounced-phone": "AH"
+     },
+     {
+      "canonical-phone": "ER",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "AO1",
+     "TH",
+     "ER0"
+    ]
+   },
+   {
+    "i": 1,
+    "w": "NOTE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "OW",
+      "index": 1,
+      "pronounced-phone": "AO"
+     }
+    ],
+    "phones": [
+     "N",
+     "OW0",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "AUTHOR",
+    "acc": 3
+   },
+   {
+    "w": "NOTE",
+    "acc": 3
+   },
+   {
+    "w": "HELLO",
+    "acc": 10
+   },
+   {
+    "w": "AGAIN",
+    "acc": 8
+   },
+   {
+    "w": "EVERYONE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2473_9640"
+ },
+ {
+  "row": 2287,
+  "speaker": "9617",
+  "age": 35,
+  "gender": "f",
+  "text": "THEY ALL GIVE THEM TO HIM.",
+  "dur": 4.23,
+  "sr": 16000,
+  "utt_acc": 4,
+  "utt_total": 4,
+  "fluency": 6,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 1,
+    "w": "ALL",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AO",
+      "index": 0,
+      "pronounced-phone": "<unk>"
+     },
+     {
+      "canonical-phone": "L",
+      "index": 1,
+      "pronounced-phone": "L*"
+     }
+    ],
+    "phones": [
+     "AO0",
+     "L"
+    ]
+   },
+   {
+    "i": 2,
+    "w": "GIVE",
+    "acc": 6,
+    "mis": [],
+    "phones": [
+     "G",
+     "IH0",
+     "V"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THEY",
+    "acc": 10
+   },
+   {
+    "w": "ALL",
+    "acc": 3
+   },
+   {
+    "w": "GIVE",
+    "acc": 6
+   },
+   {
+    "w": "THEM",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "HIM",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2287_9617"
+ },
+ {
+  "row": 2314,
+  "speaker": "9618",
+  "age": 24,
+  "gender": "f",
+  "text": "SHE LET GO OF HIS HAND AND RUBBED HER EYES.",
+  "dur": 5.85,
+  "sr": 16000,
+  "utt_acc": 4,
+  "utt_total": 4,
+  "fluency": 6,
+  "n_words": 10,
+  "bad": [
+   {
+    "i": 7,
+    "w": "RUBBED",
+    "acc": 5,
+    "mis": [],
+    "phones": [
+     "R",
+     "AH0",
+     "B",
+     "D"
+    ]
+   },
+   {
+    "i": 9,
+    "w": "EYES",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AY",
+      "index": 0,
+      "pronounced-phone": "IH R"
+     }
+    ],
+    "phones": [
+     "AY0",
+     "Z"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "SHE",
+    "acc": 8
+   },
+   {
+    "w": "LET",
+    "acc": 10
+   },
+   {
+    "w": "GO",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "HIS",
+    "acc": 10
+   },
+   {
+    "w": "HAND",
+    "acc": 10
+   },
+   {
+    "w": "AND",
+    "acc": 10
+   },
+   {
+    "w": "RUBBED",
+    "acc": 5
+   },
+   {
+    "w": "HER",
+    "acc": 10
+   },
+   {
+    "w": "EYES",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2314_9618"
+ },
+ {
+  "row": 2481,
+  "speaker": "9647",
+  "age": 20,
+  "gender": "f",
+  "text": "A THIRD FINISHED.\"WELL, THERE YOU HAVE IT.\"",
+  "dur": 6.11,
+  "sr": 16000,
+  "utt_acc": 4,
+  "utt_total": 4,
+  "fluency": 5,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 1,
+    "w": "THIRD",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "TH",
+      "index": 0,
+      "pronounced-phone": "CH"
+     },
+     {
+      "canonical-phone": "ER",
+      "index": 1,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "TH",
+     "ER0",
+     "D"
+    ]
+   },
+   {
+    "i": 2,
+    "w": "FINISHED",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "F",
+      "index": 0,
+      "pronounced-phone": "<unk>"
+     },
+     {
+      "canonical-phone": "IH",
+      "index": 1,
+      "pronounced-phone": "<unk>"
+     },
+     {
+      "canonical-phone": "N",
+      "index": 2,
+      "pronounced-phone": "<unk>"
+     },
+     {
+      "canonical-phone": "IH",
+      "index": 3,
+      "pronounced-phone": "<unk>"
+     },
+     {
+      "canonical-phone": "SH",
+      "index": 4,
+      "pronounced-phone": "<unk>"
+     },
+     {
+      "canonical-phone": "T",
+      "index": 5,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "F",
+     "IH1",
+     "N",
+     "IH0",
+     "SH",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "THIRD",
+    "acc": 3
+   },
+   {
+    "w": "FINISHED",
+    "acc": 3
+   },
+   {
+    "w": "WELL",
+    "acc": 10
+   },
+   {
+    "w": "THERE",
+    "acc": 10
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "HAVE",
+    "acc": 10
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2481_9647"
+ },
+ {
+  "row": 2219,
+  "speaker": "9601",
+  "age": 25,
+  "gender": "m",
+  "text": "YOU FEEL LIKE A LITTLE BROTHER TO ME!",
+  "dur": 6.22,
+  "sr": 16000,
+  "utt_acc": 4,
+  "utt_total": 4,
+  "fluency": 6,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 2,
+    "w": "LIKE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AY",
+      "index": 1,
+      "pronounced-phone": "IH"
+     }
+    ],
+    "phones": [
+     "L",
+     "AY0",
+     "K"
+    ]
+   },
+   {
+    "i": 5,
+    "w": "BROTHER",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 2,
+      "pronounced-phone": "AW"
+     },
+     {
+      "canonical-phone": "DH",
+      "index": 3,
+      "pronounced-phone": "T"
+     }
+    ],
+    "phones": [
+     "B",
+     "R",
+     "AH1",
+     "DH",
+     "AH0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "FEEL",
+    "acc": 10
+   },
+   {
+    "w": "LIKE",
+    "acc": 3
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "LITTLE",
+    "acc": 10
+   },
+   {
+    "w": "BROTHER",
+    "acc": 3
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "ME",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2219_9601"
+ },
+ {
+  "row": 2447,
+  "speaker": "9635",
+  "age": 24,
+  "gender": "f",
+  "text": "IT MADE ME WANT TO GET AWAY FROM HIM.",
+  "dur": 7.98,
+  "sr": 16000,
+  "utt_acc": 4,
+  "utt_total": 4,
+  "fluency": 5,
+  "n_words": 9,
+  "bad": [
+   {
+    "i": 1,
+    "w": "MADE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EY",
+      "index": 1,
+      "pronounced-phone": "AE"
+     }
+    ],
+    "phones": [
+     "M",
+     "EY0",
+     "D"
+    ]
+   },
+   {
+    "i": 5,
+    "w": "GET",
+    "acc": 3,
+    "mis": [],
+    "phones": [
+     "G",
+     "EH0",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "MADE",
+    "acc": 3
+   },
+   {
+    "w": "ME",
+    "acc": 10
+   },
+   {
+    "w": "WANT",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "GET",
+    "acc": 3
+   },
+   {
+    "w": "AWAY",
+    "acc": 10
+   },
+   {
+    "w": "FROM",
+    "acc": 10
+   },
+   {
+    "w": "HIM",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2447_9635"
+ },
+ {
+  "row": 800,
+  "speaker": "1228",
+  "age": 26,
+  "gender": "m",
+  "text": "REALITY IS NOT AS DRAMATIC",
+  "dur": 3.45,
+  "sr": 16000,
+  "utt_acc": 3,
+  "utt_total": 3,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 0,
+    "w": "REALITY",
+    "acc": 5,
+    "mis": [],
+    "phones": [
+     "R",
+     "IY0",
+     "AE1",
+     "L",
+     "AH0",
+     "T",
+     "IY0"
+    ]
+   },
+   {
+    "i": 4,
+    "w": "DRAMATIC",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 2,
+      "pronounced-phone": "AA"
+     },
+     {
+      "canonical-phone": "AE",
+      "index": 4,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "D",
+     "R",
+     "AH0",
+     "M",
+     "AE1",
+     "T",
+     "IH0",
+     "K"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "REALITY",
+    "acc": 5
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "NOT",
+    "acc": 10
+   },
+   {
+    "w": "AS",
+    "acc": 10
+   },
+   {
+    "w": "DRAMATIC",
+    "acc": 3
+   }
+  ],
+  "id": "so762_800_1228"
+ },
+ {
+  "row": 2414,
+  "speaker": "9631",
+  "age": 26,
+  "gender": "m",
+  "text": "I PUT THEM BACK ON AND LEFT.",
+  "dur": 3.79,
+  "sr": 16000,
+  "utt_acc": 3,
+  "utt_total": 3,
+  "fluency": 7,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 1,
+    "w": "PUT",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "UH",
+      "index": 1,
+      "pronounced-phone": "AH"
+     }
+    ],
+    "phones": [
+     "P",
+     "UH0",
+     "T"
+    ]
+   },
+   {
+    "i": 3,
+    "w": "BACK",
+    "acc": 3,
+    "mis": [],
+    "phones": [
+     "B",
+     "AE0",
+     "K"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "PUT",
+    "acc": 3
+   },
+   {
+    "w": "THEM",
+    "acc": 10
+   },
+   {
+    "w": "BACK",
+    "acc": 3
+   },
+   {
+    "w": "ON",
+    "acc": 10
+   },
+   {
+    "w": "AND",
+    "acc": 10
+   },
+   {
+    "w": "LEFT",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2414_9631"
+ },
+ {
+  "row": 2469,
+  "speaker": "9640",
+  "age": 29,
+  "gender": "f",
+  "text": "WAITING FOR WHAT? SHE THOUGHT.",
+  "dur": 3.84,
+  "sr": 16000,
+  "utt_acc": 3,
+  "utt_total": 3,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 0,
+    "w": "WAITING",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "IH",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "NG",
+      "index": 4,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "W",
+     "EY1",
+     "T",
+     "IH0",
+     "NG"
+    ]
+   },
+   {
+    "i": 4,
+    "w": "THOUGHT",
+    "acc": 3,
+    "mis": [],
+    "phones": [
+     "TH",
+     "AO0",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "WAITING",
+    "acc": 3
+   },
+   {
+    "w": "FOR",
+    "acc": 10
+   },
+   {
+    "w": "WHAT",
+    "acc": 10
+   },
+   {
+    "w": "SHE",
+    "acc": 10
+   },
+   {
+    "w": "THOUGHT",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2469_9640"
+ },
+ {
+  "row": 2402,
+  "speaker": "9631",
+  "age": 26,
+  "gender": "m",
+  "text": "THERE WAS SOMETHING IN FRONT OF HER.",
+  "dur": 4.38,
+  "sr": 16000,
+  "utt_acc": 3,
+  "utt_total": 3,
+  "fluency": 6,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 2,
+    "w": "SOMETHING",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 1,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "M",
+      "index": 2,
+      "pronounced-phone": "M*"
+     },
+     {
+      "canonical-phone": "TH",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "IH",
+      "index": 4,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "NG",
+      "index": 5,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "S",
+     "AH1",
+     "M",
+     "TH",
+     "IH0",
+     "NG"
+    ]
+   },
+   {
+    "i": 4,
+    "w": "FRONT",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "R",
+      "index": 1,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 2,
+      "pronounced-phone": "AA"
+     },
+     {
+      "canonical-phone": "N",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "T",
+      "index": 4,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "F",
+     "R",
+     "AH0",
+     "N",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THERE",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "SOMETHING",
+    "acc": 3
+   },
+   {
+    "w": "IN",
+    "acc": 10
+   },
+   {
+    "w": "FRONT",
+    "acc": 3
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "HER",
+    "acc": 8
+   }
+  ],
+  "id": "so762_2402_9631"
+ },
+ {
+  "row": 2472,
+  "speaker": "9640",
+  "age": 29,
+  "gender": "f",
+  "text": "THAT'S WHY WE BOTH PASSED OUT.",
+  "dur": 4.42,
+  "sr": 16000,
+  "utt_acc": 3,
+  "utt_total": 3,
+  "fluency": 7,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 0,
+    "w": "THAT'S",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "DH",
+      "index": 0,
+      "pronounced-phone": "W"
+     },
+     {
+      "canonical-phone": "AE",
+      "index": 1,
+      "pronounced-phone": "AH"
+     }
+    ],
+    "phones": [
+     "DH",
+     "AE0",
+     "T",
+     "S"
+    ]
+   },
+   {
+    "i": 4,
+    "w": "PASSED",
+    "acc": 5,
+    "mis": [],
+    "phones": [
+     "P",
+     "AE0",
+     "S",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THAT'S",
+    "acc": 3
+   },
+   {
+    "w": "WHY",
+    "acc": 10
+   },
+   {
+    "w": "WE",
+    "acc": 10
+   },
+   {
+    "w": "BOTH",
+    "acc": 10
+   },
+   {
+    "w": "PASSED",
+    "acc": 5
+   },
+   {
+    "w": "OUT",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2472_9640"
+ },
+ {
+  "row": 2382,
+  "speaker": "9629",
+  "age": 25,
+  "gender": "f",
+  "text": "SHE SMILED AT THE TIME.",
+  "dur": 5.59,
+  "sr": 16000,
+  "utt_acc": 3,
+  "utt_total": 3,
+  "fluency": 5,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 1,
+    "w": "SMILED",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "D",
+      "index": 4,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "S",
+     "M",
+     "AY0",
+     "L",
+     "D"
+    ]
+   },
+   {
+    "i": 4,
+    "w": "TIME",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AY",
+      "index": 1,
+      "pronounced-phone": "IY"
+     }
+    ],
+    "phones": [
+     "T",
+     "AY0",
+     "M"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "SHE",
+    "acc": 10
+   },
+   {
+    "w": "SMILED",
+    "acc": 5
+   },
+   {
+    "w": "AT",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "TIME",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2382_9629"
+ },
+ {
+  "row": 2351,
+  "speaker": "9623",
+  "age": 21,
+  "gender": "m",
+  "text": "HOW LONG WAS HE GOING TO BE HERE?",
+  "dur": 6.33,
+  "sr": 16000,
+  "utt_acc": 3,
+  "utt_total": 3,
+  "fluency": 5,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 0,
+    "w": "HOW",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AW",
+      "index": 1,
+      "pronounced-phone": "OW"
+     }
+    ],
+    "phones": [
+     "HH",
+     "AW0"
+    ]
+   },
+   {
+    "i": 7,
+    "w": "HERE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "IH",
+      "index": 1,
+      "pronounced-phone": "ER"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 2,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "HH",
+     "IH",
+     "AH0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "HOW",
+    "acc": 3
+   },
+   {
+    "w": "LONG",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "HE",
+    "acc": 10
+   },
+   {
+    "w": "GOING",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "HERE",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2351_9623"
+ },
+ {
+  "row": 2316,
+  "speaker": "9618",
+  "age": 24,
+  "gender": "f",
+  "text": "BUT HERE IT IS THAT I MUST MAKE MY CONFESSION.",
+  "dur": 7.46,
+  "sr": 16000,
+  "utt_acc": 3,
+  "utt_total": 3,
+  "fluency": 6,
+  "n_words": 10,
+  "bad": [
+   {
+    "i": 1,
+    "w": "HERE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "IH",
+      "index": 1,
+      "pronounced-phone": "ER"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "HH",
+     "IH",
+     "AH0"
+    ]
+   },
+   {
+    "i": 9,
+    "w": "CONFESSION",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 4,
+      "pronounced-phone": "IH"
+     },
+     {
+      "canonical-phone": "SH",
+      "index": 5,
+      "pronounced-phone": "<unk>"
+     },
+     {
+      "canonical-phone": "N",
+      "index": 6,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "K",
+     "AH0",
+     "N",
+     "F",
+     "EH1",
+     "SH",
+     "N"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "BUT",
+    "acc": 10
+   },
+   {
+    "w": "HERE",
+    "acc": 3
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "THAT",
+    "acc": 10
+   },
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "MUST",
+    "acc": 10
+   },
+   {
+    "w": "MAKE",
+    "acc": 10
+   },
+   {
+    "w": "MY",
+    "acc": 10
+   },
+   {
+    "w": "CONFESSION",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2316_9618"
+ },
+ {
+  "row": 2284,
+  "speaker": "9617",
+  "age": 35,
+  "gender": "f",
+  "text": "BUT NOW FOR THE FIRST TIME SOMETHING HAD MESSED UP.",
+  "dur": 5.88,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 10,
+  "bad": [
+   {
+    "i": 7,
+    "w": "HAD",
+    "acc": 6,
+    "mis": [],
+    "phones": [
+     "HH",
+     "AE0",
+     "D"
+    ]
+   },
+   {
+    "i": 8,
+    "w": "MESSED",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 1,
+      "pronounced-phone": "IH"
+     }
+    ],
+    "phones": [
+     "M",
+     "EH0",
+     "S",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "BUT",
+    "acc": 10
+   },
+   {
+    "w": "NOW",
+    "acc": 10
+   },
+   {
+    "w": "FOR",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "FIRST",
+    "acc": 10
+   },
+   {
+    "w": "TIME",
+    "acc": 10
+   },
+   {
+    "w": "SOMETHING",
+    "acc": 10
+   },
+   {
+    "w": "HAD",
+    "acc": 6
+   },
+   {
+    "w": "MESSED",
+    "acc": 5
+   },
+   {
+    "w": "UP",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2284_9617"
+ },
+ {
+  "row": 2392,
+  "speaker": "9629",
+  "age": 25,
+  "gender": "f",
+  "text": "SHE ASKED, LOOKING UP AT ME.",
+  "dur": 6.71,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 6,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 1,
+    "w": "ASKED",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "T",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "AA0",
+     "S",
+     "K",
+     "T"
+    ]
+   },
+   {
+    "i": 2,
+    "w": "LOOKING",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "UH",
+      "index": 1,
+      "pronounced-phone": "AA"
+     }
+    ],
+    "phones": [
+     "L",
+     "UH1",
+     "K",
+     "IH0",
+     "NG"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "SHE",
+    "acc": 10
+   },
+   {
+    "w": "ASKED",
+    "acc": 5
+   },
+   {
+    "w": "LOOKING",
+    "acc": 5
+   },
+   {
+    "w": "UP",
+    "acc": 10
+   },
+   {
+    "w": "AT",
+    "acc": 10
+   },
+   {
+    "w": "ME",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2392_9629"
+ },
+ {
+  "row": 460,
+  "speaker": "0765",
+  "age": 20,
+  "gender": "m",
+  "text": "HOWEVER MARKET CONDITIONS HAVE LEFT US WITH NO OTHER CHOICE",
+  "dur": 7.8,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 6,
+  "n_words": 10,
+  "bad": [
+   {
+    "i": 2,
+    "w": "CONDITIONS",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "N",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "K",
+     "AH0",
+     "N",
+     "D",
+     "IH1",
+     "SH",
+     "N",
+     "Z"
+    ]
+   },
+   {
+    "i": 4,
+    "w": "LEFT",
+    "acc": 5,
+    "mis": [],
+    "phones": [
+     "L",
+     "EH0",
+     "F",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "HOWEVER",
+    "acc": 10
+   },
+   {
+    "w": "MARKET",
+    "acc": 10
+   },
+   {
+    "w": "CONDITIONS",
+    "acc": 5
+   },
+   {
+    "w": "HAVE",
+    "acc": 10
+   },
+   {
+    "w": "LEFT",
+    "acc": 5
+   },
+   {
+    "w": "US",
+    "acc": 10
+   },
+   {
+    "w": "WITH",
+    "acc": 10
+   },
+   {
+    "w": "NO",
+    "acc": 10
+   },
+   {
+    "w": "OTHER",
+    "acc": 10
+   },
+   {
+    "w": "CHOICE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_460_0765"
+ },
+ {
+  "row": 2298,
+  "speaker": "9617",
+  "age": 35,
+  "gender": "f",
+  "text": "I LEFT THIS PLACE BECAUSE OF HIM.",
+  "dur": 4.8,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 1,
+    "w": "LEFT",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 1,
+      "pronounced-phone": "IH"
+     }
+    ],
+    "phones": [
+     "L",
+     "EH0",
+     "F",
+     "T"
+    ]
+   },
+   {
+    "i": 3,
+    "w": "PLACE",
+    "acc": 5,
+    "mis": [],
+    "phones": [
+     "P",
+     "L",
+     "EY0",
+     "S"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "LEFT",
+    "acc": 5
+   },
+   {
+    "w": "THIS",
+    "acc": 10
+   },
+   {
+    "w": "PLACE",
+    "acc": 5
+   },
+   {
+    "w": "BECAUSE",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "HIM",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2298_9617"
+ },
+ {
+  "row": 2372,
+  "speaker": "9626",
+  "age": 37,
+  "gender": "m",
+  "text": "I SEEMED TO BE THE FIRST ONE DOWN.",
+  "dur": 7.15,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 5,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 1,
+    "w": "SEEMED",
+    "acc": 5,
+    "mis": [],
+    "phones": [
+     "S",
+     "IY0",
+     "M",
+     "D"
+    ]
+   },
+   {
+    "i": 5,
+    "w": "FIRST",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "ER",
+      "index": 1,
+      "pronounced-phone": "AA"
+     }
+    ],
+    "phones": [
+     "F",
+     "ER0",
+     "S",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "SEEMED",
+    "acc": 5
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "FIRST",
+    "acc": 5
+   },
+   {
+    "w": "ONE",
+    "acc": 10
+   },
+   {
+    "w": "DOWN",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2372_9626"
+ },
+ {
+  "row": 2474,
+  "speaker": "9640",
+  "age": 29,
+  "gender": "f",
+  "text": "EVERY MINUTE SEEMED LIKE AN HOURS.",
+  "dur": 5.11,
+  "sr": 16000,
+  "utt_acc": 5,
+  "utt_total": 5,
+  "fluency": 7,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 2,
+    "w": "SEEMED",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "D",
+      "index": 3,
+      "pronounced-phone": "T"
+     }
+    ],
+    "phones": [
+     "S",
+     "IY0",
+     "M",
+     "D"
+    ]
+   },
+   {
+    "i": 5,
+    "w": "HOURS",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "Z",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "AH1",
+     "UW0",
+     "AH0",
+     "Z"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "EVERY",
+    "acc": 10
+   },
+   {
+    "w": "MINUTE",
+    "acc": 10
+   },
+   {
+    "w": "SEEMED",
+    "acc": 5
+   },
+   {
+    "w": "LIKE",
+    "acc": 10
+   },
+   {
+    "w": "AN",
+    "acc": 10
+   },
+   {
+    "w": "HOURS",
+    "acc": 5
+   }
+  ],
+  "id": "so762_2474_9640"
+ }
+]

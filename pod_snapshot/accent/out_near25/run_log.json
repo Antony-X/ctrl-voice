@@ -1,0 +1,44 @@
+{
+ "load_s": 16.434268474578857,
+ "russian_C24A": {
+  "cand": "russian_EDACC-C24-A_3_89",
+  "text": "So I would actually, I would say, you know, we leave relatively early from Loch Ness. Like get to La Pule and do a proper hike maybe that day. Because we will not be tired yet and the first day will be sort of mostly driving and being lazy.",
+  "gender": "nearest",
+  "native_ref": "ls_6930-75918-0006.wav",
+  "ref_sim": 0.28546392917633057,
+  "dur": 14.628571428571428,
+  "times": {
+   "asr": 0.704,
+   "tts": 0.897,
+   "vc": 0.979
+  }
+ },
+ "indian_C09B": {
+  "cand": "indian_EDACC-C09-B_4_40",
+  "text": "Yeah, so the topic that we chosen was basically what was the first movie that we watched that was based on a book. So for me, it's Alice in Wonderland. What is it for you?",
+  "gender": "nearest",
+  "native_ref": "ls_5683-32879-0000.wav",
+  "ref_sim": 0.3719337582588196,
+  "dur": 9.740770975056689,
+  "times": {
+   "asr": 0.219,
+   "tts": 1.009,
+   "vc": 0.907
+  }
+ },
+ "native_C07A": {
+  "cand": "native_EDACC-C07-A_3_69",
+  "text": "um but yeah like i said and then after this in a while i'm gonna leave and then i have drum rehearsals and that's for like two hours and then after that uh we can meet and make the thai curry",
+  "gender": "nearest",
+  "native_ref": "ls_1089-134686-0017.wav",
+  "ref_sim": 0.3136277198791504,
+  "dur": 11.400997732426303,
+  "times": {
+   "asr": 0.244,
+   "tts": 0.852,
+   "vc": 0.753
+  }
+ },
+ "peak_alloc_mb": 2289.416015625,
+ "peak_reserved_mb": 2814.0
+}

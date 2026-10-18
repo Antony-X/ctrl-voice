@@ -1,0 +1,190 @@
+{
+ "arabic1.flac": {
+  "url": "https://osf.io/download/6a0f9e5c6cee8885ec671e98/",
+  "size": 1840051
+ },
+ "mandarin1.flac": {
+  "url": "https://osf.io/download/t69m8/",
+  "size": 1635329
+ },
+ "mandarin2.flac": {
+  "url": "https://osf.io/download/6a7b5dae34bc5b78cb12d2b1/",
+  "size": 1811058
+ },
+ "mandarin3.flac": {
+  "url": "https://osf.io/download/6a7b608927d990730b692e05/",
+  "size": 1829147
+ },
+ "spanish1.flac": {
+  "url": "https://osf.io/download/6a7b6ac4321754b6d7692b55/",
+  "size": 1284946
+ },
+ "russian1.flac": {
+  "url": "https://osf.io/download/6a7b674e7b56b970f96a59a3/",
+  "size": 1289975
+ },
+ "russian2.flac": {
+  "url": "https://osf.io/download/6a7b6788f9af04922912d36a/",
+  "size": 1573634
+ },
+ "russian3.flac": {
+  "url": "https://osf.io/download/6a7b67c45527c9da3212d3da/",
+  "size": 1046641
+ },
+ "korean1.flac": {
+  "url": "https://osf.io/download/6a7b44bb348e7649506a5ca0/",
+  "size": 1820855
+ },
+ "korean2.flac": {
+  "url": "https://osf.io/download/6a7b44f357ca7b697312d2b4/",
+  "size": 1398366
+ },
+ "korean3.flac": {
+  "url": "https://osf.io/download/6a7b452a6a917a1033692b51/",
+  "size": 981843
+ },
+ "vietnamese1.flac": {
+  "url": "https://osf.io/download/6a7bb912f68cfcf282e1cb92/",
+  "size": 1757383
+ },
+ "vietnamese2.flac": {
+  "url": "https://osf.io/download/6a7bf09695f023cdf8e1cafc/",
+  "size": 1484702
+ },
+ "vietnamese3.flac": {
+  "url": "https://osf.io/download/6a7bf0c33b382510abb1f51f/",
+  "size": 1333159
+ },
+ "hindi1.flac": {
+  "url": "https://osf.io/download/cgu7j/",
+  "size": 1167873
+ },
+ "hindi2.flac": {
+  "url": "https://osf.io/download/6a0fe9852308112b83f92894/",
+  "size": 851031
+ },
+ "hindi3.flac": {
+  "url": "https://osf.io/download/6a0fe9bc04292265d04175a9/",
+  "size": 773294
+ },
+ "japanese2.flac": {
+  "url": "https://osf.io/download/6a7b3e3a15ddf9c6886a59df/",
+  "size": 1415967
+ },
+ "japanese3.flac": {
+  "url": "https://osf.io/download/6a7b3e6f196f64ae7512d36b/",
+  "size": 1535846
+ },
+ "french2.flac": {
+  "url": "https://osf.io/download/6a0fe4d8c11001e42eaba7b9/",
+  "size": 2011726
+ },
+ "french3.flac": {
+  "url": "https://osf.io/download/6a0fe50c34d38af36c417516/",
+  "size": 1368319
+ },
+ "portuguese1.flac": {
+  "url": "https://osf.io/download/6a7b6509f9c9b68d29692da6/",
+  "size": 2230605
+ },
+ "portuguese2.flac": {
+  "url": "https://osf.io/download/6a7b654be0944ee3b36a5a0e/",
+  "size": 1124941
+ },
+ "portuguese3.flac": {
+  "url": "https://osf.io/download/6a7b65831defa344c6692a8f/",
+  "size": 2080491
+ },
+ "turkish1.flac": {
+  "url": "https://osf.io/download/6a7bb71e524b51b20eb1f473/",
+  "size": 1621386
+ },
+ "turkish2.flac": {
+  "url": "https://osf.io/download/6a7bb74da8cdfab015e1ca3e/",
+  "size": 1496598
+ },
+ "turkish3.flac": {
+  "url": "https://osf.io/download/6a7bb77c7d2b833cb9241f6f/",
+  "size": 1249432
+ },
+ "farsi1.flac": {
+  "url": "https://osf.io/download/6a0fe333f6c6b6e059417a69/",
+  "size": 1312989
+ },
+ "farsi2.flac": {
+  "url": "https://osf.io/download/6a0fe38f90f6c2d3cf4174bd/",
+  "size": 1682019
+ },
+ "farsi3.flac": {
+  "url": "https://osf.io/download/6a0fe3f504292265d04174b8/",
+  "size": 755487
+ },
+ "german1.flac": {
+  "url": "https://osf.io/download/6a0fe6acb18bf43dda4175b0/",
+  "size": 1274987
+ },
+ "german2.flac": {
+  "url": "https://osf.io/download/6a0fe6e5c11001e42eaba8a9/",
+  "size": 1069011
+ },
+ "german3.flac": {
+  "url": "https://osf.io/download/6a0fe71ea2b657d4fff927ac/",
+  "size": 1099879
+ },
+ "italian1.flac": {
+  "url": "https://osf.io/download/6a0feaea8573fccd78417ad1/",
+  "size": 1455744
+ },
+ "italian2.flac": {
+  "url": "https://osf.io/download/6a0feb30c11001e42eabab22/",
+  "size": 2069839
+ },
+ "italian3.flac": {
+  "url": "https://osf.io/download/6a0feb72c11001e42eabab72/",
+  "size": 1004209
+ },
+ "polish2.flac": {
+  "url": "https://osf.io/download/6a7b64734fbcd9ee56692bdf/",
+  "size": 1816953
+ },
+ "polish3.flac": {
+  "url": "https://osf.io/download/6a7b64a8f9c9b68d29692d50/",
+  "size": 1257899
+ },
+ "cantonese1.flac": {
+  "url": "https://osf.io/download/6a0fa4b0dfef3838eb671bf3/",
+  "size": 1509941
+ },
+ "cantonese2.flac": {
+  "url": "https://osf.io/download/6a0fa4f73cf692fdc8417a92/",
+  "size": 1196875
+ },
+ "cantonese3.flac": {
+  "url": "https://osf.io/download/6a0fa544e8b36b3c7a6723d9/",
+  "size": 916670
+ },
+ "thai1.flac": {
+  "url": "https://osf.io/download/6a7b94fae19c2ec6c0b1f583/",
+  "size": 1144036
+ },
+ "thai2.flac": {
+  "url": "https://osf.io/download/6a7bb69626262ce1bcb1f643/",
+  "size": 1286370
+ },
+ "thai3.flac": {
+  "url": "https://osf.io/download/6a7bb6adf68cfcf282e1ca47/",
+  "size": 1286602
+ },
+ "bengali2.flac": {
+  "url": "https://osf.io/download/6a0fa38e3bfa12ef766724e7/",
+  "size": 901738
+ },
+ "bengali3.flac": {
+  "url": "https://osf.io/download/6a0fa3a5bbff4865e867235e/",
+  "size": 1003211
+ },
+ "english1.flac": {
+  "url": "https://osf.io/download/6a0fd729cec9ad87a5f92bfa/",
+  "size": 911183
+ }
+}

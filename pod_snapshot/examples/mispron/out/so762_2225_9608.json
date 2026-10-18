@@ -1,0 +1,155 @@
+{
+ "file": "so762_2225_9608.wav",
+ "t": {
+  "upload": 896,
+  "checks": 1581,
+  "replace": 0,
+  "render": 1707
+ },
+ "sid": "6e007495",
+ "words": [
+  {
+   "w": "But",
+   "s": 0.481,
+   "e": 0.922,
+   "p": 0.53
+  },
+  {
+   "w": "still,",
+   "s": 0.962,
+   "e": 1.483,
+   "p": 0.96
+  },
+  {
+   "w": "I",
+   "s": 1.604,
+   "e": 1.904,
+   "p": 0.99
+  },
+  {
+   "w": "would",
+   "s": 1.944,
+   "e": 2.486,
+   "p": 0.41
+  },
+  {
+   "w": "do",
+   "s": 2.526,
+   "e": 2.866,
+   "p": 0.98
+  },
+  {
+   "w": "my",
+   "s": 2.887,
+   "e": 3.428,
+   "p": 0.99
+  },
+  {
+   "w": "batch.",
+   "s": 3.468,
+   "e": 3.789,
+   "p": 0.3
+  }
+ ],
+ "dur": 4.43,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.3,
+   9.1,
+   10,
+   8.4,
+   9.9,
+   10,
+   9.3
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 4.43,
+  "ai": [],
+  "file": "out_71ec03.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "But still, I would do my batch.",
+ "label": {
+  "row": 2225,
+  "speaker": "9608",
+  "age": 30,
+  "gender": "f",
+  "text": "BUT STILL I WOULD DO MY BEST.",
+  "dur": 4.43,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 6,
+  "fluency": 6,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 6,
+    "w": "BEST",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 1,
+      "pronounced-phone": "AH"
+     },
+     {
+      "canonical-phone": "S",
+      "index": 2,
+      "pronounced-phone": "CH"
+     },
+     {
+      "canonical-phone": "T",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "B",
+     "EH0",
+     "S",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "BUT",
+    "acc": 10
+   },
+   {
+    "w": "STILL",
+    "acc": 10
+   },
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "WOULD",
+    "acc": 10
+   },
+   {
+    "w": "DO",
+    "acc": 10
+   },
+   {
+    "w": "MY",
+    "acc": 10
+   },
+   {
+    "w": "BEST",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2225_9608"
+ }
+}

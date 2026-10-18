@@ -1,0 +1,1762 @@
+[
+ {
+  "id": "l2arctic_aba_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "ABA",
+  "gender": "M",
+  "l1": "Arabic",
+  "text_ref": "and after crashing everyone took the each other's bag and after that when went back to their rooms",
+  "seg": [
+   29.66,
+   37.08
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_aba_0.wav"
+  ],
+  "dur": 7.42,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9997,
+   "p_us": 0.8694999814033508,
+   "p_england": 0.0008999999845400453,
+   "top3": [
+    [
+     "us",
+     0.8694999814033508
+    ],
+    [
+     "australia",
+     0.12809999287128448
+    ],
+    [
+     "canada",
+     0.0010000000474974513
+    ]
+   ],
+   "P": {
+    "england": 0.0008999999845400453,
+    "us": 0.8694999814033508,
+    "canada": 0.0010000000474974513,
+    "australia": 0.12809999287128448,
+    "indian": 9.999999747378752e-05,
+    "scotland": 9.999999747378752e-05,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0,
+    "wales": 9.999999747378752e-05,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.356,
+    "us": 0.583,
+    "canada": 0.359,
+    "australia": 0.519,
+    "indian": 0.293,
+    "scotland": 0.29,
+    "ireland": 0.12,
+    "african": 0.257,
+    "malaysia": 0.21,
+    "newzealand": 0.126,
+    "southatlandtic": 0.165,
+    "bermuda": 0.177,
+    "philippines": 0.224,
+    "hongkong": 0.235,
+    "wales": 0.276,
+    "singapore": 0.139
+   }
+  },
+  "quality": {
+   "floor_db": -27.8,
+   "clip": 0.0
+  },
+  "asr_before": "and after crashing everyone took each other's bag and after that when we went back to their rooms",
+  "wer_before": 0.111,
+  "ceiling_sim": 0.903
+ },
+ {
+  "id": "l2arctic_ybaa_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "YBAA",
+  "gender": "M",
+  "l1": "Arabic",
+  "text_ref": "any bag from the ground and moved back to his home after that they when they reached home they discovered that they pick up picked up",
+  "seg": [
+   38.2,
+   49.9
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_ybaa_0.wav"
+  ],
+  "dur": 11.7,
+  "acc_before": {
+   "top": "australia",
+   "p_native": 0.9331,
+   "p_us": 0.006000000052154064,
+   "p_england": 0.005400000140070915,
+   "top3": [
+    [
+     "australia",
+     0.9214000105857849
+    ],
+    [
+     "indian",
+     0.047200001776218414
+    ],
+    [
+     "hongkong",
+     0.017999999225139618
+    ]
+   ],
+   "P": {
+    "england": 0.005400000140070915,
+    "us": 0.006000000052154064,
+    "canada": 0.0,
+    "australia": 0.9214000105857849,
+    "indian": 0.047200001776218414,
+    "scotland": 0.0,
+    "ireland": 9.999999747378752e-05,
+    "african": 0.0,
+    "malaysia": 0.0007999999797903001,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0005000000237487257,
+    "hongkong": 0.017999999225139618,
+    "wales": 0.00019999999494757503,
+    "singapore": 0.00019999999494757503
+   },
+   "cos": {
+    "england": 0.313,
+    "us": 0.316,
+    "canada": 0.122,
+    "australia": 0.484,
+    "indian": 0.385,
+    "scotland": -0.023,
+    "ireland": 0.184,
+    "african": -0.019,
+    "malaysia": 0.248,
+    "newzealand": -0.004,
+    "southatlandtic": 0.067,
+    "bermuda": 0.085,
+    "philippines": 0.235,
+    "hongkong": 0.353,
+    "wales": 0.197,
+    "singapore": 0.208
+   }
+  },
+  "quality": {
+   "floor_db": -28.8,
+   "clip": 0.0
+  },
+  "asr_before": "any bag from the ground and moved back to his home after that they when they reached home they discovered that they picked up",
+  "wer_before": 0.077,
+  "ceiling_sim": 0.946
+ },
+ {
+  "id": "l2arctic_zhaa_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "ZHAA",
+  "gender": "F",
+  "l1": "Arabic",
+  "text_ref": "well the first photo show shows a uh high building it seems to be a modern busy city and then the second one shows a male and a female",
+  "seg": [
+   1.1,
+   12.14
+  ],
+  "fillers": 1,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_zhaa_0.wav"
+  ],
+  "dur": 11.04,
+  "acc_before": {
+   "top": "us",
+   "p_native": 1.0,
+   "p_us": 1.0,
+   "p_england": 0.0,
+   "top3": [
+    [
+     "us",
+     1.0
+    ],
+    [
+     "england",
+     0.0
+    ],
+    [
+     "canada",
+     0.0
+    ]
+   ],
+   "P": {
+    "england": 0.0,
+    "us": 1.0,
+    "canada": 0.0,
+    "australia": 0.0,
+    "indian": 0.0,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.201,
+    "us": 0.752,
+    "canada": 0.157,
+    "australia": 0.319,
+    "indian": 0.316,
+    "scotland": 0.251,
+    "ireland": 0.076,
+    "african": 0.213,
+    "malaysia": 0.24,
+    "newzealand": 0.211,
+    "southatlandtic": 0.214,
+    "bermuda": 0.271,
+    "philippines": 0.199,
+    "hongkong": 0.306,
+    "wales": 0.261,
+    "singapore": 0.277
+   }
+  },
+  "quality": {
+   "floor_db": -25.4,
+   "clip": 0.0
+  },
+  "asr_before": "Well, the first photo shows a high building. It seems to be a modern busy city. And then the second one shows a female and a female.",
+  "wer_before": 0.071,
+  "ceiling_sim": 0.898
+ },
+ {
+  "id": "l2arctic_bwc_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "BWC",
+  "gender": "M",
+  "l1": "Mandarin",
+  "text_ref": "and they both carry the same cases and but suddenly in a corner the man and the woman bumped into with each other and they just falled down",
+  "seg": [
+   13.22,
+   24.16
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_bwc_0.wav"
+  ],
+  "dur": 10.94,
+  "acc_before": {
+   "top": "australia",
+   "p_native": 0.9925,
+   "p_us": 0.0502999983727932,
+   "p_england": 0.12389999628067017,
+   "top3": [
+    [
+     "australia",
+     0.8176000118255615
+    ],
+    [
+     "england",
+     0.12389999628067017
+    ],
+    [
+     "us",
+     0.0502999983727932
+    ]
+   ],
+   "P": {
+    "england": 0.12389999628067017,
+    "us": 0.0502999983727932,
+    "canada": 0.0003000000142492354,
+    "australia": 0.8176000118255615,
+    "indian": 0.0007999999797903001,
+    "scotland": 0.0,
+    "ireland": 0.00019999999494757503,
+    "african": 0.0,
+    "malaysia": 9.999999747378752e-05,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 9.999999747378752e-05,
+    "philippines": 0.00139999995008111,
+    "hongkong": 0.005200000014156103,
+    "wales": 0.00019999999494757503,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.418,
+    "us": 0.388,
+    "canada": 0.212,
+    "australia": 0.481,
+    "indian": 0.249,
+    "scotland": 0.08,
+    "ireland": 0.195,
+    "african": 0.09,
+    "malaysia": 0.169,
+    "newzealand": -0.018,
+    "southatlandtic": 0.019,
+    "bermuda": 0.182,
+    "philippines": 0.27,
+    "hongkong": 0.312,
+    "wales": 0.207,
+    "singapore": 0.156
+   }
+  },
+  "quality": {
+   "floor_db": -25.0,
+   "clip": 0.0
+  },
+  "asr_before": "and they both carry the same cases. But suddenly in a corner, the men and the women bumped into each other, and they just fall down.",
+  "wer_before": 0.179,
+  "ceiling_sim": 0.95
+ },
+ {
+  "id": "l2arctic_lxc_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "LXC",
+  "gender": "F",
+  "l1": "Mandarin",
+  "text_ref": "after they get home the man find there is woman and the girl's dresses in the bag",
+  "seg": [
+   47.32,
+   54.78
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_lxc_0.wav"
+  ],
+  "dur": 7.46,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9954,
+   "p_us": 0.9952999949455261,
+   "p_england": 9.999999747378752e-05,
+   "top3": [
+    [
+     "us",
+     0.9952999949455261
+    ],
+    [
+     "malaysia",
+     0.002400000113993883
+    ],
+    [
+     "singapore",
+     0.0012000000569969416
+    ]
+   ],
+   "P": {
+    "england": 9.999999747378752e-05,
+    "us": 0.9952999949455261,
+    "canada": 0.0,
+    "australia": 0.0,
+    "indian": 0.0,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.002400000113993883,
+    "newzealand": 0.0,
+    "southatlandtic": 0.00019999999494757503,
+    "bermuda": 9.999999747378752e-05,
+    "philippines": 0.0,
+    "hongkong": 0.0007999999797903001,
+    "wales": 0.0,
+    "singapore": 0.0012000000569969416
+   },
+   "cos": {
+    "england": 0.217,
+    "us": 0.517,
+    "canada": 0.146,
+    "australia": -0.032,
+    "indian": 0.041,
+    "scotland": -0.021,
+    "ireland": 0.113,
+    "african": 0.136,
+    "malaysia": 0.316,
+    "newzealand": 0.031,
+    "southatlandtic": 0.233,
+    "bermuda": 0.189,
+    "philippines": 0.165,
+    "hongkong": 0.278,
+    "wales": 0.099,
+    "singapore": 0.292
+   }
+  },
+  "quality": {
+   "floor_db": -22.7,
+   "clip": 0.0
+  },
+  "asr_before": "After they get home, the men find there is a girl's dresses in the back.",
+  "wer_before": 0.294,
+  "ceiling_sim": 0.928
+ },
+ {
+  "id": "l2arctic_ncc_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "NCC",
+  "gender": "F",
+  "l1": "Mandarin",
+  "text_ref": "go back to their own own house and open the suitcase the man think that",
+  "seg": [
+   41.3,
+   48.76
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_ncc_0.wav"
+  ],
+  "dur": 7.46,
+  "acc_before": {
+   "top": "australia",
+   "p_native": 0.3869,
+   "p_us": 0.0019000000320374966,
+   "p_england": 0.027899999171495438,
+   "top3": [
+    [
+     "australia",
+     0.34529998898506165
+    ],
+    [
+     "singapore",
+     0.23409999907016754
+    ],
+    [
+     "malaysia",
+     0.21739999949932098
+    ]
+   ],
+   "P": {
+    "england": 0.027899999171495438,
+    "us": 0.0019000000320374966,
+    "canada": 0.006000000052154064,
+    "australia": 0.34529998898506165,
+    "indian": 0.026000000536441803,
+    "scotland": 9.999999747378752e-05,
+    "ireland": 0.0010999999940395355,
+    "african": 0.0,
+    "malaysia": 0.21739999949932098,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.00019999999494757503,
+    "philippines": 0.11980000138282776,
+    "hongkong": 0.015599999576807022,
+    "wales": 0.004600000102072954,
+    "singapore": 0.23409999907016754
+   },
+   "cos": {
+    "england": 0.13,
+    "us": 0.041,
+    "canada": 0.079,
+    "australia": 0.214,
+    "indian": 0.128,
+    "scotland": -0.067,
+    "ireland": 0.023,
+    "african": -0.099,
+    "malaysia": 0.199,
+    "newzealand": -0.157,
+    "southatlandtic": -0.14,
+    "bermuda": -0.03,
+    "philippines": 0.179,
+    "hongkong": 0.111,
+    "wales": 0.07,
+    "singapore": 0.201
+   }
+  },
+  "quality": {
+   "floor_db": -24.6,
+   "clip": 0.0
+  },
+  "asr_before": "go back to their own house and open the suitcase, the men think that",
+  "wer_before": 0.133,
+  "ceiling_sim": 0.898
+ },
+ {
+  "id": "l2arctic_txhc_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "TXHC",
+  "gender": "M",
+  "l1": "Mandarin",
+  "text_ref": "so they when they rise again and they picked up the suitcase and went their sep separate ways but when they get to their i guess their apartments",
+  "seg": [
+   27.29,
+   38.32
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_txhc_0.wav"
+  ],
+  "dur": 11.03,
+  "acc_before": {
+   "top": "australia",
+   "p_native": 0.9999,
+   "p_us": 0.14910000562667847,
+   "p_england": 0.011699999682605267,
+   "top3": [
+    [
+     "australia",
+     0.8282999992370605
+    ],
+    [
+     "us",
+     0.14910000562667847
+    ],
+    [
+     "england",
+     0.011699999682605267
+    ]
+   ],
+   "P": {
+    "england": 0.011699999682605267,
+    "us": 0.14910000562667847,
+    "canada": 0.010700000450015068,
+    "australia": 0.8282999992370605,
+    "indian": 9.999999747378752e-05,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0,
+    "wales": 9.999999747378752e-05,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.465,
+    "us": 0.55,
+    "canada": 0.462,
+    "australia": 0.607,
+    "indian": 0.287,
+    "scotland": 0.2,
+    "ireland": 0.244,
+    "african": 0.217,
+    "malaysia": 0.133,
+    "newzealand": 0.152,
+    "southatlandtic": 0.219,
+    "bermuda": 0.198,
+    "philippines": 0.258,
+    "hongkong": 0.255,
+    "wales": 0.289,
+    "singapore": 0.197
+   }
+  },
+  "quality": {
+   "floor_db": -31.9,
+   "clip": 0.0
+  },
+  "asr_before": "So when they rise again and they pick up the suitcase and went in separate ways. But when they get to their apartment,",
+  "wer_before": 0.286,
+  "ceiling_sim": 0.908
+ },
+ {
+  "id": "l2arctic_rrbi_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "RRBI",
+  "gender": "M",
+  "l1": "Hindi",
+  "text_ref": "later after saying sorry to each other they take their bags and go away it seems both of their bags are of same color and same pattern",
+  "seg": [
+   26.22,
+   36.96
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_rrbi_0.wav"
+  ],
+  "dur": 10.74,
+  "acc_before": {
+   "top": "indian",
+   "p_native": 0.0,
+   "p_us": 0.0,
+   "p_england": 0.0,
+   "top3": [
+    [
+     "indian",
+     1.0
+    ],
+    [
+     "england",
+     0.0
+    ],
+    [
+     "us",
+     0.0
+    ]
+   ],
+   "P": {
+    "england": 0.0,
+    "us": 0.0,
+    "canada": 0.0,
+    "australia": 0.0,
+    "indian": 1.0,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.355,
+    "us": 0.414,
+    "canada": 0.102,
+    "australia": 0.247,
+    "indian": 0.757,
+    "scotland": 0.076,
+    "ireland": 0.108,
+    "african": 0.192,
+    "malaysia": 0.178,
+    "newzealand": 0.035,
+    "southatlandtic": 0.073,
+    "bermuda": 0.148,
+    "philippines": 0.096,
+    "hongkong": 0.227,
+    "wales": 0.187,
+    "singapore": 0.288
+   }
+  },
+  "quality": {
+   "floor_db": -26.5,
+   "clip": 0.0
+  },
+  "asr_before": "Later after saying sorry to each other they take their bags and go away It seems both of their bags are of same color and same pattern",
+  "wer_before": 0.0,
+  "ceiling_sim": 0.915
+ },
+ {
+  "id": "l2arctic_svbi_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "SVBI",
+  "gender": "F",
+  "l1": "Hindi",
+  "text_ref": "they reach home only to realize that they actually took the other person's luggage the man starts seeing the woman's clothes in the suitcase and the woman starts seeing the man's clothes",
+  "seg": [
+   17.93,
+   29.48
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_svbi_0.wav"
+  ],
+  "dur": 11.55,
+  "acc_before": {
+   "top": "indian",
+   "p_native": 0.0,
+   "p_us": 0.0,
+   "p_england": 0.0,
+   "top3": [
+    [
+     "indian",
+     1.0
+    ],
+    [
+     "england",
+     0.0
+    ],
+    [
+     "us",
+     0.0
+    ]
+   ],
+   "P": {
+    "england": 0.0,
+    "us": 0.0,
+    "canada": 0.0,
+    "australia": 0.0,
+    "indian": 1.0,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.315,
+    "us": 0.177,
+    "canada": 0.032,
+    "australia": 0.054,
+    "indian": 0.682,
+    "scotland": 0.167,
+    "ireland": -0.029,
+    "african": 0.096,
+    "malaysia": 0.112,
+    "newzealand": -0.01,
+    "southatlandtic": 0.124,
+    "bermuda": 0.159,
+    "philippines": 0.164,
+    "hongkong": 0.279,
+    "wales": 0.176,
+    "singapore": 0.191
+   }
+  },
+  "quality": {
+   "floor_db": -15.7,
+   "clip": 0.0
+  },
+  "asr_before": "They reached home only to realize that they actually took the other person's luggage. The man starts seeing the woman's clothes in the suitcase and the woman starts seeing the man's clothes.",
+  "wer_before": 0.031,
+  "ceiling_sim": 0.891
+ },
+ {
+  "id": "l2arctic_tni_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "TNI",
+  "gender": "F",
+  "l1": "Hindi",
+  "text_ref": "travelers who are actually going to the traveling to the same city and i can see that they are professionally dressed up that means they were actually going for some",
+  "seg": [
+   4.88,
+   16.08
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_tni_0.wav"
+  ],
+  "dur": 11.2,
+  "acc_before": {
+   "top": "indian",
+   "p_native": 0.0004,
+   "p_us": 0.00019999999494757503,
+   "p_england": 9.999999747378752e-05,
+   "top3": [
+    [
+     "indian",
+     0.9994999766349792
+    ],
+    [
+     "us",
+     0.00019999999494757503
+    ],
+    [
+     "england",
+     9.999999747378752e-05
+    ]
+   ],
+   "P": {
+    "england": 9.999999747378752e-05,
+    "us": 0.00019999999494757503,
+    "canada": 0.0,
+    "australia": 9.999999747378752e-05,
+    "indian": 0.9994999766349792,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.239,
+    "us": 0.276,
+    "canada": -0.126,
+    "australia": 0.248,
+    "indian": 0.558,
+    "scotland": -0.038,
+    "ireland": -0.111,
+    "african": -0.07,
+    "malaysia": 0.226,
+    "newzealand": 0.027,
+    "southatlandtic": 0.049,
+    "bermuda": 0.158,
+    "philippines": 0.104,
+    "hongkong": 0.103,
+    "wales": 0.012,
+    "singapore": 0.225
+   }
+  },
+  "quality": {
+   "floor_db": -20.4,
+   "clip": 0.0
+  },
+  "asr_before": "travelers who are actually going to the traveling to the same city and i can see that they are professionally dressed up that means they were actually going for some",
+  "wer_before": 0.0,
+  "ceiling_sim": 0.876
+ },
+ {
+  "id": "l2arctic_hjk_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "HJK",
+  "gender": "F",
+  "l1": "Korean",
+  "text_ref": "and they got just crashed to each other and then since he was in a rush he just picked up one s big suitcase that he thought as his",
+  "seg": [
+   28.23,
+   39.55
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_hjk_0.wav"
+  ],
+  "dur": 11.32,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.8048,
+   "p_us": 0.4975000023841858,
+   "p_england": 0.0020000000949949026,
+   "top3": [
+    [
+     "us",
+     0.4975000023841858
+    ],
+    [
+     "canada",
+     0.20260000228881836
+    ],
+    [
+     "philippines",
+     0.12300000339746475
+    ]
+   ],
+   "P": {
+    "england": 0.0020000000949949026,
+    "us": 0.4975000023841858,
+    "canada": 0.20260000228881836,
+    "australia": 0.1005999967455864,
+    "indian": 0.0020000000949949026,
+    "scotland": 0.0013000000035390258,
+    "ireland": 9.999999747378752e-05,
+    "african": 9.999999747378752e-05,
+    "malaysia": 9.999999747378752e-05,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0005000000237487257,
+    "bermuda": 0.0052999998442828655,
+    "philippines": 0.12300000339746475,
+    "hongkong": 0.0005000000237487257,
+    "wales": 0.000699999975040555,
+    "singapore": 0.06360000371932983
+   },
+   "cos": {
+    "england": 0.158,
+    "us": 0.343,
+    "canada": 0.313,
+    "australia": 0.289,
+    "indian": 0.159,
+    "scotland": 0.145,
+    "ireland": 0.065,
+    "african": 0.057,
+    "malaysia": 0.062,
+    "newzealand": -0.009,
+    "southatlandtic": 0.11,
+    "bermuda": 0.191,
+    "philippines": 0.296,
+    "hongkong": 0.112,
+    "wales": 0.125,
+    "singapore": 0.274
+   }
+  },
+  "quality": {
+   "floor_db": -39.2,
+   "clip": 0.0
+  },
+  "asr_before": "and they got just crushed to each other. And then since he was in a rush, he just picked up one big suitcase that he thought as his",
+  "wer_before": 0.069,
+  "ceiling_sim": 0.902
+ },
+ {
+  "id": "l2arctic_hkk_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "HKK",
+  "gender": "M",
+  "l1": "Korean",
+  "text_ref": "suitcases they found out it it's just they pick up the wrong suitcase because for the man in his suitcase they i mean he just he",
+  "seg": [
+   75.05,
+   86.08
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_hkk_0.wav"
+  ],
+  "dur": 11.03,
+  "acc_before": {
+   "top": "england",
+   "p_native": 0.9481,
+   "p_us": 9.999999747378752e-05,
+   "p_england": 0.9466000199317932,
+   "top3": [
+    [
+     "england",
+     0.9466000199317932
+    ],
+    [
+     "hongkong",
+     0.04729999974370003
+    ],
+    [
+     "african",
+     0.002400000113993883
+    ]
+   ],
+   "P": {
+    "england": 0.9466000199317932,
+    "us": 9.999999747378752e-05,
+    "canada": 0.0,
+    "australia": 0.0006000000284984708,
+    "indian": 0.000699999975040555,
+    "scotland": 0.0,
+    "ireland": 0.0007999999797903001,
+    "african": 0.002400000113993883,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.04729999974370003,
+    "wales": 0.0,
+    "singapore": 0.00139999995008111
+   },
+   "cos": {
+    "england": 0.473,
+    "us": 0.159,
+    "canada": 0.067,
+    "australia": 0.228,
+    "indian": 0.23,
+    "scotland": 0.098,
+    "ireland": 0.237,
+    "african": 0.273,
+    "malaysia": 0.115,
+    "newzealand": -0.077,
+    "southatlandtic": 0.111,
+    "bermuda": 0.112,
+    "philippines": 0.137,
+    "hongkong": 0.373,
+    "wales": 0.12,
+    "singapore": 0.256
+   }
+  },
+  "quality": {
+   "floor_db": -34.9,
+   "clip": 0.0
+  },
+  "asr_before": "They found out that they picked up the wrong suitcase because for the man in his suitcase they I mean he just did",
+  "wer_before": 0.231,
+  "ceiling_sim": 0.91
+ },
+ {
+  "id": "l2arctic_ydck_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "YDCK",
+  "gender": "F",
+  "l1": "Korean",
+  "text_ref": "the same suitcases they fell down the suitcases on the floor and after pulling themselves together they look they look happy they smile to each other",
+  "seg": [
+   148.75,
+   160.53
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_ydck_0.wav"
+  ],
+  "dur": 11.78,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9969,
+   "p_us": 0.9757000207901001,
+   "p_england": 0.0005000000237487257,
+   "top3": [
+    [
+     "us",
+     0.9757000207901001
+    ],
+    [
+     "canada",
+     0.019500000402331352
+    ],
+    [
+     "philippines",
+     0.0008999999845400453
+    ]
+   ],
+   "P": {
+    "england": 0.0005000000237487257,
+    "us": 0.9757000207901001,
+    "canada": 0.019500000402331352,
+    "australia": 9.999999747378752e-05,
+    "indian": 0.0,
+    "scotland": 0.000699999975040555,
+    "ireland": 9.999999747378752e-05,
+    "african": 0.0005000000237487257,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0007999999797903001,
+    "philippines": 0.0008999999845400453,
+    "hongkong": 0.0006000000284984708,
+    "wales": 0.0003000000142492354,
+    "singapore": 0.00019999999494757503
+   },
+   "cos": {
+    "england": 0.307,
+    "us": 0.556,
+    "canada": 0.426,
+    "australia": 0.232,
+    "indian": 0.203,
+    "scotland": 0.316,
+    "ireland": 0.24,
+    "african": 0.303,
+    "malaysia": 0.201,
+    "newzealand": 0.082,
+    "southatlandtic": 0.193,
+    "bermuda": 0.321,
+    "philippines": 0.322,
+    "hongkong": 0.308,
+    "wales": 0.292,
+    "singapore": 0.269
+   }
+  },
+  "quality": {
+   "floor_db": -37.1,
+   "clip": 0.0
+  },
+  "asr_before": "the same suitcases, they fell down the suitcases on the floor and after pulling themselves together they look happy, they smile to each other",
+  "wer_before": 0.077,
+  "ceiling_sim": 0.89
+ },
+ {
+  "id": "l2arctic_ykwk_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "YKWK",
+  "gender": "M",
+  "l1": "Korean",
+  "text_ref": "suitcases and then they probably thought that those are their suitcases and their went they went on their own way and then they arrived in their hotel room",
+  "seg": [
+   53.92,
+   65.19
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_ykwk_0.wav"
+  ],
+  "dur": 11.27,
+  "acc_before": {
+   "top": "england",
+   "p_native": 0.9988,
+   "p_us": 0.00039999998989515007,
+   "p_england": 0.9940000176429749,
+   "top3": [
+    [
+     "england",
+     0.9940000176429749
+    ],
+    [
+     "wales",
+     0.003599999938160181
+    ],
+    [
+     "indian",
+     0.0010000000474974513
+    ]
+   ],
+   "P": {
+    "england": 0.9940000176429749,
+    "us": 0.00039999998989515007,
+    "canada": 0.0,
+    "australia": 0.0007999999797903001,
+    "indian": 0.0010000000474974513,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0,
+    "wales": 0.003599999938160181,
+    "singapore": 9.999999747378752e-05
+   },
+   "cos": {
+    "england": 0.524,
+    "us": 0.263,
+    "canada": 0.084,
+    "australia": 0.286,
+    "indian": 0.293,
+    "scotland": -0.041,
+    "ireland": 0.016,
+    "african": 0.163,
+    "malaysia": 0.123,
+    "newzealand": 0.066,
+    "southatlandtic": 0.163,
+    "bermuda": 0.142,
+    "philippines": 0.134,
+    "hongkong": 0.154,
+    "wales": 0.337,
+    "singapore": 0.215
+   }
+  },
+  "quality": {
+   "floor_db": -22.7,
+   "clip": 0.0
+  },
+  "asr_before": "suitcases and then they probably thought that those are their suitcases and they went on their own way and then they arrived in their hotel room.",
+  "wer_before": 0.071,
+  "ceiling_sim": 0.927
+ },
+ {
+  "id": "l2arctic_ebvs_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "EBVS",
+  "gender": "M",
+  "l1": "Spanish",
+  "text_ref": "there's a history from one man and one woman like they across each other in a way in the corner and they confuse",
+  "seg": [
+   15.64,
+   26.34
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_ebvs_0.wav"
+  ],
+  "dur": 10.7,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9994,
+   "p_us": 0.8851000070571899,
+   "p_england": 0.006399999838322401,
+   "top3": [
+    [
+     "us",
+     0.8851000070571899
+    ],
+    [
+     "australia",
+     0.10790000110864639
+    ],
+    [
+     "england",
+     0.006399999838322401
+    ]
+   ],
+   "P": {
+    "england": 0.006399999838322401,
+    "us": 0.8851000070571899,
+    "canada": 0.0,
+    "australia": 0.10790000110864639,
+    "indian": 0.00039999998989515007,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 9.999999747378752e-05,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 9.999999747378752e-05,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.361,
+    "us": 0.525,
+    "canada": 0.116,
+    "australia": 0.455,
+    "indian": 0.264,
+    "scotland": 0.137,
+    "ireland": 0.052,
+    "african": 0.005,
+    "malaysia": 0.213,
+    "newzealand": 0.089,
+    "southatlandtic": 0.174,
+    "bermuda": 0.066,
+    "philippines": 0.17,
+    "hongkong": 0.205,
+    "wales": 0.101,
+    "singapore": 0.071
+   }
+  },
+  "quality": {
+   "floor_db": -21.4,
+   "clip": 0.0
+  },
+  "asr_before": "this is a history from one man and one woman like they across each other in a way in a corner and they confuse",
+  "wer_before": 0.13,
+  "ceiling_sim": 0.927
+ },
+ {
+  "id": "l2arctic_erms_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "ERMS",
+  "gender": "M",
+  "l1": "Spanish",
+  "text_ref": "got the other person's bag so i was worried for her and it was kind of funny for him because of the thing they",
+  "seg": [
+   75.65,
+   87.41
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_erms_0.wav"
+  ],
+  "dur": 11.76,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9976,
+   "p_us": 0.9599999785423279,
+   "p_england": 0.0013000000035390258,
+   "top3": [
+    [
+     "us",
+     0.9599999785423279
+    ],
+    [
+     "australia",
+     0.03449999913573265
+    ],
+    [
+     "canada",
+     0.0017999999690800905
+    ]
+   ],
+   "P": {
+    "england": 0.0013000000035390258,
+    "us": 0.9599999785423279,
+    "canada": 0.0017999999690800905,
+    "australia": 0.03449999913573265,
+    "indian": 0.0005000000237487257,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0017000000225380063,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.415,
+    "us": 0.634,
+    "canada": 0.425,
+    "australia": 0.523,
+    "indian": 0.384,
+    "scotland": 0.237,
+    "ireland": 0.199,
+    "african": 0.194,
+    "malaysia": 0.271,
+    "newzealand": 0.159,
+    "southatlandtic": 0.173,
+    "bermuda": 0.282,
+    "philippines": 0.179,
+    "hongkong": 0.424,
+    "wales": 0.28,
+    "singapore": 0.167
+   }
+  },
+  "quality": {
+   "floor_db": -30.8,
+   "clip": 0.0
+  },
+  "asr_before": "got the other person's back so I was worried for her and it was kind of funny for him because of the thing they...",
+  "wer_before": 0.042,
+  "ceiling_sim": 0.897
+ },
+ {
+  "id": "l2arctic_mbmps_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "MBMPS",
+  "gender": "F",
+  "l1": "Spanish",
+  "text_ref": "green suitcase both look very similar in the middle of the distraction they just get together and put together and then each one of them take one of the",
+  "seg": [
+   20.39,
+   31.36
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_mbmps_0.wav"
+  ],
+  "dur": 10.97,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9647,
+   "p_us": 0.9589999914169312,
+   "p_england": 0.0,
+   "top3": [
+    [
+     "us",
+     0.9589999914169312
+    ],
+    [
+     "bermuda",
+     0.029100000858306885
+    ],
+    [
+     "australia",
+     0.00570000009611249
+    ]
+   ],
+   "P": {
+    "england": 0.0,
+    "us": 0.9589999914169312,
+    "canada": 0.0,
+    "australia": 0.00570000009611249,
+    "indian": 0.00019999999494757503,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0003000000142492354,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.029100000858306885,
+    "philippines": 0.00559999980032444,
+    "hongkong": 0.0,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.11,
+    "us": 0.488,
+    "canada": -0.014,
+    "australia": 0.317,
+    "indian": 0.211,
+    "scotland": 0.035,
+    "ireland": 0.07,
+    "african": 0.071,
+    "malaysia": 0.215,
+    "newzealand": 0.13,
+    "southatlandtic": 0.115,
+    "bermuda": 0.371,
+    "philippines": 0.316,
+    "hongkong": 0.129,
+    "wales": 0.122,
+    "singapore": 0.117
+   }
+  },
+  "quality": {
+   "floor_db": -23.9,
+   "clip": 0.0
+  },
+  "asr_before": "green suitcase both look very similar. In the middle of the distraction they just get together and put together and then each one of them take one of the",
+  "wer_before": 0.0,
+  "ceiling_sim": 0.926
+ },
+ {
+  "id": "l2arctic_njs_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "NJS",
+  "gender": "F",
+  "l1": "Spanish",
+  "text_ref": "when the man got to the hotel and opened his suitcase he realized that he had women's clothes when the woman opened her suitcase at her hotel she realized that she had",
+  "seg": [
+   34.73,
+   46.28
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_njs_0.wav"
+  ],
+  "dur": 11.55,
+  "acc_before": {
+   "top": "singapore",
+   "p_native": 0.2197,
+   "p_us": 0.21310000121593475,
+   "p_england": 0.002199999988079071,
+   "top3": [
+    [
+     "singapore",
+     0.6830000281333923
+    ],
+    [
+     "us",
+     0.21310000121593475
+    ],
+    [
+     "hongkong",
+     0.05270000174641609
+    ]
+   ],
+   "P": {
+    "england": 0.002199999988079071,
+    "us": 0.21310000121593475,
+    "canada": 0.0010999999940395355,
+    "australia": 0.0,
+    "indian": 9.999999747378752e-05,
+    "scotland": 0.0003000000142492354,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.039900001138448715,
+    "newzealand": 0.003000000026077032,
+    "southatlandtic": 0.002899999963119626,
+    "bermuda": 0.0007999999797903001,
+    "philippines": 0.0007999999797903001,
+    "hongkong": 0.05270000174641609,
+    "wales": 0.0,
+    "singapore": 0.6830000281333923
+   },
+   "cos": {
+    "england": 0.155,
+    "us": 0.306,
+    "canada": 0.13,
+    "australia": 0.004,
+    "indian": 0.039,
+    "scotland": 0.086,
+    "ireland": 0.021,
+    "african": 0.024,
+    "malaysia": 0.251,
+    "newzealand": 0.164,
+    "southatlandtic": 0.163,
+    "bermuda": 0.121,
+    "philippines": 0.12,
+    "hongkong": 0.26,
+    "wales": -0.005,
+    "singapore": 0.345
+   }
+  },
+  "quality": {
+   "floor_db": -26.1,
+   "clip": 0.0
+  },
+  "asr_before": "When the man got to the hotel and opened his suitcase, he realized that he had women's clothes. When the woman opened her suitcase at her hotel, she realized that she had women's clothes.",
+  "wer_before": 0.062,
+  "ceiling_sim": 0.904
+ },
+ {
+  "id": "l2arctic_hqtv_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "HQTV",
+  "gender": "M",
+  "l1": "Vietnamese",
+  "text_ref": "but accidentally they pick up the wrong briefcase and they recognize that they make it wrong when they get home",
+  "seg": [
+   9.15,
+   20.28
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_hqtv_0.wav"
+  ],
+  "dur": 11.13,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9922,
+   "p_us": 0.9908999800682068,
+   "p_england": 0.0,
+   "top3": [
+    [
+     "us",
+     0.9908999800682068
+    ],
+    [
+     "indian",
+     0.003599999938160181
+    ],
+    [
+     "hongkong",
+     0.0034000000450760126
+    ]
+   ],
+   "P": {
+    "england": 0.0,
+    "us": 0.9908999800682068,
+    "canada": 0.0,
+    "australia": 0.0007999999797903001,
+    "indian": 0.003599999938160181,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 9.999999747378752e-05,
+    "malaysia": 0.0,
+    "newzealand": 0.0005000000237487257,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 9.999999747378752e-05,
+    "hongkong": 0.0034000000450760126,
+    "wales": 0.0,
+    "singapore": 0.0005000000237487257
+   },
+   "cos": {
+    "england": 0.245,
+    "us": 0.582,
+    "canada": 0.163,
+    "australia": 0.345,
+    "indian": 0.394,
+    "scotland": 0.032,
+    "ireland": 0.162,
+    "african": 0.262,
+    "malaysia": 0.226,
+    "newzealand": 0.331,
+    "southatlandtic": 0.218,
+    "bermuda": 0.178,
+    "philippines": 0.263,
+    "hongkong": 0.393,
+    "wales": 0.118,
+    "singapore": 0.33
+   }
+  },
+  "quality": {
+   "floor_db": -26.8,
+   "clip": 0.0
+  },
+  "asr_before": "but accidentally they pick up the wrong rescue and they recognize that they make it wrong when they get home",
+  "wer_before": 0.05,
+  "ceiling_sim": 0.864
+ },
+ {
+  "id": "l2arctic_pnv_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "PNV",
+  "gender": "F",
+  "l1": "Vietnamese",
+  "text_ref": "and went separate ways after that after the man uh came back to his hotel he found out that his suitcase contained",
+  "seg": [
+   36.81,
+   47.95
+  ],
+  "fillers": 1,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_pnv_0.wav"
+  ],
+  "dur": 11.14,
+  "acc_before": {
+   "top": "australia",
+   "p_native": 0.9992,
+   "p_us": 0.00430000014603138,
+   "p_england": 0.0,
+   "top3": [
+    [
+     "australia",
+     0.9937999844551086
+    ],
+    [
+     "us",
+     0.00430000014603138
+    ],
+    [
+     "newzealand",
+     0.0010999999940395355
+    ]
+   ],
+   "P": {
+    "england": 0.0,
+    "us": 0.00430000014603138,
+    "canada": 0.0,
+    "australia": 0.9937999844551086,
+    "indian": 0.0,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0005000000237487257,
+    "malaysia": 0.0,
+    "newzealand": 0.0010999999940395355,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0,
+    "wales": 0.0,
+    "singapore": 0.00019999999494757503
+   },
+   "cos": {
+    "england": -0.09,
+    "us": 0.341,
+    "canada": -0.006,
+    "australia": 0.523,
+    "indian": 0.178,
+    "scotland": 0.175,
+    "ireland": 0.024,
+    "african": 0.271,
+    "malaysia": 0.126,
+    "newzealand": 0.294,
+    "southatlandtic": 0.047,
+    "bermuda": 0.024,
+    "philippines": 0.013,
+    "hongkong": 0.168,
+    "wales": -0.022,
+    "singapore": 0.243
+   }
+  },
+  "quality": {
+   "floor_db": -26.2,
+   "clip": 0.0
+  },
+  "asr_before": "and went separate ways. After that, after the man came back to his hotel, he found out that his suitcase contained",
+  "wer_before": 0.0,
+  "ceiling_sim": 0.89
+ },
+ {
+  "id": "l2arctic_thv_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "THV",
+  "gender": "F",
+  "l1": "Vietnamese",
+  "text_ref": "exchanged together and when they just recognize when they got home so the man opened the suitcase wow what this that a woman clothes and the same",
+  "seg": [
+   21.55,
+   33.09
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_thv_0.wav"
+  ],
+  "dur": 11.54,
+  "acc_before": {
+   "top": "england",
+   "p_native": 0.566,
+   "p_us": 0.01889999955892563,
+   "p_england": 0.546999990940094,
+   "top3": [
+    [
+     "england",
+     0.546999990940094
+    ],
+    [
+     "malaysia",
+     0.3165999948978424
+    ],
+    [
+     "singapore",
+     0.0868000015616417
+    ]
+   ],
+   "P": {
+    "england": 0.546999990940094,
+    "us": 0.01889999955892563,
+    "canada": 0.0,
+    "australia": 0.0,
+    "indian": 9.999999747378752e-05,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0038999998942017555,
+    "malaysia": 0.3165999948978424,
+    "newzealand": 0.0,
+    "southatlandtic": 0.007000000216066837,
+    "bermuda": 0.0013000000035390258,
+    "philippines": 0.0006000000284984708,
+    "hongkong": 0.01769999973475933,
+    "wales": 9.999999747378752e-05,
+    "singapore": 0.0868000015616417
+   },
+   "cos": {
+    "england": 0.4,
+    "us": 0.288,
+    "canada": -0.111,
+    "australia": 0.04,
+    "indian": 0.11,
+    "scotland": 0.019,
+    "ireland": -0.158,
+    "african": 0.236,
+    "malaysia": 0.382,
+    "newzealand": -0.026,
+    "southatlandtic": 0.255,
+    "bermuda": 0.198,
+    "philippines": 0.173,
+    "hongkong": 0.286,
+    "wales": 0.093,
+    "singapore": 0.339
+   }
+  },
+  "quality": {
+   "floor_db": -27.2,
+   "clip": 0.0
+  },
+  "asr_before": "each chain together and when they just recognize when they got home so the men opened the suitcase Wow! What's that? That's a woman's clothes? and the same",
+  "wer_before": 0.259,
+  "ceiling_sim": 0.904
+ },
+ {
+  "id": "l2arctic_tlv_0",
+  "source": "L2-ARCTIC suitcase",
+  "speaker": "TLV",
+  "gender": "M",
+  "l1": "Vietnamese",
+  "text_ref": "a big city there is a man and a woman who walking down the streets and they suddenly",
+  "seg": [
+   1.15,
+   7.63
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/l2arctic_tlv_0.wav"
+  ],
+  "dur": 6.48,
+  "acc_before": {
+   "top": "indian",
+   "p_native": 0.0332,
+   "p_us": 0.012600000016391277,
+   "p_england": 0.0015999999595806003,
+   "top3": [
+    [
+     "indian",
+     0.9574000239372253
+    ],
+    [
+     "canada",
+     0.016100000590085983
+    ],
+    [
+     "us",
+     0.012600000016391277
+    ]
+   ],
+   "P": {
+    "england": 0.0015999999595806003,
+    "us": 0.012600000016391277,
+    "canada": 0.016100000590085983,
+    "australia": 0.002899999963119626,
+    "indian": 0.9574000239372253,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0005000000237487257,
+    "malaysia": 0.0005000000237487257,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0007999999797903001,
+    "philippines": 0.0,
+    "hongkong": 0.007300000172108412,
+    "wales": 0.0,
+    "singapore": 0.00019999999494757503
+   },
+   "cos": {
+    "england": 0.238,
+    "us": 0.308,
+    "canada": 0.316,
+    "australia": 0.259,
+    "indian": 0.452,
+    "scotland": 0.068,
+    "ireland": -0.012,
+    "african": 0.2,
+    "malaysia": 0.202,
+    "newzealand": 0.068,
+    "southatlandtic": 0.082,
+    "bermuda": 0.216,
+    "philippines": 0.086,
+    "hongkong": 0.29,
+    "wales": 0.006,
+    "singapore": 0.175
+   }
+  },
+  "quality": {
+   "floor_db": -25.5,
+   "clip": 0.0
+  },
+  "asr_before": "big city there's a man and a woman who walking down the streets and they suddenly",
+  "wer_before": 0.167,
+  "ceiling_sim": 0.859
+ }
+]

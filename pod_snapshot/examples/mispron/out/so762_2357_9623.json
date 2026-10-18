@@ -1,0 +1,245 @@
+{
+ "file": "so762_2357_9623.wav",
+ "t": {
+  "upload": 2533,
+  "checks": 1850,
+  "replace": 5402,
+  "render": 961
+ },
+ "sid": "c54ab984",
+ "words": [
+  {
+   "w": "No,",
+   "s": 0.523,
+   "e": 1.065,
+   "p": 0.49
+  },
+  {
+   "w": "it",
+   "s": 1.166,
+   "e": 1.729,
+   "p": 0.97
+  },
+  {
+   "w": "was",
+   "s": 1.769,
+   "e": 2.855,
+   "p": 0.99
+  },
+  {
+   "w": "real.",
+   "s": 2.915,
+   "e": 3.257,
+   "p": 0.78
+  }
+ ],
+ "dur": 3.88,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 3,
+    "word": "real.",
+    "acc": 4.4,
+    "canon": "ɹiːəl",
+    "heard": "zzaːl",
+    "sub": "z",
+    "phone": "iː"
+   }
+  ],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.6,
+   9.6,
+   8.4,
+   4.4
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 3,
+    "word": "real.",
+    "acc": 4.4,
+    "canon": "ɹiːəl",
+    "heard": "zzaːl",
+    "sub": "z",
+    "phone": "iː"
+   },
+   "on": true,
+   "op": {
+    "t0": 2.885,
+    "t1": 3.297,
+    "insert": "681da4be",
+    "i": 3,
+    "j": 3,
+    "old": "real.",
+    "new": "real",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 8.73
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.373,
+     "heard": "No, it was real.",
+     "id": "681da4be",
+     "sec": 4.15,
+     "after": 8.73
+    },
+    {
+     "engine": "f5",
+     "ok": false,
+     "sim": 0.48,
+     "heard": "No, it was a little...",
+     "id": "3e3fe27c",
+     "sec": 1.77,
+     "after": 4.8
+    }
+   ],
+   "sec": 5.23
+  }
+ ],
+ "render": {
+  "dur": 4.02,
+  "ai": [
+   [
+    2.86,
+    3.42
+   ]
+  ],
+  "file": "out_cb168a.wav"
+ },
+ "ops": [
+  {
+   "id": "mvde8frpg",
+   "type": "replace",
+   "t0": 2.885,
+   "t1": 3.297,
+   "insert": "681da4be",
+   "i": 3,
+   "j": 3,
+   "old": "real.",
+   "new": "real",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 8.73,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 2.885,
+   "t1": 3.297,
+   "insert": "681da4be"
+  }
+ ],
+ "finalText": "No, it was real",
+ "afterCheck": {
+  "sid": "775f9a47",
+  "words": [
+   {
+    "w": "No,",
+    "s": 0.523,
+    "e": 1.066,
+    "p": 0.73,
+    "x": null
+   },
+   {
+    "w": "it",
+    "s": 1.166,
+    "e": 1.729,
+    "p": 0.97,
+    "x": null
+   },
+   {
+    "w": "was",
+    "s": 1.769,
+    "e": 2.835,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "real.",
+    "s": 2.915,
+    "e": 3.358,
+    "p": 0.91,
+    "x": null
+   }
+  ],
+  "dur": 4.021125,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.5,
+    9.4,
+    7.8,
+    8.7
+   ]
+  }
+ },
+ "label": {
+  "row": 2357,
+  "speaker": "9623",
+  "age": 21,
+  "gender": "m",
+  "text": "NO, IT WAS THE EYES.",
+  "dur": 3.88,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "EYES",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AY",
+      "index": 0,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "AY0",
+     "Z"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "NO",
+    "acc": 10
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "EYES",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2357_9623"
+ }
+}

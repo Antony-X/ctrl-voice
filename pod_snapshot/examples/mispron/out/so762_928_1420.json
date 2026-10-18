@@ -1,0 +1,156 @@
+{
+ "file": "so762_928_1420.wav",
+ "t": {
+  "upload": 2147,
+  "checks": 2941,
+  "replace": 0,
+  "render": 1660
+ },
+ "sid": "b62aa4f2",
+ "words": [
+  {
+   "w": "It",
+   "s": 0.883,
+   "e": 0.923,
+   "p": 0.84
+  },
+  {
+   "w": "was",
+   "s": 0.963,
+   "e": 1.063,
+   "p": 1
+  },
+  {
+   "w": "a",
+   "s": 1.104,
+   "e": 1.124,
+   "p": 0.97
+  },
+  {
+   "w": "beautiful",
+   "s": 1.144,
+   "e": 1.465,
+   "p": 0.99
+  },
+  {
+   "w": "day",
+   "s": 1.505,
+   "e": 1.685,
+   "p": 1
+  },
+  {
+   "w": "for",
+   "s": 1.846,
+   "e": 2.007,
+   "p": 0.57
+  },
+  {
+   "w": "the",
+   "s": 2.027,
+   "e": 2.087,
+   "p": 0.2
+  },
+  {
+   "w": "world.",
+   "s": 2.107,
+   "e": 2.428,
+   "p": 0.91
+  }
+ ],
+ "dur": 3.07,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.7,
+   10,
+   10,
+   7.6,
+   9.9,
+   9.9,
+   9.8,
+   8.9
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 3.07,
+  "ai": [],
+  "file": "out_44ecee.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "It was a beautiful day for the world.",
+ "label": {
+  "row": 928,
+  "speaker": "1420",
+  "age": 25,
+  "gender": "m",
+  "text": "IT WAS A BEAUTIFUL DAY FOR A FLOAT",
+  "dur": 3.07,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 8,
+  "fluency": 9,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 7,
+    "w": "FLOAT",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "L",
+      "index": 1,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "F",
+     "L",
+     "OW0",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "BEAUTIFUL",
+    "acc": 10
+   },
+   {
+    "w": "DAY",
+    "acc": 10
+   },
+   {
+    "w": "FOR",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "FLOAT",
+    "acc": 5
+   }
+  ],
+  "id": "so762_928_1420"
+ }
+}

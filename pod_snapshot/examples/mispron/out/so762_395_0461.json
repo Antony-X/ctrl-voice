@@ -1,0 +1,128 @@
+{
+ "file": "so762_395_0461.wav",
+ "t": {
+  "upload": 376,
+  "checks": 953,
+  "replace": 0,
+  "render": 1439
+ },
+ "sid": "1c18ef2f",
+ "words": [
+  {
+   "w": "Chats",
+   "s": 0.703,
+   "e": 1.707,
+   "p": 0.18
+  },
+  {
+   "w": "to",
+   "s": 1.767,
+   "e": 2.068,
+   "p": 0.86
+  },
+  {
+   "w": "a",
+   "s": 2.188,
+   "e": 2.349,
+   "p": 0.99
+  },
+  {
+   "w": "great",
+   "s": 2.389,
+   "e": 2.731,
+   "p": 0.95
+  },
+  {
+   "w": "group.",
+   "s": 2.771,
+   "e": 2.992,
+   "p": 0.99
+  }
+ ],
+ "dur": 3.614,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   7.7,
+   10,
+   9.8,
+   9.9,
+   9.9
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 3.61,
+  "ai": [],
+  "file": "out_02451b.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "Chats to a great group.",
+ "label": {
+  "row": 395,
+  "speaker": "0461",
+  "age": 23,
+  "gender": "m",
+  "text": "CHEERS TO A GREAT GROUP",
+  "dur": 3.61,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 0,
+    "w": "CHEERS",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "IH",
+      "index": 1,
+      "pronounced-phone": "EH"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 2,
+      "pronounced-phone": "AH*"
+     }
+    ],
+    "phones": [
+     "CH",
+     "IH",
+     "AH0",
+     "Z"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "CHEERS",
+    "acc": 3
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "GREAT",
+    "acc": 10
+   },
+   {
+    "w": "GROUP",
+    "acc": 10
+   }
+  ],
+  "id": "so762_395_0461"
+ }
+}

@@ -1,0 +1,168 @@
+{
+ "file": "so762_734_1135.wav",
+ "t": {
+  "upload": 714,
+  "checks": 937,
+  "replace": 0,
+  "render": 1583
+ },
+ "sid": "6573677e",
+ "words": [
+  {
+   "w": "It",
+   "s": 0.622,
+   "e": 0.702,
+   "p": 0.22
+  },
+  {
+   "w": "will",
+   "s": 0.742,
+   "e": 0.922,
+   "p": 0.94
+  },
+  {
+   "w": "be",
+   "s": 0.962,
+   "e": 1.163,
+   "p": 1
+  },
+  {
+   "w": "fun",
+   "s": 1.243,
+   "e": 1.564,
+   "p": 0.88
+  },
+  {
+   "w": "to",
+   "s": 1.604,
+   "e": 1.885,
+   "p": 0.98
+  },
+  {
+   "w": "watch",
+   "s": 1.945,
+   "e": 2.306,
+   "p": 1
+  },
+  {
+   "w": "them",
+   "s": 2.346,
+   "e": 2.627,
+   "p": 0.99
+  },
+  {
+   "w": "all",
+   "s": 2.687,
+   "e": 3.008,
+   "p": 0.91
+  },
+  {
+   "w": "year.",
+   "s": 3.028,
+   "e": 3.268,
+   "p": 0.71
+  }
+ ],
+ "dur": 3.89,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 9.5,
+  "scores": [
+   5,
+   9.8,
+   9.9,
+   9.6,
+   9.9,
+   8.1,
+   9.3,
+   9,
+   9.8
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 3.89,
+  "ai": [],
+  "file": "out_7e5ffa.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "It will be fun to watch them all year.",
+ "label": {
+  "row": 734,
+  "speaker": "1135",
+  "age": 25,
+  "gender": "m",
+  "text": "WILL BE FUN TO THAT'S THEM ALL YEAR",
+  "dur": 3.89,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 4,
+    "w": "THAT'S",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "DH",
+      "index": 0,
+      "pronounced-phone": "W"
+     },
+     {
+      "canonical-phone": "AE",
+      "index": 1,
+      "pronounced-phone": "AA"
+     }
+    ],
+    "phones": [
+     "DH",
+     "AE0",
+     "T",
+     "S"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "WILL",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "FUN",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "THAT'S",
+    "acc": 3
+   },
+   {
+    "w": "THEM",
+    "acc": 10
+   },
+   {
+    "w": "ALL",
+    "acc": 10
+   },
+   {
+    "w": "YEAR",
+    "acc": 10
+   }
+  ],
+  "id": "so762_734_1135"
+ }
+}

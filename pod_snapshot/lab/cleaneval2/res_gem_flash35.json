@@ -1,0 +1,1241 @@
+{
+ "variant": "gem_flash35",
+ "rows": [
+  {
+   "group": "old",
+   "s": "I'll meet you on Monday, no wait, Wednesday at five.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 1.21,
+   "got": "I'll meet you on Wednesday at five.",
+   "fallback": true,
+   "cuts": [
+    [
+     "correction",
+     "Monday, no wait,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "Can you grab the red, I mean the blue folder from my desk?",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 1.29,
+   "got": "Can you grab the blue folder from my desk?",
+   "fallback": true,
+   "cuts": [
+    [
+     "correction",
+     "the red, I mean",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "The meeting is at three, sorry, four thirty tomorrow.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 1.47,
+   "got": "The meeting is at four thirty tomorrow.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "three, sorry,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "Tell Sarah, actually, tell Mike that the report is done.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 2.73,
+   "got": "tell Mike that the report is done.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "Tell Sarah, actually,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "We need like ten, no, twelve chairs for the party.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 1.32,
+   "got": "We need twelve chairs for the party.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "like ten, no,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "I booked a table for seven people, or rather eight people, at the Italian place.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 2.48,
+   "got": "I booked a table for eight people, at the Italian place.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "seven people, or rather",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "Turn left on Main Street, uh, no, on Oak Street, and then it's the second house.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 5.05,
+   "got": "Turn left on Oak Street, and then it's the second house.",
+   "fallback": false,
+   "cuts": [
+    [
+     "restart",
+     "on",
+     true
+    ],
+    [
+     "correction",
+     "Main Street, uh, no,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "My flight lands at nine, wait, no, ten fifteen.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 1.3,
+   "got": "My flight lands at ten fifteen.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "nine, wait, no,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "I was, we were thinking about going to the beach this weekend.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.42,
+   "got": "we were thinking about going to the beach this weekend.",
+   "fallback": true,
+   "cuts": [
+    [
+     "restart",
+     "I was,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "Did you, have you finished the slides yet?",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 1.25,
+   "got": "have you finished the slides yet?",
+   "fallback": false,
+   "cuts": [
+    [
+     "restart",
+     "Did you,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "I I think we should we should leave early.",
+   "exact": false,
+   "over": 0,
+   "under": 2,
+   "sec": 0.36,
+   "got": "I think we should we should leave early.",
+   "fallback": true,
+   "cuts": [
+    [
+     "repetition",
+     "I",
+     true
+    ],
+    [
+     "repetition",
+     "we should",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "And, and the the problem is the budget.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.41,
+   "got": "and the problem is the budget.",
+   "fallback": true,
+   "cuts": [
+    [
+     "repetition",
+     "And,",
+     true
+    ],
+    [
+     "repetition",
+     "the",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "Um, so, uh, I just wanted to say thanks for, um, yesterday.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.49,
+   "got": "so, I just wanted to say thanks for, yesterday.",
+   "fallback": true,
+   "cuts": [
+    [
+     "filler",
+     "Um,",
+     true
+    ],
+    [
+     "filler",
+     "uh,",
+     true
+    ],
+    [
+     "filler",
+     "um,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "Hey, I'm running late. The traffic is horrible and I hate this city. | Scratch that. | I'll be there in ten minutes.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 6.37,
+   "got": "Hey, I'm running late. I'll be there in ten minutes.",
+   "fallback": true,
+   "cuts": [
+    [
+     "command",
+     "The traffic is horrible and I hate this city. Scratch that.",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "So, uh, the party is on Saturday, no, Sunday, and, um, bring the the cake.",
+   "exact": false,
+   "over": 0,
+   "under": 1,
+   "sec": 0.68,
+   "got": "So, the party is on Sunday, and, bring the the cake.",
+   "fallback": true,
+   "cuts": [
+    [
+     "filler",
+     "uh,",
+     true
+    ],
+    [
+     "correction",
+     "Saturday, no,",
+     true
+    ],
+    [
+     "filler",
+     "um,",
+     true
+    ],
+    [
+     "repetition",
+     "the",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "I need you to send, uh, forward me the email from John, I mean from Jim, before lunch.",
+   "exact": false,
+   "over": 0,
+   "under": 1,
+   "sec": 0.47,
+   "got": "I need you to send, forward me the email from Jim, before lunch.",
+   "fallback": true,
+   "cuts": [
+    [
+     "filler",
+     "uh,",
+     true
+    ],
+    [
+     "correction",
+     "from John, I mean",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "The password is, no, | I'll text it to you instead.",
+   "exact": false,
+   "over": 0,
+   "under": 4,
+   "sec": 0.4,
+   "got": "The password is, no, I'll text it to you instead.",
+   "fallback": true,
+   "cuts": [
+    [
+     "correction",
+     "no,",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "I'll be there by six. No wait, seven, because of the traffic.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.41,
+   "got": "I'll be there by seven, because of the traffic.",
+   "fallback": true,
+   "cuts": [
+    [
+     "correction",
+     "six. No wait,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "Bring the charger, the black one, not the white one.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.36,
+   "got": "Bring the charger, the black one, not the white one.",
+   "fallback": true,
+   "cuts": []
+  },
+  {
+   "group": "old",
+   "s": "No, I can't come tonight, I'm sorry.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.35,
+   "got": "No, I can't come tonight, I'm sorry.",
+   "fallback": true,
+   "cuts": []
+  },
+  {
+   "group": "old",
+   "s": "I actually really liked the movie.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.31,
+   "got": "I actually really liked the movie.",
+   "fallback": true,
+   "cuts": []
+  },
+  {
+   "group": "old",
+   "s": "I mean it, you did a great job.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.33,
+   "got": "I mean it, you did a great job.",
+   "fallback": true,
+   "cuts": []
+  },
+  {
+   "group": "old",
+   "s": "It's not Monday, it's Tuesday today.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.35,
+   "got": "It's not Monday, it's Tuesday today.",
+   "fallback": true,
+   "cuts": []
+  },
+  {
+   "group": "old",
+   "s": "We never said that, we said we'd think about it.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.36,
+   "got": "We never said that, we said we'd think about it.",
+   "fallback": true,
+   "cuts": []
+  },
+  {
+   "group": "old",
+   "s": "Call me at five five five, two one two three.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.33,
+   "got": "Call me at five five five, two one two three.",
+   "fallback": true,
+   "cuts": []
+  },
+  {
+   "group": "old",
+   "s": "Wait for me at the entrance, I'll be there soon.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.32,
+   "got": "Wait for me at the entrance, I'll be there soon.",
+   "fallback": true,
+   "cuts": []
+  },
+  {
+   "group": "old",
+   "s": "Sorry I missed your call, I was driving.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.33,
+   "got": "Sorry I missed your call, I was driving.",
+   "fallback": true,
+   "cuts": []
+  },
+  {
+   "group": "old",
+   "s": "Never mind the mess, the kitchen is being renovated.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.34,
+   "got": "Never mind the mess, the kitchen is being renovated.",
+   "fallback": true,
+   "cuts": []
+  },
+  {
+   "group": "meant",
+   "s": "Can you send it to my work email, no no, I meant my personal one, the work one is full.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.47,
+   "got": "Can you send it to my personal one, the work one is full.",
+   "fallback": true,
+   "cuts": [
+    [
+     "correction",
+     "my work email, no no, I meant",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "meant",
+   "s": "Um, so, I'll bring the salad. No no, wait, I meant the dessert, Kim is bringing the salad.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.5,
+   "got": "so, I'll bring the dessert, Kim is bringing the salad.",
+   "fallback": true,
+   "cuts": [
+    [
+     "filler",
+     "Um,",
+     true
+    ],
+    [
+     "correction",
+     "the salad. No no, wait, I meant",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "meant",
+   "s": "We land at eight, no no, I meant we land at nine, so pick us up at ten.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.44,
+   "got": "we land at nine, so pick us up at ten.",
+   "fallback": true,
+   "cuts": [
+    [
+     "correction",
+     "We land at eight, no no, I meant",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "meant",
+   "s": "Uh, the code is on the fridge, no, I meant on the door, sorry, the front door.",
+   "exact": false,
+   "over": 0,
+   "under": 6,
+   "sec": 0.49,
+   "got": "the code is on the fridge, no, I meant on the front door.",
+   "fallback": true,
+   "cuts": [
+    [
+     "filler",
+     "Uh,",
+     true
+    ],
+    [
+     "correction",
+     "the door, sorry,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "meant",
+   "s": "Hey, Sam, um, can you be more pacific about game night? Is it Monday? No, wait, Wednesday? Also, I still sleep with a teddy bear. Scratch that. Anyway, whatever Jordan said is a mute point now. Just bring snacks.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.69,
+   "got": "Hey, Sam, can you be more pacific about game night? Is it Wednesday? Anyway, whatever Jordan said is a mute point now. Just bring snacks.",
+   "fallback": true,
+   "cuts": [
+    [
+     "filler",
+     "um,",
+     true
+    ],
+    [
+     "correction",
+     "Monday? No, wait,",
+     true
+    ],
+    [
+     "command",
+     "Also, I still sleep with a teddy bear. Scratch that.",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "meant",
+   "s": "Hey, Sam, um, can you be more pacific about game night? Is it Monday? No, wait, Wednesday? Anyway, whatever Jordan said is a mute point now. Just bring snacks.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.6,
+   "got": "Hey, Sam, can you be more pacific about game night? Is it Wednesday? Anyway, whatever Jordan said is a mute point now. Just bring snacks.",
+   "fallback": true,
+   "cuts": [
+    [
+     "filler",
+     "um,",
+     true
+    ],
+    [
+     "correction",
+     "Monday? No, wait,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "The meeting is on Thursday. Actually, no, it's on Friday. Bring your laptop.",
+   "exact": false,
+   "over": 0,
+   "under": 5,
+   "sec": 0.4,
+   "got": "The meeting is on Thursday. Actually, no, it's on Friday. Bring your laptop.",
+   "fallback": true,
+   "cuts": [
+    [
+     "correction",
+     "Thursday. Actually, no,",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Meet me at the Italian place on Fifth Street. Oh wait, sorry, it's the one on Seventh Street. See you at eight.",
+   "exact": false,
+   "over": 0,
+   "under": 7,
+   "sec": 0.46,
+   "got": "Meet me at the Italian place on Fifth Street. Oh wait, sorry, it's the one on Seventh Street. See you at eight.",
+   "fallback": true,
+   "cuts": [
+    [
+     "correction",
+     "Oh wait, sorry,",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Hey, so I'm gonna be a bit late tonight. I'm running late, like twenty minutes. Start without me.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.5,
+   "got": "Hey, so I'm gonna be a bit late tonight. like twenty minutes. Start without me.",
+   "fallback": true,
+   "cuts": [
+    [
+     "filler",
+     "so",
+     false
+    ],
+    [
+     "restart",
+     "I'm running late,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Are you coming to the party tomorrow? Like, will you be there tomorrow? Let me know.",
+   "exact": false,
+   "over": 0,
+   "under": 6,
+   "sec": 0.42,
+   "got": "Are you coming to the party tomorrow? Like, will you be there tomorrow? Let me know.",
+   "fallback": true,
+   "cuts": [
+    [
+     "filler",
+     "Like,",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Can you send me the, um, what's it called, the spreadsheet from yesterday?",
+   "exact": false,
+   "over": 0,
+   "under": 1,
+   "sec": 0.44,
+   "got": "Can you send me the, the spreadsheet from yesterday?",
+   "fallback": true,
+   "cuts": [
+    [
+     "filler",
+     "um,",
+     true
+    ],
+    [
+     "restart",
+     "what's it called,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "So I was thinking, hold on, let me, okay, so I was thinking we could do the trip in June.",
+   "exact": false,
+   "over": 0,
+   "under": 1,
+   "sec": 0.45,
+   "got": "So so I was thinking we could do the trip in June.",
+   "fallback": true,
+   "cuts": [
+    [
+     "restart",
+     "I was thinking, hold on, let me, okay,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Hey, can you, Max, stop it, put that down! Sorry. Can you pick up some milk on the way home?",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.48,
+   "got": "Hey, Can you pick up some milk on the way home?",
+   "fallback": true,
+   "cuts": [
+    [
+     "correction",
+     "can you, Max, stop it, put that down! Sorry.",
+     true
+    ],
+    [
+     "filler",
+     "Max,",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Tell Anna that, wait, no, it was Maria who asked. Tell Maria the keys are under the mat.",
+   "exact": false,
+   "over": 0,
+   "under": 10,
+   "sec": 0.45,
+   "got": "Tell Anna that, wait, no, it was Maria who asked. Tell Maria the keys are under the mat.",
+   "fallback": true,
+   "cuts": [
+    [
+     "correction",
+     "wait, no,",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "The total is forty dollars. No, sorry, forty five, I forgot the tip. Just send it whenever.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.43,
+   "got": "The total is forty five, I forgot the tip. Just send it whenever.",
+   "fallback": true,
+   "cuts": [
+    [
+     "correction",
+     "forty dollars. No, sorry,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "I really liked your presentation. It was really good, I really liked it. Especially the part about the budget.",
+   "exact": false,
+   "over": 0,
+   "under": 4,
+   "sec": 0.46,
+   "got": "I really liked your presentation. It was really good, I really liked it. Especially the part about the budget.",
+   "fallback": true,
+   "cuts": [
+    [
+     "repetition",
+     "I really liked",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Okay so, um, what was I saying? Oh yeah, the flight is at noon, so we need to leave by nine.",
+   "exact": false,
+   "over": 0,
+   "under": 6,
+   "sec": 0.48,
+   "got": "Okay so, what was I saying? Oh yeah, the flight is at noon, so we need to leave by nine.",
+   "fallback": true,
+   "cuts": [
+    [
+     "filler",
+     "um,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "I'll call you after work. Actually, I'll call you during lunch instead, I have a thing after work.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.45,
+   "got": "I'll call you during lunch instead, I have a thing after work.",
+   "fallback": true,
+   "cuts": [
+    [
+     "correction",
+     "I'll call you after work. Actually,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Let me think how to say this. Um. Okay. I can't make it on Saturday, I'm really sorry.",
+   "exact": false,
+   "over": 0,
+   "under": 7,
+   "sec": 0.47,
+   "got": "Let me think how to say this. Okay. I can't make it on Saturday, I'm really sorry.",
+   "fallback": true,
+   "cuts": [
+    [
+     "filler",
+     "Um.",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "We're staying at the Hilton downtown. Actually, forget that, ignore that last part. We're staying at my aunt's place.",
+   "exact": false,
+   "over": 0,
+   "under": 6,
+   "sec": 0.45,
+   "got": "We're staying at the Hilton downtown. We're staying at my aunt's place.",
+   "fallback": true,
+   "cuts": [
+    [
+     "command",
+     "Actually, forget that, ignore that last part.",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "The, the thing is, I don't think we, I don't think we have enough time.",
+   "exact": false,
+   "over": 0,
+   "under": 5,
+   "sec": 0.47,
+   "got": "The, the thing is, I don't think we, I don't think we have enough time.",
+   "fallback": true,
+   "cuts": [
+    [
+     "repetition",
+     "the",
+     false
+    ],
+    [
+     "repetition",
+     "I don't think we",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Yeah so basically, basically what happened is the car broke down.",
+   "exact": false,
+   "over": 0,
+   "under": 1,
+   "sec": 0.4,
+   "got": "Yeah so basically, basically what happened is the car broke down.",
+   "fallback": true,
+   "cuts": [
+    [
+     "repetition",
+     "basically",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "I'm going to the store. Do you need anything? I'm heading to the store now, so let me know if you need anything.",
+   "exact": false,
+   "over": 2,
+   "under": 5,
+   "sec": 0.51,
+   "got": "I'm going to the store. Do you need anything? so let me know if you need anything.",
+   "fallback": true,
+   "cuts": [
+    [
+     "restart",
+     "I'm heading to the store now,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "I got the tickets for Saturday, I mean, for Sunday, the Saturday ones were sold out.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.45,
+   "got": "I got the tickets for Sunday, the Saturday ones were sold out.",
+   "fallback": true,
+   "cuts": [
+    [
+     "correction",
+     "for Saturday, I mean,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "So we, so the plan is, okay, the plan is we leave at six.",
+   "exact": false,
+   "over": 0,
+   "under": 3,
+   "sec": 0.46,
+   "got": "So we, so the plan is, okay, we leave at six.",
+   "fallback": true,
+   "cuts": [
+    [
+     "repetition",
+     "we,",
+     false
+    ],
+    [
+     "filler",
+     "okay,",
+     false
+    ],
+    [
+     "restart",
+     "the plan is",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Grab some wine, the red one is cheaper. | Never mind, scratch that, | just grab beer.",
+   "exact": false,
+   "over": 0,
+   "under": 12,
+   "sec": 0.41,
+   "got": "Grab some wine, the red one is cheaper. Never mind, scratch that, just grab beer.",
+   "fallback": true,
+   "cuts": [
+    [
+     "command",
+     "Never mind, scratch that, just grab beer.",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Sorry for the long message. Um, so, yeah. Anyway. The point is I need the car on Friday.",
+   "exact": false,
+   "over": 0,
+   "under": 2,
+   "sec": 0.53,
+   "got": "Sorry for the long message. so, yeah. The point is I need the car on Friday.",
+   "fallback": true,
+   "cuts": [
+    [
+     "filler",
+     "Sorry",
+     false
+    ],
+    [
+     "filler",
+     "Um,",
+     true
+    ],
+    [
+     "filler",
+     "yeah.",
+     false
+    ],
+    [
+     "restart",
+     "Anyway.",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "I sent it to you on, um, on Tuesday? No, Wednesday. Yeah, Wednesday. Check your spam folder.",
+   "exact": false,
+   "over": 0,
+   "under": 2,
+   "sec": 0.52,
+   "got": "I sent it to you on Wednesday. Yeah, Wednesday. Check your spam folder.",
+   "fallback": true,
+   "cuts": [
+    [
+     "repetition",
+     "on,",
+     true
+    ],
+    [
+     "filler",
+     "um,",
+     true
+    ],
+    [
+     "repetition",
+     "on",
+     false
+    ],
+    [
+     "correction",
+     "Tuesday? No,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "keep",
+   "s": "I'm really, really proud of you.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.39,
+   "got": "I'm really, really proud of you.",
+   "fallback": true,
+   "cuts": [
+    [
+     "repetition",
+     "really",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "keep",
+   "s": "The dinner is on Friday at eight at Luigi's. Again, Friday at eight, don't be late.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.41,
+   "got": "The dinner is on Friday at eight at Luigi's. Again, Friday at eight, don't be late.",
+   "fallback": true,
+   "cuts": []
+  },
+  {
+   "group": "keep",
+   "s": "He told me no, wait for the manager, so we waited for an hour.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.39,
+   "got": "He told me no, wait for the manager, so we waited for an hour.",
+   "fallback": true,
+   "cuts": []
+  },
+  {
+   "group": "keep",
+   "s": "No, no, no, that's totally fine, don't worry about it.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.4,
+   "got": "No, no, no, that's totally fine, don't worry about it.",
+   "fallback": true,
+   "cuts": [
+    [
+     "repetition",
+     "No,",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "keep",
+   "s": "We need red paint, blue paint and white paint for the fence.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.35,
+   "got": "We need red paint, blue paint and white paint for the fence.",
+   "fallback": true,
+   "cuts": []
+  },
+  {
+   "group": "keep",
+   "s": "Let me think about it and I'll get back to you tomorrow.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.37,
+   "got": "Let me think about it and I'll get back to you tomorrow.",
+   "fallback": true,
+   "cuts": []
+  },
+  {
+   "group": "keep",
+   "s": "I said it's Monday, not Tuesday, so please don't come on Tuesday.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.4,
+   "got": "I said it's Monday, not Tuesday, so please don't come on Tuesday.",
+   "fallback": true,
+   "cuts": [
+    [
+     "correction",
+     "not Tuesday, so please don't come on",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "keep",
+   "s": "Thank you so much. Seriously, thank you, it means a lot.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.36,
+   "got": "Thank you so much. Seriously, thank you, it means a lot.",
+   "fallback": true,
+   "cuts": []
+  },
+  {
+   "group": "keep",
+   "s": "First we go to the bank, then the post office, then we go home.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.39,
+   "got": "First we go to the bank, then the post office, then we go home.",
+   "fallback": true,
+   "cuts": []
+  },
+  {
+   "group": "keep",
+   "s": "Sorry, I can't talk right now, I'm in a meeting. Call you later.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.4,
+   "got": "Sorry, I can't talk right now, I'm in a meeting. Call you later.",
+   "fallback": true,
+   "cuts": []
+  },
+  {
+   "group": "keep",
+   "s": "My sister, the one who lives in Paris, is visiting next week.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.37,
+   "got": "My sister, the one who lives in Paris, is visiting next week.",
+   "fallback": true,
+   "cuts": []
+  },
+  {
+   "group": "keep",
+   "s": "It's cold, really cold, so bring a jacket.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.34,
+   "got": "It's cold, really cold, so bring a jacket.",
+   "fallback": true,
+   "cuts": []
+  }
+ ],
+ "sec": 295.3,
+ "errors": [
+  "gemini cleanup failed, using the local model: InternalServerError(\"Error code: 503 - [{'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}]\")",
+  "gemini cleanup failed, using the local model: InternalServerError(\"Error code: 503 - [{'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}]\")",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: APITimeoutError('Request timed out.')",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r",
+  "gemini cleanup failed, using the local model: RateLimitError(\"Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/r"
+ ]
+}

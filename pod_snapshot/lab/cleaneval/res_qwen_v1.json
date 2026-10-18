@@ -1,0 +1,1167 @@
+{
+ "variant": "qwen_v1",
+ "rows": [
+  {
+   "group": "old",
+   "s": "I'll meet you on Monday, no wait, Wednesday at five.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.25,
+   "got": "I'll meet you on Wednesday at five.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "Monday, no wait,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "Can you grab the red, I mean the blue folder from my desk?",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.25,
+   "got": "Can you grab the blue folder from my desk?",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "the red, I mean",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "The meeting is at three, sorry, four thirty tomorrow.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.23,
+   "got": "The meeting is at four thirty tomorrow.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "three, sorry,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "Tell Sarah, actually, tell Mike that the report is done.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.23,
+   "got": "tell Mike that the report is done.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "Tell Sarah, actually,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "We need like ten, no, twelve chairs for the party.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.23,
+   "got": "We need like twelve chairs for the party.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "ten, no,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "I booked a table for seven people, or rather eight people, at the Italian place.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.27,
+   "got": "I booked a table for eight people, at the Italian place.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "seven people, or rather",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "Turn left on Main Street, uh, no, on Oak Street, and then it's the second house.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.29,
+   "got": "Turn left on Oak Street, and then it's the second house.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "on Main Street, uh, no,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "My flight lands at nine, wait, no, ten fifteen.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.24,
+   "got": "My flight lands at ten fifteen.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "nine, wait, no,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "I was, we were thinking about going to the beach this weekend.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.23,
+   "got": "we were thinking about going to the beach this weekend.",
+   "fallback": false,
+   "cuts": [
+    [
+     "restart",
+     "I was,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "Did you, have you finished the slides yet?",
+   "exact": false,
+   "over": 0,
+   "under": 2,
+   "sec": 0.22,
+   "got": "Did you, have you finished the slides yet?",
+   "fallback": false,
+   "cuts": [
+    [
+     "repetition",
+     "have you",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "I I think we should we should leave early.",
+   "exact": false,
+   "over": 0,
+   "under": 2,
+   "sec": 0.24,
+   "got": "I think we should we should leave early.",
+   "fallback": false,
+   "cuts": [
+    [
+     "repetition",
+     "I",
+     true
+    ],
+    [
+     "repetition",
+     "we should",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "And, and the the problem is the budget.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.24,
+   "got": "and the problem is the budget.",
+   "fallback": false,
+   "cuts": [
+    [
+     "repetition",
+     "And,",
+     true
+    ],
+    [
+     "repetition",
+     "the",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "Um, so, uh, I just wanted to say thanks for, um, yesterday.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.33,
+   "got": "so, I just wanted to say thanks for, yesterday.",
+   "fallback": false,
+   "cuts": [
+    [
+     "filler",
+     "Um,",
+     true
+    ],
+    [
+     "filler",
+     "uh,",
+     true
+    ],
+    [
+     "filler",
+     "um,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "Hey, I'm running late. The traffic is horrible and I hate this city. | Scratch that. | I'll be there in ten minutes.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.31,
+   "got": "Hey, I'm running late. I'll be there in ten minutes.",
+   "fallback": false,
+   "cuts": [
+    [
+     "command",
+     "The traffic is horrible and I hate this city. Scratch that.",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "So, uh, the party is on Saturday, no, Sunday, and, um, bring the the cake.",
+   "exact": false,
+   "over": 0,
+   "under": 1,
+   "sec": 0.38,
+   "got": "So, the party is on Sunday, and, bring the the cake.",
+   "fallback": false,
+   "cuts": [
+    [
+     "filler",
+     "uh,",
+     true
+    ],
+    [
+     "correction",
+     "Saturday, no,",
+     true
+    ],
+    [
+     "filler",
+     "um,",
+     true
+    ],
+    [
+     "repetition",
+     "the",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "I need you to send, uh, forward me the email from John, I mean from Jim, before lunch.",
+   "exact": false,
+   "over": 0,
+   "under": 1,
+   "sec": 0.32,
+   "got": "I need you to send, forward me the email from Jim, before lunch.",
+   "fallback": false,
+   "cuts": [
+    [
+     "filler",
+     "uh,",
+     true
+    ],
+    [
+     "correction",
+     "from John, I mean",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "The password is, no, | I'll text it to you instead.",
+   "exact": false,
+   "over": 0,
+   "under": 4,
+   "sec": 0.24,
+   "got": "The password is, no, I'll text it to you instead.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "no,",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "I'll be there by six. No wait, seven, because of the traffic.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.26,
+   "got": "I'll be there by seven, because of the traffic.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "six. No wait,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "old",
+   "s": "Bring the charger, the black one, not the white one.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.21,
+   "got": "Bring the charger, the black one, not the white one.",
+   "fallback": false,
+   "cuts": []
+  },
+  {
+   "group": "old",
+   "s": "No, I can't come tonight, I'm sorry.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.2,
+   "got": "No, I can't come tonight, I'm sorry.",
+   "fallback": false,
+   "cuts": []
+  },
+  {
+   "group": "old",
+   "s": "I actually really liked the movie.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.17,
+   "got": "I actually really liked the movie.",
+   "fallback": false,
+   "cuts": []
+  },
+  {
+   "group": "old",
+   "s": "I mean it, you did a great job.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.18,
+   "got": "I mean it, you did a great job.",
+   "fallback": false,
+   "cuts": []
+  },
+  {
+   "group": "old",
+   "s": "It's not Monday, it's Tuesday today.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.18,
+   "got": "It's not Monday, it's Tuesday today.",
+   "fallback": false,
+   "cuts": []
+  },
+  {
+   "group": "old",
+   "s": "We never said that, we said we'd think about it.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.19,
+   "got": "We never said that, we said we'd think about it.",
+   "fallback": false,
+   "cuts": []
+  },
+  {
+   "group": "old",
+   "s": "Call me at five five five, two one two three.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.2,
+   "got": "Call me at five five five, two one two three.",
+   "fallback": false,
+   "cuts": []
+  },
+  {
+   "group": "old",
+   "s": "Wait for me at the entrance, I'll be there soon.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.2,
+   "got": "Wait for me at the entrance, I'll be there soon.",
+   "fallback": false,
+   "cuts": []
+  },
+  {
+   "group": "old",
+   "s": "Sorry I missed your call, I was driving.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.19,
+   "got": "Sorry I missed your call, I was driving.",
+   "fallback": false,
+   "cuts": []
+  },
+  {
+   "group": "old",
+   "s": "Never mind the mess, the kitchen is being renovated.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.2,
+   "got": "Never mind the mess, the kitchen is being renovated.",
+   "fallback": false,
+   "cuts": []
+  },
+  {
+   "group": "meant",
+   "s": "Can you send it to my work email, no no, I meant my personal one, the work one is full.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.38,
+   "got": "Can you send it to my personal one, the work one is full.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "my work email, no no, I meant",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "meant",
+   "s": "Um, so, I'll bring the salad. No no, wait, I meant the dessert, Kim is bringing the salad.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.4,
+   "got": "so, I'll bring the dessert, Kim is bringing the salad.",
+   "fallback": false,
+   "cuts": [
+    [
+     "filler",
+     "Um,",
+     true
+    ],
+    [
+     "correction",
+     "the salad. No no, wait, I meant",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "meant",
+   "s": "We land at eight, no no, I meant we land at nine, so pick us up at ten.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.28,
+   "got": "we land at nine, so pick us up at ten.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "We land at eight, no no, I meant",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "meant",
+   "s": "Uh, the code is on the fridge, no, I meant on the door, sorry, the front door.",
+   "exact": false,
+   "over": 0,
+   "under": 6,
+   "sec": 0.33,
+   "got": "the code is on the fridge, no, I meant on the front door.",
+   "fallback": false,
+   "cuts": [
+    [
+     "filler",
+     "Uh,",
+     true
+    ],
+    [
+     "correction",
+     "the door, sorry,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "meant",
+   "s": "Hey, Sam, um, can you be more pacific about game night? Is it Monday? No, wait, Wednesday? Also, I still sleep with a teddy bear. Scratch that. Anyway, whatever Jordan said is a mute point now. Just bring snacks.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.7,
+   "got": "Hey, Sam, can you be more pacific about game night? Is it Wednesday? Anyway, whatever Jordan said is a mute point now. Just bring snacks.",
+   "fallback": false,
+   "cuts": [
+    [
+     "filler",
+     "um,",
+     true
+    ],
+    [
+     "correction",
+     "Monday? No, wait,",
+     true
+    ],
+    [
+     "command",
+     "Also, I still sleep with a teddy bear. Scratch that.",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "meant",
+   "s": "Hey, Sam, um, can you be more pacific about game night? Is it Monday? No, wait, Wednesday? Anyway, whatever Jordan said is a mute point now. Just bring snacks.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.44,
+   "got": "Hey, Sam, can you be more pacific about game night? Is it Wednesday? Anyway, whatever Jordan said is a mute point now. Just bring snacks.",
+   "fallback": false,
+   "cuts": [
+    [
+     "filler",
+     "um,",
+     true
+    ],
+    [
+     "correction",
+     "Monday? No, wait,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "The meeting is on Thursday. Actually, no, it's on Friday. Bring your laptop.",
+   "exact": false,
+   "over": 0,
+   "under": 5,
+   "sec": 0.33,
+   "got": "The meeting is on Thursday. Actually, no, it's on Friday. Bring your laptop.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "Thursday. Actually, no,",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Meet me at the Italian place on Fifth Street. Oh wait, sorry, it's the one on Seventh Street. See you at eight.",
+   "exact": false,
+   "over": 0,
+   "under": 7,
+   "sec": 0.35,
+   "got": "Meet me at the Italian place on Fifth Street. Oh wait, sorry, it's the one on Seventh Street. See you at eight.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "Oh wait, sorry,",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Hey, so I'm gonna be a bit late tonight. I'm running late, like twenty minutes. Start without me.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.33,
+   "got": "Hey, so I'm gonna be a bit late tonight. like twenty minutes. Start without me.",
+   "fallback": false,
+   "cuts": [
+    [
+     "filler",
+     "so",
+     false
+    ],
+    [
+     "restart",
+     "I'm running late,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Are you coming to the party tomorrow? Like, will you be there tomorrow? Let me know.",
+   "exact": false,
+   "over": 0,
+   "under": 6,
+   "sec": 0.4,
+   "got": "Are you coming to the party tomorrow? Like, will you be there tomorrow? Let me know.",
+   "fallback": false,
+   "cuts": [
+    [
+     "filler",
+     "Like,",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Can you send me the, um, what's it called, the spreadsheet from yesterday?",
+   "exact": false,
+   "over": 0,
+   "under": 1,
+   "sec": 0.3,
+   "got": "Can you send me the, the spreadsheet from yesterday?",
+   "fallback": false,
+   "cuts": [
+    [
+     "filler",
+     "um,",
+     true
+    ],
+    [
+     "restart",
+     "what's it called,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "So I was thinking, hold on, let me, okay, so I was thinking we could do the trip in June.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.3,
+   "got": "so I was thinking we could do the trip in June.",
+   "fallback": false,
+   "cuts": [
+    [
+     "restart",
+     "So I was thinking, hold on, let me, okay,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Hey, can you, Max, stop it, put that down! Sorry. Can you pick up some milk on the way home?",
+   "exact": false,
+   "over": 0,
+   "under": 9,
+   "sec": 0.48,
+   "got": "Hey, can you, Max, stop it, put that down! Sorry. Can you pick up some milk on the way home?",
+   "fallback": false,
+   "cuts": [
+    [
+     "filler",
+     "Max,",
+     false
+    ],
+    [
+     "filler",
+     "Sorry.",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Tell Anna that, wait, no, it was Maria who asked. Tell Maria the keys are under the mat.",
+   "exact": false,
+   "over": 0,
+   "under": 10,
+   "sec": 0.29,
+   "got": "Tell Anna that, wait, no, it was Maria who asked. Tell Maria the keys are under the mat.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "wait, no,",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "The total is forty dollars. No, sorry, forty five, I forgot the tip. Just send it whenever.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.31,
+   "got": "The total is forty five, I forgot the tip. Just send it whenever.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "forty dollars. No, sorry,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "I really liked your presentation. It was really good, I really liked it. Especially the part about the budget.",
+   "exact": false,
+   "over": 0,
+   "under": 4,
+   "sec": 0.47,
+   "got": "I really liked your presentation. It was really good, I really liked it. Especially the part about the budget.",
+   "fallback": false,
+   "cuts": [
+    [
+     "repetition",
+     "I really liked",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Okay so, um, what was I saying? Oh yeah, the flight is at noon, so we need to leave by nine.",
+   "exact": false,
+   "over": 0,
+   "under": 2,
+   "sec": 0.33,
+   "got": "Okay so, Oh yeah, the flight is at noon, so we need to leave by nine.",
+   "fallback": false,
+   "cuts": [
+    [
+     "filler",
+     "um,",
+     true
+    ],
+    [
+     "restart",
+     "what was I saying?",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "I'll call you after work. Actually, I'll call you during lunch instead, I have a thing after work.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.3,
+   "got": "I'll call you during lunch instead, I have a thing after work.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "I'll call you after work. Actually,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Let me think how to say this. Um. Okay. I can't make it on Saturday, I'm really sorry.",
+   "exact": false,
+   "over": 0,
+   "under": 7,
+   "sec": 0.46,
+   "got": "Let me think how to say this. Okay. I can't make it on Saturday, I'm really sorry.",
+   "fallback": false,
+   "cuts": [
+    [
+     "filler",
+     "Um.",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "We're staying at the Hilton downtown. Actually, forget that, ignore that last part. We're staying at my aunt's place.",
+   "exact": false,
+   "over": 0,
+   "under": 6,
+   "sec": 0.32,
+   "got": "We're staying at the Hilton downtown. We're staying at my aunt's place.",
+   "fallback": false,
+   "cuts": [
+    [
+     "command",
+     "Actually, forget that, ignore that last part.",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "The, the thing is, I don't think we, I don't think we have enough time.",
+   "exact": false,
+   "over": 0,
+   "under": 5,
+   "sec": 0.32,
+   "got": "The, the thing is, I don't think we, I don't think we have enough time.",
+   "fallback": false,
+   "cuts": [
+    [
+     "repetition",
+     "the",
+     false
+    ],
+    [
+     "repetition",
+     "I don't think we",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Yeah so basically, basically what happened is the car broke down.",
+   "exact": false,
+   "over": 0,
+   "under": 1,
+   "sec": 0.37,
+   "got": "Yeah so basically, basically what happened is the car broke down.",
+   "fallback": false,
+   "cuts": [
+    [
+     "repetition",
+     "basically",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "I'm going to the store. Do you need anything? I'm heading to the store now, so let me know if you need anything.",
+   "exact": false,
+   "over": 2,
+   "under": 5,
+   "sec": 0.34,
+   "got": "I'm going to the store. Do you need anything? so let me know if you need anything.",
+   "fallback": false,
+   "cuts": [
+    [
+     "restart",
+     "I'm heading to the store now,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "I got the tickets for Saturday, I mean, for Sunday, the Saturday ones were sold out.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.27,
+   "got": "I got the tickets for Sunday, the Saturday ones were sold out.",
+   "fallback": false,
+   "cuts": [
+    [
+     "correction",
+     "for Saturday, I mean,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "So we, so the plan is, okay, the plan is we leave at six.",
+   "exact": false,
+   "over": 0,
+   "under": 6,
+   "sec": 0.4,
+   "got": "So we, so the plan is, okay, the plan is we leave at six.",
+   "fallback": false,
+   "cuts": [
+    [
+     "repetition",
+     "we,",
+     false
+    ],
+    [
+     "filler",
+     "okay,",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Grab some wine, the red one is cheaper. | Never mind, scratch that, | just grab beer.",
+   "exact": false,
+   "over": 0,
+   "under": 12,
+   "sec": 0.28,
+   "got": "Grab some wine, the red one is cheaper. Never mind, scratch that, just grab beer.",
+   "fallback": false,
+   "cuts": [
+    [
+     "command",
+     "the red one is cheaper. Never mind, scratch that,",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "Sorry for the long message. Um, so, yeah. Anyway. The point is I need the car on Friday.",
+   "exact": false,
+   "over": 0,
+   "under": 2,
+   "sec": 0.37,
+   "got": "Sorry for the long message. so, yeah. The point is I need the car on Friday.",
+   "fallback": false,
+   "cuts": [
+    [
+     "filler",
+     "Sorry",
+     false
+    ],
+    [
+     "filler",
+     "Um,",
+     true
+    ],
+    [
+     "filler",
+     "yeah.",
+     false
+    ],
+    [
+     "restart",
+     "Anyway.",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "context",
+   "s": "I sent it to you on, um, on Tuesday? No, Wednesday. Yeah, Wednesday. Check your spam folder.",
+   "exact": false,
+   "over": 0,
+   "under": 2,
+   "sec": 0.49,
+   "got": "I sent it to you on Wednesday. Yeah, Wednesday. Check your spam folder.",
+   "fallback": false,
+   "cuts": [
+    [
+     "repetition",
+     "on,",
+     true
+    ],
+    [
+     "filler",
+     "um,",
+     true
+    ],
+    [
+     "repetition",
+     "on",
+     false
+    ],
+    [
+     "correction",
+     "Tuesday? No,",
+     true
+    ]
+   ]
+  },
+  {
+   "group": "keep",
+   "s": "I'm really, really proud of you.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.24,
+   "got": "I'm really, really proud of you.",
+   "fallback": false,
+   "cuts": [
+    [
+     "repetition",
+     "really",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "keep",
+   "s": "The dinner is on Friday at eight at Luigi's. Again, Friday at eight, don't be late.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.26,
+   "got": "The dinner is on Friday at eight at Luigi's. Again, Friday at eight, don't be late.",
+   "fallback": false,
+   "cuts": []
+  },
+  {
+   "group": "keep",
+   "s": "He told me no, wait for the manager, so we waited for an hour.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.23,
+   "got": "He told me no, wait for the manager, so we waited for an hour.",
+   "fallback": false,
+   "cuts": []
+  },
+  {
+   "group": "keep",
+   "s": "No, no, no, that's totally fine, don't worry about it.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.4,
+   "got": "No, no, no, that's totally fine, don't worry about it.",
+   "fallback": false,
+   "cuts": [
+    [
+     "repetition",
+     "No,",
+     false
+    ]
+   ]
+  },
+  {
+   "group": "keep",
+   "s": "We need red paint, blue paint and white paint for the fence.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.35,
+   "got": "We need red paint, blue paint and white paint for the fence.",
+   "fallback": false,
+   "cuts": []
+  },
+  {
+   "group": "keep",
+   "s": "Let me think about it and I'll get back to you tomorrow.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.21,
+   "got": "Let me think about it and I'll get back to you tomorrow.",
+   "fallback": false,
+   "cuts": []
+  },
+  {
+   "group": "keep",
+   "s": "I said it's Monday, not Tuesday, so please don't come on Tuesday.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.23,
+   "got": "I said it's Monday, not Tuesday, so please don't come on Tuesday.",
+   "fallback": false,
+   "cuts": []
+  },
+  {
+   "group": "keep",
+   "s": "Thank you so much. Seriously, thank you, it means a lot.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.22,
+   "got": "Thank you so much. Seriously, thank you, it means a lot.",
+   "fallback": false,
+   "cuts": []
+  },
+  {
+   "group": "keep",
+   "s": "First we go to the bank, then the post office, then we go home.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.37,
+   "got": "First we go to the bank, then the post office, then we go home.",
+   "fallback": false,
+   "cuts": []
+  },
+  {
+   "group": "keep",
+   "s": "Sorry, I can't talk right now, I'm in a meeting. Call you later.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.25,
+   "got": "Sorry, I can't talk right now, I'm in a meeting. Call you later.",
+   "fallback": false,
+   "cuts": []
+  },
+  {
+   "group": "keep",
+   "s": "My sister, the one who lives in Paris, is visiting next week.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.22,
+   "got": "My sister, the one who lives in Paris, is visiting next week.",
+   "fallback": false,
+   "cuts": []
+  },
+  {
+   "group": "keep",
+   "s": "It's cold, really cold, so bring a jacket.",
+   "exact": true,
+   "over": 0,
+   "under": 0,
+   "sec": 0.21,
+   "got": "It's cold, really cold, so bring a jacket.",
+   "fallback": false,
+   "cuts": []
+  }
+ ],
+ "sec": 20.2
+}

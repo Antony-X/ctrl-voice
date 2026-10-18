@@ -1,0 +1,133 @@
+{
+ "file": "so762_791_1186.wav",
+ "t": {
+  "upload": 679,
+  "checks": 902,
+  "replace": 0,
+  "render": 1542
+ },
+ "sid": "59b15e05",
+ "words": [
+  {
+   "w": "I",
+   "s": 0.682,
+   "e": 0.883,
+   "p": 0.85
+  },
+  {
+   "w": "tell",
+   "s": 0.923,
+   "e": 1.204,
+   "p": 0.96
+  },
+  {
+   "w": "you",
+   "s": 1.244,
+   "e": 1.605,
+   "p": 0.99
+  },
+  {
+   "w": "it",
+   "s": 1.685,
+   "e": 1.886,
+   "p": 0.78
+  },
+  {
+   "w": "is",
+   "s": 1.946,
+   "e": 2.387,
+   "p": 0.98
+  },
+  {
+   "w": "death.",
+   "s": 2.427,
+   "e": 2.648,
+   "p": 0.96
+  }
+ ],
+ "dur": 3.27,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   10,
+   10,
+   9.9,
+   10,
+   9.9,
+   9.6
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 3.27,
+  "ai": [],
+  "file": "out_9663d2.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "I tell you it is death.",
+ "label": {
+  "row": 791,
+  "speaker": "1186",
+  "age": 23,
+  "gender": "m",
+  "text": "I TELL YOU IT IS DEATH",
+  "dur": 3.27,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 5,
+    "w": "DEATH",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "TH",
+      "index": 2,
+      "pronounced-phone": "T"
+     }
+    ],
+    "phones": [
+     "D",
+     "EH0",
+     "TH"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "TELL",
+    "acc": 8
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "DEATH",
+    "acc": 3
+   }
+  ],
+  "id": "so762_791_1186"
+ }
+}

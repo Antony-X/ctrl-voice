@@ -1,0 +1,296 @@
+{
+ "file": "so762_2408_9631.wav",
+ "t": {
+  "upload": 628,
+  "checks": 1604,
+  "replace": 4021,
+  "render": 1309
+ },
+ "sid": "f10c45d5",
+ "words": [
+  {
+   "w": "I",
+   "s": 0.603,
+   "e": 0.805,
+   "p": 0.92
+  },
+  {
+   "w": "have",
+   "s": 0.845,
+   "e": 1.207,
+   "p": 0.88
+  },
+  {
+   "w": "better",
+   "s": 1.267,
+   "e": 1.569,
+   "p": 0.95
+  },
+  {
+   "w": "get",
+   "s": 1.629,
+   "e": 2.052,
+   "p": 0.95
+  },
+  {
+   "w": "out",
+   "s": 2.132,
+   "e": 2.474,
+   "p": 0.98
+  },
+  {
+   "w": "of",
+   "s": 2.555,
+   "e": 2.836,
+   "p": 1
+  },
+  {
+   "w": "her.",
+   "s": 2.877,
+   "e": 3.078,
+   "p": 0.96
+  }
+ ],
+ "dur": 3.661,
+ "clean": [],
+ "grammar": [
+  {
+   "i": 2,
+   "j": 2,
+   "old": "better",
+   "new": "had"
+  }
+ ],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   10,
+   9.4,
+   9.4,
+   9.9,
+   9.9,
+   10,
+   10
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "grammar",
+   "item": {
+    "i": 2,
+    "j": 2,
+    "old": "better",
+    "new": "had"
+   },
+   "on": true,
+   "op": {
+    "t0": 1.237,
+    "t1": 1.599,
+    "insert": "30739e28",
+    "i": 2,
+    "j": 2,
+    "old": "better",
+    "new": "had",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "grammar",
+    "after": null
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.319,
+     "heard": "I have had get out of her.",
+     "id": "30739e28",
+     "sec": 3.19
+    },
+    {
+     "engine": "f5",
+     "ok": false,
+     "sim": 0.5,
+     "heard": "I hope I get out of her.",
+     "id": "ab98738b",
+     "sec": 2.14
+    }
+   ],
+   "sec": 3.84
+  }
+ ],
+ "render": {
+  "dur": 4.07,
+  "ai": [
+   [
+    1.24,
+    2.01
+   ]
+  ],
+  "file": "out_7acef7.wav"
+ },
+ "ops": [
+  {
+   "id": "mvded1jx15",
+   "type": "replace",
+   "t0": 1.237,
+   "t1": 1.599,
+   "insert": "30739e28",
+   "i": 2,
+   "j": 2,
+   "old": "better",
+   "new": "had",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "grammar",
+   "after": null,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 1.237,
+   "t1": 1.599,
+   "insert": "30739e28"
+  }
+ ],
+ "finalText": "I have had get out of her.",
+ "afterCheck": {
+  "sid": "c1ab2c10",
+  "words": [
+   {
+    "w": "I",
+    "s": 0.602,
+    "e": 0.803,
+    "p": 0.83,
+    "x": null
+   },
+   {
+    "w": "have",
+    "s": 0.843,
+    "e": 1.244,
+    "p": 0.87,
+    "x": null
+   },
+   {
+    "w": "had",
+    "s": 1.284,
+    "e": 1.967,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "get",
+    "s": 2.027,
+    "e": 2.448,
+    "p": 0.53,
+    "x": null
+   },
+   {
+    "w": "out",
+    "s": 2.549,
+    "e": 2.89,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "of",
+    "s": 2.95,
+    "e": 3.231,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "her.",
+    "s": 3.291,
+    "e": 3.472,
+    "p": 0.95,
+    "x": null
+   }
+  ],
+  "dur": 4.073916666666666,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    10,
+    9.3,
+    9.1,
+    9.9,
+    9.9,
+    10,
+    9.9
+   ]
+  }
+ },
+ "label": {
+  "row": 2408,
+  "speaker": "9631",
+  "age": 26,
+  "gender": "m",
+  "text": "I HAVE BETTER GET OUT OF HERE.",
+  "dur": 3.66,
+  "sr": 16000,
+  "utt_acc": 3,
+  "utt_total": 3,
+  "fluency": 7,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 6,
+    "w": "HERE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "IH",
+      "index": 1,
+      "pronounced-phone": "ER"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "HH",
+     "IH",
+     "AH0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "HAVE",
+    "acc": 10
+   },
+   {
+    "w": "BETTER",
+    "acc": 8
+   },
+   {
+    "w": "GET",
+    "acc": 10
+   },
+   {
+    "w": "OUT",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "HERE",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2408_9631"
+ }
+}

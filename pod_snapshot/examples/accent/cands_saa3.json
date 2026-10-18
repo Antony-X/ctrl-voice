@@ -1,0 +1,1806 @@
+[
+ {
+  "id": "saa3_bengali2",
+  "source": "Speech Accent Archive",
+  "speaker": "bengali2",
+  "gender": null,
+  "l1": "Bengali",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese, and maybe a snack for her brother Bob.",
+  "end": "bob",
+  "seg": [
+   0.16,
+   10.72
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_bengali2.wav"
+  ],
+  "osf": "https://osf.io/download/6a0fa38e3bfa12ef766724e7/",
+  "dur": 10.56,
+  "acc_before": {
+   "top": "us",
+   "p_native": 1.0,
+   "p_us": 1.0,
+   "p_england": 0.0,
+   "top3": [
+    [
+     "us",
+     1.0
+    ],
+    [
+     "england",
+     0.0
+    ],
+    [
+     "canada",
+     0.0
+    ]
+   ],
+   "P": {
+    "england": 0.0,
+    "us": 1.0,
+    "canada": 0.0,
+    "australia": 0.0,
+    "indian": 0.0,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.244,
+    "us": 0.791,
+    "canada": 0.423,
+    "australia": 0.358,
+    "indian": 0.407,
+    "scotland": 0.289,
+    "ireland": 0.205,
+    "african": 0.171,
+    "malaysia": 0.158,
+    "newzealand": 0.13,
+    "southatlandtic": 0.216,
+    "bermuda": 0.245,
+    "philippines": 0.32,
+    "hongkong": 0.25,
+    "wales": 0.304,
+    "singapore": 0.226
+   }
+  },
+  "quality": {
+   "floor_db": -27.8,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese, and maybe a snack for her brother, Bob.",
+  "wer_before": 0.0,
+  "ceiling_sim": 0.858
+ },
+ {
+  "id": "saa3_bengali3",
+  "source": "Speech Accent Archive",
+  "speaker": "bengali3",
+  "gender": null,
+  "l1": "Bengali",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese.",
+  "end": "cheese",
+  "seg": [
+   0.18,
+   11.39
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_bengali3.wav"
+  ],
+  "osf": "https://osf.io/download/6a0fa3a5bbff4865e867235e/",
+  "dur": 11.21,
+  "acc_before": {
+   "top": "bermuda",
+   "p_native": 0.2283,
+   "p_us": 0.22360000014305115,
+   "p_england": 0.001500000013038516,
+   "top3": [
+    [
+     "bermuda",
+     0.7484999895095825
+    ],
+    [
+     "us",
+     0.22360000014305115
+    ],
+    [
+     "singapore",
+     0.011900000274181366
+    ]
+   ],
+   "P": {
+    "england": 0.001500000013038516,
+    "us": 0.22360000014305115,
+    "canada": 0.0005000000237487257,
+    "australia": 0.0027000000700354576,
+    "indian": 0.0003000000142492354,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0052999998442828655,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 9.999999747378752e-05,
+    "bermuda": 0.7484999895095825,
+    "philippines": 9.999999747378752e-05,
+    "hongkong": 0.005400000140070915,
+    "wales": 0.0,
+    "singapore": 0.011900000274181366
+   },
+   "cos": {
+    "england": 0.26,
+    "us": 0.427,
+    "canada": 0.223,
+    "australia": 0.28,
+    "indian": 0.21,
+    "scotland": 0.035,
+    "ireland": 0.069,
+    "african": 0.302,
+    "malaysia": 0.121,
+    "newzealand": 0.123,
+    "southatlandtic": 0.152,
+    "bermuda": 0.467,
+    "philippines": 0.175,
+    "hongkong": 0.303,
+    "wales": 0.125,
+    "singapore": 0.329
+   }
+  },
+  "quality": {
+   "floor_db": -37.7,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese,",
+  "wer_before": 0.0,
+  "ceiling_sim": 0.874
+ },
+ {
+  "id": "saa3_cantonese1",
+  "source": "Speech Accent Archive",
+  "speaker": "cantonese1",
+  "gender": null,
+  "l1": "Cantonese",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas.",
+  "end": "peas",
+  "seg": [
+   0.38,
+   9.24
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_cantonese1.wav"
+  ],
+  "osf": "https://osf.io/download/6a0fa4b0dfef3838eb671bf3/",
+  "dur": 8.86,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9977,
+   "p_us": 0.9966999888420105,
+   "p_england": 0.00039999998989515007,
+   "top3": [
+    [
+     "us",
+     0.9966999888420105
+    ],
+    [
+     "malaysia",
+     0.00139999995008111
+    ],
+    [
+     "singapore",
+     0.0006000000284984708
+    ]
+   ],
+   "P": {
+    "england": 0.00039999998989515007,
+    "us": 0.9966999888420105,
+    "canada": 0.0,
+    "australia": 0.0003000000142492354,
+    "indian": 0.0,
+    "scotland": 0.0003000000142492354,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.00139999995008111,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 9.999999747378752e-05,
+    "hongkong": 9.999999747378752e-05,
+    "wales": 0.0,
+    "singapore": 0.0006000000284984708
+   },
+   "cos": {
+    "england": 0.294,
+    "us": 0.554,
+    "canada": 0.022,
+    "australia": 0.281,
+    "indian": 0.068,
+    "scotland": 0.287,
+    "ireland": 0.162,
+    "african": 0.042,
+    "malaysia": 0.335,
+    "newzealand": 0.214,
+    "southatlandtic": 0.212,
+    "bermuda": 0.185,
+    "philippines": 0.226,
+    "hongkong": 0.257,
+    "wales": 0.113,
+    "singapore": 0.307
+   }
+  },
+  "quality": {
+   "floor_db": -37.0,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella, ask her to bring these things with her from the store. Six spoons of fresh snow peas,",
+  "wer_before": 0.0,
+  "ceiling_sim": 0.9
+ },
+ {
+  "id": "saa3_farsi1",
+  "source": "Speech Accent Archive",
+  "speaker": "farsi1",
+  "gender": null,
+  "l1": "Farsi",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese.",
+  "end": "cheese",
+  "seg": [
+   0.801,
+   12.48
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_farsi1.wav"
+  ],
+  "osf": "https://osf.io/download/6a0fe333f6c6b6e059417a69/",
+  "dur": 11.68,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9872,
+   "p_us": 0.8148000240325928,
+   "p_england": 0.0013000000035390258,
+   "top3": [
+    [
+     "us",
+     0.8148000240325928
+    ],
+    [
+     "australia",
+     0.17100000381469727
+    ],
+    [
+     "bermuda",
+     0.006000000052154064
+    ]
+   ],
+   "P": {
+    "england": 0.0013000000035390258,
+    "us": 0.8148000240325928,
+    "canada": 9.999999747378752e-05,
+    "australia": 0.17100000381469727,
+    "indian": 0.0,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0003000000142492354,
+    "malaysia": 0.004699999932199717,
+    "newzealand": 0.0,
+    "southatlandtic": 9.999999747378752e-05,
+    "bermuda": 0.006000000052154064,
+    "philippines": 0.0003000000142492354,
+    "hongkong": 0.0013000000035390258,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.319,
+    "us": 0.535,
+    "canada": 0.224,
+    "australia": 0.483,
+    "indian": 0.101,
+    "scotland": -0.082,
+    "ireland": -0.037,
+    "african": 0.273,
+    "malaysia": 0.363,
+    "newzealand": 0.126,
+    "southatlandtic": 0.231,
+    "bermuda": 0.371,
+    "philippines": 0.275,
+    "hongkong": 0.32,
+    "wales": 0.162,
+    "singapore": 0.184
+   }
+  },
+  "quality": {
+   "floor_db": -30.9,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella, ask her to bring these things with her from the store, six spoons of fresh snow peas, five thick slabs of blue cheese",
+  "wer_before": 0.0,
+  "ceiling_sim": 0.886
+ },
+ {
+  "id": "saa3_german3",
+  "source": "Speech Accent Archive",
+  "speaker": "german3",
+  "gender": null,
+  "l1": "German",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese, and maybe a snack for her brother Bob.",
+  "end": "bob",
+  "seg": [
+   0.28,
+   12.32
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_german3.wav"
+  ],
+  "osf": "https://osf.io/download/6a0fe71ea2b657d4fff927ac/",
+  "dur": 12.04,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9827,
+   "p_us": 0.9563000202178955,
+   "p_england": 0.020800000056624413,
+   "top3": [
+    [
+     "us",
+     0.9563000202178955
+    ],
+    [
+     "england",
+     0.020800000056624413
+    ],
+    [
+     "indian",
+     0.013399999588727951
+    ]
+   ],
+   "P": {
+    "england": 0.020800000056624413,
+    "us": 0.9563000202178955,
+    "canada": 0.0,
+    "australia": 0.004600000102072954,
+    "indian": 0.013399999588727951,
+    "scotland": 0.00019999999494757503,
+    "ireland": 9.999999747378752e-05,
+    "african": 9.999999747378752e-05,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0003000000142492354,
+    "philippines": 0.002899999963119626,
+    "hongkong": 0.00019999999494757503,
+    "wales": 0.000699999975040555,
+    "singapore": 0.0005000000237487257
+   },
+   "cos": {
+    "england": 0.343,
+    "us": 0.471,
+    "canada": 0.071,
+    "australia": 0.293,
+    "indian": 0.329,
+    "scotland": 0.179,
+    "ireland": 0.163,
+    "african": 0.151,
+    "malaysia": 0.11,
+    "newzealand": 0.086,
+    "southatlandtic": 0.132,
+    "bermuda": 0.2,
+    "philippines": 0.277,
+    "hongkong": 0.194,
+    "wales": 0.232,
+    "singapore": 0.216
+   }
+  },
+  "quality": {
+   "floor_db": -34.3,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella, ask her to bring these things with her from the store, six spoons of fresh snow peas, five thick slabs of blue cheese and maybe a snack for her brother Bob.",
+  "wer_before": 0.0,
+  "ceiling_sim": 0.914
+ },
+ {
+  "id": "saa3_hindi2",
+  "source": "Speech Accent Archive",
+  "speaker": "hindi2",
+  "gender": null,
+  "l1": "Hindi",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese.",
+  "end": "cheese",
+  "seg": [
+   0.02,
+   10.51
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_hindi2.wav"
+  ],
+  "osf": "https://osf.io/download/6a0fe9852308112b83f92894/",
+  "dur": 10.49,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9996,
+   "p_us": 0.9959999918937683,
+   "p_england": 0.0,
+   "top3": [
+    [
+     "us",
+     0.9959999918937683
+    ],
+    [
+     "australia",
+     0.003599999938160181
+    ],
+    [
+     "bermuda",
+     0.00019999999494757503
+    ]
+   ],
+   "P": {
+    "england": 0.0,
+    "us": 0.9959999918937683,
+    "canada": 0.0,
+    "australia": 0.003599999938160181,
+    "indian": 9.999999747378752e-05,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.00019999999494757503,
+    "philippines": 0.0,
+    "hongkong": 0.0,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.307,
+    "us": 0.681,
+    "canada": 0.324,
+    "australia": 0.493,
+    "indian": 0.366,
+    "scotland": 0.12,
+    "ireland": 0.132,
+    "african": 0.237,
+    "malaysia": 0.238,
+    "newzealand": 0.047,
+    "southatlandtic": 0.28,
+    "bermuda": 0.399,
+    "philippines": 0.325,
+    "hongkong": 0.272,
+    "wales": 0.326,
+    "singapore": 0.258
+   }
+  },
+  "quality": {
+   "floor_db": -80.9,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, plastic slabs of blue cheese,",
+  "wer_before": 0.077,
+  "ceiling_sim": 0.845
+ },
+ {
+  "id": "saa3_italian3",
+  "source": "Speech Accent Archive",
+  "speaker": "italian3",
+  "gender": null,
+  "l1": "Italian",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese, and maybe a snack for her brother Bob.",
+  "end": "bob",
+  "seg": [
+   0.38,
+   11.77
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_italian3.wav"
+  ],
+  "osf": "https://osf.io/download/6a0feb72c11001e42eabab72/",
+  "dur": 11.39,
+  "acc_before": {
+   "top": "england",
+   "p_native": 1.0,
+   "p_us": 0.008200000040233135,
+   "p_england": 0.9918000102043152,
+   "top3": [
+    [
+     "england",
+     0.9918000102043152
+    ],
+    [
+     "us",
+     0.008200000040233135
+    ],
+    [
+     "canada",
+     0.0
+    ]
+   ],
+   "P": {
+    "england": 0.9918000102043152,
+    "us": 0.008200000040233135,
+    "canada": 0.0,
+    "australia": 0.0,
+    "indian": 0.0,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.728,
+    "us": 0.568,
+    "canada": 0.132,
+    "australia": 0.248,
+    "indian": 0.185,
+    "scotland": 0.242,
+    "ireland": 0.151,
+    "african": 0.255,
+    "malaysia": 0.103,
+    "newzealand": 0.229,
+    "southatlandtic": 0.323,
+    "bermuda": 0.096,
+    "philippines": 0.19,
+    "hongkong": 0.351,
+    "wales": 0.261,
+    "singapore": 0.302
+   }
+  },
+  "quality": {
+   "floor_db": -27.3,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese and maybe a snack for her brother Bob.",
+  "wer_before": 0.0,
+  "ceiling_sim": 0.873
+ },
+ {
+  "id": "saa3_japanese3",
+  "source": "Speech Accent Archive",
+  "speaker": "japanese3",
+  "gender": null,
+  "l1": "Japanese",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas.",
+  "end": "peas",
+  "seg": [
+   0.5,
+   11.81
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_japanese3.wav"
+  ],
+  "osf": "https://osf.io/download/6a7b3e6f196f64ae7512d36b/",
+  "dur": 11.31,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.8023,
+   "p_us": 0.6837000250816345,
+   "p_england": 0.11829999834299088,
+   "top3": [
+    [
+     "us",
+     0.6837000250816345
+    ],
+    [
+     "england",
+     0.11829999834299088
+    ],
+    [
+     "bermuda",
+     0.11509999632835388
+    ]
+   ],
+   "P": {
+    "england": 0.11829999834299088,
+    "us": 0.6837000250816345,
+    "canada": 0.0,
+    "australia": 0.0003000000142492354,
+    "indian": 0.0019000000320374966,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0003000000142492354,
+    "malaysia": 0.03139999881386757,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0005000000237487257,
+    "bermuda": 0.11509999632835388,
+    "philippines": 0.0005000000237487257,
+    "hongkong": 0.007600000128149986,
+    "wales": 0.0,
+    "singapore": 0.040300000458955765
+   },
+   "cos": {
+    "england": 0.397,
+    "us": 0.455,
+    "canada": -0.085,
+    "australia": 0.202,
+    "indian": 0.26,
+    "scotland": 0.08,
+    "ireland": -0.006,
+    "african": 0.201,
+    "malaysia": 0.353,
+    "newzealand": 0.033,
+    "southatlandtic": 0.213,
+    "bermuda": 0.396,
+    "philippines": 0.215,
+    "hongkong": 0.305,
+    "wales": 0.092,
+    "singapore": 0.361
+   }
+  },
+  "quality": {
+   "floor_db": -41.5,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas,",
+  "wer_before": 0.0,
+  "ceiling_sim": 0.938
+ },
+ {
+  "id": "saa3_mandarin1",
+  "source": "Speech Accent Archive",
+  "speaker": "mandarin1",
+  "gender": null,
+  "l1": "Mandarin",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese.",
+  "end": "cheese",
+  "seg": [
+   0.88,
+   12.95
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_mandarin1.wav"
+  ],
+  "osf": "https://osf.io/download/t69m8/",
+  "dur": 12.07,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9899,
+   "p_us": 0.9872999787330627,
+   "p_england": 0.0026000000070780516,
+   "top3": [
+    [
+     "us",
+     0.9872999787330627
+    ],
+    [
+     "bermuda",
+     0.00860000029206276
+    ],
+    [
+     "england",
+     0.0026000000070780516
+    ]
+   ],
+   "P": {
+    "england": 0.0026000000070780516,
+    "us": 0.9872999787330627,
+    "canada": 0.0,
+    "australia": 0.0,
+    "indian": 0.00039999998989515007,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.00860000029206276,
+    "philippines": 9.999999747378752e-05,
+    "hongkong": 9.999999747378752e-05,
+    "wales": 0.0,
+    "singapore": 0.0008999999845400453
+   },
+   "cos": {
+    "england": 0.443,
+    "us": 0.641,
+    "canada": 0.144,
+    "australia": 0.226,
+    "indian": 0.38,
+    "scotland": 0.078,
+    "ireland": 0.215,
+    "african": 0.195,
+    "malaysia": 0.306,
+    "newzealand": 0.135,
+    "southatlandtic": 0.224,
+    "bermuda": 0.483,
+    "philippines": 0.338,
+    "hongkong": 0.328,
+    "wales": 0.227,
+    "singapore": 0.407
+   }
+  },
+  "quality": {
+   "floor_db": -29.0,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella, ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese,",
+  "wer_before": 0.0,
+  "ceiling_sim": 0.841
+ },
+ {
+  "id": "saa3_mandarin2",
+  "source": "Speech Accent Archive",
+  "speaker": "mandarin2",
+  "gender": null,
+  "l1": "Mandarin",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas.",
+  "end": "peas",
+  "seg": [
+   0.52,
+   11.28
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_mandarin2.wav"
+  ],
+  "osf": "https://osf.io/download/6a7b5dae34bc5b78cb12d2b1/",
+  "dur": 10.76,
+  "acc_before": {
+   "top": "australia",
+   "p_native": 0.9893,
+   "p_us": 0.07699999958276749,
+   "p_england": 0.3019999861717224,
+   "top3": [
+    [
+     "australia",
+     0.6100000143051147
+    ],
+    [
+     "england",
+     0.3019999861717224
+    ],
+    [
+     "us",
+     0.07699999958276749
+    ]
+   ],
+   "P": {
+    "england": 0.3019999861717224,
+    "us": 0.07699999958276749,
+    "canada": 0.0,
+    "australia": 0.6100000143051147,
+    "indian": 0.0003000000142492354,
+    "scotland": 9.999999747378752e-05,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.006300000008195639,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.000699999975040555,
+    "philippines": 0.0007999999797903001,
+    "hongkong": 0.0017999999690800905,
+    "wales": 0.00019999999494757503,
+    "singapore": 0.000699999975040555
+   },
+   "cos": {
+    "england": 0.451,
+    "us": 0.406,
+    "canada": 0.022,
+    "australia": 0.475,
+    "indian": 0.22,
+    "scotland": 0.197,
+    "ireland": 0.106,
+    "african": 0.14,
+    "malaysia": 0.322,
+    "newzealand": -0.052,
+    "southatlandtic": 0.118,
+    "bermuda": 0.251,
+    "philippines": 0.252,
+    "hongkong": 0.28,
+    "wales": 0.201,
+    "singapore": 0.251
+   }
+  },
+  "quality": {
+   "floor_db": -26.8,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas,",
+  "wer_before": 0.0,
+  "ceiling_sim": 0.91
+ },
+ {
+  "id": "saa3_polish2",
+  "source": "Speech Accent Archive",
+  "speaker": "polish2",
+  "gender": null,
+  "l1": "Polish",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas.",
+  "end": "peas",
+  "seg": [
+   0.26,
+   9.17
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_polish2.wav"
+  ],
+  "osf": "https://osf.io/download/6a7b64734fbcd9ee56692bdf/",
+  "dur": 8.91,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9975,
+   "p_us": 0.9966999888420105,
+   "p_england": 0.000699999975040555,
+   "top3": [
+    [
+     "us",
+     0.9966999888420105
+    ],
+    [
+     "philippines",
+     0.0017000000225380063
+    ],
+    [
+     "england",
+     0.000699999975040555
+    ]
+   ],
+   "P": {
+    "england": 0.000699999975040555,
+    "us": 0.9966999888420105,
+    "canada": 0.0,
+    "australia": 0.0,
+    "indian": 0.0,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0005000000237487257,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0017000000225380063,
+    "hongkong": 0.0,
+    "wales": 9.999999747378752e-05,
+    "singapore": 0.00019999999494757503
+   },
+   "cos": {
+    "england": 0.357,
+    "us": 0.598,
+    "canada": 0.036,
+    "australia": 0.241,
+    "indian": 0.246,
+    "scotland": 0.237,
+    "ireland": 0.124,
+    "african": 0.341,
+    "malaysia": 0.169,
+    "newzealand": 0.104,
+    "southatlandtic": 0.113,
+    "bermuda": 0.187,
+    "philippines": 0.386,
+    "hongkong": 0.25,
+    "wales": 0.283,
+    "singapore": 0.306
+   }
+  },
+  "quality": {
+   "floor_db": -27.4,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella. Ask her to bring those things with her from the store. Six spoons of fresh snow peas,",
+  "wer_before": 0.05,
+  "ceiling_sim": 0.862
+ },
+ {
+  "id": "saa3_polish3",
+  "source": "Speech Accent Archive",
+  "speaker": "polish3",
+  "gender": null,
+  "l1": "Polish",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese.",
+  "end": "cheese",
+  "seg": [
+   0.14,
+   11.89
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_polish3.wav"
+  ],
+  "osf": "https://osf.io/download/6a7b64a8f9c9b68d29692d50/",
+  "dur": 11.75,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9891,
+   "p_us": 0.9884999990463257,
+   "p_england": 0.0,
+   "top3": [
+    [
+     "us",
+     0.9884999990463257
+    ],
+    [
+     "philippines",
+     0.010400000028312206
+    ],
+    [
+     "australia",
+     0.0006000000284984708
+    ]
+   ],
+   "P": {
+    "england": 0.0,
+    "us": 0.9884999990463257,
+    "canada": 0.0,
+    "australia": 0.0006000000284984708,
+    "indian": 0.0,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.010400000028312206,
+    "hongkong": 0.0,
+    "wales": 0.0,
+    "singapore": 0.0003000000142492354
+   },
+   "cos": {
+    "england": 0.194,
+    "us": 0.625,
+    "canada": 0.16,
+    "australia": 0.379,
+    "indian": 0.138,
+    "scotland": 0.229,
+    "ireland": 0.106,
+    "african": 0.292,
+    "malaysia": 0.289,
+    "newzealand": 0.105,
+    "southatlandtic": 0.094,
+    "bermuda": 0.221,
+    "philippines": 0.473,
+    "hongkong": 0.273,
+    "wales": 0.184,
+    "singapore": 0.36
+   }
+  },
+  "quality": {
+   "floor_db": -24.9,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese,",
+  "wer_before": 0.0,
+  "ceiling_sim": 0.917
+ },
+ {
+  "id": "saa3_portuguese2",
+  "source": "Speech Accent Archive",
+  "speaker": "portuguese2",
+  "gender": null,
+  "l1": "Portuguese",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese.",
+  "end": "cheese",
+  "seg": [
+   0.501,
+   10.38
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_portuguese2.wav"
+  ],
+  "osf": "https://osf.io/download/6a7b654be0944ee3b36a5a0e/",
+  "dur": 9.88,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9985,
+   "p_us": 0.9959999918937683,
+   "p_england": 0.0,
+   "top3": [
+    [
+     "us",
+     0.9959999918937683
+    ],
+    [
+     "australia",
+     0.0024999999441206455
+    ],
+    [
+     "philippines",
+     0.000699999975040555
+    ]
+   ],
+   "P": {
+    "england": 0.0,
+    "us": 0.9959999918937683,
+    "canada": 0.0,
+    "australia": 0.0024999999441206455,
+    "indian": 9.999999747378752e-05,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 9.999999747378752e-05,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.00039999998989515007,
+    "philippines": 0.000699999975040555,
+    "hongkong": 9.999999747378752e-05,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.179,
+    "us": 0.531,
+    "canada": 0.028,
+    "australia": 0.332,
+    "indian": 0.204,
+    "scotland": 0.131,
+    "ireland": 0.152,
+    "african": 0.217,
+    "malaysia": 0.183,
+    "newzealand": -0.015,
+    "southatlandtic": 0.125,
+    "bermuda": 0.272,
+    "philippines": 0.288,
+    "hongkong": 0.227,
+    "wales": 0.142,
+    "singapore": 0.193
+   }
+  },
+  "quality": {
+   "floor_db": -38.6,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese,",
+  "wer_before": 0.0,
+  "ceiling_sim": 0.875
+ },
+ {
+  "id": "saa3_russian1",
+  "source": "Speech Accent Archive",
+  "speaker": "russian1",
+  "gender": null,
+  "l1": "Russian",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas.",
+  "end": "peas",
+  "seg": [
+   0.0,
+   9.62
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_russian1.wav"
+  ],
+  "osf": "https://osf.io/download/6a7b674e7b56b970f96a59a3/",
+  "dur": 9.62,
+  "acc_before": {
+   "top": "england",
+   "p_native": 0.9997,
+   "p_us": 0.0333000011742115,
+   "p_england": 0.9646000266075134,
+   "top3": [
+    [
+     "england",
+     0.9646000266075134
+    ],
+    [
+     "us",
+     0.0333000011742115
+    ],
+    [
+     "ireland",
+     0.0010999999940395355
+    ]
+   ],
+   "P": {
+    "england": 0.9646000266075134,
+    "us": 0.0333000011742115,
+    "canada": 0.0,
+    "australia": 9.999999747378752e-05,
+    "indian": 9.999999747378752e-05,
+    "scotland": 0.0,
+    "ireland": 0.0010999999940395355,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.00019999999494757503,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 9.999999747378752e-05,
+    "wales": 0.00039999998989515007,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.533,
+    "us": 0.421,
+    "canada": 0.101,
+    "australia": 0.213,
+    "indian": 0.204,
+    "scotland": 0.168,
+    "ireland": 0.308,
+    "african": 0.06,
+    "malaysia": 0.136,
+    "newzealand": 0.241,
+    "southatlandtic": 0.195,
+    "bermuda": 0.184,
+    "philippines": 0.144,
+    "hongkong": 0.239,
+    "wales": 0.272,
+    "singapore": 0.196
+   }
+  },
+  "quality": {
+   "floor_db": -33.1,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella, ask her to bring these things with her from the store, six spoons of fresh snow peas, five",
+  "wer_before": 0.05,
+  "ceiling_sim": 0.893
+ },
+ {
+  "id": "saa3_russian2",
+  "source": "Speech Accent Archive",
+  "speaker": "russian2",
+  "gender": null,
+  "l1": "Russian",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas.",
+  "end": "peas",
+  "seg": [
+   0.461,
+   10.01
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_russian2.wav"
+  ],
+  "osf": "https://osf.io/download/6a7b6788f9af04922912d36a/",
+  "dur": 9.55,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9991,
+   "p_us": 0.8485000133514404,
+   "p_england": 0.0007999999797903001,
+   "top3": [
+    [
+     "us",
+     0.8485000133514404
+    ],
+    [
+     "australia",
+     0.12080000340938568
+    ],
+    [
+     "scotland",
+     0.016100000590085983
+    ]
+   ],
+   "P": {
+    "england": 0.0007999999797903001,
+    "us": 0.8485000133514404,
+    "canada": 0.012900000438094139,
+    "australia": 0.12080000340938568,
+    "indian": 9.999999747378752e-05,
+    "scotland": 0.016100000590085983,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 9.999999747378752e-05,
+    "newzealand": 0.0,
+    "southatlandtic": 9.999999747378752e-05,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0005000000237487257,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.307,
+    "us": 0.54,
+    "canada": 0.401,
+    "australia": 0.475,
+    "indian": 0.249,
+    "scotland": 0.408,
+    "ireland": 0.11,
+    "african": 0.196,
+    "malaysia": 0.222,
+    "newzealand": 0.039,
+    "southatlandtic": 0.247,
+    "bermuda": 0.205,
+    "philippines": 0.172,
+    "hongkong": 0.292,
+    "wales": 0.188,
+    "singapore": 0.158
+   }
+  },
+  "quality": {
+   "floor_db": -28.5,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella, ask her to bring these things with her from the store, six spoons of fresh snow peas,",
+  "wer_before": 0.0,
+  "ceiling_sim": 0.844
+ },
+ {
+  "id": "saa3_russian3",
+  "source": "Speech Accent Archive",
+  "speaker": "russian3",
+  "gender": null,
+  "l1": "Russian",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese, and maybe a snack for her brother Bob.",
+  "end": "bob",
+  "seg": [
+   0.22,
+   12.5
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_russian3.wav"
+  ],
+  "osf": "https://osf.io/download/6a7b67c45527c9da3212d3da/",
+  "dur": 12.28,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9954,
+   "p_us": 0.995199978351593,
+   "p_england": 9.999999747378752e-05,
+   "top3": [
+    [
+     "us",
+     0.995199978351593
+    ],
+    [
+     "philippines",
+     0.002300000051036477
+    ],
+    [
+     "indian",
+     0.0008999999845400453
+    ]
+   ],
+   "P": {
+    "england": 9.999999747378752e-05,
+    "us": 0.995199978351593,
+    "canada": 0.0,
+    "australia": 9.999999747378752e-05,
+    "indian": 0.0008999999845400453,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0007999999797903001,
+    "philippines": 0.002300000051036477,
+    "hongkong": 0.00039999998989515007,
+    "wales": 0.0,
+    "singapore": 0.00019999999494757503
+   },
+   "cos": {
+    "england": 0.282,
+    "us": 0.581,
+    "canada": 0.166,
+    "australia": 0.261,
+    "indian": 0.346,
+    "scotland": 0.15,
+    "ireland": 0.021,
+    "african": 0.19,
+    "malaysia": 0.238,
+    "newzealand": 0.039,
+    "southatlandtic": 0.133,
+    "bermuda": 0.343,
+    "philippines": 0.379,
+    "hongkong": 0.318,
+    "wales": 0.223,
+    "singapore": 0.293
+   }
+  },
+  "quality": {
+   "floor_db": -22.2,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese and maybe a snack for her brother Bob. We",
+  "wer_before": 0.029,
+  "ceiling_sim": 0.914
+ },
+ {
+  "id": "saa3_spanish1",
+  "source": "Speech Accent Archive",
+  "speaker": "spanish1",
+  "gender": null,
+  "l1": "Spanish",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas.",
+  "end": "peas",
+  "seg": [
+   0.1,
+   10.73
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_spanish1.wav"
+  ],
+  "osf": "https://osf.io/download/6a7b6ac4321754b6d7692b55/",
+  "dur": 10.63,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9994,
+   "p_us": 0.5913000106811523,
+   "p_england": 0.3366999924182892,
+   "top3": [
+    [
+     "us",
+     0.5913000106811523
+    ],
+    [
+     "england",
+     0.3366999924182892
+    ],
+    [
+     "canada",
+     0.03909999877214432
+    ]
+   ],
+   "P": {
+    "england": 0.3366999924182892,
+    "us": 0.5913000106811523,
+    "canada": 0.03909999877214432,
+    "australia": 0.03200000151991844,
+    "indian": 0.0,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 9.999999747378752e-05,
+    "malaysia": 9.999999747378752e-05,
+    "newzealand": 0.0,
+    "southatlandtic": 9.999999747378752e-05,
+    "bermuda": 0.0,
+    "philippines": 0.00019999999494757503,
+    "hongkong": 9.999999747378752e-05,
+    "wales": 0.0003000000142492354,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.527,
+    "us": 0.546,
+    "canada": 0.455,
+    "australia": 0.448,
+    "indian": 0.186,
+    "scotland": 0.098,
+    "ireland": 0.211,
+    "african": 0.257,
+    "malaysia": 0.25,
+    "newzealand": 0.157,
+    "southatlandtic": 0.24,
+    "bermuda": 0.212,
+    "philippines": 0.279,
+    "hongkong": 0.251,
+    "wales": 0.288,
+    "singapore": 0.162
+   }
+  },
+  "quality": {
+   "floor_db": -28.1,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella, ask her to bring these things with her from the store, six spoons or fresh snow peas,",
+  "wer_before": 0.05,
+  "ceiling_sim": 0.887
+ },
+ {
+  "id": "saa3_thai3",
+  "source": "Speech Accent Archive",
+  "speaker": "thai3",
+  "gender": null,
+  "l1": "Thai",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese.",
+  "end": "cheese",
+  "seg": [
+   0.32,
+   10.79
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_thai3.wav"
+  ],
+  "osf": "https://osf.io/download/6a7bb6adf68cfcf282e1ca47/",
+  "dur": 10.47,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9999,
+   "p_us": 0.9998999834060669,
+   "p_england": 0.0,
+   "top3": [
+    [
+     "us",
+     0.9998999834060669
+    ],
+    [
+     "england",
+     0.0
+    ],
+    [
+     "canada",
+     0.0
+    ]
+   ],
+   "P": {
+    "england": 0.0,
+    "us": 0.9998999834060669,
+    "canada": 0.0,
+    "australia": 0.0,
+    "indian": 0.0,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.13,
+    "us": 0.735,
+    "canada": 0.332,
+    "australia": 0.281,
+    "indian": 0.313,
+    "scotland": 0.23,
+    "ireland": 0.191,
+    "african": 0.253,
+    "malaysia": 0.24,
+    "newzealand": 0.128,
+    "southatlandtic": 0.173,
+    "bermuda": 0.207,
+    "philippines": 0.386,
+    "hongkong": 0.217,
+    "wales": 0.321,
+    "singapore": 0.342
+   }
+  },
+  "quality": {
+   "floor_db": -18.6,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slaps of blue cheese,",
+  "wer_before": 0.038,
+  "ceiling_sim": 0.905
+ },
+ {
+  "id": "saa3_turkish1",
+  "source": "Speech Accent Archive",
+  "speaker": "turkish1",
+  "gender": null,
+  "l1": "Turkish",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas.",
+  "end": "peas",
+  "seg": [
+   0.901,
+   10.6
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_turkish1.wav"
+  ],
+  "osf": "https://osf.io/download/6a7bb71e524b51b20eb1f473/",
+  "dur": 9.7,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9929,
+   "p_us": 0.9923999905586243,
+   "p_england": 0.00039999998989515007,
+   "top3": [
+    [
+     "us",
+     0.9923999905586243
+    ],
+    [
+     "bermuda",
+     0.00279999990016222
+    ],
+    [
+     "indian",
+     0.0024999999441206455
+    ]
+   ],
+   "P": {
+    "england": 0.00039999998989515007,
+    "us": 0.9923999905586243,
+    "canada": 0.0,
+    "australia": 0.0,
+    "indian": 0.0024999999441206455,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.000699999975040555,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.00279999990016222,
+    "philippines": 9.999999747378752e-05,
+    "hongkong": 9.999999747378752e-05,
+    "wales": 9.999999747378752e-05,
+    "singapore": 0.000699999975040555
+   },
+   "cos": {
+    "england": 0.277,
+    "us": 0.535,
+    "canada": -0.076,
+    "australia": 0.19,
+    "indian": 0.336,
+    "scotland": 0.142,
+    "ireland": 0.075,
+    "african": 0.152,
+    "malaysia": 0.295,
+    "newzealand": 0.082,
+    "southatlandtic": 0.143,
+    "bermuda": 0.34,
+    "philippines": 0.242,
+    "hongkong": 0.237,
+    "wales": 0.238,
+    "singapore": 0.291
+   }
+  },
+  "quality": {
+   "floor_db": -34.1,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas,",
+  "wer_before": 0.0,
+  "ceiling_sim": 0.883
+ },
+ {
+  "id": "saa3_turkish2",
+  "source": "Speech Accent Archive",
+  "speaker": "turkish2",
+  "gender": null,
+  "l1": "Turkish",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas.",
+  "end": "peas",
+  "seg": [
+   1.121,
+   12.29
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_turkish2.wav"
+  ],
+  "osf": "https://osf.io/download/6a7bb74da8cdfab015e1ca3e/",
+  "dur": 11.17,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9996,
+   "p_us": 0.9986000061035156,
+   "p_england": 0.0010000000474974513,
+   "top3": [
+    [
+     "us",
+     0.9986000061035156
+    ],
+    [
+     "england",
+     0.0010000000474974513
+    ],
+    [
+     "indian",
+     0.0003000000142492354
+    ]
+   ],
+   "P": {
+    "england": 0.0010000000474974513,
+    "us": 0.9986000061035156,
+    "canada": 0.0,
+    "australia": 0.0,
+    "indian": 0.0003000000142492354,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.367,
+    "us": 0.598,
+    "canada": 0.228,
+    "australia": 0.22,
+    "indian": 0.324,
+    "scotland": 0.247,
+    "ireland": 0.109,
+    "african": 0.259,
+    "malaysia": 0.224,
+    "newzealand": 0.194,
+    "southatlandtic": 0.2,
+    "bermuda": 0.139,
+    "philippines": 0.211,
+    "hongkong": 0.219,
+    "wales": 0.206,
+    "singapore": 0.161
+   }
+  },
+  "quality": {
+   "floor_db": -37.6,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas,",
+  "wer_before": 0.0,
+  "ceiling_sim": 0.894
+ },
+ {
+  "id": "saa3_turkish3",
+  "source": "Speech Accent Archive",
+  "speaker": "turkish3",
+  "gender": null,
+  "l1": "Turkish",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese.",
+  "end": "cheese",
+  "seg": [
+   0.22,
+   12.12
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_turkish3.wav"
+  ],
+  "osf": "https://osf.io/download/6a7bb77c7d2b833cb9241f6f/",
+  "dur": 11.9,
+  "acc_before": {
+   "top": "us",
+   "p_native": 0.9936,
+   "p_us": 0.7484999895095825,
+   "p_england": 0.009600000455975533,
+   "top3": [
+    [
+     "us",
+     0.7484999895095825
+    ],
+    [
+     "canada",
+     0.23520000278949738
+    ],
+    [
+     "england",
+     0.009600000455975533
+    ]
+   ],
+   "P": {
+    "england": 0.009600000455975533,
+    "us": 0.7484999895095825,
+    "canada": 0.23520000278949738,
+    "australia": 0.00019999999494757503,
+    "indian": 0.0,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.005499999970197678,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 9.999999747378752e-05,
+    "bermuda": 0.0,
+    "philippines": 0.0006000000284984708,
+    "hongkong": 0.0,
+    "wales": 9.999999747378752e-05,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.354,
+    "us": 0.499,
+    "canada": 0.461,
+    "australia": 0.231,
+    "indian": 0.152,
+    "scotland": 0.105,
+    "ireland": 0.074,
+    "african": 0.336,
+    "malaysia": 0.153,
+    "newzealand": 0.173,
+    "southatlandtic": 0.2,
+    "bermuda": 0.018,
+    "philippines": 0.264,
+    "hongkong": 0.174,
+    "wales": 0.19,
+    "singapore": 0.047
+   }
+  },
+  "quality": {
+   "floor_db": -24.6,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella, ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese",
+  "wer_before": 0.0,
+  "ceiling_sim": 0.896
+ },
+ {
+  "id": "saa3_vietnamese3",
+  "source": "Speech Accent Archive",
+  "speaker": "vietnamese3",
+  "gender": null,
+  "l1": "Vietnamese",
+  "text_ref": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas.",
+  "end": "peas",
+  "seg": [
+   0.581,
+   10.39
+  ],
+  "fillers": 0,
+  "held": [
+   "/workspace/examples/accent/cands/held/saa3_vietnamese3.wav"
+  ],
+  "osf": "https://osf.io/download/6a7bf0c33b382510abb1f51f/",
+  "dur": 9.81,
+  "acc_before": {
+   "top": "bermuda",
+   "p_native": 0.2866,
+   "p_us": 0.28439998626708984,
+   "p_england": 0.0,
+   "top3": [
+    [
+     "bermuda",
+     0.5404000282287598
+    ],
+    [
+     "us",
+     0.28439998626708984
+    ],
+    [
+     "philippines",
+     0.08569999784231186
+    ]
+   ],
+   "P": {
+    "england": 0.0,
+    "us": 0.28439998626708984,
+    "canada": 9.999999747378752e-05,
+    "australia": 0.0019000000320374966,
+    "indian": 0.0008999999845400453,
+    "scotland": 9.999999747378752e-05,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.004600000102072954,
+    "newzealand": 0.0,
+    "southatlandtic": 9.999999747378752e-05,
+    "bermuda": 0.5404000282287598,
+    "philippines": 0.08569999784231186,
+    "hongkong": 0.07930000126361847,
+    "wales": 9.999999747378752e-05,
+    "singapore": 0.002400000113993883
+   },
+   "cos": {
+    "england": -0.02,
+    "us": 0.39,
+    "canada": 0.103,
+    "australia": 0.222,
+    "indian": 0.197,
+    "scotland": 0.12,
+    "ireland": 0.024,
+    "african": 0.099,
+    "malaysia": 0.252,
+    "newzealand": -0.148,
+    "southatlandtic": 0.123,
+    "bermuda": 0.411,
+    "philippines": 0.35,
+    "hongkong": 0.347,
+    "wales": 0.137,
+    "singapore": 0.231
+   }
+  },
+  "quality": {
+   "floor_db": -24.3,
+   "clip": 0.0
+  },
+  "asr_before": "Please call Stella, ask her to print these things with her firm store, six spoons of fresh snow peas, five",
+  "wer_before": 0.2,
+  "ceiling_sim": 0.871
+ }
+]

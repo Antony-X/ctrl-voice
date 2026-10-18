@@ -1,0 +1,318 @@
+{
+ "file": "so762_367_0457.wav",
+ "t": {
+  "upload": 796,
+  "checks": 1095,
+  "replace": 3780,
+  "render": 1320
+ },
+ "sid": "8516883b",
+ "words": [
+  {
+   "w": "Thanks",
+   "s": 0.563,
+   "e": 0.864,
+   "p": 0.62
+  },
+  {
+   "w": "God,",
+   "s": 0.904,
+   "e": 1.447,
+   "p": 0.62
+  },
+  {
+   "w": "I",
+   "s": 1.527,
+   "e": 1.789,
+   "p": 0.98
+  },
+  {
+   "w": "get",
+   "s": 1.829,
+   "e": 2.07,
+   "p": 0.92
+  },
+  {
+   "w": "to",
+   "s": 2.11,
+   "e": 2.331,
+   "p": 0.98
+  },
+  {
+   "w": "sleep",
+   "s": 2.432,
+   "e": 2.814,
+   "p": 1
+  },
+  {
+   "w": "in",
+   "s": 2.874,
+   "e": 2.995,
+   "p": 0.86
+  },
+  {
+   "w": "tomorrow.",
+   "s": 3.015,
+   "e": 3.497,
+   "p": 0.94
+  }
+ ],
+ "dur": 4.08,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 0,
+    "word": "Thanks",
+    "acc": 6.6,
+    "canon": "θæŋks",
+    "heard": "sɪnsk",
+    "sub": "∅",
+    "phone": "s"
+   }
+  ],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   6.6,
+   6.8,
+   10,
+   9.9,
+   9.9,
+   9.9,
+   10,
+   9.3
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 0,
+    "word": "Thanks",
+    "acc": 6.6,
+    "canon": "θæŋks",
+    "heard": "sɪnsk",
+    "sub": "∅",
+    "phone": "s"
+   },
+   "on": true,
+   "op": {
+    "t0": 0.523,
+    "t1": 0.884,
+    "insert": "807ff971",
+    "i": 0,
+    "j": 0,
+    "old": "Thanks",
+    "new": "Thanks",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 9.73
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.473,
+     "heard": "Thanks, God, I get to sleep in tomorrow.",
+     "id": "807ff971",
+     "sec": 2.28,
+     "after": 9.73
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.441,
+     "heard": "Thanks, God. I get to sleep in tomorrow.",
+     "id": "aeda7e42",
+     "sec": 1.31,
+     "after": 9.41
+    }
+   ],
+   "sec": 3.6
+  }
+ ],
+ "render": {
+  "dur": 4.18,
+  "ai": [
+   [
+    0.5,
+    1
+   ]
+  ],
+  "file": "out_cabff3.wav"
+ },
+ "ops": [
+  {
+   "id": "mvde8ly2h",
+   "type": "replace",
+   "t0": 0.523,
+   "t1": 0.884,
+   "insert": "807ff971",
+   "i": 0,
+   "j": 0,
+   "old": "Thanks",
+   "new": "Thanks",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 9.73,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 0.523,
+   "t1": 0.884,
+   "insert": "807ff971"
+  }
+ ],
+ "finalText": "Thanks God, I get to sleep in tomorrow.",
+ "afterCheck": {
+  "sid": "dd4be8ab",
+  "words": [
+   {
+    "w": "Thanks,",
+    "s": 0.562,
+    "e": 0.964,
+    "p": 0.75,
+    "x": null
+   },
+   {
+    "w": "God,",
+    "s": 1.004,
+    "e": 1.546,
+    "p": 0.68,
+    "x": null
+   },
+   {
+    "w": "I",
+    "s": 1.607,
+    "e": 1.888,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "get",
+    "s": 1.928,
+    "e": 2.169,
+    "p": 0.92,
+    "x": null
+   },
+   {
+    "w": "to",
+    "s": 2.209,
+    "e": 2.45,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "sleep",
+    "s": 2.531,
+    "e": 2.912,
+    "p": 1,
+    "x": null
+   },
+   {
+    "w": "in",
+    "s": 2.952,
+    "e": 3.093,
+    "p": 0.85,
+    "x": null
+   },
+   {
+    "w": "tomorrow.",
+    "s": 3.113,
+    "e": 3.595,
+    "p": 0.98,
+    "x": null
+   }
+  ],
+  "dur": 4.177333333333333,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.7,
+    9.3,
+    10,
+    9.9,
+    9.9,
+    9.9,
+    10,
+    9.3
+   ]
+  }
+ },
+ "label": {
+  "row": 367,
+  "speaker": "0457",
+  "age": 21,
+  "gender": "f",
+  "text": "THANKS GOD I GET TO SLEEP IN TOMORROW",
+  "dur": 4.08,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 1,
+    "w": "GOD",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 1,
+      "pronounced-phone": "AH*"
+     }
+    ],
+    "phones": [
+     "G",
+     "AH0",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THANKS",
+    "acc": 10
+   },
+   {
+    "w": "GOD",
+    "acc": 3
+   },
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "GET",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "SLEEP",
+    "acc": 10
+   },
+   {
+    "w": "IN",
+    "acc": 10
+   },
+   {
+    "w": "TOMORROW",
+    "acc": 10
+   }
+  ],
+  "id": "so762_367_0457"
+ }
+}

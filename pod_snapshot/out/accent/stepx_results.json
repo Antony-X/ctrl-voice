@@ -1,0 +1,290 @@
+[
+ {
+  "name": "edacc_0",
+  "style": "confident",
+  "words_kept": 1.0,
+  "voice_sim": 0.494,
+  "dur_ratio": 0.64,
+  "sec": 7.2
+ },
+ {
+  "name": "edacc_0",
+  "style": "professional",
+  "words_kept": 1.0,
+  "voice_sim": 0.358,
+  "dur_ratio": 0.75,
+  "sec": 9.8
+ },
+ {
+  "name": "edacc_0",
+  "style": "warm",
+  "words_kept": 1.0,
+  "voice_sim": 0.417,
+  "dur_ratio": 0.64,
+  "sec": 7.1
+ },
+ {
+  "name": "edacc_0",
+  "style": "calm",
+  "words_kept": 1.0,
+  "voice_sim": 0.315,
+  "dur_ratio": 0.58,
+  "sec": 6.9
+ },
+ {
+  "name": "edacc_1",
+  "style": "confident",
+  "words_kept": 1.0,
+  "voice_sim": 0.613,
+  "dur_ratio": 1.19,
+  "sec": 5.5
+ },
+ {
+  "name": "edacc_1",
+  "style": "professional",
+  "words_kept": 1.0,
+  "voice_sim": 0.618,
+  "dur_ratio": 1.0,
+  "sec": 5.0
+ },
+ {
+  "name": "edacc_1",
+  "style": "warm",
+  "words_kept": 1.0,
+  "voice_sim": 0.57,
+  "dur_ratio": 1.13,
+  "sec": 7.5
+ },
+ {
+  "name": "edacc_1",
+  "style": "calm",
+  "words_kept": 1.0,
+  "voice_sim": 0.572,
+  "dur_ratio": 1.13,
+  "sec": 5.9
+ },
+ {
+  "name": "edacc_2",
+  "style": "confident",
+  "words_kept": 1.0,
+  "voice_sim": 0.564,
+  "dur_ratio": 1.1,
+  "sec": 4.2
+ },
+ {
+  "name": "edacc_2",
+  "style": "professional",
+  "words_kept": 1.0,
+  "voice_sim": 0.5,
+  "dur_ratio": 1.05,
+  "sec": 4.1
+ },
+ {
+  "name": "edacc_2",
+  "style": "warm",
+  "words_kept": 1.0,
+  "voice_sim": 0.524,
+  "dur_ratio": 1.19,
+  "sec": 4.6
+ },
+ {
+  "name": "edacc_2",
+  "style": "calm",
+  "words_kept": 1.0,
+  "voice_sim": 0.513,
+  "dur_ratio": 1.08,
+  "sec": 4.3
+ },
+ {
+  "name": "edacc_3",
+  "style": "confident",
+  "words_kept": 1.0,
+  "voice_sim": 0.635,
+  "dur_ratio": 1.25,
+  "sec": 5.3
+ },
+ {
+  "name": "edacc_3",
+  "style": "professional",
+  "words_kept": 1.0,
+  "voice_sim": 0.628,
+  "dur_ratio": 1.04,
+  "sec": 6.4
+ },
+ {
+  "name": "edacc_3",
+  "style": "warm",
+  "words_kept": 1.0,
+  "voice_sim": 0.75,
+  "dur_ratio": 1.18,
+  "sec": 5.2
+ },
+ {
+  "name": "edacc_3",
+  "style": "calm",
+  "words_kept": 1.0,
+  "voice_sim": 0.702,
+  "dur_ratio": 1.2,
+  "sec": 6.7
+ },
+ {
+  "name": "edacc_4",
+  "style": "confident",
+  "words_kept": 0.96,
+  "voice_sim": 0.603,
+  "dur_ratio": 1.17,
+  "sec": 8.6
+ },
+ {
+  "name": "edacc_4",
+  "style": "professional",
+  "words_kept": 1.0,
+  "voice_sim": 0.571,
+  "dur_ratio": 1.03,
+  "sec": 10.0
+ },
+ {
+  "name": "edacc_4",
+  "style": "warm",
+  "words_kept": 1.0,
+  "voice_sim": 0.606,
+  "dur_ratio": 1.28,
+  "sec": 9.2
+ },
+ {
+  "name": "edacc_4",
+  "style": "calm",
+  "words_kept": 0.96,
+  "voice_sim": 0.61,
+  "dur_ratio": 1.03,
+  "sec": 8.2
+ },
+ {
+  "name": "edacc_5",
+  "style": "confident",
+  "words_kept": 1.0,
+  "voice_sim": 0.504,
+  "dur_ratio": 0.49,
+  "sec": 6.3
+ },
+ {
+  "name": "edacc_5",
+  "style": "professional",
+  "words_kept": 1.0,
+  "voice_sim": 0.321,
+  "dur_ratio": 0.42,
+  "sec": 4.7
+ },
+ {
+  "name": "edacc_5",
+  "style": "warm",
+  "words_kept": 1.0,
+  "voice_sim": 0.468,
+  "dur_ratio": 0.49,
+  "sec": 6.2
+ },
+ {
+  "name": "edacc_5",
+  "style": "calm",
+  "words_kept": 1.0,
+  "voice_sim": 0.481,
+  "dur_ratio": 0.49,
+  "sec": 4.6
+ },
+ {
+  "name": "so762_0024",
+  "style": "confident",
+  "words_kept": 1.0,
+  "voice_sim": 0.703,
+  "dur_ratio": 0.71,
+  "sec": 3.3
+ },
+ {
+  "name": "so762_0024",
+  "style": "professional",
+  "words_kept": 1.0,
+  "voice_sim": 0.591,
+  "dur_ratio": 0.68,
+  "sec": 3.0
+ },
+ {
+  "name": "so762_0024",
+  "style": "warm",
+  "words_kept": 1.0,
+  "voice_sim": 0.581,
+  "dur_ratio": 0.61,
+  "sec": 2.8
+ },
+ {
+  "name": "so762_0024",
+  "style": "calm",
+  "words_kept": 1.0,
+  "voice_sim": 0.651,
+  "dur_ratio": 0.71,
+  "sec": 2.9
+ },
+ {
+  "name": "so762_0120",
+  "style": "confident",
+  "words_kept": 1.0,
+  "voice_sim": 0.638,
+  "dur_ratio": 0.68,
+  "sec": 2.7
+ },
+ {
+  "name": "so762_0120",
+  "style": "professional",
+  "words_kept": 1.0,
+  "voice_sim": 0.59,
+  "dur_ratio": 0.65,
+  "sec": 2.7
+ },
+ {
+  "name": "so762_0120",
+  "style": "warm",
+  "words_kept": 1.0,
+  "voice_sim": 0.633,
+  "dur_ratio": 0.65,
+  "sec": 2.8
+ },
+ {
+  "name": "so762_0120",
+  "style": "calm",
+  "words_kept": 1.0,
+  "voice_sim": 0.597,
+  "dur_ratio": 0.65,
+  "sec": 5.8
+ },
+ {
+  "name": "so762_0306",
+  "style": "confident",
+  "words_kept": 1.0,
+  "voice_sim": 0.62,
+  "dur_ratio": 0.74,
+  "sec": 2.9
+ },
+ {
+  "name": "so762_0306",
+  "style": "professional",
+  "words_kept": 1.0,
+  "voice_sim": 0.518,
+  "dur_ratio": 0.56,
+  "sec": 2.7
+ },
+ {
+  "name": "so762_0306",
+  "style": "warm",
+  "words_kept": 1.0,
+  "voice_sim": 0.475,
+  "dur_ratio": 0.67,
+  "sec": 2.8
+ },
+ {
+  "name": "so762_0306",
+  "style": "calm",
+  "words_kept": 1.0,
+  "voice_sim": 0.399,
+  "dur_ratio": 0.67,
+  "sec": 2.8
+ }
+]

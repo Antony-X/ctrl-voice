@@ -1,0 +1,372 @@
+{
+ "file": "so762_2424_9633.wav",
+ "t": {
+  "upload": 742,
+  "checks": 1073,
+  "replace": 6139,
+  "render": 1338
+ },
+ "sid": "8a15666b",
+ "words": [
+  {
+   "w": "Your",
+   "s": 0.602,
+   "e": 1.905,
+   "p": 0.36
+  },
+  {
+   "w": "need",
+   "s": 1.966,
+   "e": 2.688,
+   "p": 0.72
+  },
+  {
+   "w": "to",
+   "s": 2.728,
+   "e": 3.169,
+   "p": 0.99
+  },
+  {
+   "w": "come",
+   "s": 3.209,
+   "e": 3.911,
+   "p": 0.57
+  },
+  {
+   "w": "with",
+   "s": 3.971,
+   "e": 4.553,
+   "p": 0.99
+  },
+  {
+   "w": "me.",
+   "s": 4.613,
+   "e": 4.713,
+   "p": 0.99
+  }
+ ],
+ "dur": 5.335,
+ "clean": [],
+ "grammar": [
+  {
+   "i": 1,
+   "j": 1,
+   "old": "need",
+   "new": "you need"
+  }
+ ],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 3,
+    "word": "come",
+    "acc": 5.6,
+    "canon": "kʌm",
+    "heard": "khei5mw",
+    "sub": "eɪ",
+    "phone": "ʌ"
+   }
+  ],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.2,
+   8.5,
+   9.6,
+   5.6,
+   6.6,
+   9.7
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "grammar",
+   "item": {
+    "i": 1,
+    "j": 1,
+    "old": "need",
+    "new": "you need"
+   },
+   "on": true,
+   "op": {
+    "t0": 1.935,
+    "t1": 2.708,
+    "insert": "7f60aa52",
+    "i": 1,
+    "j": 1,
+    "old": "need",
+    "new": "you need",
+    "engine": "f5",
+    "verified": true,
+    "kind": "grammar",
+    "after": null
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.094,
+     "heard": "You need to come with me.",
+     "id": "3aaa0147",
+     "sec": 2.24
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.386,
+     "heard": "You need to come with me.",
+     "id": "7f60aa52",
+     "sec": 1.5
+    }
+   ],
+   "sec": 2.76
+  },
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 3,
+    "word": "come",
+    "acc": 5.6,
+    "canon": "kʌm",
+    "heard": "khei5mw",
+    "sub": "eɪ",
+    "phone": "ʌ"
+   },
+   "on": true,
+   "op": {
+    "t0": 3.189,
+    "t1": 3.941,
+    "insert": "de96206e",
+    "i": 3,
+    "j": 3,
+    "old": "come",
+    "new": "come",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 8.12
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.312,
+     "heard": "You need to come with me.",
+     "id": "de96206e",
+     "sec": 2.32,
+     "after": 8.12
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.031,
+     "heard": "You need to come with me.",
+     "id": "5ee70abb",
+     "sec": 1.19,
+     "after": 5.31
+    }
+   ],
+   "sec": 2.93
+  }
+ ],
+ "render": {
+  "dur": 5.73,
+  "ai": [
+   [
+    1.91,
+    3.32
+   ],
+   [
+    3.78,
+    4.33
+   ]
+  ],
+  "file": "out_a52584.wav"
+ },
+ "ops": [
+  {
+   "id": "mvde6wus8",
+   "type": "replace",
+   "t0": 1.935,
+   "t1": 2.708,
+   "insert": "7f60aa52",
+   "i": 1,
+   "j": 1,
+   "old": "need",
+   "new": "you need",
+   "engine": "f5",
+   "verified": true,
+   "kind": "grammar",
+   "after": null,
+   "on": true
+  },
+  {
+   "id": "mvde6zbu9",
+   "type": "replace",
+   "t0": 3.189,
+   "t1": 3.941,
+   "insert": "de96206e",
+   "i": 3,
+   "j": 3,
+   "old": "come",
+   "new": "come",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 8.12,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 3.189,
+   "t1": 3.941,
+   "insert": "de96206e"
+  },
+  {
+   "t0": 1.935,
+   "t1": 2.708,
+   "insert": "7f60aa52"
+  }
+ ],
+ "finalText": "Your you need to come with me.",
+ "afterCheck": {
+  "sid": "d378c51a",
+  "words": [
+   {
+    "w": "Yeah,",
+    "s": 0.581,
+    "e": 1.883,
+    "p": 0.14,
+    "x": null
+   },
+   {
+    "w": "you",
+    "s": 1.923,
+    "e": 2.543,
+    "p": 0.97,
+    "x": null
+   },
+   {
+    "w": "need",
+    "s": 2.604,
+    "e": 3.224,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "to",
+    "s": 3.284,
+    "e": 3.765,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "come",
+    "s": 3.805,
+    "e": 4.326,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "with",
+    "s": 4.366,
+    "e": 4.967,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "me.",
+    "s": 5.007,
+    "e": 5.107,
+    "p": 0.99,
+    "x": null
+   }
+  ],
+  "dur": 5.727791666666667,
+  "pron": {
+   "items": [
+    {
+     "i": 0,
+     "word": "Yeah,",
+     "acc": 6.5,
+     "canon": "jɛh",
+     "heard": "jojuː",
+     "sub": "uː",
+     "phone": "h"
+    }
+   ],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    6.5,
+    9.9,
+    9.4,
+    9.9,
+    9.9,
+    8.4,
+    9.9
+   ]
+  }
+ },
+ "label": {
+  "row": 2424,
+  "speaker": "9633",
+  "age": 21,
+  "gender": "f",
+  "text": "YOU NEED TO COME WITH ME.",
+  "dur": 5.33,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 5,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 3,
+    "w": "COME",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 1,
+      "pronounced-phone": "EY"
+     }
+    ],
+    "phones": [
+     "K",
+     "AH0",
+     "M"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "NEED",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "COME",
+    "acc": 3
+   },
+   {
+    "w": "WITH",
+    "acc": 10
+   },
+   {
+    "w": "ME",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2424_9633"
+ }
+}

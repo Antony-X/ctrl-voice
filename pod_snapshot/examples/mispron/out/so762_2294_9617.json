@@ -1,0 +1,186 @@
+{
+ "file": "so762_2294_9617.wav",
+ "t": {
+  "upload": 420,
+  "checks": 1151,
+  "replace": 0,
+  "render": 2334
+ },
+ "sid": "007a726f",
+ "words": [
+  {
+   "w": "He",
+   "s": 0.541,
+   "e": 0.762,
+   "p": 0.74
+  },
+  {
+   "w": "was",
+   "s": 0.802,
+   "e": 1.063,
+   "p": 0.92
+  },
+  {
+   "w": "taught",
+   "s": 1.143,
+   "e": 1.804,
+   "p": 0.42
+  },
+  {
+   "w": "in",
+   "s": 1.885,
+   "e": 2.105,
+   "p": 0.91
+  },
+  {
+   "w": "more",
+   "s": 2.165,
+   "e": 2.907,
+   "p": 0.99
+  },
+  {
+   "w": "things",
+   "s": 2.947,
+   "e": 3.308,
+   "p": 0.94
+  },
+  {
+   "w": "than",
+   "s": 3.328,
+   "e": 3.549,
+   "p": 0.99
+  },
+  {
+   "w": "I",
+   "s": 3.609,
+   "e": 3.729,
+   "p": 0.93
+  },
+  {
+   "w": "was.",
+   "s": 3.769,
+   "e": 3.97,
+   "p": 0.94
+  }
+ ],
+ "dur": 4.832,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.8,
+   9.4,
+   7,
+   9.6,
+   9.2,
+   8.8,
+   9.5,
+   9.6,
+   9.4
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 4.83,
+  "ai": [],
+  "file": "out_9218dc.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "He was taught in more things than I was.",
+ "label": {
+  "row": 2294,
+  "speaker": "9617",
+  "age": 35,
+  "gender": "f",
+  "text": "HE WAS TALENTED IN MORE THINGS THAN I WAS.",
+  "dur": 4.83,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 9,
+  "bad": [
+   {
+    "i": 2,
+    "w": "TALENTED",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AE",
+      "index": 1,
+      "pronounced-phone": "AH"
+     },
+     {
+      "canonical-phone": "L",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "N",
+      "index": 4,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "T",
+     "AE1",
+     "L",
+     "AH0",
+     "N",
+     "T",
+     "IH0",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "HE",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "TALENTED",
+    "acc": 3
+   },
+   {
+    "w": "IN",
+    "acc": 10
+   },
+   {
+    "w": "MORE",
+    "acc": 10
+   },
+   {
+    "w": "THINGS",
+    "acc": 10
+   },
+   {
+    "w": "THAN",
+    "acc": 10
+   },
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 8
+   }
+  ],
+  "id": "so762_2294_9617"
+ }
+}

@@ -1,0 +1,365 @@
+{
+ "file": "so762_2450_9635.wav",
+ "t": {
+  "upload": 579,
+  "checks": 935,
+  "replace": 3326,
+  "render": 1822
+ },
+ "sid": "72f63bea",
+ "words": [
+  {
+   "w": "I",
+   "s": 0.6,
+   "e": 0.781,
+   "p": 0.93
+  },
+  {
+   "w": "put",
+   "s": 0.821,
+   "e": 1.441,
+   "p": 0.99
+  },
+  {
+   "w": "them",
+   "s": 1.481,
+   "e": 2.242,
+   "p": 0.97
+  },
+  {
+   "w": "on",
+   "s": 2.342,
+   "e": 2.722,
+   "p": 0.98
+  },
+  {
+   "w": "and",
+   "s": 2.822,
+   "e": 3.242,
+   "p": 0.87
+  },
+  {
+   "w": "I",
+   "s": 3.342,
+   "e": 3.743,
+   "p": 0.74
+  },
+  {
+   "w": "see",
+   "s": 3.783,
+   "e": 4.723,
+   "p": 0.89
+  },
+  {
+   "w": "where",
+   "s": 4.783,
+   "e": 5.204,
+   "p": 0.97
+  },
+  {
+   "w": "they",
+   "s": 5.224,
+   "e": 6.264,
+   "p": 0.86
+  },
+  {
+   "w": "were.",
+   "s": 6.304,
+   "e": 6.545,
+   "p": 0.65
+  }
+ ],
+ "dur": 7.065,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 7,
+    "word": "where",
+    "acc": 3.9,
+    "canon": "wɛɹ",
+    "heard": "vervi",
+    "sub": "v",
+    "phone": "ɛɹ"
+   }
+  ],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.5,
+   9.2,
+   9.1,
+   9.6,
+   9.4,
+   9.7,
+   9.6,
+   3.9,
+   8.8,
+   6.1
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 7,
+    "word": "where",
+    "acc": 3.9,
+    "canon": "wɛɹ",
+    "heard": "vervi",
+    "sub": "v",
+    "phone": "ɛɹ"
+   },
+   "on": true,
+   "op": {
+    "t0": 4.753,
+    "t1": 5.214,
+    "insert": "9b3c5752",
+    "i": 7,
+    "j": 7,
+    "old": "where",
+    "new": "where",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 8.76
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.376,
+     "heard": "Put them on and see where they work.",
+     "id": "9b3c5752",
+     "sec": 2.49,
+     "after": 8.76
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.061,
+     "heard": "Put them on and see where they were.",
+     "id": "ea373d3f",
+     "sec": 1.6,
+     "after": 5.61
+    }
+   ],
+   "sec": 3.14
+  }
+ ],
+ "render": {
+  "dur": 7.11,
+  "ai": [
+   [
+    4.74,
+    5.24
+   ]
+  ],
+  "file": "out_8a8a5f.wav"
+ },
+ "ops": [
+  {
+   "id": "mvde7b9eb",
+   "type": "replace",
+   "t0": 4.753,
+   "t1": 5.214,
+   "insert": "9b3c5752",
+   "i": 7,
+   "j": 7,
+   "old": "where",
+   "new": "where",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 8.76,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 4.753,
+   "t1": 5.214,
+   "insert": "9b3c5752"
+  }
+ ],
+ "finalText": "I put them on and I see where they were.",
+ "afterCheck": {
+  "sid": "d3d0abe6",
+  "words": [
+   {
+    "w": "I",
+    "s": 0.581,
+    "e": 0.802,
+    "p": 0.95,
+    "x": null
+   },
+   {
+    "w": "put",
+    "s": 0.842,
+    "e": 1.443,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "them",
+    "s": 1.483,
+    "e": 2.244,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "on",
+    "s": 2.325,
+    "e": 2.725,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "and",
+    "s": 2.826,
+    "e": 3.246,
+    "p": 0.84,
+    "x": null
+   },
+   {
+    "w": "I",
+    "s": 3.347,
+    "e": 3.747,
+    "p": 0.71,
+    "x": null
+   },
+   {
+    "w": "see",
+    "s": 3.807,
+    "e": 4.729,
+    "p": 0.97,
+    "x": null
+   },
+   {
+    "w": "where",
+    "s": 4.769,
+    "e": 5.25,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "they",
+    "s": 5.29,
+    "e": 6.312,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "work.",
+    "s": 6.352,
+    "e": 6.613,
+    "p": 0.51,
+    "x": null
+   }
+  ],
+  "dur": 7.113916666666666,
+  "pron": {
+   "items": [
+    {
+     "i": 9,
+     "word": "work.",
+     "acc": 3.2,
+     "canon": "wɜːk",
+     "heard": "va",
+     "sub": "∅",
+     "phone": "ɜː"
+    }
+   ],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.5,
+    9.2,
+    9.4,
+    9.5,
+    9.4,
+    9.7,
+    9.9,
+    6.9,
+    9.3,
+    3.2
+   ]
+  }
+ },
+ "label": {
+  "row": 2450,
+  "speaker": "9635",
+  "age": 24,
+  "gender": "f",
+  "text": "I PUT THEM ON AND I SAW WHERE WE WERE.",
+  "dur": 7.07,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 6,
+  "n_words": 10,
+  "bad": [
+   {
+    "i": 6,
+    "w": "SAW",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AO",
+      "index": 1,
+      "pronounced-phone": "IY"
+     }
+    ],
+    "phones": [
+     "S",
+     "AO0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "PUT",
+    "acc": 10
+   },
+   {
+    "w": "THEM",
+    "acc": 10
+   },
+   {
+    "w": "ON",
+    "acc": 10
+   },
+   {
+    "w": "AND",
+    "acc": 10
+   },
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "SAW",
+    "acc": 3
+   },
+   {
+    "w": "WHERE",
+    "acc": 10
+   },
+   {
+    "w": "WE",
+    "acc": 10
+   },
+   {
+    "w": "WERE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2450_9635"
+ }
+}

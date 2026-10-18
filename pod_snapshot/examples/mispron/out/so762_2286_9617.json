@@ -1,0 +1,393 @@
+{
+ "file": "so762_2286_9617.wav",
+ "t": {
+  "upload": 1613,
+  "checks": 1146,
+  "replace": 8824,
+  "render": 1672
+ },
+ "sid": "b8994089",
+ "words": [
+  {
+   "w": "It",
+   "s": 0.543,
+   "e": 0.663,
+   "p": 0.82
+  },
+  {
+   "w": "never",
+   "s": 0.744,
+   "e": 1.247,
+   "p": 0.9
+  },
+  {
+   "w": "happened",
+   "s": 1.287,
+   "e": 1.87,
+   "p": 0.77
+  },
+  {
+   "w": "and",
+   "s": 1.93,
+   "e": 2.232,
+   "p": 0.81
+  },
+  {
+   "w": "it",
+   "s": 2.292,
+   "e": 2.393,
+   "p": 0.98
+  },
+  {
+   "w": "never",
+   "s": 2.493,
+   "e": 2.895,
+   "p": 0.97
+  },
+  {
+   "w": "will.",
+   "s": 2.935,
+   "e": 3.217,
+   "p": 0.93
+  }
+ ],
+ "dur": 3.8,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 2,
+    "word": "happened",
+    "acc": 4.2,
+    "canon": "hæpənd",
+    "heard": "abidaː",
+    "sub": "∅",
+    "phone": "æ"
+   },
+   {
+    "i": 5,
+    "word": "never",
+    "acc": 6.2,
+    "canon": "nɛvɚ",
+    "heard": "naːwawi",
+    "sub": "w",
+    "phone": "ɚ"
+   }
+  ],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.1,
+   8.3,
+   4.2,
+   6.5,
+   9.1,
+   6.2,
+   9.1
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 2,
+    "word": "happened",
+    "acc": 4.2,
+    "canon": "hæpənd",
+    "heard": "abidaː",
+    "sub": "∅",
+    "phone": "æ"
+   },
+   "on": true,
+   "op": {
+    "t0": 1.267,
+    "t1": 1.9,
+    "insert": "b9033fa4",
+    "i": 2,
+    "j": 2,
+    "old": "happened",
+    "new": "happened",
+    "engine": "f5",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 8.57
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.255,
+     "heard": "It never happened and it never will.",
+     "id": "2eb6475c",
+     "sec": 3.59,
+     "after": 7.55
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.357,
+     "heard": "It never happened and it never will.",
+     "id": "b9033fa4",
+     "sec": 2.64,
+     "after": 8.57
+    }
+   ],
+   "sec": 4.42
+  },
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 5,
+    "word": "never",
+    "acc": 6.2,
+    "canon": "nɛvɚ",
+    "heard": "naːwawi",
+    "sub": "w",
+    "phone": "ɚ"
+   },
+   "on": true,
+   "op": {
+    "t0": 2.443,
+    "t1": 2.915,
+    "insert": "f65a4417",
+    "i": 5,
+    "j": 5,
+    "old": "never",
+    "new": "never",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 6.22
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.122,
+     "heard": "It never happened and it never will.",
+     "id": "f65a4417",
+     "sec": 3.22,
+     "after": 6.22
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.826,
+     "heard": "It never happened and it never will.",
+     "id": "2a6de0b8",
+     "sec": 2.02,
+     "after": 3.26
+    }
+   ],
+   "sec": 4.05
+  }
+ ],
+ "render": {
+  "dur": 3.67,
+  "ai": [
+   [
+    1.29,
+    1.88
+   ],
+   [
+    2.41,
+    2.76
+   ]
+  ],
+  "file": "out_54ab17.wav"
+ },
+ "ops": [
+  {
+   "id": "mvdefh7x19",
+   "type": "replace",
+   "t0": 1.267,
+   "t1": 1.9,
+   "insert": "b9033fa4",
+   "i": 2,
+   "j": 2,
+   "old": "happened",
+   "new": "happened",
+   "engine": "f5",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 8.57,
+   "on": true
+  },
+  {
+   "id": "mvdefkhh1a",
+   "type": "replace",
+   "t0": 2.443,
+   "t1": 2.915,
+   "insert": "f65a4417",
+   "i": 5,
+   "j": 5,
+   "old": "never",
+   "new": "never",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 6.22,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 2.443,
+   "t1": 2.915,
+   "insert": "f65a4417"
+  },
+  {
+   "t0": 1.267,
+   "t1": 1.9,
+   "insert": "b9033fa4"
+  }
+ ],
+ "finalText": "It never happened and it never will.",
+ "afterCheck": {
+  "sid": "191ae6d3",
+  "words": [
+   {
+    "w": "It",
+    "s": 0.541,
+    "e": 0.701,
+    "p": 0.8,
+    "x": null
+   },
+   {
+    "w": "never",
+    "s": 0.782,
+    "e": 1.303,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "happened",
+    "s": 1.323,
+    "e": 1.844,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "and",
+    "s": 1.904,
+    "e": 2.225,
+    "p": 0.87,
+    "x": null
+   },
+   {
+    "w": "it",
+    "s": 2.285,
+    "e": 2.365,
+    "p": 0.96,
+    "x": null
+   },
+   {
+    "w": "never",
+    "s": 2.405,
+    "e": 2.766,
+    "p": 0.84,
+    "x": null
+   },
+   {
+    "w": "will.",
+    "s": 2.786,
+    "e": 3.066,
+    "p": 1,
+    "x": null
+   }
+  ],
+  "dur": 3.66775,
+  "pron": {
+   "items": [
+    {
+     "i": 5,
+     "word": "never",
+     "acc": 5.4,
+     "canon": "nɛvɚ",
+     "heard": "ðabawiː",
+     "sub": "iː",
+     "phone": "ɚ"
+    }
+   ],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    8.8,
+    8.5,
+    8.6,
+    9,
+    9.1,
+    5.4,
+    9.4
+   ]
+  }
+ },
+ "label": {
+  "row": 2286,
+  "speaker": "9617",
+  "age": 35,
+  "gender": "f",
+  "text": "IT NEVER HAPPENED AND IT NEVER WILL.",
+  "dur": 3.8,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 6,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 2,
+    "w": "HAPPENED",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 3,
+      "pronounced-phone": "AE"
+     }
+    ],
+    "phones": [
+     "HH",
+     "AE1",
+     "P",
+     "AH0",
+     "N",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "NEVER",
+    "acc": 10
+   },
+   {
+    "w": "HAPPENED",
+    "acc": 5
+   },
+   {
+    "w": "AND",
+    "acc": 10
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "NEVER",
+    "acc": 10
+   },
+   {
+    "w": "WILL",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2286_9617"
+ }
+}

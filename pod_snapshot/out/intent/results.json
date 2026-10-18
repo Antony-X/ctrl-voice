@@ -1,0 +1,444 @@
+[
+ {
+  "k": 0,
+  "truth": "they may make me more unhappy than i am",
+  "asr0": "They may make me more happy than I am.",
+  "asr1": "They may make me more happy than I am.",
+  "wer0": 0.1111111111111111,
+  "wer1": 0.1111111111111111,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 1,
+  "truth": "this was one of our better games",
+  "asr0": "This was one of our battle games.",
+  "asr1": "This was one of our battle games.",
+  "wer0": 0.14285714285714285,
+  "wer1": 0.14285714285714285,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 2,
+  "truth": "so much for a united front",
+  "asr0": "So much for United from.",
+  "asr1": "So much for United from.",
+  "wer0": 0.3333333333333333,
+  "wer1": 0.3333333333333333,
+  "fixes": [],
+  "expert": 5
+ },
+ {
+  "k": 3,
+  "truth": "people make things a lot more difficult than they are",
+  "asr0": "People make things a lot more difficult than they are.",
+  "asr1": "People make things a lot more difficult than they are.",
+  "wer0": 0.0,
+  "wer1": 0.0,
+  "fixes": [],
+  "expert": 6
+ },
+ {
+  "k": 4,
+  "truth": "if you keep it in you had better be right",
+  "asr0": "If you keep it in, you had better be right.",
+  "asr1": "If you keep it in, you had better be right.",
+  "wer0": 0.0,
+  "wer1": 0.0,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 5,
+  "truth": "it was they only hit of they contest",
+  "asr0": "It was the only hit of the contents.",
+  "asr1": "It was the only hit of the contents.",
+  "wer0": 0.375,
+  "wer1": 0.375,
+  "fixes": [],
+  "expert": 5
+ },
+ {
+  "k": 6,
+  "truth": "what what would have you happen",
+  "asr0": "What, what, what, how will you happen?",
+  "asr1": "What, what, what, how will you happen?",
+  "wer0": 0.5,
+  "wer1": 0.5,
+  "fixes": [],
+  "expert": 5
+ },
+ {
+  "k": 7,
+  "truth": "yes good morning to you too",
+  "asr0": "Yes, good morning to you too.",
+  "asr1": "Yes, good morning to you too.",
+  "wer0": 0.0,
+  "wer1": 0.0,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 8,
+  "truth": "not sorry for the language",
+  "asr0": "Not sorry for the language.",
+  "asr1": "Not sorry for the language.",
+  "wer0": 0.0,
+  "wer1": 0.0,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 9,
+  "truth": "want us to give you a call them",
+  "asr0": "Want us to give you a call them?",
+  "asr1": "Want us to give you a call them?",
+  "wer0": 0.0,
+  "wer1": 0.0,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 10,
+  "truth": "end of the road for some players",
+  "asr0": "End of the load for summon players.",
+  "asr1": "End of the load for summon players.",
+  "wer0": 0.2857142857142857,
+  "wer1": 0.2857142857142857,
+  "fixes": [],
+  "expert": 5
+ },
+ {
+  "k": 11,
+  "truth": "they fall in love with my personality not me",
+  "asr0": "They fell in love with my personality, not me.",
+  "asr1": "They fell in love with my personality, not me.",
+  "wer0": 0.1111111111111111,
+  "wer1": 0.1111111111111111,
+  "fixes": [],
+  "expert": 5
+ },
+ {
+  "k": 12,
+  "truth": "this is another way to go about it",
+  "asr0": "This is another way to go about it.",
+  "asr1": "This is another way to go about it.",
+  "wer0": 0.0,
+  "wer1": 0.0,
+  "fixes": [],
+  "expert": 6
+ },
+ {
+  "k": 13,
+  "truth": "i think it's still a matter of taste through",
+  "asr0": "I think it's still a matter of taste through.",
+  "asr1": "I think it's still a matter of taste through.",
+  "wer0": 0.0,
+  "wer1": 0.0,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 14,
+  "truth": "it was not my heart that he was after",
+  "asr0": "It was that may hurt that he was after.",
+  "asr1": "It was that may hurt that he was after.",
+  "wer0": 0.3333333333333333,
+  "wer1": 0.3333333333333333,
+  "fixes": [],
+  "expert": 5
+ },
+ {
+  "k": 15,
+  "truth": "i say into the phone",
+  "asr0": "I say, into their phone.",
+  "asr1": "I say, into their phone.",
+  "wer0": 0.2,
+  "wer1": 0.2,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 16,
+  "truth": "he controlled himself with an effort",
+  "asr0": "He contradicted himself with an effort.",
+  "asr1": "He contradicted himself with an effort.",
+  "wer0": 0.16666666666666666,
+  "wer1": 0.16666666666666666,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 17,
+  "truth": "you had to stay with leaders",
+  "asr0": "You have to stay with leaders.",
+  "asr1": "You have to stay with leaders.",
+  "wer0": 0.16666666666666666,
+  "wer1": 0.16666666666666666,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 18,
+  "truth": "tell them to come and take me from here",
+  "asr0": "Tell them to come and take me from here.",
+  "asr1": "Tell them to come and take me from here.",
+  "wer0": 0.0,
+  "wer1": 0.0,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 19,
+  "truth": "he will wear an electronic monitor",
+  "asr0": "He will wear an electronic monitor.",
+  "asr1": "He will wear an electronic monitor.",
+  "wer0": 0.0,
+  "wer1": 0.0,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 20,
+  "truth": "thank you so much for it",
+  "asr0": "Thank you so much for it.",
+  "asr1": "Thank you so much for it.",
+  "wer0": 0.0,
+  "wer1": 0.0,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 21,
+  "truth": "makes me feel better about life",
+  "asr0": "Makes me feel better about life.",
+  "asr1": "Makes me feel better about life.",
+  "wer0": 0.0,
+  "wer1": 0.0,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 22,
+  "truth": "thanks god i get to sleep in tomorrow",
+  "asr0": "Thanks God, I get to sleep in tomorrow.",
+  "asr1": "Thank God, I get to sleep in tomorrow.",
+  "wer0": 0.0,
+  "wer1": 0.125,
+  "fixes": [
+   [
+    "Thanks",
+    "Thank",
+    0.25
+   ]
+  ],
+  "expert": 6
+ },
+ {
+  "k": 23,
+  "truth": "create to be happy and good",
+  "asr0": "Grated to be happy and good.",
+  "asr1": "Grateful to be happy and good.",
+  "wer0": 0.16666666666666666,
+  "wer1": 0.16666666666666666,
+  "fixes": [
+   [
+    "Grated",
+    "Grateful",
+    0.5
+   ]
+  ],
+  "expert": 6
+ },
+ {
+  "k": 24,
+  "truth": "about to go to lunch",
+  "asr0": "About go to lunch.",
+  "asr1": "About go to lunch.",
+  "wer0": 0.2,
+  "wer1": 0.2,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 25,
+  "truth": "what is the best month of the year",
+  "asr0": "What is the best mode of the year?",
+  "asr1": "What is the best mood of the year?",
+  "wer0": 0.125,
+  "wer1": 0.125,
+  "fixes": [
+   [
+    "mode",
+    "mood",
+    0.33
+   ]
+  ],
+  "expert": 6
+ },
+ {
+  "k": 26,
+  "truth": "when no one knows much about you you have peace",
+  "asr0": "When no one knows much about you, you have peace.",
+  "asr1": "When no one knows much about you, you have peace.",
+  "wer0": 0.0,
+  "wer1": 0.0,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 27,
+  "truth": "it's a human being thing",
+  "asr0": "It's a human being sin.",
+  "asr1": "It's a human being's sin.",
+  "wer0": 0.2,
+  "wer1": 0.4,
+  "fixes": [
+   [
+    "being",
+    "being's",
+    0.2
+   ]
+  ],
+  "expert": 7
+ },
+ {
+  "k": 28,
+  "truth": "there is no right or wrong way to make art",
+  "asr0": "There is no right or wrong way to make art.",
+  "asr1": "There is no right or wrong way to make art.",
+  "wer0": 0.0,
+  "wer1": 0.0,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 29,
+  "truth": "there is no end to prevention",
+  "asr0": "There is no end to prevention.",
+  "asr1": "There is no end to prevention.",
+  "wer0": 0.0,
+  "wer1": 0.0,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 30,
+  "truth": "it will have a body again",
+  "asr0": "It will have a body again.",
+  "asr1": "It will have a body again.",
+  "wer0": 0.0,
+  "wer1": 0.0,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 31,
+  "truth": "but that's another story altogether",
+  "asr0": "But there's another story altogether.",
+  "asr1": "But there's another story altogether.",
+  "wer0": 0.2,
+  "wer1": 0.2,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 32,
+  "truth": "it was very very strange",
+  "asr0": "It was very, very strange.",
+  "asr1": "It was very, very strange.",
+  "wer0": 0.0,
+  "wer1": 0.0,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 33,
+  "truth": "nationally though the trend is beginning to turn upward again",
+  "asr0": "Nationally, so, the trend is beginning to turn upward again.",
+  "asr1": "Nationally, so, the trend is beginning to turn upwards again.",
+  "wer0": 0.1,
+  "wer1": 0.2,
+  "fixes": [
+   [
+    "upward",
+    "upwards",
+    0.17
+   ]
+  ],
+  "expert": 5
+ },
+ {
+  "k": 34,
+  "truth": "worry is part of life",
+  "asr0": "Very, yes, part of life.",
+  "asr1": "Very, yes, part of life.",
+  "wer0": 0.4,
+  "wer1": 0.4,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 35,
+  "truth": "i have no one but myself to blames for this",
+  "asr0": "I have no one but myself to blame for this.",
+  "asr1": "I have no one but myself to blame for this.",
+  "wer0": 0.1,
+  "wer1": 0.1,
+  "fixes": [],
+  "expert": 6
+ },
+ {
+  "k": 36,
+  "truth": "what a perfect ending to the day",
+  "asr0": "What's a perfect ending to say, day.",
+  "asr1": "What's a perfect ending to today.",
+  "wer0": 0.2857142857142857,
+  "wer1": 0.42857142857142855,
+  "fixes": [
+   [
+    "day.",
+    "today",
+    0.5
+   ]
+  ],
+  "expert": 6
+ },
+ {
+  "k": 37,
+  "truth": "depends on a number of things",
+  "asr0": "Depends on a number of things.",
+  "asr1": "Depends on a number of things.",
+  "wer0": 0.0,
+  "wer1": 0.0,
+  "fixes": [],
+  "expert": 7
+ },
+ {
+  "k": 38,
+  "truth": "cheers to a great group",
+  "asr0": "Chats to a great group.",
+  "asr1": "Chat to a great group.",
+  "wer0": 0.2,
+  "wer1": 0.2,
+  "fixes": [
+   [
+    "Chats",
+    "Chat",
+    0.33
+   ]
+  ],
+  "expert": 7
+ },
+ {
+  "k": 39,
+  "truth": "first place in the division",
+  "asr0": "What's the place in the diffusion?",
+  "asr1": "What's the place in the diffusion?",
+  "wer0": 0.6,
+  "wer1": 0.6,
+  "fixes": [],
+  "expert": 6
+ }
+]

@@ -1,0 +1,338 @@
+{
+ "file": "so762_2296_9617.wav",
+ "t": {
+  "upload": 828,
+  "checks": 1508,
+  "replace": 3459,
+  "render": 1011
+ },
+ "sid": "0992bb9f",
+ "words": [
+  {
+   "w": "So",
+   "s": 0.562,
+   "e": 0.783,
+   "p": 0.46
+  },
+  {
+   "w": "that",
+   "s": 0.823,
+   "e": 1.084,
+   "p": 0.92
+  },
+  {
+   "w": "is",
+   "s": 1.165,
+   "e": 1.546,
+   "p": 0.93
+  },
+  {
+   "w": "what",
+   "s": 1.586,
+   "e": 1.867,
+   "p": 0.99
+  },
+  {
+   "w": "I",
+   "s": 1.948,
+   "e": 2.108,
+   "p": 0.85
+  },
+  {
+   "w": "want",
+   "s": 2.148,
+   "e": 2.43,
+   "p": 0.99
+  },
+  {
+   "w": "to",
+   "s": 2.47,
+   "e": 2.65,
+   "p": 0.99
+  },
+  {
+   "w": "be",
+   "s": 2.691,
+   "e": 3.273,
+   "p": 0.84
+  },
+  {
+   "w": "called.",
+   "s": 3.313,
+   "e": 3.574,
+   "p": 0.83
+  }
+ ],
+ "dur": 4.337,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 8,
+    "word": "called.",
+    "acc": 6.3,
+    "canon": "kɔːld",
+    "heard": "khuːdaː",
+    "sub": "∅",
+    "phone": "l"
+   }
+  ],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.7,
+   9.5,
+   9.4,
+   9.6,
+   9.6,
+   9.2,
+   8.4,
+   9.9,
+   6.3
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 8,
+    "word": "called.",
+    "acc": 6.3,
+    "canon": "kɔːld",
+    "heard": "khuːdaː",
+    "sub": "∅",
+    "phone": "l"
+   },
+   "on": true,
+   "op": {
+    "t0": 3.293,
+    "t1": 3.614,
+    "insert": "587b2da4",
+    "i": 8,
+    "j": 8,
+    "old": "called.",
+    "new": "called",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 8.73
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.373,
+     "heard": "So that is what I want to be called.",
+     "id": "587b2da4",
+     "sec": 2.34,
+     "after": 8.73
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.225,
+     "heard": "So that is what I want to be called.",
+     "id": "1429f13a",
+     "sec": 1.85,
+     "after": 7.25
+    }
+   ],
+   "sec": 3.28
+  }
+ ],
+ "render": {
+  "dur": 4.52,
+  "ai": [
+   [
+    3.26,
+    3.84
+   ]
+  ],
+  "file": "out_9c50b4.wav"
+ },
+ "ops": [
+  {
+   "id": "mvdefy561b",
+   "type": "replace",
+   "t0": 3.293,
+   "t1": 3.614,
+   "insert": "587b2da4",
+   "i": 8,
+   "j": 8,
+   "old": "called.",
+   "new": "called",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 8.73,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 3.293,
+   "t1": 3.614,
+   "insert": "587b2da4"
+  }
+ ],
+ "finalText": "So that is what I want to be called",
+ "afterCheck": {
+  "sid": "7b8797a4",
+  "words": [
+   {
+    "w": "So",
+    "s": 0.562,
+    "e": 0.783,
+    "p": 0.56,
+    "x": null
+   },
+   {
+    "w": "that",
+    "s": 0.824,
+    "e": 0.984,
+    "p": 0.91,
+    "x": null
+   },
+   {
+    "w": "is",
+    "s": 1.024,
+    "e": 1.547,
+    "p": 0.94,
+    "x": null
+   },
+   {
+    "w": "what",
+    "s": 1.567,
+    "e": 1.868,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "I",
+    "s": 1.949,
+    "e": 2.109,
+    "p": 0.87,
+    "x": null
+   },
+   {
+    "w": "want",
+    "s": 2.149,
+    "e": 2.451,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "to",
+    "s": 2.471,
+    "e": 2.652,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "be",
+    "s": 2.692,
+    "e": 3.234,
+    "p": 0.94,
+    "x": null
+   },
+   {
+    "w": "called.",
+    "s": 3.274,
+    "e": 3.756,
+    "p": 0.97,
+    "x": null
+   }
+  ],
+  "dur": 4.51975,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.5,
+    9,
+    9,
+    9.4,
+    9.3,
+    9.4,
+    9.4,
+    9.9,
+    8.7
+   ]
+  }
+ },
+ "label": {
+  "row": 2296,
+  "speaker": "9617",
+  "age": 35,
+  "gender": "f",
+  "text": "SO THAT IS WHAT I WANT TO BE CALLED.",
+  "dur": 4.34,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 9,
+  "bad": [
+   {
+    "i": 8,
+    "w": "CALLED",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AO",
+      "index": 1,
+      "pronounced-phone": "OW"
+     }
+    ],
+    "phones": [
+     "K",
+     "AO0",
+     "L",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "SO",
+    "acc": 10
+   },
+   {
+    "w": "THAT",
+    "acc": 10
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "WHAT",
+    "acc": 10
+   },
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "WANT",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "CALLED",
+    "acc": 5
+   }
+  ],
+  "id": "so762_2296_9617"
+ }
+}

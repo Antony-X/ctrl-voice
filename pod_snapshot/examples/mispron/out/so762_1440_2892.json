@@ -1,0 +1,257 @@
+{
+ "file": "so762_1440_2892.wav",
+ "t": {
+  "upload": 1336,
+  "checks": 1473,
+  "replace": 5577,
+  "render": 1211
+ },
+ "sid": "0581275a",
+ "words": [
+  {
+   "w": "Sending",
+   "s": 0.524,
+   "e": 0.827,
+   "p": 0.86
+  },
+  {
+   "w": "you",
+   "s": 0.867,
+   "e": 1.008,
+   "p": 0.77
+  },
+  {
+   "w": "love",
+   "s": 1.028,
+   "e": 1.29,
+   "p": 0.92
+  },
+  {
+   "w": "and",
+   "s": 1.331,
+   "e": 1.512,
+   "p": 0.98
+  },
+  {
+   "w": "blessing.",
+   "s": 1.532,
+   "e": 2.016,
+   "p": 0.82
+  }
+ ],
+ "dur": 2.621,
+ "clean": [],
+ "grammar": [
+  {
+   "i": 4,
+   "j": 4,
+   "old": "blessing.",
+   "new": "blessings"
+  }
+ ],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   8.4,
+   10,
+   9.6,
+   9.4,
+   9
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "grammar",
+   "item": {
+    "i": 4,
+    "j": 4,
+    "old": "blessing.",
+    "new": "blessings"
+   },
+   "on": true,
+   "op": {
+    "t0": 1.522,
+    "t1": 2.056,
+    "insert": "a4d5a1f0",
+    "i": 4,
+    "j": 4,
+    "old": "blessing.",
+    "new": "blessings",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "grammar",
+    "after": null
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.365,
+     "heard": "Sending you love and blessings.",
+     "id": "a4d5a1f0",
+     "sec": 3.98
+    },
+    {
+     "engine": "f5",
+     "ok": false,
+     "sim": 0.39,
+     "heard": "Sending you love and blessing.",
+     "id": "744b1fd2",
+     "sec": 2.22
+    }
+   ],
+   "sec": 5.18
+  }
+ ],
+ "render": {
+  "dur": 2.54,
+  "ai": [
+   [
+    1.5,
+    2.01
+   ]
+  ],
+  "file": "out_914dd1.wav"
+ },
+ "ops": [
+  {
+   "id": "mvdeda8m16",
+   "type": "replace",
+   "t0": 1.522,
+   "t1": 2.056,
+   "insert": "a4d5a1f0",
+   "i": 4,
+   "j": 4,
+   "old": "blessing.",
+   "new": "blessings",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "grammar",
+   "after": null,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 1.522,
+   "t1": 2.056,
+   "insert": "a4d5a1f0"
+  }
+ ],
+ "finalText": "Sending you love and blessings",
+ "afterCheck": {
+  "sid": "33c85dce",
+  "words": [
+   {
+    "w": "Sending",
+    "s": 0.525,
+    "e": 0.848,
+    "p": 0.84,
+    "x": null
+   },
+   {
+    "w": "you",
+    "s": 0.868,
+    "e": 1.01,
+    "p": 0.72,
+    "x": null
+   },
+   {
+    "w": "love",
+    "s": 1.05,
+    "e": 1.293,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "and",
+    "s": 1.333,
+    "e": 1.474,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "blessings.",
+    "s": 1.515,
+    "e": 1.939,
+    "p": 0.96,
+    "x": null
+   }
+  ],
+  "dur": 2.5447083333333333,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.6,
+    9.9,
+    9.8,
+    10,
+    9.9
+   ]
+  }
+ },
+ "label": {
+  "row": 1440,
+  "speaker": "2892",
+  "age": 24,
+  "gender": "m",
+  "text": "SENDING YOU LOVE AND BLESSINGS",
+  "dur": 2.62,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 7,
+  "fluency": 8,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "BLESSINGS",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 2,
+      "pronounced-phone": "AH"
+     }
+    ],
+    "phones": [
+     "B",
+     "L",
+     "EH1",
+     "S",
+     "IH0",
+     "NG",
+     "Z"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "SENDING",
+    "acc": 10
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "LOVE",
+    "acc": 10
+   },
+   {
+    "w": "AND",
+    "acc": 10
+   },
+   {
+    "w": "BLESSINGS",
+    "acc": 5
+   }
+  ],
+  "id": "so762_1440_2892"
+ }
+}

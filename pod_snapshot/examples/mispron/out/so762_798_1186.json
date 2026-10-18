@@ -1,0 +1,127 @@
+{
+ "file": "so762_798_1186.wav",
+ "t": {
+  "upload": 941,
+  "checks": 1515,
+  "replace": 0,
+  "render": 1371
+ },
+ "sid": "db8100e0",
+ "words": [
+  {
+   "w": "Legal",
+   "s": 0.623,
+   "e": 1.287,
+   "p": 0.37
+  },
+  {
+   "w": "protection",
+   "s": 1.307,
+   "e": 1.95,
+   "p": 0.94
+  },
+  {
+   "w": "is",
+   "s": 2.031,
+   "e": 2.654,
+   "p": 0.99
+  },
+  {
+   "w": "a",
+   "s": 2.734,
+   "e": 2.835,
+   "p": 0.99
+  },
+  {
+   "w": "must.",
+   "s": 2.875,
+   "e": 3.177,
+   "p": 0.98
+  }
+ ],
+ "dur": 3.8,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9,
+   9.7,
+   10,
+   10,
+   9.9
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 3.8,
+  "ai": [],
+  "file": "out_f81930.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "Legal protection is a must.",
+ "label": {
+  "row": 798,
+  "speaker": "1186",
+  "age": 23,
+  "gender": "m",
+  "text": "LEGAL PROTECTION IS A MUST",
+  "dur": 3.8,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 1,
+    "w": "PROTECTION",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "T",
+      "index": 3,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "P",
+     "R",
+     "AH0",
+     "T",
+     "EH1",
+     "K",
+     "SH",
+     "N"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "LEGAL",
+    "acc": 10
+   },
+   {
+    "w": "PROTECTION",
+    "acc": 3
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "MUST",
+    "acc": 10
+   }
+  ],
+  "id": "so762_798_1186"
+ }
+}

@@ -1,0 +1,4981 @@
+{
+ "summary": {
+  "n_clips": 82,
+  "n_words": 545,
+  "n_mapped": 517,
+  "bad_words": 74,
+  "bad_eligible": 64,
+  "bad_flagged": 12,
+  "good_words": 443,
+  "good_eligible": 212,
+  "good_flagged": 13,
+  "clips_with_hit": 12,
+  "clips_with_false_flag": 15,
+  "auc_pred_vs_label_eligible": 0.6877579599056604,
+  "unmapped_bad": [
+   [
+    "so762_2285_9617",
+    "OWN"
+   ],
+   [
+    "so762_2322_9622",
+    "MOMENT"
+   ],
+   [
+    "so762_2357_9623",
+    "EYES"
+   ],
+   [
+    "so762_2478_9640",
+    "TRAINING"
+   ],
+   [
+    "so762_347_0306",
+    "WOULD"
+   ],
+   [
+    "so762_496_0811",
+    "DECISION"
+   ],
+   [
+    "so762_501_0981",
+    "MATTER"
+   ],
+   [
+    "so762_723_1135",
+    "COLLEGE"
+   ]
+  ],
+  "pron_resays": 29,
+  "resays_on_labelled": 11,
+  "kept": 28,
+  "kept_on_labelled": 11,
+  "verified": 29
+ },
+ "rows": [
+  {
+   "id": "so762_1193_2031",
+   "speaker": "2031",
+   "age": 21,
+   "text": "WELL THEN A LOT OF PEOPLE ARE CLEARLY WRONG",
+   "dur": 4.24,
+   "utt_acc": 8,
+   "bad": [
+    {
+     "w": "CLEARLY",
+     "acc": 3,
+     "mis": [
+      [
+       "L",
+       "L*"
+      ],
+      [
+       "IH",
+       "AH"
+      ],
+      [
+       "AH",
+       "<DEL>"
+      ]
+     ],
+     "k": 7,
+     "asr": "clearly",
+     "flagged": false,
+     "pred": 7.9
+    }
+   ],
+   "heard": "Well, then a lot of people are clearly wrong.",
+   "median": 9.9,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Well, then a lot of people are clearly wrong."
+  },
+  {
+   "id": "so762_1236_2116",
+   "speaker": "2116",
+   "age": 20,
+   "text": "FOLLOW THE LINK BELOW TO REGISTER",
+   "dur": 4,
+   "utt_acc": 8,
+   "bad": [
+    {
+     "w": "REGISTER",
+     "acc": 5,
+     "mis": [
+      [
+       "EH",
+       "IH"
+      ]
+     ],
+     "k": 5,
+     "asr": "register.",
+     "flagged": false,
+     "pred": 9.6
+    }
+   ],
+   "heard": "Follow the link below to register.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Follow the link below to register."
+  },
+  {
+   "id": "so762_1302_2438",
+   "speaker": "2438",
+   "age": 21,
+   "text": "PLEASE LET ME KNOW HOW I CAN BE OF SERVICE",
+   "dur": 3.58,
+   "utt_acc": 8,
+   "bad": [
+    {
+     "w": "SERVICE",
+     "acc": 5,
+     "mis": [
+      [
+       "IH",
+       "AY"
+      ]
+     ],
+     "k": 9,
+     "asr": "service.",
+     "flagged": false,
+     "pred": 9.1
+    }
+   ],
+   "heard": "Please let me know how I can be of service.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Please let me know how I can be of service."
+  },
+  {
+   "id": "so762_1343_2448",
+   "speaker": "2448",
+   "age": 19,
+   "text": "THURSDAY IS THE LAST DAY OF THIS YEAR'S DEBATE",
+   "dur": 4.58,
+   "utt_acc": 8,
+   "bad": [
+    {
+     "w": "DEBATE",
+     "acc": 5,
+     "mis": [
+      [
+       "EY",
+       "EH"
+      ]
+     ],
+     "k": 8,
+     "asr": "debate.",
+     "flagged": false,
+     "pred": 9.8
+    }
+   ],
+   "heard": "Thursday is the last day of this year's debate.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Thursday is the last day of this year's debate."
+  },
+  {
+   "id": "so762_1362_2451",
+   "speaker": "2451",
+   "age": 23,
+   "text": "IT'S TOO PRECIOUS TO US TO LET IT DIE",
+   "dur": 5.07,
+   "utt_acc": 8,
+   "bad": [
+    {
+     "w": "PRECIOUS",
+     "acc": 5,
+     "mis": [
+      [
+       "EH",
+       "IH"
+      ]
+     ],
+     "k": 2,
+     "asr": "precious",
+     "flagged": false,
+     "pred": 9.4
+    }
+   ],
+   "heard": "It's too precious to us to let it die.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "It's too precious to us to let it die."
+  },
+  {
+   "id": "so762_1403_2538",
+   "speaker": "2538",
+   "age": 21,
+   "text": "IT IS AN INNER INTERNATIONAL WORD",
+   "dur": 3.69,
+   "utt_acc": 8,
+   "bad": [
+    {
+     "w": "INTERNATIONAL",
+     "acc": 5,
+     "mis": [
+      [
+       "AE",
+       "EY"
+      ]
+     ],
+     "k": 3,
+     "asr": "international",
+     "flagged": false,
+     "pred": 9.8
+    }
+   ],
+   "heard": "It is an international word.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "It is an international word."
+  },
+  {
+   "id": "so762_1409_2538",
+   "speaker": "2538",
+   "age": 21,
+   "text": "PUTTING ALL OF US AT RISK OF A NUCLEAR WAR",
+   "dur": 4.35,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "WAR",
+     "acc": 3,
+     "mis": [
+      [
+       "AO",
+       "EY"
+      ]
+     ],
+     "k": 9,
+     "asr": "ray.",
+     "flagged": false,
+     "pred": 10
+    }
+   ],
+   "heard": "Putting all of us at risk of a nuclear ray.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Putting all of us at risk of a nuclear ray."
+  },
+  {
+   "id": "so762_1440_2892",
+   "speaker": "2892",
+   "age": 24,
+   "text": "SENDING YOU LOVE AND BLESSINGS",
+   "dur": 2.62,
+   "utt_acc": 8,
+   "bad": [
+    {
+     "w": "BLESSINGS",
+     "acc": 5,
+     "mis": [
+      [
+       "EH",
+       "AH"
+      ]
+     ],
+     "k": 4,
+     "asr": "blessing.",
+     "flagged": false,
+     "pred": 9
+    }
+   ],
+   "heard": "Sending you love and blessing.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [
+    {
+     "kind": "grammar",
+     "old": "blessing.",
+     "new": "blessings",
+     "kept": true
+    }
+   ],
+   "cuts": [],
+   "final": "Sending you love and blessings",
+   "after_heard": "Sending you love and blessings.",
+   "after_flags": [],
+   "untouched": {
+    "L": 1.485,
+    "Ra": 2.014,
+    "Rb": 2.09,
+    "op_t0": 1.522,
+    "op_t1": 2.056,
+    "max_diff_lsb": 1.0,
+    "exact_share": 0.9999,
+    "share_untouched": 0.769
+   },
+   "seam": {
+    "left_flux_orig": 0.86,
+    "right_flux_orig": 1.022,
+    "left_mel_jump": 2.35,
+    "left_mel_jump_orig": 0.73,
+    "right_mel_jump": 2.04,
+    "right_mel_jump_orig": 0.84,
+    "left_flux": 1.194,
+    "left_flux_pct": 100.0,
+    "left_click_ratio": 0.09,
+    "left_level_db": -41.0,
+    "right_flux": 0.929,
+    "right_flux_pct": 93.5,
+    "right_click_ratio": 0.15,
+    "right_level_db": -57.29999923706055,
+    "insert_s": 0.529,
+    "orig_s": 0.605,
+    "insert_rms_db": -30.799999237060547,
+    "orig_rms_db": -33.400001525878906,
+    "ctx_rms_db": -29.399999618530273,
+    "f0_insert": 103.9,
+    "f0_orig": null,
+    "f0_ctx": 117.6,
+    "f0_insert_vs_ctx_st": -2.15,
+    "left_f0_jump_st": 0.7,
+    "right_f0_jump_st": -9.1,
+    "hf_insert_db": -30.5,
+    "hf_orig_db": -27.0,
+    "hf_ctx_db": -42.0
+   }
+  },
+  {
+   "id": "so762_1502_2937",
+   "speaker": "2937",
+   "age": 19,
+   "text": "POLICE HAVE YET TO CHARGE ANYONE IN BOMBINGS",
+   "dur": 4.02,
+   "utt_acc": 8,
+   "bad": [
+    {
+     "w": "BOMBINGS",
+     "acc": 5,
+     "mis": [
+      [
+       "AH",
+       "UH"
+      ]
+     ],
+     "k": 7,
+     "asr": "boomings.",
+     "flagged": false,
+     "pred": 9.9
+    }
+   ],
+   "heard": "Police have yet to charge anyone in boomings.",
+   "median": 9.9,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [
+    {
+     "kind": "grammar",
+     "old": "boomings.",
+     "new": "bombings",
+     "kept": true
+    }
+   ],
+   "cuts": [],
+   "final": "Police have yet to charge anyone in bombings",
+   "after_heard": "Police have yet to charge anyone in bombings.",
+   "after_flags": [],
+   "untouched": {
+    "L": 2.742,
+    "Ra": 3.356,
+    "Rb": 3.343,
+    "op_t0": 2.764,
+    "op_t1": 3.296,
+    "max_diff_lsb": 0.0,
+    "exact_share": 1.0,
+    "share_untouched": 0.851
+   },
+   "seam": {
+    "left_flux_orig": 0.974,
+    "right_flux_orig": 0.756,
+    "left_mel_jump": 1.63,
+    "left_mel_jump_orig": 1.27,
+    "right_mel_jump": 0.58,
+    "right_mel_jump_orig": 0.46,
+    "left_flux": 1.07,
+    "left_flux_pct": 97.2,
+    "left_click_ratio": 0.03,
+    "left_level_db": -31.899999618530273,
+    "right_flux": 0.805,
+    "right_flux_pct": 88.9,
+    "right_click_ratio": 0.97,
+    "right_level_db": -23.600000381469727,
+    "insert_s": 0.614,
+    "orig_s": 0.601,
+    "insert_rms_db": -16.700000762939453,
+    "orig_rms_db": -16.799999237060547,
+    "ctx_rms_db": -17.700000762939453,
+    "f0_insert": 159.3,
+    "f0_orig": 163.5,
+    "f0_ctx": 172.7,
+    "f0_insert_vs_ctx_st": -1.4,
+    "f0_orig_vs_ctx_st": -0.95,
+    "left_f0_jump_st": 0.56,
+    "right_f0_jump_st": null,
+    "hf_insert_db": -43.4,
+    "hf_orig_db": -38.9,
+    "hf_ctx_db": -43.5
+   }
+  },
+  {
+   "id": "so762_2225_9608",
+   "speaker": "9608",
+   "age": 30,
+   "text": "BUT STILL I WOULD DO MY BEST.",
+   "dur": 4.43,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "BEST",
+     "acc": 3,
+     "mis": [
+      [
+       "EH",
+       "AH"
+      ],
+      [
+       "S",
+       "CH"
+      ],
+      [
+       "T",
+       "<DEL>"
+      ]
+     ],
+     "k": 6,
+     "asr": "batch.",
+     "flagged": false,
+     "pred": 9.3
+    }
+   ],
+   "heard": "But still, I would do my batch.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "But still, I would do my batch."
+  },
+  {
+   "id": "so762_2256_9610",
+   "speaker": "9610",
+   "age": 22,
+   "text": "THERE WAS NOTHING LEFT FOR ME.",
+   "dur": 6.01,
+   "utt_acc": 5,
+   "bad": [
+    {
+     "w": "THERE",
+     "acc": 3,
+     "mis": [
+      [
+       "DH",
+       "HH"
+      ]
+     ],
+     "k": 0,
+     "asr": "Here",
+     "flagged": false,
+     "pred": 8.4
+    }
+   ],
+   "heard": "Here was nothing left for me.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Here was nothing left for me."
+  },
+  {
+   "id": "so762_2258_9610",
+   "speaker": "9610",
+   "age": 22,
+   "text": "IT WAS WHEN I WAS VERY YOUNG.",
+   "dur": 6.07,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "WHEN",
+     "acc": 3,
+     "mis": [
+      [
+       "EH",
+       "IH"
+      ]
+     ],
+     "k": 2,
+     "asr": "when",
+     "flagged": false,
+     "pred": 8.4
+    }
+   ],
+   "heard": "It was when I was very young.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "It was when I was very young."
+  },
+  {
+   "id": "so762_2259_9610",
+   "speaker": "9610",
+   "age": 22,
+   "text": "I ASKED TO BE SURE.",
+   "dur": 4.07,
+   "utt_acc": 4,
+   "bad": [
+    {
+     "w": "SURE",
+     "acc": 3,
+     "mis": [
+      [
+       "SH",
+       "SH*"
+      ],
+      [
+       "UH",
+       "IH"
+      ],
+      [
+       "AH",
+       "AH*"
+      ]
+     ],
+     "k": 5,
+     "asr": "here.",
+     "flagged": true,
+     "pred": 6.5
+    }
+   ],
+   "heard": "I ask the to be here.",
+   "median": 10,
+   "accent": [],
+   "flags": [
+    {
+     "i": 5,
+     "word": "here.",
+     "acc": 6.5,
+     "labelled_bad": true
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 5,
+     "word": "here.",
+     "before": 6.5,
+     "after": 7,
+     "verified": true,
+     "kept": true,
+     "engine": "playdiff",
+     "labelled_bad": true,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 7,
+       "heard": "I asked to be here."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 5.95,
+       "heard": "I ask the to be here."
+      }
+     ],
+     "after_asr": "here.",
+     "after_rescore": 9.5,
+     "after_flagged": false
+    }
+   ],
+   "other_reps": [
+    {
+     "kind": "misspoken",
+     "old": "ask the",
+     "new": "asked them",
+     "kept": true
+    },
+    {
+     "kind": "grammar",
+     "old": "to",
+     "new": "them",
+     "kept": true
+    }
+   ],
+   "cuts": [],
+   "final": "I asked them them be here",
+   "after_heard": "I asked them them be here.",
+   "after_flags": []
+  },
+  {
+   "id": "so762_2261_9612",
+   "speaker": "9612",
+   "age": 20,
+   "text": "I WANT TO SEE HIM MYSELF.",
+   "dur": 3.81,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "WANT",
+     "acc": 2,
+     "mis": [
+      [
+       "W",
+       "G"
+      ],
+      [
+       "AA",
+       "OW"
+      ],
+      [
+       "N",
+       "<DEL>"
+      ],
+      [
+       "T",
+       "<DEL>"
+      ]
+     ],
+     "k": 1,
+     "asr": "go",
+     "flagged": false,
+     "pred": 9.8
+    }
+   ],
+   "heard": "I go to see him myself.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "I go to see him myself."
+  },
+  {
+   "id": "so762_2281_9617",
+   "speaker": "9617",
+   "age": 35,
+   "text": "THEN ON OUT THE BACK DOOR OF THE HOUSE.",
+   "dur": 4.35,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "THEN",
+     "acc": 3,
+     "mis": [
+      [
+       "N",
+       "<DEL>"
+      ]
+     ],
+     "k": 0,
+     "asr": "The",
+     "flagged": false,
+     "pred": 8.5
+    }
+   ],
+   "heard": "The on the back door of the house.",
+   "median": 10,
+   "accent": [],
+   "flags": [
+    {
+     "i": 4,
+     "word": "door",
+     "acc": 6.2,
+     "labelled_bad": false
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 4,
+     "word": "door",
+     "before": 6.2,
+     "after": 8.61,
+     "verified": true,
+     "kept": true,
+     "engine": "playdiff",
+     "labelled_bad": false,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 8.61,
+       "heard": "The un -out -the -back door of the house."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 8.32,
+       "heard": "The un -out -the -back door of the house."
+      }
+     ],
+     "after_asr": "door",
+     "after_rescore": 8.6,
+     "after_flagged": false
+    }
+   ],
+   "other_reps": [],
+   "cuts": [
+    {
+     "kind": "restart",
+     "text": "The on"
+    }
+   ],
+   "final": "the back door of the house.",
+   "after_heard": "The back door of the house.",
+   "after_flags": []
+  },
+  {
+   "id": "so762_2285_9617",
+   "speaker": "9617",
+   "age": 35,
+   "text": "AND ONCE MORE SHE WAS ALL HIS OWN.",
+   "dur": 5.67,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "OWN",
+     "acc": 3,
+     "mis": [
+      [
+       "OW",
+       "<unk>"
+      ],
+      [
+       "N",
+       "<unk>"
+      ]
+     ],
+     "k": null,
+     "asr": null,
+     "flagged": false,
+     "pred": null
+    }
+   ],
+   "heard": "And once more, she was a woman.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "And once more, she was a woman."
+  },
+  {
+   "id": "so762_2286_9617",
+   "speaker": "9617",
+   "age": 35,
+   "text": "IT NEVER HAPPENED AND IT NEVER WILL.",
+   "dur": 3.8,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "HAPPENED",
+     "acc": 5,
+     "mis": [
+      [
+       "AH",
+       "AE"
+      ]
+     ],
+     "k": 2,
+     "asr": "happened",
+     "flagged": true,
+     "pred": 4.2
+    }
+   ],
+   "heard": "It never happened and it never will.",
+   "median": 10,
+   "accent": [],
+   "flags": [
+    {
+     "i": 2,
+     "word": "happened",
+     "acc": 4.2,
+     "labelled_bad": true
+    },
+    {
+     "i": 5,
+     "word": "never",
+     "acc": 6.2,
+     "labelled_bad": false
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 2,
+     "word": "happened",
+     "before": 4.2,
+     "after": 8.57,
+     "verified": true,
+     "kept": true,
+     "engine": "f5",
+     "labelled_bad": true,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 7.55,
+       "heard": "It never happened and it never will."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 8.57,
+       "heard": "It never happened and it never will."
+      }
+     ],
+     "after_asr": "happened",
+     "after_rescore": 8.6,
+     "after_flagged": false
+    },
+    {
+     "i": 5,
+     "word": "never",
+     "before": 6.2,
+     "after": 6.22,
+     "verified": true,
+     "kept": true,
+     "engine": "playdiff",
+     "labelled_bad": false,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 6.22,
+       "heard": "It never happened and it never will."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 3.26,
+       "heard": "It never happened and it never will."
+      }
+     ],
+     "after_asr": "never",
+     "after_rescore": 5.4,
+     "after_flagged": true
+    }
+   ],
+   "other_reps": [],
+   "cuts": [],
+   "final": "It never happened and it never will.",
+   "after_heard": "It never happened and it never will.",
+   "after_flags": [
+    "never"
+   ]
+  },
+  {
+   "id": "so762_2292_9617",
+   "speaker": "9617",
+   "age": 35,
+   "text": "SHE WALKED OUT OF THE ROOM AGAIN.",
+   "dur": 4.84,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "WALKED",
+     "acc": 3,
+     "mis": [
+      [
+       "AO",
+       "<unk>"
+      ],
+      [
+       "K",
+       "T"
+      ]
+     ],
+     "k": 1,
+     "asr": "wanted",
+     "flagged": true,
+     "pred": 6.2
+    }
+   ],
+   "heard": "She wanted out of the room again.",
+   "median": 10,
+   "accent": [],
+   "flags": [
+    {
+     "i": 1,
+     "word": "wanted",
+     "acc": 6.2,
+     "labelled_bad": true
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 1,
+     "word": "wanted",
+     "before": 6.2,
+     "after": 8.05,
+     "verified": true,
+     "kept": true,
+     "engine": "f5",
+     "labelled_bad": true,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 7.57,
+       "heard": "She wanted out of the room again."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 8.05,
+       "heard": "She wanted out of the room again."
+      }
+     ],
+     "after_asr": "wanted",
+     "after_rescore": 8,
+     "after_flagged": false
+    }
+   ],
+   "other_reps": [],
+   "cuts": [],
+   "final": "She wanted out of the room again.",
+   "after_heard": "She wanted out of the room again.",
+   "after_flags": [],
+   "untouched": {
+    "L": 1.101,
+    "Ra": 2.181,
+    "Rb": 2.229,
+    "op_t0": 1.125,
+    "op_t1": 2.25,
+    "max_diff_lsb": 1.0,
+    "exact_share": 1.0,
+    "share_untouched": 0.767
+   },
+   "seam": {
+    "left_flux_orig": 0.845,
+    "right_flux_orig": 0.776,
+    "left_mel_jump": 1.47,
+    "left_mel_jump_orig": 0.88,
+    "right_mel_jump": 1.47,
+    "right_mel_jump_orig": 0.86,
+    "left_flux": 0.828,
+    "left_flux_pct": 91.7,
+    "left_click_ratio": 0.16,
+    "left_level_db": -29.700000762939453,
+    "right_flux": 0.836,
+    "right_flux_pct": 97.2,
+    "right_click_ratio": 0.17,
+    "right_level_db": -47.0,
+    "insert_s": 1.08,
+    "orig_s": 1.129,
+    "insert_rms_db": -27.5,
+    "orig_rms_db": -28.0,
+    "ctx_rms_db": -26.600000381469727,
+    "f0_insert": 267.8,
+    "f0_orig": 209.5,
+    "f0_ctx": 255.7,
+    "f0_insert_vs_ctx_st": 0.8,
+    "f0_orig_vs_ctx_st": -3.45,
+    "left_f0_jump_st": -1.31,
+    "right_f0_jump_st": -1.33,
+    "hf_insert_db": -63.2,
+    "hf_orig_db": -64.5,
+    "hf_ctx_db": -52.6
+   }
+  },
+  {
+   "id": "so762_2294_9617",
+   "speaker": "9617",
+   "age": 35,
+   "text": "HE WAS TALENTED IN MORE THINGS THAN I WAS.",
+   "dur": 4.83,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "TALENTED",
+     "acc": 3,
+     "mis": [
+      [
+       "AE",
+       "AH"
+      ],
+      [
+       "L",
+       "<DEL>"
+      ],
+      [
+       "AH",
+       "<DEL>"
+      ],
+      [
+       "N",
+       "<DEL>"
+      ]
+     ],
+     "k": 2,
+     "asr": "taught",
+     "flagged": false,
+     "pred": 7
+    }
+   ],
+   "heard": "He was taught in more things than I was.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "He was taught in more things than I was."
+  },
+  {
+   "id": "so762_2296_9617",
+   "speaker": "9617",
+   "age": 35,
+   "text": "SO THAT IS WHAT I WANT TO BE CALLED.",
+   "dur": 4.34,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "CALLED",
+     "acc": 5,
+     "mis": [
+      [
+       "AO",
+       "OW"
+      ]
+     ],
+     "k": 8,
+     "asr": "called.",
+     "flagged": true,
+     "pred": 6.3
+    }
+   ],
+   "heard": "So that is what I want to be called.",
+   "median": 10,
+   "accent": [],
+   "flags": [
+    {
+     "i": 8,
+     "word": "called.",
+     "acc": 6.3,
+     "labelled_bad": true
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 8,
+     "word": "called.",
+     "before": 6.3,
+     "after": 8.73,
+     "verified": true,
+     "kept": true,
+     "engine": "playdiff",
+     "labelled_bad": true,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 8.73,
+       "heard": "So that is what I want to be called."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 7.25,
+       "heard": "So that is what I want to be called."
+      }
+     ],
+     "after_asr": "called.",
+     "after_rescore": 8.7,
+     "after_flagged": false
+    }
+   ],
+   "other_reps": [],
+   "cuts": [],
+   "final": "So that is what I want to be called",
+   "after_heard": "So that is what I want to be called.",
+   "after_flags": [],
+   "untouched": {
+    "L": 3.251,
+    "Ra": 3.843,
+    "Rb": 3.661,
+    "op_t0": 3.293,
+    "op_t1": 3.614,
+    "max_diff_lsb": 1.0,
+    "exact_share": 1.0,
+    "share_untouched": 0.906
+   },
+   "seam": {
+    "left_flux_orig": 0.9,
+    "right_flux_orig": 0.7,
+    "left_mel_jump": 5.56,
+    "left_mel_jump_orig": 1.59,
+    "right_mel_jump": 3.03,
+    "right_mel_jump_orig": 0.96,
+    "left_flux": 1.549,
+    "left_flux_pct": 100.0,
+    "left_click_ratio": 0.1,
+    "left_level_db": -49.70000076293945,
+    "right_flux": 0.853,
+    "right_flux_pct": 97.2,
+    "right_click_ratio": 1.47,
+    "right_level_db": -31.100000381469727,
+    "insert_s": 0.592,
+    "orig_s": 0.41,
+    "insert_rms_db": -26.799999237060547,
+    "orig_rms_db": -22.100000381469727,
+    "ctx_rms_db": -33.0,
+    "f0_insert": 200.7,
+    "f0_orig": 230.5,
+    "f0_ctx": 225.2,
+    "f0_insert_vs_ctx_st": -2.0,
+    "f0_orig_vs_ctx_st": 0.4,
+    "left_f0_jump_st": 0.17,
+    "right_f0_jump_st": -0.13,
+    "hf_insert_db": -59.1,
+    "hf_orig_db": -59.6,
+    "hf_ctx_db": -52.2
+   }
+  },
+  {
+   "id": "so762_2308_9618",
+   "speaker": "9618",
+   "age": 24,
+   "text": "THIS IS THE WAY OF LIFE.",
+   "dur": 2.88,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "LIFE",
+     "acc": 3,
+     "mis": [
+      [
+       "AY",
+       "IH"
+      ]
+     ],
+     "k": 5,
+     "asr": "leaf.",
+     "flagged": false,
+     "pred": 10
+    }
+   ],
+   "heard": "This is the way of leaf.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "This is the way of leaf."
+  },
+  {
+   "id": "so762_2310_9618",
+   "speaker": "9618",
+   "age": 24,
+   "text": "I WANTED TO FIND MORE OUT ABOUT YOU.",
+   "dur": 5.44,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "WANTED",
+     "acc": 5,
+     "mis": [
+      [
+       "IH",
+       "<DEL>"
+      ],
+      [
+       "D",
+       "<DEL>"
+      ]
+     ],
+     "k": 1,
+     "asr": "want",
+     "flagged": false,
+     "pred": 9.2
+    }
+   ],
+   "heard": "I want to find more about for you.",
+   "median": 10,
+   "accent": [],
+   "flags": [
+    {
+     "i": 5,
+     "word": "about",
+     "acc": 5.7,
+     "labelled_bad": false
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 5,
+     "word": "about",
+     "before": 5.7,
+     "after": 9.09,
+     "verified": true,
+     "kept": true,
+     "engine": "playdiff",
+     "labelled_bad": false,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 9.09,
+       "heard": "I want to find more out about for you."
+      },
+      {
+       "engine": "f5",
+       "ok": false,
+       "after": 4.21,
+       "heard": "I want to find more out of you."
+      }
+     ],
+     "after_asr": "about",
+     "after_rescore": 8.9,
+     "after_flagged": false
+    }
+   ],
+   "other_reps": [
+    {
+     "kind": "grammar",
+     "old": "for you.",
+     "new": "you",
+     "kept": true
+    }
+   ],
+   "cuts": [],
+   "final": "I want to find more about you",
+   "after_heard": "I want to find more out about you.",
+   "after_flags": []
+  },
+  {
+   "id": "so762_2322_9622",
+   "speaker": "9622",
+   "age": 20,
+   "text": "SHE THOUGHT FOR A MOMENT.",
+   "dur": 4.34,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "MOMENT",
+     "acc": 3,
+     "mis": [
+      [
+       "OW",
+       "AH"
+      ],
+      [
+       "M",
+       "<DEL>"
+      ],
+      [
+       "AH",
+       "<DEL>"
+      ],
+      [
+       "N",
+       "<DEL>"
+      ]
+     ],
+     "k": null,
+     "asr": null,
+     "flagged": false,
+     "pred": null
+    }
+   ],
+   "heard": "See, sort of, four, uh, motor.",
+   "median": 10,
+   "accent": [],
+   "flags": [
+    {
+     "i": 3,
+     "word": "four,",
+     "acc": 6.2,
+     "labelled_bad": false
+    },
+    {
+     "i": 5,
+     "word": "motor.",
+     "acc": 4.8,
+     "labelled_bad": false
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 3,
+     "word": "four,",
+     "before": 6.2,
+     "after": 7.7,
+     "verified": true,
+     "kept": true,
+     "engine": "playdiff",
+     "labelled_bad": false,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": false,
+       "after": 3.97,
+       "heard": "Si, sota, for, uh, mata."
+      },
+      {
+       "engine": "f5",
+       "ok": false,
+       "after": 6.94,
+       "heard": "See, sort of, for, uh, mother."
+      },
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 7.7,
+       "heard": "Si, sota, four, uh, mata."
+      },
+      {
+       "engine": "f5",
+       "ok": false,
+       "after": 6.61,
+       "heard": "See, sort of, for, uh, mother."
+      }
+     ],
+     "after_asr": null,
+     "after_rescore": null,
+     "after_flagged": false
+    },
+    {
+     "i": 5,
+     "word": "motor.",
+     "before": 4.8,
+     "after": 8.55,
+     "verified": true,
+     "kept": true,
+     "engine": "f5",
+     "labelled_bad": false,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 8.44,
+       "heard": "Si, sa, ta, fa, o, motor."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 8.55,
+       "heard": "C, Sata, 4, uh, motor."
+      }
+     ],
+     "after_asr": null,
+     "after_rescore": null,
+     "after_flagged": false
+    }
+   ],
+   "other_reps": [],
+   "cuts": [
+    {
+     "kind": "filler",
+     "text": "uh,"
+    }
+   ],
+   "final": "See, sort of, four motor",
+   "after_heard": "Si, sata, fur, mota.",
+   "after_flags": []
+  },
+  {
+   "id": "so762_2343_9623",
+   "speaker": "9623",
+   "age": 21,
+   "text": "THIS WAS WHERE SHE HAD LEFT THEM.",
+   "dur": 6.82,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "LEFT",
+     "acc": 5,
+     "mis": [
+      [
+       "EH",
+       "IH"
+      ]
+     ],
+     "k": 5,
+     "asr": "left",
+     "flagged": false,
+     "pred": 7.5
+    }
+   ],
+   "heard": "This was where she had left them.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "This was where she had left them."
+  },
+  {
+   "id": "so762_2357_9623",
+   "speaker": "9623",
+   "age": 21,
+   "text": "NO, IT WAS THE EYES.",
+   "dur": 3.88,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "EYES",
+     "acc": 3,
+     "mis": [
+      [
+       "AY",
+       "<unk>"
+      ]
+     ],
+     "k": null,
+     "asr": null,
+     "flagged": false,
+     "pred": null
+    }
+   ],
+   "heard": "No, it was real.",
+   "median": 10,
+   "accent": [],
+   "flags": [
+    {
+     "i": 3,
+     "word": "real.",
+     "acc": 4.4,
+     "labelled_bad": false
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 3,
+     "word": "real.",
+     "before": 4.4,
+     "after": 8.73,
+     "verified": true,
+     "kept": true,
+     "engine": "playdiff",
+     "labelled_bad": false,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 8.73,
+       "heard": "No, it was real."
+      },
+      {
+       "engine": "f5",
+       "ok": false,
+       "after": 4.8,
+       "heard": "No, it was a little..."
+      }
+     ],
+     "after_asr": "real.",
+     "after_rescore": 8.7,
+     "after_flagged": false
+    }
+   ],
+   "other_reps": [],
+   "cuts": [],
+   "final": "No, it was real",
+   "after_heard": "No, it was real.",
+   "after_flags": [],
+   "untouched": {
+    "L": 2.851,
+    "Ra": 3.415,
+    "Rb": 3.274,
+    "op_t0": 2.885,
+    "op_t1": 3.297,
+    "max_diff_lsb": 0.0,
+    "exact_share": 1.0,
+    "share_untouched": 0.891
+   },
+   "seam": {
+    "left_flux_orig": 0.782,
+    "right_flux_orig": 0.815,
+    "left_mel_jump": 0.9,
+    "left_mel_jump_orig": 0.64,
+    "right_mel_jump": 2.37,
+    "right_mel_jump_orig": 0.52,
+    "left_flux": 0.797,
+    "left_flux_pct": 91.7,
+    "left_click_ratio": 1.09,
+    "left_level_db": -32.599998474121094,
+    "right_flux": 0.885,
+    "right_flux_pct": 97.2,
+    "right_click_ratio": 0.33,
+    "right_level_db": -37.400001525878906,
+    "insert_s": 0.565,
+    "orig_s": 0.423,
+    "insert_rms_db": -27.100000381469727,
+    "orig_rms_db": -28.100000381469727,
+    "ctx_rms_db": -29.299999237060547,
+    "f0_insert": 120.0,
+    "f0_orig": 122.8,
+    "f0_ctx": 116.6,
+    "f0_insert_vs_ctx_st": 0.5,
+    "f0_orig_vs_ctx_st": 0.9,
+    "left_f0_jump_st": 0.1,
+    "right_f0_jump_st": 2.6,
+    "hf_insert_db": -59.6,
+    "hf_orig_db": -48.8,
+    "hf_ctx_db": -49.7
+   }
+  },
+  {
+   "id": "so762_2371_9626",
+   "speaker": "9626",
+   "age": 37,
+   "text": "I NEED TO BE HERE.",
+   "dur": 3.35,
+   "utt_acc": 5,
+   "bad": [
+    {
+     "w": "HERE",
+     "acc": 3,
+     "mis": [
+      [
+       "HH",
+       "Z"
+      ]
+     ],
+     "k": 4,
+     "asr": "there.",
+     "flagged": false,
+     "pred": 8.8
+    }
+   ],
+   "heard": "I need to be there.",
+   "median": 10,
+   "accent": [],
+   "flags": [
+    {
+     "i": 1,
+     "word": "need",
+     "acc": 5.3,
+     "labelled_bad": false
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 1,
+     "word": "need",
+     "before": 5.3,
+     "after": 9.88,
+     "verified": true,
+     "kept": true,
+     "engine": "f5",
+     "labelled_bad": false,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 9.11,
+       "heard": "I need to be there."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 9.88,
+       "heard": "I need to be there."
+      }
+     ],
+     "after_asr": "need",
+     "after_rescore": 9.9,
+     "after_flagged": false
+    }
+   ],
+   "other_reps": [],
+   "cuts": [],
+   "final": "I need to be there.",
+   "after_heard": "I need to be there.",
+   "after_flags": [
+    "there."
+   ],
+   "untouched": {
+    "L": 0.805,
+    "Ra": 1.459,
+    "Rb": 1.527,
+    "op_t0": 0.852,
+    "op_t1": 1.533,
+    "max_diff_lsb": 1.0,
+    "exact_share": 0.9999,
+    "share_untouched": 0.784
+   },
+   "seam": {
+    "left_flux_orig": 0.72,
+    "right_flux_orig": 0.972,
+    "left_mel_jump": 1.0,
+    "left_mel_jump_orig": 0.59,
+    "right_mel_jump": 1.03,
+    "right_mel_jump_orig": 2.9,
+    "left_flux": 0.864,
+    "left_flux_pct": 98.1,
+    "left_click_ratio": 0.28,
+    "left_level_db": -26.5,
+    "right_flux": 0.86,
+    "right_flux_pct": 94.4,
+    "right_click_ratio": 1.19,
+    "right_level_db": -47.0,
+    "insert_s": 0.654,
+    "orig_s": 0.722,
+    "insert_rms_db": -28.399999618530273,
+    "orig_rms_db": -25.200000762939453,
+    "ctx_rms_db": -27.799999237060547,
+    "f0_insert": 133.1,
+    "f0_orig": 120.7,
+    "f0_ctx": 115.9,
+    "f0_insert_vs_ctx_st": 2.4,
+    "f0_orig_vs_ctx_st": 0.7,
+    "left_f0_jump_st": 0.7,
+    "right_f0_jump_st": -0.43,
+    "hf_insert_db": -37.1,
+    "hf_orig_db": -41.5,
+    "hf_ctx_db": -39.6
+   }
+  },
+  {
+   "id": "so762_2383_9629",
+   "speaker": "9629",
+   "age": 25,
+   "text": "THEN IT WOULD ALL BE OVER.",
+   "dur": 5.94,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "OVER",
+     "acc": 3,
+     "mis": [
+      [
+       "OW",
+       "AO"
+      ],
+      [
+       "AH",
+       "<DEL>"
+      ]
+     ],
+     "k": 5,
+     "asr": "or.",
+     "flagged": false,
+     "pred": 9.1
+    }
+   ],
+   "heard": "Then, it, water, or, beer, or.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Then, it, water, or, beer, or."
+  },
+  {
+   "id": "so762_2388_9629",
+   "speaker": "9629",
+   "age": 25,
+   "text": "I WALKED UP TO MY ROOM.",
+   "dur": 4.91,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "ROOM",
+     "acc": 3,
+     "mis": [
+      [
+       "UH",
+       "AA"
+      ]
+     ],
+     "k": 5,
+     "asr": "room.",
+     "flagged": false,
+     "pred": 9.4
+    }
+   ],
+   "heard": "I walked up to my room.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "I walked up to my room."
+  },
+  {
+   "id": "so762_2389_9629",
+   "speaker": "9629",
+   "age": 25,
+   "text": "I CAN GET HER BACK.",
+   "dur": 4.65,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "BACK",
+     "acc": 3,
+     "mis": [
+      [
+       "AE",
+       "AH"
+      ]
+     ],
+     "k": 4,
+     "asr": "back.",
+     "flagged": false,
+     "pred": 9.1
+    }
+   ],
+   "heard": "I can get her back.",
+   "median": 10,
+   "accent": [],
+   "flags": [
+    {
+     "i": 1,
+     "word": "can",
+     "acc": 6.4,
+     "labelled_bad": false
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 1,
+     "word": "can",
+     "before": 6.4,
+     "after": 9.19,
+     "verified": true,
+     "kept": true,
+     "engine": "playdiff",
+     "labelled_bad": false,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 9.19,
+       "heard": "I can get her, her, back her."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 7.81,
+       "heard": "I can get her back."
+      }
+     ],
+     "after_asr": "can",
+     "after_rescore": 9.2,
+     "after_flagged": false
+    }
+   ],
+   "other_reps": [],
+   "cuts": [],
+   "final": "I can get her back.",
+   "after_heard": "I can get her, her, back her.",
+   "after_flags": [],
+   "untouched": {
+    "L": 0.855,
+    "Ra": 1.118,
+    "Rb": 1.582,
+    "op_t0": 0.902,
+    "op_t1": 1.603,
+    "max_diff_lsb": 1.0,
+    "exact_share": 0.9999,
+    "share_untouched": 0.844
+   },
+   "seam": {
+    "left_flux_orig": 0.906,
+    "right_flux_orig": 0.876,
+    "left_mel_jump": 1.97,
+    "left_mel_jump_orig": 1.23,
+    "right_mel_jump": 1.59,
+    "right_mel_jump_orig": 1.03,
+    "left_flux": 1.031,
+    "left_flux_pct": 98.1,
+    "left_click_ratio": 0.06,
+    "left_level_db": -59.20000076293945,
+    "right_flux": 0.818,
+    "right_flux_pct": 82.4,
+    "right_click_ratio": 0.03,
+    "right_level_db": -53.20000076293945,
+    "insert_s": 0.263,
+    "orig_s": 0.727,
+    "insert_rms_db": -29.899999618530273,
+    "orig_rms_db": -33.599998474121094,
+    "ctx_rms_db": -31.600000381469727,
+    "f0_insert": 272.5,
+    "f0_orig": 227.8,
+    "f0_ctx": 225.2,
+    "f0_insert_vs_ctx_st": 3.3,
+    "f0_orig_vs_ctx_st": 0.2,
+    "left_f0_jump_st": 7.17,
+    "right_f0_jump_st": 0.6,
+    "hf_insert_db": -45.1,
+    "hf_orig_db": -41.4,
+    "hf_ctx_db": -43.1
+   }
+  },
+  {
+   "id": "so762_2393_9629",
+   "speaker": "9629",
+   "age": 25,
+   "text": "I MADE IT TO HER HOUSE!",
+   "dur": 4.39,
+   "utt_acc": 5,
+   "bad": [
+    {
+     "w": "MADE",
+     "acc": 3,
+     "mis": [
+      [
+       "EY",
+       "AH"
+      ]
+     ],
+     "k": 1,
+     "asr": "mother",
+     "flagged": false,
+     "pred": 8.2
+    }
+   ],
+   "heard": "I mother eat to her horse.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [
+    {
+     "kind": "misspoken",
+     "old": "I",
+     "new": "My",
+     "kept": true
+    },
+    {
+     "kind": "grammar",
+     "old": "mother eat to her horse.",
+     "new": "mother feeds her horse",
+     "kept": true
+    }
+   ],
+   "cuts": [],
+   "final": "My mother feeds her horse",
+   "after_heard": "My mother feeds her horse.",
+   "after_flags": []
+  },
+  {
+   "id": "so762_2399_9629",
+   "speaker": "9629",
+   "age": 25,
+   "text": "IT WAS NOT YET TIME.",
+   "dur": 4.92,
+   "utt_acc": 5,
+   "bad": [
+    {
+     "w": "TIME",
+     "acc": 3,
+     "mis": [
+      [
+       "AY",
+       "IY"
+      ]
+     ],
+     "k": 4,
+     "asr": "Tim.",
+     "flagged": false,
+     "pred": 8.6
+    }
+   ],
+   "heard": "It was not yet, Tim.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "It was not yet, Tim."
+  },
+  {
+   "id": "so762_2400_9631",
+   "speaker": "9631",
+   "age": 26,
+   "text": "HE COULD, BUT WHAT WOULD HE DO?",
+   "dur": 4.98,
+   "utt_acc": 4,
+   "bad": [
+    {
+     "w": "COULD",
+     "acc": 3,
+     "mis": [
+      [
+       "UH",
+       "AA"
+      ]
+     ],
+     "k": 1,
+     "asr": "calls",
+     "flagged": false,
+     "pred": 7.4
+    }
+   ],
+   "heard": "He calls about what he do.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [
+    {
+     "kind": "grammar",
+     "old": "do.",
+     "new": "does",
+     "kept": true
+    }
+   ],
+   "cuts": [],
+   "final": "He calls about what he does",
+   "after_heard": "He called about what he does.",
+   "after_flags": [],
+   "untouched": {
+    "L": 4.245,
+    "Ra": 4.66,
+    "Rb": 4.46,
+    "op_t0": 4.277,
+    "op_t1": 4.418,
+    "max_diff_lsb": 1.0,
+    "exact_share": 1.0,
+    "share_untouched": 0.957
+   },
+   "seam": {
+    "left_flux_orig": 0.997,
+    "right_flux_orig": 0.856,
+    "left_mel_jump": 2.01,
+    "left_mel_jump_orig": 1.16,
+    "right_mel_jump": 3.49,
+    "right_mel_jump_orig": 0.71,
+    "left_flux": 1.089,
+    "left_flux_pct": 100.0,
+    "left_click_ratio": 0.07,
+    "left_level_db": -53.599998474121094,
+    "right_flux": 1.3,
+    "right_flux_pct": 100.0,
+    "right_click_ratio": 0.37,
+    "right_level_db": -31.700000762939453,
+    "insert_s": 0.415,
+    "orig_s": 0.215,
+    "insert_rms_db": -28.700000762939453,
+    "orig_rms_db": -26.600000381469727,
+    "ctx_rms_db": -29.100000381469727,
+    "f0_insert": 127.1,
+    "f0_orig": 139.4,
+    "f0_ctx": 139.4,
+    "f0_insert_vs_ctx_st": -1.6,
+    "f0_orig_vs_ctx_st": 0.0,
+    "left_f0_jump_st": -0.5,
+    "right_f0_jump_st": null,
+    "hf_insert_db": -22.9,
+    "hf_orig_db": -40.9,
+    "hf_ctx_db": -42.3
+   }
+  },
+  {
+   "id": "so762_2406_9631",
+   "speaker": "9631",
+   "age": 26,
+   "text": "BUT THE EYES WERE RIGHT.",
+   "dur": 3.21,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "EYES",
+     "acc": 3,
+     "mis": [
+      [
+       "AY",
+       "IY"
+      ]
+     ],
+     "k": 2,
+     "asr": "is",
+     "flagged": false,
+     "pred": 9.5
+    }
+   ],
+   "heard": "But the is all right.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [
+    {
+     "kind": "grammar",
+     "old": "is",
+     "new": "was",
+     "kept": true
+    }
+   ],
+   "cuts": [],
+   "final": "But the was all right.",
+   "after_heard": "But, uh, it was alright.",
+   "after_flags": [],
+   "untouched": {
+    "L": 1.595,
+    "Ra": 1.941,
+    "Rb": 2.057,
+    "op_t0": 1.634,
+    "op_t1": 2.075,
+    "max_diff_lsb": 1.0,
+    "exact_share": 1.0,
+    "share_untouched": 0.856
+   },
+   "seam": {
+    "left_flux_orig": 1.075,
+    "right_flux_orig": 0.797,
+    "left_mel_jump": 2.51,
+    "left_mel_jump_orig": 1.49,
+    "right_mel_jump": 1.56,
+    "right_mel_jump_orig": 0.77,
+    "left_flux": 1.075,
+    "left_flux_pct": 100.0,
+    "left_click_ratio": 0.45,
+    "left_level_db": -35.20000076293945,
+    "right_flux": 0.851,
+    "right_flux_pct": 94.4,
+    "right_click_ratio": 0.63,
+    "right_level_db": -26.0,
+    "insert_s": 0.347,
+    "orig_s": 0.462,
+    "insert_rms_db": -25.700000762939453,
+    "orig_rms_db": -27.0,
+    "ctx_rms_db": -23.600000381469727,
+    "f0_insert": 128.6,
+    "f0_orig": 137.8,
+    "f0_ctx": 129.4,
+    "f0_insert_vs_ctx_st": -0.1,
+    "f0_orig_vs_ctx_st": 1.1,
+    "left_f0_jump_st": 0.07,
+    "right_f0_jump_st": 0.3,
+    "hf_insert_db": -34.2,
+    "hf_orig_db": -25.8,
+    "hf_ctx_db": -37.3
+   }
+  },
+  {
+   "id": "so762_2408_9631",
+   "speaker": "9631",
+   "age": 26,
+   "text": "I HAVE BETTER GET OUT OF HERE.",
+   "dur": 3.66,
+   "utt_acc": 3,
+   "bad": [
+    {
+     "w": "HERE",
+     "acc": 3,
+     "mis": [
+      [
+       "IH",
+       "ER"
+      ],
+      [
+       "AH",
+       "<DEL>"
+      ]
+     ],
+     "k": 6,
+     "asr": "her.",
+     "flagged": false,
+     "pred": 10
+    }
+   ],
+   "heard": "I have better get out of her.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [
+    {
+     "kind": "grammar",
+     "old": "better",
+     "new": "had",
+     "kept": true
+    }
+   ],
+   "cuts": [],
+   "final": "I have had get out of her.",
+   "after_heard": "I have had get out of her.",
+   "after_flags": [],
+   "untouched": {
+    "L": 1.233,
+    "Ra": 2.006,
+    "Rb": 1.593,
+    "op_t0": 1.237,
+    "op_t1": 1.599,
+    "max_diff_lsb": 1.0,
+    "exact_share": 1.0,
+    "share_untouched": 0.901
+   },
+   "seam": {
+    "left_flux_orig": 0.814,
+    "right_flux_orig": 1.386,
+    "left_mel_jump": 3.71,
+    "left_mel_jump_orig": 0.62,
+    "right_mel_jump": 4.04,
+    "right_mel_jump_orig": 3.77,
+    "left_flux": 1.188,
+    "left_flux_pct": 100.0,
+    "left_click_ratio": 0.51,
+    "left_level_db": -40.79999923706055,
+    "right_flux": 1.479,
+    "right_flux_pct": 100.0,
+    "right_click_ratio": 0.26,
+    "right_level_db": -37.5,
+    "insert_s": 0.774,
+    "orig_s": 0.361,
+    "insert_rms_db": -25.200000762939453,
+    "orig_rms_db": -22.700000762939453,
+    "ctx_rms_db": -22.399999618530273,
+    "f0_insert": 119.3,
+    "f0_orig": 106.9,
+    "f0_ctx": 128.6,
+    "f0_insert_vs_ctx_st": -1.3,
+    "f0_orig_vs_ctx_st": -3.2,
+    "left_f0_jump_st": 3.77,
+    "right_f0_jump_st": 4.7,
+    "hf_insert_db": -44.0,
+    "hf_orig_db": -33.2,
+    "hf_ctx_db": -41.6
+   }
+  },
+  {
+   "id": "so762_2411_9631",
+   "speaker": "9631",
+   "age": 26,
+   "text": "I THOUGHT MY LIFE WAS ABOUT TO END.",
+   "dur": 5,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "THOUGHT",
+     "acc": 3,
+     "mis": [
+      [
+       "TH",
+       "D"
+      ],
+      [
+       "AO",
+       "<unk>"
+      ],
+      [
+       "T",
+       "T*"
+      ]
+     ],
+     "k": 1,
+     "asr": "then",
+     "flagged": false,
+     "pred": 9.9
+    }
+   ],
+   "heard": "I then my life was about to end.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [
+    {
+     "kind": "grammar",
+     "old": "my life was about to end.",
+     "new": "my life was about to end",
+     "kept": true
+    }
+   ],
+   "cuts": [],
+   "final": "I then my life was about to end",
+   "after_heard": "I, then, my life was about to end.",
+   "after_flags": [],
+   "untouched": {
+    "L": 1.303,
+    "Ra": 4.321,
+    "Rb": 4.301,
+    "op_t0": 1.325,
+    "op_t1": 4.294,
+    "max_diff_lsb": 1.0,
+    "exact_share": 0.9999,
+    "share_untouched": 0.4
+   },
+   "seam": {
+    "left_flux_orig": 0.802,
+    "right_flux_orig": 1.3,
+    "left_mel_jump": 1.29,
+    "left_mel_jump_orig": 0.3,
+    "right_mel_jump": 3.65,
+    "right_mel_jump_orig": 2.58,
+    "left_flux": 0.822,
+    "left_flux_pct": 97.2,
+    "left_click_ratio": 0.38,
+    "left_level_db": -22.399999618530273,
+    "right_flux": 1.356,
+    "right_flux_pct": 100.0,
+    "right_click_ratio": 2.3,
+    "right_level_db": -40.29999923706055,
+    "insert_s": 3.018,
+    "orig_s": 2.998,
+    "insert_rms_db": -23.700000762939453,
+    "orig_rms_db": -25.299999237060547,
+    "ctx_rms_db": -22.399999618530273,
+    "f0_insert": 127.9,
+    "f0_orig": 114.6,
+    "f0_ctx": 132.0,
+    "f0_insert_vs_ctx_st": -0.55,
+    "f0_orig_vs_ctx_st": -2.45,
+    "left_f0_jump_st": -0.03,
+    "right_f0_jump_st": null,
+    "hf_insert_db": -27.9,
+    "hf_orig_db": -40.0,
+    "hf_ctx_db": -44.6
+   }
+  },
+  {
+   "id": "so762_2418_9631",
+   "speaker": "9631",
+   "age": 26,
+   "text": "THE THING HAD COME, AND SO IT MUST BE.",
+   "dur": 4.46,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "MUST",
+     "acc": 5,
+     "mis": [
+      [
+       "AH",
+       "OW"
+      ]
+     ],
+     "k": 7,
+     "asr": "must",
+     "flagged": false,
+     "pred": 9.6
+    }
+   ],
+   "heard": "The thing has come and so it must be.",
+   "median": 10,
+   "accent": [],
+   "flags": [
+    {
+     "i": 2,
+     "word": "has",
+     "acc": 6.1,
+     "labelled_bad": false
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 2,
+     "word": "has",
+     "before": 6.1,
+     "after": 9.95,
+     "verified": true,
+     "kept": true,
+     "engine": "f5",
+     "labelled_bad": false,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 9.7,
+       "heard": "The thing has come and so it must be."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 9.95,
+       "heard": "The thing has come and so it must be."
+      }
+     ],
+     "after_asr": "has",
+     "after_rescore": 9.9,
+     "after_flagged": false
+    }
+   ],
+   "other_reps": [],
+   "cuts": [],
+   "final": "The thing has come and so it must be.",
+   "after_heard": "The thing has come and so it must be.",
+   "after_flags": [],
+   "untouched": {
+    "L": 1.282,
+    "Ra": 1.721,
+    "Rb": 1.825,
+    "op_t0": 1.326,
+    "op_t1": 1.778,
+    "max_diff_lsb": 1.0,
+    "exact_share": 1.0,
+    "share_untouched": 0.878
+   },
+   "seam": {
+    "left_flux_orig": 0.778,
+    "right_flux_orig": 0.79,
+    "left_mel_jump": 2.2,
+    "left_mel_jump_orig": 0.57,
+    "right_mel_jump": 1.43,
+    "right_mel_jump_orig": 1.17,
+    "left_flux": 0.738,
+    "left_flux_pct": 49.1,
+    "left_click_ratio": 0.76,
+    "left_level_db": -29.600000381469727,
+    "right_flux": 0.834,
+    "right_flux_pct": 89.8,
+    "right_click_ratio": 0.23,
+    "right_level_db": -40.29999923706055,
+    "insert_s": 0.439,
+    "orig_s": 0.543,
+    "insert_rms_db": -28.0,
+    "orig_rms_db": -26.200000762939453,
+    "ctx_rms_db": -26.200000762939453,
+    "f0_insert": 128.6,
+    "f0_orig": 141.9,
+    "f0_ctx": 133.1,
+    "f0_insert_vs_ctx_st": -0.6,
+    "f0_orig_vs_ctx_st": 1.1,
+    "left_f0_jump_st": -0.44,
+    "right_f0_jump_st": 2.16,
+    "hf_insert_db": -19.2,
+    "hf_orig_db": -41.2,
+    "hf_ctx_db": -30.0
+   }
+  },
+  {
+   "id": "so762_241_0120",
+   "speaker": "0120",
+   "age": 19,
+   "text": "HE'S HAD A TRAFFIC HIGH SCHOOL CAREER",
+   "dur": 4.54,
+   "utt_acc": 8,
+   "bad": [
+    {
+     "w": "CAREER",
+     "acc": 5,
+     "mis": [
+      [
+       "AH",
+       "AE"
+      ]
+     ],
+     "k": 6,
+     "asr": "career.",
+     "flagged": false,
+     "pred": 9.6
+    }
+   ],
+   "heard": "He's had a traffic high school career.",
+   "median": 9.9,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "He's had a traffic high school career."
+  },
+  {
+   "id": "so762_2423_9633",
+   "speaker": "9633",
+   "age": 21,
+   "text": "THERE ARE GOING TO BE MORE.",
+   "dur": 4.46,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "THERE",
+     "acc": 3,
+     "mis": [
+      [
+       "EH",
+       "ER"
+      ],
+      [
+       "R",
+       "<unk>"
+      ]
+     ],
+     "k": 0,
+     "asr": "There",
+     "flagged": false,
+     "pred": 7.7
+    }
+   ],
+   "heard": "There are going to be more.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "There are going to be more."
+  },
+  {
+   "id": "so762_2424_9633",
+   "speaker": "9633",
+   "age": 21,
+   "text": "YOU NEED TO COME WITH ME.",
+   "dur": 5.33,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "COME",
+     "acc": 3,
+     "mis": [
+      [
+       "AH",
+       "EY"
+      ]
+     ],
+     "k": 3,
+     "asr": "come",
+     "flagged": true,
+     "pred": 5.6
+    }
+   ],
+   "heard": "Your need to come with me.",
+   "median": 10,
+   "accent": [],
+   "flags": [
+    {
+     "i": 3,
+     "word": "come",
+     "acc": 5.6,
+     "labelled_bad": true
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 3,
+     "word": "come",
+     "before": 5.6,
+     "after": 8.12,
+     "verified": true,
+     "kept": true,
+     "engine": "playdiff",
+     "labelled_bad": true,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 8.12,
+       "heard": "You need to come with me."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 5.31,
+       "heard": "You need to come with me."
+      }
+     ],
+     "after_asr": "come",
+     "after_rescore": 9.9,
+     "after_flagged": false
+    }
+   ],
+   "other_reps": [
+    {
+     "kind": "grammar",
+     "old": "need",
+     "new": "you need",
+     "kept": true
+    }
+   ],
+   "cuts": [],
+   "final": "Your you need to come with me.",
+   "after_heard": "Yeah, you need to come with me.",
+   "after_flags": [
+    "Yeah,"
+   ]
+  },
+  {
+   "id": "so762_2425_9633",
+   "speaker": "9633",
+   "age": 21,
+   "text": "I WOULD NEVER HAVE LEFT.",
+   "dur": 5.36,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "HAVE",
+     "acc": 3,
+     "mis": [
+      [
+       "V",
+       "D"
+      ]
+     ],
+     "k": 3,
+     "asr": "had",
+     "flagged": true,
+     "pred": 6
+    }
+   ],
+   "heard": "I would never had left.",
+   "median": 10,
+   "accent": [],
+   "flags": [
+    {
+     "i": 3,
+     "word": "had",
+     "acc": 6,
+     "labelled_bad": true
+    }
+   ],
+   "pron_reps": [],
+   "other_reps": [
+    {
+     "kind": "grammar",
+     "old": "had left.",
+     "new": "have left",
+     "kept": true
+    }
+   ],
+   "cuts": [],
+   "final": "I would never have left",
+   "after_heard": "I would never have left.",
+   "after_flags": [
+    "have"
+   ],
+   "untouched": {
+    "L": 3.034,
+    "Ra": 4.846,
+    "Rb": 4.741,
+    "op_t0": 3.031,
+    "op_t1": 4.717,
+    "max_diff_lsb": 1.0,
+    "exact_share": 0.9999,
+    "share_untouched": 0.682
+   },
+   "seam": {
+    "left_flux_orig": 0.819,
+    "right_flux_orig": 1.755,
+    "left_mel_jump": 0.73,
+    "left_mel_jump_orig": 0.89,
+    "right_mel_jump": 3.38,
+    "right_mel_jump_orig": 2.86,
+    "left_flux": 0.843,
+    "left_flux_pct": 98.1,
+    "left_click_ratio": 0.72,
+    "left_level_db": -37.099998474121094,
+    "right_flux": 1.708,
+    "right_flux_pct": 100.0,
+    "right_click_ratio": 0.05,
+    "right_level_db": -53.29999923706055,
+    "insert_s": 1.811,
+    "orig_s": 1.707,
+    "insert_rms_db": -35.900001525878906,
+    "orig_rms_db": -35.29999923706055,
+    "ctx_rms_db": -34.70000076293945,
+    "f0_insert": 240.0,
+    "f0_orig": 220.1,
+    "f0_ctx": 226.5,
+    "f0_insert_vs_ctx_st": 1.0,
+    "f0_orig_vs_ctx_st": -0.5,
+    "left_f0_jump_st": 1.6,
+    "right_f0_jump_st": null,
+    "hf_insert_db": -34.4,
+    "hf_orig_db": -37.7,
+    "hf_ctx_db": -39.4
+   }
+  },
+  {
+   "id": "so762_2426_9633",
+   "speaker": "9633",
+   "age": 21,
+   "text": "THEY HAD TO GET OUT OF THERE.",
+   "dur": 4.5,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "HAD",
+     "acc": 3,
+     "mis": [
+      [
+       "D",
+       "V"
+      ]
+     ],
+     "k": 1,
+     "asr": "have",
+     "flagged": false,
+     "pred": 9.6
+    }
+   ],
+   "heard": "They have to get out of there.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "They have to get out of there."
+  },
+  {
+   "id": "so762_2450_9635",
+   "speaker": "9635",
+   "age": 24,
+   "text": "I PUT THEM ON AND I SAW WHERE WE WERE.",
+   "dur": 7.07,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "SAW",
+     "acc": 3,
+     "mis": [
+      [
+       "AO",
+       "IY"
+      ]
+     ],
+     "k": 6,
+     "asr": "see",
+     "flagged": false,
+     "pred": 9.6
+    }
+   ],
+   "heard": "I put them on and I see where they were.",
+   "median": 10,
+   "accent": [],
+   "flags": [
+    {
+     "i": 7,
+     "word": "where",
+     "acc": 3.9,
+     "labelled_bad": false
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 7,
+     "word": "where",
+     "before": 3.9,
+     "after": 8.76,
+     "verified": true,
+     "kept": true,
+     "engine": "playdiff",
+     "labelled_bad": false,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 8.76,
+       "heard": "Put them on and see where they work."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 5.61,
+       "heard": "Put them on and see where they were."
+      }
+     ],
+     "after_asr": "where",
+     "after_rescore": 6.9,
+     "after_flagged": false
+    }
+   ],
+   "other_reps": [],
+   "cuts": [],
+   "final": "I put them on and I see where they were.",
+   "after_heard": "I put them on and I see where they work.",
+   "after_flags": [
+    "work."
+   ],
+   "untouched": {
+    "L": 4.724,
+    "Ra": 5.24,
+    "Rb": 5.191,
+    "op_t0": 4.753,
+    "op_t1": 5.214,
+    "max_diff_lsb": 0.0,
+    "exact_share": 1.0,
+    "share_untouched": 0.934
+   },
+   "seam": {
+    "left_flux_orig": 0.719,
+    "right_flux_orig": 0.781,
+    "left_mel_jump": 0.54,
+    "left_mel_jump_orig": 0.85,
+    "right_mel_jump": 1.54,
+    "right_mel_jump_orig": 0.67,
+    "left_flux": 0.862,
+    "left_flux_pct": 100.0,
+    "left_click_ratio": 0.64,
+    "left_level_db": -21.0,
+    "right_flux": 0.804,
+    "right_flux_pct": 95.4,
+    "right_click_ratio": 0.28,
+    "right_level_db": -22.299999237060547,
+    "insert_s": 0.516,
+    "orig_s": 0.467,
+    "insert_rms_db": -19.799999237060547,
+    "orig_rms_db": -16.700000762939453,
+    "ctx_rms_db": -22.5,
+    "f0_insert": 227.8,
+    "f0_orig": 236.6,
+    "f0_ctx": 235.9,
+    "f0_insert_vs_ctx_st": -0.6,
+    "f0_orig_vs_ctx_st": 0.05,
+    "left_f0_jump_st": -2.27,
+    "right_f0_jump_st": -0.07,
+    "hf_insert_db": -50.8,
+    "hf_orig_db": -54.2,
+    "hf_ctx_db": -48.3
+   }
+  },
+  {
+   "id": "so762_2458_9635",
+   "speaker": "9635",
+   "age": 24,
+   "text": "I LOOKED OVER TO THE SIDE.",
+   "dur": 4.3,
+   "utt_acc": 5,
+   "bad": [
+    {
+     "w": "SIDE",
+     "acc": 3,
+     "mis": [
+      [
+       "AY",
+       "EY"
+      ]
+     ],
+     "k": 5,
+     "asr": "seed.",
+     "flagged": false,
+     "pred": 9.9
+    }
+   ],
+   "heard": "I looked over to the seed.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [
+    {
+     "kind": "misspoken",
+     "old": "seed.",
+     "new": "seat",
+     "kept": true
+    }
+   ],
+   "cuts": [],
+   "final": "I looked over to the seat",
+   "after_heard": "I looked over to the seat.",
+   "after_flags": [],
+   "untouched": {
+    "L": 3.383,
+    "Ra": 3.854,
+    "Rb": 3.741,
+    "op_t0": 3.377,
+    "op_t1": 3.719,
+    "max_diff_lsb": 1.0,
+    "exact_share": 1.0,
+    "share_untouched": 0.917
+   },
+   "seam": {
+    "left_flux_orig": 0.735,
+    "right_flux_orig": 0.824,
+    "left_mel_jump": 1.55,
+    "left_mel_jump_orig": 1.6,
+    "right_mel_jump": 2.95,
+    "right_mel_jump_orig": 0.67,
+    "left_flux": 0.836,
+    "left_flux_pct": 90.7,
+    "left_click_ratio": 0.26,
+    "left_level_db": -53.20000076293945,
+    "right_flux": 0.925,
+    "right_flux_pct": 91.7,
+    "right_click_ratio": 2.18,
+    "right_level_db": -23.899999618530273,
+    "insert_s": 0.471,
+    "orig_s": 0.358,
+    "insert_rms_db": -17.600000381469727,
+    "orig_rms_db": -18.600000381469727,
+    "ctx_rms_db": -20.399999618530273,
+    "f0_insert": 228.5,
+    "f0_orig": 283.8,
+    "f0_ctx": 225.2,
+    "f0_insert_vs_ctx_st": 0.25,
+    "f0_orig_vs_ctx_st": 4.0,
+    "left_f0_jump_st": 1.83,
+    "right_f0_jump_st": null,
+    "hf_insert_db": -50.2,
+    "hf_orig_db": -51.1,
+    "hf_ctx_db": -51.2
+   }
+  },
+  {
+   "id": "so762_2467_9640",
+   "speaker": "9640",
+   "age": 29,
+   "text": "TOO LONG, TOO SHORT, TOO BORING?",
+   "dur": 3.55,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "BORING",
+     "acc": 3,
+     "mis": [
+      [
+       "R",
+       "<DEL>"
+      ],
+      [
+       "IH",
+       "<DEL>"
+      ],
+      [
+       "NG",
+       "<DEL>"
+      ]
+     ],
+     "k": 5,
+     "asr": "bored.",
+     "flagged": true,
+     "pred": 6.1
+    }
+   ],
+   "heard": "Too long, too short, too bored.",
+   "median": 9.6,
+   "accent": [],
+   "flags": [
+    {
+     "i": 5,
+     "word": "bored.",
+     "acc": 6.1,
+     "labelled_bad": true
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 5,
+     "word": "bored.",
+     "before": 6.1,
+     "after": 9.94,
+     "verified": true,
+     "kept": true,
+     "engine": "playdiff",
+     "labelled_bad": true,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 9.94,
+       "heard": "Too long, too short, too bored."
+      },
+      {
+       "engine": "f5",
+       "ok": false,
+       "after": 7.35,
+       "heard": "Too long, too short, too bar."
+      }
+     ],
+     "after_asr": "bored.",
+     "after_rescore": 9.9,
+     "after_flagged": false
+    }
+   ],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Too long, too short, too bored",
+   "after_heard": "Too long, too short, too bored.",
+   "after_flags": [],
+   "untouched": {
+    "L": 2.659,
+    "Ra": 3.12,
+    "Rb": 3.009,
+    "op_t0": 2.686,
+    "op_t1": 3.027,
+    "max_diff_lsb": 1.0,
+    "exact_share": 0.9999,
+    "share_untouched": 0.901
+   },
+   "seam": {
+    "left_flux_orig": 0.733,
+    "right_flux_orig": 0.808,
+    "left_mel_jump": 1.52,
+    "left_mel_jump_orig": 0.51,
+    "right_mel_jump": 1.71,
+    "right_mel_jump_orig": 0.92,
+    "left_flux": 0.996,
+    "left_flux_pct": 100.0,
+    "left_click_ratio": 0.3,
+    "left_level_db": -46.599998474121094,
+    "right_flux": 0.806,
+    "right_flux_pct": 84.3,
+    "right_click_ratio": 0.9,
+    "right_level_db": -45.29999923706055,
+    "insert_s": 0.461,
+    "orig_s": 0.35,
+    "insert_rms_db": -28.600000381469727,
+    "orig_rms_db": -26.100000381469727,
+    "ctx_rms_db": -29.899999618530273,
+    "f0_insert": 200.1,
+    "f0_orig": 204.8,
+    "f0_ctx": 217.6,
+    "f0_insert_vs_ctx_st": -1.45,
+    "f0_orig_vs_ctx_st": -1.05,
+    "left_f0_jump_st": 1.0,
+    "right_f0_jump_st": -0.1,
+    "hf_insert_db": -56.9,
+    "hf_orig_db": -50.1,
+    "hf_ctx_db": -48.4
+   }
+  },
+  {
+   "id": "so762_2471_9640",
+   "speaker": "9640",
+   "age": 29,
+   "text": "PLEASE FORGIVE ME, MY FRIEND?",
+   "dur": 3.91,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "FORGIVE",
+     "acc": 3,
+     "mis": [
+      [
+       "F",
+       "<DEL>"
+      ],
+      [
+       "AH",
+       "<DEL>"
+      ]
+     ],
+     "k": 1,
+     "asr": "give",
+     "flagged": false,
+     "pred": 9.9
+    }
+   ],
+   "heard": "Please give me my friend.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Please give me my friend."
+  },
+  {
+   "id": "so762_2475_9640",
+   "speaker": "9640",
+   "age": 29,
+   "text": "ALL HEADS TURNED THEIR WAY.",
+   "dur": 3.52,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "HEADS",
+     "acc": 3,
+     "mis": [
+      [
+       "EH",
+       "AE"
+      ],
+      [
+       "D",
+       "D*"
+      ],
+      [
+       "Z",
+       "<DEL>"
+      ]
+     ],
+     "k": 1,
+     "asr": "hands",
+     "flagged": true,
+     "pred": 6.1
+    }
+   ],
+   "heard": "All hands turned their way.",
+   "median": 10,
+   "accent": [],
+   "flags": [
+    {
+     "i": 1,
+     "word": "hands",
+     "acc": 6.1,
+     "labelled_bad": true
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 1,
+     "word": "hands",
+     "before": 6.1,
+     "after": 9.55,
+     "verified": true,
+     "kept": true,
+     "engine": "f5",
+     "labelled_bad": true,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 9.49,
+       "heard": "All hands tender their weight."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 9.55,
+       "heard": "All hands tended their way."
+      }
+     ],
+     "after_asr": "hands",
+     "after_rescore": 9.5,
+     "after_flagged": false
+    }
+   ],
+   "other_reps": [],
+   "cuts": [],
+   "final": "All hands turned their way.",
+   "after_heard": "All hands tended their way.",
+   "after_flags": [],
+   "untouched": {
+    "L": 0.899,
+    "Ra": 1.568,
+    "Rb": 1.617,
+    "op_t0": 0.896,
+    "op_t1": 1.63,
+    "max_diff_lsb": 1.0,
+    "exact_share": 1.0,
+    "share_untouched": 0.796
+   },
+   "seam": {
+    "left_flux_orig": 0.831,
+    "right_flux_orig": 1.542,
+    "left_mel_jump": 0.78,
+    "left_mel_jump_orig": 0.58,
+    "right_mel_jump": 2.74,
+    "right_mel_jump_orig": 3.02,
+    "left_flux": 0.743,
+    "left_flux_pct": 82.4,
+    "left_click_ratio": 0.72,
+    "left_level_db": -39.70000076293945,
+    "right_flux": 1.653,
+    "right_flux_pct": 100.0,
+    "right_click_ratio": 0.06,
+    "right_level_db": -48.599998474121094,
+    "insert_s": 0.669,
+    "orig_s": 0.718,
+    "insert_rms_db": -27.200000762939453,
+    "orig_rms_db": -27.399999618530273,
+    "ctx_rms_db": -27.100000381469727,
+    "f0_insert": 203.0,
+    "f0_orig": 196.1,
+    "f0_ctx": 221.4,
+    "f0_insert_vs_ctx_st": -1.5,
+    "f0_orig_vs_ctx_st": -2.1,
+    "left_f0_jump_st": 0.6,
+    "right_f0_jump_st": 2.53,
+    "hf_insert_db": -28.7,
+    "hf_orig_db": -40.2,
+    "hf_ctx_db": -44.3
+   }
+  },
+  {
+   "id": "so762_2477_9640",
+   "speaker": "9640",
+   "age": 29,
+   "text": "MY OWN OWN DARLING, DARLING, DARLING JEWEL.",
+   "dur": 4.75,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "JEWEL",
+     "acc": 3,
+     "mis": [
+      [
+       "UW",
+       "AA"
+      ]
+     ],
+     "k": 6,
+     "asr": "job.",
+     "flagged": true,
+     "pred": 3.2
+    }
+   ],
+   "heard": "My own, own, darling, darling, darling job.",
+   "median": 9.5,
+   "accent": [],
+   "flags": [
+    {
+     "i": 6,
+     "word": "job.",
+     "acc": 3.2,
+     "labelled_bad": true
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 6,
+     "word": "job.",
+     "before": 3.2,
+     "after": 9.88,
+     "verified": true,
+     "kept": true,
+     "engine": "f5",
+     "labelled_bad": true,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": false,
+       "after": 8.99,
+       "heard": "My own own darling darling darling dog."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 9.88,
+       "heard": "My own, own, darling, darling, darling job."
+      }
+     ],
+     "after_asr": "job.",
+     "after_rescore": 9.8,
+     "after_flagged": false
+    }
+   ],
+   "other_reps": [],
+   "cuts": [
+    {
+     "kind": "repetition",
+     "text": "own,"
+    },
+    {
+     "kind": "repetition",
+     "text": "darling,"
+    }
+   ],
+   "final": "My own, darling, darling job",
+   "after_heard": "My own darling, darling job.",
+   "after_flags": []
+  },
+  {
+   "id": "so762_2478_9640",
+   "speaker": "9640",
+   "age": 29,
+   "text": "YOU MAY CONTINUE GUN TRAINING.",
+   "dur": 3.69,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "TRAINING",
+     "acc": 3,
+     "mis": [
+      [
+       "IH",
+       "<DEL>"
+      ],
+      [
+       "NG",
+       "<DEL>"
+      ]
+     ],
+     "k": null,
+     "asr": null,
+     "flagged": false,
+     "pred": null
+    }
+   ],
+   "heard": "You may continue, Gantreen.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "You may continue, Gantreen."
+  },
+  {
+   "id": "so762_2484_9647",
+   "speaker": "9647",
+   "age": 20,
+   "text": "WERE THESE YOUNG PEOPLE EVIL?",
+   "dur": 4.44,
+   "utt_acc": 4,
+   "bad": [
+    {
+     "w": "EVIL",
+     "acc": 3,
+     "mis": [
+      [
+       "V",
+       "<DEL>"
+      ],
+      [
+       "IH",
+       "<unk>"
+      ]
+     ],
+     "k": 5,
+     "asr": "at?",
+     "flagged": false,
+     "pred": 5.9
+    }
+   ],
+   "heard": "Where are these young people at?",
+   "median": 10,
+   "accent": [],
+   "flags": [
+    {
+     "i": 0,
+     "word": "Where",
+     "acc": 5.5,
+     "labelled_bad": false
+    },
+    {
+     "i": 3,
+     "word": "young",
+     "acc": 6.2,
+     "labelled_bad": false
+    },
+    {
+     "i": 4,
+     "word": "people",
+     "acc": 6.4,
+     "labelled_bad": false
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 0,
+     "word": "Where",
+     "before": 5.5,
+     "after": 7.49,
+     "verified": true,
+     "kept": true,
+     "engine": "playdiff",
+     "labelled_bad": false,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 7.49,
+       "heard": "Where are these young people at?"
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 7.46,
+       "heard": "Where did young people go?"
+      }
+     ],
+     "after_asr": "Where",
+     "after_rescore": 8.2,
+     "after_flagged": false
+    },
+    {
+     "i": 3,
+     "word": "young",
+     "before": 6.2,
+     "after": 8.97,
+     "verified": true,
+     "kept": true,
+     "engine": "playdiff",
+     "labelled_bad": false,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 8.97,
+       "heard": "Where are these young people at?"
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 5.52,
+       "heard": "Where are these young people at?"
+      }
+     ],
+     "after_asr": "young",
+     "after_rescore": 7.9,
+     "after_flagged": false
+    },
+    {
+     "i": 4,
+     "word": "people",
+     "before": 6.4,
+     "after": 6.85,
+     "verified": true,
+     "kept": true,
+     "engine": "f5",
+     "labelled_bad": false,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 5.95,
+       "heard": "Where are these young people here?"
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 6.85,
+       "heard": "Where are these young people?"
+      }
+     ],
+     "after_asr": "people?",
+     "after_rescore": 4.9,
+     "after_flagged": true
+    }
+   ],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Where are these young people at?",
+   "after_heard": "Where are these young people?",
+   "after_flags": [
+    "people?"
+   ]
+  },
+  {
+   "id": "so762_2496_9647",
+   "speaker": "9647",
+   "age": 20,
+   "text": "MAYBE WE SHOULD GET SOME CAKE?",
+   "dur": 4.86,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "CAKE",
+     "acc": 3,
+     "mis": [
+      [
+       "EY",
+       "AA"
+      ],
+      [
+       "K",
+       "T"
+      ]
+     ],
+     "k": 5,
+     "asr": "cards.",
+     "flagged": true,
+     "pred": 5.6
+    }
+   ],
+   "heard": "Maybe we should get some cards.",
+   "median": 10,
+   "accent": [],
+   "flags": [
+    {
+     "i": 2,
+     "word": "should",
+     "acc": 6,
+     "labelled_bad": false
+    },
+    {
+     "i": 5,
+     "word": "cards.",
+     "acc": 5.6,
+     "labelled_bad": true
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 2,
+     "word": "should",
+     "before": 6,
+     "after": 9.37,
+     "verified": true,
+     "kept": true,
+     "engine": "playdiff",
+     "labelled_bad": false,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 9.37,
+       "heard": "Maybe we should get some cards."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 8.79,
+       "heard": "Maybe we should get some cards."
+      }
+     ],
+     "after_asr": "should",
+     "after_rescore": 9.6,
+     "after_flagged": false
+    },
+    {
+     "i": 5,
+     "word": "cards.",
+     "before": 5.6,
+     "after": 9.81,
+     "verified": true,
+     "kept": true,
+     "engine": "playdiff",
+     "labelled_bad": true,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 9.81,
+       "heard": "Maybe we should get some cards."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 4.55,
+       "heard": "Maybe we should get some cards."
+      }
+     ],
+     "after_asr": "cards.",
+     "after_rescore": 9.8,
+     "after_flagged": false
+    }
+   ],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Maybe we should get some cards",
+   "after_heard": "Maybe we should get some cards.",
+   "after_flags": []
+  },
+  {
+   "id": "so762_347_0306",
+   "speaker": "0306",
+   "age": 21,
+   "text": "WHAT WHAT WOULD HAVE YOU HAPPEN",
+   "dur": 3.71,
+   "utt_acc": 5,
+   "bad": [
+    {
+     "w": "WOULD",
+     "acc": 3,
+     "mis": [
+      [
+       "W",
+       "HH"
+      ]
+     ],
+     "k": null,
+     "asr": null,
+     "flagged": false,
+     "pred": null
+    }
+   ],
+   "heard": "What, what, what, how will you happen?",
+   "median": 8.6,
+   "accent": [
+    {
+     "phone": "\u028c",
+     "n": 3,
+     "z": -1.26
+    }
+   ],
+   "flags": [
+    {
+     "i": 4,
+     "word": "will",
+     "acc": 5.8,
+     "labelled_bad": false
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 4,
+     "word": "will",
+     "before": 5.8,
+     "after": 9.34,
+     "verified": true,
+     "kept": true,
+     "engine": "playdiff",
+     "labelled_bad": false,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 9.34,
+       "heard": "What, what, what, what, how will happen?"
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 8.99,
+       "heard": "What, what, what, how will happen?"
+      }
+     ],
+     "after_asr": null,
+     "after_rescore": null,
+     "after_flagged": false
+    }
+   ],
+   "other_reps": [],
+   "cuts": [
+    {
+     "kind": "repetition",
+     "text": "What,"
+    }
+   ],
+   "final": "what, what, how will you happen?",
+   "after_heard": "What happened? What happened?",
+   "after_flags": [
+    "happened?",
+    "What"
+   ]
+  },
+  {
+   "id": "so762_365_0457",
+   "speaker": "0457",
+   "age": 21,
+   "text": "OR WHEN YOU OPEN THE OVEN",
+   "dur": 2.94,
+   "utt_acc": 8,
+   "bad": [
+    {
+     "w": "OVEN",
+     "acc": 5,
+     "mis": [
+      [
+       "AH",
+       "OW"
+      ]
+     ],
+     "k": 5,
+     "asr": "oven,",
+     "flagged": false,
+     "pred": 9
+    }
+   ],
+   "heard": "Or when you open the oven,",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Or when you open the oven,"
+  },
+  {
+   "id": "so762_367_0457",
+   "speaker": "0457",
+   "age": 21,
+   "text": "THANKS GOD I GET TO SLEEP IN TOMORROW",
+   "dur": 4.08,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "GOD",
+     "acc": 3,
+     "mis": [
+      [
+       "AH",
+       "AH*"
+      ]
+     ],
+     "k": 1,
+     "asr": "God,",
+     "flagged": false,
+     "pred": 6.8
+    }
+   ],
+   "heard": "Thanks God, I get to sleep in tomorrow.",
+   "median": 10,
+   "accent": [],
+   "flags": [
+    {
+     "i": 0,
+     "word": "Thanks",
+     "acc": 6.6,
+     "labelled_bad": false
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 0,
+     "word": "Thanks",
+     "before": 6.6,
+     "after": 9.73,
+     "verified": true,
+     "kept": true,
+     "engine": "playdiff",
+     "labelled_bad": false,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 9.73,
+       "heard": "Thanks, God, I get to sleep in tomorrow."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 9.41,
+       "heard": "Thanks, God. I get to sleep in tomorrow."
+      }
+     ],
+     "after_asr": "Thanks,",
+     "after_rescore": 9.7,
+     "after_flagged": false
+    }
+   ],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Thanks God, I get to sleep in tomorrow.",
+   "after_heard": "Thanks, God, I get to sleep in tomorrow.",
+   "after_flags": [],
+   "untouched": {
+    "L": 0.491,
+    "Ra": 0.996,
+    "Rb": 0.898,
+    "op_t0": 0.523,
+    "op_t1": 0.884,
+    "max_diff_lsb": 1.0,
+    "exact_share": 1.0,
+    "share_untouched": 0.9
+   },
+   "seam": {
+    "left_flux_orig": 0.902,
+    "right_flux_orig": 1.485,
+    "left_mel_jump": 2.82,
+    "left_mel_jump_orig": 1.5,
+    "right_mel_jump": 3.33,
+    "right_mel_jump_orig": 3.45,
+    "left_flux": 1.005,
+    "left_flux_pct": 99.1,
+    "left_click_ratio": 0.26,
+    "left_level_db": -44.5,
+    "right_flux": 0.895,
+    "right_flux_pct": 88.0,
+    "right_click_ratio": 0.23,
+    "right_level_db": -32.0,
+    "insert_s": 0.504,
+    "orig_s": 0.407,
+    "insert_rms_db": -20.200000762939453,
+    "orig_rms_db": -18.100000381469727,
+    "ctx_rms_db": -22.100000381469727,
+    "f0_insert": 240.0,
+    "f0_orig": 269.4,
+    "f0_ctx": 152.5,
+    "f0_insert_vs_ctx_st": 7.85,
+    "f0_orig_vs_ctx_st": 9.85,
+    "left_f0_jump_st": -0.4,
+    "right_f0_jump_st": null,
+    "hf_insert_db": -40.5,
+    "hf_orig_db": -29.7,
+    "hf_ctx_db": -57.3
+   }
+  },
+  {
+   "id": "so762_368_0457",
+   "speaker": "0457",
+   "age": 21,
+   "text": "CREATE TO BE HAPPY AND GOOD",
+   "dur": 3.5,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "CREATE",
+     "acc": 3,
+     "mis": [
+      [
+       "K",
+       "G"
+      ],
+      [
+       "EY",
+       "EY*"
+      ]
+     ],
+     "k": 0,
+     "asr": "Grated",
+     "flagged": false,
+     "pred": 7.7
+    }
+   ],
+   "heard": "Grated to be happy and good.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [
+    {
+     "kind": "misspoken",
+     "old": "Grated",
+     "new": "Grateful",
+     "kept": true
+    }
+   ],
+   "cuts": [],
+   "final": "Grateful to be happy and good.",
+   "after_heard": "Grateful to be happy and good.",
+   "after_flags": [],
+   "untouched": {
+    "L": 0.546,
+    "Ra": 1.389,
+    "Rb": 1.295,
+    "op_t0": 0.563,
+    "op_t1": 1.308,
+    "max_diff_lsb": 1.0,
+    "exact_share": 0.9999,
+    "share_untouched": 0.786
+   },
+   "seam": {
+    "left_flux_orig": 0.772,
+    "right_flux_orig": 1.844,
+    "left_mel_jump": 0.78,
+    "left_mel_jump_orig": 0.65,
+    "right_mel_jump": 4.93,
+    "right_mel_jump_orig": 5.31,
+    "left_flux": 0.839,
+    "left_flux_pct": 97.2,
+    "left_click_ratio": 0.05,
+    "left_level_db": -58.599998474121094,
+    "right_flux": 1.672,
+    "right_flux_pct": 100.0,
+    "right_click_ratio": 1.76,
+    "right_level_db": -33.400001525878906,
+    "insert_s": 0.843,
+    "orig_s": 0.749,
+    "insert_rms_db": -19.700000762939453,
+    "orig_rms_db": -15.5,
+    "ctx_rms_db": -19.299999237060547,
+    "f0_insert": 226.5,
+    "f0_orig": 244.2,
+    "f0_ctx": 217.6,
+    "f0_insert_vs_ctx_st": 0.7,
+    "f0_orig_vs_ctx_st": 2.0,
+    "left_f0_jump_st": 10.77,
+    "right_f0_jump_st": 16.13,
+    "hf_insert_db": -60.1,
+    "hf_orig_db": -54.6,
+    "hf_ctx_db": -57.6
+   }
+  },
+  {
+   "id": "so762_379_0457",
+   "speaker": "0457",
+   "age": 21,
+   "text": "IT WILL HAVE A BODY AGAIN",
+   "dur": 3.12,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "BODY",
+     "acc": 5,
+     "mis": [
+      [
+       "AH",
+       "AH*"
+      ]
+     ],
+     "k": 4,
+     "asr": "body",
+     "flagged": false,
+     "pred": 9.8
+    }
+   ],
+   "heard": "It will have a body again.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "It will have a body again."
+  },
+  {
+   "id": "so762_380_0461",
+   "speaker": "0461",
+   "age": 23,
+   "text": "BUT THAT'S ANOTHER STORY ALTOGETHER",
+   "dur": 5.27,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "THAT'S",
+     "acc": 3,
+     "mis": [
+      [
+       "DH",
+       "S"
+      ]
+     ],
+     "k": 1,
+     "asr": "there's",
+     "flagged": false,
+     "pred": 7.8
+    }
+   ],
+   "heard": "But there's another story altogether.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "But there's another story altogether."
+  },
+  {
+   "id": "so762_383_0461",
+   "speaker": "0461",
+   "age": 23,
+   "text": "WORRY IS PART OF LIFE",
+   "dur": 3,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "WORRY",
+     "acc": 3,
+     "mis": [
+      [
+       "W",
+       "B"
+      ]
+     ],
+     "k": 0,
+     "asr": "Very,",
+     "flagged": false,
+     "pred": 8
+    }
+   ],
+   "heard": "Very, yes, part of life.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Very, yes, part of life."
+  },
+  {
+   "id": "so762_38_0024",
+   "speaker": "0024",
+   "age": 25,
+   "text": "IT WAS A PROOF OF HIS FRIENDSHIP",
+   "dur": 2.83,
+   "utt_acc": 9,
+   "bad": [
+    {
+     "w": "PROOF",
+     "acc": 3,
+     "mis": [
+      [
+       "UW",
+       "OW"
+      ]
+     ],
+     "k": 3,
+     "asr": "proof",
+     "flagged": false,
+     "pred": 9.9
+    }
+   ],
+   "heard": "It was a proof of his friendship.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "It was a proof of his friendship."
+  },
+  {
+   "id": "so762_395_0461",
+   "speaker": "0461",
+   "age": 23,
+   "text": "CHEERS TO A GREAT GROUP",
+   "dur": 3.61,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "CHEERS",
+     "acc": 3,
+     "mis": [
+      [
+       "IH",
+       "EH"
+      ],
+      [
+       "AH",
+       "AH*"
+      ]
+     ],
+     "k": 0,
+     "asr": "Chats",
+     "flagged": false,
+     "pred": 7.7
+    }
+   ],
+   "heard": "Chats to a great group.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Chats to a great group."
+  },
+  {
+   "id": "so762_396_0461",
+   "speaker": "0461",
+   "age": 23,
+   "text": "FIRST PLACE IN THE DIVISION",
+   "dur": 2.99,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "DIVISION",
+     "acc": 5,
+     "mis": [
+      [
+       "V",
+       "F"
+      ]
+     ],
+     "k": 5,
+     "asr": "diffusion?",
+     "flagged": false,
+     "pred": 8
+    }
+   ],
+   "heard": "What's the place in the diffusion?",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [
+    {
+     "kind": "misspoken",
+     "old": "diffusion?",
+     "new": "division",
+     "kept": true
+    }
+   ],
+   "cuts": [],
+   "final": "What's the place in the division",
+   "after_heard": "First place in the division.",
+   "after_flags": [],
+   "untouched": {
+    "L": 1.861,
+    "Ra": 2.366,
+    "Rb": 2.497,
+    "op_t0": 1.888,
+    "op_t1": 2.45,
+    "max_diff_lsb": 1.0,
+    "exact_share": 0.9999,
+    "share_untouched": 0.788
+   },
+   "seam": {
+    "left_flux_orig": 0.78,
+    "right_flux_orig": 0.744,
+    "left_mel_jump": 2.53,
+    "left_mel_jump_orig": 1.1,
+    "right_mel_jump": 2.46,
+    "right_mel_jump_orig": 0.47,
+    "left_flux": 1.423,
+    "left_flux_pct": 100.0,
+    "left_click_ratio": 0.04,
+    "left_level_db": -32.099998474121094,
+    "right_flux": 0.866,
+    "right_flux_pct": 96.3,
+    "right_click_ratio": 0.2,
+    "right_level_db": -41.599998474121094,
+    "insert_s": 0.504,
+    "orig_s": 0.636,
+    "insert_rms_db": -22.799999237060547,
+    "orig_rms_db": -23.399999618530273,
+    "ctx_rms_db": -22.799999237060547,
+    "f0_insert": 112.6,
+    "f0_orig": 120.3,
+    "f0_ctx": 112.3,
+    "f0_insert_vs_ctx_st": 0.05,
+    "f0_orig_vs_ctx_st": 1.2,
+    "left_f0_jump_st": -0.07,
+    "right_f0_jump_st": null,
+    "hf_insert_db": -41.0,
+    "hf_orig_db": -30.8,
+    "hf_ctx_db": -38.0
+   }
+  },
+  {
+   "id": "so762_399_0461",
+   "speaker": "0461",
+   "age": 23,
+   "text": "IT WAS DIFFICULT TO GET THERE",
+   "dur": 3.76,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "THERE",
+     "acc": 3,
+     "mis": [
+      [
+       "DH",
+       "TH"
+      ]
+     ],
+     "k": 5,
+     "asr": "there.",
+     "flagged": false,
+     "pred": 9.1
+    }
+   ],
+   "heard": "It was difficult to get there.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "It was difficult to get there."
+  },
+  {
+   "id": "so762_409_0563",
+   "speaker": "0563",
+   "age": 22,
+   "text": "BUT FOR A GOOD CAUSE",
+   "dur": 2.6,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "GOOD",
+     "acc": 3,
+     "mis": [
+      [
+       "UH",
+       "OW"
+      ]
+     ],
+     "k": 3,
+     "asr": "good",
+     "flagged": false,
+     "pred": 9.7
+    }
+   ],
+   "heard": "Better for a good course.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Better for a good course."
+  },
+  {
+   "id": "so762_420_0567",
+   "speaker": "0567",
+   "age": 21,
+   "text": "WHO KNOWS WHAT TO EXPECT",
+   "dur": 3.31,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "EXPECT",
+     "acc": 5,
+     "mis": [
+      [
+       "EH",
+       "EY"
+      ]
+     ],
+     "k": 4,
+     "asr": "expect?",
+     "flagged": false,
+     "pred": 9.4
+    }
+   ],
+   "heard": "Who knows what to expect?",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Who knows what to expect?"
+  },
+  {
+   "id": "so762_438_0567",
+   "speaker": "0567",
+   "age": 21,
+   "text": "I WILL KNOW WHAT TO DO",
+   "dur": 2.74,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "KNOW",
+     "acc": 3,
+     "mis": [
+      [
+       "OW",
+       "AW"
+      ]
+     ],
+     "k": 2,
+     "asr": "know",
+     "flagged": true,
+     "pred": 6.2
+    }
+   ],
+   "heard": "I will know what to do.",
+   "median": 10,
+   "accent": [],
+   "flags": [
+    {
+     "i": 1,
+     "word": "will",
+     "acc": 6.7,
+     "labelled_bad": false
+    },
+    {
+     "i": 2,
+     "word": "know",
+     "acc": 6.2,
+     "labelled_bad": true
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 1,
+     "word": "will",
+     "before": 6.7,
+     "after": 7.81,
+     "verified": true,
+     "kept": true,
+     "engine": "f5",
+     "labelled_bad": false,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 7.51,
+       "heard": "I will know what to do."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 7.81,
+       "heard": "I will know what to do."
+      }
+     ],
+     "after_asr": "will",
+     "after_rescore": 7.8,
+     "after_flagged": false
+    },
+    {
+     "i": 2,
+     "word": "know",
+     "before": 6.2,
+     "after": 9.5,
+     "verified": true,
+     "kept": true,
+     "engine": "playdiff",
+     "labelled_bad": true,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 9.5,
+       "heard": "I will know what to do."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 8.28,
+       "heard": "I will know what to do."
+      }
+     ],
+     "after_asr": "know",
+     "after_rescore": 9.6,
+     "after_flagged": false
+    }
+   ],
+   "other_reps": [],
+   "cuts": [],
+   "final": "I will know what to do.",
+   "after_heard": "I will know what to do.",
+   "after_flags": []
+  },
+  {
+   "id": "so762_442_0736",
+   "speaker": "0736",
+   "age": 21,
+   "text": "I THOUGHT IT WOULD FIT RIGHT IN",
+   "dur": 3.7,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "FIT",
+     "acc": 3,
+     "mis": [
+      [
+       "IH",
+       "EH"
+      ]
+     ],
+     "k": 4,
+     "asr": "fit",
+     "flagged": true,
+     "pred": 5.8
+    }
+   ],
+   "heard": "I thought it would fit right in.",
+   "median": 10,
+   "accent": [
+    {
+     "phone": "t",
+     "n": 3,
+     "z": -1.19
+    }
+   ],
+   "flags": [
+    {
+     "i": 4,
+     "word": "fit",
+     "acc": 5.8,
+     "labelled_bad": true
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 4,
+     "word": "fit",
+     "before": 5.8,
+     "after": 9.53,
+     "verified": true,
+     "kept": true,
+     "engine": "f5",
+     "labelled_bad": true,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": true,
+       "after": 8.97,
+       "heard": "I thought it would fit right in."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 9.53,
+       "heard": "I thought it would fit right in."
+      }
+     ],
+     "after_asr": "fit",
+     "after_rescore": 9.4,
+     "after_flagged": false
+    }
+   ],
+   "other_reps": [],
+   "cuts": [],
+   "final": "I thought it would fit right in.",
+   "after_heard": "I thought it would fit right in.",
+   "after_flags": [],
+   "untouched": {
+    "L": 2.154,
+    "Ra": 2.437,
+    "Rb": 2.46,
+    "op_t0": 2.131,
+    "op_t1": 2.483,
+    "max_diff_lsb": 1.0,
+    "exact_share": 1.0,
+    "share_untouched": 0.917
+   },
+   "seam": {
+    "left_flux_orig": 0.934,
+    "right_flux_orig": 0.766,
+    "left_mel_jump": 1.87,
+    "left_mel_jump_orig": 1.79,
+    "right_mel_jump": 1.94,
+    "right_mel_jump_orig": 0.86,
+    "left_flux": 1.009,
+    "left_flux_pct": 97.2,
+    "left_click_ratio": 0.28,
+    "left_level_db": -24.700000762939453,
+    "right_flux": 0.858,
+    "right_flux_pct": 87.0,
+    "right_click_ratio": 0.41,
+    "right_level_db": -23.899999618530273,
+    "insert_s": 0.283,
+    "orig_s": 0.306,
+    "insert_rms_db": -22.399999618530273,
+    "orig_rms_db": -23.700000762939453,
+    "ctx_rms_db": -21.700000762939453,
+    "f0_insert": 264.8,
+    "f0_orig": 227.8,
+    "f0_ctx": 221.4,
+    "f0_insert_vs_ctx_st": 3.1,
+    "f0_orig_vs_ctx_st": 0.5,
+    "left_f0_jump_st": -0.13,
+    "right_f0_jump_st": -1.03,
+    "hf_insert_db": -47.1,
+    "hf_orig_db": -46.4,
+    "hf_ctx_db": -51.4
+   }
+  },
+  {
+   "id": "so762_472_0765",
+   "speaker": "0765",
+   "age": 20,
+   "text": "EVERYTHING IS IN GOD'S WORD",
+   "dur": 3.53,
+   "utt_acc": 8,
+   "bad": [
+    {
+     "w": "GOD'S",
+     "acc": 5,
+     "mis": [
+      [
+       "AH",
+       "AH*"
+      ]
+     ],
+     "k": 3,
+     "asr": "God's",
+     "flagged": false,
+     "pred": 9.3
+    }
+   ],
+   "heard": "Everything is in God's word.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Everything is in God's word."
+  },
+  {
+   "id": "so762_478_0765",
+   "speaker": "0765",
+   "age": 20,
+   "text": "I SHALL BE AT HAND FOR THE TRIAL",
+   "dur": 4.33,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "TRIAL",
+     "acc": 5,
+     "mis": [
+      [
+       "AY",
+       "IH"
+      ],
+      [
+       "AH",
+       "<DEL>"
+      ]
+     ],
+     "k": 7,
+     "asr": "trail.",
+     "flagged": false,
+     "pred": 9.9
+    }
+   ],
+   "heard": "I shall be at hand for the trail.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [
+    {
+     "kind": "misspoken",
+     "old": "trail.",
+     "new": "trial",
+     "kept": true
+    }
+   ],
+   "cuts": [],
+   "final": "I shall be at hand for the trial",
+   "after_heard": "I shall be at hand for the trial.",
+   "after_flags": [],
+   "untouched": {
+    "L": 3.204,
+    "Ra": 3.765,
+    "Rb": 3.599,
+    "op_t0": 3.181,
+    "op_t1": 3.552,
+    "max_diff_lsb": 1.0,
+    "exact_share": 0.9999,
+    "share_untouched": 0.909
+   },
+   "seam": {
+    "left_flux_orig": 0.805,
+    "right_flux_orig": 0.741,
+    "left_mel_jump": 0.78,
+    "left_mel_jump_orig": 0.98,
+    "right_mel_jump": 1.79,
+    "right_mel_jump_orig": 0.57,
+    "left_flux": 0.906,
+    "left_flux_pct": 94.4,
+    "left_click_ratio": 0.46,
+    "left_level_db": -28.200000762939453,
+    "right_flux": 0.848,
+    "right_flux_pct": 94.4,
+    "right_click_ratio": 0.06,
+    "right_level_db": -43.599998474121094,
+    "insert_s": 0.561,
+    "orig_s": 0.395,
+    "insert_rms_db": -23.200000762939453,
+    "orig_rms_db": -20.600000381469727,
+    "ctx_rms_db": -24.0,
+    "f0_insert": 146.9,
+    "f0_orig": 133.1,
+    "f0_ctx": 160.2,
+    "f0_insert_vs_ctx_st": -1.5,
+    "f0_orig_vs_ctx_st": -3.2,
+    "left_f0_jump_st": null,
+    "right_f0_jump_st": -0.43,
+    "hf_insert_db": -23.2,
+    "hf_orig_db": -35.3,
+    "hf_ctx_db": -25.9
+   }
+  },
+  {
+   "id": "so762_496_0811",
+   "speaker": "0811",
+   "age": 20,
+   "text": "SORRY NOT A FAN OF THAT DECISION",
+   "dur": 2.96,
+   "utt_acc": 8,
+   "bad": [
+    {
+     "w": "DECISION",
+     "acc": 5,
+     "mis": [
+      [
+       "S",
+       "<unk>"
+      ]
+     ],
+     "k": null,
+     "asr": null,
+     "flagged": false,
+     "pred": null
+    }
+   ],
+   "heard": "Sorry, not a fan of that, did you?",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Sorry, not a fan of that, did you?"
+  },
+  {
+   "id": "so762_501_0981",
+   "speaker": "0981",
+   "age": 25,
+   "text": "BUT IT'S JUST A MATTER OF TIME",
+   "dur": 3.82,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "MATTER",
+     "acc": 5,
+     "mis": [
+      [
+       "AE",
+       "AH"
+      ]
+     ],
+     "k": null,
+     "asr": null,
+     "flagged": false,
+     "pred": null
+    }
+   ],
+   "heard": "But it's just model time.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "But it's just model time."
+  },
+  {
+   "id": "so762_722_1135",
+   "speaker": "1135",
+   "age": 25,
+   "text": "STARTING ON TUESDAY IT'S BACK TO WORK",
+   "dur": 4.28,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "TUESDAY",
+     "acc": 5,
+     "mis": [
+      [
+       "Z",
+       "<DEL>"
+      ]
+     ],
+     "k": 2,
+     "asr": "today,",
+     "flagged": false,
+     "pred": 8.8
+    }
+   ],
+   "heard": "Starting on today, it's back to work.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Starting on today, it's back to work."
+  },
+  {
+   "id": "so762_723_1135",
+   "speaker": "1135",
+   "age": 25,
+   "text": "IN COLLEGE YOU COULD GET AWAY WITH THINGS",
+   "dur": 4.34,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "COLLEGE",
+     "acc": 5,
+     "mis": [
+      [
+       "L",
+       "R"
+      ]
+     ],
+     "k": null,
+     "asr": null,
+     "flagged": false,
+     "pred": null
+    }
+   ],
+   "heard": "Encourage you could get away with things.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Encourage you could get away with things."
+  },
+  {
+   "id": "so762_734_1135",
+   "speaker": "1135",
+   "age": 25,
+   "text": "WILL BE FUN TO THAT'S THEM ALL YEAR",
+   "dur": 3.89,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "THAT'S",
+     "acc": 3,
+     "mis": [
+      [
+       "DH",
+       "W"
+      ],
+      [
+       "AE",
+       "AA"
+      ]
+     ],
+     "k": 5,
+     "asr": "watch",
+     "flagged": false,
+     "pred": 8.1
+    }
+   ],
+   "heard": "It will be fun to watch them all year.",
+   "median": 9.5,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "It will be fun to watch them all year."
+  },
+  {
+   "id": "so762_737_1135",
+   "speaker": "1135",
+   "age": 25,
+   "text": "IT WAS ONLY A NOTE A FEW LINES",
+   "dur": 4.42,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "LINES",
+     "acc": 5,
+     "mis": [
+      [
+       "N",
+       "<DEL>"
+      ]
+     ],
+     "k": 7,
+     "asr": "less.",
+     "flagged": false,
+     "pred": 9.6
+    }
+   ],
+   "heard": "It was only a note, a few less.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "It was only a note, a few less."
+  },
+  {
+   "id": "so762_766_1181",
+   "speaker": "1181",
+   "age": 23,
+   "text": "THERE IS STAT TIME FOR YOU TO JOIN US TOO",
+   "dur": 3.55,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "TIME",
+     "acc": 3,
+     "mis": [
+      [
+       "AY",
+       "<unk>"
+      ]
+     ],
+     "k": 2,
+     "asr": "time",
+     "flagged": false,
+     "pred": 6.9
+    }
+   ],
+   "heard": "There is time for you to join us too.",
+   "median": 10,
+   "accent": [],
+   "flags": [
+    {
+     "i": 6,
+     "word": "join",
+     "acc": 4.7,
+     "labelled_bad": false
+    }
+   ],
+   "pron_reps": [
+    {
+     "i": 6,
+     "word": "join",
+     "before": 4.7,
+     "after": 3.61,
+     "verified": true,
+     "kept": false,
+     "engine": "f5",
+     "labelled_bad": false,
+     "cands": [
+      {
+       "engine": "playdiff",
+       "ok": false,
+       "after": 6.43,
+       "heard": "There is a third time for you to learn us too."
+      },
+      {
+       "engine": "f5",
+       "ok": true,
+       "after": 3.61,
+       "heard": "There is time for you to join us to."
+      }
+     ]
+    }
+   ],
+   "other_reps": [],
+   "cuts": [],
+   "final": "There is time for you to join us too."
+  },
+  {
+   "id": "so762_780_1186",
+   "speaker": "1186",
+   "age": 23,
+   "text": "THANKFUL FOR SO MANY OF YOU",
+   "dur": 5.28,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "THANKFUL",
+     "acc": 5,
+     "mis": [
+      [
+       "TH",
+       "T"
+      ]
+     ],
+     "k": 0,
+     "asr": "Thankful",
+     "flagged": false,
+     "pred": 7.3
+    }
+   ],
+   "heard": "Thankful for so many of you.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Thankful for so many of you."
+  },
+  {
+   "id": "so762_785_1186",
+   "speaker": "1186",
+   "age": 23,
+   "text": "NO IT IS YOU WHO MUST BE THANKED",
+   "dur": 4.74,
+   "utt_acc": 8,
+   "bad": [
+    {
+     "w": "THANKED",
+     "acc": 5,
+     "mis": [
+      [
+       "TH",
+       "T"
+      ]
+     ],
+     "k": 7,
+     "asr": "thanked.",
+     "flagged": false,
+     "pred": 9.5
+    }
+   ],
+   "heard": "No, it is you who must be thanked.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "No, it is you who must be thanked."
+  },
+  {
+   "id": "so762_786_1186",
+   "speaker": "1186",
+   "age": 23,
+   "text": "ALL THAT CAN BE VERY COSTLY",
+   "dur": 4.58,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "VERY",
+     "acc": 3,
+     "mis": [
+      [
+       "EH",
+       "EH*"
+      ],
+      [
+       "R",
+       "<unk>"
+      ]
+     ],
+     "k": 4,
+     "asr": "very",
+     "flagged": false,
+     "pred": 9.6
+    }
+   ],
+   "heard": "All that can be very costly.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "All that can be very costly."
+  },
+  {
+   "id": "so762_791_1186",
+   "speaker": "1186",
+   "age": 23,
+   "text": "I TELL YOU IT IS DEATH",
+   "dur": 3.27,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "DEATH",
+     "acc": 3,
+     "mis": [
+      [
+       "TH",
+       "T"
+      ]
+     ],
+     "k": 5,
+     "asr": "death.",
+     "flagged": false,
+     "pred": 9.6
+    }
+   ],
+   "heard": "I tell you it is death.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "I tell you it is death."
+  },
+  {
+   "id": "so762_798_1186",
+   "speaker": "1186",
+   "age": 23,
+   "text": "LEGAL PROTECTION IS A MUST",
+   "dur": 3.8,
+   "utt_acc": 6,
+   "bad": [
+    {
+     "w": "PROTECTION",
+     "acc": 3,
+     "mis": [
+      [
+       "T",
+       "<unk>"
+      ]
+     ],
+     "k": 1,
+     "asr": "protection",
+     "flagged": false,
+     "pred": 9.7
+    }
+   ],
+   "heard": "Legal protection is a must.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Legal protection is a must."
+  },
+  {
+   "id": "so762_834_1292",
+   "speaker": "1292",
+   "age": 37,
+   "text": "ALSO THANKS TO ALL SPONSORS",
+   "dur": 2.72,
+   "utt_acc": 8,
+   "bad": [
+    {
+     "w": "SPONSORS",
+     "acc": 5,
+     "mis": [
+      [
+       "S",
+       "D"
+      ]
+     ],
+     "k": 4,
+     "asr": "Spondus.",
+     "flagged": false,
+     "pred": 9.4
+    }
+   ],
+   "heard": "Also, thanks to all Spondus.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Also, thanks to all Spondus."
+  },
+  {
+   "id": "so762_911_1408",
+   "speaker": "1408",
+   "age": 22,
+   "text": "HAPPY SUNDAY IS A DAY OF PRAISE",
+   "dur": 3.69,
+   "utt_acc": 7,
+   "bad": [
+    {
+     "w": "PRAISE",
+     "acc": 5,
+     "mis": [
+      [
+       "EY",
+       "AY"
+      ]
+     ],
+     "k": 6,
+     "asr": "pride.",
+     "flagged": false,
+     "pred": 9.2
+    }
+   ],
+   "heard": "Happy Sunday is a day of pride.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "Happy Sunday is a day of pride."
+  },
+  {
+   "id": "so762_928_1420",
+   "speaker": "1420",
+   "age": 25,
+   "text": "IT WAS A BEAUTIFUL DAY FOR A FLOAT",
+   "dur": 3.07,
+   "utt_acc": 8,
+   "bad": [
+    {
+     "w": "FLOAT",
+     "acc": 5,
+     "mis": [
+      [
+       "L",
+       "<DEL>"
+      ]
+     ],
+     "k": 7,
+     "asr": "world.",
+     "flagged": false,
+     "pred": 8.9
+    }
+   ],
+   "heard": "It was a beautiful day for the world.",
+   "median": 10,
+   "accent": [],
+   "flags": [],
+   "pron_reps": [],
+   "other_reps": [],
+   "cuts": [],
+   "final": "It was a beautiful day for the world."
+  }
+ ]
+}

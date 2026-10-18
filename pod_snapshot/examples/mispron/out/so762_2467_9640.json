@@ -1,0 +1,292 @@
+{
+ "file": "so762_2467_9640.wav",
+ "t": {
+  "upload": 845,
+  "checks": 974,
+  "replace": 2488,
+  "render": 1390
+ },
+ "sid": "dc8beda2",
+ "words": [
+  {
+   "w": "Too",
+   "s": 0.461,
+   "e": 0.722,
+   "p": 0.51
+  },
+  {
+   "w": "long,",
+   "s": 0.762,
+   "e": 1.203,
+   "p": 0.97
+  },
+  {
+   "w": "too",
+   "s": 1.243,
+   "e": 1.543,
+   "p": 0.91
+  },
+  {
+   "w": "short,",
+   "s": 1.584,
+   "e": 2.185,
+   "p": 1
+  },
+  {
+   "w": "too",
+   "s": 2.225,
+   "e": 2.666,
+   "p": 0.98
+  },
+  {
+   "w": "bored.",
+   "s": 2.706,
+   "e": 2.987,
+   "p": 0.18
+  }
+ ],
+ "dur": 3.548,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 5,
+    "word": "bored.",
+    "acc": 6.1,
+    "canon": "boːɹd",
+    "heard": "puo5",
+    "sub": "∅",
+    "phone": "d"
+   }
+  ],
+  "accent": [],
+  "median": 9.6,
+  "scores": [
+   9.9,
+   9.1,
+   9.9,
+   9.5,
+   9.7,
+   6.1
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 5,
+    "word": "bored.",
+    "acc": 6.1,
+    "canon": "boːɹd",
+    "heard": "puo5",
+    "sub": "∅",
+    "phone": "d"
+   },
+   "on": true,
+   "op": {
+    "t0": 2.686,
+    "t1": 3.027,
+    "insert": "c265d03f",
+    "i": 5,
+    "j": 5,
+    "old": "bored.",
+    "new": "bored",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 9.94
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.494,
+     "heard": "Too long, too short, too bored.",
+     "id": "c265d03f",
+     "sec": 1.79,
+     "after": 9.94
+    },
+    {
+     "engine": "f5",
+     "ok": false,
+     "sim": 0.735,
+     "heard": "Too long, too short, too bar.",
+     "id": "e1d59f57",
+     "sec": 1.05,
+     "after": 7.35
+    }
+   ],
+   "sec": 2.3
+  }
+ ],
+ "render": {
+  "dur": 3.66,
+  "ai": [
+   [
+    2.67,
+    3.12
+   ]
+  ],
+  "file": "out_dbca34.wav"
+ },
+ "ops": [
+  {
+   "id": "mvde5oam2",
+   "type": "replace",
+   "t0": 2.686,
+   "t1": 3.027,
+   "insert": "c265d03f",
+   "i": 5,
+   "j": 5,
+   "old": "bored.",
+   "new": "bored",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 9.94,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 2.686,
+   "t1": 3.027,
+   "insert": "c265d03f"
+  }
+ ],
+ "finalText": "Too long, too short, too bored",
+ "afterCheck": {
+  "sid": "ab342cd9",
+  "words": [
+   {
+    "w": "Too",
+    "s": 0.462,
+    "e": 0.724,
+    "p": 0.45,
+    "x": null
+   },
+   {
+    "w": "long,",
+    "s": 0.764,
+    "e": 1.206,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "too",
+    "s": 1.247,
+    "e": 1.548,
+    "p": 0.97,
+    "x": null
+   },
+   {
+    "w": "short,",
+    "s": 1.609,
+    "e": 2.192,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "too",
+    "s": 2.232,
+    "e": 2.654,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "bored.",
+    "s": 2.694,
+    "e": 3.016,
+    "p": 0.85,
+    "x": null
+   }
+  ],
+  "dur": 3.6595833333333334,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 9.9,
+   "scores": [
+    9.9,
+    9.6,
+    9.9,
+    9.7,
+    9.9,
+    9.9
+   ]
+  }
+ },
+ "label": {
+  "row": 2467,
+  "speaker": "9640",
+  "age": 29,
+  "gender": "f",
+  "text": "TOO LONG, TOO SHORT, TOO BORING?",
+  "dur": 3.55,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 5,
+    "w": "BORING",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "R",
+      "index": 2,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "IH",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "NG",
+      "index": 4,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "B",
+     "AO1",
+     "R",
+     "IH0",
+     "NG"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "TOO",
+    "acc": 10
+   },
+   {
+    "w": "LONG",
+    "acc": 10
+   },
+   {
+    "w": "TOO",
+    "acc": 10
+   },
+   {
+    "w": "SHORT",
+    "acc": 10
+   },
+   {
+    "w": "TOO",
+    "acc": 10
+   },
+   {
+    "w": "BORING",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2467_9640"
+ }
+}

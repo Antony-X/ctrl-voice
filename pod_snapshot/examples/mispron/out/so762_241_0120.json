@@ -1,0 +1,146 @@
+{
+ "file": "so762_241_0120.wav",
+ "t": {
+  "upload": 1400,
+  "checks": 2383,
+  "replace": 0,
+  "render": 1837
+ },
+ "sid": "df5db3cb",
+ "words": [
+  {
+   "w": "He's",
+   "s": 0.823,
+   "e": 1.144,
+   "p": 0.8
+  },
+  {
+   "w": "had",
+   "s": 1.184,
+   "e": 1.485,
+   "p": 1
+  },
+  {
+   "w": "a",
+   "s": 1.565,
+   "e": 1.706,
+   "p": 1
+  },
+  {
+   "w": "traffic",
+   "s": 1.766,
+   "e": 2.649,
+   "p": 0.93
+  },
+  {
+   "w": "high",
+   "s": 2.689,
+   "e": 3.01,
+   "p": 0.98
+  },
+  {
+   "w": "school",
+   "s": 3.05,
+   "e": 3.411,
+   "p": 0.98
+  },
+  {
+   "w": "career.",
+   "s": 3.451,
+   "e": 3.913,
+   "p": 0.75
+  }
+ ],
+ "dur": 4.535,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 9.9,
+  "scores": [
+   10,
+   10,
+   9.8,
+   9.8,
+   10,
+   9.9,
+   9.6
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 4.54,
+  "ai": [],
+  "file": "out_e6cae1.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "He's had a traffic high school career.",
+ "label": {
+  "row": 241,
+  "speaker": "0120",
+  "age": 19,
+  "gender": "f",
+  "text": "HE'S HAD A TRAFFIC HIGH SCHOOL CAREER",
+  "dur": 4.54,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 7,
+  "fluency": 8,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 6,
+    "w": "CAREER",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 1,
+      "pronounced-phone": "AE"
+     }
+    ],
+    "phones": [
+     "K",
+     "AH0",
+     "R",
+     "IH",
+     "AH1"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "HE'S",
+    "acc": 10
+   },
+   {
+    "w": "HAD",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "TRAFFIC",
+    "acc": 10
+   },
+   {
+    "w": "HIGH",
+    "acc": 10
+   },
+   {
+    "w": "SCHOOL",
+    "acc": 10
+   },
+   {
+    "w": "CAREER",
+    "acc": 5
+   }
+  ],
+  "id": "so762_241_0120"
+ }
+}

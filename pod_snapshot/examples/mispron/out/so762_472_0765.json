@@ -1,0 +1,123 @@
+{
+ "file": "so762_472_0765.wav",
+ "t": {
+  "upload": 2784,
+  "checks": 1588,
+  "replace": 0,
+  "render": 1181
+ },
+ "sid": "bb59930f",
+ "words": [
+  {
+   "w": "Everything",
+   "s": 0.702,
+   "e": 1.443,
+   "p": 0.85
+  },
+  {
+   "w": "is",
+   "s": 1.523,
+   "e": 1.744,
+   "p": 0.99
+  },
+  {
+   "w": "in",
+   "s": 1.844,
+   "e": 2.125,
+   "p": 0.99
+  },
+  {
+   "w": "God's",
+   "s": 2.165,
+   "e": 2.566,
+   "p": 0.86
+  },
+  {
+   "w": "word.",
+   "s": 2.606,
+   "e": 2.887,
+   "p": 0.51
+  }
+ ],
+ "dur": 3.528,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.4,
+   10,
+   9.9,
+   9.3,
+   9.8
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 3.53,
+  "ai": [],
+  "file": "out_dd1f3c.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "Everything is in God's word.",
+ "label": {
+  "row": 472,
+  "speaker": "0765",
+  "age": 20,
+  "gender": "m",
+  "text": "EVERYTHING IS IN GOD'S WORD",
+  "dur": 3.53,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 7,
+  "fluency": 8,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 3,
+    "w": "GOD'S",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 1,
+      "pronounced-phone": "AH*"
+     }
+    ],
+    "phones": [
+     "G",
+     "AH0",
+     "D",
+     "Z"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "EVERYTHING",
+    "acc": 10
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "IN",
+    "acc": 10
+   },
+   {
+    "w": "GOD'S",
+    "acc": 5
+   },
+   {
+    "w": "WORD",
+    "acc": 10
+   }
+  ],
+  "id": "so762_472_0765"
+ }
+}

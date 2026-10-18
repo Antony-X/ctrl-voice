@@ -1,0 +1,272 @@
+{
+ "file": "so762_2475_9640.wav",
+ "t": {
+  "upload": 791,
+  "checks": 1041,
+  "replace": 2935,
+  "render": 1607
+ },
+ "sid": "eba599c8",
+ "words": [
+  {
+   "w": "All",
+   "s": 0.564,
+   "e": 0.886,
+   "p": 0.24
+  },
+  {
+   "w": "hands",
+   "s": 0.906,
+   "e": 1.61,
+   "p": 0.93
+  },
+  {
+   "w": "turned",
+   "s": 1.65,
+   "e": 2.455,
+   "p": 0.77
+  },
+  {
+   "w": "their",
+   "s": 2.496,
+   "e": 2.818,
+   "p": 0.93
+  },
+  {
+   "w": "way.",
+   "s": 2.858,
+   "e": 3.079,
+   "p": 0.9
+  }
+ ],
+ "dur": 3.522,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 1,
+    "word": "hands",
+    "acc": 6.1,
+    "canon": "hændz",
+    "heard": "xandath",
+    "sub": "t",
+    "phone": "z"
+   }
+  ],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9,
+   6.1,
+   8.5,
+   9.1,
+   9.7
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 1,
+    "word": "hands",
+    "acc": 6.1,
+    "canon": "hændz",
+    "heard": "xandath",
+    "sub": "t",
+    "phone": "z"
+   },
+   "on": true,
+   "op": {
+    "t0": 0.896,
+    "t1": 1.63,
+    "insert": "7c8e20b4",
+    "i": 1,
+    "j": 1,
+    "old": "hands",
+    "new": "hands",
+    "engine": "f5",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 9.55
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.449,
+     "heard": "All hands tender their weight.",
+     "id": "27c040df",
+     "sec": 2.07,
+     "after": 9.49
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.455,
+     "heard": "All hands tended their way.",
+     "id": "7c8e20b4",
+     "sec": 1.41,
+     "after": 9.55
+    }
+   ],
+   "sec": 2.75
+  }
+ ],
+ "render": {
+  "dur": 3.47,
+  "ai": [
+   [
+    0.91,
+    1.57
+   ]
+  ],
+  "file": "out_6c5c68.wav"
+ },
+ "ops": [
+  {
+   "id": "mvde5ecr0",
+   "type": "replace",
+   "t0": 0.896,
+   "t1": 1.63,
+   "insert": "7c8e20b4",
+   "i": 1,
+   "j": 1,
+   "old": "hands",
+   "new": "hands",
+   "engine": "f5",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 9.55,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 0.896,
+   "t1": 1.63,
+   "insert": "7c8e20b4"
+  }
+ ],
+ "finalText": "All hands turned their way.",
+ "afterCheck": {
+  "sid": "d7ad01d1",
+  "words": [
+   {
+    "w": "All",
+    "s": 0.562,
+    "e": 0.883,
+    "p": 0.33,
+    "x": null
+   },
+   {
+    "w": "hands",
+    "s": 0.904,
+    "e": 1.526,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "tended",
+    "s": 1.586,
+    "e": 2.409,
+    "p": 0.71,
+    "x": null
+   },
+   {
+    "w": "their",
+    "s": 2.45,
+    "e": 2.771,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "way.",
+    "s": 2.811,
+    "e": 2.972,
+    "p": 0.63,
+    "x": null
+   }
+  ],
+  "dur": 3.473625,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.9,
+    9.5,
+    9.5,
+    9.8,
+    10
+   ]
+  }
+ },
+ "label": {
+  "row": 2475,
+  "speaker": "9640",
+  "age": 29,
+  "gender": "f",
+  "text": "ALL HEADS TURNED THEIR WAY.",
+  "dur": 3.52,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 1,
+    "w": "HEADS",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 1,
+      "pronounced-phone": "AE"
+     },
+     {
+      "canonical-phone": "D",
+      "index": 2,
+      "pronounced-phone": "D*"
+     },
+     {
+      "canonical-phone": "Z",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "HH",
+     "EH1",
+     "D",
+     "Z"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "ALL",
+    "acc": 10
+   },
+   {
+    "w": "HEADS",
+    "acc": 3
+   },
+   {
+    "w": "TURNED",
+    "acc": 10
+   },
+   {
+    "w": "THEIR",
+    "acc": 10
+   },
+   {
+    "w": "WAY",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2475_9640"
+ }
+}

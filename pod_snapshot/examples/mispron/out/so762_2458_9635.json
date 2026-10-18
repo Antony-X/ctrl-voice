@@ -1,0 +1,288 @@
+{
+ "file": "so762_2458_9635.wav",
+ "t": {
+  "upload": 649,
+  "checks": 1840,
+  "replace": 4471,
+  "render": 1729
+ },
+ "sid": "aa7a9427",
+ "words": [
+  {
+   "w": "I",
+   "s": 0.663,
+   "e": 0.925,
+   "p": 0.07
+  },
+  {
+   "w": "looked",
+   "s": 0.965,
+   "e": 2.131,
+   "p": 0.44
+  },
+  {
+   "w": "over",
+   "s": 2.252,
+   "e": 2.613,
+   "p": 0.96
+  },
+  {
+   "w": "to",
+   "s": 2.654,
+   "e": 2.895,
+   "p": 0.97
+  },
+  {
+   "w": "the",
+   "s": 2.935,
+   "e": 3.357,
+   "p": 1
+  },
+  {
+   "w": "seed.",
+   "s": 3.397,
+   "e": 3.679,
+   "p": 0.55
+  }
+ ],
+ "dur": 4.302,
+ "clean": [],
+ "grammar": [],
+ "intent": [
+  {
+   "i": 5,
+   "j": 5,
+   "old": "seed.",
+   "new": "seat",
+   "heard": "siːd",
+   "intended": "siːt",
+   "fit": -0.6,
+   "dist": 0.33,
+   "alts": [
+    "side",
+    "street"
+   ]
+  }
+ ],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.6,
+   8.4,
+   8.1,
+   10,
+   9.3,
+   9.9
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "misspoken",
+   "item": {
+    "i": 5,
+    "j": 5,
+    "old": "seed.",
+    "new": "seat",
+    "heard": "siːd",
+    "intended": "siːt",
+    "fit": -0.6,
+    "dist": 0.33,
+    "alts": [
+     "side",
+     "street"
+    ]
+   },
+   "on": true,
+   "op": {
+    "t0": 3.377,
+    "t1": 3.719,
+    "insert": "b30ad16e",
+    "i": 5,
+    "j": 5,
+    "old": "seed.",
+    "new": "seat",
+    "engine": "f5",
+    "verified": true,
+    "kind": "misspoken",
+    "after": null
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": false,
+     "sim": 0.5,
+     "heard": "I looked over to the sea.",
+     "id": "f773e70e",
+     "sec": 3.73
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.277,
+     "heard": "I looked over to the seat.",
+     "id": "b30ad16e",
+     "sec": 1.95
+    }
+   ],
+   "sec": 4.3
+  }
+ ],
+ "render": {
+  "dur": 4.41,
+  "ai": [
+   [
+    3.39,
+    3.85
+   ]
+  ],
+  "file": "out_314fdb.wav"
+ },
+ "ops": [
+  {
+   "id": "mvdebeamv",
+   "type": "replace",
+   "t0": 3.377,
+   "t1": 3.719,
+   "insert": "b30ad16e",
+   "i": 5,
+   "j": 5,
+   "old": "seed.",
+   "new": "seat",
+   "engine": "f5",
+   "verified": true,
+   "kind": "misspoken",
+   "after": null,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 3.377,
+   "t1": 3.719,
+   "insert": "b30ad16e"
+  }
+ ],
+ "finalText": "I looked over to the seat",
+ "afterCheck": {
+  "sid": "a87b21b7",
+  "words": [
+   {
+    "w": "I",
+    "s": 0.642,
+    "e": 0.923,
+    "p": 0.07,
+    "x": null
+   },
+   {
+    "w": "looked",
+    "s": 0.983,
+    "e": 2.127,
+    "p": 0.63,
+    "x": null
+   },
+   {
+    "w": "over",
+    "s": 2.248,
+    "e": 2.609,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "to",
+    "s": 2.649,
+    "e": 2.91,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "the",
+    "s": 2.93,
+    "e": 3.412,
+    "p": 1,
+    "x": null
+   },
+   {
+    "w": "seat.",
+    "s": 3.452,
+    "e": 3.773,
+    "p": 0.92,
+    "x": null
+   }
+  ],
+  "dur": 4.414958333333334,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.2,
+    8.8,
+    6.8,
+    9.9,
+    9,
+    9.9
+   ]
+  }
+ },
+ "label": {
+  "row": 2458,
+  "speaker": "9635",
+  "age": 24,
+  "gender": "f",
+  "text": "I LOOKED OVER TO THE SIDE.",
+  "dur": 4.3,
+  "sr": 16000,
+  "utt_acc": 5,
+  "utt_total": 5,
+  "fluency": 5,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 5,
+    "w": "SIDE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AY",
+      "index": 1,
+      "pronounced-phone": "EY"
+     }
+    ],
+    "phones": [
+     "S",
+     "AY0",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "LOOKED",
+    "acc": 10
+   },
+   {
+    "w": "OVER",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "SIDE",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2458_9635"
+ }
+}

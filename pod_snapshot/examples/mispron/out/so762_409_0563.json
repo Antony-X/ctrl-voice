@@ -1,0 +1,122 @@
+{
+ "file": "so762_409_0563.wav",
+ "t": {
+  "upload": 703,
+  "checks": 1030,
+  "replace": 0,
+  "render": 1261
+ },
+ "sid": "0c9349b4",
+ "words": [
+  {
+   "w": "Better",
+   "s": 0.584,
+   "e": 0.927,
+   "p": 0.45
+  },
+  {
+   "w": "for",
+   "s": 0.947,
+   "e": 1.149,
+   "p": 0.99
+  },
+  {
+   "w": "a",
+   "s": 1.209,
+   "e": 1.29,
+   "p": 0.99
+  },
+  {
+   "w": "good",
+   "s": 1.33,
+   "e": 1.713,
+   "p": 0.94
+  },
+  {
+   "w": "course.",
+   "s": 1.753,
+   "e": 2.076,
+   "p": 0.87
+  }
+ ],
+ "dur": 2.6,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   8.9,
+   9.4,
+   9.9,
+   9.7,
+   8.9
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 2.6,
+  "ai": [],
+  "file": "out_cb438c.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "Better for a good course.",
+ "label": {
+  "row": 409,
+  "speaker": "0563",
+  "age": 22,
+  "gender": "f",
+  "text": "BUT FOR A GOOD CAUSE",
+  "dur": 2.6,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 3,
+    "w": "GOOD",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "UH",
+      "index": 1,
+      "pronounced-phone": "OW"
+     }
+    ],
+    "phones": [
+     "G",
+     "UH0",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "BUT",
+    "acc": 10
+   },
+   {
+    "w": "FOR",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "GOOD",
+    "acc": 3
+   },
+   {
+    "w": "CAUSE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_409_0563"
+ }
+}

@@ -1,0 +1,144 @@
+{
+ "file": "so762_2426_9633.wav",
+ "t": {
+  "upload": 668,
+  "checks": 838,
+  "replace": 0,
+  "render": 1582
+ },
+ "sid": "52813781",
+ "words": [
+  {
+   "w": "They",
+   "s": 0.603,
+   "e": 1.085,
+   "p": 0.65
+  },
+  {
+   "w": "have",
+   "s": 1.125,
+   "e": 1.568,
+   "p": 0.99
+  },
+  {
+   "w": "to",
+   "s": 1.608,
+   "e": 2.331,
+   "p": 0.99
+  },
+  {
+   "w": "get",
+   "s": 2.372,
+   "e": 2.894,
+   "p": 0.99
+  },
+  {
+   "w": "out",
+   "s": 2.975,
+   "e": 3.176,
+   "p": 0.93
+  },
+  {
+   "w": "of",
+   "s": 3.296,
+   "e": 3.537,
+   "p": 0.97
+  },
+  {
+   "w": "there.",
+   "s": 3.678,
+   "e": 4.02,
+   "p": 0.96
+  }
+ ],
+ "dur": 4.502,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   8.1,
+   9.6,
+   9.9,
+   9.3,
+   9.7,
+   9,
+   9.4
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 4.5,
+  "ai": [],
+  "file": "out_72c0aa.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "They have to get out of there.",
+ "label": {
+  "row": 2426,
+  "speaker": "9633",
+  "age": 21,
+  "gender": "f",
+  "text": "THEY HAD TO GET OUT OF THERE.",
+  "dur": 4.5,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 1,
+    "w": "HAD",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "D",
+      "index": 2,
+      "pronounced-phone": "V"
+     }
+    ],
+    "phones": [
+     "HH",
+     "AE0",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THEY",
+    "acc": 10
+   },
+   {
+    "w": "HAD",
+    "acc": 3
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "GET",
+    "acc": 10
+   },
+   {
+    "w": "OUT",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "THERE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2426_9633"
+ }
+}

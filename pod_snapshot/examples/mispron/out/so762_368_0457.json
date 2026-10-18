@@ -1,0 +1,300 @@
+{
+ "file": "so762_368_0457.wav",
+ "t": {
+  "upload": 1905,
+  "checks": 1787,
+  "replace": 3467,
+  "render": 1516
+ },
+ "sid": "775461ea",
+ "words": [
+  {
+   "w": "Grated",
+   "s": 0.603,
+   "e": 1.287,
+   "p": 0.37
+  },
+  {
+   "w": "to",
+   "s": 1.328,
+   "e": 1.609,
+   "p": 1
+  },
+  {
+   "w": "be",
+   "s": 1.629,
+   "e": 1.79,
+   "p": 0.97
+  },
+  {
+   "w": "happy",
+   "s": 1.83,
+   "e": 2.394,
+   "p": 0.99
+  },
+  {
+   "w": "and",
+   "s": 2.474,
+   "e": 2.736,
+   "p": 0.99
+  },
+  {
+   "w": "good.",
+   "s": 2.776,
+   "e": 2.997,
+   "p": 1
+  }
+ ],
+ "dur": 3.5,
+ "clean": [],
+ "grammar": [
+  {
+   "i": 0,
+   "j": 0,
+   "old": "Grated",
+   "new": "Glad"
+  }
+ ],
+ "intent": [
+  {
+   "i": 0,
+   "j": 0,
+   "old": "Grated",
+   "new": "Grateful",
+   "heard": "ɡɹeɪɾᵻd",
+   "intended": "ɡɹeɪtfəl",
+   "fit": 0.25,
+   "dist": 0.5,
+   "alts": [
+    "Great"
+   ]
+  }
+ ],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   7.7,
+   9.9,
+   9.9,
+   9.6,
+   9.1,
+   9.6
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "misspoken",
+   "item": {
+    "i": 0,
+    "j": 0,
+    "old": "Grated",
+    "new": "Grateful",
+    "heard": "ɡɹeɪɾᵻd",
+    "intended": "ɡɹeɪtfəl",
+    "fit": 0.25,
+    "dist": 0.5,
+    "alts": [
+     "Great"
+    ]
+   },
+   "on": true,
+   "op": {
+    "t0": 0.563,
+    "t1": 1.308,
+    "insert": "d2e0da1f",
+    "i": 0,
+    "j": 0,
+    "old": "Grated",
+    "new": "Grateful",
+    "engine": "f5",
+    "verified": true,
+    "kind": "misspoken",
+    "after": null
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.264,
+     "heard": "Grateful to be happy and good.",
+     "id": "ae0e7d35",
+     "sec": 2.14
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.493,
+     "heard": "Grateful to be happy and good.",
+     "id": "d2e0da1f",
+     "sec": 1.22
+    }
+   ],
+   "sec": 3.3
+  }
+ ],
+ "render": {
+  "dur": 3.59,
+  "ai": [
+   [
+    0.56,
+    1.39
+   ]
+  ],
+  "file": "out_f7df9b.wav"
+ },
+ "ops": [
+  {
+   "id": "mvde80msf",
+   "type": "replace",
+   "t0": 0.563,
+   "t1": 1.308,
+   "insert": "d2e0da1f",
+   "i": 0,
+   "j": 0,
+   "old": "Grated",
+   "new": "Grateful",
+   "engine": "f5",
+   "verified": true,
+   "kind": "misspoken",
+   "after": null,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 0.563,
+   "t1": 1.308,
+   "insert": "d2e0da1f"
+  }
+ ],
+ "finalText": "Grateful to be happy and good.",
+ "afterCheck": {
+  "sid": "ece92b1a",
+  "words": [
+   {
+    "w": "Grateful",
+    "s": 0.602,
+    "e": 1.386,
+    "p": 0.63,
+    "x": null
+   },
+   {
+    "w": "to",
+    "s": 1.426,
+    "e": 1.687,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "be",
+    "s": 1.727,
+    "e": 1.888,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "happy",
+    "s": 1.928,
+    "e": 2.49,
+    "p": 0.97,
+    "x": null
+   },
+   {
+    "w": "and",
+    "s": 2.55,
+    "e": 2.831,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "good.",
+    "s": 2.872,
+    "e": 3.072,
+    "p": 1,
+    "x": null
+   }
+  ],
+  "dur": 3.5944583333333333,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    10,
+    9.9,
+    9.9,
+    9.5,
+    9.9,
+    9.9
+   ]
+  }
+ },
+ "label": {
+  "row": 368,
+  "speaker": "0457",
+  "age": 21,
+  "gender": "f",
+  "text": "CREATE TO BE HAPPY AND GOOD",
+  "dur": 3.5,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 6,
+  "fluency": 6,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 0,
+    "w": "CREATE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "K",
+      "index": 0,
+      "pronounced-phone": "G"
+     },
+     {
+      "canonical-phone": "EY",
+      "index": 3,
+      "pronounced-phone": "EY*"
+     }
+    ],
+    "phones": [
+     "K",
+     "R",
+     "IY0",
+     "EY1",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "CREATE",
+    "acc": 3
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "HAPPY",
+    "acc": 10
+   },
+   {
+    "w": "AND",
+    "acc": 10
+   },
+   {
+    "w": "GOOD",
+    "acc": 10
+   }
+  ],
+  "id": "so762_368_0457"
+ }
+}

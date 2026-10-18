@@ -1,0 +1,134 @@
+{
+ "file": "so762_379_0457.wav",
+ "t": {
+  "upload": 867,
+  "checks": 1383,
+  "replace": 0,
+  "render": 1269
+ },
+ "sid": "96a6214e",
+ "words": [
+  {
+   "w": "It",
+   "s": 0.644,
+   "e": 0.805,
+   "p": 0.56
+  },
+  {
+   "w": "will",
+   "s": 0.845,
+   "e": 1.147,
+   "p": 0.99
+  },
+  {
+   "w": "have",
+   "s": 1.188,
+   "e": 1.55,
+   "p": 0.99
+  },
+  {
+   "w": "a",
+   "s": 1.63,
+   "e": 1.771,
+   "p": 0.98
+  },
+  {
+   "w": "body",
+   "s": 1.812,
+   "e": 2.214,
+   "p": 0.97
+  },
+  {
+   "w": "again.",
+   "s": 2.254,
+   "e": 2.597,
+   "p": 0.99
+  }
+ ],
+ "dur": 3.12,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   10,
+   9.9,
+   9.9,
+   9.8,
+   9.8,
+   9.7
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 3.12,
+  "ai": [],
+  "file": "out_797c48.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "It will have a body again.",
+ "label": {
+  "row": 379,
+  "speaker": "0457",
+  "age": 21,
+  "gender": "f",
+  "text": "IT WILL HAVE A BODY AGAIN",
+  "dur": 3.12,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 4,
+    "w": "BODY",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 1,
+      "pronounced-phone": "AH*"
+     }
+    ],
+    "phones": [
+     "B",
+     "AH1",
+     "D",
+     "IY0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "WILL",
+    "acc": 10
+   },
+   {
+    "w": "HAVE",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "BODY",
+    "acc": 5
+   },
+   {
+    "w": "AGAIN",
+    "acc": 10
+   }
+  ],
+  "id": "so762_379_0457"
+ }
+}

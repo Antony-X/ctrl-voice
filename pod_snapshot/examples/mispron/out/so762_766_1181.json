@@ -1,0 +1,245 @@
+{
+ "file": "so762_766_1181.wav",
+ "t": {
+  "upload": 383,
+  "checks": 1023,
+  "replace": 2496,
+  "render": 2125
+ },
+ "sid": "47d80543",
+ "words": [
+  {
+   "w": "There",
+   "s": 0.602,
+   "e": 0.842,
+   "p": 0.81
+  },
+  {
+   "w": "is",
+   "s": 0.862,
+   "e": 1.063,
+   "p": 0.95
+  },
+  {
+   "w": "time",
+   "s": 1.123,
+   "e": 1.745,
+   "p": 0.26
+  },
+  {
+   "w": "for",
+   "s": 1.785,
+   "e": 1.945,
+   "p": 0.97
+  },
+  {
+   "w": "you",
+   "s": 1.986,
+   "e": 2.166,
+   "p": 0.99
+  },
+  {
+   "w": "to",
+   "s": 2.186,
+   "e": 2.226,
+   "p": 0.99
+  },
+  {
+   "w": "join",
+   "s": 2.286,
+   "e": 2.427,
+   "p": 0.99
+  },
+  {
+   "w": "us",
+   "s": 2.527,
+   "e": 2.808,
+   "p": 1
+  },
+  {
+   "w": "too.",
+   "s": 2.848,
+   "e": 3.029,
+   "p": 0.67
+  }
+ ],
+ "dur": 3.55,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 6,
+    "word": "join",
+    "acc": 4.7,
+    "canon": "dʒɔɪn",
+    "heard": "toha",
+    "sub": "uː",
+    "phone": "ɔɪ"
+   }
+  ],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   8.3,
+   9.7,
+   6.9,
+   8.3,
+   9.8,
+   9.8,
+   4.7,
+   9.5,
+   10
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 6,
+    "word": "join",
+    "acc": 4.7,
+    "canon": "dʒɔɪn",
+    "heard": "toha",
+    "sub": "uː",
+    "phone": "ɔɪ"
+   },
+   "on": false,
+   "op": {
+    "t0": 2.256,
+    "t1": 2.477,
+    "insert": "b8b1f1b4",
+    "i": 6,
+    "j": 6,
+    "old": "join",
+    "new": "join",
+    "engine": "f5",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 3.61
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": false,
+     "sim": 0.643,
+     "heard": "There is a third time for you to learn us too.",
+     "id": "0cbe21ae",
+     "sec": 1.75,
+     "after": 6.43
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.861,
+     "heard": "There is time for you to join us to.",
+     "id": "b8b1f1b4",
+     "sec": 1.14,
+     "after": 3.61
+    }
+   ],
+   "sec": 2.33
+  }
+ ],
+ "render": {
+  "dur": 3.55,
+  "ai": [],
+  "file": "out_1dff18.wav"
+ },
+ "ops": [
+  {
+   "id": "mvde5jbx1",
+   "type": "replace",
+   "t0": 2.256,
+   "t1": 2.477,
+   "insert": "b8b1f1b4",
+   "i": 6,
+   "j": 6,
+   "old": "join",
+   "new": "join",
+   "engine": "f5",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 3.61,
+   "on": false
+  }
+ ],
+ "renderOps": [],
+ "finalText": "There is time for you to join us too.",
+ "label": {
+  "row": 766,
+  "speaker": "1181",
+  "age": 23,
+  "gender": "m",
+  "text": "THERE IS STAT TIME FOR YOU TO JOIN US TOO",
+  "dur": 3.55,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 8,
+  "n_words": 10,
+  "bad": [
+   {
+    "i": 3,
+    "w": "TIME",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AY",
+      "index": 1,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "T",
+     "AY0",
+     "M"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THERE",
+    "acc": 10
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "STAT",
+    "acc": 8
+   },
+   {
+    "w": "TIME",
+    "acc": 3
+   },
+   {
+    "w": "FOR",
+    "acc": 10
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "JOIN",
+    "acc": 10
+   },
+   {
+    "w": "US",
+    "acc": 10
+   },
+   {
+    "w": "TOO",
+    "acc": 10
+   }
+  ],
+  "id": "so762_766_1181"
+ }
+}

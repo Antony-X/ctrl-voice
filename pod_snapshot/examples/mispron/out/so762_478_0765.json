@@ -1,0 +1,327 @@
+{
+ "file": "so762_478_0765.wav",
+ "t": {
+  "upload": 1198,
+  "checks": 2225,
+  "replace": 16048,
+  "render": 1550
+ },
+ "sid": "6db69f74",
+ "words": [
+  {
+   "w": "I",
+   "s": 0.662,
+   "e": 0.903,
+   "p": 0.93
+  },
+  {
+   "w": "shall",
+   "s": 0.943,
+   "e": 1.305,
+   "p": 0.98
+  },
+  {
+   "w": "be",
+   "s": 1.345,
+   "e": 1.646,
+   "p": 1
+  },
+  {
+   "w": "at",
+   "s": 1.706,
+   "e": 1.846,
+   "p": 0.99
+  },
+  {
+   "w": "hand",
+   "s": 1.887,
+   "e": 2.308,
+   "p": 0.99
+  },
+  {
+   "w": "for",
+   "s": 2.348,
+   "e": 2.589,
+   "p": 0.99
+  },
+  {
+   "w": "the",
+   "s": 2.609,
+   "e": 3.151,
+   "p": 0.97
+  },
+  {
+   "w": "trail.",
+   "s": 3.211,
+   "e": 3.512,
+   "p": 0.96
+  }
+ ],
+ "dur": 4.335,
+ "clean": [],
+ "grammar": [],
+ "intent": [
+  {
+   "i": 7,
+   "j": 7,
+   "old": "trail.",
+   "new": "trial",
+   "heard": "tɹeɪl",
+   "intended": "tɹaɪəl",
+   "fit": -0.83,
+   "dist": 0.5,
+   "alts": []
+  }
+ ],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.9,
+   9.2,
+   9.9,
+   10,
+   9.9,
+   10,
+   9.9,
+   9.9
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "misspoken",
+   "item": {
+    "i": 7,
+    "j": 7,
+    "old": "trail.",
+    "new": "trial",
+    "heard": "tɹeɪl",
+    "intended": "tɹaɪəl",
+    "fit": -0.83,
+    "dist": 0.5,
+    "alts": []
+   },
+   "on": true,
+   "op": {
+    "t0": 3.181,
+    "t1": 3.552,
+    "insert": "66eb3fb9",
+    "i": 7,
+    "j": 7,
+    "old": "trail.",
+    "new": "trial",
+    "engine": "f5",
+    "verified": true,
+    "kind": "misspoken",
+    "after": null
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.215,
+     "heard": "I shall be at hand for the trial.",
+     "id": "1374dc5e",
+     "sec": 14.99
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.433,
+     "heard": "I shall be at hand for the trial.",
+     "id": "66eb3fb9",
+     "sec": 14.45
+    }
+   ],
+   "sec": 15.86
+  }
+ ],
+ "render": {
+  "dur": 4.5,
+  "ai": [
+   [
+    3.22,
+    3.77
+   ]
+  ],
+  "file": "out_75f286.wav"
+ },
+ "ops": [
+  {
+   "id": "mvdeh8oy1g",
+   "type": "replace",
+   "t0": 3.181,
+   "t1": 3.552,
+   "insert": "66eb3fb9",
+   "i": 7,
+   "j": 7,
+   "old": "trail.",
+   "new": "trial",
+   "engine": "f5",
+   "verified": true,
+   "kind": "misspoken",
+   "after": null,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 3.181,
+   "t1": 3.552,
+   "insert": "66eb3fb9"
+  }
+ ],
+ "finalText": "I shall be at hand for the trial",
+ "afterCheck": {
+  "sid": "45f83a41",
+  "words": [
+   {
+    "w": "I",
+    "s": 0.643,
+    "e": 0.904,
+    "p": 0.91,
+    "x": null
+   },
+   {
+    "w": "shall",
+    "s": 0.945,
+    "e": 1.306,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "be",
+    "s": 1.346,
+    "e": 1.648,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "at",
+    "s": 1.708,
+    "e": 1.849,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "hand",
+    "s": 1.889,
+    "e": 2.311,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "for",
+    "s": 2.351,
+    "e": 2.592,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "the",
+    "s": 2.633,
+    "e": 3.195,
+    "p": 0.97,
+    "x": null
+   },
+   {
+    "w": "trial.",
+    "s": 3.236,
+    "e": 3.698,
+    "p": 0.98,
+    "x": null
+   }
+  ],
+  "dur": 4.5015833333333335,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.9,
+    9.4,
+    9.9,
+    10,
+    9.9,
+    10,
+    9.9,
+    9.9
+   ]
+  }
+ },
+ "label": {
+  "row": 478,
+  "speaker": "0765",
+  "age": 20,
+  "gender": "m",
+  "text": "I SHALL BE AT HAND FOR THE TRIAL",
+  "dur": 4.33,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 7,
+    "w": "TRIAL",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AY",
+      "index": 2,
+      "pronounced-phone": "IH"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "T",
+     "R",
+     "AY1",
+     "AH0",
+     "L"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "SHALL",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "AT",
+    "acc": 10
+   },
+   {
+    "w": "HAND",
+    "acc": 10
+   },
+   {
+    "w": "FOR",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "TRIAL",
+    "acc": 5
+   }
+  ],
+  "id": "so762_478_0765"
+ }
+}

@@ -1,0 +1,323 @@
+{
+ "file": "so762_347_0306.wav",
+ "t": {
+  "upload": 482,
+  "checks": 1976,
+  "replace": 5610,
+  "render": 1621
+ },
+ "sid": "75a389e2",
+ "words": [
+  {
+   "w": "What,",
+   "s": 0.582,
+   "e": 1.103,
+   "p": 0.94
+  },
+  {
+   "w": "what,",
+   "s": 1.143,
+   "e": 1.805,
+   "p": 0.95
+  },
+  {
+   "w": "what,",
+   "s": 1.825,
+   "e": 2.206,
+   "p": 0.71
+  },
+  {
+   "w": "how",
+   "s": 2.246,
+   "e": 2.447,
+   "p": 0.88
+  },
+  {
+   "w": "will",
+   "s": 2.467,
+   "e": 2.567,
+   "p": 0.69
+  },
+  {
+   "w": "you",
+   "s": 2.587,
+   "e": 2.707,
+   "p": 0.91
+  },
+  {
+   "w": "happen?",
+   "s": 2.747,
+   "e": 3.128,
+   "p": 0.96
+  }
+ ],
+ "dur": 3.71,
+ "clean": [
+  {
+   "i": 0,
+   "j": 0,
+   "kind": "repetition",
+   "text": "What,",
+   "auto": true,
+   "t0": 0.542,
+   "t1": 1.123
+  }
+ ],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 4,
+    "word": "will",
+    "acc": 5.8,
+    "canon": "wɪl",
+    "heard": "ju5",
+    "sub": "j",
+    "phone": "ɪ"
+   }
+  ],
+  "accent": [
+   {
+    "phone": "ʌ",
+    "n": 3,
+    "z": -1.26
+   }
+  ],
+  "median": 8.6,
+  "scores": [
+   8.7,
+   8.5,
+   7.5,
+   9.8,
+   5.8,
+   9.7,
+   9.6
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 4,
+    "word": "will",
+    "acc": 5.8,
+    "canon": "wɪl",
+    "heard": "ju5",
+    "sub": "j",
+    "phone": "ɪ"
+   },
+   "on": true,
+   "op": {
+    "t0": 2.457,
+    "t1": 2.577,
+    "insert": "8732e684",
+    "i": 4,
+    "j": 4,
+    "old": "will",
+    "new": "will",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 9.34
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.434,
+     "heard": "What, what, what, what, how will happen?",
+     "id": "8732e684",
+     "sec": 3.86,
+     "after": 9.34
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.399,
+     "heard": "What, what, what, how will happen?",
+     "id": "0b09cb8c",
+     "sec": 2.58,
+     "after": 8.99
+    }
+   ],
+   "sec": 5.13
+  }
+ ],
+ "render": {
+  "dur": 3.04,
+  "ai": [
+   [
+    1.78,
+    1.91
+   ]
+  ],
+  "file": "out_422e0a.wav"
+ },
+ "ops": [
+  {
+   "id": "mvdeb2btt",
+   "type": "cut",
+   "t0": 0.542,
+   "t1": 1.123,
+   "i": 0,
+   "j": 0,
+   "kind": "repetition",
+   "text": "What,",
+   "on": true,
+   "auto": true
+  },
+  {
+   "id": "mvdeb6nnu",
+   "type": "replace",
+   "t0": 2.457,
+   "t1": 2.577,
+   "insert": "8732e684",
+   "i": 4,
+   "j": 4,
+   "old": "will",
+   "new": "will",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 9.34,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 0.542,
+   "t1": 1.123,
+   "insert": null
+  },
+  {
+   "t0": 2.457,
+   "t1": 2.577,
+   "insert": "8732e684"
+  }
+ ],
+ "finalText": "what, what, how will you happen?",
+ "afterCheck": {
+  "sid": "eecb0078",
+  "words": [
+   {
+    "w": "What",
+    "s": 0.463,
+    "e": 0.765,
+    "p": 0.94,
+    "x": null
+   },
+   {
+    "w": "happened?",
+    "s": 0.826,
+    "e": 1.773,
+    "p": 0.05,
+    "x": null
+   },
+   {
+    "w": "What",
+    "s": 1.793,
+    "e": 2.055,
+    "p": 0.82,
+    "x": null
+   },
+   {
+    "w": "happened?",
+    "s": 2.095,
+    "e": 2.518,
+    "p": 0.95,
+    "x": null
+   }
+  ],
+  "dur": 3.04175,
+  "pron": {
+   "items": [
+    {
+     "i": 1,
+     "word": "happened?",
+     "acc": 3.8,
+     "canon": "hæpənd",
+     "heard": "thɑxu5tɑx",
+     "sub": "t",
+     "phone": "h"
+    },
+    {
+     "i": 2,
+     "word": "What",
+     "acc": 6.7,
+     "canon": "wʌt",
+     "heard": "xɑ5wlux",
+     "sub": "h",
+     "phone": "t"
+    }
+   ],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.3,
+    3.8,
+    6.7,
+    7.6
+   ]
+  }
+ },
+ "label": {
+  "row": 347,
+  "speaker": "0306",
+  "age": 21,
+  "gender": "f",
+  "text": "WHAT WHAT WOULD HAVE YOU HAPPEN",
+  "dur": 3.71,
+  "sr": 16000,
+  "utt_acc": 5,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 2,
+    "w": "WOULD",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "W",
+      "index": 0,
+      "pronounced-phone": "HH"
+     }
+    ],
+    "phones": [
+     "W",
+     "UH0",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "WHAT",
+    "acc": 8
+   },
+   {
+    "w": "WHAT",
+    "acc": 8
+   },
+   {
+    "w": "WOULD",
+    "acc": 3
+   },
+   {
+    "w": "HAVE",
+    "acc": 10
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "HAPPEN",
+    "acc": 10
+   }
+  ],
+  "id": "so762_347_0306"
+ }
+}

@@ -1,0 +1,338 @@
+{
+ "file": "so762_2418_9631.wav",
+ "t": {
+  "upload": 1152,
+  "checks": 1671,
+  "replace": 3589,
+  "render": 2076
+ },
+ "sid": "0bb7c93d",
+ "words": [
+  {
+   "w": "The",
+   "s": 0.522,
+   "e": 0.763,
+   "p": 0.87
+  },
+  {
+   "w": "thing",
+   "s": 0.783,
+   "e": 1.306,
+   "p": 0.76
+  },
+  {
+   "w": "has",
+   "s": 1.346,
+   "e": 1.747,
+   "p": 0.87
+  },
+  {
+   "w": "come",
+   "s": 1.808,
+   "e": 2.189,
+   "p": 0.99
+  },
+  {
+   "w": "and",
+   "s": 2.25,
+   "e": 2.551,
+   "p": 0.83
+  },
+  {
+   "w": "so",
+   "s": 2.591,
+   "e": 2.892,
+   "p": 0.98
+  },
+  {
+   "w": "it",
+   "s": 2.953,
+   "e": 3.153,
+   "p": 0.98
+  },
+  {
+   "w": "must",
+   "s": 3.194,
+   "e": 3.676,
+   "p": 0.99
+  },
+  {
+   "w": "be.",
+   "s": 3.736,
+   "e": 3.816,
+   "p": 1
+  }
+ ],
+ "dur": 4.459,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 2,
+    "word": "has",
+    "acc": 6.1,
+    "canon": "hæz",
+    "heard": "hark",
+    "sub": "k",
+    "phone": "z"
+   }
+  ],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.7,
+   9.7,
+   6.1,
+   9.7,
+   9.9,
+   9.8,
+   9.9,
+   9.6,
+   10
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 2,
+    "word": "has",
+    "acc": 6.1,
+    "canon": "hæz",
+    "heard": "hark",
+    "sub": "k",
+    "phone": "z"
+   },
+   "on": true,
+   "op": {
+    "t0": 1.326,
+    "t1": 1.778,
+    "insert": "21ecd3d9",
+    "i": 2,
+    "j": 2,
+    "old": "has",
+    "new": "has",
+    "engine": "f5",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 9.95
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.47,
+     "heard": "The thing has come and so it must be.",
+     "id": "43042604",
+     "sec": 2.59,
+     "after": 9.7
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.495,
+     "heard": "The thing has come and so it must be.",
+     "id": "21ecd3d9",
+     "sec": 1.86,
+     "after": 9.95
+    }
+   ],
+   "sec": 3.41
+  }
+ ],
+ "render": {
+  "dur": 4.35,
+  "ai": [
+   [
+    1.29,
+    1.72
+   ]
+  ],
+  "file": "out_e83029.wav"
+ },
+ "ops": [
+  {
+   "id": "mvdeg7gk1c",
+   "type": "replace",
+   "t0": 1.326,
+   "t1": 1.778,
+   "insert": "21ecd3d9",
+   "i": 2,
+   "j": 2,
+   "old": "has",
+   "new": "has",
+   "engine": "f5",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 9.95,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 1.326,
+   "t1": 1.778,
+   "insert": "21ecd3d9"
+  }
+ ],
+ "finalText": "The thing has come and so it must be.",
+ "afterCheck": {
+  "sid": "6f374d5b",
+  "words": [
+   {
+    "w": "The",
+    "s": 0.542,
+    "e": 0.743,
+    "p": 0.85,
+    "x": null
+   },
+   {
+    "w": "thing",
+    "s": 0.783,
+    "e": 1.264,
+    "p": 0.69,
+    "x": null
+   },
+   {
+    "w": "has",
+    "s": 1.304,
+    "e": 1.646,
+    "p": 0.92,
+    "x": null
+   },
+   {
+    "w": "come",
+    "s": 1.706,
+    "e": 2.087,
+    "p": 0.91,
+    "x": null
+   },
+   {
+    "w": "and",
+    "s": 2.147,
+    "e": 2.448,
+    "p": 0.86,
+    "x": null
+   },
+   {
+    "w": "so",
+    "s": 2.488,
+    "e": 2.789,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "it",
+    "s": 2.85,
+    "e": 3.05,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "must",
+    "s": 3.07,
+    "e": 3.532,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "be.",
+    "s": 3.552,
+    "e": 3.592,
+    "p": 1,
+    "x": null
+   }
+  ],
+  "dur": 4.354791666666666,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.9,
+    9.7,
+    9.9,
+    9.9,
+    10,
+    9.9,
+    9.9,
+    9.8,
+    10
+   ]
+  }
+ },
+ "label": {
+  "row": 2418,
+  "speaker": "9631",
+  "age": 26,
+  "gender": "m",
+  "text": "THE THING HAD COME, AND SO IT MUST BE.",
+  "dur": 4.46,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 9,
+  "bad": [
+   {
+    "i": 7,
+    "w": "MUST",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 1,
+      "pronounced-phone": "OW"
+     }
+    ],
+    "phones": [
+     "M",
+     "AH0",
+     "S",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "THING",
+    "acc": 10
+   },
+   {
+    "w": "HAD",
+    "acc": 10
+   },
+   {
+    "w": "COME",
+    "acc": 10
+   },
+   {
+    "w": "AND",
+    "acc": 10
+   },
+   {
+    "w": "SO",
+    "acc": 10
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "MUST",
+    "acc": 5
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2418_9631"
+ }
+}

@@ -1,0 +1,122 @@
+{
+ "file": "so762_2399_9629.wav",
+ "t": {
+  "upload": 774,
+  "checks": 1164,
+  "replace": 0,
+  "render": 1422
+ },
+ "sid": "0cab3496",
+ "words": [
+  {
+   "w": "It",
+   "s": 0.562,
+   "e": 0.984,
+   "p": 0.9
+  },
+  {
+   "w": "was",
+   "s": 1.024,
+   "e": 1.927,
+   "p": 0.99
+  },
+  {
+   "w": "not",
+   "s": 1.968,
+   "e": 2.931,
+   "p": 0.97
+  },
+  {
+   "w": "yet,",
+   "s": 2.992,
+   "e": 3.915,
+   "p": 0.98
+  },
+  {
+   "w": "Tim.",
+   "s": 3.935,
+   "e": 4.236,
+   "p": 0.87
+  }
+ ],
+ "dur": 4.919,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.2,
+   6.4,
+   8.6,
+   8.5,
+   8.6
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 4.92,
+  "ai": [],
+  "file": "out_7d6d25.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "It was not yet, Tim.",
+ "label": {
+  "row": 2399,
+  "speaker": "9629",
+  "age": 25,
+  "gender": "f",
+  "text": "IT WAS NOT YET TIME.",
+  "dur": 4.92,
+  "sr": 16000,
+  "utt_acc": 5,
+  "utt_total": 5,
+  "fluency": 5,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "TIME",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AY",
+      "index": 1,
+      "pronounced-phone": "IY"
+     }
+    ],
+    "phones": [
+     "T",
+     "AY0",
+     "M"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "NOT",
+    "acc": 10
+   },
+   {
+    "w": "YET",
+    "acc": 10
+   },
+   {
+    "w": "TIME",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2399_9629"
+ }
+}

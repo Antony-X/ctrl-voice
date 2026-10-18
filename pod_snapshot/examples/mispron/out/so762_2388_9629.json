@@ -1,0 +1,133 @@
+{
+ "file": "so762_2388_9629.wav",
+ "t": {
+  "upload": 795,
+  "checks": 1307,
+  "replace": 0,
+  "render": 1779
+ },
+ "sid": "6d462ae2",
+ "words": [
+  {
+   "w": "I",
+   "s": 0.601,
+   "e": 0.842,
+   "p": 0.92
+  },
+  {
+   "w": "walked",
+   "s": 0.882,
+   "e": 2.144,
+   "p": 0.83
+  },
+  {
+   "w": "up",
+   "s": 2.265,
+   "e": 2.846,
+   "p": 0.99
+  },
+  {
+   "w": "to",
+   "s": 2.886,
+   "e": 3.347,
+   "p": 0.99
+  },
+  {
+   "w": "my",
+   "s": 3.387,
+   "e": 3.788,
+   "p": 0.99
+  },
+  {
+   "w": "room.",
+   "s": 3.848,
+   "e": 4.128,
+   "p": 0.78
+  }
+ ],
+ "dur": 4.91,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.4,
+   9.3,
+   5.7,
+   9.7,
+   9.5,
+   9.4
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 4.91,
+  "ai": [],
+  "file": "out_561b4d.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "I walked up to my room.",
+ "label": {
+  "row": 2388,
+  "speaker": "9629",
+  "age": 25,
+  "gender": "f",
+  "text": "I WALKED UP TO MY ROOM.",
+  "dur": 4.91,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 5,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 5,
+    "w": "ROOM",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "UH",
+      "index": 1,
+      "pronounced-phone": "AA"
+     }
+    ],
+    "phones": [
+     "R",
+     "UH0",
+     "M"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "WALKED",
+    "acc": 10
+   },
+   {
+    "w": "UP",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "MY",
+    "acc": 10
+   },
+   {
+    "w": "ROOM",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2388_9629"
+ }
+}

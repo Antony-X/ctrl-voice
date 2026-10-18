@@ -1,0 +1,179 @@
+{
+ "file": "so762_1302_2438.wav",
+ "t": {
+  "upload": 923,
+  "checks": 1797,
+  "replace": 0,
+  "render": 1776
+ },
+ "sid": "b23b875f",
+ "words": [
+  {
+   "w": "Please",
+   "s": 0.542,
+   "e": 0.844,
+   "p": 0.75
+  },
+  {
+   "w": "let",
+   "s": 0.884,
+   "e": 1.024,
+   "p": 0.97
+  },
+  {
+   "w": "me",
+   "s": 1.064,
+   "e": 1.165,
+   "p": 1
+  },
+  {
+   "w": "know",
+   "s": 1.185,
+   "e": 1.406,
+   "p": 1
+  },
+  {
+   "w": "how",
+   "s": 1.446,
+   "e": 1.627,
+   "p": 0.99
+  },
+  {
+   "w": "I",
+   "s": 1.687,
+   "e": 1.788,
+   "p": 0.96
+  },
+  {
+   "w": "can",
+   "s": 1.828,
+   "e": 2.008,
+   "p": 1
+  },
+  {
+   "w": "be",
+   "s": 2.049,
+   "e": 2.249,
+   "p": 0.98
+  },
+  {
+   "w": "of",
+   "s": 2.33,
+   "e": 2.531,
+   "p": 0.78
+  },
+  {
+   "w": "service.",
+   "s": 2.551,
+   "e": 2.972,
+   "p": 0.33
+  }
+ ],
+ "dur": 3.575,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.9,
+   10,
+   9.9,
+   10,
+   10,
+   10,
+   10,
+   10,
+   9.9,
+   9.1
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 3.58,
+  "ai": [],
+  "file": "out_d69282.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "Please let me know how I can be of service.",
+ "label": {
+  "row": 1302,
+  "speaker": "2438",
+  "age": 21,
+  "gender": "f",
+  "text": "PLEASE LET ME KNOW HOW I CAN BE OF SERVICE",
+  "dur": 3.58,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 7,
+  "fluency": 8,
+  "n_words": 10,
+  "bad": [
+   {
+    "i": 9,
+    "w": "SERVICE",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "IH",
+      "index": 3,
+      "pronounced-phone": "AY"
+     }
+    ],
+    "phones": [
+     "S",
+     "ER1",
+     "V",
+     "IH0",
+     "S"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "PLEASE",
+    "acc": 10
+   },
+   {
+    "w": "LET",
+    "acc": 10
+   },
+   {
+    "w": "ME",
+    "acc": 10
+   },
+   {
+    "w": "KNOW",
+    "acc": 10
+   },
+   {
+    "w": "HOW",
+    "acc": 10
+   },
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "CAN",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "SERVICE",
+    "acc": 5
+   }
+  ],
+  "id": "so762_1302_2438"
+ }
+}

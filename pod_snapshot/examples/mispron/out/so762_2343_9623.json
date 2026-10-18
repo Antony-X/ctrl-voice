@@ -1,0 +1,145 @@
+{
+ "file": "so762_2343_9623.wav",
+ "t": {
+  "upload": 1554,
+  "checks": 1762,
+  "replace": 0,
+  "render": 1775
+ },
+ "sid": "1cc4ec2d",
+ "words": [
+  {
+   "w": "This",
+   "s": 0.662,
+   "e": 1.464,
+   "p": 0.49
+  },
+  {
+   "w": "was",
+   "s": 1.524,
+   "e": 2.969,
+   "p": 0.89
+  },
+  {
+   "w": "where",
+   "s": 3.009,
+   "e": 3.871,
+   "p": 0.92
+  },
+  {
+   "w": "she",
+   "s": 3.911,
+   "e": 4.453,
+   "p": 0.98
+  },
+  {
+   "w": "had",
+   "s": 4.493,
+   "e": 4.995,
+   "p": 0.88
+  },
+  {
+   "w": "left",
+   "s": 5.035,
+   "e": 5.937,
+   "p": 0.96
+  },
+  {
+   "w": "them.",
+   "s": 5.978,
+   "e": 6.238,
+   "p": 0.91
+  }
+ ],
+ "dur": 6.82,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   5.9,
+   7.8,
+   9.1,
+   9.5,
+   9,
+   7.5,
+   9.4
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 6.82,
+  "ai": [],
+  "file": "out_dc1ea4.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "This was where she had left them.",
+ "label": {
+  "row": 2343,
+  "speaker": "9623",
+  "age": 21,
+  "gender": "m",
+  "text": "THIS WAS WHERE SHE HAD LEFT THEM.",
+  "dur": 6.82,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 5,
+    "w": "LEFT",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 1,
+      "pronounced-phone": "IH"
+     }
+    ],
+    "phones": [
+     "L",
+     "EH0",
+     "F",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THIS",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "WHERE",
+    "acc": 10
+   },
+   {
+    "w": "SHE",
+    "acc": 10
+   },
+   {
+    "w": "HAD",
+    "acc": 10
+   },
+   {
+    "w": "LEFT",
+    "acc": 5
+   },
+   {
+    "w": "THEM",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2343_9623"
+ }
+}

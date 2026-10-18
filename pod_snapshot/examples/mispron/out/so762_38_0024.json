@@ -1,0 +1,145 @@
+{
+ "file": "so762_38_0024.wav",
+ "t": {
+  "upload": 910,
+  "checks": 1041,
+  "replace": 0,
+  "render": 1481
+ },
+ "sid": "7ea8942e",
+ "words": [
+  {
+   "w": "It",
+   "s": 0.622,
+   "e": 0.763,
+   "p": 0.94
+  },
+  {
+   "w": "was",
+   "s": 0.803,
+   "e": 0.943,
+   "p": 1
+  },
+  {
+   "w": "a",
+   "s": 0.983,
+   "e": 1.044,
+   "p": 1
+  },
+  {
+   "w": "proof",
+   "s": 1.104,
+   "e": 1.485,
+   "p": 0.94
+  },
+  {
+   "w": "of",
+   "s": 1.545,
+   "e": 1.626,
+   "p": 1
+  },
+  {
+   "w": "his",
+   "s": 1.666,
+   "e": 1.826,
+   "p": 1
+  },
+  {
+   "w": "friendship.",
+   "s": 1.847,
+   "e": 2.308,
+   "p": 1
+  }
+ ],
+ "dur": 2.83,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   10,
+   10,
+   10,
+   9.9,
+   10,
+   10,
+   9.9
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 2.83,
+  "ai": [],
+  "file": "out_524e6b.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "It was a proof of his friendship.",
+ "label": {
+  "row": 38,
+  "speaker": "0024",
+  "age": 25,
+  "gender": "f",
+  "text": "IT WAS A PROOF OF HIS FRIENDSHIP",
+  "dur": 2.83,
+  "sr": 16000,
+  "utt_acc": 9,
+  "utt_total": 8,
+  "fluency": 9,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 3,
+    "w": "PROOF",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "UW",
+      "index": 2,
+      "pronounced-phone": "OW"
+     }
+    ],
+    "phones": [
+     "P",
+     "R",
+     "UW0",
+     "F"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "PROOF",
+    "acc": 3
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "HIS",
+    "acc": 10
+   },
+   {
+    "w": "FRIENDSHIP",
+    "acc": 10
+   }
+  ],
+  "id": "so762_38_0024"
+ }
+}

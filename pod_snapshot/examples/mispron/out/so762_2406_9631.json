@@ -1,0 +1,252 @@
+{
+ "file": "so762_2406_9631.wav",
+ "t": {
+  "upload": 733,
+  "checks": 1734,
+  "replace": 2564,
+  "render": 1555
+ },
+ "sid": "199c9625",
+ "words": [
+  {
+   "w": "But",
+   "s": 0.481,
+   "e": 0.762,
+   "p": 0.46
+  },
+  {
+   "w": "the",
+   "s": 0.822,
+   "e": 1.584,
+   "p": 0.63
+  },
+  {
+   "w": "is",
+   "s": 1.684,
+   "e": 2.025,
+   "p": 0.55
+  },
+  {
+   "w": "all",
+   "s": 2.125,
+   "e": 2.406,
+   "p": 0.63
+  },
+  {
+   "w": "right.",
+   "s": 2.446,
+   "e": 2.747,
+   "p": 1
+  }
+ ],
+ "dur": 3.208,
+ "clean": [],
+ "grammar": [
+  {
+   "i": 2,
+   "j": 2,
+   "old": "is",
+   "new": "was"
+  }
+ ],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.7,
+   9.6,
+   9.5,
+   9.7,
+   9.6
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "grammar",
+   "item": {
+    "i": 2,
+    "j": 2,
+    "old": "is",
+    "new": "was"
+   },
+   "on": true,
+   "op": {
+    "t0": 1.634,
+    "t1": 2.075,
+    "insert": "2cf9288d",
+    "i": 2,
+    "j": 2,
+    "old": "is",
+    "new": "was",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "grammar",
+    "after": null
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.277,
+     "heard": "But it was alright.",
+     "id": "2cf9288d",
+     "sec": 1.72
+    },
+    {
+     "engine": "f5",
+     "ok": false,
+     "sim": 0.171,
+     "heard": "But the is all right.",
+     "id": "57394885",
+     "sec": 1.16
+    }
+   ],
+   "sec": 2.4
+  }
+ ],
+ "render": {
+  "dur": 3.09,
+  "ai": [
+   [
+    1.61,
+    1.94
+   ]
+  ],
+  "file": "out_5027af.wav"
+ },
+ "ops": [
+  {
+   "id": "mvde7sjye",
+   "type": "replace",
+   "t0": 1.634,
+   "t1": 2.075,
+   "insert": "2cf9288d",
+   "i": 2,
+   "j": 2,
+   "old": "is",
+   "new": "was",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "grammar",
+   "after": null,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 1.634,
+   "t1": 2.075,
+   "insert": "2cf9288d"
+  }
+ ],
+ "finalText": "But the was all right.",
+ "afterCheck": {
+  "sid": "90a0df04",
+  "words": [
+   {
+    "w": "But,",
+    "s": 0.482,
+    "e": 0.663,
+    "p": 0.65,
+    "x": null
+   },
+   {
+    "w": "uh,",
+    "s": 0.703,
+    "e": 0.763,
+    "p": 0,
+    "x": null
+   },
+   {
+    "w": "it",
+    "s": 0.783,
+    "e": 1.606,
+    "p": 0.71,
+    "x": null
+   },
+   {
+    "w": "was",
+    "s": 1.647,
+    "e": 1.928,
+    "p": 0.96,
+    "x": null
+   },
+   {
+    "w": "alright.",
+    "s": 2.008,
+    "e": 2.631,
+    "p": 0.63,
+    "x": null
+   }
+  ],
+  "dur": 3.0925,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.9,
+    9.7,
+    9.7,
+    9.9,
+    9.5
+   ]
+  }
+ },
+ "label": {
+  "row": 2406,
+  "speaker": "9631",
+  "age": 26,
+  "gender": "m",
+  "text": "BUT THE EYES WERE RIGHT.",
+  "dur": 3.21,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 2,
+    "w": "EYES",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AY",
+      "index": 0,
+      "pronounced-phone": "IY"
+     }
+    ],
+    "phones": [
+     "AY0",
+     "Z"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "BUT",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "EYES",
+    "acc": 3
+   },
+   {
+    "w": "WERE",
+    "acc": 10
+   },
+   {
+    "w": "RIGHT",
+    "acc": 8
+   }
+  ],
+  "id": "so762_2406_9631"
+ }
+}

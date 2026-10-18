@@ -1,0 +1,415 @@
+{
+ "sid": "862e9837",
+ "k": 7,
+ "original_margin": -28.30512237548828,
+ "rows": [
+  {
+   "span": 1,
+   "seed": 0,
+   "engine": "playdiff",
+   "id": "df40cad5",
+   "whisper_ok": true,
+   "sim": 0.407,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": -5.52,
+   "heard_ctc": "you be more pacific about game night",
+   "sec": 5.4,
+   "chosen": false,
+   "op": {
+    "t0": 2.983,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 1,
+   "seed": 0,
+   "engine": "f5",
+   "id": "5e64e8be",
+   "whisper_ok": true,
+   "sim": 0.45,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": -0.35,
+   "heard_ctc": "you be more pacific about game night",
+   "sec": 5.4,
+   "chosen": true,
+   "op": {
+    "t0": 2.983,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 1,
+   "seed": 7,
+   "engine": "playdiff",
+   "id": "d5ed96f3",
+   "whisper_ok": true,
+   "sim": 0.333,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": -11.82,
+   "heard_ctc": "ybe more pacific about game night",
+   "sec": 5.5,
+   "chosen": false,
+   "op": {
+    "t0": 2.983,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 1,
+   "seed": 7,
+   "engine": "f5",
+   "id": "59d54252",
+   "whisper_ok": true,
+   "sim": 0.389,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": -0.24,
+   "heard_ctc": "you be more spacific about game night",
+   "sec": 5.5,
+   "chosen": true,
+   "op": {
+    "t0": 2.983,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 1,
+   "seed": 14,
+   "engine": "playdiff",
+   "id": "885063d7",
+   "whisper_ok": true,
+   "sim": 0.399,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": -5.31,
+   "heard_ctc": "yoube more pacific about game night",
+   "sec": 5.2,
+   "chosen": true,
+   "op": {
+    "t0": 2.983,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 1,
+   "seed": 14,
+   "engine": "f5",
+   "id": "45d5374e",
+   "whisper_ok": true,
+   "sim": 0.282,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": -0.97,
+   "heard_ctc": "you be more pacific about game night",
+   "sec": 5.2,
+   "chosen": false,
+   "op": {
+    "t0": 2.983,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 1,
+   "seed": 21,
+   "engine": "playdiff",
+   "id": "57348f83",
+   "whisper_ok": true,
+   "sim": 0.354,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": -3.5,
+   "heard_ctc": "yobe more pacific about game night",
+   "sec": 5.3,
+   "chosen": true,
+   "op": {
+    "t0": 2.983,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 1,
+   "seed": 21,
+   "engine": "f5",
+   "id": "f90c1970",
+   "whisper_ok": true,
+   "sim": 0.353,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": -0.23,
+   "heard_ctc": "you be more pacific about game night",
+   "sec": 5.3,
+   "chosen": false,
+   "op": {
+    "t0": 2.983,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 2,
+   "seed": 0,
+   "engine": "playdiff",
+   "id": "61fd3d58",
+   "whisper_ok": true,
+   "sim": 0.442,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": 26.67,
+   "heard_ctc": "can you be more specific about game nights",
+   "sec": 5.4,
+   "chosen": false,
+   "op": {
+    "t0": 2.542,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 2,
+   "seed": 0,
+   "engine": "f5",
+   "id": "3f4e7973",
+   "whisper_ok": true,
+   "sim": 0.568,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": 26.63,
+   "heard_ctc": "can you be more specific about game night",
+   "sec": 5.4,
+   "chosen": true,
+   "op": {
+    "t0": 2.542,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 2,
+   "seed": 7,
+   "engine": "playdiff",
+   "id": "da770896",
+   "whisper_ok": true,
+   "sim": 0.445,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": 26.28,
+   "heard_ctc": "can you be more specific about game night",
+   "sec": 5.5,
+   "chosen": false,
+   "op": {
+    "t0": 2.542,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 2,
+   "seed": 7,
+   "engine": "f5",
+   "id": "201e1336",
+   "whisper_ok": true,
+   "sim": 0.641,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": 33.35,
+   "heard_ctc": "can you be more specific about game night",
+   "sec": 5.5,
+   "chosen": true,
+   "op": {
+    "t0": 2.542,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 2,
+   "seed": 14,
+   "engine": "playdiff",
+   "id": "60a4b006",
+   "whisper_ok": true,
+   "sim": 0.495,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": 26.75,
+   "heard_ctc": "can you be more specific about game night",
+   "sec": 5.4,
+   "chosen": false,
+   "op": {
+    "t0": 2.542,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 2,
+   "seed": 14,
+   "engine": "f5",
+   "id": "acd8ccf9",
+   "whisper_ok": true,
+   "sim": 0.544,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": 26.56,
+   "heard_ctc": "can you be more specific about game night",
+   "sec": 5.4,
+   "chosen": true,
+   "op": {
+    "t0": 2.542,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 2,
+   "seed": 21,
+   "engine": "playdiff",
+   "id": "a2ff5468",
+   "whisper_ok": true,
+   "sim": 0.441,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": 26.88,
+   "heard_ctc": "can you be more specific about game night",
+   "sec": 18.5,
+   "chosen": true,
+   "op": {
+    "t0": 2.542,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 2,
+   "seed": 21,
+   "engine": "f5",
+   "id": "1f1dffb9",
+   "whisper_ok": true,
+   "sim": 0.441,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": 27.99,
+   "heard_ctc": "can you be more specific about game night",
+   "sec": 18.5,
+   "chosen": false,
+   "op": {
+    "t0": 2.542,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 3,
+   "seed": 0,
+   "engine": "playdiff",
+   "id": "185c80d8",
+   "whisper_ok": true,
+   "sim": 0.479,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": 27.67,
+   "heard_ctc": "can you be more specific about game night",
+   "sec": 5.3,
+   "chosen": false,
+   "op": {
+    "t0": 2.342,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 3,
+   "seed": 0,
+   "engine": "f5",
+   "id": "d4822562",
+   "whisper_ok": true,
+   "sim": 0.645,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": 26.62,
+   "heard_ctc": "can you be more specific about game night",
+   "sec": 5.3,
+   "chosen": true,
+   "op": {
+    "t0": 2.342,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 3,
+   "seed": 7,
+   "engine": "playdiff",
+   "id": "9b370c40",
+   "whisper_ok": true,
+   "sim": 0.488,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": 27.34,
+   "heard_ctc": "can you be more specific about game night",
+   "sec": 5.4,
+   "chosen": false,
+   "op": {
+    "t0": 2.342,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 3,
+   "seed": 7,
+   "engine": "f5",
+   "id": "5948ae87",
+   "whisper_ok": true,
+   "sim": 0.557,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": 27.39,
+   "heard_ctc": "can you be more specific about game night",
+   "sec": 5.4,
+   "chosen": true,
+   "op": {
+    "t0": 2.342,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 3,
+   "seed": 14,
+   "engine": "playdiff",
+   "id": "796bc3d8",
+   "whisper_ok": true,
+   "sim": 0.484,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": 26.54,
+   "heard_ctc": "can you be more specific about game night",
+   "sec": 5.4,
+   "chosen": false,
+   "op": {
+    "t0": 2.342,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 3,
+   "seed": 14,
+   "engine": "f5",
+   "id": "01d4f7b9",
+   "whisper_ok": true,
+   "sim": 0.527,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": 26.5,
+   "heard_ctc": "can you be more specific about game night",
+   "sec": 5.4,
+   "chosen": true,
+   "op": {
+    "t0": 2.342,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 3,
+   "seed": 21,
+   "engine": "playdiff",
+   "id": "217b08c6",
+   "whisper_ok": true,
+   "sim": 0.451,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": 28.12,
+   "heard_ctc": "can you be more specific about game night",
+   "sec": 5.4,
+   "chosen": false,
+   "op": {
+    "t0": 2.342,
+    "t1": 3.984
+   }
+  },
+  {
+   "span": 3,
+   "seed": 21,
+   "engine": "f5",
+   "id": "77d7e476",
+   "whisper_ok": true,
+   "sim": 0.535,
+   "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+   "margin": 28.33,
+   "heard_ctc": "can you be more specific about game night",
+   "sec": 5.4,
+   "chosen": true,
+   "op": {
+    "t0": 2.342,
+    "t1": 3.984
+   }
+  }
+ ]
+}

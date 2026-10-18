@@ -1,0 +1,152 @@
+{
+ "file": "so762_2285_9617.wav",
+ "t": {
+  "upload": 1953,
+  "checks": 1551,
+  "replace": 0,
+  "render": 2667
+ },
+ "sid": "a5eb2853",
+ "words": [
+  {
+   "w": "And",
+   "s": 0.521,
+   "e": 0.762,
+   "p": 0.31
+  },
+  {
+   "w": "once",
+   "s": 0.902,
+   "e": 1.363,
+   "p": 0.96
+  },
+  {
+   "w": "more,",
+   "s": 1.423,
+   "e": 1.864,
+   "p": 0.91
+  },
+  {
+   "w": "she",
+   "s": 1.904,
+   "e": 2.125,
+   "p": 0.57
+  },
+  {
+   "w": "was",
+   "s": 2.165,
+   "e": 3.067,
+   "p": 0.94
+  },
+  {
+   "w": "a",
+   "s": 3.708,
+   "e": 4.009,
+   "p": 0.69
+  },
+  {
+   "w": "woman.",
+   "s": 4.049,
+   "e": 4.37,
+   "p": 0.84
+  }
+ ],
+ "dur": 5.673,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   7,
+   8.9,
+   6.9,
+   9.9,
+   5.4,
+   9.7,
+   9.5
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 5.67,
+  "ai": [],
+  "file": "out_0d06ff.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "And once more, she was a woman.",
+ "label": {
+  "row": 2285,
+  "speaker": "9617",
+  "age": 35,
+  "gender": "f",
+  "text": "AND ONCE MORE SHE WAS ALL HIS OWN.",
+  "dur": 5.67,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 6,
+  "fluency": 6,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 7,
+    "w": "OWN",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "OW",
+      "index": 0,
+      "pronounced-phone": "<unk>"
+     },
+     {
+      "canonical-phone": "N",
+      "index": 1,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "OW0",
+     "N"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "AND",
+    "acc": 10
+   },
+   {
+    "w": "ONCE",
+    "acc": 10
+   },
+   {
+    "w": "MORE",
+    "acc": 10
+   },
+   {
+    "w": "SHE",
+    "acc": 8
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "ALL",
+    "acc": 10
+   },
+   {
+    "w": "HIS",
+    "acc": 8
+   },
+   {
+    "w": "OWN",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2285_9617"
+ }
+}

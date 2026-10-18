@@ -1,0 +1,360 @@
+{
+ "file": "so762_438_0567.wav",
+ "t": {
+  "upload": 384,
+  "checks": 986,
+  "replace": 9297,
+  "render": 1595
+ },
+ "sid": "999b665f",
+ "words": [
+  {
+   "w": "I",
+   "s": 0.665,
+   "e": 0.786,
+   "p": 0.86
+  },
+  {
+   "w": "will",
+   "s": 0.806,
+   "e": 1.108,
+   "p": 0.55
+  },
+  {
+   "w": "know",
+   "s": 1.149,
+   "e": 1.411,
+   "p": 0.81
+  },
+  {
+   "w": "what",
+   "s": 1.431,
+   "e": 1.653,
+   "p": 0.99
+  },
+  {
+   "w": "to",
+   "s": 1.673,
+   "e": 1.834,
+   "p": 0.99
+  },
+  {
+   "w": "do.",
+   "s": 1.874,
+   "e": 1.955,
+   "p": 1
+  }
+ ],
+ "dur": 2.741,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 1,
+    "word": "will",
+    "acc": 6.7,
+    "canon": "wɪl",
+    "heard": "wanaː",
+    "sub": "n",
+    "phone": "ɪ"
+   },
+   {
+    "i": 2,
+    "word": "know",
+    "acc": 6.2,
+    "canon": "noʊ",
+    "heard": "naːwa",
+    "sub": "w",
+    "phone": "oʊ"
+   }
+  ],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   8.2,
+   6.7,
+   6.2,
+   8.6,
+   9.8,
+   10
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 1,
+    "word": "will",
+    "acc": 6.7,
+    "canon": "wɪl",
+    "heard": "wanaː",
+    "sub": "n",
+    "phone": "ɪ"
+   },
+   "on": true,
+   "op": {
+    "t0": 0.796,
+    "t1": 1.129,
+    "insert": "34ccec4e",
+    "i": 1,
+    "j": 1,
+    "old": "will",
+    "new": "will",
+    "engine": "f5",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 7.81
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.251,
+     "heard": "I will know what to do.",
+     "id": "67a657ee",
+     "sec": 2.8,
+     "after": 7.51
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.281,
+     "heard": "I will know what to do.",
+     "id": "34ccec4e",
+     "sec": 1.91,
+     "after": 7.81
+    }
+   ],
+   "sec": 3.87
+  },
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 2,
+    "word": "know",
+    "acc": 6.2,
+    "canon": "noʊ",
+    "heard": "naːwa",
+    "sub": "w",
+    "phone": "oʊ"
+   },
+   "on": true,
+   "op": {
+    "t0": 1.129,
+    "t1": 1.421,
+    "insert": "472d9d68",
+    "i": 2,
+    "j": 2,
+    "old": "know",
+    "new": "know",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 9.5
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.45,
+     "heard": "I will know what to do.",
+     "id": "472d9d68",
+     "sec": 3.47,
+     "after": 9.5
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.328,
+     "heard": "I will know what to do.",
+     "id": "4d75ee45",
+     "sec": 1.85,
+     "after": 8.28
+    }
+   ],
+   "sec": 4.94
+  }
+ ],
+ "render": {
+  "dur": 3.13,
+  "ai": [
+   [
+    0.78,
+    1.13
+   ],
+   [
+    1.13,
+    1.82
+   ]
+  ],
+  "file": "out_8f7089.wav"
+ },
+ "ops": [
+  {
+   "id": "mvde7hxrc",
+   "type": "replace",
+   "t0": 0.796,
+   "t1": 1.129,
+   "insert": "34ccec4e",
+   "i": 1,
+   "j": 1,
+   "old": "will",
+   "new": "will",
+   "engine": "f5",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 7.81,
+   "on": true
+  },
+  {
+   "id": "mvde7lzcd",
+   "type": "replace",
+   "t0": 1.129,
+   "t1": 1.421,
+   "insert": "472d9d68",
+   "i": 2,
+   "j": 2,
+   "old": "know",
+   "new": "know",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 9.5,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 1.129,
+   "t1": 1.421,
+   "insert": "472d9d68"
+  },
+  {
+   "t0": 0.796,
+   "t1": 1.129,
+   "insert": "34ccec4e"
+  }
+ ],
+ "finalText": "I will know what to do.",
+ "afterCheck": {
+  "sid": "befeb72c",
+  "words": [
+   {
+    "w": "I",
+    "s": 0.663,
+    "e": 0.763,
+    "p": 0.87,
+    "x": null
+   },
+   {
+    "w": "will",
+    "s": 0.803,
+    "e": 1.084,
+    "p": 0.94,
+    "x": null
+   },
+   {
+    "w": "know",
+    "s": 1.124,
+    "e": 1.787,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "what",
+    "s": 1.827,
+    "e": 2.028,
+    "p": 0.97,
+    "x": null
+   },
+   {
+    "w": "to",
+    "s": 2.068,
+    "e": 2.209,
+    "p": 1,
+    "x": null
+   },
+   {
+    "w": "do.",
+    "s": 2.249,
+    "e": 2.349,
+    "p": 1,
+    "x": null
+   }
+  ],
+  "dur": 3.1320833333333336,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.6,
+    7.8,
+    9.6,
+    8.8,
+    9.9,
+    10
+   ]
+  }
+ },
+ "label": {
+  "row": 438,
+  "speaker": "0567",
+  "age": 21,
+  "gender": "f",
+  "text": "I WILL KNOW WHAT TO DO",
+  "dur": 2.74,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 6,
+  "fluency": 8,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 2,
+    "w": "KNOW",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "OW",
+      "index": 1,
+      "pronounced-phone": "AW"
+     }
+    ],
+    "phones": [
+     "N",
+     "OW0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "WILL",
+    "acc": 10
+   },
+   {
+    "w": "KNOW",
+    "acc": 3
+   },
+   {
+    "w": "WHAT",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "DO",
+    "acc": 10
+   }
+  ],
+  "id": "so762_438_0567"
+ }
+}

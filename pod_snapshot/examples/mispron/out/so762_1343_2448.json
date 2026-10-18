@@ -1,0 +1,168 @@
+{
+ "file": "so762_1343_2448.wav",
+ "t": {
+  "upload": 1714,
+  "checks": 1666,
+  "replace": 0,
+  "render": 1987
+ },
+ "sid": "a9b36ebd",
+ "words": [
+  {
+   "w": "Thursday",
+   "s": 0.542,
+   "e": 1.065,
+   "p": 0.99
+  },
+  {
+   "w": "is",
+   "s": 1.105,
+   "e": 1.205,
+   "p": 1
+  },
+  {
+   "w": "the",
+   "s": 1.225,
+   "e": 1.346,
+   "p": 0.99
+  },
+  {
+   "w": "last",
+   "s": 1.386,
+   "e": 1.728,
+   "p": 1
+  },
+  {
+   "w": "day",
+   "s": 1.808,
+   "e": 2.431,
+   "p": 0.99
+  },
+  {
+   "w": "of",
+   "s": 2.511,
+   "e": 2.672,
+   "p": 1
+  },
+  {
+   "w": "this",
+   "s": 2.712,
+   "e": 3.033,
+   "p": 1
+  },
+  {
+   "w": "year's",
+   "s": 3.073,
+   "e": 3.495,
+   "p": 0.99
+  },
+  {
+   "w": "debate.",
+   "s": 3.535,
+   "e": 3.937,
+   "p": 0.91
+  }
+ ],
+ "dur": 4.58,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.9,
+   10,
+   10,
+   9.9,
+   10,
+   10,
+   10,
+   9.9,
+   9.8
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 4.58,
+  "ai": [],
+  "file": "out_558d74.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "Thursday is the last day of this year's debate.",
+ "label": {
+  "row": 1343,
+  "speaker": "2448",
+  "age": 19,
+  "gender": "f",
+  "text": "THURSDAY IS THE LAST DAY OF THIS YEAR'S DEBATE",
+  "dur": 4.58,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 8,
+  "fluency": 8,
+  "n_words": 9,
+  "bad": [
+   {
+    "i": 8,
+    "w": "DEBATE",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "EY",
+      "index": 3,
+      "pronounced-phone": "EH"
+     }
+    ],
+    "phones": [
+     "D",
+     "IH0",
+     "B",
+     "EY1",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THURSDAY",
+    "acc": 8
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "LAST",
+    "acc": 10
+   },
+   {
+    "w": "DAY",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "THIS",
+    "acc": 10
+   },
+   {
+    "w": "YEAR'S",
+    "acc": 10
+   },
+   {
+    "w": "DEBATE",
+    "acc": 5
+   }
+  ],
+  "id": "so762_1343_2448"
+ }
+}

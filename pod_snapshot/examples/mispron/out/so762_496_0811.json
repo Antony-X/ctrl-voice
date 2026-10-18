@@ -1,0 +1,154 @@
+{
+ "file": "so762_496_0811.wav",
+ "t": {
+  "upload": 1514,
+  "checks": 1677,
+  "replace": 0,
+  "render": 1883
+ },
+ "sid": "fd4c5a63",
+ "words": [
+  {
+   "w": "Sorry,",
+   "s": 0.644,
+   "e": 0.946,
+   "p": 0.83
+  },
+  {
+   "w": "not",
+   "s": 0.987,
+   "e": 1.107,
+   "p": 0.99
+  },
+  {
+   "w": "a",
+   "s": 1.148,
+   "e": 1.188,
+   "p": 0.99
+  },
+  {
+   "w": "fan",
+   "s": 1.228,
+   "e": 1.45,
+   "p": 1
+  },
+  {
+   "w": "of",
+   "s": 1.49,
+   "e": 1.611,
+   "p": 1
+  },
+  {
+   "w": "that,",
+   "s": 1.631,
+   "e": 1.913,
+   "p": 0.99
+  },
+  {
+   "w": "did",
+   "s": 1.933,
+   "e": 2.094,
+   "p": 0.9
+  },
+  {
+   "w": "you?",
+   "s": 2.114,
+   "e": 2.275,
+   "p": 0.99
+  }
+ ],
+ "dur": 2.96,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.9,
+   9.9,
+   9.9,
+   10,
+   10,
+   9.9,
+   9.9,
+   8.7
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 2.96,
+  "ai": [],
+  "file": "out_a5e4ed.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "Sorry, not a fan of that, did you?",
+ "label": {
+  "row": 496,
+  "speaker": "0811",
+  "age": 20,
+  "gender": "f",
+  "text": "SORRY NOT A FAN OF THAT DECISION",
+  "dur": 2.96,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 8,
+  "fluency": 10,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 6,
+    "w": "DECISION",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "S",
+      "index": 2,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "D",
+     "IH0",
+     "S",
+     "IH1",
+     "ZH",
+     "N"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "SORRY",
+    "acc": 10
+   },
+   {
+    "w": "NOT",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "FAN",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "THAT",
+    "acc": 10
+   },
+   {
+    "w": "DECISION",
+    "acc": 5
+   }
+  ],
+  "id": "so762_496_0811"
+ }
+}

@@ -1,0 +1,133 @@
+{
+ "file": "so762_2308_9618.wav",
+ "t": {
+  "upload": 607,
+  "checks": 1174,
+  "replace": 0,
+  "render": 1382
+ },
+ "sid": "7760dce2",
+ "words": [
+  {
+   "w": "This",
+   "s": 0.503,
+   "e": 0.906,
+   "p": 0.76
+  },
+  {
+   "w": "is",
+   "s": 0.947,
+   "e": 1.208,
+   "p": 0.99
+  },
+  {
+   "w": "the",
+   "s": 1.229,
+   "e": 1.37,
+   "p": 0.95
+  },
+  {
+   "w": "way",
+   "s": 1.43,
+   "e": 1.672,
+   "p": 0.98
+  },
+  {
+   "w": "of",
+   "s": 1.732,
+   "e": 1.974,
+   "p": 0.98
+  },
+  {
+   "w": "leaf.",
+   "s": 2.034,
+   "e": 2.256,
+   "p": 0.76
+  }
+ ],
+ "dur": 2.88,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.4,
+   9.4,
+   9.1,
+   9.6,
+   9.2,
+   10
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 2.88,
+  "ai": [],
+  "file": "out_24fc41.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "This is the way of leaf.",
+ "label": {
+  "row": 2308,
+  "speaker": "9618",
+  "age": 24,
+  "gender": "f",
+  "text": "THIS IS THE WAY OF LIFE.",
+  "dur": 2.88,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 8,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 5,
+    "w": "LIFE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AY",
+      "index": 1,
+      "pronounced-phone": "IH"
+     }
+    ],
+    "phones": [
+     "L",
+     "AY0",
+     "F"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THIS",
+    "acc": 10
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "WAY",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "LIFE",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2308_9618"
+ }
+}

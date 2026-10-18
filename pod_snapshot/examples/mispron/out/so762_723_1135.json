@@ -1,0 +1,150 @@
+{
+ "file": "so762_723_1135.wav",
+ "t": {
+  "upload": 730,
+  "checks": 999,
+  "replace": 0,
+  "render": 1073
+ },
+ "sid": "44ac8644",
+ "words": [
+  {
+   "w": "Encourage",
+   "s": 0.643,
+   "e": 1.668,
+   "p": 0.81
+  },
+  {
+   "w": "you",
+   "s": 1.708,
+   "e": 1.929,
+   "p": 0.93
+  },
+  {
+   "w": "could",
+   "s": 1.969,
+   "e": 2.27,
+   "p": 0.97
+  },
+  {
+   "w": "get",
+   "s": 2.331,
+   "e": 2.612,
+   "p": 0.99
+  },
+  {
+   "w": "away",
+   "s": 2.712,
+   "e": 3.074,
+   "p": 0.99
+  },
+  {
+   "w": "with",
+   "s": 3.094,
+   "e": 3.496,
+   "p": 0.98
+  },
+  {
+   "w": "things.",
+   "s": 3.536,
+   "e": 3.818,
+   "p": 0.89
+  }
+ ],
+ "dur": 4.34,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   7.9,
+   9.7,
+   9.8,
+   9.7,
+   9.5,
+   8.7,
+   9.7
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 4.34,
+  "ai": [],
+  "file": "out_cf4a7d.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "Encourage you could get away with things.",
+ "label": {
+  "row": 723,
+  "speaker": "1135",
+  "age": 25,
+  "gender": "m",
+  "text": "IN COLLEGE YOU COULD GET AWAY WITH THINGS",
+  "dur": 4.34,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 8,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 1,
+    "w": "COLLEGE",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "L",
+      "index": 2,
+      "pronounced-phone": "R"
+     }
+    ],
+    "phones": [
+     "K",
+     "AH1",
+     "L",
+     "IH0",
+     "JH"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IN",
+    "acc": 10
+   },
+   {
+    "w": "COLLEGE",
+    "acc": 5
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "COULD",
+    "acc": 10
+   },
+   {
+    "w": "GET",
+    "acc": 10
+   },
+   {
+    "w": "AWAY",
+    "acc": 10
+   },
+   {
+    "w": "WITH",
+    "acc": 10
+   },
+   {
+    "w": "THINGS",
+    "acc": 10
+   }
+  ],
+  "id": "so762_723_1135"
+ }
+}

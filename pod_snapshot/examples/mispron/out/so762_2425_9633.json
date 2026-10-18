@@ -1,0 +1,273 @@
+{
+ "file": "so762_2425_9633.wav",
+ "t": {
+  "upload": 804,
+  "checks": 963,
+  "replace": 3073,
+  "render": 2051
+ },
+ "sid": "6fd49182",
+ "words": [
+  {
+   "w": "I",
+   "s": 0.683,
+   "e": 1.104,
+   "p": 0.75
+  },
+  {
+   "w": "would",
+   "s": 1.124,
+   "e": 2.228,
+   "p": 0.96
+  },
+  {
+   "w": "never",
+   "s": 2.289,
+   "e": 3.011,
+   "p": 0.95
+  },
+  {
+   "w": "had",
+   "s": 3.051,
+   "e": 4.156,
+   "p": 0.86
+  },
+  {
+   "w": "left.",
+   "s": 4.216,
+   "e": 4.677,
+   "p": 0.94
+  }
+ ],
+ "dur": 5.36,
+ "clean": [],
+ "grammar": [
+  {
+   "i": 3,
+   "j": 4,
+   "old": "had left.",
+   "new": "have left"
+  }
+ ],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 3,
+    "word": "had",
+    "acc": 6,
+    "canon": "hæd",
+    "heard": "hadarl",
+    "sub": "d",
+    "phone": "æ"
+   }
+  ],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.8,
+   6.9,
+   7.5,
+   6,
+   9.4
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "grammar",
+   "item": {
+    "i": 3,
+    "j": 4,
+    "old": "had left.",
+    "new": "have left"
+   },
+   "on": true,
+   "op": {
+    "t0": 3.031,
+    "t1": 4.717,
+    "insert": "8d96b3f0",
+    "i": 3,
+    "j": 4,
+    "old": "had left.",
+    "new": "have left",
+    "engine": "f5",
+    "verified": true,
+    "kind": "grammar",
+    "after": null
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.381,
+     "heard": "I would never have left.",
+     "id": "731239f3",
+     "sec": 2.34
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.56,
+     "heard": "I would never have left.",
+     "id": "8d96b3f0",
+     "sec": 1.45
+    }
+   ],
+   "sec": 2.88
+  }
+ ],
+ "render": {
+  "dur": 5.46,
+  "ai": [
+   [
+    3.05,
+    4.85
+   ]
+  ],
+  "file": "out_594ce8.wav"
+ },
+ "ops": [
+  {
+   "id": "mvde752aa",
+   "type": "replace",
+   "t0": 3.031,
+   "t1": 4.717,
+   "insert": "8d96b3f0",
+   "i": 3,
+   "j": 4,
+   "old": "had left.",
+   "new": "have left",
+   "engine": "f5",
+   "verified": true,
+   "kind": "grammar",
+   "after": null,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 3.031,
+   "t1": 4.717,
+   "insert": "8d96b3f0"
+  }
+ ],
+ "finalText": "I would never have left",
+ "afterCheck": {
+  "sid": "2f3892af",
+  "words": [
+   {
+    "w": "I",
+    "s": 0.683,
+    "e": 1.105,
+    "p": 0.93,
+    "x": null
+   },
+   {
+    "w": "would",
+    "s": 1.125,
+    "e": 2.23,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "never",
+    "s": 2.27,
+    "e": 3.094,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "have",
+    "s": 3.134,
+    "e": 4.279,
+    "p": 1,
+    "x": null
+   },
+   {
+    "w": "left.",
+    "s": 4.34,
+    "e": 4.782,
+    "p": 0.98,
+    "x": null
+   }
+  ],
+  "dur": 5.464666666666667,
+  "pron": {
+   "items": [
+    {
+     "i": 3,
+     "word": "have",
+     "acc": 6.4,
+     "canon": "hæv",
+     "heard": "hal",
+     "sub": "∅",
+     "phone": "æ"
+    }
+   ],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.8,
+    7.6,
+    9.1,
+    6.4,
+    9.7
+   ]
+  }
+ },
+ "label": {
+  "row": 2425,
+  "speaker": "9633",
+  "age": 21,
+  "gender": "f",
+  "text": "I WOULD NEVER HAVE LEFT.",
+  "dur": 5.36,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 3,
+    "w": "HAVE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "V",
+      "index": 2,
+      "pronounced-phone": "D"
+     }
+    ],
+    "phones": [
+     "HH",
+     "AE0",
+     "V"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "WOULD",
+    "acc": 10
+   },
+   {
+    "w": "NEVER",
+    "acc": 10
+   },
+   {
+    "w": "HAVE",
+    "acc": 3
+   },
+   {
+    "w": "LEFT",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2425_9633"
+ }
+}

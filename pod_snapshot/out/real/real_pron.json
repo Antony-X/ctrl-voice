@@ -1,0 +1,300 @@
+{
+ "pron": [
+  {
+   "name": "so_0024_0",
+   "text": "IT WAS A PROOF OF HIS FRIENDSHIP",
+   "asr": "It was a proof of his friendship.",
+   "expert_bad": [
+    "PROOF"
+   ],
+   "flagged": [],
+   "fixes": []
+  },
+  {
+   "name": "so_0120_1",
+   "text": "THIS WAS ONE OF OUR BETTER GAMES",
+   "asr": "This was one of our battle games.",
+   "expert_bad": [
+    "WAS"
+   ],
+   "flagged": [],
+   "fixes": []
+  },
+  {
+   "name": "so_0306_2",
+   "text": "JUST SET HOOK AND PUT THE PRESSURE",
+   "asr": "Just set a hole and put the pressure.",
+   "expert_bad": [
+    "SET",
+    "HOOK",
+    "THE"
+   ],
+   "flagged": [],
+   "fixes": []
+  },
+  {
+   "name": "so_0306_3",
+   "text": "SO MUCH FOR A UNITED FRONT",
+   "asr": "So much for United from.",
+   "expert_bad": [
+    "FRONT"
+   ],
+   "flagged": [
+    [
+     "much",
+     6.8,
+     10
+    ]
+   ],
+   "fixes": [
+    {
+     "word": "much",
+     "before": 6.8,
+     "after": 9.74,
+     "engine": "playdiff",
+     "verified": true,
+     "sec": 3.47,
+     "file": "so_0306_3__fix_1.wav",
+     "cands": [
+      [
+       "playdiff",
+       9.74,
+       true
+      ],
+      [
+       "f5",
+       9.73,
+       true
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "so_0306_4",
+   "text": "BUT THE STREETS WERE RELATIVELY CALM SATURDAY MORNING",
+   "asr": "But the stress will relatively climb Saturday morning.",
+   "expert_bad": [
+    "STREETS",
+    "RELATIVELY"
+   ],
+   "flagged": [
+    [
+     "relatively",
+     6.1,
+     3
+    ],
+    [
+     "morning.",
+     4.6,
+     5
+    ]
+   ],
+   "fixes": [
+    {
+     "word": "relatively",
+     "before": 6.1,
+     "after": 9.75,
+     "engine": "playdiff",
+     "verified": true,
+     "sec": 4.9,
+     "file": "so_0306_4__fix_4.wav",
+     "cands": [
+      [
+       "playdiff",
+       9.75,
+       true
+      ],
+      [
+       "f5",
+       9.6,
+       true
+      ]
+     ]
+    },
+    {
+     "word": "morning.",
+     "before": 4.6,
+     "after": 9.95,
+     "engine": "f5",
+     "verified": true,
+     "sec": 2.61,
+     "file": "so_0306_4__fix_7.wav",
+     "cands": [
+      [
+       "playdiff",
+       9.63,
+       true
+      ],
+      [
+       "f5",
+       9.95,
+       true
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "so_0306_5",
+   "text": "THE BALL IS IN THEIR COURT NOW",
+   "asr": "The bear is in there counter now.",
+   "expert_bad": [
+    "THE",
+    "BALL",
+    "COURT",
+    "NOW"
+   ],
+   "flagged": [],
+   "fixes": []
+  },
+  {
+   "name": "so_0306_6",
+   "text": "WHAT WHAT WOULD HAVE YOU HAPPEN",
+   "asr": "What, what, what, how will you happen?",
+   "expert_bad": [
+    "WOULD"
+   ],
+   "flagged": [
+    [
+     "will",
+     5.8,
+     null
+    ]
+   ],
+   "fixes": [
+    {
+     "word": "will",
+     "before": 5.8,
+     "after": 8.99,
+     "engine": "f5",
+     "verified": true,
+     "sec": 2.65,
+     "file": "so_0306_6__fix_4.wav",
+     "cands": [
+      [
+       "playdiff",
+       6.75,
+       false
+      ],
+      [
+       "f5",
+       8.99,
+       true
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "so_0306_7",
+   "text": "END OF THE ROAD FOR SOME PLAYERS",
+   "asr": "End of the load for summon players.",
+   "expert_bad": [
+    "THE",
+    "ROAD"
+   ],
+   "flagged": [],
+   "fixes": []
+  },
+  {
+   "name": "so_0306_8",
+   "text": "THEY FALL IN LOVE WITH MY PERSONALITY NOT ME",
+   "asr": "They fell in love with my personality, not me.",
+   "expert_bad": [
+    "FALL",
+    "LOVE"
+   ],
+   "flagged": [
+    [
+     "love",
+     5.7,
+     3
+    ]
+   ],
+   "fixes": [
+    {
+     "word": "love",
+     "before": 5.7,
+     "after": 9.82,
+     "engine": "playdiff",
+     "verified": true,
+     "sec": 2.89,
+     "file": "so_0306_8__fix_3.wav",
+     "cands": [
+      [
+       "playdiff",
+       9.82,
+       true
+      ],
+      [
+       "f5",
+       9.74,
+       true
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "so_0306_9",
+   "text": "IT WAS NOT MY HEART THAT HE WAS AFTER",
+   "asr": "It was that may hurt that he was after.",
+   "expert_bad": [
+    "MY",
+    "HEART"
+   ],
+   "flagged": [],
+   "fixes": []
+  },
+  {
+   "name": "so_0457_10",
+   "text": "THANKS GOD I GET TO SLEEP IN TOMORROW",
+   "asr": "Thanks God, I get to sleep in tomorrow.",
+   "expert_bad": [
+    "GOD"
+   ],
+   "flagged": [
+    [
+     "Thanks",
+     6.6,
+     10
+    ]
+   ],
+   "fixes": [
+    {
+     "word": "Thanks",
+     "before": 6.6,
+     "after": 9.95,
+     "engine": "playdiff",
+     "verified": true,
+     "sec": 2.62,
+     "file": "so_0457_10__fix_0.wav",
+     "cands": [
+      [
+       "playdiff",
+       9.95,
+       true
+      ],
+      [
+       "f5",
+       9.41,
+       true
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "so_0457_11",
+   "text": "CREATE TO BE HAPPY AND GOOD",
+   "asr": "Grated to be happy and good.",
+   "expert_bad": [
+    "CREATE"
+   ],
+   "flagged": [],
+   "fixes": []
+  }
+ ],
+ "gram": []
+}

@@ -1,0 +1,136 @@
+{
+ "file": "so762_780_1186.wav",
+ "t": {
+  "upload": 498,
+  "checks": 1195,
+  "replace": 0,
+  "render": 1735
+ },
+ "sid": "98e9a374",
+ "words": [
+  {
+   "w": "Thankful",
+   "s": 0.602,
+   "e": 2.65,
+   "p": 0.67
+  },
+  {
+   "w": "for",
+   "s": 2.71,
+   "e": 3.172,
+   "p": 0.91
+  },
+  {
+   "w": "so",
+   "s": 3.212,
+   "e": 3.513,
+   "p": 0.97
+  },
+  {
+   "w": "many",
+   "s": 3.553,
+   "e": 4.216,
+   "p": 1
+  },
+  {
+   "w": "of",
+   "s": 4.336,
+   "e": 4.537,
+   "p": 1
+  },
+  {
+   "w": "you.",
+   "s": 4.577,
+   "e": 4.698,
+   "p": 1
+  }
+ ],
+ "dur": 5.28,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   7.3,
+   8.8,
+   9.6,
+   9.5,
+   9.7,
+   9.9
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 5.28,
+  "ai": [],
+  "file": "out_2a0811.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "Thankful for so many of you.",
+ "label": {
+  "row": 780,
+  "speaker": "1186",
+  "age": 23,
+  "gender": "m",
+  "text": "THANKFUL FOR SO MANY OF YOU",
+  "dur": 5.28,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 6,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 0,
+    "w": "THANKFUL",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "TH",
+      "index": 0,
+      "pronounced-phone": "T"
+     }
+    ],
+    "phones": [
+     "TH",
+     "AE1",
+     "NG",
+     "K",
+     "F",
+     "L"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "THANKFUL",
+    "acc": 5
+   },
+   {
+    "w": "FOR",
+    "acc": 10
+   },
+   {
+    "w": "SO",
+    "acc": 10
+   },
+   {
+    "w": "MANY",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   }
+  ],
+  "id": "so762_780_1186"
+ }
+}

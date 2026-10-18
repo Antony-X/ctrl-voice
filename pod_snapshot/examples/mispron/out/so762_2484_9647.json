@@ -1,0 +1,446 @@
+{
+ "file": "so762_2484_9647.wav",
+ "t": {
+  "upload": 768,
+  "checks": 1400,
+  "replace": 9536,
+  "render": 1684
+ },
+ "sid": "4824057b",
+ "words": [
+  {
+   "w": "Where",
+   "s": 0.542,
+   "e": 0.703,
+   "p": 0.6
+  },
+  {
+   "w": "are",
+   "s": 0.723,
+   "e": 0.923,
+   "p": 0.39
+  },
+  {
+   "w": "these",
+   "s": 0.943,
+   "e": 1.847,
+   "p": 0.97
+  },
+  {
+   "w": "young",
+   "s": 1.907,
+   "e": 2.489,
+   "p": 0.98
+  },
+  {
+   "w": "people",
+   "s": 2.509,
+   "e": 3.031,
+   "p": 0.99
+  },
+  {
+   "w": "at?",
+   "s": 3.192,
+   "e": 3.332,
+   "p": 0.61
+  }
+ ],
+ "dur": 4.436,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 0,
+    "word": "Where",
+    "acc": 5.5,
+    "canon": "wɛɹ",
+    "heard": "a",
+    "sub": "∅",
+    "phone": "ɛɹ"
+   },
+   {
+    "i": 3,
+    "word": "young",
+    "acc": 6.2,
+    "canon": "jʌŋ",
+    "heard": "",
+    "sub": "∅",
+    "phone": "ʌ"
+   },
+   {
+    "i": 4,
+    "word": "people",
+    "acc": 6.4,
+    "canon": "piːpəl",
+    "heard": "iai",
+    "sub": "i",
+    "phone": "əl"
+   }
+  ],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   5.5,
+   8.8,
+   9.7,
+   6.2,
+   6.4,
+   5.9
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 0,
+    "word": "Where",
+    "acc": 5.5,
+    "canon": "wɛɹ",
+    "heard": "a",
+    "sub": "∅",
+    "phone": "ɛɹ"
+   },
+   "on": true,
+   "op": {
+    "t0": 0.502,
+    "t1": 0.713,
+    "insert": "91578312",
+    "i": 0,
+    "j": 0,
+    "old": "Where",
+    "new": "Where",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 7.49
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.249,
+     "heard": "Where are these young people at?",
+     "id": "91578312",
+     "sec": 2.26,
+     "after": 7.49
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.246,
+     "heard": "Where did young people go?",
+     "id": "aac5edc0",
+     "sec": 1.55,
+     "after": 7.46
+    }
+   ],
+   "sec": 2.85
+  },
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 3,
+    "word": "young",
+    "acc": 6.2,
+    "canon": "jʌŋ",
+    "heard": "",
+    "sub": "∅",
+    "phone": "ʌ"
+   },
+   "on": true,
+   "op": {
+    "t0": 1.877,
+    "t1": 2.499,
+    "insert": "b804d7a2",
+    "i": 3,
+    "j": 3,
+    "old": "young",
+    "new": "young",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 8.97
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.397,
+     "heard": "Where are these young people at?",
+     "id": "b804d7a2",
+     "sec": 2.19,
+     "after": 8.97
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.052,
+     "heard": "Where are these young people at?",
+     "id": "d6dc8456",
+     "sec": 1.48,
+     "after": 5.52
+    }
+   ],
+   "sec": 2.81
+  },
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 4,
+    "word": "people",
+    "acc": 6.4,
+    "canon": "piːpəl",
+    "heard": "iai",
+    "sub": "i",
+    "phone": "əl"
+   },
+   "on": true,
+   "op": {
+    "t0": 2.499,
+    "t1": 3.112,
+    "insert": "b7b45aa5",
+    "i": 4,
+    "j": 4,
+    "old": "people",
+    "new": "people",
+    "engine": "f5",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 6.85
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.095,
+     "heard": "Where are these young people here?",
+     "id": "f7c56f21",
+     "sec": 2.43,
+     "after": 5.95
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.185,
+     "heard": "Where are these young people?",
+     "id": "b7b45aa5",
+     "sec": 1.65,
+     "after": 6.85
+    }
+   ],
+   "sec": 3.08
+  }
+ ],
+ "render": {
+  "dur": 3.77,
+  "ai": [
+   [
+    0.47,
+    0.76
+   ],
+   [
+    1.92,
+    2.18
+   ],
+   [
+    2.18,
+    2.47
+   ]
+  ],
+  "file": "out_8ee284.wav"
+ },
+ "ops": [
+  {
+   "id": "mvdecjcc11",
+   "type": "replace",
+   "t0": 0.502,
+   "t1": 0.713,
+   "insert": "91578312",
+   "i": 0,
+   "j": 0,
+   "old": "Where",
+   "new": "Where",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 7.49,
+   "on": true
+  },
+  {
+   "id": "mvdeclv512",
+   "type": "replace",
+   "t0": 1.877,
+   "t1": 2.499,
+   "insert": "b804d7a2",
+   "i": 3,
+   "j": 3,
+   "old": "young",
+   "new": "young",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 8.97,
+   "on": true
+  },
+  {
+   "id": "mvdecodb13",
+   "type": "replace",
+   "t0": 2.499,
+   "t1": 3.112,
+   "insert": "b7b45aa5",
+   "i": 4,
+   "j": 4,
+   "old": "people",
+   "new": "people",
+   "engine": "f5",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 6.85,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 2.499,
+   "t1": 3.112,
+   "insert": "b7b45aa5"
+  },
+  {
+   "t0": 1.877,
+   "t1": 2.499,
+   "insert": "b804d7a2"
+  },
+  {
+   "t0": 0.502,
+   "t1": 0.713,
+   "insert": "91578312"
+  }
+ ],
+ "finalText": "Where are these young people at?",
+ "afterCheck": {
+  "sid": "4088ffac",
+  "words": [
+   {
+    "w": "Where",
+    "s": 0.482,
+    "e": 0.723,
+    "p": 0.71,
+    "x": null
+   },
+   {
+    "w": "are",
+    "s": 0.823,
+    "e": 0.984,
+    "p": 0.88,
+    "x": null
+   },
+   {
+    "w": "these",
+    "s": 1.004,
+    "e": 1.867,
+    "p": 0.96,
+    "x": null
+   },
+   {
+    "w": "young",
+    "s": 1.887,
+    "e": 2.168,
+    "p": 0.95,
+    "x": null
+   },
+   {
+    "w": "people?",
+    "s": 2.208,
+    "e": 2.549,
+    "p": 0.99,
+    "x": null
+   }
+  ],
+  "dur": 3.773458333333333,
+  "pron": {
+   "items": [
+    {
+     "i": 4,
+     "word": "people?",
+     "acc": 4.9,
+     "canon": "piːpəl",
+     "heard": "tita",
+     "sub": "∅",
+     "phone": "əl"
+    }
+   ],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    8.2,
+    9.3,
+    9.1,
+    7.9,
+    4.9
+   ]
+  }
+ },
+ "label": {
+  "row": 2484,
+  "speaker": "9647",
+  "age": 20,
+  "gender": "f",
+  "text": "WERE THESE YOUNG PEOPLE EVIL?",
+  "dur": 4.44,
+  "sr": 16000,
+  "utt_acc": 4,
+  "utt_total": 4,
+  "fluency": 5,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "EVIL",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "V",
+      "index": 1,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "IH",
+      "index": 2,
+      "pronounced-phone": "<unk>"
+     }
+    ],
+    "phones": [
+     "IY1",
+     "V",
+     "IH0",
+     "L"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "WERE",
+    "acc": 10
+   },
+   {
+    "w": "THESE",
+    "acc": 10
+   },
+   {
+    "w": "YOUNG",
+    "acc": 10
+   },
+   {
+    "w": "PEOPLE",
+    "acc": 10
+   },
+   {
+    "w": "EVIL",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2484_9647"
+ }
+}

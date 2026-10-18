@@ -1,0 +1,133 @@
+{
+ "file": "so762_399_0461.wav",
+ "t": {
+  "upload": 428,
+  "checks": 1112,
+  "replace": 0,
+  "render": 1386
+ },
+ "sid": "ed157bd9",
+ "words": [
+  {
+   "w": "It",
+   "s": 0.623,
+   "e": 0.965,
+   "p": 0.86
+  },
+  {
+   "w": "was",
+   "s": 1.005,
+   "e": 1.609,
+   "p": 0.99
+  },
+  {
+   "w": "difficult",
+   "s": 1.689,
+   "e": 2.332,
+   "p": 0.98
+  },
+  {
+   "w": "to",
+   "s": 2.393,
+   "e": 2.674,
+   "p": 1
+  },
+  {
+   "w": "get",
+   "s": 2.694,
+   "e": 2.976,
+   "p": 0.98
+  },
+  {
+   "w": "there.",
+   "s": 3.016,
+   "e": 3.197,
+   "p": 0.8
+  }
+ ],
+ "dur": 3.76,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.9,
+   9.9,
+   9.9,
+   9.9,
+   10,
+   9.1
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 3.76,
+  "ai": [],
+  "file": "out_451b2f.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "It was difficult to get there.",
+ "label": {
+  "row": 399,
+  "speaker": "0461",
+  "age": 23,
+  "gender": "m",
+  "text": "IT WAS DIFFICULT TO GET THERE",
+  "dur": 3.76,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 6,
+  "bad": [
+   {
+    "i": 5,
+    "w": "THERE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "DH",
+      "index": 0,
+      "pronounced-phone": "TH"
+     }
+    ],
+    "phones": [
+     "DH",
+     "EH0",
+     "R"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "WAS",
+    "acc": 10
+   },
+   {
+    "w": "DIFFICULT",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "GET",
+    "acc": 10
+   },
+   {
+    "w": "THERE",
+    "acc": 3
+   }
+  ],
+  "id": "so762_399_0461"
+ }
+}

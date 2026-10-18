@@ -1,0 +1,305 @@
+{
+ "file": "so762_2292_9617.wav",
+ "t": {
+  "upload": 1044,
+  "checks": 1010,
+  "replace": 4129,
+  "render": 1618
+ },
+ "sid": "42f2c513",
+ "words": [
+  {
+   "w": "She",
+   "s": 0.602,
+   "e": 1.105,
+   "p": 0.5
+  },
+  {
+   "w": "wanted",
+   "s": 1.145,
+   "e": 2.189,
+   "p": 0.88
+  },
+  {
+   "w": "out",
+   "s": 2.31,
+   "e": 2.591,
+   "p": 0.77
+  },
+  {
+   "w": "of",
+   "s": 2.651,
+   "e": 2.792,
+   "p": 0.99
+  },
+  {
+   "w": "the",
+   "s": 2.872,
+   "e": 3.294,
+   "p": 0.75
+  },
+  {
+   "w": "room",
+   "s": 3.334,
+   "e": 3.816,
+   "p": 0.97
+  },
+  {
+   "w": "again.",
+   "s": 3.876,
+   "e": 4.258,
+   "p": 0.99
+  }
+ ],
+ "dur": 4.84,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 1,
+    "word": "wanted",
+    "acc": 6.2,
+    "canon": "wɔntᵻd",
+    "heard": "mantiɹaːa",
+    "sub": "i",
+    "phone": "ᵻ"
+   }
+  ],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.4,
+   6.2,
+   9.1,
+   8.8,
+   7.9,
+   9.9,
+   9.2
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 1,
+    "word": "wanted",
+    "acc": 6.2,
+    "canon": "wɔntᵻd",
+    "heard": "mantiɹaːa",
+    "sub": "i",
+    "phone": "ᵻ"
+   },
+   "on": true,
+   "op": {
+    "t0": 1.125,
+    "t1": 2.25,
+    "insert": "579dd696",
+    "i": 1,
+    "j": 1,
+    "old": "wanted",
+    "new": "wanted",
+    "engine": "f5",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 8.05
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.257,
+     "heard": "She wanted out of the room again.",
+     "id": "63ecefca",
+     "sec": 3.11,
+     "after": 7.57
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.305,
+     "heard": "She wanted out of the room again.",
+     "id": "579dd696",
+     "sec": 1.74,
+     "after": 8.05
+    }
+   ],
+   "sec": 3.95
+  }
+ ],
+ "render": {
+  "dur": 4.79,
+  "ai": [
+   [
+    1.11,
+    2.18
+   ]
+  ],
+  "file": "out_73cc1a.wav"
+ },
+ "ops": [
+  {
+   "id": "mvde9rp1o",
+   "type": "replace",
+   "t0": 1.125,
+   "t1": 2.25,
+   "insert": "579dd696",
+   "i": 1,
+   "j": 1,
+   "old": "wanted",
+   "new": "wanted",
+   "engine": "f5",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 8.05,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 1.125,
+   "t1": 2.25,
+   "insert": "579dd696"
+  }
+ ],
+ "finalText": "She wanted out of the room again.",
+ "afterCheck": {
+  "sid": "b5beaf4c",
+  "words": [
+   {
+    "w": "She",
+    "s": 0.601,
+    "e": 1.083,
+    "p": 0.29,
+    "x": null
+   },
+   {
+    "w": "wanted",
+    "s": 1.123,
+    "e": 2.125,
+    "p": 0.75,
+    "x": null
+   },
+   {
+    "w": "out",
+    "s": 2.245,
+    "e": 2.546,
+    "p": 0.9,
+    "x": null
+   },
+   {
+    "w": "of",
+    "s": 2.586,
+    "e": 2.746,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "the",
+    "s": 2.807,
+    "e": 3.248,
+    "p": 0.87,
+    "x": null
+   },
+   {
+    "w": "room",
+    "s": 3.308,
+    "e": 3.749,
+    "p": 0.96,
+    "x": null
+   },
+   {
+    "w": "again.",
+    "s": 3.809,
+    "e": 4.19,
+    "p": 0.99,
+    "x": null
+   }
+  ],
+  "dur": 4.791291666666667,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.2,
+    8,
+    8.5,
+    8.9,
+    9.4,
+    9.7,
+    9.2
+   ]
+  }
+ },
+ "label": {
+  "row": 2292,
+  "speaker": "9617",
+  "age": 35,
+  "gender": "f",
+  "text": "SHE WALKED OUT OF THE ROOM AGAIN.",
+  "dur": 4.84,
+  "sr": 16000,
+  "utt_acc": 6,
+  "utt_total": 5,
+  "fluency": 7,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 1,
+    "w": "WALKED",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "AO",
+      "index": 1,
+      "pronounced-phone": "<unk>"
+     },
+     {
+      "canonical-phone": "K",
+      "index": 2,
+      "pronounced-phone": "T"
+     }
+    ],
+    "phones": [
+     "W",
+     "AO0",
+     "K",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "SHE",
+    "acc": 10
+   },
+   {
+    "w": "WALKED",
+    "acc": 3
+   },
+   {
+    "w": "OUT",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "THE",
+    "acc": 10
+   },
+   {
+    "w": "ROOM",
+    "acc": 10
+   },
+   {
+    "w": "AGAIN",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2292_9617"
+ }
+}

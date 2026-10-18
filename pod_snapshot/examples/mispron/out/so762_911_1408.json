@@ -1,0 +1,145 @@
+{
+ "file": "so762_911_1408.wav",
+ "t": {
+  "upload": 864,
+  "checks": 1708,
+  "replace": 0,
+  "render": 1273
+ },
+ "sid": "7158a061",
+ "words": [
+  {
+   "w": "Happy",
+   "s": 0.602,
+   "e": 0.963,
+   "p": 0.91
+  },
+  {
+   "w": "Sunday",
+   "s": 1.003,
+   "e": 1.685,
+   "p": 0.88
+  },
+  {
+   "w": "is",
+   "s": 1.785,
+   "e": 1.925,
+   "p": 0.76
+  },
+  {
+   "w": "a",
+   "s": 2.046,
+   "e": 2.186,
+   "p": 0.74
+  },
+  {
+   "w": "day",
+   "s": 2.226,
+   "e": 2.547,
+   "p": 0.86
+  },
+  {
+   "w": "of",
+   "s": 2.627,
+   "e": 2.848,
+   "p": 1
+  },
+  {
+   "w": "pride.",
+   "s": 2.888,
+   "e": 3.269,
+   "p": 0.26
+  }
+ ],
+ "dur": 3.69,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.6,
+   9.5,
+   9.4,
+   9.7,
+   9.7,
+   9.7,
+   9.2
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 3.69,
+  "ai": [],
+  "file": "out_bfdb8e.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "Happy Sunday is a day of pride.",
+ "label": {
+  "row": 911,
+  "speaker": "1408",
+  "age": 22,
+  "gender": "m",
+  "text": "HAPPY SUNDAY IS A DAY OF PRAISE",
+  "dur": 3.69,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 8,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 6,
+    "w": "PRAISE",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "EY",
+      "index": 2,
+      "pronounced-phone": "AY"
+     }
+    ],
+    "phones": [
+     "P",
+     "R",
+     "EY0",
+     "Z"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "HAPPY",
+    "acc": 10
+   },
+   {
+    "w": "SUNDAY",
+    "acc": 10
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "DAY",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "PRAISE",
+    "acc": 5
+   }
+  ],
+  "id": "so762_911_1408"
+ }
+}

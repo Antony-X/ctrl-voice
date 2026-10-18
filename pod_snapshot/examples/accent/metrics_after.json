@@ -1,0 +1,702 @@
+{
+ "saa3_farsi1": {
+  "dur_after": 7.52,
+  "acc_after": {
+   "top": "us",
+   "p_native": 0.9999,
+   "p_us": 0.9997000098228455,
+   "p_england": 0.0,
+   "top3": [
+    [
+     "us",
+     0.9997000098228455
+    ],
+    [
+     "australia",
+     0.00019999999494757503
+    ],
+    [
+     "hongkong",
+     9.999999747378752e-05
+    ]
+   ],
+   "P": {
+    "england": 0.0,
+    "us": 0.9997000098228455,
+    "canada": 0.0,
+    "australia": 0.00019999999494757503,
+    "indian": 0.0,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 9.999999747378752e-05,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.152,
+    "us": 0.675,
+    "canada": 0.342,
+    "australia": 0.388,
+    "indian": 0.328,
+    "scotland": 0.203,
+    "ireland": 0.093,
+    "african": 0.271,
+    "malaysia": 0.271,
+    "newzealand": 0.05,
+    "southatlandtic": 0.234,
+    "bermuda": 0.235,
+    "philippines": 0.29,
+    "hongkong": 0.351,
+    "wales": 0.136,
+    "singapore": 0.212
+   }
+  },
+  "quality_after": {
+   "floor_db": -33.0,
+   "clip": 0.0
+  },
+  "asr_after": "Please call Stella, ask her to bring these things with her from the store, six spoon of fresh snow peas, five stick slabs of blue cheese.",
+  "wer_after_vs_sent": 0.0,
+  "wer_after_vs_ref": 0.077,
+  "sim_heldout_after": 0.701,
+  "sim_before_after_cpu": 0.776,
+  "engine_voice_sim": 0.776,
+  "engine_words_kept": 1.0
+ },
+ "saa3_german3": {
+  "dur_after": 10.09,
+  "acc_after": {
+   "top": "us",
+   "p_native": 0.9949,
+   "p_us": 0.9944000244140625,
+   "p_england": 9.999999747378752e-05,
+   "top3": [
+    [
+     "us",
+     0.9944000244140625
+    ],
+    [
+     "indian",
+     0.004999999888241291
+    ],
+    [
+     "australia",
+     0.0003000000142492354
+    ]
+   ],
+   "P": {
+    "england": 9.999999747378752e-05,
+    "us": 0.9944000244140625,
+    "canada": 9.999999747378752e-05,
+    "australia": 0.0003000000142492354,
+    "indian": 0.004999999888241291,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.263,
+    "us": 0.592,
+    "canada": 0.279,
+    "australia": 0.325,
+    "indian": 0.416,
+    "scotland": 0.248,
+    "ireland": 0.201,
+    "african": 0.159,
+    "malaysia": 0.124,
+    "newzealand": 0.186,
+    "southatlandtic": 0.164,
+    "bermuda": 0.135,
+    "philippines": 0.199,
+    "hongkong": 0.213,
+    "wales": 0.203,
+    "singapore": 0.224
+   }
+  },
+  "quality_after": {
+   "floor_db": -36.6,
+   "clip": 0.0
+  },
+  "asr_after": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese, and maybe a snack for her brother Bob.",
+  "wer_after_vs_sent": 0.0,
+  "wer_after_vs_ref": 0.0,
+  "sim_heldout_after": 0.694,
+  "sim_before_after_cpu": 0.779,
+  "engine_voice_sim": 0.779,
+  "engine_words_kept": 1.0
+ },
+ "saa3_hindi2": {
+  "dur_after": 7.86,
+  "acc_after": {
+   "top": "us",
+   "p_native": 1.0,
+   "p_us": 0.9991999864578247,
+   "p_england": 0.0,
+   "top3": [
+    [
+     "us",
+     0.9991999864578247
+    ],
+    [
+     "canada",
+     0.0007999999797903001
+    ],
+    [
+     "england",
+     0.0
+    ]
+   ],
+   "P": {
+    "england": 0.0,
+    "us": 0.9991999864578247,
+    "canada": 0.0007999999797903001,
+    "australia": 0.0,
+    "indian": 0.0,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.143,
+    "us": 0.688,
+    "canada": 0.45,
+    "australia": 0.338,
+    "indian": 0.225,
+    "scotland": 0.177,
+    "ireland": 0.024,
+    "african": 0.233,
+    "malaysia": 0.186,
+    "newzealand": 0.073,
+    "southatlandtic": 0.207,
+    "bermuda": 0.219,
+    "philippines": 0.266,
+    "hongkong": 0.195,
+    "wales": 0.25,
+    "singapore": 0.211
+   }
+  },
+  "quality_after": {
+   "floor_db": -44.5,
+   "clip": 0.0
+  },
+  "asr_after": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese.",
+  "wer_after_vs_sent": 0.0,
+  "wer_after_vs_ref": 0.0,
+  "sim_heldout_after": 0.72,
+  "sim_before_after_cpu": 0.771,
+  "engine_voice_sim": 0.771,
+  "engine_words_kept": 1.0
+ },
+ "saa3_italian3": {
+  "dur_after": 9.73,
+  "acc_after": {
+   "top": "us",
+   "p_native": 0.9939,
+   "p_us": 0.6902999877929688,
+   "p_england": 0.2937999963760376,
+   "top3": [
+    [
+     "us",
+     0.6902999877929688
+    ],
+    [
+     "england",
+     0.2937999963760376
+    ],
+    [
+     "canada",
+     0.007699999958276749
+    ]
+   ],
+   "P": {
+    "england": 0.2937999963760376,
+    "us": 0.6902999877929688,
+    "canada": 0.007699999958276749,
+    "australia": 0.0,
+    "indian": 9.999999747378752e-05,
+    "scotland": 9.999999747378752e-05,
+    "ireland": 0.00019999999494757503,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0017000000225380063,
+    "southatlandtic": 0.0003000000142492354,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.005499999970197678,
+    "wales": 9.999999747378752e-05,
+    "singapore": 0.0003000000142492354
+   },
+   "cos": {
+    "england": 0.496,
+    "us": 0.524,
+    "canada": 0.374,
+    "australia": 0.19,
+    "indian": 0.214,
+    "scotland": 0.238,
+    "ireland": 0.249,
+    "african": 0.114,
+    "malaysia": 0.146,
+    "newzealand": 0.325,
+    "southatlandtic": 0.262,
+    "bermuda": 0.062,
+    "philippines": 0.143,
+    "hongkong": 0.363,
+    "wales": 0.238,
+    "singapore": 0.263
+   }
+  },
+  "quality_after": {
+   "floor_db": -29.2,
+   "clip": 0.0
+  },
+  "asr_after": "please call stella ask her to bring these things with her from the store six spoons of fresh snow peas five thick slabs of blue cheese and maybe a snack for her brother bob",
+  "wer_after_vs_sent": 0.0,
+  "wer_after_vs_ref": 0.0,
+  "sim_heldout_after": 0.697,
+  "sim_before_after_cpu": 0.74,
+  "engine_voice_sim": 0.74,
+  "engine_words_kept": 1.0
+ },
+ "saa3_mandarin1": {
+  "dur_after": 7.86,
+  "acc_after": {
+   "top": "us",
+   "p_native": 0.9981,
+   "p_us": 0.996999979019165,
+   "p_england": 0.0008999999845400453,
+   "top3": [
+    [
+     "us",
+     0.996999979019165
+    ],
+    [
+     "singapore",
+     0.0012000000569969416
+    ],
+    [
+     "england",
+     0.0008999999845400453
+    ]
+   ],
+   "P": {
+    "england": 0.0008999999845400453,
+    "us": 0.996999979019165,
+    "canada": 0.00019999999494757503,
+    "australia": 0.0,
+    "indian": 0.0005000000237487257,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.00019999999494757503,
+    "philippines": 0.0,
+    "hongkong": 0.0,
+    "wales": 0.0,
+    "singapore": 0.0012000000569969416
+   },
+   "cos": {
+    "england": 0.382,
+    "us": 0.617,
+    "canada": 0.338,
+    "australia": 0.212,
+    "indian": 0.364,
+    "scotland": 0.138,
+    "ireland": 0.164,
+    "african": 0.225,
+    "malaysia": 0.169,
+    "newzealand": 0.142,
+    "southatlandtic": 0.195,
+    "bermuda": 0.333,
+    "philippines": 0.21,
+    "hongkong": 0.251,
+    "wales": 0.167,
+    "singapore": 0.391
+   }
+  },
+  "quality_after": {
+   "floor_db": -29.7,
+   "clip": 1e-05
+  },
+  "asr_after": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slabs of blue cheese.",
+  "wer_after_vs_sent": 0.0,
+  "wer_after_vs_ref": 0.0,
+  "sim_heldout_after": 0.753,
+  "sim_before_after_cpu": 0.784,
+  "engine_voice_sim": 0.784,
+  "engine_words_kept": 1.0
+ },
+ "saa3_polish3": {
+  "dur_after": 7.86,
+  "acc_after": {
+   "top": "us",
+   "p_native": 1.0,
+   "p_us": 0.9998000264167786,
+   "p_england": 0.0,
+   "top3": [
+    [
+     "us",
+     0.9998000264167786
+    ],
+    [
+     "canada",
+     9.999999747378752e-05
+    ],
+    [
+     "australia",
+     9.999999747378752e-05
+    ]
+   ],
+   "P": {
+    "england": 0.0,
+    "us": 0.9998000264167786,
+    "canada": 9.999999747378752e-05,
+    "australia": 9.999999747378752e-05,
+    "indian": 0.0,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.29,
+    "us": 0.686,
+    "canada": 0.361,
+    "australia": 0.379,
+    "indian": 0.283,
+    "scotland": 0.238,
+    "ireland": 0.19,
+    "african": 0.153,
+    "malaysia": 0.235,
+    "newzealand": 0.124,
+    "southatlandtic": 0.171,
+    "bermuda": 0.228,
+    "philippines": 0.29,
+    "hongkong": 0.267,
+    "wales": 0.176,
+    "singapore": 0.312
+   }
+  },
+  "quality_after": {
+   "floor_db": -30.6,
+   "clip": 0.0
+  },
+  "asr_after": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas. Five thick slabs of blue cheese.",
+  "wer_after_vs_sent": 0.0,
+  "wer_after_vs_ref": 0.0,
+  "sim_heldout_after": 0.805,
+  "sim_before_after_cpu": 0.803,
+  "engine_voice_sim": 0.803,
+  "engine_words_kept": 1.0
+ },
+ "saa3_russian2": {
+  "dur_after": 5.77,
+  "acc_after": {
+   "top": "canada",
+   "p_native": 0.9804,
+   "p_us": 0.0034000000450760126,
+   "p_england": 0.0,
+   "top3": [
+    [
+     "canada",
+     0.935699999332428
+    ],
+    [
+     "scotland",
+     0.040800001472234726
+    ],
+    [
+     "indian",
+     0.018400000408291817
+    ]
+   ],
+   "P": {
+    "england": 0.0,
+    "us": 0.0034000000450760126,
+    "canada": 0.935699999332428,
+    "australia": 0.0003000000142492354,
+    "indian": 0.018400000408291817,
+    "scotland": 0.040800001472234726,
+    "ireland": 0.0,
+    "african": 9.999999747378752e-05,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0010999999940395355,
+    "wales": 0.00019999999494757503,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.011,
+    "us": 0.276,
+    "canada": 0.464,
+    "australia": 0.193,
+    "indian": 0.333,
+    "scotland": 0.359,
+    "ireland": 0.102,
+    "african": 0.136,
+    "malaysia": 0.074,
+    "newzealand": 0.092,
+    "southatlandtic": 0.004,
+    "bermuda": 0.051,
+    "philippines": 0.013,
+    "hongkong": 0.24,
+    "wales": 0.189,
+    "singapore": 0.017
+   }
+  },
+  "quality_after": {
+   "floor_db": -31.3,
+   "clip": 0.0
+  },
+  "asr_after": "Please call Stella, ask her to bring these things with her from the store, six spoons of fresh snow peas,",
+  "wer_after_vs_sent": 0.0,
+  "wer_after_vs_ref": 0.0,
+  "sim_heldout_after": 0.71,
+  "sim_before_after_cpu": 0.833,
+  "engine_voice_sim": 0.833,
+  "engine_words_kept": 1.0
+ },
+ "saa3_thai3": {
+  "dur_after": 7.58,
+  "acc_after": {
+   "top": "us",
+   "p_native": 1.0,
+   "p_us": 0.9998999834060669,
+   "p_england": 0.0,
+   "top3": [
+    [
+     "us",
+     0.9998999834060669
+    ],
+    [
+     "canada",
+     9.999999747378752e-05
+    ],
+    [
+     "england",
+     0.0
+    ]
+   ],
+   "P": {
+    "england": 0.0,
+    "us": 0.9998999834060669,
+    "canada": 9.999999747378752e-05,
+    "australia": 0.0,
+    "indian": 0.0,
+    "scotland": 0.0,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.062,
+    "us": 0.723,
+    "canada": 0.423,
+    "australia": 0.283,
+    "indian": 0.279,
+    "scotland": 0.284,
+    "ireland": 0.086,
+    "african": 0.137,
+    "malaysia": 0.23,
+    "newzealand": 0.227,
+    "southatlandtic": 0.226,
+    "bermuda": 0.194,
+    "philippines": 0.324,
+    "hongkong": 0.229,
+    "wales": 0.24,
+    "singapore": 0.271
+   }
+  },
+  "quality_after": {
+   "floor_db": -21.9,
+   "clip": 0.0
+  },
+  "asr_after": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas, five thick slaps of blue cheese.",
+  "wer_after_vs_sent": 0.0,
+  "wer_after_vs_ref": 0.038,
+  "sim_heldout_after": 0.702,
+  "sim_before_after_cpu": 0.742,
+  "engine_voice_sim": 0.741,
+  "engine_words_kept": 1.0
+ },
+ "saa3_turkish2": {
+  "dur_after": 5.77,
+  "acc_after": {
+   "top": "us",
+   "p_native": 0.9926,
+   "p_us": 0.9871000051498413,
+   "p_england": 0.00019999999494757503,
+   "top3": [
+    [
+     "us",
+     0.9871000051498413
+    ],
+    [
+     "indian",
+     0.007199999876320362
+    ],
+    [
+     "scotland",
+     0.003000000026077032
+    ]
+   ],
+   "P": {
+    "england": 0.00019999999494757503,
+    "us": 0.9871000051498413,
+    "canada": 0.0003000000142492354,
+    "australia": 0.0,
+    "indian": 0.007199999876320362,
+    "scotland": 0.003000000026077032,
+    "ireland": 0.0020000000949949026,
+    "african": 9.999999747378752e-05,
+    "malaysia": 0.0,
+    "newzealand": 0.0,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0,
+    "wales": 0.0,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.314,
+    "us": 0.593,
+    "canada": 0.318,
+    "australia": 0.119,
+    "indian": 0.429,
+    "scotland": 0.4,
+    "ireland": 0.386,
+    "african": 0.296,
+    "malaysia": 0.187,
+    "newzealand": 0.179,
+    "southatlandtic": 0.149,
+    "bermuda": 0.07,
+    "philippines": 0.203,
+    "hongkong": 0.214,
+    "wales": 0.202,
+    "singapore": 0.188
+   }
+  },
+  "quality_after": {
+   "floor_db": -44.2,
+   "clip": 0.00011
+  },
+  "asr_after": "Please call Stella. Ask her to bring these things with her from the store. Six spoons of fresh snow peas.",
+  "wer_after_vs_sent": 0.0,
+  "wer_after_vs_ref": 0.0,
+  "sim_heldout_after": 0.692,
+  "sim_before_after_cpu": 0.799,
+  "engine_voice_sim": 0.799,
+  "engine_words_kept": 1.0
+ },
+ "saa3_turkish3": {
+  "dur_after": 7.69,
+  "acc_after": {
+   "top": "us",
+   "p_native": 1.0,
+   "p_us": 0.8090999722480774,
+   "p_england": 0.0017999999690800905,
+   "top3": [
+    [
+     "us",
+     0.8090999722480774
+    ],
+    [
+     "canada",
+     0.1882999986410141
+    ],
+    [
+     "england",
+     0.0017999999690800905
+    ]
+   ],
+   "P": {
+    "england": 0.0017999999690800905,
+    "us": 0.8090999722480774,
+    "canada": 0.1882999986410141,
+    "australia": 0.0,
+    "indian": 0.0,
+    "scotland": 0.00019999999494757503,
+    "ireland": 0.0,
+    "african": 0.0,
+    "malaysia": 0.0,
+    "newzealand": 0.0005000000237487257,
+    "southatlandtic": 0.0,
+    "bermuda": 0.0,
+    "philippines": 0.0,
+    "hongkong": 0.0,
+    "wales": 9.999999747378752e-05,
+    "singapore": 0.0
+   },
+   "cos": {
+    "england": 0.36,
+    "us": 0.565,
+    "canada": 0.516,
+    "australia": 0.155,
+    "indian": 0.225,
+    "scotland": 0.285,
+    "ireland": 0.187,
+    "african": 0.234,
+    "malaysia": 0.166,
+    "newzealand": 0.317,
+    "southatlandtic": 0.182,
+    "bermuda": -0.005,
+    "philippines": 0.172,
+    "hongkong": 0.145,
+    "wales": 0.246,
+    "singapore": 0.088
+   }
+  },
+  "quality_after": {
+   "floor_db": -35.6,
+   "clip": 0.0
+  },
+  "asr_after": "Please call Stella, ask her to bring these things with her from the store. 6 spoons of fresh snow peas, 5 thick slabs of blue cheese,",
+  "wer_after_vs_sent": 0.077,
+  "wer_after_vs_ref": 0.077,
+  "sim_heldout_after": 0.725,
+  "sim_before_after_cpu": 0.734,
+  "engine_voice_sim": 0.734,
+  "engine_words_kept": 1.0
+ }
+}

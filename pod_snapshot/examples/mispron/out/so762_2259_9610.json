@@ -1,0 +1,466 @@
+{
+ "file": "so762_2259_9610.wav",
+ "t": {
+  "upload": 912,
+  "checks": 1384,
+  "replace": 12570,
+  "render": 1807
+ },
+ "sid": "ac2d8a51",
+ "words": [
+  {
+   "w": "I",
+   "s": 0.622,
+   "e": 0.942,
+   "p": 0.51
+  },
+  {
+   "w": "ask",
+   "s": 1.063,
+   "e": 1.684,
+   "p": 0.88
+  },
+  {
+   "w": "the",
+   "s": 1.724,
+   "e": 2.105,
+   "p": 0.51
+  },
+  {
+   "w": "to",
+   "s": 2.145,
+   "e": 2.566,
+   "p": 0.24
+  },
+  {
+   "w": "be",
+   "s": 2.586,
+   "e": 3.108,
+   "p": 0.99
+  },
+  {
+   "w": "here.",
+   "s": 3.148,
+   "e": 3.469,
+   "p": 0.99
+  }
+ ],
+ "dur": 4.07,
+ "clean": [],
+ "grammar": [
+  {
+   "i": 3,
+   "j": 3,
+   "old": "to",
+   "new": "them"
+  }
+ ],
+ "intent": [
+  {
+   "i": 1,
+   "j": 2,
+   "old": "ask the",
+   "new": "asked them",
+   "heard": "æskðə",
+   "intended": "æsktðɛm",
+   "fit": 0.24,
+   "dist": 0.43,
+   "alts": [
+    "asked her",
+    "asked him"
+   ]
+  }
+ ],
+ "pron": {
+  "items": [
+   {
+    "i": 5,
+    "word": "here.",
+    "acc": 6.5,
+    "canon": "hɪɹ",
+    "heard": "ɕi5",
+    "sub": "s",
+    "phone": "h"
+   }
+  ],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   10,
+   9.5,
+   9.8,
+   9.8,
+   9.6,
+   6.5
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "misspoken",
+   "item": {
+    "i": 1,
+    "j": 2,
+    "old": "ask the",
+    "new": "asked them",
+    "heard": "æskðə",
+    "intended": "æsktðɛm",
+    "fit": 0.24,
+    "dist": 0.43,
+    "alts": [
+     "asked her",
+     "asked him"
+    ]
+   },
+   "on": true,
+   "op": {
+    "t0": 1.002,
+    "t1": 2.125,
+    "insert": "a09e0afa",
+    "i": 1,
+    "j": 2,
+    "old": "ask the",
+    "new": "asked them",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "misspoken",
+    "after": null
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.437,
+     "heard": "I asked them who be here.",
+     "id": "a09e0afa",
+     "sec": 2.48
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.294,
+     "heard": "I asked them to be here.",
+     "id": "3d137eac",
+     "sec": 1.74
+    }
+   ],
+   "sec": 3.12
+  },
+  {
+   "kind": "grammar",
+   "item": {
+    "i": 3,
+    "j": 3,
+    "old": "to",
+    "new": "them"
+   },
+   "on": true,
+   "op": {
+    "t0": 2.125,
+    "t1": 2.576,
+    "insert": "89918164",
+    "i": 3,
+    "j": 3,
+    "old": "to",
+    "new": "them",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "grammar",
+    "after": null
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": false,
+     "sim": 0.262,
+     "heard": "I asked the DMB here.",
+     "id": "86c45ff2",
+     "sec": 2.4
+    },
+    {
+     "engine": "f5",
+     "ok": false,
+     "sim": 0.287,
+     "heard": "I ask the twem be here.",
+     "id": "ef14538f",
+     "sec": 1.56
+    },
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.252,
+     "heard": "I asked them to be here.",
+     "id": "89918164",
+     "sec": 2.6
+    },
+    {
+     "engine": "f5",
+     "ok": false,
+     "sim": 0.085,
+     "heard": "I asked the B here.",
+     "id": "e9d98ab1",
+     "sec": 1.66
+    }
+   ],
+   "sec": 6.11
+  },
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 5,
+    "word": "here.",
+    "acc": 6.5,
+    "canon": "hɪɹ",
+    "heard": "ɕi5",
+    "sub": "s",
+    "phone": "h"
+   },
+   "on": true,
+   "op": {
+    "t0": 3.128,
+    "t1": 3.509,
+    "insert": "83f28294",
+    "i": 5,
+    "j": 5,
+    "old": "here.",
+    "new": "here",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 7
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.2,
+     "heard": "I asked to be here.",
+     "id": "83f28294",
+     "sec": 2.02,
+     "after": 7
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.095,
+     "heard": "I ask the to be here.",
+     "id": "6df3050e",
+     "sec": 1.46,
+     "after": 5.95
+    }
+   ],
+   "sec": 2.78
+  }
+ ],
+ "render": {
+  "dur": 4.39,
+  "ai": [
+   [
+    0.97,
+    2.34
+   ],
+   [
+    2.34,
+    2.94
+   ],
+   [
+    3.46,
+    3.85
+   ]
+  ],
+  "file": "out_b85c5c.wav"
+ },
+ "ops": [
+  {
+   "id": "mvdec33xy",
+   "type": "replace",
+   "t0": 1.002,
+   "t1": 2.125,
+   "insert": "a09e0afa",
+   "i": 1,
+   "j": 2,
+   "old": "ask the",
+   "new": "asked them",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "misspoken",
+   "after": null,
+   "on": true
+  },
+  {
+   "id": "mvdec7ypz",
+   "type": "replace",
+   "t0": 2.125,
+   "t1": 2.576,
+   "insert": "89918164",
+   "i": 3,
+   "j": 3,
+   "old": "to",
+   "new": "them",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "grammar",
+   "after": null,
+   "on": true
+  },
+  {
+   "id": "mvdeca9310",
+   "type": "replace",
+   "t0": 3.128,
+   "t1": 3.509,
+   "insert": "83f28294",
+   "i": 5,
+   "j": 5,
+   "old": "here.",
+   "new": "here",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 7,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 3.128,
+   "t1": 3.509,
+   "insert": "83f28294"
+  },
+  {
+   "t0": 2.125,
+   "t1": 2.576,
+   "insert": "89918164"
+  },
+  {
+   "t0": 1.002,
+   "t1": 2.125,
+   "insert": "a09e0afa"
+  }
+ ],
+ "finalText": "I asked them them be here",
+ "afterCheck": {
+  "sid": "0d177c5a",
+  "words": [
+   {
+    "w": "I",
+    "s": 0.621,
+    "e": 0.942,
+    "p": 0.9,
+    "x": null
+   },
+   {
+    "w": "asked",
+    "s": 1.022,
+    "e": 1.623,
+    "p": 0.96,
+    "x": null
+   },
+   {
+    "w": "them",
+    "s": 1.663,
+    "e": 2.304,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "them",
+    "s": 2.384,
+    "e": 2.905,
+    "p": 0.7,
+    "x": null
+   },
+   {
+    "w": "be",
+    "s": 2.945,
+    "e": 3.426,
+    "p": 0.97,
+    "x": null
+   },
+   {
+    "w": "here.",
+    "s": 3.466,
+    "e": 3.766,
+    "p": 0.99,
+    "x": null
+   }
+  ],
+  "dur": 4.38725,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    10,
+    9.9,
+    9.9,
+    9.9,
+    10,
+    9.5
+   ]
+  }
+ },
+ "label": {
+  "row": 2259,
+  "speaker": "9610",
+  "age": 22,
+  "gender": "f",
+  "text": "I ASKED TO BE SURE.",
+  "dur": 4.07,
+  "sr": 16000,
+  "utt_acc": 4,
+  "utt_total": 4,
+  "fluency": 5,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "SURE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "SH",
+      "index": 0,
+      "pronounced-phone": "SH*"
+     },
+     {
+      "canonical-phone": "UH",
+      "index": 1,
+      "pronounced-phone": "IH"
+     },
+     {
+      "canonical-phone": "AH",
+      "index": 2,
+      "pronounced-phone": "AH*"
+     }
+    ],
+    "phones": [
+     "SH",
+     "UH",
+     "AH0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "ASKED",
+    "acc": 8
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "SURE",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2259_9610"
+ }
+}

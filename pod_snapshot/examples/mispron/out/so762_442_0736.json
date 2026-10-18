@@ -1,0 +1,311 @@
+{
+ "file": "so762_442_0736.wav",
+ "t": {
+  "upload": 656,
+  "checks": 977,
+  "replace": 3064,
+  "render": 1506
+ },
+ "sid": "548bc3ca",
+ "words": [
+  {
+   "w": "I",
+   "s": 0.664,
+   "e": 0.824,
+   "p": 0.87
+  },
+  {
+   "w": "thought",
+   "s": 0.865,
+   "e": 1.186,
+   "p": 0.91
+  },
+  {
+   "w": "it",
+   "s": 1.267,
+   "e": 1.79,
+   "p": 0.97
+  },
+  {
+   "w": "would",
+   "s": 1.81,
+   "e": 2.011,
+   "p": 0.97
+  },
+  {
+   "w": "fit",
+   "s": 2.252,
+   "e": 2.473,
+   "p": 0.37
+  },
+  {
+   "w": "right",
+   "s": 2.493,
+   "e": 2.795,
+   "p": 0.96
+  },
+  {
+   "w": "in.",
+   "s": 2.896,
+   "e": 3.036,
+   "p": 0.99
+  }
+ ],
+ "dur": 3.7,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 4,
+    "word": "fit",
+    "acc": 5.8,
+    "canon": "fɪt",
+    "heard": "farr",
+    "sub": "∅",
+    "phone": "ɪ"
+   }
+  ],
+  "accent": [
+   {
+    "phone": "t",
+    "n": 3,
+    "z": -1.19
+   }
+  ],
+  "median": 10,
+  "scores": [
+   9.6,
+   8.5,
+   8.8,
+   9.6,
+   5.8,
+   8.4,
+   9.5
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 4,
+    "word": "fit",
+    "acc": 5.8,
+    "canon": "fɪt",
+    "heard": "farr",
+    "sub": "∅",
+    "phone": "ɪ"
+   },
+   "on": true,
+   "op": {
+    "t0": 2.131,
+    "t1": 2.483,
+    "insert": "9ff3f64b",
+    "i": 4,
+    "j": 4,
+    "old": "fit",
+    "new": "fit",
+    "engine": "f5",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 9.53
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.397,
+     "heard": "I thought it would fit right in.",
+     "id": "c2021f04",
+     "sec": 2.01,
+     "after": 8.97
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.453,
+     "heard": "I thought it would fit right in.",
+     "id": "9ff3f64b",
+     "sec": 1.36,
+     "after": 9.53
+    }
+   ],
+   "sec": 2.59
+  }
+ ],
+ "render": {
+  "dur": 3.68,
+  "ai": [
+   [
+    2.17,
+    2.44
+   ]
+  ],
+  "file": "out_5e0f3d.wav"
+ },
+ "ops": [
+  {
+   "id": "mvde5yk93",
+   "type": "replace",
+   "t0": 2.131,
+   "t1": 2.483,
+   "insert": "9ff3f64b",
+   "i": 4,
+   "j": 4,
+   "old": "fit",
+   "new": "fit",
+   "engine": "f5",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 9.53,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 2.131,
+   "t1": 2.483,
+   "insert": "9ff3f64b"
+  }
+ ],
+ "finalText": "I thought it would fit right in.",
+ "afterCheck": {
+  "sid": "fa396e1d",
+  "words": [
+   {
+    "w": "I",
+    "s": 0.663,
+    "e": 0.824,
+    "p": 0.79,
+    "x": null
+   },
+   {
+    "w": "thought",
+    "s": 0.864,
+    "e": 1.186,
+    "p": 0.95,
+    "x": null
+   },
+   {
+    "w": "it",
+    "s": 1.266,
+    "e": 1.788,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "would",
+    "s": 1.809,
+    "e": 2.21,
+    "p": 0.95,
+    "x": null
+   },
+   {
+    "w": "fit",
+    "s": 2.231,
+    "e": 2.452,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "right",
+    "s": 2.492,
+    "e": 2.773,
+    "p": 0.96,
+    "x": null
+   },
+   {
+    "w": "in.",
+    "s": 2.833,
+    "e": 2.994,
+    "p": 1,
+    "x": null
+   }
+  ],
+  "dur": 3.677416666666667,
+  "pron": {
+   "items": [],
+   "accent": [
+    {
+     "phone": "t",
+     "n": 3,
+     "z": -1.09
+    }
+   ],
+   "median": 10,
+   "scores": [
+    9.7,
+    9,
+    8.8,
+    9.6,
+    9.4,
+    8.8,
+    9.6
+   ]
+  }
+ },
+ "label": {
+  "row": 442,
+  "speaker": "0736",
+  "age": 21,
+  "gender": "f",
+  "text": "I THOUGHT IT WOULD FIT RIGHT IN",
+  "dur": 3.7,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 4,
+    "w": "FIT",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "IH",
+      "index": 1,
+      "pronounced-phone": "EH"
+     }
+    ],
+    "phones": [
+     "F",
+     "IH0",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "THOUGHT",
+    "acc": 10
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "WOULD",
+    "acc": 10
+   },
+   {
+    "w": "FIT",
+    "acc": 3
+   },
+   {
+    "w": "RIGHT",
+    "acc": 10
+   },
+   {
+    "w": "IN",
+    "acc": 10
+   }
+  ],
+  "id": "so762_442_0736"
+ }
+}

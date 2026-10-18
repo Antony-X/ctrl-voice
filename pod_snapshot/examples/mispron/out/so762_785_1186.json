@@ -1,0 +1,157 @@
+{
+ "file": "so762_785_1186.wav",
+ "t": {
+  "upload": 1825,
+  "checks": 2527,
+  "replace": 0,
+  "render": 1366
+ },
+ "sid": "02eaaece",
+ "words": [
+  {
+   "w": "No,",
+   "s": 0.582,
+   "e": 0.823,
+   "p": 0.5
+  },
+  {
+   "w": "it",
+   "s": 0.904,
+   "e": 1.024,
+   "p": 0.99
+  },
+  {
+   "w": "is",
+   "s": 1.085,
+   "e": 1.868,
+   "p": 0.96
+  },
+  {
+   "w": "you",
+   "s": 1.928,
+   "e": 2.33,
+   "p": 0.98
+  },
+  {
+   "w": "who",
+   "s": 2.37,
+   "e": 2.651,
+   "p": 0.99
+  },
+  {
+   "w": "must",
+   "s": 2.691,
+   "e": 3.133,
+   "p": 1
+  },
+  {
+   "w": "be",
+   "s": 3.173,
+   "e": 3.716,
+   "p": 1
+  },
+  {
+   "w": "thanked.",
+   "s": 3.756,
+   "e": 4.097,
+   "p": 1
+  }
+ ],
+ "dur": 4.74,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   10,
+   9.9,
+   10,
+   10,
+   9.9,
+   9.9,
+   9.9,
+   9.5
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 4.74,
+  "ai": [],
+  "file": "out_5e9dde.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "No, it is you who must be thanked.",
+ "label": {
+  "row": 785,
+  "speaker": "1186",
+  "age": 23,
+  "gender": "m",
+  "text": "NO IT IS YOU WHO MUST BE THANKED",
+  "dur": 4.74,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 7,
+    "w": "THANKED",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "TH",
+      "index": 0,
+      "pronounced-phone": "T"
+     }
+    ],
+    "phones": [
+     "TH",
+     "AE0",
+     "NG",
+     "K",
+     "T"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "NO",
+    "acc": 10
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   },
+   {
+    "w": "WHO",
+    "acc": 10
+   },
+   {
+    "w": "MUST",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "THANKED",
+    "acc": 5
+   }
+  ],
+  "id": "so762_785_1186"
+ }
+}

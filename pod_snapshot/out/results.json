@@ -1,0 +1,690 @@
+{
+ "orig": {
+  "libri_1320-122617-0000__michael": {
+   "mos": 4.479872226715088
+  },
+  "libri_260-123440-0010__children": {
+   "mos": 3.1956300735473633
+  },
+  "libri_5639-40744-0002__politelyandkindly": {
+   "mos": 4.11199951171875
+  },
+  "libri_6930-75918-0004__peaceful": {
+   "mos": 4.052311420440674
+  },
+  "ami_FEO070_0__thedesign": {
+   "mos": 3.0889806747436523
+  },
+  "ami_MEE073_3__important": {
+   "mos": 3.590832471847534
+  },
+  "ami_FEO072_1__remove": {
+   "mos": 3.177976608276367
+  },
+  "disfl_015__reallygood": {
+   "mos": 4.154781341552734
+  },
+  "disfl_011__wholepoint": {
+   "mos": 3.893104076385498
+  },
+  "disfl_016__neverthought": {
+   "mos": 3.7774949073791504
+  }
+ },
+ "auk_flash": {
+  "libri_1320-122617-0000__michael": {
+   "wer": 0.05263157894736842,
+   "ok": false,
+   "sim": 0.9443893432617188,
+   "mos": 4.455382347106934,
+   "txt": "notwithstanding the high resolution of Hawkeye he fully comprehended all the difficulties and danger he was about to incur",
+   "sec": 17.41240620613098
+  },
+  "libri_260-123440-0010__children": {
+   "wer": 0.05,
+   "ok": false,
+   "sim": 0.927456796169281,
+   "mos": 3.026134967803955,
+   "txt": "how cheerfully he seems to grin how neatly spread his claws and welcome little childjes in with gently smiling jaws",
+   "sec": 0.684006929397583
+  },
+  "libri_5639-40744-0002__politelyandkindly": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.9531733989715576,
+   "mos": 4.150303363800049,
+   "txt": "Rodolfo and his companions, with their faces muffled in their cloaks, stared politely and kindly at the mother, the daughter, and the servant maid.",
+   "sec": 0.5815813541412354
+  },
+  "libri_6930-75918-0004__peaceful": {
+   "wer": 0.03225806451612903,
+   "ok": true,
+   "sim": 0.9614635705947876,
+   "mos": 3.95230770111084,
+   "txt": "she taught her daughter then by her own affection for it that love for a country where they had both been hospitably received and where a peaceful future opened for them you",
+   "sec": 0.6463291645050049
+  },
+  "ami_FEO070_0__thedesign": {
+   "wer": 0.07692307692307693,
+   "ok": true,
+   "sim": 0.9116937518119812,
+   "mos": 2.9586453437805176,
+   "txt": "I mean, if you already started on the design stuff, I guess we can...",
+   "sec": 0.5624911785125732
+  },
+  "ami_MEE073_3__important": {
+   "wer": 0.12,
+   "ok": false,
+   "sim": 0.9597251415252686,
+   "mos": 3.462846040725708,
+   "txt": "It just doesn't, you're looking for that term and relevance is kind of irrelevant because if the term shows up it shows up.",
+   "sec": 0.46772098541259766
+  },
+  "ami_FEO072_1__remove": {
+   "wer": 0.08,
+   "ok": true,
+   "sim": 0.9537158012390137,
+   "mos": 3.09346604347229,
+   "txt": "I mean, we might use them well to work with them, but do we want to remove them so that when you browse you can hear?",
+   "sec": 0.49031686782836914
+  },
+  "disfl_015__reallygood": {
+   "wer": 0.21428571428571427,
+   "ok": true,
+   "sim": 0.9511404633522034,
+   "mos": 3.620720624923706,
+   "txt": "See, when I went, I thought the food was really good.",
+   "sec": 0.5577492713928223
+  },
+  "disfl_011__wholepoint": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.9387066960334778,
+   "mos": 3.868623733520508,
+   "txt": "And someone's got to do it and be able to do it right. And that's the whole point.",
+   "sec": 0.5310056209564209
+  },
+  "disfl_016__neverthought": {
+   "wer": 0.12,
+   "ok": false,
+   "sim": 0.9265989661216736,
+   "mos": 3.233130931854248,
+   "txt": "Well, I always thought I would like to. I've never wanted to bad enough to make any effort to do it, you know.",
+   "sec": 0.7914459705352783
+  }
+ },
+ "auk_flash+splice": {
+  "libri_1320-122617-0000__michael": {
+   "wer": 1.0,
+   "ok": false,
+   "sim": NaN,
+   "mos": NaN,
+   "txt": "<phrase not found>",
+   "sec": 17.41240620613098
+  },
+  "libri_260-123440-0010__children": {
+   "wer": 1.0,
+   "ok": false,
+   "sim": NaN,
+   "mos": NaN,
+   "txt": "<phrase not found>",
+   "sec": 0.684006929397583
+  },
+  "libri_5639-40744-0002__politelyandkindly": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.9770591259002686,
+   "mos": 4.13805627822876,
+   "txt": "Rodolfo and his companions, with their faces muffled in their cloaks, stared politely and kindly at the mother, the daughter, and the servant maid.",
+   "sec": 0.5815813541412354
+  },
+  "libri_6930-75918-0004__peaceful": {
+   "wer": 0.06451612903225806,
+   "ok": false,
+   "sim": 0.9960236549377441,
+   "mos": 3.798334836959839,
+   "txt": "she taught her daughter then by her own affection for it that love for a country where they had both been hospitably received and where a peaceable future opened for them you",
+   "sec": 0.6463291645050049
+  },
+  "ami_FEO070_0__thedesign": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.966148853302002,
+   "mos": 2.6740710735321045,
+   "txt": "I mean, if you already started on the design, I guess we can...",
+   "sec": 0.5624911785125732
+  },
+  "ami_MEE073_3__important": {
+   "wer": 1.0,
+   "ok": false,
+   "sim": NaN,
+   "mos": NaN,
+   "txt": "<phrase not found>",
+   "sec": 0.46772098541259766
+  },
+  "ami_FEO072_1__remove": {
+   "wer": 0.12,
+   "ok": false,
+   "sim": 0.9936245679855347,
+   "mos": 3.0306618213653564,
+   "txt": "I mean, we might use them well to work with them, but do we want to integrate them so that when you browse, you can hear?",
+   "sec": 0.49031686782836914
+  },
+  "disfl_015__reallygood": {
+   "wer": 0.21428571428571427,
+   "ok": true,
+   "sim": 0.9764506816864014,
+   "mos": 3.9331789016723633,
+   "txt": "See, when I went, I thought the food was really good.",
+   "sec": 0.5577492713928223
+  },
+  "disfl_011__wholepoint": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.9817355275154114,
+   "mos": 3.599997043609619,
+   "txt": "And someone's got to do it and be able to do it right. And that's the whole point.",
+   "sec": 0.5310056209564209
+  },
+  "disfl_016__neverthought": {
+   "wer": 1.0,
+   "ok": false,
+   "sim": NaN,
+   "mos": NaN,
+   "txt": "<phrase not found>",
+   "sec": 0.7914459705352783
+  }
+ },
+ "auk_base": {
+  "libri_1320-122617-0000__michael": {
+   "wer": 0.05263157894736842,
+   "ok": false,
+   "sim": 0.9220225811004639,
+   "mos": 4.416671276092529,
+   "txt": "Notwithstanding the high resolution of Hakal, he fully comprehended all the difficulties and danger he was about to incur.",
+   "sec": 5.938670635223389
+  },
+  "libri_260-123440-0010__children": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.9329171180725098,
+   "mos": 2.98925518989563,
+   "txt": "how cheerfully he seems to grin how neatly spread his claws and welcome little children in with gently smiling jaws",
+   "sec": 3.0155460834503174
+  },
+  "libri_5639-40744-0002__politelyandkindly": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.9493631720542908,
+   "mos": 3.842040538787842,
+   "txt": "Rodolfo and his companions, with their faces muffled in their cloaks, stared politely and kindly at the mother, the daughter, and the servant maid.",
+   "sec": 2.7289719581604004
+  },
+  "libri_6930-75918-0004__peaceful": {
+   "wer": 0.03225806451612903,
+   "ok": true,
+   "sim": 0.9582279324531555,
+   "mos": 3.7959144115448,
+   "txt": "she taught her daughter then by her own affection for it that love for a country where they had both been hospitably received and where a peaceful future opened for them you",
+   "sec": 3.9254462718963623
+  },
+  "ami_FEO070_0__thedesign": {
+   "wer": 0.15384615384615385,
+   "ok": false,
+   "sim": 0.922767162322998,
+   "mos": 2.9059338569641113,
+   "txt": "I mean, if you already started on doing stuff, I guess we can...",
+   "sec": 2.296086549758911
+  },
+  "ami_MEE073_3__important": {
+   "wer": 0.12,
+   "ok": false,
+   "sim": 0.9393310546875,
+   "mos": 3.4229860305786133,
+   "txt": "It just doesn't, you're looking for that term and relevance is kind of irrelevant because if the term shows up, it shows up.",
+   "sec": 2.5138792991638184
+  },
+  "ami_FEO072_1__remove": {
+   "wer": 0.08,
+   "ok": true,
+   "sim": 0.9364437460899353,
+   "mos": 3.0157556533813477,
+   "txt": "I mean, we might use them to work with them, but do we want to remove them so that when you browse, you can hear?",
+   "sec": 2.6764168739318848
+  },
+  "disfl_015__reallygood": {
+   "wer": 0.21428571428571427,
+   "ok": true,
+   "sim": 0.9273689985275269,
+   "mos": 3.976916790008545,
+   "txt": "See, when I went, I thought the food was really good.",
+   "sec": 2.4740967750549316
+  },
+  "disfl_011__wholepoint": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.9470739960670471,
+   "mos": 3.792651653289795,
+   "txt": "And someone's got to do it and be able to do it right. And that's the whole point.",
+   "sec": 2.3956923484802246
+  },
+  "disfl_016__neverthought": {
+   "wer": 0.12,
+   "ok": false,
+   "sim": 0.9262191653251648,
+   "mos": 3.5089111328125,
+   "txt": "Well, I always thought I would like to. I've never wanted to bad enough to make any effort to do it, you know.",
+   "sec": 2.6854588985443115
+  }
+ },
+ "auk_base+splice": {
+  "libri_1320-122617-0000__michael": {
+   "wer": 1.0,
+   "ok": false,
+   "sim": NaN,
+   "mos": NaN,
+   "txt": "<phrase not found>",
+   "sec": 5.938670635223389
+  },
+  "libri_260-123440-0010__children": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.9916005730628967,
+   "mos": 3.0575761795043945,
+   "txt": "how cheerfully he seems to grin how neatly spread his claws and welcome little children in with gently smiling jaws",
+   "sec": 3.0155460834503174
+  },
+  "libri_5639-40744-0002__politelyandkindly": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.982869565486908,
+   "mos": 4.135420799255371,
+   "txt": "Rodolfo and his companions, with their faces muffled in their cloaks, stared politely and kindly at the mother, the daughter, and the servant maid.",
+   "sec": 2.7289719581604004
+  },
+  "libri_6930-75918-0004__peaceful": {
+   "wer": 0.06451612903225806,
+   "ok": false,
+   "sim": 0.99558424949646,
+   "mos": 4.009568214416504,
+   "txt": "she taught her daughter then by her own affection for it that love for a country where they had both been hospitably received and where a peaceable future opened for them you",
+   "sec": 3.9254462718963623
+  },
+  "ami_FEO070_0__thedesign": {
+   "wer": 1.0,
+   "ok": false,
+   "sim": NaN,
+   "mos": NaN,
+   "txt": "<phrase not found>",
+   "sec": 2.296086549758911
+  },
+  "ami_MEE073_3__important": {
+   "wer": 1.0,
+   "ok": false,
+   "sim": NaN,
+   "mos": NaN,
+   "txt": "<phrase not found>",
+   "sec": 2.5138792991638184
+  },
+  "ami_FEO072_1__remove": {
+   "wer": 0.12,
+   "ok": false,
+   "sim": 0.9908276200294495,
+   "mos": 2.853757858276367,
+   "txt": "I mean, we might use them well to work with them, but do we want to migrate them so that when you browse, you can hear?",
+   "sec": 2.6764168739318848
+  },
+  "disfl_015__reallygood": {
+   "wer": 0.21428571428571427,
+   "ok": true,
+   "sim": 0.9604440331459045,
+   "mos": 3.7205452919006348,
+   "txt": "See, when I went, I thought the food was really good.",
+   "sec": 2.4740967750549316
+  },
+  "disfl_011__wholepoint": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.9846056699752808,
+   "mos": 3.6501214504241943,
+   "txt": "And someone's got to do it and be able to do it right. And that's the whole point.",
+   "sec": 2.3956923484802246
+  },
+  "disfl_016__neverthought": {
+   "wer": 1.0,
+   "ok": false,
+   "sim": NaN,
+   "mos": NaN,
+   "txt": "<phrase not found>",
+   "sec": 2.6854588985443115
+  }
+ },
+ "f5": {
+  "libri_1320-122617-0000__michael": {
+   "wer": 0.05263157894736842,
+   "ok": true,
+   "sim": 0.9742156267166138,
+   "mos": 4.363343715667725,
+   "txt": "notwithstanding the high resolution of michaeli he fully comprehended all the difficulties and danger he was about to incur",
+   "sec": 2.3058571815490723
+  },
+  "libri_260-123440-0010__children": {
+   "wer": 0.05,
+   "ok": false,
+   "sim": 0.9776588082313538,
+   "mos": 2.653391122817993,
+   "txt": "how cheerfully he seems to grin how neatly spread his claws and welcome little chiljes in with gently smiling jaws",
+   "sec": 1.0210795402526855
+  },
+  "libri_5639-40744-0002__politelyandkindly": {
+   "wer": 0.041666666666666664,
+   "ok": true,
+   "sim": 0.9623019695281982,
+   "mos": 3.607741355895996,
+   "txt": "rodolfo and his companions with their faces muffled in their cloaks stared politely and kindly at the mother the daughter and the servant -maid you",
+   "sec": 0.7851929664611816
+  },
+  "libri_6930-75918-0004__peaceful": {
+   "wer": 0.06451612903225806,
+   "ok": false,
+   "sim": 0.9909162521362305,
+   "mos": 3.5625367164611816,
+   "txt": "she taught her daughter then by her own affection for it that love for a country where they had both been hospitably received and where a pelion future opened for them you",
+   "sec": 0.8722777366638184
+  },
+  "ami_FEO070_0__thedesign": {
+   "wer": 0.15384615384615385,
+   "ok": true,
+   "sim": 0.9202847480773926,
+   "mos": 2.373915910720825,
+   "txt": "I mean, if you already started on the design at TUF, I guess we can...",
+   "sec": 0.7917633056640625
+  },
+  "ami_MEE073_3__important": {
+   "wer": 0.12,
+   "ok": false,
+   "sim": 0.9801906943321228,
+   "mos": 3.038875102996826,
+   "txt": "It just doesn't you're looking for that term and relevance is kind of imprelevant because if the term shows up it shows up",
+   "sec": 0.9046809673309326
+  },
+  "ami_FEO072_1__remove": {
+   "wer": 0.12,
+   "ok": false,
+   "sim": 0.982319176197052,
+   "mos": 2.723367691040039,
+   "txt": "I mean we might use them to work with them, but do we want to recreate them so that when you browse you can hear...",
+   "sec": 0.7706999778747559
+  },
+  "disfl_015__reallygood": {
+   "wer": 0.21428571428571427,
+   "ok": true,
+   "sim": 0.9610788822174072,
+   "mos": 4.020352840423584,
+   "txt": "See, when I went, I thought the food was really good.",
+   "sec": 0.841712236404419
+  },
+  "disfl_011__wholepoint": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.9684337377548218,
+   "mos": 3.4503173828125,
+   "txt": "And someone's got to do it and be able to do it right. And that's the whole point.",
+   "sec": 0.8914620876312256
+  },
+  "disfl_016__neverthought": {
+   "wer": 0.04,
+   "ok": true,
+   "sim": 0.9708516597747803,
+   "mos": 2.999401569366455,
+   "txt": "But, well, I never thought I would like to. I've never wanted to bad enough to make any effort to do it, you know.",
+   "sec": 0.7952544689178467
+  }
+ },
+ "f5+splice": {
+  "libri_1320-122617-0000__michael": {
+   "wer": 1.0,
+   "ok": false,
+   "sim": NaN,
+   "mos": NaN,
+   "txt": "<phrase not found>",
+   "sec": 2.3058571815490723
+  },
+  "libri_260-123440-0010__children": {
+   "wer": 1.0,
+   "ok": false,
+   "sim": NaN,
+   "mos": NaN,
+   "txt": "<phrase not found>",
+   "sec": 1.0210795402526855
+  },
+  "libri_5639-40744-0002__politelyandkindly": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.9796989560127258,
+   "mos": 4.086261749267578,
+   "txt": "Rodolfo and his companions, with their faces muffled in their cloaks, stared politely and kindly at the mother, the daughter, and the servant maid.",
+   "sec": 0.7851929664611816
+  },
+  "libri_6930-75918-0004__peaceful": {
+   "wer": 1.0,
+   "ok": false,
+   "sim": NaN,
+   "mos": NaN,
+   "txt": "<phrase not found>",
+   "sec": 0.8722777366638184
+  },
+  "ami_FEO070_0__thedesign": {
+   "wer": 0.15384615384615385,
+   "ok": false,
+   "sim": 0.9516333341598511,
+   "mos": 2.7387266159057617,
+   "txt": "I mean, if you already started on this stuff, I guess we can...",
+   "sec": 0.7917633056640625
+  },
+  "ami_MEE073_3__important": {
+   "wer": 1.0,
+   "ok": false,
+   "sim": NaN,
+   "mos": NaN,
+   "txt": "<phrase not found>",
+   "sec": 0.9046809673309326
+  },
+  "ami_FEO072_1__remove": {
+   "wer": 1.0,
+   "ok": false,
+   "sim": NaN,
+   "mos": NaN,
+   "txt": "<phrase not found>",
+   "sec": 0.7706999778747559
+  },
+  "disfl_015__reallygood": {
+   "wer": 0.21428571428571427,
+   "ok": true,
+   "sim": 0.9708975553512573,
+   "mos": 4.156271457672119,
+   "txt": "See, when I went, I thought the food was really good.",
+   "sec": 0.841712236404419
+  },
+  "disfl_011__wholepoint": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.9810467958450317,
+   "mos": 3.8221356868743896,
+   "txt": "And someone's got to do it and be able to do it right. And that's the whole point.",
+   "sec": 0.8914620876312256
+  },
+  "disfl_016__neverthought": {
+   "wer": 0.04,
+   "ok": true,
+   "sim": 0.9696717262268066,
+   "mos": 3.4833498001098633,
+   "txt": "But, well, I never thought I would like to. I've never wanted to bad enough to make any effort to do it, you know.",
+   "sec": 0.7952544689178467
+  }
+ },
+ "playdiff": {
+  "libri_1320-122617-0000__michael": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.7136969566345215,
+   "mos": 4.452557563781738,
+   "txt": "Notwithstanding the high resolution of Michael, he fully comprehended all the difficulties and danger he was about to incur.",
+   "sec": 3.895664691925049
+  },
+  "libri_260-123440-0010__children": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.6929641962051392,
+   "mos": 3.03354549407959,
+   "txt": "how cheerfully he seems to grin how neatly spread his claws and welcome little children in with gently smiling jaws",
+   "sec": 1.6642920970916748
+  },
+  "libri_5639-40744-0002__politelyandkindly": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.7890663743019104,
+   "mos": 4.034154891967773,
+   "txt": "Rodolfo and his companions, with their faces muffled in their cloaks, stared politely and kindly at the mother, the daughter, and the servant maid.",
+   "sec": 3.722273349761963
+  },
+  "libri_6930-75918-0004__peaceful": {
+   "wer": 0.03225806451612903,
+   "ok": true,
+   "sim": 0.7062027454376221,
+   "mos": 3.6659200191497803,
+   "txt": "she taught her daughter then by her own affection for it that love for a country where they had both been hospitably received and where a peaceful future opened for them you",
+   "sec": 1.4846632480621338
+  },
+  "ami_FEO070_0__thedesign": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.7211268544197083,
+   "mos": 3.3371057510375977,
+   "txt": "I mean, if you already started on the design, I guess we can...",
+   "sec": 1.3665354251861572
+  },
+  "ami_MEE073_3__important": {
+   "wer": 0.08,
+   "ok": true,
+   "sim": 0.7720649242401123,
+   "mos": 3.55434513092041,
+   "txt": "It just doesn't, you're looking for that term and relevance is kind of important because if the term shows up, it shows up.",
+   "sec": 1.381021499633789
+  },
+  "ami_FEO072_1__remove": {
+   "wer": 0.12,
+   "ok": true,
+   "sim": 0.7124887108802795,
+   "mos": 3.311473846435547,
+   "txt": "I mean, we might use them to work with them, but do we want to remove them so that when you browse you can use them?",
+   "sec": 1.3124287128448486
+  },
+  "disfl_015__reallygood": {
+   "wer": 0.21428571428571427,
+   "ok": true,
+   "sim": 0.7485166788101196,
+   "mos": 4.098076820373535,
+   "txt": "See, when I went, I thought the food was really good.",
+   "sec": 1.2584097385406494
+  },
+  "disfl_011__wholepoint": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.7727526426315308,
+   "mos": 3.8860745429992676,
+   "txt": "And someone's got to do it and be able to do it right. And that's the whole point.",
+   "sec": 1.192530632019043
+  },
+  "disfl_016__neverthought": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.692382276058197,
+   "mos": 3.9719200134277344,
+   "txt": "But it, well, I never thought I would like to. I've never wanted to bad enough to make any effort to do it, you know.",
+   "sec": 1.3086521625518799
+  }
+ },
+ "playdiff+splice": {
+  "libri_1320-122617-0000__michael": {
+   "wer": 0.05263157894736842,
+   "ok": false,
+   "sim": 0.9905259609222412,
+   "mos": 4.281589031219482,
+   "txt": "notwithstanding the high resolution of my he fully comprehended all the difficulties and danger he was about to incur",
+   "sec": 3.895664691925049
+  },
+  "libri_260-123440-0010__children": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.9874146580696106,
+   "mos": 3.094259262084961,
+   "txt": "how cheerfully he seems to grin how neatly spread his claws and welcome little children in with gently smiling jaws",
+   "sec": 1.6642920970916748
+  },
+  "libri_5639-40744-0002__politelyandkindly": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.9747484922409058,
+   "mos": 4.197094440460205,
+   "txt": "Rodolfo and his companions, with their faces muffled in their cloaks, stared politely and kindly at the mother, the daughter, and the servant maid.",
+   "sec": 3.722273349761963
+  },
+  "libri_6930-75918-0004__peaceful": {
+   "wer": 0.06451612903225806,
+   "ok": false,
+   "sim": 0.9952995777130127,
+   "mos": 3.7812740802764893,
+   "txt": "she taught her daughter then by her own affection for it that love for a country where they had both been hospitably received and where a peaceable future opened for them you",
+   "sec": 1.4846632480621338
+  },
+  "ami_FEO070_0__thedesign": {
+   "wer": 0.07692307692307693,
+   "ok": true,
+   "sim": 0.9564681649208069,
+   "mos": 2.543313503265381,
+   "txt": "I mean, if you already started on the design stuff, I guess we can...",
+   "sec": 1.3665354251861572
+  },
+  "ami_MEE073_3__important": {
+   "wer": 0.08,
+   "ok": true,
+   "sim": 0.9904670715332031,
+   "mos": 3.5164403915405273,
+   "txt": "It just doesn't, you're looking for that term and relevance is kind of important because if the term shows up, it shows up.",
+   "sec": 1.381021499633789
+  },
+  "ami_FEO072_1__remove": {
+   "wer": 0.12,
+   "ok": false,
+   "sim": 0.9873681664466858,
+   "mos": 2.96476674079895,
+   "txt": "I mean, we might use them well to work with them, but do we want to integrate them so that when you browse, you can hear?",
+   "sec": 1.3124287128448486
+  },
+  "disfl_015__reallygood": {
+   "wer": 0.35714285714285715,
+   "ok": true,
+   "sim": 0.9675675630569458,
+   "mos": 3.8894050121307373,
+   "txt": "See, when I went, I thought the food's really good.",
+   "sec": 1.2584097385406494
+  },
+  "disfl_011__wholepoint": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.9757416844367981,
+   "mos": 3.8252196311950684,
+   "txt": "And someone's got to do it and be able to do it right. And that's the whole point.",
+   "sec": 1.192530632019043
+  },
+  "disfl_016__neverthought": {
+   "wer": 0.0,
+   "ok": true,
+   "sim": 0.9516718983650208,
+   "mos": 3.262770175933838,
+   "txt": "But it, well, I never thought I would like to. I've never wanted to bad enough to make any effort to do it, you know.",
+   "sec": 1.3086521625518799
+  }
+ }
+}

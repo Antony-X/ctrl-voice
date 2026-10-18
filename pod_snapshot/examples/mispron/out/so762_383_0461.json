@@ -1,0 +1,122 @@
+{
+ "file": "so762_383_0461.wav",
+ "t": {
+  "upload": 657,
+  "checks": 1004,
+  "replace": 0,
+  "render": 1331
+ },
+ "sid": "98d0c141",
+ "words": [
+  {
+   "w": "Very,",
+   "s": 0.565,
+   "e": 0.988,
+   "p": 0.09
+  },
+  {
+   "w": "yes,",
+   "s": 1.008,
+   "e": 1.452,
+   "p": 0.87
+  },
+  {
+   "w": "part",
+   "s": 1.492,
+   "e": 1.835,
+   "p": 0.96
+  },
+  {
+   "w": "of",
+   "s": 1.915,
+   "e": 2.157,
+   "p": 1
+  },
+  {
+   "w": "life.",
+   "s": 2.218,
+   "e": 2.439,
+   "p": 1
+  }
+ ],
+ "dur": 3.004,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   8,
+   9.8,
+   9.9,
+   10,
+   10
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 3,
+  "ai": [],
+  "file": "out_a55ef8.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "Very, yes, part of life.",
+ "label": {
+  "row": 383,
+  "speaker": "0461",
+  "age": 23,
+  "gender": "m",
+  "text": "WORRY IS PART OF LIFE",
+  "dur": 3,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 6,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 0,
+    "w": "WORRY",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "W",
+      "index": 0,
+      "pronounced-phone": "B"
+     }
+    ],
+    "phones": [
+     "W",
+     "ER1",
+     "IY0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "WORRY",
+    "acc": 3
+   },
+   {
+    "w": "IS",
+    "acc": 10
+   },
+   {
+    "w": "PART",
+    "acc": 10
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "LIFE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_383_0461"
+ }
+}

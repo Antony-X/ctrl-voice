@@ -1,0 +1,141 @@
+{
+ "pron": [],
+ "gram": [
+  {
+   "name": "edacc_0",
+   "accent": "Chinese",
+   "l1": "Mandarin",
+   "human": "mm yes speaking of work do you plan to stay in some other country for after you graduate or you just go back to your home country to work",
+   "asr": "Yes. Speaking of work, do you plan to stay in some other country for after graduate or just go back to your own country to work?",
+   "fixes": [
+    {
+     "old": "graduate",
+     "new": "graduation",
+     "engine": "f5",
+     "verified": true,
+     "sec": 6.15
+    }
+   ],
+   "file": "edacc_0__fixed.wav"
+  },
+  {
+   "name": "edacc_1",
+   "accent": "Chinese",
+   "l1": "Mandarin",
+   "human": "uh uh speaking of the city i'm currently studying uh edinburgh it does not have subway so i just usually take the bus",
+   "asr": "Speaking of the city I'm currently studying Edinburgh, it does not have subway, so I just usually take the bus.",
+   "fixes": [
+    {
+     "old": "subway,",
+     "new": "a subway",
+     "engine": "playdiff",
+     "verified": true,
+     "sec": 2.87
+    }
+   ],
+   "file": "edacc_1__fixed.wav"
+  },
+  {
+   "name": "edacc_2",
+   "accent": "Bulgarian",
+   "l1": "Bulgarian",
+   "human": "okay thank you very much for the advices",
+   "asr": "Okay, thank you very much for the advices.",
+   "fixes": [
+    {
+     "old": "advices.",
+     "new": "advice",
+     "engine": "playdiff",
+     "verified": true,
+     "sec": 2.29
+    }
+   ],
+   "file": "edacc_2__fixed.wav"
+  },
+  {
+   "name": "edacc_3",
+   "accent": "Don't know",
+   "l1": "Sinhalese",
+   "human": "uh you want to go to mountains because you like to climb",
+   "asr": "You want to go to mountains because you like to climb?",
+   "fixes": [
+    {
+     "old": "mountains",
+     "new": "the mountains",
+     "engine": "playdiff",
+     "verified": true,
+     "sec": 2.29
+    }
+   ],
+   "file": "edacc_3__fixed.wav"
+  },
+  {
+   "name": "edacc_4",
+   "accent": "Don't know",
+   "l1": "Sinhalese",
+   "human": "okay if i could go on holiday i think i would like to go to maldives right now",
+   "asr": "If I could go on a holiday, I think I would like to go to Maldives right now.",
+   "fixes": [
+    {
+     "old": "Maldives",
+     "new": "the Maldives",
+     "engine": "f5",
+     "verified": true,
+     "sec": 2.71
+    }
+   ],
+   "file": "edacc_4__fixed.wav"
+  },
+  {
+   "name": "edacc_5",
+   "accent": "Spanish",
+   "l1": "Spanish",
+   "human": "interesting interesting because you've always said it was something that you were not even interested about",
+   "asr": "Interesting, because you've always said it was something that you were not even interested about.",
+   "fixes": [
+    {
+     "old": "about.",
+     "new": "in",
+     "engine": "playdiff",
+     "verified": true,
+     "sec": 3.64
+    }
+   ],
+   "file": "edacc_5__fixed.wav"
+  },
+  {
+   "name": "edacc_6",
+   "accent": "Catalan",
+   "l1": "Catalan",
+   "human": "i no no no okay a at first i didn't got it because the name in spanish was really different jard\u00edn de <dtmf> or something",
+   "asr": "I, no, no, no, okay, at first I didn't got it because the name in Spanish was really different, Hardin Dolly.",
+   "fixes": [
+    {
+     "old": "didn't got",
+     "new": "didn't get",
+     "engine": "f5",
+     "verified": true,
+     "sec": 3.09
+    }
+   ],
+   "file": "edacc_6__fixed.wav"
+  },
+  {
+   "name": "edacc_7",
+   "accent": "Eastern European",
+   "l1": "Lithuanian",
+   "human": "maybe less so for winter i'm just reading twice this question it says is there a particular food you used to like a child okay",
+   "asr": "Maybe less so for winter. I'm just reading twice this question. Is there a particular food you used to like a child? Okay.",
+   "fixes": [
+    {
+     "old": "a",
+     "new": "as",
+     "engine": "playdiff",
+     "verified": true,
+     "sec": 3.4
+    }
+   ],
+   "file": "edacc_7__fixed.wav"
+  }
+ ]
+}

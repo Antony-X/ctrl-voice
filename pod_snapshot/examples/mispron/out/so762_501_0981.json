@@ -1,0 +1,131 @@
+{
+ "file": "so762_501_0981.wav",
+ "t": {
+  "upload": 712,
+  "checks": 1006,
+  "replace": 0,
+  "render": 1246
+ },
+ "sid": "946c7074",
+ "words": [
+  {
+   "w": "But",
+   "s": 0.603,
+   "e": 1.106,
+   "p": 0.66
+  },
+  {
+   "w": "it's",
+   "s": 1.166,
+   "e": 1.387,
+   "p": 0.9
+  },
+  {
+   "w": "just",
+   "s": 1.568,
+   "e": 2.111,
+   "p": 0.99
+  },
+  {
+   "w": "model",
+   "s": 2.252,
+   "e": 2.955,
+   "p": 0.33
+  },
+  {
+   "w": "time.",
+   "s": 2.976,
+   "e": 3.257,
+   "p": 0.56
+  }
+ ],
+ "dur": 3.82,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9,
+   9.8,
+   9,
+   9.5,
+   9.4
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 3.82,
+  "ai": [],
+  "file": "out_78d58f.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "But it's just model time.",
+ "label": {
+  "row": 501,
+  "speaker": "0981",
+  "age": 25,
+  "gender": "m",
+  "text": "BUT IT'S JUST A MATTER OF TIME",
+  "dur": 3.82,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 4,
+    "w": "MATTER",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AE",
+      "index": 1,
+      "pronounced-phone": "AH"
+     }
+    ],
+    "phones": [
+     "M",
+     "AE1",
+     "T",
+     "AH0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "BUT",
+    "acc": 10
+   },
+   {
+    "w": "IT'S",
+    "acc": 10
+   },
+   {
+    "w": "JUST",
+    "acc": 10
+   },
+   {
+    "w": "A",
+    "acc": 10
+   },
+   {
+    "w": "MATTER",
+    "acc": 5
+   },
+   {
+    "w": "OF",
+    "acc": 10
+   },
+   {
+    "w": "TIME",
+    "acc": 10
+   }
+  ],
+  "id": "so762_501_0981"
+ }
+}

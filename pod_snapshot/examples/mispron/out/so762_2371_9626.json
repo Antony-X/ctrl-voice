@@ -1,0 +1,271 @@
+{
+ "file": "so762_2371_9626.wav",
+ "t": {
+  "upload": 750,
+  "checks": 1022,
+  "replace": 4973,
+  "render": 1354
+ },
+ "sid": "ac24ef0b",
+ "words": [
+  {
+   "w": "I",
+   "s": 0.601,
+   "e": 0.822,
+   "p": 0.76
+  },
+  {
+   "w": "need",
+   "s": 0.882,
+   "e": 1.503,
+   "p": 0.97
+  },
+  {
+   "w": "to",
+   "s": 1.563,
+   "e": 1.884,
+   "p": 0.99
+  },
+  {
+   "w": "be",
+   "s": 1.924,
+   "e": 2.265,
+   "p": 0.99
+  },
+  {
+   "w": "there.",
+   "s": 2.305,
+   "e": 2.806,
+   "p": 0.9
+  }
+ ],
+ "dur": 3.347,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 1,
+    "word": "need",
+    "acc": 5.3,
+    "canon": "niːd",
+    "heard": "nit",
+    "sub": "t",
+    "phone": "d"
+   }
+  ],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.5,
+   5.3,
+   9.9,
+   9.8,
+   8.8
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 1,
+    "word": "need",
+    "acc": 5.3,
+    "canon": "niːd",
+    "heard": "nit",
+    "sub": "t",
+    "phone": "d"
+   },
+   "on": true,
+   "op": {
+    "t0": 0.852,
+    "t1": 1.533,
+    "insert": "eda16713",
+    "i": 1,
+    "j": 1,
+    "old": "need",
+    "new": "need",
+    "engine": "f5",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 9.88
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.411,
+     "heard": "I need to be there.",
+     "id": "dfb56786",
+     "sec": 3.75,
+     "after": 9.11
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 1.488,
+     "heard": "I need to be there.",
+     "id": "eda16713",
+     "sec": 2.02,
+     "after": 9.88
+    }
+   ],
+   "sec": 4.79
+  }
+ ],
+ "render": {
+  "dur": 3.28,
+  "ai": [
+   [
+    0.82,
+    1.46
+   ]
+  ],
+  "file": "out_7ad9b7.wav"
+ },
+ "ops": [
+  {
+   "id": "mvdeaygvs",
+   "type": "replace",
+   "t0": 0.852,
+   "t1": 1.533,
+   "insert": "eda16713",
+   "i": 1,
+   "j": 1,
+   "old": "need",
+   "new": "need",
+   "engine": "f5",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 9.88,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 0.852,
+   "t1": 1.533,
+   "insert": "eda16713"
+  }
+ ],
+ "finalText": "I need to be there.",
+ "afterCheck": {
+  "sid": "2fb337a3",
+  "words": [
+   {
+    "w": "I",
+    "s": 0.603,
+    "e": 0.805,
+    "p": 0.86,
+    "x": null
+   },
+   {
+    "w": "need",
+    "s": 0.865,
+    "e": 1.468,
+    "p": 0.97,
+    "x": null
+   },
+   {
+    "w": "to",
+    "s": 1.489,
+    "e": 1.81,
+    "p": 0.96,
+    "x": null
+   },
+   {
+    "w": "be",
+    "s": 1.851,
+    "e": 2.213,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "there.",
+    "s": 2.233,
+    "e": 2.716,
+    "p": 0.85,
+    "x": null
+   }
+  ],
+  "dur": 3.27875,
+  "pron": {
+   "items": [
+    {
+     "i": 4,
+     "word": "there.",
+     "acc": 6.6,
+     "canon": "ðɛɹ",
+     "heard": "zi",
+     "sub": "i",
+     "phone": "ɛɹ"
+    }
+   ],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.6,
+    9.9,
+    9.8,
+    9.9,
+    6.6
+   ]
+  }
+ },
+ "label": {
+  "row": 2371,
+  "speaker": "9626",
+  "age": 37,
+  "gender": "m",
+  "text": "I NEED TO BE HERE.",
+  "dur": 3.35,
+  "sr": 16000,
+  "utt_acc": 5,
+  "utt_total": 5,
+  "fluency": 6,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "HERE",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "HH",
+      "index": 0,
+      "pronounced-phone": "Z"
+     }
+    ],
+    "phones": [
+     "HH",
+     "IH",
+     "AH0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "NEED",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "BE",
+    "acc": 10
+   },
+   {
+    "w": "HERE",
+    "acc": 3
+   }
+  ],
+  "id": "so762_2371_9626"
+ }
+}

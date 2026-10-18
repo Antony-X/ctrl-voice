@@ -1,0 +1,335 @@
+{
+ "file": "so762_1502_2937.wav",
+ "t": {
+  "upload": 1498,
+  "checks": 3008,
+  "replace": 9040,
+  "render": 1473
+ },
+ "sid": "9f69e266",
+ "words": [
+  {
+   "w": "Police",
+   "s": 0.563,
+   "e": 0.985,
+   "p": 0.65
+  },
+  {
+   "w": "have",
+   "s": 1.005,
+   "e": 1.186,
+   "p": 0.99
+  },
+  {
+   "w": "yet",
+   "s": 1.226,
+   "e": 1.467,
+   "p": 0.99
+  },
+  {
+   "w": "to",
+   "s": 1.487,
+   "e": 1.668,
+   "p": 1
+  },
+  {
+   "w": "charge",
+   "s": 1.708,
+   "e": 2.05,
+   "p": 0.99
+  },
+  {
+   "w": "anyone",
+   "s": 2.11,
+   "e": 2.553,
+   "p": 0.98
+  },
+  {
+   "w": "in",
+   "s": 2.613,
+   "e": 2.734,
+   "p": 1
+  },
+  {
+   "w": "boomings.",
+   "s": 2.794,
+   "e": 3.256,
+   "p": 0.65
+  }
+ ],
+ "dur": 4.02,
+ "clean": [
+  {
+   "i": 7,
+   "j": 7,
+   "kind": "correction",
+   "text": "boomings.",
+   "auto": false,
+   "t0": 2.764,
+   "t1": 3.296
+  }
+ ],
+ "grammar": [
+  {
+   "i": 7,
+   "j": 7,
+   "old": "boomings.",
+   "new": "bombings"
+  }
+ ],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 9.9,
+  "scores": [
+   9.9,
+   10,
+   9.6,
+   8.8,
+   9.9,
+   9.9,
+   9.9,
+   9.9
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "grammar",
+   "item": {
+    "i": 7,
+    "j": 7,
+    "old": "boomings.",
+    "new": "bombings"
+   },
+   "on": true,
+   "op": {
+    "t0": 2.764,
+    "t1": 3.296,
+    "insert": "4dc5f3b1",
+    "i": 7,
+    "j": 7,
+    "old": "boomings.",
+    "new": "bombings",
+    "engine": "f5",
+    "verified": true,
+    "kind": "grammar",
+    "after": null
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.285,
+     "heard": "Police have yet to charge anyone in bombings.",
+     "id": "cb53a0a1",
+     "sec": 6.6
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.631,
+     "heard": "Police have yet to charge anyone in bombings.",
+     "id": "4dc5f3b1",
+     "sec": 3.25
+    }
+   ],
+   "sec": 8.86
+  }
+ ],
+ "render": {
+  "dur": 4.03,
+  "ai": [
+   [
+    2.75,
+    3.36
+   ]
+  ],
+  "file": "out_b41666.wav"
+ },
+ "ops": [
+  {
+   "id": "mvdeebpn17",
+   "type": "cut",
+   "t0": 2.764,
+   "t1": 3.296,
+   "i": 7,
+   "j": 7,
+   "kind": "correction",
+   "text": "boomings.",
+   "on": false,
+   "auto": false
+  },
+  {
+   "id": "mvdeeior18",
+   "type": "replace",
+   "t0": 2.764,
+   "t1": 3.296,
+   "insert": "4dc5f3b1",
+   "i": 7,
+   "j": 7,
+   "old": "boomings.",
+   "new": "bombings",
+   "engine": "f5",
+   "verified": true,
+   "kind": "grammar",
+   "after": null,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 2.764,
+   "t1": 3.296,
+   "insert": "4dc5f3b1"
+  }
+ ],
+ "finalText": "Police have yet to charge anyone in bombings",
+ "afterCheck": {
+  "sid": "c2c25ad2",
+  "words": [
+   {
+    "w": "Police",
+    "s": 0.562,
+    "e": 0.963,
+    "p": 0.81,
+    "x": null
+   },
+   {
+    "w": "have",
+    "s": 1.003,
+    "e": 1.184,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "yet",
+    "s": 1.224,
+    "e": 1.465,
+    "p": 1,
+    "x": null
+   },
+   {
+    "w": "to",
+    "s": 1.485,
+    "e": 1.666,
+    "p": 1,
+    "x": null
+   },
+   {
+    "w": "charge",
+    "s": 1.706,
+    "e": 2.067,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "anyone",
+    "s": 2.107,
+    "e": 2.548,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "in",
+    "s": 2.609,
+    "e": 2.729,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "bombings.",
+    "s": 2.769,
+    "e": 3.271,
+    "p": 0.95,
+    "x": null
+   }
+  ],
+  "dur": 4.033333333333333,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 9.9,
+   "scores": [
+    9.9,
+    10,
+    9.6,
+    8.5,
+    9.9,
+    9.9,
+    9.9,
+    9.9
+   ]
+  }
+ },
+ "label": {
+  "row": 1502,
+  "speaker": "2937",
+  "age": 19,
+  "gender": "m",
+  "text": "POLICE HAVE YET TO CHARGE ANYONE IN BOMBINGS",
+  "dur": 4.02,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 8,
+  "fluency": 8,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 7,
+    "w": "BOMBINGS",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "AH",
+      "index": 1,
+      "pronounced-phone": "UH"
+     }
+    ],
+    "phones": [
+     "B",
+     "AH1",
+     "M",
+     "IH0",
+     "NG",
+     "S"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "POLICE",
+    "acc": 10
+   },
+   {
+    "w": "HAVE",
+    "acc": 10
+   },
+   {
+    "w": "YET",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "CHARGE",
+    "acc": 10
+   },
+   {
+    "w": "ANYONE",
+    "acc": 10
+   },
+   {
+    "w": "IN",
+    "acc": 10
+   },
+   {
+    "w": "BOMBINGS",
+    "acc": 5
+   }
+  ],
+  "id": "so762_1502_2937"
+ }
+}

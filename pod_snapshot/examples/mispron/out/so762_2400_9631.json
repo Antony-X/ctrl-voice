@@ -1,0 +1,276 @@
+{
+ "file": "so762_2400_9631.wav",
+ "t": {
+  "upload": 455,
+  "checks": 1297,
+  "replace": 3085,
+  "render": 1966
+ },
+ "sid": "2664ede8",
+ "words": [
+  {
+   "w": "He",
+   "s": 0.623,
+   "e": 0.964,
+   "p": 0.74
+  },
+  {
+   "w": "calls",
+   "s": 1.004,
+   "e": 1.365,
+   "p": 0.09
+  },
+  {
+   "w": "about",
+   "s": 1.446,
+   "e": 3.394,
+   "p": 0.5
+  },
+  {
+   "w": "what",
+   "s": 3.434,
+   "e": 3.956,
+   "p": 0.88
+  },
+  {
+   "w": "he",
+   "s": 3.996,
+   "e": 4.257,
+   "p": 0.74
+  },
+  {
+   "w": "do.",
+   "s": 4.297,
+   "e": 4.378,
+   "p": 0.65
+  }
+ ],
+ "dur": 4.98,
+ "clean": [],
+ "grammar": [
+  {
+   "i": 5,
+   "j": 5,
+   "old": "do.",
+   "new": "does"
+  }
+ ],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.9,
+   7.4,
+   9.8,
+   6.9,
+   8.1,
+   7.9
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "grammar",
+   "item": {
+    "i": 5,
+    "j": 5,
+    "old": "do.",
+    "new": "does"
+   },
+   "on": true,
+   "op": {
+    "t0": 4.277,
+    "t1": 4.418,
+    "insert": "0f7060eb",
+    "i": 5,
+    "j": 5,
+    "old": "do.",
+    "new": "does",
+    "engine": "f5",
+    "verified": true,
+    "kind": "grammar",
+    "after": null
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.168,
+     "heard": "He calls but what he does.",
+     "id": "dec9d675",
+     "sec": 2.34
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.481,
+     "heard": "He called but what he does.",
+     "id": "0f7060eb",
+     "sec": 1.67
+    }
+   ],
+   "sec": 2.91
+  }
+ ],
+ "render": {
+  "dur": 5.18,
+  "ai": [
+   [
+    4.26,
+    4.66
+   ]
+  ],
+  "file": "out_e55986.wav"
+ },
+ "ops": [
+  {
+   "id": "mvdecu7214",
+   "type": "replace",
+   "t0": 4.277,
+   "t1": 4.418,
+   "insert": "0f7060eb",
+   "i": 5,
+   "j": 5,
+   "old": "do.",
+   "new": "does",
+   "engine": "f5",
+   "verified": true,
+   "kind": "grammar",
+   "after": null,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 4.277,
+   "t1": 4.418,
+   "insert": "0f7060eb"
+  }
+ ],
+ "finalText": "He calls about what he does",
+ "afterCheck": {
+  "sid": "a30dbbaf",
+  "words": [
+   {
+    "w": "He",
+    "s": 0.622,
+    "e": 0.964,
+    "p": 0.71,
+    "x": null
+   },
+   {
+    "w": "called",
+    "s": 1.004,
+    "e": 1.365,
+    "p": 0.1,
+    "x": null
+   },
+   {
+    "w": "about",
+    "s": 1.446,
+    "e": 3.373,
+    "p": 0.2,
+    "x": null
+   },
+   {
+    "w": "what",
+    "s": 3.434,
+    "e": 3.936,
+    "p": 0.89,
+    "x": null
+   },
+   {
+    "w": "he",
+    "s": 3.976,
+    "e": 4.257,
+    "p": 0.92,
+    "x": null
+   },
+   {
+    "w": "does.",
+    "s": 4.297,
+    "e": 4.598,
+    "p": 0.95,
+    "x": null
+   }
+  ],
+  "dur": 5.180541666666667,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.9,
+    9.6,
+    9.8,
+    7.1,
+    8.5,
+    5.2
+   ]
+  }
+ },
+ "label": {
+  "row": 2400,
+  "speaker": "9631",
+  "age": 26,
+  "gender": "m",
+  "text": "HE COULD, BUT WHAT WOULD HE DO?",
+  "dur": 4.98,
+  "sr": 16000,
+  "utt_acc": 4,
+  "utt_total": 4,
+  "fluency": 5,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 1,
+    "w": "COULD",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "UH",
+      "index": 1,
+      "pronounced-phone": "AA"
+     }
+    ],
+    "phones": [
+     "K",
+     "UH0",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "HE",
+    "acc": 10
+   },
+   {
+    "w": "COULD",
+    "acc": 3
+   },
+   {
+    "w": "BUT",
+    "acc": 10
+   },
+   {
+    "w": "WHAT",
+    "acc": 10
+   },
+   {
+    "w": "WOULD",
+    "acc": 10
+   },
+   {
+    "w": "HE",
+    "acc": 10
+   },
+   {
+    "w": "DO",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2400_9631"
+ }
+}

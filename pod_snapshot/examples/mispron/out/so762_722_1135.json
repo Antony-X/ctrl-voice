@@ -1,0 +1,147 @@
+{
+ "file": "so762_722_1135.wav",
+ "t": {
+  "upload": 711,
+  "checks": 1088,
+  "replace": 0,
+  "render": 1563
+ },
+ "sid": "80cfe3e0",
+ "words": [
+  {
+   "w": "Starting",
+   "s": 0.663,
+   "e": 1.326,
+   "p": 0.88
+  },
+  {
+   "w": "on",
+   "s": 1.427,
+   "e": 1.628,
+   "p": 0.45
+  },
+  {
+   "w": "today,",
+   "s": 1.728,
+   "e": 2.331,
+   "p": 0.27
+  },
+  {
+   "w": "it's",
+   "s": 2.411,
+   "e": 2.713,
+   "p": 0.86
+  },
+  {
+   "w": "back",
+   "s": 2.853,
+   "e": 3.155,
+   "p": 0.98
+  },
+  {
+   "w": "to",
+   "s": 3.195,
+   "e": 3.356,
+   "p": 1
+  },
+  {
+   "w": "work.",
+   "s": 3.396,
+   "e": 3.597,
+   "p": 1
+  }
+ ],
+ "dur": 4.28,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.7,
+   7.5,
+   8.8,
+   9.7,
+   9.9,
+   10,
+   10
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 4.28,
+  "ai": [],
+  "file": "out_d0404d.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "Starting on today, it's back to work.",
+ "label": {
+  "row": 722,
+  "speaker": "1135",
+  "age": 25,
+  "gender": "m",
+  "text": "STARTING ON TUESDAY IT'S BACK TO WORK",
+  "dur": 4.28,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 8,
+  "n_words": 7,
+  "bad": [
+   {
+    "i": 2,
+    "w": "TUESDAY",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "Z",
+      "index": 3,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "T",
+     "Y",
+     "UW1",
+     "Z",
+     "D",
+     "EY0"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "STARTING",
+    "acc": 10
+   },
+   {
+    "w": "ON",
+    "acc": 10
+   },
+   {
+    "w": "TUESDAY",
+    "acc": 5
+   },
+   {
+    "w": "IT'S",
+    "acc": 10
+   },
+   {
+    "w": "BACK",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "WORK",
+    "acc": 10
+   }
+  ],
+  "id": "so762_722_1135"
+ }
+}

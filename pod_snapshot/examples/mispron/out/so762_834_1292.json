@@ -1,0 +1,126 @@
+{
+ "file": "so762_834_1292.wav",
+ "t": {
+  "upload": 1495,
+  "checks": 2066,
+  "replace": 0,
+  "render": 1514
+ },
+ "sid": "814eab25",
+ "words": [
+  {
+   "w": "Also,",
+   "s": 0.645,
+   "e": 0.967,
+   "p": 0.77
+  },
+  {
+   "w": "thanks",
+   "s": 1.007,
+   "e": 1.229,
+   "p": 0.97
+  },
+  {
+   "w": "to",
+   "s": 1.269,
+   "e": 1.35,
+   "p": 0.99
+  },
+  {
+   "w": "all",
+   "s": 1.431,
+   "e": 1.551,
+   "p": 0.95
+  },
+  {
+   "w": "Spondus.",
+   "s": 1.572,
+   "e": 2.035,
+   "p": 0.51
+  }
+ ],
+ "dur": 2.72,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.7,
+   7.6,
+   9.8,
+   9.7,
+   9.4
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 2.72,
+  "ai": [],
+  "file": "out_8a8cf2.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "Also, thanks to all Spondus.",
+ "label": {
+  "row": 834,
+  "speaker": "1292",
+  "age": 37,
+  "gender": "m",
+  "text": "ALSO THANKS TO ALL SPONSORS",
+  "dur": 2.72,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 8,
+  "fluency": 9,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 4,
+    "w": "SPONSORS",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "S",
+      "index": 4,
+      "pronounced-phone": "D"
+     }
+    ],
+    "phones": [
+     "S",
+     "P",
+     "AA1",
+     "N",
+     "S",
+     "ER0",
+     "S"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "ALSO",
+    "acc": 10
+   },
+   {
+    "w": "THANKS",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "ALL",
+    "acc": 10
+   },
+   {
+    "w": "SPONSORS",
+    "acc": 5
+   }
+  ],
+  "id": "so762_834_1292"
+ }
+}

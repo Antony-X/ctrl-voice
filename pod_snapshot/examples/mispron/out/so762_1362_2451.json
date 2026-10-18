@@ -1,0 +1,169 @@
+{
+ "file": "so762_1362_2451.wav",
+ "t": {
+  "upload": 1230,
+  "checks": 1765,
+  "replace": 0,
+  "render": 1542
+ },
+ "sid": "db177d3e",
+ "words": [
+  {
+   "w": "It's",
+   "s": 0.562,
+   "e": 0.862,
+   "p": 0.86
+  },
+  {
+   "w": "too",
+   "s": 0.923,
+   "e": 1.825,
+   "p": 1
+  },
+  {
+   "w": "precious",
+   "s": 1.865,
+   "e": 2.627,
+   "p": 0.99
+  },
+  {
+   "w": "to",
+   "s": 2.667,
+   "e": 2.848,
+   "p": 0.98
+  },
+  {
+   "w": "us",
+   "s": 2.928,
+   "e": 3.209,
+   "p": 0.98
+  },
+  {
+   "w": "to",
+   "s": 3.249,
+   "e": 3.409,
+   "p": 1
+  },
+  {
+   "w": "let",
+   "s": 3.47,
+   "e": 3.75,
+   "p": 1
+  },
+  {
+   "w": "it",
+   "s": 3.79,
+   "e": 4.031,
+   "p": 1
+  },
+  {
+   "w": "die.",
+   "s": 4.071,
+   "e": 4.372,
+   "p": 1
+  }
+ ],
+ "dur": 5.074,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.9,
+   9.9,
+   9.4,
+   9.9,
+   10,
+   9.8,
+   10,
+   9.9,
+   10
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 5.07,
+  "ai": [],
+  "file": "out_7b0a08.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "It's too precious to us to let it die.",
+ "label": {
+  "row": 1362,
+  "speaker": "2451",
+  "age": 23,
+  "gender": "f",
+  "text": "IT'S TOO PRECIOUS TO US TO LET IT DIE",
+  "dur": 5.07,
+  "sr": 16000,
+  "utt_acc": 8,
+  "utt_total": 7,
+  "fluency": 7,
+  "n_words": 9,
+  "bad": [
+   {
+    "i": 2,
+    "w": "PRECIOUS",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "EH",
+      "index": 2,
+      "pronounced-phone": "IH"
+     }
+    ],
+    "phones": [
+     "P",
+     "R",
+     "EH1",
+     "SH",
+     "AH0",
+     "S"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "IT'S",
+    "acc": 10
+   },
+   {
+    "w": "TOO",
+    "acc": 10
+   },
+   {
+    "w": "PRECIOUS",
+    "acc": 5
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "US",
+    "acc": 10
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "LET",
+    "acc": 10
+   },
+   {
+    "w": "IT",
+    "acc": 10
+   },
+   {
+    "w": "DIE",
+    "acc": 10
+   }
+  ],
+  "id": "so762_1362_2451"
+ }
+}

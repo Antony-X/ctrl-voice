@@ -1,0 +1,123 @@
+{
+ "file": "so762_380_0461.wav",
+ "t": {
+  "upload": 455,
+  "checks": 1000,
+  "replace": 0,
+  "render": 1774
+ },
+ "sid": "e25b09e5",
+ "words": [
+  {
+   "w": "But",
+   "s": 0.601,
+   "e": 0.821,
+   "p": 0.53
+  },
+  {
+   "w": "there's",
+   "s": 0.841,
+   "e": 1.503,
+   "p": 0.64
+  },
+  {
+   "w": "another",
+   "s": 1.563,
+   "e": 2.424,
+   "p": 0.99
+  },
+  {
+   "w": "story",
+   "s": 2.444,
+   "e": 3.686,
+   "p": 0.99
+  },
+  {
+   "w": "altogether.",
+   "s": 3.766,
+   "e": 4.468,
+   "p": 0.81
+  }
+ ],
+ "dur": 5.269,
+ "clean": [],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.7,
+   7.8,
+   8.2,
+   9.6,
+   9.8
+  ]
+ },
+ "replaced": [],
+ "render": {
+  "dur": 5.27,
+  "ai": [],
+  "file": "out_0c1c0d.wav"
+ },
+ "ops": [],
+ "renderOps": [],
+ "finalText": "But there's another story altogether.",
+ "label": {
+  "row": 380,
+  "speaker": "0461",
+  "age": 23,
+  "gender": "m",
+  "text": "BUT THAT'S ANOTHER STORY ALTOGETHER",
+  "dur": 5.27,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 5,
+  "bad": [
+   {
+    "i": 1,
+    "w": "THAT'S",
+    "acc": 3,
+    "mis": [
+     {
+      "canonical-phone": "DH",
+      "index": 0,
+      "pronounced-phone": "S"
+     }
+    ],
+    "phones": [
+     "DH",
+     "AE0",
+     "T",
+     "S"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "BUT",
+    "acc": 10
+   },
+   {
+    "w": "THAT'S",
+    "acc": 3
+   },
+   {
+    "w": "ANOTHER",
+    "acc": 10
+   },
+   {
+    "w": "STORY",
+    "acc": 10
+   },
+   {
+    "w": "ALTOGETHER",
+    "acc": 10
+   }
+  ],
+  "id": "so762_380_0461"
+ }
+}

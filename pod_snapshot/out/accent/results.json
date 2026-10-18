@@ -1,0 +1,362 @@
+{
+ "edacc_0": {
+  "orig": {
+   "top": "african",
+   "native": 0.17079994082450867,
+   "wer": 0.17391304347826086,
+   "f0sd": 1.0922470968523545
+  },
+  "deaccent": {
+   "top": "us",
+   "native": 0.20791339874267578,
+   "wer": 0.17391304347826086,
+   "sim": 0.9505876302719116,
+   "f0sd": 1.0892397374254406,
+   "txt": " When you were a kid, what kinds of games did you use to play?  Is there one that you remember well?"
+  },
+  "native_us": {
+   "top": "us",
+   "native": 0.1910603642463684,
+   "wer": 0.2608695652173913,
+   "sim": 0.7662551403045654,
+   "f0sd": 1.0764381106293084,
+   "txt": " When you were kicked, what kinds of games did you used to play?  Is there one that you remember?"
+  },
+  "confident": {
+   "top": "us",
+   "native": 0.1965586245059967,
+   "wer": 0.13043478260869565,
+   "sim": 0.8661168813705444,
+   "f0sd": 1.0889758724649665,
+   "txt": " When you were a kid, what kinds of games did you used to play?  Is there one that you remember well?"
+  },
+  "calm": {
+   "top": "us",
+   "native": 0.20915120840072632,
+   "wer": 0.21739130434782608,
+   "sim": 0.5727616548538208,
+   "f0sd": 1.0400353638041293,
+   "txt": " Then when you were a kid, what kinds of games did you use to play?  Is there one that you remember better?"
+  }
+ },
+ "edacc_1": {
+  "orig": {
+   "top": "indian",
+   "native": 0.18267099559307098,
+   "wer": 0.2857142857142857,
+   "f0sd": 3.814357373044942
+  },
+  "deaccent": {
+   "top": "indian",
+   "native": 0.18441717326641083,
+   "wer": 0.2857142857142857,
+   "sim": 0.9678412675857544,
+   "f0sd": 3.152222695148429,
+   "txt": " I remember, stay care letters too.  And I think you also liked Scrubble, right?"
+  },
+  "native_us": {
+   "top": "indian",
+   "native": 0.1839226484298706,
+   "wer": 0.2857142857142857,
+   "sim": 0.9695490598678589,
+   "f0sd": 3.1493476769916215,
+   "txt": " I remember, stay care letters too.  And I think you also liked Scrubble, right?"
+  },
+  "confident": {
+   "top": "singapore",
+   "native": 0.18376976251602173,
+   "wer": 0.2857142857142857,
+   "sim": 0.9230297207832336,
+   "f0sd": 3.4293272840079756,
+   "txt": " I remember steak and lettuce too. And I think you also like scrubber, right?"
+  },
+  "calm": {
+   "top": "us",
+   "native": 0.1931636482477188,
+   "wer": 0.2857142857142857,
+   "sim": 0.7347707152366638,
+   "f0sd": 2.948514806084784,
+   "txt": " I remember mistaking letters too, and I think you also liked krabble, right?"
+  }
+ },
+ "edacc_2": {
+  "orig": {
+   "top": "us",
+   "native": 0.2446419596672058,
+   "wer": 0.15384615384615385,
+   "f0sd": 1.244173464106819
+  },
+  "deaccent": {
+   "top": "us",
+   "native": 0.2675784230232239,
+   "wer": 0.07692307692307693,
+   "sim": 0.9115490913391113,
+   "f0sd": 1.2612731535562767,
+   "txt": " Hmm. I wonder who came up with this. Doesn't make any sense."
+  },
+  "native_us": {
+   "top": "us",
+   "native": 0.27854621410369873,
+   "wer": 0.07692307692307693,
+   "sim": 0.9361597299575806,
+   "f0sd": 1.2105574098935072,
+   "txt": " Hmm. I wonder who came up with this.  Doesn't make any sense."
+  },
+  "confident": {
+   "top": "us",
+   "native": 0.26156100630760193,
+   "wer": 0.15384615384615385,
+   "sim": 0.8461604118347168,
+   "f0sd": 3.7066712772505537,
+   "txt": " I wonder who came up with this.  Doesn't make any sense."
+  },
+  "calm": {
+   "top": "us",
+   "native": 0.20794694125652313,
+   "wer": 0.15384615384615385,
+   "sim": 0.5368294715881348,
+   "f0sd": 2.0292779961398897,
+   "txt": " Hmm, I wonder if who came up with this doesn't make any sense."
+  }
+ },
+ "edacc_3": {
+  "orig": {
+   "top": "us",
+   "native": 0.2671594023704529,
+   "wer": 0.07142857142857142,
+   "f0sd": 1.684944214940147
+  },
+  "deaccent": {
+   "top": "us",
+   "native": 0.28612205386161804,
+   "wer": 0.07142857142857142,
+   "sim": 0.9509285092353821,
+   "f0sd": 1.6308142961780157,
+   "txt": " What's your favorite thing about Edinburgh?  What's your least favorite thing about Edinburgh?"
+  },
+  "native_us": {
+   "top": "us",
+   "native": 0.26655396819114685,
+   "wer": 0.07142857142857142,
+   "sim": 0.8858844041824341,
+   "f0sd": 1.4869330963670015,
+   "txt": " um what's your favorite thing about edinburgh what's your really favorite thing about edinburgh"
+  },
+  "confident": {
+   "top": "us",
+   "native": 0.2643650472164154,
+   "wer": 0.0,
+   "sim": 0.9338152408599854,
+   "f0sd": 1.6261828018542415,
+   "txt": " Um, what's your favorite thing about Edinburgh?  What's your least favorite thing about Edinburgh?"
+  },
+  "calm": {
+   "top": "us",
+   "native": 0.21072104573249817,
+   "wer": 0.2857142857142857,
+   "sim": 0.7337813377380371,
+   "f0sd": 2.8691601164810887,
+   "txt": " What is your favorite thing about Edinburgh?  What is your least favorite thing about Edinburgh?"
+  }
+ },
+ "edacc_4": {
+  "orig": {
+   "top": "australia",
+   "native": 0.28360068798065186,
+   "wer": 0.32142857142857145,
+   "f0sd": 1.4527439055980826
+  },
+  "deaccent": {
+   "top": "australia",
+   "native": 0.2773107886314392,
+   "wer": 0.35714285714285715,
+   "sim": 0.9728090167045593,
+   "f0sd": 1.453257921874183,
+   "txt": " in the night, it gets really cold at night.  It gets like below minus, not minus,  below 10 degrees Celsius and under"
+  },
+  "native_us": {
+   "top": "australia",
+   "native": 0.2810812294483185,
+   "wer": 0.35714285714285715,
+   "sim": 0.9575880765914917,
+   "f0sd": 1.472825792612026,
+   "txt": " And then in the night, it gets really cold at night.  It gets like below minus, not minus,  below 10 degrees Celsius and under"
+  },
+  "confident": {
+   "top": "england",
+   "native": 0.27304506301879883,
+   "wer": 0.42857142857142855,
+   "sim": 0.8691707849502563,
+   "f0sd": 0.14623625237326496,
+   "txt": " then in the night it gets really cold at night it gets like below minus not minus below 10 degrees  south east and on this under"
+  },
+  "calm": {
+   "top": "us",
+   "native": 0.25952544808387756,
+   "wer": 0.32142857142857145,
+   "sim": 0.810379147529602,
+   "f0sd": 1.6088912242066273,
+   "txt": " In the night, it gets really cold at night.  It gets like below minus, not minus, below 10 degrees Celsius and under, under."
+  }
+ },
+ "edacc_5": {
+  "orig": {
+   "top": "england",
+   "native": 0.2030126452445984,
+   "wer": 0.3,
+   "f0sd": 2.0045780914688893
+  },
+  "deaccent": {
+   "top": "england",
+   "native": 0.20234447717666626,
+   "wer": 0.3,
+   "sim": 0.9034693241119385,
+   "f0sd": 2.179689421259829,
+   "txt": " We can talk. We have here some..."
+  },
+  "native_us": {
+   "top": "england",
+   "native": 0.21003420650959015,
+   "wer": 0.3,
+   "sim": 0.8584530353546143,
+   "f0sd": 2.1108628346406424,
+   "txt": " we can talk. We have here some"
+  },
+  "confident": {
+   "top": "england",
+   "native": 0.2028638869524002,
+   "wer": 0.3,
+   "sim": 0.8460367321968079,
+   "f0sd": 2.878503905401491,
+   "txt": " We can talk.  We have here some..."
+  },
+  "calm": {
+   "top": "us",
+   "native": 0.2300451397895813,
+   "wer": 0.3,
+   "sim": 0.7326458692550659,
+   "f0sd": 1.4852492358911296,
+   "txt": " We can talk.  We have here some..."
+  }
+ },
+ "so762_0024": {
+  "orig": {
+   "top": "us",
+   "native": 0.3032268285751343,
+   "wer": 0.1111111111111111,
+   "f0sd": 2.1912284751747255
+  },
+  "deaccent": {
+   "top": "us",
+   "native": 0.30677035450935364,
+   "wer": 0.1111111111111111,
+   "sim": 0.9323093891143799,
+   "f0sd": 10.09507549152186,
+   "txt": " They may make me more happy than I am."
+  },
+  "native_us": {
+   "top": "us",
+   "native": 0.315381795167923,
+   "wer": 0.1111111111111111,
+   "sim": 0.942748486995697,
+   "f0sd": 2.134549000741383,
+   "txt": " They may make me more happy than I am."
+  },
+  "confident": {
+   "top": "us",
+   "native": 0.30634409189224243,
+   "wer": 0.1111111111111111,
+   "sim": 0.850320041179657,
+   "f0sd": 2.1953425392419907,
+   "txt": " They may make me more happy than I am."
+  },
+  "calm": {
+   "top": "us",
+   "native": 0.31705600023269653,
+   "wer": 0.1111111111111111,
+   "sim": 0.7510221004486084,
+   "f0sd": 1.9123123503655883,
+   "txt": " They may make me more happy than I am."
+  }
+ },
+ "so762_0120": {
+  "orig": {
+   "top": "england",
+   "native": 0.21375617384910583,
+   "wer": 0.14285714285714285,
+   "f0sd": 1.6136949576297324
+  },
+  "deaccent": {
+   "top": "england",
+   "native": 0.21592634916305542,
+   "wer": 0.14285714285714285,
+   "sim": 0.900816023349762,
+   "f0sd": 1.623791342049397,
+   "txt": " This was one of our battle games."
+  },
+  "native_us": {
+   "top": "england",
+   "native": 0.21366745233535767,
+   "wer": 0.0,
+   "sim": 0.8866254687309265,
+   "f0sd": 1.6849370464243871,
+   "txt": " This was one of our better games."
+  },
+  "confident": {
+   "top": "us",
+   "native": 0.2098993957042694,
+   "wer": 0.14285714285714285,
+   "sim": 0.7445696592330933,
+   "f0sd": 5.101104819381564,
+   "txt": " This was one of our battle games."
+  },
+  "calm": {
+   "top": "us",
+   "native": 0.21335291862487793,
+   "wer": 0.0,
+   "sim": 0.8027669191360474,
+   "f0sd": 1.8783100105117656,
+   "txt": " This was one of our better games."
+  }
+ },
+ "so762_0306": {
+  "orig": {
+   "top": "england",
+   "native": 0.20881184935569763,
+   "wer": 0.3333333333333333,
+   "f0sd": 2.536275986582335
+  },
+  "deaccent": {
+   "top": "england",
+   "native": 0.2061312049627304,
+   "wer": 0.5,
+   "sim": 0.8780409097671509,
+   "f0sd": 2.588045939122487,
+   "txt": " So much for your needed firm."
+  },
+  "native_us": {
+   "top": "england",
+   "native": 0.2074986845254898,
+   "wer": 0.3333333333333333,
+   "sim": 0.9037214517593384,
+   "f0sd": 2.5761756214685074,
+   "txt": " So much for United from."
+  },
+  "confident": {
+   "top": "england",
+   "native": 0.20613673329353333,
+   "wer": 0.5,
+   "sim": 0.8591601252555847,
+   "f0sd": 2.6011697355810433,
+   "txt": " So much for your needed firm."
+  },
+  "calm": {
+   "top": "england",
+   "native": 0.21414825320243835,
+   "wer": 0.5,
+   "sim": 0.7794116735458374,
+   "f0sd": 2.509089288597867,
+   "txt": " So much for your litted foam."
+  }
+ }
+}

@@ -1,0 +1,191 @@
+{
+ "path": "/workspace/app_data/862e9837/out_3b2bc5.wav",
+ "ops": [
+  {
+   "t0": 1.061,
+   "t1": 1.992
+  },
+  {
+   "t0": 5.846,
+   "t1": 7.147
+  },
+  {
+   "t0": 9.269,
+   "t1": 15.885
+  },
+  {
+   "t0": 2.542,
+   "t1": 3.984,
+   "insert": "201e1336"
+  },
+  {
+   "t0": 17.997,
+   "t1": 18.338,
+   "insert": "ffe38b24"
+  }
+ ],
+ "ai": [
+  [
+   1.56,
+   2.99
+  ],
+  [
+   8.09,
+   8.79
+  ]
+ ],
+ "dur": 11.12,
+ "words": [
+  {
+   "w": "Hey",
+   "s": 0.18,
+   "e": 0.341
+  },
+  {
+   "w": "Sam,",
+   "s": 0.381,
+   "e": 1.042
+  },
+  {
+   "w": "can",
+   "s": 1.062,
+   "e": 1.202
+  },
+  {
+   "w": "you",
+   "s": 1.242,
+   "e": 1.382
+  },
+  {
+   "w": "be",
+   "s": 1.422,
+   "e": 1.542
+  },
+  {
+   "w": "more",
+   "s": 1.562,
+   "e": 1.843
+  },
+  {
+   "w": "specific",
+   "s": 1.883,
+   "e": 3.004
+  },
+  {
+   "w": "about",
+   "s": 3.045,
+   "e": 3.305
+  },
+  {
+   "w": "game",
+   "s": 3.365,
+   "e": 3.605
+  },
+  {
+   "w": "night?",
+   "s": 3.665,
+   "e": 4.567
+  },
+  {
+   "w": "Is",
+   "s": 4.627,
+   "e": 4.707
+  },
+  {
+   "w": "it",
+   "s": 4.747,
+   "e": 4.867
+  },
+  {
+   "w": "Wednesday?",
+   "s": 4.927,
+   "e": 5.969
+  },
+  {
+   "w": "Anyway,",
+   "s": 6.009,
+   "e": 6.83
+  },
+  {
+   "w": "whatever",
+   "s": 6.87,
+   "e": 7.251
+  },
+  {
+   "w": "Jordan",
+   "s": 7.291,
+   "e": 7.651
+  },
+  {
+   "w": "said",
+   "s": 7.691,
+   "e": 7.932
+  },
+  {
+   "w": "is",
+   "s": 7.972,
+   "e": 8.052
+  },
+  {
+   "w": "a",
+   "s": 8.132,
+   "e": 8.232
+  },
+  {
+   "w": "moot",
+   "s": 8.292,
+   "e": 8.793
+  },
+  {
+   "w": "point",
+   "s": 8.813,
+   "e": 9.094
+  },
+  {
+   "w": "now.",
+   "s": 9.134,
+   "e": 10.075
+  },
+  {
+   "w": "Just",
+   "s": 10.115,
+   "e": 10.295
+  },
+  {
+   "w": "bring",
+   "s": 10.335,
+   "e": 10.576
+  },
+  {
+   "w": "snacks.",
+   "s": 10.616,
+   "e": 10.976
+  }
+ ],
+ "transcript": "Hey Sam, can you be more specific about game night? Is it Wednesday? Anyway, whatever Jordan said is a moot point now. Just bring snacks.",
+ "spec": {
+  "span": 2,
+  "seed": 7,
+  "engine": "f5",
+  "id": "201e1336",
+  "whisper_ok": true,
+  "sim": 0.641,
+  "heard_whisper": "u be more specific about game night? Is it Monday? No, wait.",
+  "margin": 33.35,
+  "heard_ctc": "can you be more specific about game night",
+  "sec": 5.5,
+  "chosen": true,
+  "op": {
+   "t0": 2.542,
+   "t1": 3.984
+  }
+ },
+ "moot": [
+  -1.22,
+  "on said is a mute point now"
+ ],
+ "specific": [
+  32.56,
+  "can you be more specific about game night"
+ ]
+}

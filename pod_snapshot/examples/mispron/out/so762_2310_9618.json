@@ -1,0 +1,400 @@
+{
+ "file": "so762_2310_9618.wav",
+ "t": {
+  "upload": 1003,
+  "checks": 1326,
+  "replace": 7876,
+  "render": 1758
+ },
+ "sid": "6ccac5e1",
+ "words": [
+  {
+   "w": "I",
+   "s": 0.562,
+   "e": 0.722,
+   "p": 0.9
+  },
+  {
+   "w": "want",
+   "s": 0.742,
+   "e": 1.124,
+   "p": 0.9
+  },
+  {
+   "w": "to",
+   "s": 1.144,
+   "e": 1.404,
+   "p": 0.99
+  },
+  {
+   "w": "find",
+   "s": 1.424,
+   "e": 1.946,
+   "p": 1
+  },
+  {
+   "w": "more",
+   "s": 1.986,
+   "e": 2.588,
+   "p": 0.83
+  },
+  {
+   "w": "about",
+   "s": 3.611,
+   "e": 4.253,
+   "p": 0.91
+  },
+  {
+   "w": "for",
+   "s": 4.273,
+   "e": 4.675,
+   "p": 0.27
+  },
+  {
+   "w": "you.",
+   "s": 4.715,
+   "e": 4.815,
+   "p": 0.99
+  }
+ ],
+ "dur": 5.437,
+ "clean": [],
+ "grammar": [
+  {
+   "i": 6,
+   "j": 7,
+   "old": "for you.",
+   "new": "you"
+  }
+ ],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 5,
+    "word": "about",
+    "acc": 5.7,
+    "canon": "ɐbaʊt",
+    "heard": "ɑu5tɑ5",
+    "sub": "∅",
+    "phone": "ɐ"
+   }
+  ],
+  "accent": [],
+  "median": 10,
+  "scores": [
+   9.6,
+   9.2,
+   9.8,
+   8.9,
+   9.6,
+   5.7,
+   3.5,
+   7.4
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "grammar",
+   "item": {
+    "i": 6,
+    "j": 7,
+    "old": "for you.",
+    "new": "you"
+   },
+   "on": true,
+   "op": {
+    "t0": 4.263,
+    "t1": 4.855,
+    "insert": "a2e7c564",
+    "i": 6,
+    "j": 7,
+    "old": "for you.",
+    "new": "you",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "grammar",
+    "after": null
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.5,
+     "heard": "I want to find more about you.",
+     "id": "a2e7c564",
+     "sec": 2.69
+    },
+    {
+     "engine": "f5",
+     "ok": false,
+     "sim": 0.5,
+     "heard": "I want to find more about...",
+     "id": "ae2fd172",
+     "sec": 1.77
+    }
+   ],
+   "sec": 3.46
+  },
+  {
+   "kind": "pronunciation",
+   "item": {
+    "i": 5,
+    "word": "about",
+    "acc": 5.7,
+    "canon": "ɐbaʊt",
+    "heard": "ɑu5tɑ5",
+    "sub": "∅",
+    "phone": "ɐ"
+   },
+   "on": true,
+   "op": {
+    "t0": 3.099,
+    "t1": 4.263,
+    "insert": "401d19d3",
+    "i": 5,
+    "j": 5,
+    "old": "about",
+    "new": "about",
+    "engine": "playdiff",
+    "verified": true,
+    "kind": "pronunciation",
+    "after": 9.09
+   },
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 1.409,
+     "heard": "I want to find more out about for you.",
+     "id": "401d19d3",
+     "sec": 2.69,
+     "after": 9.09
+    },
+    {
+     "engine": "f5",
+     "ok": false,
+     "sim": 0.421,
+     "heard": "I want to find more out of you.",
+     "id": "9e135d29",
+     "sec": 1.74,
+     "after": 4.21
+    }
+   ],
+   "sec": 3.77
+  }
+ ],
+ "render": {
+  "dur": 5.17,
+  "ai": [
+   [
+    3.13,
+    4.37
+   ],
+   [
+    4.37,
+    4.61
+   ]
+  ],
+  "file": "out_50f002.wav"
+ },
+ "ops": [
+  {
+   "id": "mvdeghwl1d",
+   "type": "replace",
+   "t0": 4.263,
+   "t1": 4.855,
+   "insert": "a2e7c564",
+   "i": 6,
+   "j": 7,
+   "old": "for you.",
+   "new": "you",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "grammar",
+   "after": null,
+   "on": true
+  },
+  {
+   "id": "mvdegl671e",
+   "type": "replace",
+   "t0": 3.099,
+   "t1": 4.263,
+   "insert": "401d19d3",
+   "i": 5,
+   "j": 5,
+   "old": "about",
+   "new": "about",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "pronunciation",
+   "after": 9.09,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 3.099,
+   "t1": 4.263,
+   "insert": "401d19d3"
+  },
+  {
+   "t0": 4.263,
+   "t1": 4.855,
+   "insert": "a2e7c564"
+  }
+ ],
+ "finalText": "I want to find more about you",
+ "afterCheck": {
+  "sid": "a811d1f3",
+  "words": [
+   {
+    "w": "I",
+    "s": 0.561,
+    "e": 0.701,
+    "p": 0.91,
+    "x": null
+   },
+   {
+    "w": "want",
+    "s": 0.741,
+    "e": 1.122,
+    "p": 0.92,
+    "x": null
+   },
+   {
+    "w": "to",
+    "s": 1.162,
+    "e": 1.403,
+    "p": 0.99,
+    "x": null
+   },
+   {
+    "w": "find",
+    "s": 1.423,
+    "e": 1.944,
+    "p": 0.97,
+    "x": null
+   },
+   {
+    "w": "more",
+    "s": 1.984,
+    "e": 2.585,
+    "p": 0.75,
+    "x": null
+   },
+   {
+    "w": "out",
+    "s": 2.705,
+    "e": 3.527,
+    "p": 0.66,
+    "x": null
+   },
+   {
+    "w": "about",
+    "s": 3.607,
+    "e": 4.329,
+    "p": 0.98,
+    "x": null
+   },
+   {
+    "w": "you.",
+    "s": 4.369,
+    "e": 4.529,
+    "p": 0.92,
+    "x": null
+   }
+  ],
+  "dur": 5.170166666666667,
+  "pron": {
+   "items": [],
+   "accent": [],
+   "median": 10,
+   "scores": [
+    9.7,
+    9.3,
+    9.9,
+    9.2,
+    9.6,
+    9.9,
+    8.9,
+    9.9
+   ]
+  }
+ },
+ "label": {
+  "row": 2310,
+  "speaker": "9618",
+  "age": 24,
+  "gender": "f",
+  "text": "I WANTED TO FIND MORE OUT ABOUT YOU.",
+  "dur": 5.44,
+  "sr": 16000,
+  "utt_acc": 7,
+  "utt_total": 6,
+  "fluency": 7,
+  "n_words": 8,
+  "bad": [
+   {
+    "i": 1,
+    "w": "WANTED",
+    "acc": 5,
+    "mis": [
+     {
+      "canonical-phone": "IH",
+      "index": 4,
+      "pronounced-phone": "<DEL>"
+     },
+     {
+      "canonical-phone": "D",
+      "index": 5,
+      "pronounced-phone": "<DEL>"
+     }
+    ],
+    "phones": [
+     "W",
+     "AA1",
+     "N",
+     "T",
+     "IH0",
+     "D"
+    ]
+   }
+  ],
+  "words": [
+   {
+    "w": "I",
+    "acc": 10
+   },
+   {
+    "w": "WANTED",
+    "acc": 5
+   },
+   {
+    "w": "TO",
+    "acc": 10
+   },
+   {
+    "w": "FIND",
+    "acc": 10
+   },
+   {
+    "w": "MORE",
+    "acc": 10
+   },
+   {
+    "w": "OUT",
+    "acc": 10
+   },
+   {
+    "w": "ABOUT",
+    "acc": 10
+   },
+   {
+    "w": "YOU",
+    "acc": 10
+   }
+  ],
+  "id": "so762_2310_9618"
+ }
+}
