@@ -56,11 +56,12 @@
   }
 
   class LiveSession extends Emitter {
-    constructor({ server, micId = 'default', testAudio = null } = {}) {
+    constructor({ server, micId = 'default', testAudio = null, audible = false } = {}) {
       super();
       this.server = server;
       this.micId = micId;
       this.testAudio = testAudio;
+      this.audible = audible; // play the test audio out loud (demos)
       this.sid = makeSid();
       this.status = { state: 'idle', message: '' };
       this.live = false; // socket open and usable
@@ -155,7 +156,7 @@
       const ctx = this._ctx = new AudioContext({ sampleRate: SR });
       let source;
       if (this.testAudio) {
-        // tests: play a file through the graph in real time instead of the mic (not audible)
+        // tests and demos: play a file through the graph in real time instead of the mic
         const a = this.testAudio; // decodeAudioData detaches its input, so decode a copy
         const bytes = ArrayBuffer.isView(a) ? a.buffer.slice(a.byteOffset, a.byteOffset + a.byteLength) : a.slice(0);
         const buffer = await ctx.decodeAudioData(bytes);
@@ -163,6 +164,7 @@
         source = this._testSource = ctx.createBufferSource();
         source.buffer = buffer;
         source.onended = () => this.emit('end');
+        if (this.audible) source.connect(ctx.destination);
       } else {
         this._stream = await this._getMic();
         this._checkNotAborted();

@@ -80,6 +80,18 @@ const dataDir = () => path.join(app.getPath('userData'), 'messages');
 const exportDir = () => path.join(app.getPath('userData'), 'exports');
 const settingsFile = () => path.join(app.getPath('userData'), 'settings.json');
 
+// --demo-mic=<audio file>: for live demos with a prerecorded take. Each recording
+// plays this file, out loud, instead of the microphone; everything after is real.
+const DEMO_MIC = (() => {
+  const arg = process.argv.find(a => a.startsWith('--demo-mic='));
+  if (!arg) return null;
+  const file = path.resolve(arg.slice('--demo-mic='.length).replace(/^"|"$/g, ''));
+  if (fs.existsSync(file)) return file;
+  console.warn('--demo-mic: no such file, using the microphone', file);
+  return null;
+})();
+const demoMicName = DEMO_MIC ? path.basename(DEMO_MIC) : null;
+
 // A message is <id>.json plus its audio: <id>.wav (the original, never changed;
 // .webm for old recordings), <id>.edit.wav (latest render) and <id>.take.wav (tone take).
 const AUDIO_KINDS = ['wav', 'webm', 'edit.wav', 'take.wav'];
@@ -479,6 +491,7 @@ function sendOverlayConfig() {
     showIdleBar: settings.showIdleBar,
     shortcuts: settings.shortcuts,
     finishAction: settings.finishAction,
+    demoMic: demoMicName,
   });
 }
 
@@ -823,7 +836,8 @@ function wireIpc() {
     return { ok: true, message: settings.autoSend ? `Sent to ${appName}` : `Pasted into ${appName}. Press Enter to send` };
   });
 
-  ipcMain.handle('settings:get', () => ({ settings, shortcutStatus, defaults: DEFAULT_SETTINGS }));
+  ipcMain.handle('settings:get', () => ({ settings, shortcutStatus, defaults: DEFAULT_SETTINGS, demoMic: demoMicName }));
+  ipcMain.handle('overlay:demo-mic', () => (DEMO_MIC ? fs.readFileSync(DEMO_MIC) : null));
   ipcMain.handle('settings:set', (_e, patch) => applySettings(patch));
   ipcMain.handle('shortcuts:suspend', (_e, on) => {
     // Let the shortcut recorder capture keys without triggering actions.

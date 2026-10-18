@@ -1228,7 +1228,7 @@ function renderSettings() {
       </div></section>
 
       <section class="section"><h2>Recording</h2><div class="group">
-        ${row('Microphone', '', `<select class="field" id="micId">${mics}</select>`)}
+        ${row('Microphone', S.demoMic ? `Demo mic on: recordings play ${esc(S.demoMic)} instead` : '', `<select class="field" id="micId">${mics}</select>`)}
         ${row('When you finish', 'Sending works in Discord, WhatsApp, Telegram, Slack, Signal and Teams. Anywhere else, the editor opens.', `
           <div class="seg">
             <button class="${s.finishAction === 'send' ? 'on' : ''}" data-action="finish" data-value="send">Send it</button>
@@ -1309,8 +1309,9 @@ async function setSetting(patch) {
   if (S.route === 'settings') renderSettings();
 }
 
-function applySettingsPayload({ settings, shortcutStatus, defaults }) {
+function applySettingsPayload({ settings, shortcutStatus, defaults, demoMic }) {
   S.settings = settings;
+  if (demoMic !== undefined) S.demoMic = demoMic;
   S.shortcutStatus = shortcutStatus || {};
   if (defaults) S.defaults = defaults;
   renderRecordButton();
