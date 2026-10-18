@@ -24,8 +24,8 @@ def emissions(x16):
 
 
 def force_align(em, toks):
-    """CTC Viterbi over canonical phones -> (start, end) frame per phone."""
-    e = em.cpu().numpy(); T, N = e.shape[0], len(toks)
+    """CTC Viterbi over canonical phones -> (start, end) frame per phone. em: emissions (tensor or numpy)."""
+    e = em if isinstance(em, np.ndarray) else em.cpu().numpy(); T, N = e.shape[0], len(toks)
     tr = np.full((T + 1, N + 1), -np.inf); tr[0, 0] = 0; tr[1:, 0] = np.cumsum(e[:, BLANK])
     for t in range(T): tr[t + 1, 1:] = np.maximum(tr[t, 1:] + e[t, BLANK], tr[t, :-1] + e[t, toks])
     j, t, seg = N, int(np.argmax(tr[:, N])), {}
@@ -43,10 +43,11 @@ def gop_af(E, c, inv):
     for i in range(L):
         alts += [c[:i] + [q] + c[i + 1:] for q in inv if q != c[i]] + ([c[:i] + c[i + 1:]] if L > 1 else [])
     T = E.shape[0]; n = len(alts); maxl = max(len(a) for a in alts)
-    tgt = torch.zeros(n, maxl, dtype=torch.long)
-    for k, a in enumerate(alts): tgt[k, :len(a)] = torch.tensor(a)
-    ll = -F.ctc_loss(E[:, None, :].expand(T, n, E.shape[1]), tgt.cuda(), torch.full((n,), T, dtype=torch.long), torch.tensor([len(a) for a in alts]),
+    tgt = np.zeros((n, maxl), np.int64)
+    for k, a in enumerate(alts): tgt[k, :len(a)] = a
+    ll = -F.ctc_loss(E[:, None, :].expand(T, n, E.shape[1]), torch.from_numpy(tgt).cuda(), torch.full((n,), T, dtype=torch.long), torch.tensor([len(a) for a in alts]),
                      blank=BLANK, reduction="none", zero_infinity=True)
+    ll = ll.cpu()  # one copy: reading it on the GPU below would wait for the GPU twice per phone
     ll0, out, k = ll[0].item(), [], 1
     for i in range(L):
         m = len([q for q in inv if q != c[i]]) + (1 if L > 1 else 0); seg = ll[k:k + m]; b = int(torch.argmax(seg)); k += m
@@ -64,15 +65,17 @@ def score(x16, words, pad=3):
     if EN is None: EN = sorted({V[p] for w in "the quick brown fox jumps over a lazy dog she thinks they measure vision azure church judge yes zoo hat ring look boot foot about bird father caught boy cow pay go see sit bet cat cut far her".split() for p in phones(w)})
     out = [None] * len(words)
     if not toks: return out
-    segs = force_align(em, toks); wid = np.array(wid)
+    emn = em.cpu().numpy()  # the per-phone reads below use this copy, not one GPU round trip each
+    segs = force_align(emn, toks); wid = np.array(wid)
     for k in range(len(words)):
         idx = np.where(wid == k)[0]
         if not len(idx): continue
         a, b = segs[idx[0]][0], segs[idx[-1]][1]
-        peaks = [float(em[s:e + 1, toks[i]].max()) for i, (s, e) in ((i, segs[i]) for i in idx)]
+        peaks = [float(emn[s:e + 1, toks[i]].max()) for i, (s, e) in ((i, segs[i]) for i in idx)]
         E = em[max(0, a - pad):b + pad + 1]
         g = gop_af(E, [toks[i] for i in idx], EN)
-        heard = [IV[int(i)] for i in torch.unique_consecutive(E.argmax(1)).tolist() if int(i) != BLANK]
+        best = emn[max(0, a - pad):b + pad + 1].argmax(1); best = best[np.r_[True, best[1:] != best[:-1]]]  # = unique_consecutive(E.argmax(1))
+        heard = [IV[int(i)] for i in best if int(i) != BLANK]
         wi = int(np.argmin([x[0] for x in g]))
         out[k] = dict(peak=min(peaks), gop=min(x[0] for x in g), phones=[IV[toks[i]] for i in idx], worst=wi, sub=g[wi][1], heard=heard,
                       t=(a * 0.02, (b + 1) * 0.02), gops=[x[0] for x in g], peaks=peaks, subs=[x[1] for x in g], frames=b - a + 1)

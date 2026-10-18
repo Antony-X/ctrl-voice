@@ -1,8 +1,8 @@
 # ReSpeak demo server: live transcript + semantic undo while recording, cut-only cleanup, AI word replacement, tone takes.
-import asyncio, json, os, re, sys, time, uuid
+import asyncio, gzip, json, os, re, sys, time, uuid
 import numpy as np, soundfile as sf, librosa, torch, httpx
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect, UploadFile, File, HTTPException
-from fastapi.responses import FileResponse, RedirectResponse
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect, UploadFile, File, HTTPException, Request
+from fastapi.responses import FileResponse, RedirectResponse, Response
 from fastapi.staticfiles import StaticFiles
 sys.path.insert(0, "/workspace/app"); sys.path.insert(0, "/workspace/lab")
 from faster_whisper import WhisperModel
@@ -10,7 +10,7 @@ from speechbrain.inference.speaker import EncoderClassifier
 from brain import clean, last_thought, spoken_command, grammar, tighten, intent, norm
 from render import render, gap_edges, quiet
 from align import align, emissions
-from prosody import restyle, PRESETS
+from prosody import restyle, blend, PRESETS
 import pickle
 from pron import score as pscore, features as pfeat, phones as g2p, levenshtein, fit as afit
 PRON = pickle.load(open("/workspace/app/pron_model.pkl", "rb"))  # trained on speechocean762 expert word-accuracy labels
@@ -39,7 +39,10 @@ def pron_pred(x, sr, words):
     """Predicted expert word-accuracy (0-10) per word + phone diagnosis."""
     x16 = librosa.resample(x, orig_sr=sr, target_sr=16000) if sr != 16000 else x
     sc = pscore(x16, [w["w"] for w in words])
-    return [None if o is None else float(PRON["reg"].predict([pfeat(o, PRON["stats"])])[0]) for o in sc], sc
+    rows = [k for k, o in enumerate(sc) if o is not None]; pred = [None] * len(sc)
+    if rows:  # one predict for all words: a call per word costs ~4 ms of thread start-up each (same results)
+        for k, p in zip(rows, PRON["reg"].predict([pfeat(sc[k], PRON["stats"]) for k in rows])): pred[k] = float(p)
+    return pred, sc
 
 
 def embed(x, sr):
@@ -267,7 +270,9 @@ async def api_intent(sid: str, margin: float = 1.0):
     """Words the recognizer probably mis-heard because of pronunciation. The LLM proposes up to 3 intended sentences;
     each candidate word is scored by how well ITS phonemes explain the recorded sounds, relative to the word Whisper wrote."""
     s = get(sid); idx = [k for k, f in enumerate(s.flags()) if f is None]; act = [s.words[k] for k in idx]
-    groups = await asyncio.to_thread(intent, act); out = []; x16 = librosa.resample(s.audio(), orig_sr=SR, target_sr=16000)
+    groups = await asyncio.to_thread(intent, act); out = []
+    if not groups: return dict(items=out)  # nothing to score: don't queue for the GPU lock behind /pron
+    x16 = librosa.resample(s.audio(), orig_sr=SR, target_sr=16000)
     async with GPU:
         for g in groups:
             i, j = idx[g["i"]], idx[g["j"]]
@@ -418,16 +423,23 @@ async def api_natural(sid: str, r: dict):
         iid = uuid.uuid4().hex[:8]; np.save(f"{s.dir}/ins_{iid}.npy", seg); s.inserts[iid] = seg; txt = " ".join(w["w"] for w in W[r["i"]:r["j"] + 1])
         return dict(op=dict(t0=round(L, 3), t1=round(R, 3), insert=iid, i=r["i"], j=r["j"], old=txt, new=txt, engine="praat", verified=True, kind="natural " + style), sec=round(time.time() - t, 2))
     y, _ = librosa.load(src, sr=SR)
-    async with GPU: W = await asyncio.to_thread(transcribe, y, 1)
+    W = []  # the words only place the falling phrase endings, so a mix without a fall (warm) skips the recognizer
+    if blend(mix)["fall"] > 0:
+        async with GPU: W = await asyncio.to_thread(transcribe, y, 1)
     z = await asyncio.to_thread(restyle, y, SR, W, mix)
     name = f"natural_{style}_{uuid.uuid4().hex[:6]}.wav"; sf.write(f"{s.dir}/{name}", z, SR)
     return dict(url=f"/api/s/{sid}/file/{name}", dur=round(len(z) / SR, 2), sec=round(time.time() - t, 2))
 
 
 @app.get("/api/s/{sid}/file/{name}")
-def file(sid: str, name: str):
+def file(sid: str, name: str, request: Request):
     p = f"{DATA}/{sid}/{os.path.basename(name)}"
     if not os.path.exists(p): raise HTTPException(404)
+    # Through the RunPod proxy a ~0.5 MB take downloads in 0.3-1.5 s; gzip (level 1, ~5 ms) makes it ~30% smaller.
+    # Only for clients that accept it, never for range requests (an <audio> element asks for identity + ranges).
+    if "gzip" in request.headers.get("accept-encoding", "") and "range" not in request.headers:
+        with open(p, "rb") as fh: body = gzip.compress(fh.read(), 1)
+        return Response(body, media_type="audio/wav", headers={"Content-Encoding": "gzip", "Vary": "Accept-Encoding"})
     return FileResponse(p, media_type="audio/wav")
 
 
