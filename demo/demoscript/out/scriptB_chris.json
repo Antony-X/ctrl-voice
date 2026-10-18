@@ -1,0 +1,431 @@
+{
+ "tag": "scriptB_chris",
+ "input": "cand/TEST_SYNTH_scriptB_grumpy_chris.wav",
+ "timing": {
+  "upload": 1225,
+  "checks": 2203,
+  "replacements": 3511,
+  "render": 983,
+  "autofix_total": 6697,
+  "tone": 1436,
+  "end_to_end": 8134
+ },
+ "sid": "98f94606",
+ "words": [
+  {
+   "w": "Hey,",
+   "s": 0.1,
+   "e": 0.3,
+   "p": 0.92
+  },
+  {
+   "w": "Sam,",
+   "s": 0.34,
+   "e": 0.801,
+   "p": 1
+  },
+  {
+   "w": "um,",
+   "s": 0.921,
+   "e": 1.482,
+   "p": 0.15
+  },
+  {
+   "w": "can",
+   "s": 1.522,
+   "e": 1.642,
+   "p": 0.99
+  },
+  {
+   "w": "you",
+   "s": 1.682,
+   "e": 1.762,
+   "p": 1
+  },
+  {
+   "w": "be",
+   "s": 1.802,
+   "e": 1.902,
+   "p": 1
+  },
+  {
+   "w": "more",
+   "s": 1.922,
+   "e": 2.143,
+   "p": 1
+  },
+  {
+   "w": "pacific",
+   "s": 2.203,
+   "e": 2.944,
+   "p": 0.85
+  },
+  {
+   "w": "about",
+   "s": 2.984,
+   "e": 3.304,
+   "p": 1
+  },
+  {
+   "w": "game",
+   "s": 3.384,
+   "e": 3.644,
+   "p": 0.89
+  },
+  {
+   "w": "night?",
+   "s": 3.685,
+   "e": 4.485,
+   "p": 1
+  },
+  {
+   "w": "Is",
+   "s": 4.546,
+   "e": 4.646,
+   "p": 1
+  },
+  {
+   "w": "it",
+   "s": 4.706,
+   "e": 4.966,
+   "p": 1
+  },
+  {
+   "w": "Monday?",
+   "s": 5.006,
+   "e": 5.827,
+   "p": 0.99
+  },
+  {
+   "w": "No,",
+   "s": 5.867,
+   "e": 6.067,
+   "p": 1
+  },
+  {
+   "w": "wait,",
+   "s": 6.107,
+   "e": 6.608,
+   "p": 1
+  },
+  {
+   "w": "Wednesday?",
+   "s": 6.648,
+   "e": 8.01,
+   "p": 1
+  },
+  {
+   "w": "Also,",
+   "s": 8.07,
+   "e": 8.671,
+   "p": 1
+  },
+  {
+   "w": "I",
+   "s": 8.731,
+   "e": 8.831,
+   "p": 1
+  },
+  {
+   "w": "still",
+   "s": 8.871,
+   "e": 9.071,
+   "p": 1
+  },
+  {
+   "w": "sleep",
+   "s": 9.091,
+   "e": 9.251,
+   "p": 1
+  },
+  {
+   "w": "with",
+   "s": 9.271,
+   "e": 9.392,
+   "p": 1
+  },
+  {
+   "w": "a",
+   "s": 9.412,
+   "e": 9.432,
+   "p": 1
+  },
+  {
+   "w": "teddy",
+   "s": 9.492,
+   "e": 9.712,
+   "p": 1
+  },
+  {
+   "w": "bear.",
+   "s": 9.732,
+   "e": 10.213,
+   "p": 1
+  },
+  {
+   "w": "Scratch",
+   "s": 10.253,
+   "e": 10.553,
+   "p": 1
+  },
+  {
+   "w": "that.",
+   "s": 10.593,
+   "e": 11.594,
+   "p": 1
+  },
+  {
+   "w": "And",
+   "s": 11.654,
+   "e": 11.754,
+   "p": 1
+  },
+  {
+   "w": "if",
+   "s": 11.774,
+   "e": 11.915,
+   "p": 1
+  },
+  {
+   "w": "Jordan",
+   "s": 11.955,
+   "e": 12.235,
+   "p": 1
+  },
+  {
+   "w": "brings",
+   "s": 12.275,
+   "e": 12.495,
+   "p": 1
+  },
+  {
+   "w": "Monopoly",
+   "s": 12.555,
+   "e": 12.936,
+   "p": 0.99
+  },
+  {
+   "w": "again,",
+   "s": 12.956,
+   "e": 13.517,
+   "p": 1
+  },
+  {
+   "w": "we",
+   "s": 13.557,
+   "e": 13.837,
+   "p": 1
+  },
+  {
+   "w": "nip",
+   "s": 13.897,
+   "e": 14.077,
+   "p": 1
+  },
+  {
+   "w": "it",
+   "s": 14.117,
+   "e": 14.177,
+   "p": 1
+  },
+  {
+   "w": "in",
+   "s": 14.217,
+   "e": 14.298,
+   "p": 1
+  },
+  {
+   "w": "the",
+   "s": 14.338,
+   "e": 14.498,
+   "p": 1
+  },
+  {
+   "w": "butt.",
+   "s": 14.538,
+   "e": 15.279,
+   "p": 1
+  },
+  {
+   "w": "Just",
+   "s": 15.339,
+   "e": 15.559,
+   "p": 1
+  },
+  {
+   "w": "bring",
+   "s": 15.599,
+   "e": 15.879,
+   "p": 1
+  },
+  {
+   "w": "snacks.",
+   "s": 15.92,
+   "e": 16.24,
+   "p": 1
+  }
+ ],
+ "dur": 16.32,
+ "transcript": "Hey, Sam, um, can you be more pacific about game night? Is it Monday? No, wait, Wednesday? Also, I still sleep with a teddy bear. Scratch that. And if Jordan brings Monopoly again, we nip it in the butt. Just bring snacks.",
+ "clean": [
+  {
+   "i": 2,
+   "j": 2,
+   "kind": "filler",
+   "text": "um,",
+   "auto": true,
+   "t0": 0.861,
+   "t1": 1.502
+  },
+  {
+   "i": 13,
+   "j": 15,
+   "kind": "correction",
+   "text": "Monday? No, wait,",
+   "auto": true,
+   "t0": 4.986,
+   "t1": 6.628
+  },
+  {
+   "i": 17,
+   "j": 26,
+   "kind": "command",
+   "text": "Also, I still sleep with a teddy bear. Scratch that.",
+   "auto": true,
+   "t0": 8.04,
+   "t1": 11.624
+  }
+ ],
+ "grammar": [
+  {
+   "i": 7,
+   "j": 7,
+   "old": "pacific",
+   "new": "specific"
+  }
+ ],
+ "intent": [],
+ "pron": {
+  "items": [],
+  "median": 9.9,
+  "accent": []
+ },
+ "replaced": [
+  {
+   "kind": "grammar",
+   "old": "pacific",
+   "new": "specific",
+   "verified": true,
+   "engine": "playdiff",
+   "after": null,
+   "ms": 3511,
+   "t0": 2.173,
+   "t1": 2.964,
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.422,
+     "heard": "Hey Sam, um, can you be more specific about game night? Is it Monday? No, wait."
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.376,
+     "heard": "Hey Sam, um, can you be more specific about game night? Is it Monday? No, wait."
+    }
+   ]
+  }
+ ],
+ "render": {
+  "dur": 10.18,
+  "ai": [
+   [
+    1.47,
+    2.48
+   ]
+  ],
+  "file": "out_2eefe9.wav"
+ },
+ "ops": [
+  {
+   "id": "mvdcbwy70",
+   "type": "cut",
+   "t0": 0.861,
+   "t1": 1.502,
+   "i": 2,
+   "j": 2,
+   "kind": "filler",
+   "text": "um,",
+   "on": true,
+   "auto": true
+  },
+  {
+   "id": "mvdcbwy71",
+   "type": "cut",
+   "t0": 4.986,
+   "t1": 6.628,
+   "i": 13,
+   "j": 15,
+   "kind": "correction",
+   "text": "Monday? No, wait,",
+   "on": true,
+   "auto": true
+  },
+  {
+   "id": "mvdcbwy72",
+   "type": "cut",
+   "t0": 8.04,
+   "t1": 11.624,
+   "i": 17,
+   "j": 26,
+   "kind": "command",
+   "text": "Also, I still sleep with a teddy bear. Scratch that.",
+   "on": true,
+   "auto": true
+  },
+  {
+   "id": "mvdcbznq3",
+   "type": "replace",
+   "t0": 2.173,
+   "t1": 2.964,
+   "insert": "db7bca0e",
+   "i": 7,
+   "j": 7,
+   "old": "pacific",
+   "new": "specific",
+   "engine": "playdiff",
+   "verified": true,
+   "kind": "grammar",
+   "after": null,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 0.861,
+   "t1": 1.502,
+   "insert": null
+  },
+  {
+   "t0": 4.986,
+   "t1": 6.628,
+   "insert": null
+  },
+  {
+   "t0": 8.04,
+   "t1": 11.624,
+   "insert": null
+  },
+  {
+   "t0": 2.173,
+   "t1": 2.964,
+   "insert": "db7bca0e"
+  }
+ ],
+ "finalText": "Hey, Sam, can you be more specific about game night? Is it Wednesday? And if Jordan brings Monopoly again, we nip it in the butt. Just bring snacks.",
+ "natural": {
+  "dur": 9.2,
+  "sec": 0.46
+ }
+}

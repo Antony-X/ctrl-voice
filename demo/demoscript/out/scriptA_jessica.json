@@ -1,0 +1,513 @@
+{
+ "tag": "scriptA_jessica",
+ "input": "cand/TEST_SYNTH_scriptA_grumpy_jessica.wav",
+ "timing": {
+  "upload": 1658,
+  "checks": 2150,
+  "replacements": 10911,
+  "render": 1632,
+  "autofix_total": 14693,
+  "tone": 1622,
+  "end_to_end": 16316
+ },
+ "sid": "ee21b8d3",
+ "words": [
+  {
+   "w": "Hey,",
+   "s": 0.16,
+   "e": 0.4,
+   "p": 0.93
+  },
+  {
+   "w": "Sam,",
+   "s": 0.44,
+   "e": 1.221,
+   "p": 1
+  },
+  {
+   "w": "um,",
+   "s": 1.321,
+   "e": 2.042,
+   "p": 0.41
+  },
+  {
+   "w": "can",
+   "s": 2.082,
+   "e": 2.202,
+   "p": 1
+  },
+  {
+   "w": "you",
+   "s": 2.223,
+   "e": 2.323,
+   "p": 1
+  },
+  {
+   "w": "be",
+   "s": 2.363,
+   "e": 2.463,
+   "p": 1
+  },
+  {
+   "w": "more",
+   "s": 2.503,
+   "e": 2.903,
+   "p": 1
+  },
+  {
+   "w": "pacific",
+   "s": 2.943,
+   "e": 3.844,
+   "p": 0.91
+  },
+  {
+   "w": "about",
+   "s": 3.884,
+   "e": 4.125,
+   "p": 1
+  },
+  {
+   "w": "game",
+   "s": 4.165,
+   "e": 4.385,
+   "p": 0.94
+  },
+  {
+   "w": "night?",
+   "s": 4.425,
+   "e": 5.466,
+   "p": 1
+  },
+  {
+   "w": "Is",
+   "s": 5.526,
+   "e": 5.626,
+   "p": 1
+  },
+  {
+   "w": "it",
+   "s": 5.666,
+   "e": 5.747,
+   "p": 1
+  },
+  {
+   "w": "Monday?",
+   "s": 5.787,
+   "e": 6.607,
+   "p": 1
+  },
+  {
+   "w": "No,",
+   "s": 6.668,
+   "e": 6.808,
+   "p": 1
+  },
+  {
+   "w": "wait,",
+   "s": 6.848,
+   "e": 7.448,
+   "p": 1
+  },
+  {
+   "w": "Wednesday?",
+   "s": 7.488,
+   "e": 9.11,
+   "p": 1
+  },
+  {
+   "w": "Also,",
+   "s": 9.15,
+   "e": 9.551,
+   "p": 1
+  },
+  {
+   "w": "I",
+   "s": 9.611,
+   "e": 9.731,
+   "p": 1
+  },
+  {
+   "w": "still",
+   "s": 9.751,
+   "e": 9.951,
+   "p": 1
+  },
+  {
+   "w": "sleep",
+   "s": 9.991,
+   "e": 10.151,
+   "p": 1
+  },
+  {
+   "w": "with",
+   "s": 10.172,
+   "e": 10.272,
+   "p": 1
+  },
+  {
+   "w": "a",
+   "s": 10.332,
+   "e": 10.352,
+   "p": 0.91
+  },
+  {
+   "w": "teddy",
+   "s": 10.392,
+   "e": 10.612,
+   "p": 1
+  },
+  {
+   "w": "bear.",
+   "s": 10.652,
+   "e": 11.653,
+   "p": 1
+  },
+  {
+   "w": "Scratch",
+   "s": 11.693,
+   "e": 12.054,
+   "p": 1
+  },
+  {
+   "w": "that.",
+   "s": 12.074,
+   "e": 13.275,
+   "p": 1
+  },
+  {
+   "w": "Anyway,",
+   "s": 13.315,
+   "e": 13.716,
+   "p": 1
+  },
+  {
+   "w": "whatever",
+   "s": 13.756,
+   "e": 14.076,
+   "p": 1
+  },
+  {
+   "w": "Jordan",
+   "s": 14.116,
+   "e": 14.436,
+   "p": 1
+  },
+  {
+   "w": "said",
+   "s": 14.456,
+   "e": 14.717,
+   "p": 1
+  },
+  {
+   "w": "is",
+   "s": 14.777,
+   "e": 14.857,
+   "p": 1
+  },
+  {
+   "w": "a",
+   "s": 14.897,
+   "e": 14.917,
+   "p": 1
+  },
+  {
+   "w": "mute",
+   "s": 14.977,
+   "e": 15.197,
+   "p": 1
+  },
+  {
+   "w": "point",
+   "s": 15.237,
+   "e": 15.498,
+   "p": 1
+  },
+  {
+   "w": "now.",
+   "s": 15.538,
+   "e": 16.379,
+   "p": 1
+  },
+  {
+   "w": "Just",
+   "s": 16.439,
+   "e": 16.599,
+   "p": 1
+  },
+  {
+   "w": "bring",
+   "s": 16.639,
+   "e": 16.879,
+   "p": 1
+  },
+  {
+   "w": "snacks.",
+   "s": 16.919,
+   "e": 17.26,
+   "p": 1
+  }
+ ],
+ "dur": 17.68,
+ "transcript": "Hey, Sam, um, can you be more pacific about game night? Is it Monday? No, wait, Wednesday? Also, I still sleep with a teddy bear. Scratch that. Anyway, whatever Jordan said is a mute point now. Just bring snacks.",
+ "clean": [
+  {
+   "i": 2,
+   "j": 2,
+   "kind": "filler",
+   "text": "um,",
+   "auto": true,
+   "t0": 1.271,
+   "t1": 2.062
+  },
+  {
+   "i": 13,
+   "j": 15,
+   "kind": "correction",
+   "text": "Monday? No, wait,",
+   "auto": true,
+   "t0": 5.767,
+   "t1": 7.468
+  },
+  {
+   "i": 17,
+   "j": 26,
+   "kind": "command",
+   "text": "Also, I still sleep with a teddy bear. Scratch that.",
+   "auto": true,
+   "t0": 9.13,
+   "t1": 13.295
+  }
+ ],
+ "grammar": [
+  {
+   "i": 7,
+   "j": 7,
+   "old": "pacific",
+   "new": "specific"
+  },
+  {
+   "i": 33,
+   "j": 33,
+   "old": "mute",
+   "new": "moot"
+  }
+ ],
+ "intent": [
+  {
+   "i": 7,
+   "j": 7,
+   "old": "pacific",
+   "new": "specific",
+   "heard": "pɐsɪfɪk",
+   "intended": "spəsɪfɪk",
+   "fit": -0.89,
+   "dist": 0.25,
+   "alts": [
+    "precise",
+    "particular"
+   ]
+  },
+  {
+   "i": 33,
+   "j": 33,
+   "old": "mute",
+   "new": "moot",
+   "heard": "mjuːt",
+   "intended": "muːt",
+   "fit": -0.51,
+   "dist": 0.33,
+   "alts": []
+  }
+ ],
+ "pron": {
+  "items": [],
+  "median": 9.9,
+  "accent": [
+   {
+    "phone": "t",
+    "n": 9,
+    "z": -1.03
+   }
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "grammar",
+   "old": "pacific",
+   "new": "specific",
+   "verified": true,
+   "engine": "f5",
+   "after": null,
+   "ms": 4331,
+   "t0": 2.923,
+   "t1": 3.864,
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.373,
+     "heard": "Hey Sam, um, can you be more specific about game night? Is it Monday? No, wait."
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.457,
+     "heard": "Hey Sam, um, can you be more specific about game night? Is it Monday? No, wait."
+    }
+   ]
+  },
+  {
+   "kind": "grammar",
+   "old": "mute",
+   "new": "moot",
+   "verified": true,
+   "engine": "f5",
+   "after": null,
+   "ms": 6579,
+   "t0": 14.947,
+   "t1": 15.217,
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": false,
+     "sim": 0.5,
+     "heard": "Scratch that. Anyway, whatever Jordan said is a mute point now. Just bring snacks."
+    },
+    {
+     "engine": "f5",
+     "ok": false,
+     "sim": 0.252,
+     "heard": "Scratch that. Anyway, whatever Jordan said is a mute point now. Just bring snacks."
+    },
+    {
+     "engine": "playdiff",
+     "ok": false,
+     "sim": 0.304,
+     "heard": "Scratch that. Anyway, whatever Jordan said is a mute point now. Just bring snacks."
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.144,
+     "heard": "Scratch that. Anyway, whatever Jordan said is a moot point now. Just bring snacks."
+    }
+   ]
+  }
+ ],
+ "render": {
+  "dur": 10.87,
+  "ai": [
+   [
+    2.08,
+    2.72
+   ],
+   [
+    7.95,
+    8.38
+   ]
+  ],
+  "file": "out_08d17d.wav"
+ },
+ "ops": [
+  {
+   "id": "mvdcb6rn0",
+   "type": "cut",
+   "t0": 1.271,
+   "t1": 2.062,
+   "i": 2,
+   "j": 2,
+   "kind": "filler",
+   "text": "um,",
+   "on": true,
+   "auto": true
+  },
+  {
+   "id": "mvdcb6rn1",
+   "type": "cut",
+   "t0": 5.767,
+   "t1": 7.468,
+   "i": 13,
+   "j": 15,
+   "kind": "correction",
+   "text": "Monday? No, wait,",
+   "on": true,
+   "auto": true
+  },
+  {
+   "id": "mvdcb6rn2",
+   "type": "cut",
+   "t0": 9.13,
+   "t1": 13.295,
+   "i": 17,
+   "j": 26,
+   "kind": "command",
+   "text": "Also, I still sleep with a teddy bear. Scratch that.",
+   "on": true,
+   "auto": true
+  },
+  {
+   "id": "mvdcba3z3",
+   "type": "replace",
+   "t0": 2.923,
+   "t1": 3.864,
+   "insert": "a055eaf2",
+   "i": 7,
+   "j": 7,
+   "old": "pacific",
+   "new": "specific",
+   "engine": "f5",
+   "verified": true,
+   "kind": "grammar",
+   "after": null,
+   "on": true
+  },
+  {
+   "id": "mvdcbf6q4",
+   "type": "replace",
+   "t0": 14.947,
+   "t1": 15.217,
+   "insert": "6ecd1e83",
+   "i": 33,
+   "j": 33,
+   "old": "mute",
+   "new": "moot",
+   "engine": "f5",
+   "verified": true,
+   "kind": "grammar",
+   "after": null,
+   "on": true
+  }
+ ],
+ "renderOps": [
+  {
+   "t0": 1.271,
+   "t1": 2.062,
+   "insert": null
+  },
+  {
+   "t0": 5.767,
+   "t1": 7.468,
+   "insert": null
+  },
+  {
+   "t0": 9.13,
+   "t1": 13.295,
+   "insert": null
+  },
+  {
+   "t0": 14.947,
+   "t1": 15.217,
+   "insert": "6ecd1e83"
+  },
+  {
+   "t0": 2.923,
+   "t1": 3.864,
+   "insert": "a055eaf2"
+  }
+ ],
+ "finalText": "Hey, Sam, can you be more specific about game night? Is it Wednesday? Anyway, whatever Jordan said is a moot point now. Just bring snacks.",
+ "natural": {
+  "dur": 9.82,
+  "sec": 0.42
+ }
+}

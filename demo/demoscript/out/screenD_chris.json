@@ -1,0 +1,271 @@
+{
+ "tag": "screenD_chris",
+ "input": "screen/TEST_SYNTH_screenD_chris.wav",
+ "timing": {
+  "upload": 1116,
+  "checks": 1485
+ },
+ "sid": "114ba305",
+ "words": [
+  {
+   "w": "That's",
+   "s": 0.04,
+   "e": 0.221,
+   "p": 0.97
+  },
+  {
+   "w": "a",
+   "s": 0.241,
+   "e": 0.261,
+   "p": 1
+  },
+  {
+   "w": "mute",
+   "s": 0.321,
+   "e": 0.521,
+   "p": 0.99
+  },
+  {
+   "w": "point",
+   "s": 0.562,
+   "e": 0.802,
+   "p": 1
+  },
+  {
+   "w": "now.",
+   "s": 0.862,
+   "e": 1.404,
+   "p": 0.98
+  },
+  {
+   "w": "Let",
+   "s": 1.444,
+   "e": 1.544,
+   "p": 1
+  },
+  {
+   "w": "me",
+   "s": 1.564,
+   "e": 1.645,
+   "p": 1
+  },
+  {
+   "w": "cut",
+   "s": 1.665,
+   "e": 1.785,
+   "p": 1
+  },
+  {
+   "w": "to",
+   "s": 1.825,
+   "e": 1.885,
+   "p": 1
+  },
+  {
+   "w": "the",
+   "s": 1.925,
+   "e": 2.006,
+   "p": 1
+  },
+  {
+   "w": "cheese.",
+   "s": 2.046,
+   "e": 2.888,
+   "p": 1
+  },
+  {
+   "w": "Honestly,",
+   "s": 2.928,
+   "e": 3.269,
+   "p": 1
+  },
+  {
+   "w": "it",
+   "s": 3.309,
+   "e": 3.369,
+   "p": 1
+  },
+  {
+   "w": "was",
+   "s": 3.389,
+   "e": 3.49,
+   "p": 1
+  },
+  {
+   "w": "a",
+   "s": 3.53,
+   "e": 3.55,
+   "p": 1
+  },
+  {
+   "w": "blessing",
+   "s": 3.59,
+   "e": 3.931,
+   "p": 1
+  },
+  {
+   "w": "in",
+   "s": 3.951,
+   "e": 4.011,
+   "p": 1
+  },
+  {
+   "w": "the",
+   "s": 4.031,
+   "e": 4.131,
+   "p": 1
+  },
+  {
+   "w": "skies,",
+   "s": 4.172,
+   "e": 4.934,
+   "p": 1
+  },
+  {
+   "w": "and",
+   "s": 4.974,
+   "e": 5.074,
+   "p": 1
+  },
+  {
+   "w": "the",
+   "s": 5.094,
+   "e": 5.255,
+   "p": 1
+  },
+  {
+   "w": "dip",
+   "s": 5.315,
+   "e": 5.656,
+   "p": 1
+  },
+  {
+   "w": "didn't",
+   "s": 5.696,
+   "e": 5.936,
+   "p": 1
+  },
+  {
+   "w": "even",
+   "s": 5.957,
+   "e": 6.177,
+   "p": 1
+  },
+  {
+   "w": "pass",
+   "s": 6.237,
+   "e": 6.658,
+   "p": 1
+  },
+  {
+   "w": "mustard.",
+   "s": 6.699,
+   "e": 7.1,
+   "p": 1
+  }
+ ],
+ "dur": 7.2,
+ "transcript": "That's a mute point now. Let me cut to the cheese. Honestly, it was a blessing in the skies, and the dip didn't even pass mustard.",
+ "clean": [
+  {
+   "i": 2,
+   "j": 2,
+   "kind": "correction",
+   "text": "mute",
+   "auto": false,
+   "t0": 0.291,
+   "t1": 0.542
+  },
+  {
+   "i": 5,
+   "j": 11,
+   "kind": "restart",
+   "text": "Let me cut to the cheese. Honestly,",
+   "auto": true,
+   "t0": 1.424,
+   "t1": 3.289
+  }
+ ],
+ "grammar": [],
+ "intent": [
+  {
+   "i": 2,
+   "j": 2,
+   "old": "mute",
+   "new": "moot",
+   "heard": "mjuːt",
+   "intended": "muːt",
+   "fit": -0.25,
+   "dist": 0.33,
+   "alts": []
+  },
+  {
+   "i": 25,
+   "j": 25,
+   "old": "mustard.",
+   "new": "muster",
+   "heard": "mʌstɚd",
+   "intended": "mʌstɚ",
+   "fit": 0.69,
+   "dist": 0.2,
+   "alts": []
+  }
+ ],
+ "pron": {
+  "items": [],
+  "median": 9.9,
+  "accent": []
+ },
+ "replaced": [
+  {
+   "kind": "misspoken",
+   "old": "mute",
+   "new": "moot",
+   "verified": true,
+   "engine": "playdiff",
+   "after": null,
+   "ms": 2221,
+   "t0": 0.291,
+   "t1": 0.542,
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.5,
+     "heard": "That's a moot point now. Let me cut to the cheese. Honestly, it was a blessing in the..."
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.5,
+     "heard": "That's a moot point now. Let me cut to the cheese. Honestly, it was a blessing in the..."
+    }
+   ]
+  },
+  {
+   "kind": "misspoken",
+   "old": "mustard.",
+   "new": "muster",
+   "verified": true,
+   "engine": "playdiff",
+   "after": null,
+   "ms": 2313,
+   "t0": 6.678,
+   "t1": 7.14,
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.477,
+     "heard": "Honestly, it was a blessing in the skies, and the dip didn't even pass muster."
+    },
+    {
+     "engine": "f5",
+     "ok": false,
+     "sim": 0.521,
+     "heard": "Honestly, it was a blessing in the skies, and the dip didn't even pass mustard."
+    }
+   ]
+  }
+ ]
+}

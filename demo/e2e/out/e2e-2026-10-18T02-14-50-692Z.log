@@ -1,0 +1,24 @@
+[   0.37] windows [{"x":940,"y":1194,"width":680,"height":240},{"x":690,"y":330,"width":1180,"height":780}]
+[   0.46] -> hub rec:recording true
+[   1.88] overlay {"cap":"Recording. Fixes run when you finish","note":"Engine offline. Recording without live text"}
+[   5.89] overlay {"pill":"pill interactive proc","proc":"Saving…"}
+[   5.89] -> hub rec:recording false
+[   5.90] -> hub message:new {"id":"mvd70cp7oq2h","title":"Voice message"}
+[   5.90] -> hub edit:status {"id":"mvd70cp7oq2h","text":"Starting…"}
+[   5.90] -> hub edit:status {"id":"mvd70cp7oq2h","text":"Cleaning up…"}
+[   5.94] -> hub nav:go editor:mvd70cp7oq2h
+[   6.09] overlay {"pill":"pill interactive proc ok","proc":"Opened in Ctrl+Voice"}
+[   6.38] [main:error] Fix failed Error: The engine isn't running
+[   6.38] -> hub edit:status {"id":"mvd70cp7oq2h","text":null,"error":"The engine isn't running"}
+[   6.38] -> hub message:new {"id":"mvd70cp7oq2h","title":"Voice message"}
+[   7.75] overlay {"pill":"pill interactive idle hidden-idle","proc":"Opened in Ctrl+Voice"}
+[   8.56] offline hub {"route":"editor","id":"mvd70cp7oq2h","fixing":null,"notice":{"text":"Couldn't fix it: The engine isn't running","retry":"fix"},"words":0,"empty":true,"retry":true,"outDur":5.44} {"wavBytes":261164,"sid":null,"dur":5.44}
+[   8.56] PASS offline: overlay says engine offline {"cap":"Recording. Fixes run when you finish","note":"Engine offline. Recording without live text"}
+[   8.56] PASS offline: recording saved locally {"wavBytes":261164,"dur":5.44}
+[   8.56] PASS offline: overlay ends with a true result {"procTexts":[{"pill":"pill interactive proc","proc":"Saving…"},{"pill":"pill interactive proc ok","proc":"Opened in Ctrl+Voice"},{"pill":"pill interactive idle hidden-idle","proc":"Opened in Ctrl+Voice"}]}
+[   8.56] PASS offline: editor shows the fix error with Try again {"notice":{"text":"Couldn't fix it: The engine isn't running","retry":"fix"},"fixError":"The engine isn't running"}
+[   8.56] PASS offline: original audio playable {"outDur":5.44}
+[   8.58] screenshot C:\Users\Antony\AppData\Local\Temp\claude\C--Users-Antony-Desktop-ctrl-voice\5985905e-4572-4f19-a6ec-0c1ce1de5723\scratchpad\e2e\out\2026-10-18T02-14-50-692Z-offline-editor.png {"width":1180,"height":780}
+[   8.88] PASS offline: health check reports it {"ok":false,"ms":292,"message":"The server answered 404. Is the engine running?","url":"https://zaa3ajj8o85hhq-7860.proxy.runpod.net"}
+[   8.90] screenshot C:\Users\Antony\AppData\Local\Temp\claude\C--Users-Antony-Desktop-ctrl-voice\5985905e-4572-4f19-a6ec-0c1ce1de5723\scratchpad\e2e\out\2026-10-18T02-14-50-692Z-final.png {"width":1180,"height":780}
+[   8.90] RESULTS ["PASS offline: overlay says engine offline","PASS offline: recording saved locally","PASS offline: overlay ends with a true result","PASS offline: editor shows the fix error with Try again","PASS offline: original audio playable","PASS offline: health check reports it"]

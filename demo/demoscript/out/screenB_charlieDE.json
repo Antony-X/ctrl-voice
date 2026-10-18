@@ -1,0 +1,204 @@
+{
+ "tag": "screenB_charlieDE",
+ "input": "screen/TEST_SYNTH_screenB_charlieDE.wav",
+ "timing": {
+  "upload": 1822,
+  "checks": 1701
+ },
+ "sid": "f5aa3e06",
+ "words": [
+  {
+   "w": "Irregardless,",
+   "s": 0.24,
+   "e": 1.263,
+   "p": 0.94
+  },
+  {
+   "w": "I",
+   "s": 1.303,
+   "e": 1.383,
+   "p": 0.99
+  },
+  {
+   "w": "want",
+   "s": 1.403,
+   "e": 1.543,
+   "p": 0.82
+  },
+  {
+   "w": "to",
+   "s": 1.563,
+   "e": 1.643,
+   "p": 1
+  },
+  {
+   "w": "axe",
+   "s": 1.743,
+   "e": 1.924,
+   "p": 0.43
+  },
+  {
+   "w": "you",
+   "s": 1.964,
+   "e": 2.104,
+   "p": 1
+  },
+  {
+   "w": "something.",
+   "s": 2.144,
+   "e": 3.527,
+   "p": 1
+  },
+  {
+   "w": "Are",
+   "s": 3.587,
+   "e": 3.687,
+   "p": 0.98
+  },
+  {
+   "w": "we",
+   "s": 3.727,
+   "e": 3.888,
+   "p": 1
+  },
+  {
+   "w": "specifically",
+   "s": 3.908,
+   "e": 4.609,
+   "p": 0.53
+  },
+  {
+   "w": "doing",
+   "s": 4.649,
+   "e": 4.93,
+   "p": 1
+  },
+  {
+   "w": "the",
+   "s": 4.95,
+   "e": 5.07,
+   "p": 0.96
+  },
+  {
+   "w": "board",
+   "s": 5.11,
+   "e": 5.411,
+   "p": 0.91
+  },
+  {
+   "w": "game",
+   "s": 5.451,
+   "e": 5.671,
+   "p": 1
+  },
+  {
+   "w": "night",
+   "s": 5.731,
+   "e": 6.132,
+   "p": 1
+  },
+  {
+   "w": "or",
+   "s": 6.172,
+   "e": 6.293,
+   "p": 0.86
+  },
+  {
+   "w": "the",
+   "s": 6.313,
+   "e": 6.433,
+   "p": 0.98
+  },
+  {
+   "w": "nuclear",
+   "s": 6.473,
+   "e": 6.894,
+   "p": 0.99
+  },
+  {
+   "w": "plant",
+   "s": 6.914,
+   "e": 7.214,
+   "p": 1
+  },
+  {
+   "w": "tour?",
+   "s": 7.255,
+   "e": 8.257,
+   "p": 1
+  },
+  {
+   "w": "I",
+   "s": 8.317,
+   "e": 8.437,
+   "p": 1
+  },
+  {
+   "w": "just",
+   "s": 8.457,
+   "e": 8.637,
+   "p": 1
+  },
+  {
+   "w": "need",
+   "s": 8.657,
+   "e": 8.818,
+   "p": 1
+  },
+  {
+   "w": "to",
+   "s": 8.838,
+   "e": 8.938,
+   "p": 1
+  },
+  {
+   "w": "escape",
+   "s": 8.958,
+   "e": 9.339,
+   "p": 0.99
+  },
+  {
+   "w": "the",
+   "s": 9.379,
+   "e": 9.479,
+   "p": 1
+  },
+  {
+   "w": "house.",
+   "s": 9.499,
+   "e": 9.76,
+   "p": 1
+  }
+ ],
+ "dur": 10,
+ "transcript": "Irregardless, I want to axe you something. Are we specifically doing the board game night or the nuclear plant tour? I just need to escape the house.",
+ "clean": [
+  {
+   "i": 4,
+   "j": 4,
+   "kind": "correction",
+   "text": "axe",
+   "auto": false,
+   "t0": 1.693,
+   "t1": 1.944
+  }
+ ],
+ "grammar": [],
+ "intent": [],
+ "pron": {
+  "items": [
+   {
+    "i": 9,
+    "word": "specifically",
+    "acc": 6.1,
+    "canon": "spəsɪfɪkli",
+    "heard": "pəsɪfɪkliduː",
+    "sub": "∅",
+    "phone": "s"
+   }
+  ],
+  "median": 9.9,
+  "accent": []
+ },
+ "replaced": []
+}

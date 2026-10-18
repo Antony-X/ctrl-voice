@@ -1,0 +1,83 @@
+{
+  "page": "C:/Users/Antony/Desktop/ctrl+voice/src/app/index.html",
+  "width": 1180,
+  "height": 780,
+  "transparent": false,
+  "backgroundColor": "#171716",
+  "stub": "hub-stub.js",
+  "colorScheme": "dark",
+  "scale": 1,
+  "timeout": 60000,
+  "shots": [
+    {
+      "wait": 1800,
+      "out": "../out/hub-dark-1-editor.png"
+    },
+    {
+      "wait": 0,
+      "js": "{ const a = document.querySelector('.w[data-k=\"3\"]'); const b = document.querySelector('.w[data-k=\"5\"]') || a;\n  a.dispatchEvent(new MouseEvent('mousedown', { bubbles: true })); b.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));\n  document.dispatchEvent(new MouseEvent('mouseup', { bubbles: true })); }",
+      "settle": 250,
+      "out": "../out/hub-dark-2-select.png"
+    },
+    {
+      "wait": 0,
+      "js": "document.querySelector('.pop [data-action=tone]').click()",
+      "settle": 250,
+      "out": "../out/hub-dark-3-pop-tone.png"
+    },
+    {
+      "wait": 0,
+      "js": "clearSelection(); { const a = document.querySelector('.w[data-k=\"6\"]'); const b = document.querySelector('.w[data-k=\"6\"]') || a;\n  a.dispatchEvent(new MouseEvent('mousedown', { bubbles: true })); b.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));\n  document.dispatchEvent(new MouseEvent('mouseup', { bubbles: true })); }",
+      "settle": 250,
+      "out": "../out/hub-dark-4-cut.png"
+    },
+    {
+      "wait": 0,
+      "js": "clearSelection(); { const a = document.querySelector('.w[data-k=\"23\"]'); const b = document.querySelector('.w[data-k=\"23\"]') || a;\n  a.dispatchEvent(new MouseEvent('mousedown', { bubbles: true })); b.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));\n  document.dispatchEvent(new MouseEvent('mouseup', { bubbles: true })); }",
+      "settle": 250,
+      "out": "../out/hub-dark-5-replaced.png"
+    },
+    {
+      "wait": 0,
+      "js": "clearSelection(); { const a = document.querySelector('.w[data-k=\"24\"]'); const b = document.querySelector('.w[data-k=\"24\"]') || a;\n  a.dispatchEvent(new MouseEvent('mousedown', { bubbles: true })); b.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));\n  document.dispatchEvent(new MouseEvent('mouseup', { bubbles: true })); }",
+      "settle": 250,
+      "out": "../out/hub-dark-6-suggestion.png"
+    },
+    {
+      "wait": 0,
+      "js": "clearSelection(); { const a = document.querySelector('.w[data-k=\"19\"]'); const b = document.querySelector('.w[data-k=\"19\"]') || a;\n  a.dispatchEvent(new MouseEvent('mousedown', { bubbles: true })); b.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));\n  document.dispatchEvent(new MouseEvent('mouseup', { bubbles: true })); }",
+      "settle": 250,
+      "out": "../out/hub-dark-7-unclear.png"
+    },
+    {
+      "wait": 0,
+      "js": "clearSelection(); document.querySelector('[data-action=tone-panel]').click()",
+      "settle": 400,
+      "out": "../out/hub-dark-8-tone-panel.png"
+    },
+    {
+      "wait": 0,
+      "js": "closeTone(); document.querySelector('[data-action=send-menu]').click()",
+      "settle": 250,
+      "out": "../out/hub-dark-9-send-menu.png"
+    },
+    {
+      "wait": 0,
+      "js": "closeMenu(); document.querySelector('[data-action=go-settings]').click()",
+      "settle": 600,
+      "out": "../out/hub-dark-10-settings.png"
+    },
+    {
+      "wait": 0,
+      "js": "document.querySelector('.main').scrollTop = 9999",
+      "settle": 200,
+      "out": "../out/hub-dark-11-settings-bottom.png"
+    },
+    {
+      "wait": 0,
+      "js": "S.messages = []; goHome()",
+      "settle": 300,
+      "out": "../out/hub-dark-12-empty.png"
+    }
+  ]
+}

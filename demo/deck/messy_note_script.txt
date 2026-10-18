@@ -1,0 +1,21 @@
+Ctrl+Voice demo: the "messy voice note" (written for ElevenLabs eleven_v3)
+
+What it has to contain, so the engine has something real to clean:
+  - two fillers ("um", "uh")                      -> cleaned as filler
+  - a correction ("five... no, wait... three")    -> cleaned as correction (number -> number, so it is auto-applied)
+  - a repeat ("the, uh, the")                     -> may stay; the deck never claims repeats are fixed
+  - a sentence taken back with "scratch that",
+    followed by a real pause                      -> the live caption strikes it while you are still talking
+                                                     (the live detector needs ~0.5 s of silence after "scratch that")
+
+Text sent to the API (v3 audio tags in square brackets; fillers are typed as plain words):
+
+Hey Sam! So, um... about tomorrow. Let's meet at, like, five— [hesitates] no, wait... three. At the usual place. And can you bring the, uh, the charger? Oh, and honestly, Jake's being kind of [sighs] annoying about the whole thing... scratch that. [pause] Okay! See you tomorrow.
+
+Clean version we expect the engine to send (for checking only; never synthesize it):
+
+Hey Sam! So, about tomorrow. Let's meet at, like, three. At the usual place. And can you bring the, the charger? Okay! See you tomorrow.
+
+Rules:
+  - The "after" audio must come from the real Ctrl+Voice engine run on the chosen take. Do not generate a clean read with TTS.
+  - On stage, call it "a messy voice note", never "my real recording", because the take is synthetic.

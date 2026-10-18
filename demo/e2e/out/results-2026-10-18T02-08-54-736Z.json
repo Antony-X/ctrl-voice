@@ -1,0 +1,43 @@
+{
+  "results": [
+    {
+      "step": "live words arrive",
+      "ok": false,
+      "firstWordsMs": null
+    },
+    {
+      "step": "scratch that removed live",
+      "ok": false,
+      "sawJakeEarlier": false,
+      "finalCaption": "Recording. Fixes run when you finish"
+    },
+    {
+      "step": "message saved after stop",
+      "ok": false,
+      "stopToMessageMs": null
+    },
+    {
+      "step": "auto-fix finished",
+      "ok": false,
+      "stopToFixedMs": null
+    },
+    {
+      "step": "driver",
+      "ok": false,
+      "error": "Error: ENOENT: no such file or directory, scandir 'C:\\Users\\Antony\\AppData\\Local\\Temp\\claude\\C--Users-Antony-Desktop-ctrl-voice\\5985905e-4572-4f19-a6ec-0c1ce1de5723\\scratchpad\\e2e\\userData\\messages'"
+    }
+  ],
+  "consoleErrors": [],
+  "events": [
+    {
+      "t": 473,
+      "ch": "rec:recording",
+      "brief": true
+    },
+    {
+      "t": 18747,
+      "ch": "rec:recording",
+      "brief": false
+    }
+  ]
+}

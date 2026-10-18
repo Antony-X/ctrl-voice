@@ -1,0 +1,314 @@
+{
+ "tag": "screenD_charlieDE",
+ "input": "screen/TEST_SYNTH_screenD_charlieDE.wav",
+ "timing": {
+  "upload": 1730,
+  "checks": 1609
+ },
+ "sid": "89f5a72c",
+ "words": [
+  {
+   "w": "That's",
+   "s": 0.22,
+   "e": 0.461,
+   "p": 0.85
+  },
+  {
+   "w": "a",
+   "s": 0.481,
+   "e": 0.541,
+   "p": 0.99
+  },
+  {
+   "w": "mute",
+   "s": 0.601,
+   "e": 0.902,
+   "p": 0.96
+  },
+  {
+   "w": "point",
+   "s": 0.922,
+   "e": 1.263,
+   "p": 1
+  },
+  {
+   "w": "now.",
+   "s": 1.303,
+   "e": 2.305,
+   "p": 0.97
+  },
+  {
+   "w": "Let",
+   "s": 2.345,
+   "e": 2.525,
+   "p": 1
+  },
+  {
+   "w": "me",
+   "s": 2.546,
+   "e": 2.666,
+   "p": 1
+  },
+  {
+   "w": "cut",
+   "s": 2.706,
+   "e": 2.866,
+   "p": 1
+  },
+  {
+   "w": "to",
+   "s": 2.906,
+   "e": 3.007,
+   "p": 1
+  },
+  {
+   "w": "the",
+   "s": 3.047,
+   "e": 3.167,
+   "p": 0.99
+  },
+  {
+   "w": "cheese.",
+   "s": 3.207,
+   "e": 4.289,
+   "p": 1
+  },
+  {
+   "w": "Honestly,",
+   "s": 4.329,
+   "e": 5.091,
+   "p": 0.99
+  },
+  {
+   "w": "it",
+   "s": 5.131,
+   "e": 5.231,
+   "p": 0.99
+  },
+  {
+   "w": "was",
+   "s": 5.251,
+   "e": 5.392,
+   "p": 1
+  },
+  {
+   "w": "a",
+   "s": 5.432,
+   "e": 5.472,
+   "p": 1
+  },
+  {
+   "w": "blessing",
+   "s": 5.512,
+   "e": 5.913,
+   "p": 1
+  },
+  {
+   "w": "in",
+   "s": 5.933,
+   "e": 6.013,
+   "p": 1
+  },
+  {
+   "w": "the",
+   "s": 6.033,
+   "e": 6.153,
+   "p": 1
+  },
+  {
+   "w": "skies,",
+   "s": 6.193,
+   "e": 6.995,
+   "p": 0.99
+  },
+  {
+   "w": "and",
+   "s": 7.035,
+   "e": 7.156,
+   "p": 0.99
+  },
+  {
+   "w": "the",
+   "s": 7.176,
+   "e": 7.296,
+   "p": 1
+  },
+  {
+   "w": "dip",
+   "s": 7.336,
+   "e": 7.777,
+   "p": 1
+  },
+  {
+   "w": "didn't",
+   "s": 7.817,
+   "e": 8.078,
+   "p": 1
+  },
+  {
+   "w": "even",
+   "s": 8.118,
+   "e": 8.338,
+   "p": 1
+  },
+  {
+   "w": "pass",
+   "s": 8.378,
+   "e": 8.719,
+   "p": 1
+  },
+  {
+   "w": "mustard.",
+   "s": 8.759,
+   "e": 9.1,
+   "p": 0.99
+  }
+ ],
+ "dur": 9.2,
+ "transcript": "That's a mute point now. Let me cut to the cheese. Honestly, it was a blessing in the skies, and the dip didn't even pass mustard.",
+ "clean": [
+  {
+   "i": 2,
+   "j": 2,
+   "kind": "correction",
+   "text": "mute",
+   "auto": false,
+   "t0": 0.571,
+   "t1": 0.912
+  },
+  {
+   "i": 5,
+   "j": 11,
+   "kind": "restart",
+   "text": "Let me cut to the cheese. Honestly,",
+   "auto": true,
+   "t0": 2.325,
+   "t1": 5.111
+  }
+ ],
+ "grammar": [
+  {
+   "i": 25,
+   "j": 25,
+   "old": "mustard.",
+   "new": "the mustard"
+  }
+ ],
+ "intent": [
+  {
+   "i": 2,
+   "j": 2,
+   "old": "mute",
+   "new": "moot",
+   "heard": "mjuːt",
+   "intended": "muːt",
+   "fit": -0.57,
+   "dist": 0.33,
+   "alts": []
+  },
+  {
+   "i": 17,
+   "j": 18,
+   "old": "the skies,",
+   "new": "disguise",
+   "heard": "ðəskaɪz",
+   "intended": "dɪsɡaɪz",
+   "fit": -0.32,
+   "dist": 0.5,
+   "alts": []
+  },
+  {
+   "i": 25,
+   "j": 25,
+   "old": "mustard.",
+   "new": "muster",
+   "heard": "mʌstɚd",
+   "intended": "mʌstɚ",
+   "fit": -0.07,
+   "dist": 0.2,
+   "alts": []
+  }
+ ],
+ "pron": {
+  "items": [],
+  "median": 9.9,
+  "accent": []
+ },
+ "replaced": [
+  {
+   "kind": "misspoken",
+   "old": "mute",
+   "new": "moot",
+   "verified": true,
+   "engine": "playdiff",
+   "after": null,
+   "ms": 2354,
+   "t0": 0.571,
+   "t1": 0.912,
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.5,
+     "heard": "That's a moot point now. Let me cut to the cheese."
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.229,
+     "heard": "That's a moot point now. Let me cut to the cheese."
+    }
+   ]
+  },
+  {
+   "kind": "misspoken",
+   "old": "the skies,",
+   "new": "disguise",
+   "verified": true,
+   "engine": "playdiff",
+   "after": null,
+   "ms": 3331,
+   "t0": 6.023,
+   "t1": 7.015,
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.585,
+     "heard": "Let me cut to the cheese. Honestly, it was a blessing in disguise, and the dip didn't even pass mustard."
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.394,
+     "heard": "Let me cut to the cheese. Honestly, it was a blessing in disguise and the dip didn't even pass mustard."
+    }
+   ]
+  },
+  {
+   "kind": "misspoken",
+   "old": "mustard.",
+   "new": "muster",
+   "verified": true,
+   "engine": "playdiff",
+   "after": null,
+   "ms": 2363,
+   "t0": 8.739,
+   "t1": 9.14,
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.382,
+     "heard": "It was a blessing in the skies, and the dip didn't even pass muster."
+    },
+    {
+     "engine": "f5",
+     "ok": false,
+     "sim": 0.426,
+     "heard": "It was a blessing in the skies, and the dip didn't even pass mustard."
+    }
+   ]
+  }
+ ]
+}

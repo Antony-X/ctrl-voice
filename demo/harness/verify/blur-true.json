@@ -1,0 +1,3 @@
+{ "page": "blurtest.html", "width": 680, "height": 240, "transparent": true, "mode": "offscreen",
+  "backdrop": "wallpaper-light", "keepRaw": true,
+  "shots": [ {"wait": 300, "out": "../out/blur-true.png"} ] }

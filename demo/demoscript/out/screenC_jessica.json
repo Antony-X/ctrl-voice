@@ -1,0 +1,290 @@
+{
+ "tag": "screenC_jessica",
+ "input": "screen/TEST_SYNTH_screenC_jessica.wav",
+ "timing": {
+  "upload": 772,
+  "checks": 1968
+ },
+ "sid": "9b44e562",
+ "words": [
+  {
+   "w": "Okay,",
+   "s": 0.14,
+   "e": 0.742,
+   "p": 0.86
+  },
+  {
+   "w": "for",
+   "s": 0.762,
+   "e": 0.922,
+   "p": 1
+  },
+  {
+   "w": "all",
+   "s": 0.982,
+   "e": 1.142,
+   "p": 1
+  },
+  {
+   "w": "intensive",
+   "s": 1.182,
+   "e": 1.704,
+   "p": 0.87
+  },
+  {
+   "w": "purposes,",
+   "s": 1.744,
+   "e": 2.465,
+   "p": 1
+  },
+  {
+   "w": "the",
+   "s": 2.505,
+   "e": 2.625,
+   "p": 1
+  },
+  {
+   "w": "party",
+   "s": 2.645,
+   "e": 3.026,
+   "p": 1
+  },
+  {
+   "w": "is",
+   "s": 3.086,
+   "e": 3.247,
+   "p": 1
+  },
+  {
+   "w": "off.",
+   "s": 3.347,
+   "e": 4.189,
+   "p": 1
+  },
+  {
+   "w": "It's",
+   "s": 4.249,
+   "e": 4.409,
+   "p": 1
+  },
+  {
+   "w": "a",
+   "s": 4.449,
+   "e": 4.589,
+   "p": 1
+  },
+  {
+   "w": "doggy",
+   "s": 4.65,
+   "e": 4.97,
+   "p": 0.77
+  },
+  {
+   "w": "-dog",
+   "s": 5.01,
+   "e": 5.251,
+   "p": 0.8
+  },
+  {
+   "w": "world",
+   "s": 5.291,
+   "e": 5.531,
+   "p": 1
+  },
+  {
+   "w": "out",
+   "s": 5.572,
+   "e": 5.712,
+   "p": 1
+  },
+  {
+   "w": "there,",
+   "s": 5.732,
+   "e": 6.253,
+   "p": 1
+  },
+  {
+   "w": "so",
+   "s": 6.293,
+   "e": 6.433,
+   "p": 1
+  },
+  {
+   "w": "let's",
+   "s": 6.473,
+   "e": 6.774,
+   "p": 1
+  },
+  {
+   "w": "nip",
+   "s": 6.834,
+   "e": 6.974,
+   "p": 1
+  },
+  {
+   "w": "it",
+   "s": 6.994,
+   "e": 7.055,
+   "p": 1
+  },
+  {
+   "w": "in",
+   "s": 7.095,
+   "e": 7.155,
+   "p": 1
+  },
+  {
+   "w": "the",
+   "s": 7.175,
+   "e": 7.255,
+   "p": 1
+  },
+  {
+   "w": "butt",
+   "s": 7.295,
+   "e": 7.816,
+   "p": 1
+  },
+  {
+   "w": "before",
+   "s": 7.856,
+   "e": 8.117,
+   "p": 0.99
+  },
+  {
+   "w": "they",
+   "s": 8.137,
+   "e": 8.277,
+   "p": 1
+  },
+  {
+   "w": "make",
+   "s": 8.317,
+   "e": 8.558,
+   "p": 1
+  },
+  {
+   "w": "me",
+   "s": 8.598,
+   "e": 8.798,
+   "p": 1
+  },
+  {
+   "w": "the",
+   "s": 8.818,
+   "e": 8.918,
+   "p": 1
+  },
+  {
+   "w": "escape",
+   "s": 8.959,
+   "e": 9.339,
+   "p": 0.93
+  },
+  {
+   "w": "goat.",
+   "s": 9.379,
+   "e": 9.58,
+   "p": 0.98
+  }
+ ],
+ "dur": 9.68,
+ "transcript": "Okay, for all intensive purposes, the party is off. It's a doggy -dog world out there, so let's nip it in the butt before they make me the escape goat.",
+ "clean": [
+  {
+   "i": 3,
+   "j": 3,
+   "kind": "correction",
+   "text": "intensive",
+   "auto": false,
+   "t0": 1.162,
+   "t1": 1.724
+  },
+  {
+   "i": 5,
+   "j": 29,
+   "kind": "restart",
+   "text": "the party is off. It's a doggy -dog world out there, so let's nip it in the butt before they make me the escape goat.",
+   "auto": true,
+   "t0": 2.485,
+   "t1": 9.62
+  }
+ ],
+ "grammar": [
+  {
+   "i": 3,
+   "j": 3,
+   "old": "intensive",
+   "new": "intensional"
+  },
+  {
+   "i": 11,
+   "j": 12,
+   "old": "doggy -dog",
+   "new": "dog-eat-dog"
+  },
+  {
+   "i": 22,
+   "j": 22,
+   "old": "butt",
+   "new": "buttocks"
+  },
+  {
+   "i": 28,
+   "j": 29,
+   "old": "escape goat.",
+   "new": "scapegoat"
+  }
+ ],
+ "intent": [
+  {
+   "i": 22,
+   "j": 22,
+   "old": "butt",
+   "new": "bud",
+   "heard": "bʌt",
+   "intended": "bʌd",
+   "fit": 0.56,
+   "dist": 0.33,
+   "alts": []
+  }
+ ],
+ "pron": {
+  "items": [],
+  "median": 9.9,
+  "accent": [
+   {
+    "phone": "k",
+    "n": 3,
+    "z": -1.11
+   }
+  ]
+ },
+ "replaced": [
+  {
+   "kind": "misspoken",
+   "old": "butt",
+   "new": "bud",
+   "verified": true,
+   "engine": "playdiff",
+   "after": null,
+   "ms": 2606,
+   "t0": 7.275,
+   "t1": 7.836,
+   "cands": [
+    {
+     "engine": "playdiff",
+     "ok": true,
+     "sim": 0.278,
+     "heard": "It's a dog -e -dog world out there, so let's nip it in the bud before they make me the escape goat."
+    },
+    {
+     "engine": "f5",
+     "ok": true,
+     "sim": 0.197,
+     "heard": "It's a dog -e -dog world out there, so let's nip it in the bud before they make me the escape goat."
+    }
+   ]
+  }
+ ]
+}

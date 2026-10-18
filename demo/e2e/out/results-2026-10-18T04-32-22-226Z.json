@@ -1,0 +1,522 @@
+{
+  "results": [
+    {
+      "step": "live words arrive",
+      "firstWordsMs": 2043,
+      "ok": true
+    },
+    {
+      "step": "scratch that removed live",
+      "sawJakeEarlier": true,
+      "finalCaption": "weekend, um, I'll meet you on Monday, no wait, Wednesday at 5 at the cafe. And can you bring the, uh, the board game? Okay, see you then!",
+      "ok": true
+    },
+    {
+      "step": "message saved after stop",
+      "stopToMessageMs": 792,
+      "ok": true
+    },
+    {
+      "step": "auto-fix finished",
+      "stopToFixedMs": 8156,
+      "error": null,
+      "ok": true
+    },
+    {
+      "step": "default tone applied (Your sound: calm)",
+      "take": {
+        "engine": "natural",
+        "style": "calm",
+        "mix": {
+          "calm": 0.6
+        },
+        "dur": 10.57,
+        "by": "praat",
+        "wordsKept": null,
+        "voiceSim": null
+      },
+      "ok": true
+    },
+    {
+      "step": "stored message",
+      "scratchedClean": true,
+      "title": "Hey, Maya! So, about this weekend, I'll",
+      "dur": 18.256,
+      "outDur": 10.25,
+      "cuts": 5,
+      "replacements": 0,
+      "ok": true
+    },
+    {
+      "step": "editor opened on the new message",
+      "route": "editor",
+      "id": "mvdbxi4u9ufh",
+      "fixing": null,
+      "words": 51,
+      "notice": null,
+      "out": 10.56725,
+      "ok": true
+    },
+    {
+      "step": "open message",
+      "ms": 638,
+      "words": 51,
+      "ok": true
+    },
+    {
+      "step": "replace word (Wednesday -> Thursday)",
+      "run": {
+        "sel": {
+          "i": 14,
+          "j": 14
+        },
+        "pop": true,
+        "buttons": [
+          "replace",
+          "say-clearly",
+          "cut",
+          "tone"
+        ]
+      },
+      "ms": 6868,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.593916666666667,
+        "view": "output",
+        "take": {
+          "engine": "natural",
+          "style": "calm",
+          "mix": {
+            "calm": 0.6
+          },
+          "dur": 10.59,
+          "by": "praat",
+          "wordsKept": null,
+          "voiceSim": null
+        },
+        "ops": 6,
+        "version": 5,
+        "hist": 1,
+        "fut": 0
+      },
+      "toasts": [],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "say clearly",
+      "run": {
+        "sel": {
+          "i": 19,
+          "j": 19
+        },
+        "pop": true,
+        "buttons": [
+          "replace",
+          "say-clearly",
+          "cut",
+          "tone"
+        ]
+      },
+      "ms": 8529,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.673541666666667,
+        "view": "output",
+        "take": {
+          "engine": "natural",
+          "style": "calm",
+          "mix": {
+            "calm": 0.6
+          },
+          "dur": 10.67,
+          "by": "praat",
+          "wordsKept": null,
+          "voiceSim": null
+        },
+        "ops": 7,
+        "version": 6,
+        "hist": 2,
+        "fut": 0
+      },
+      "toasts": [],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "tone words (natural confident)",
+      "run": {
+        "s": {
+          "sel": {
+            "i": 48,
+            "j": 50
+          },
+          "pop": true,
+          "buttons": [
+            "replace",
+            "say-clearly",
+            "cut",
+            "tone"
+          ]
+        },
+        "ok": true
+      },
+      "ms": 5108,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.54925,
+        "view": "output",
+        "take": {
+          "engine": "natural",
+          "style": "calm",
+          "mix": {
+            "calm": 0.6
+          },
+          "dur": 10.55,
+          "by": "praat",
+          "wordsKept": null,
+          "voiceSim": null
+        },
+        "ops": 8,
+        "version": 7,
+        "hist": 3,
+        "fut": 0
+      },
+      "toasts": [],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "tone whole message (your voice: confident strong + warm medium)",
+      "run": {
+        "opened": true,
+        "read": "Pitch 5% lower, 7% faster, steadier, firm endings",
+        "take": {
+          "engine": "natural",
+          "style": "confident",
+          "mix": {
+            "confident": 1.5,
+            "calm": 0.6,
+            "warm": 1
+          }
+        }
+      },
+      "ms": 2408,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 9.531166666666667,
+        "view": "output",
+        "take": {
+          "engine": "natural",
+          "style": "confident",
+          "mix": {
+            "confident": 1.5,
+            "calm": 0.6,
+            "warm": 1
+          },
+          "dur": 9.53,
+          "by": "praat",
+          "wordsKept": null,
+          "voiceSim": null
+        },
+        "ops": 8,
+        "version": 7,
+        "hist": 3,
+        "fut": 0
+      },
+      "toasts": [],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "tone whole message (AI calm)",
+      "run": {
+        "ok": true,
+        "take": {
+          "engine": "tone",
+          "style": "calm",
+          "mix": null
+        }
+      },
+      "ms": 5878,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.22,
+        "view": "output",
+        "take": {
+          "engine": "tone",
+          "style": "calm",
+          "dur": 10.22,
+          "by": "AuK",
+          "wordsKept": 0.89,
+          "voiceSim": 0.854
+        },
+        "ops": 8,
+        "version": 7,
+        "hist": 3,
+        "fut": 0
+      },
+      "toasts": [
+        {
+          "text": "Some words changed in the restyle. Listen before sending",
+          "bad": true,
+          "t": 1792297998380
+        }
+      ],
+      "consoleErrors": [],
+      "ok": false
+    },
+    {
+      "step": "no tone change (clear take)",
+      "run": true,
+      "ms": 171,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.229541666666666,
+        "view": "output",
+        "take": null,
+        "ops": 8,
+        "version": 7,
+        "hist": 3,
+        "fut": 0
+      },
+      "toasts": [],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "shorten",
+      "run": true,
+      "ms": 1628,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.229541666666666,
+        "view": "output",
+        "take": null,
+        "ops": 9,
+        "version": 8,
+        "hist": 4,
+        "fut": 0
+      },
+      "toasts": [
+        {
+          "text": "1 part could go. Click one to cut it",
+          "bad": false,
+          "t": 1792298000361
+        }
+      ],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "check for misheard words",
+      "run": true,
+      "ms": 1399,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.229541666666666,
+        "view": "output",
+        "take": null,
+        "ops": 9,
+        "version": 8,
+        "hist": 4,
+        "fut": 0
+      },
+      "toasts": [
+        {
+          "text": "No misheard words found",
+          "bad": false,
+          "t": 1792298001694
+        }
+      ],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "undo then redo",
+      "run": {
+        "undoChanged": true,
+        "redoRestored": true
+      },
+      "ms": 575,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.229541666666666,
+        "view": "output",
+        "take": null,
+        "ops": 9,
+        "version": 10,
+        "hist": 4,
+        "fut": 0
+      },
+      "toasts": [],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "rename title",
+      "run": true,
+      "ms": 167,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.229541666666666,
+        "view": "output",
+        "take": null,
+        "ops": 9,
+        "version": 10,
+        "hist": 4,
+        "fut": 0
+      },
+      "toasts": [],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "original / fixed switch",
+      "run": {
+        "view": "original",
+        "dur": 18.256
+      },
+      "ms": 217,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.229541666666666,
+        "view": "output",
+        "take": null,
+        "ops": 9,
+        "version": 10,
+        "hist": 4,
+        "fut": 0
+      },
+      "toasts": [],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "play / pause (muted)",
+      "run": {
+        "paused": false,
+        "t": 1.165444
+      },
+      "ms": 1361,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.229541666666666,
+        "view": "output",
+        "take": null,
+        "ops": 9,
+        "version": 10,
+        "hist": 4,
+        "fut": 0
+      },
+      "toasts": [],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "cancel leaves no message",
+      "before": 1,
+      "after": 1,
+      "rec": "pill interactive rec",
+      "pillAfter": "pill interactive idle hidden-idle",
+      "ok": true
+    }
+  ],
+  "consoleErrors": [],
+  "events": [
+    {
+      "t": 480,
+      "ch": "rec:recording",
+      "brief": true
+    },
+    {
+      "t": 19514,
+      "ch": "rec:recording",
+      "brief": false
+    },
+    {
+      "t": 19517,
+      "ch": "message:new",
+      "brief": {
+        "id": "mvdbxi4u9ufh",
+        "title": "Hey, Maya! So, about this weekend, um"
+      }
+    },
+    {
+      "t": 19518,
+      "ch": "edit:status",
+      "brief": {
+        "id": "mvdbxi4u9ufh",
+        "text": "Starting…"
+      }
+    },
+    {
+      "t": 19518,
+      "ch": "edit:status",
+      "brief": {
+        "id": "mvdbxi4u9ufh",
+        "text": "Cleaning up…"
+      }
+    },
+    {
+      "t": 19556,
+      "ch": "nav:go",
+      "brief": "editor:mvdbxi4u9ufh"
+    },
+    {
+      "t": 21791,
+      "ch": "edit:status",
+      "brief": {
+        "id": "mvdbxi4u9ufh",
+        "text": "Finishing…"
+      }
+    },
+    {
+      "t": 24403,
+      "ch": "edit:status",
+      "brief": {
+        "id": "mvdbxi4u9ufh",
+        "text": "Making it calm…"
+      }
+    },
+    {
+      "t": 26881,
+      "ch": "edit:status",
+      "brief": {
+        "id": "mvdbxi4u9ufh",
+        "text": null,
+        "error": null
+      }
+    },
+    {
+      "t": 26881,
+      "ch": "message:new",
+      "brief": {
+        "id": "mvdbxi4u9ufh",
+        "title": "Hey, Maya! So, about this weekend, I'll"
+      }
+    },
+    {
+      "t": 62447,
+      "ch": "rec:recording",
+      "brief": true
+    },
+    {
+      "t": 65890,
+      "ch": "rec:recording",
+      "brief": false
+    }
+  ]
+}

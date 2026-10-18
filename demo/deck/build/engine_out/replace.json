@@ -1,0 +1,45 @@
+{
+ "op": {
+  "t0": 5.408,
+  "t1": 6.289,
+  "insert": "116ed2ce",
+  "i": 19,
+  "j": 19,
+  "old": "cafe.",
+  "new": "park",
+  "engine": "f5",
+  "verified": true,
+  "kind": "replace",
+  "after": null
+ },
+ "cands": [
+  {
+   "engine": "playdiff",
+   "ok": true,
+   "sim": 0.237,
+   "heard": "This weekend, um, I'll meet you on Monday, no wait, Wednesday at 5 at the park, and can you bring the, uh, the board game? Also, I talked to Jake and...",
+   "id": "00abb699",
+   "sec": 3.41
+  },
+  {
+   "engine": "f5",
+   "ok": true,
+   "sim": 0.266,
+   "heard": "This weekend, um, I'll meet you on Monday, no wait, Wednesday at 5 at the park, and can you bring the, uh, the board game? Also, I talked to Jake and...",
+   "id": "116ed2ce",
+   "sec": 1.25
+  }
+ ],
+ "sec": 4.47,
+ "wall_ms": 4653,
+ "render": {
+  "url": "/api/s/5a4a30ab/file/out_8f8d85.wav",
+  "dur": 7.12,
+  "ai": [
+   [
+    4.14,
+    4.45
+   ]
+  ]
+ }
+}

@@ -1,0 +1,2 @@
+{ "page": "blurtest.html", "width": 680, "height": 240, "transparent": false, "mode": "hidden",
+  "shots": [ {"wait": 300, "out": "../out/blur-hidden.png"} ] }

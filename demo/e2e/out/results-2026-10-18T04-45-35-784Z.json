@@ -1,0 +1,715 @@
+{
+  "results": [
+    {
+      "step": "live words arrive",
+      "firstWordsMs": 1539,
+      "ok": true
+    },
+    {
+      "step": "scratch that removed live",
+      "sawJakeEarlier": true,
+      "finalCaption": "weekend, um, I'll meet you on Monday, no wait, Wednesday at 5 at the cafe. And can you bring the, uh, the board game? Okay, see you then!",
+      "ok": true
+    },
+    {
+      "step": "message saved after stop",
+      "stopToMessageMs": 528,
+      "ok": true
+    },
+    {
+      "step": "auto-fix finished",
+      "stopToFixedMs": 6501,
+      "error": null,
+      "ok": true
+    },
+    {
+      "step": "timing",
+      "ok": true,
+      "stopToFixedMs": 6501,
+      "statuses": [
+        "0.5s Starting…",
+        "0.5s Cleaning up…",
+        "3.1s Finishing…",
+        "4.5s Making it calm…",
+        "6.5s null"
+      ],
+      "engineCalls": [
+        "0.53-1.65s clean",
+        "0.56-1.52s grammar",
+        "0.56-3.08s intent",
+        "0.56-3.08s pron",
+        "3.08-3.48s render",
+        "3.48-4.47s file/out_fde728.wav 495208B",
+        "4.47-5.04s natural sec=0.4",
+        "5.04-6.50s file/natural_calm_38b6ff.wav 510684B"
+      ]
+    },
+    {
+      "step": "default tone applied (Your sound: calm)",
+      "take": {
+        "engine": "natural",
+        "style": "calm",
+        "mix": {
+          "calm": 0.6
+        },
+        "dur": 10.64,
+        "by": "praat",
+        "wordsKept": null,
+        "voiceSim": null
+      },
+      "ok": true
+    },
+    {
+      "step": "stored message",
+      "scratchedClean": true,
+      "title": "Hey, Maya! So, about this weekend, I'll",
+      "dur": 18.325333333333333,
+      "outDur": 10.32,
+      "cuts": 5,
+      "replacements": 0,
+      "ok": true
+    },
+    {
+      "step": "editor opened on the new message",
+      "route": "editor",
+      "id": "mvdceiaqzlq9",
+      "fixing": null,
+      "words": 51,
+      "notice": null,
+      "out": 10.638333333333334,
+      "ok": true
+    },
+    {
+      "step": "open message",
+      "ms": 612,
+      "words": 51,
+      "ok": true
+    },
+    {
+      "step": "replace word (Wednesday -> Thursday)",
+      "run": {
+        "sel": {
+          "i": 14,
+          "j": 14
+        },
+        "pop": true,
+        "buttons": [
+          "replace",
+          "say-clearly",
+          "cut",
+          "tone"
+        ]
+      },
+      "ms": 6527,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.776375,
+        "view": "output",
+        "take": {
+          "engine": "natural",
+          "style": "calm",
+          "mix": {
+            "calm": 0.6
+          },
+          "dur": 10.78,
+          "by": "praat",
+          "wordsKept": null,
+          "voiceSim": null
+        },
+        "ops": 6,
+        "version": 5,
+        "hist": 1,
+        "fut": 0
+      },
+      "toasts": [],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "say clearly",
+      "run": {
+        "sel": {
+          "i": 19,
+          "j": 19
+        },
+        "pop": true,
+        "buttons": [
+          "replace",
+          "say-clearly",
+          "cut",
+          "tone"
+        ]
+      },
+      "ms": 8193,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.815708333333333,
+        "view": "output",
+        "take": {
+          "engine": "natural",
+          "style": "calm",
+          "mix": {
+            "calm": 0.6
+          },
+          "dur": 10.82,
+          "by": "praat",
+          "wordsKept": null,
+          "voiceSim": null
+        },
+        "ops": 7,
+        "version": 6,
+        "hist": 2,
+        "fut": 0
+      },
+      "toasts": [],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "tone words (natural confident)",
+      "run": {
+        "s": {
+          "sel": {
+            "i": 48,
+            "j": 50
+          },
+          "pop": true,
+          "buttons": [
+            "replace",
+            "say-clearly",
+            "cut",
+            "tone"
+          ]
+        },
+        "ok": true
+      },
+      "ms": 3397,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.686291666666667,
+        "view": "output",
+        "take": {
+          "engine": "natural",
+          "style": "calm",
+          "mix": {
+            "calm": 0.6
+          },
+          "dur": 10.69,
+          "by": "praat",
+          "wordsKept": null,
+          "voiceSim": null
+        },
+        "ops": 8,
+        "version": 7,
+        "hist": 3,
+        "fut": 0
+      },
+      "toasts": [],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "tone whole message (your voice: confident strong + warm medium)",
+      "run": {
+        "opened": true,
+        "read": "Pitch 5% lower, 7% faster, steadier, firm endings",
+        "take": {
+          "engine": "natural",
+          "style": "confident",
+          "mix": {
+            "confident": 1.5,
+            "calm": 0.6,
+            "warm": 1
+          }
+        }
+      },
+      "ms": 2600,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 9.654958333333333,
+        "view": "output",
+        "take": {
+          "engine": "natural",
+          "style": "confident",
+          "mix": {
+            "confident": 1.5,
+            "calm": 0.6,
+            "warm": 1
+          },
+          "dur": 9.65,
+          "by": "praat",
+          "wordsKept": null,
+          "voiceSim": null
+        },
+        "ops": 8,
+        "version": 7,
+        "hist": 3,
+        "fut": 0
+      },
+      "toasts": [],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "tone whole message (AI calm)",
+      "run": {
+        "ok": true,
+        "take": {
+          "engine": "tone",
+          "style": "calm",
+          "mix": null
+        }
+      },
+      "ms": 2772,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.36,
+        "view": "output",
+        "take": {
+          "engine": "tone",
+          "style": "calm",
+          "dur": 10.36,
+          "by": "AuK",
+          "wordsKept": 0.89,
+          "voiceSim": 0.873
+        },
+        "ops": 8,
+        "version": 7,
+        "hist": 3,
+        "fut": 0
+      },
+      "toasts": [
+        {
+          "text": "Some words changed in the restyle. Listen before sending",
+          "bad": true,
+          "t": 1792298785355
+        }
+      ],
+      "consoleErrors": [],
+      "ok": false
+    },
+    {
+      "step": "no tone change (clear take)",
+      "run": true,
+      "ms": 170,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.362416666666666,
+        "view": "output",
+        "take": null,
+        "ops": 8,
+        "version": 7,
+        "hist": 3,
+        "fut": 0
+      },
+      "toasts": [],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "shorten",
+      "run": true,
+      "ms": 1587,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.362416666666666,
+        "view": "output",
+        "take": null,
+        "ops": 9,
+        "version": 8,
+        "hist": 4,
+        "fut": 0
+      },
+      "toasts": [
+        {
+          "text": "1 part could go. Click one to cut it",
+          "bad": false,
+          "t": 1792298787515
+        }
+      ],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "check for misheard words",
+      "run": true,
+      "ms": 1393,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.362416666666666,
+        "view": "output",
+        "take": null,
+        "ops": 9,
+        "version": 8,
+        "hist": 4,
+        "fut": 0
+      },
+      "toasts": [
+        {
+          "text": "No misheard words found",
+          "bad": false,
+          "t": 1792298788922
+        }
+      ],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "undo then redo",
+      "run": {
+        "undoChanged": true,
+        "redoRestored": true
+      },
+      "ms": 587,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.362416666666666,
+        "view": "output",
+        "take": null,
+        "ops": 9,
+        "version": 10,
+        "hist": 4,
+        "fut": 0
+      },
+      "toasts": [],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "rename title",
+      "run": true,
+      "ms": 153,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.362416666666666,
+        "view": "output",
+        "take": null,
+        "ops": 9,
+        "version": 10,
+        "hist": 4,
+        "fut": 0
+      },
+      "toasts": [],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "original / fixed switch",
+      "run": {
+        "view": "original",
+        "dur": 18.325333333333333
+      },
+      "ms": 216,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.362416666666666,
+        "view": "output",
+        "take": null,
+        "ops": 9,
+        "version": 10,
+        "hist": 4,
+        "fut": 0
+      },
+      "toasts": [],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "play / pause (muted)",
+      "run": {
+        "paused": false,
+        "t": 1.170617
+      },
+      "ms": 1369,
+      "state": {
+        "job": null,
+        "notice": null,
+        "outDur": 10.362416666666666,
+        "view": "output",
+        "take": null,
+        "ops": 9,
+        "version": 10,
+        "hist": 4,
+        "fut": 0
+      },
+      "toasts": [],
+      "consoleErrors": [],
+      "ok": true
+    },
+    {
+      "step": "cancel leaves no message",
+      "before": 1,
+      "after": 1,
+      "rec": "pill interactive rec",
+      "pillAfter": "pill interactive idle hidden-idle",
+      "ok": true
+    }
+  ],
+  "consoleErrors": [],
+  "events": [
+    {
+      "t": 479,
+      "ch": "rec:recording",
+      "brief": true
+    },
+    {
+      "t": 19320,
+      "ch": "rec:recording",
+      "brief": false
+    },
+    {
+      "t": 19324,
+      "ch": "message:new",
+      "brief": {
+        "id": "mvdceiaqzlq9",
+        "title": "Hey, Maya! So, about this weekend, um"
+      }
+    },
+    {
+      "t": 19325,
+      "ch": "edit:status",
+      "brief": {
+        "id": "mvdceiaqzlq9",
+        "text": "Starting…"
+      }
+    },
+    {
+      "t": 19325,
+      "ch": "edit:status",
+      "brief": {
+        "id": "mvdceiaqzlq9",
+        "text": "Cleaning up…"
+      }
+    },
+    {
+      "t": 19365,
+      "ch": "nav:go",
+      "brief": "editor:mvdceiaqzlq9"
+    },
+    {
+      "t": 21873,
+      "ch": "edit:status",
+      "brief": {
+        "id": "mvdceiaqzlq9",
+        "text": "Finishing…"
+      }
+    },
+    {
+      "t": 23265,
+      "ch": "edit:status",
+      "brief": {
+        "id": "mvdceiaqzlq9",
+        "text": "Making it calm…"
+      }
+    },
+    {
+      "t": 25297,
+      "ch": "edit:status",
+      "brief": {
+        "id": "mvdceiaqzlq9",
+        "text": null,
+        "error": null
+      }
+    },
+    {
+      "t": 25297,
+      "ch": "message:new",
+      "brief": {
+        "id": "mvdceiaqzlq9",
+        "title": "Hey, Maya! So, about this weekend, I'll"
+      }
+    },
+    {
+      "t": 56116,
+      "ch": "rec:recording",
+      "brief": true
+    },
+    {
+      "t": 59553,
+      "ch": "rec:recording",
+      "brief": false
+    }
+  ],
+  "calls": [
+    {
+      "p": "clean",
+      "t0": 19325,
+      "t1": 20441
+    },
+    {
+      "p": "grammar",
+      "t0": 19360,
+      "t1": 20318
+    },
+    {
+      "p": "intent",
+      "t0": 19360,
+      "t1": 21872
+    },
+    {
+      "p": "pron",
+      "t0": 19361,
+      "t1": 21872
+    },
+    {
+      "p": "render",
+      "t0": 21873,
+      "t1": 22280
+    },
+    {
+      "p": "file/out_fde728.wav",
+      "t0": 22281,
+      "t1": 23264,
+      "bytes": 495208
+    },
+    {
+      "p": "natural",
+      "t0": 23265,
+      "t1": 23837,
+      "sec": 0.4
+    },
+    {
+      "p": "file/natural_calm_38b6ff.wav",
+      "t0": 23837,
+      "t1": 25291,
+      "bytes": 510684
+    },
+    {
+      "p": "state",
+      "t0": 25668,
+      "t1": 26179
+    },
+    {
+      "p": "replace",
+      "t0": 26287,
+      "t1": 29676,
+      "sec": 2.91
+    },
+    {
+      "p": "render",
+      "t0": 30133,
+      "t1": 30328
+    },
+    {
+      "p": "file/out_434747.wav",
+      "t0": 30328,
+      "t1": 31189,
+      "bytes": 501634
+    },
+    {
+      "p": "natural",
+      "t0": 31190,
+      "t1": 31793,
+      "sec": 0.41
+    },
+    {
+      "p": "file/natural_calm_470a0f.wav",
+      "t0": 31793,
+      "t1": 32679,
+      "bytes": 517310
+    },
+    {
+      "p": "replace",
+      "t0": 32999,
+      "t1": 37794,
+      "sec": 4.51
+    },
+    {
+      "p": "render",
+      "t0": 38262,
+      "t1": 38764
+    },
+    {
+      "p": "file/out_4dc942.wav",
+      "t0": 38764,
+      "t1": 39604,
+      "bytes": 503464
+    },
+    {
+      "p": "natural",
+      "t0": 39605,
+      "t1": 40253,
+      "sec": 0.46
+    },
+    {
+      "p": "file/natural_calm_3d4b48.wav",
+      "t0": 40253,
+      "t1": 41038,
+      "bytes": 519198
+    },
+    {
+      "p": "natural",
+      "t0": 41196,
+      "t1": 41410,
+      "sec": 0.03
+    },
+    {
+      "p": "render",
+      "t0": 41871,
+      "t1": 42061
+    },
+    {
+      "p": "file/out_eaf868.wav",
+      "t0": 42061,
+      "t1": 42836,
+      "bytes": 497440
+    },
+    {
+      "p": "natural",
+      "t0": 42837,
+      "t1": 43445,
+      "sec": 0.43
+    },
+    {
+      "p": "file/natural_calm_0a9546.wav",
+      "t0": 43445,
+      "t1": 44519,
+      "bytes": 512986
+    },
+    {
+      "p": "natural",
+      "t0": 45049,
+      "t1": 45753,
+      "sec": 0.42
+    },
+    {
+      "p": "file/natural_confident_223dfe.wav",
+      "t0": 45753,
+      "t1": 46981,
+      "bytes": 463482
+    },
+    {
+      "p": "tone",
+      "t0": 47194,
+      "t1": 48757,
+      "sec": 1.38
+    },
+    {
+      "p": "file/tone_calm_4c0028.wav",
+      "t0": 48757,
+      "t1": 49558,
+      "bytes": 497324
+    },
+    {
+      "p": "tighten",
+      "t0": 50321,
+      "t1": 51727
+    },
+    {
+      "p": "intent",
+      "t0": 51909,
+      "t1": 53133
+    }
+  ]
+}

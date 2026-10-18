@@ -1,0 +1,12 @@
+{
+ "voice": "Chris (premade, male, casual, conversational)",
+ "voice_id": "iP95p4xoKVk53GoZ742B",
+ "model_id": "eleven_v3",
+ "seed": 1207,
+ "stability": 0.5,
+ "output_format": "mp3_44100_128",
+ "text": "Hey Sam! So, um... about tomorrow. Let's meet at, like, five— [hesitates] no, wait... three. At the usual place. And can you bring the, uh, the charger? Oh, and honestly, Jake's being kind of [sighs] annoying about the whole thing... scratch that. [pause] Okay! See you tomorrow.",
+ "text_characters": 279,
+ "billed_characters_header": "279",
+ "request_id": "ZplWkgu5RXnEYkvZEoFY"
+}

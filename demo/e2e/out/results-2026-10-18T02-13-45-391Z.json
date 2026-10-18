@@ -1,0 +1,132 @@
+{
+  "results": [
+    {
+      "step": "offline: overlay says engine offline",
+      "ok": true,
+      "cap": "Recording. Fixes run when you finish",
+      "note": "Engine offline. Recording without live text"
+    },
+    {
+      "step": "offline: recording saved locally",
+      "ok": true,
+      "wavBytes": 261420,
+      "dur": 5.445333333333333
+    },
+    {
+      "step": "offline: overlay ends with a true result",
+      "ok": true,
+      "procTexts": [
+        {
+          "pill": "pill interactive proc",
+          "proc": "Saving…"
+        },
+        {
+          "pill": "pill interactive proc ok",
+          "proc": "Opened in Ctrl+Voice"
+        },
+        {
+          "pill": "pill interactive idle hidden-idle",
+          "proc": "Opened in Ctrl+Voice"
+        }
+      ]
+    },
+    {
+      "step": "offline: editor shows the fix error with Try again",
+      "ok": true,
+      "notice": {
+        "text": "Couldn't fix it: Engine error 404",
+        "retry": "fix"
+      },
+      "fixError": "Engine error 404"
+    },
+    {
+      "step": "offline: original audio playable",
+      "ok": true,
+      "outDur": 5.445333333333333
+    },
+    {
+      "step": "offline: health check reports it",
+      "ok": false,
+      "ms": 438,
+      "message": "The server answered 404. Is the engine running?",
+      "url": "https://zaa3ajj8o85hhq-7860.proxy.runpod.net"
+    },
+    {
+      "step": "cancel leaves no message",
+      "ok": true,
+      "before": 1,
+      "after": 1,
+      "rec": "pill interactive rec",
+      "pillAfter": "pill interactive idle hidden-idle"
+    }
+  ],
+  "consoleErrors": [],
+  "events": [
+    {
+      "t": 463,
+      "ch": "rec:recording",
+      "brief": true
+    },
+    {
+      "t": 5901,
+      "ch": "rec:recording",
+      "brief": false
+    },
+    {
+      "t": 5904,
+      "ch": "message:new",
+      "brief": {
+        "id": "mvd6yybh2fal",
+        "title": "Voice message"
+      }
+    },
+    {
+      "t": 5904,
+      "ch": "edit:status",
+      "brief": {
+        "id": "mvd6yybh2fal",
+        "text": "Starting…"
+      }
+    },
+    {
+      "t": 5904,
+      "ch": "edit:status",
+      "brief": {
+        "id": "mvd6yybh2fal",
+        "text": "Cleaning up…"
+      }
+    },
+    {
+      "t": 5944,
+      "ch": "nav:go",
+      "brief": "editor:mvd6yybh2fal"
+    },
+    {
+      "t": 6529,
+      "ch": "edit:status",
+      "brief": {
+        "id": "mvd6yybh2fal",
+        "text": null,
+        "error": "Engine error 404"
+      }
+    },
+    {
+      "t": 6529,
+      "ch": "message:new",
+      "brief": {
+        "id": "mvd6yybh2fal",
+        "title": "Voice message"
+      }
+    },
+    {
+      "t": 9268,
+      "ch": "rec:recording",
+      "brief": true
+    },
+    {
+      "t": 12737,
+      "ch": "rec:recording",
+      "brief": false
+    }
+  ]
+}

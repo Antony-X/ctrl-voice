@@ -1,0 +1,11 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+html,body{margin:0;width:100%;height:100%;background:transparent;font:600 14px Segoe UI, sans-serif;color:#fff}
+.stripes{position:absolute;left:0;top:0;width:50%;height:100%;background:repeating-linear-gradient(90deg,#f0f 0 10px,#0f0 10px 20px)}
+.glass{position:absolute;top:40px;height:120px;width:260px;border-radius:20px;background:rgba(20,20,30,.35);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.4);display:grid;place-items:center}
+.a{left:60px}.b{left:400px}
+</style></head><body>
+<div class="stripes"></div>
+<div class="glass a">over stripes</div>
+<div class="glass b">over nothing</div>
+<script>window.respeak && console.log('bridge present:', typeof window.respeak.invoke)</script>
+</body></html>

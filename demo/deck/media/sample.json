@@ -1,0 +1,481 @@
+{
+  "sid": "5a4a30ab",
+  "backend": "https://xjdypx6zst9jkd-7860.proxy.runpod.net",
+  "at": "2026-10-18T04:43:43.927Z",
+  "clean_ms": 1223,
+  "words": [
+    {
+      "w": "Hey,",
+      "s": 0.34,
+      "e": 0.481,
+      "p": 0.97,
+      "x": null
+    },
+    {
+      "w": "Maya!",
+      "s": 0.521,
+      "e": 1.042,
+      "p": 0.99,
+      "x": null
+    },
+    {
+      "w": "So,",
+      "s": 1.082,
+      "e": 1.242,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "about",
+      "s": 1.282,
+      "e": 1.482,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "this",
+      "s": 1.502,
+      "e": 1.642,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "weekend,",
+      "s": 1.662,
+      "e": 2.343,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "um,",
+      "s": 2.424,
+      "e": 2.784,
+      "p": 0.18,
+      "x": null
+    },
+    {
+      "w": "I'll",
+      "s": 2.804,
+      "e": 2.984,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "meet",
+      "s": 3.004,
+      "e": 3.145,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "you",
+      "s": 3.185,
+      "e": 3.285,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "on",
+      "s": 3.305,
+      "e": 3.425,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "Monday,",
+      "s": 3.465,
+      "e": 3.846,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "no",
+      "s": 3.906,
+      "e": 4.026,
+      "p": 0.94,
+      "x": null
+    },
+    {
+      "w": "wait,",
+      "s": 4.046,
+      "e": 4.246,
+      "p": 0.89,
+      "x": null
+    },
+    {
+      "w": "Wednesday",
+      "s": 4.266,
+      "e": 4.587,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "at",
+      "s": 4.607,
+      "e": 4.707,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "5",
+      "s": 4.727,
+      "e": 5.147,
+      "p": 0.65,
+      "x": null
+    },
+    {
+      "w": "at",
+      "s": 5.208,
+      "e": 5.268,
+      "p": 0.8,
+      "x": null
+    },
+    {
+      "w": "the",
+      "s": 5.308,
+      "e": 5.388,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "cafe.",
+      "s": 5.428,
+      "e": 6.269,
+      "p": 0.98,
+      "x": null
+    },
+    {
+      "w": "And",
+      "s": 6.309,
+      "e": 6.389,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "can",
+      "s": 6.429,
+      "e": 6.529,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "you",
+      "s": 6.549,
+      "e": 6.63,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "bring",
+      "s": 6.65,
+      "e": 6.85,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "the,",
+      "s": 6.89,
+      "e": 7.09,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "uh,",
+      "s": 7.17,
+      "e": 7.731,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "the",
+      "s": 7.751,
+      "e": 7.851,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "board",
+      "s": 7.871,
+      "e": 8.132,
+      "p": 0.98,
+      "x": null
+    },
+    {
+      "w": "game?",
+      "s": 8.172,
+      "e": 9.013,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "Also,",
+      "s": 9.073,
+      "e": 9.374,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "I",
+      "s": 9.414,
+      "e": 9.494,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "talked",
+      "s": 9.534,
+      "e": 9.714,
+      "p": 0.89,
+      "x": null
+    },
+    {
+      "w": "to",
+      "s": 9.734,
+      "e": 9.834,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "Jake",
+      "s": 9.874,
+      "e": 10.075,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "and",
+      "s": 10.095,
+      "e": 10.195,
+      "p": 0.62,
+      "x": null
+    },
+    {
+      "w": "honestly",
+      "s": 10.235,
+      "e": 10.615,
+      "p": 0.87,
+      "x": null
+    },
+    {
+      "w": "he's",
+      "s": 10.635,
+      "e": 10.756,
+      "p": 0.85,
+      "x": null
+    },
+    {
+      "w": "being",
+      "s": 10.776,
+      "e": 10.976,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "kind",
+      "s": 11.016,
+      "e": 11.156,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "of",
+      "s": 11.176,
+      "e": 11.236,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "annoying",
+      "s": 11.256,
+      "e": 11.557,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "about",
+      "s": 11.577,
+      "e": 11.737,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "the",
+      "s": 11.777,
+      "e": 11.857,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "whole",
+      "s": 11.877,
+      "e": 12.037,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "thing.",
+      "s": 12.078,
+      "e": 12.758,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "Scratch",
+      "s": 12.779,
+      "e": 13.059,
+      "p": 0.99,
+      "x": null
+    },
+    {
+      "w": "that.",
+      "s": 13.099,
+      "e": 13.7,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "Okay,",
+      "s": 13.76,
+      "e": 14.201,
+      "p": 0.99,
+      "x": null
+    },
+    {
+      "w": "see",
+      "s": 14.241,
+      "e": 14.361,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "you",
+      "s": 14.401,
+      "e": 14.481,
+      "p": 1,
+      "x": null
+    },
+    {
+      "w": "then!",
+      "s": 14.521,
+      "e": 14.641,
+      "p": 1,
+      "x": null
+    }
+  ],
+  "removed": [],
+  "dur": 14.741333333333333,
+  "clean": [
+    {
+      "i": 6,
+      "j": 6,
+      "kind": "filler",
+      "text": "um,",
+      "auto": true,
+      "t0": 2.383,
+      "t1": 2.794
+    },
+    {
+      "i": 11,
+      "j": 13,
+      "kind": "correction",
+      "text": "Monday, no wait,",
+      "auto": true,
+      "t0": 3.445,
+      "t1": 4.256
+    },
+    {
+      "kind": "repetition",
+      "i": 24,
+      "j": 24,
+      "text": "the,",
+      "auto": true,
+      "t0": 6.87,
+      "t1": 7.13
+    },
+    {
+      "i": 25,
+      "j": 25,
+      "kind": "filler",
+      "text": "uh,",
+      "auto": true,
+      "t0": 7.13,
+      "t1": 7.741
+    },
+    {
+      "i": 29,
+      "j": 46,
+      "kind": "command",
+      "text": "Also, I talked to Jake and honestly he's being kind of annoying about the whole thing. Scratch that.",
+      "auto": true,
+      "t0": 9.043,
+      "t1": 13.73
+    }
+  ],
+  "render": {
+    "url": "/api/s/5a4a30ab/file/out_04f282.wav",
+    "dur": 7.71,
+    "ai": []
+  },
+  "ops": [
+    {
+      "id": "mvdcbo9z0",
+      "type": "cut",
+      "t0": 2.383,
+      "t1": 2.794,
+      "i": 6,
+      "j": 6,
+      "kind": "filler",
+      "text": "um,",
+      "on": true,
+      "auto": true
+    },
+    {
+      "id": "mvdcbo9z1",
+      "type": "cut",
+      "t0": 3.445,
+      "t1": 4.256,
+      "i": 11,
+      "j": 13,
+      "kind": "correction",
+      "text": "Monday, no wait,",
+      "on": true,
+      "auto": true
+    },
+    {
+      "id": "mvdcbo9z2",
+      "type": "cut",
+      "t0": 6.87,
+      "t1": 7.13,
+      "i": 24,
+      "j": 24,
+      "kind": "repetition",
+      "text": "the,",
+      "on": true,
+      "auto": true
+    },
+    {
+      "id": "mvdcbo9z3",
+      "type": "cut",
+      "t0": 7.13,
+      "t1": 7.741,
+      "i": 25,
+      "j": 25,
+      "kind": "filler",
+      "text": "uh,",
+      "on": true,
+      "auto": true
+    },
+    {
+      "id": "mvdcbo9z4",
+      "type": "cut",
+      "t0": 9.043,
+      "t1": 13.73,
+      "i": 29,
+      "j": 46,
+      "kind": "command",
+      "text": "Also, I talked to Jake and honestly he's being kind of annoying about the whole thing. Scratch that.",
+      "on": true,
+      "auto": true
+    }
+  ]
+}

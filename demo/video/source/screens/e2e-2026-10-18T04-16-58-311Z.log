@@ -1,0 +1,64 @@
+[   0.39] windows [{"x":460,"y":778,"width":680,"height":240},{"x":210,"y":122,"width":1180,"height":780}]
+[   0.39] == record: start
+[   0.41] overlay {"cap":"Listening…","note":"Say “scratch that” or press Control Alt Shift F11 to undo","pill":"pill interactive rec","proc":"Cleaning up…"}
+[   0.46] -> hub rec:recording true
+[   3.49] overlay {"cap":"Hey, Maya!","note":"Say “scratch that” or press Control Alt Shift F11 to undo","pill":"pill interactive rec","proc":"Cleaning up…"}
+[   4.52] overlay {"cap":"Hey, Maya! So, about this weekend, um, I'll meet you on...","note":"Say “scratch that” or press Control Alt Shift F11 to undo","pill":"pill interactive rec","proc":"Cleaning up…"}
+[   5.53] overlay {"cap":"Hey, Maya! So, about this weekend, um, I'll meet you on Monday, no wait, when...","note":"Say “scratch that” or press Control Alt Shift F11 to undo","pill":"pill interactive rec","proc":"Cleaning up…"}
+[   6.55] overlay {"cap":"Hey, Maya! So, about this weekend, um, I'll meet you on Monday, no wait, Wednesday at 5.","note":"Say “scratch that” or press Control Alt Shift F11 to undo","pill":"pill interactive rec","proc":"Cleaning up…"}
+[   7.57] overlay {"cap":"Hey, Maya! So, about this weekend, um, I'll meet you on Monday, no wait, Wednesday at 5 at the cafe.","note":"Say “scratch that” or press Control Alt Shift F11 to undo","pill":"pill interactive rec","proc":"Cleaning up…"}
+[   8.08] overlay {"cap":"Hey, Maya! So, about this weekend, um, I'll meet you on Monday, no wait, Wednesday at 5 at the cafe. And can you bring the, uh...","note":"Say “scratch that” or press Control Alt Shift F11 to undo","pill":"pill interactive rec","proc":"Cleaning up…"}
+[   9.11] overlay {"cap":"Hey, Maya! So, about this weekend, um, I'll meet you on Monday, no wait, Wednesday at 5 at the cafe. And can you bring the, uh, the board?","note":"Say “scratch that” or press Control Alt Shift F11 to undo","pill":"pill interactive rec","proc":"Cleaning up…"}
+[  10.13] overlay {"cap":"Maya! So, about this weekend, um, I'll meet you on Monday, no wait, Wednesday at 5 at the cafe. And can you bring the, uh, the board game?","note":"Say “scratch that” or press Control Alt Shift F11 to undo","pill":"pill interactive rec","proc":"Cleaning up…"}
+[  11.16] overlay {"cap":"weekend, um, I'll meet you on Monday, no wait, Wednesday at 5 at the cafe. And can you bring the, uh, the board game? Also, I talked to...","note":"Say “scratch that” or press Control Alt Shift F11 to undo","pill":"pill interactive rec","proc":"Cleaning up…"}
+[  12.18] overlay {"cap":"on Monday, no wait, Wednesday at 5 at the cafe. And can you bring the, uh, the board game? Also, I talked to Jake and honestly, he's being...","note":"Say “scratch that” or press Control Alt Shift F11 to undo","pill":"pill interactive rec","proc":"Cleaning up…"}
+[  13.20] overlay {"cap":"at 5 at the cafe. And can you bring the, uh, the board game? Also, I talked to Jake and honestly he's being kind of annoying about the...","note":"Say “scratch that” or press Control Alt Shift F11 to undo","pill":"pill interactive rec","proc":"Cleaning up…"}
+[  14.22] overlay {"cap":"at the cafe. And can you bring the, uh, the board game? Also, I talked to Jake and honestly, he's being kind of annoying about the whole thing.","note":"Say “scratch that” or press Control Alt Shift F11 to undo","pill":"pill interactive rec","proc":"Cleaning up…"}
+[  15.23] overlay {"cap":"cafe. And can you bring the, uh, the board game? Also, I talked to Jake and honestly he's being kind of annoying about the whole thing. Scratch that.","note":"Scratched that","pill":"pill interactive rec","proc":"Cleaning up…"}
+[  16.25] overlay {"cap":"And can you bring the, uh, the board game? Also, I talked to Jake and honestly he's being kind of annoying about the whole thing. Scratch that. Okay.","note":"Scratched that","pill":"pill interactive rec","proc":"Cleaning up…"}
+[  16.76] overlay {"cap":"So, about this weekend, um, I'll meet you on Monday, no wait, Wednesday at 5 at the cafe. And can you bring the, uh, the board game? Okay.","note":"Scratched that","pill":"pill interactive rec","proc":"Cleaning up…"}
+[  17.27] overlay {"cap":"weekend, um, I'll meet you on Monday, no wait, Wednesday at 5 at the cafe. And can you bring the, uh, the board game? Okay, see you then!","note":"Scratched that","pill":"pill interactive rec","proc":"Cleaning up…"}
+[  18.81] PASS live words arrive {"firstWordsMs":3096}
+[  18.81] PASS scratch that removed live {"sawJakeEarlier":true,"finalCaption":"weekend, um, I'll meet you on Monday, no wait, Wednesday at 5 at the cafe. And can you bring the, uh, the board game? Okay, see you then!"}
+[  18.81] == record: finish
+[  18.81] overlay {"pill":"pill interactive proc","proc":"Finishing up…"}
+[  19.33] -> hub rec:recording false
+[  19.33] -> hub message:new {"id":"mvdbdp3fo7y1","title":"Hey, Maya! So, about this weekend, um"}
+[  19.33] -> hub edit:status {"id":"mvdbdp3fo7y1","text":"Starting…"}
+[  19.34] -> hub edit:status {"id":"mvdbdp3fo7y1","text":"Cleaning up…"}
+[  19.38] -> hub nav:go editor:mvdbdp3fo7y1
+[  19.43] overlay {"pill":"pill interactive proc ok","proc":"Opened in Ctrl+Voice"}
+[  20.93] -> hub edit:status {"id":"mvdbdp3fo7y1","text":"Finishing…"}
+[  21.27] overlay {"pill":"pill interactive idle hidden-idle","proc":"Opened in Ctrl+Voice"}
+[  22.18] -> hub edit:status {"id":"mvdbdp3fo7y1","text":null,"error":null}
+[  22.18] -> hub message:new {"id":"mvdbdp3fo7y1","title":"Hey, Maya! So, about this weekend, I'll"}
+[  22.24] PASS message saved after stop {"stopToMessageMs":524}
+[  22.24] PASS auto-fix finished {"stopToFixedMs":3365,"error":null}
+[  22.24] fix statuses ["0.5s Starting…","0.5s Cleaning up…","2.1s Finishing…","3.4s null"]
+[  22.24] stored message {"id":"mvdbdp3fo7y1","title":"Hey, Maya! So, about this weekend, I'll","sid":"71p7box8","words":51,"dur":18.357333333333333,"outDur":10.64,"removedLive":1,"cuts":["command:\"Also, I talked to Jake and honestly he's being kind of annoying about the whole thing. Scratch that.\"","filler:\"um,\"","correction:\"Monday, no wait,\"","filler:\"uh,\""],"replacements":[],"pron":[],"fixed":true,"files":["mvdbdp3fo7y1.edit.wav","mvdbdp3fo7y1.json","mvdbdp3fo7y1.wav"],"kept":"Hey, Maya! So, about this weekend, I'll meet you on Wednesday at 5 at the cafe. And can you bring the, the board game? Okay, see you then!"}
+[  22.24] PASS stored message {"scratchedClean":true,"title":"Hey, Maya! So, about this weekend, I'll","dur":18.357333333333333,"outDur":10.64,"cuts":4,"replacements":0}
+[  22.24] PASS editor opened on the new message {"route":"editor","id":"mvdbdp3fo7y1","fixing":null,"words":51,"notice":null,"out":10.643416666666667}
+[  22.27] screenshot C:\Users\Antony\AppData\Local\Temp\claude\C--Users-Antony-Desktop-ctrl-voice\5985905e-4572-4f19-a6ec-0c1ce1de5723\scratchpad\e2e\out\2026-10-18T04-16-58-311Z-after-fix.png {"width":1180,"height":780}
+[  22.49] PASS open message {"ms":215,"words":51}
+[  22.49] kept words 0:Hey, 1:Maya! 2:So, 3:about 4:this 5:weekend, 7:I'll 8:meet 9:you 10:on 14:Wednesday 15:at 16:5 17:at 18:the 19:cafe. 20:And 21:can 22:you 23:bring 24:the, 26:the 27:board 28:game? 47:Okay, 48:see 49:you 50:then!
+[  28.49] PASS replace word (Wednesday -> Thursday) {"run":{"sel":{"i":14,"j":14},"pop":true,"buttons":["replace","say-clearly","cut","tone"]},"ms":6000,"state":{"job":null,"notice":null,"outDur":10.66925,"view":"output","take":null,"ops":5,"version":5,"hist":1,"fut":0},"toasts":[],"consoleErrors":[]}
+[  28.51] screenshot C:\Users\Antony\AppData\Local\Temp\claude\C--Users-Antony-Desktop-ctrl-voice\5985905e-4572-4f19-a6ec-0c1ce1de5723\scratchpad\e2e\out\2026-10-18T04-16-58-311Z-replaced.png {"width":1180,"height":780}
+[  34.09] PASS say clearly {"run":{"sel":{"i":19,"j":19},"pop":true,"buttons":["replace","say-clearly","cut","tone"]},"ms":5570,"state":{"job":null,"notice":null,"outDur":10.748916666666666,"view":"output","take":null,"ops":6,"version":6,"hist":2,"fut":0},"toasts":[],"consoleErrors":[]}
+[  35.68] PASS tone words (natural confident) {"run":{"s":{"sel":{"i":48,"j":50},"pop":true,"buttons":["replace","say-clearly","cut","tone"]},"ok":true},"ms":1593,"state":{"job":null,"notice":null,"outDur":10.628458333333333,"view":"output","take":null,"ops":7,"version":7,"hist":3,"fut":0},"toasts":[],"consoleErrors":[]}
+[  38.09] PASS tone whole message (your voice: confident strong + warm medium) {"run":{"opened":true,"read":"Pitch 4% lower, 11% faster, more lively, firm endings","take":{"engine":"natural","style":"confident","mix":{"confident":1.5,"warm":1}}},"ms":2407,"state":{"job":null,"notice":null,"outDur":9.602708333333334,"view":"output","take":{"engine":"natural","style":"confident","mix":{"confident":1.5,"warm":1},"dur":9.6,"by":"praat","wordsKept":null,"voiceSim":null},"ops":7,"version":7,"hist":3,"fut":0},"toasts":[],"consoleErrors":[]}
+[  40.85] PASS tone whole message (AI calm) {"run":{"ok":true,"take":{"engine":"tone","style":"calm","mix":null}},"ms":2762,"state":{"job":null,"notice":null,"outDur":10.62,"view":"output","take":{"engine":"tone","style":"calm","dur":10.62,"by":"AuK","wordsKept":0.96,"voiceSim":0.874},"ops":7,"version":7,"hist":3,"fut":0},"toasts":[],"consoleErrors":[]}
+[  40.88] screenshot C:\Users\Antony\AppData\Local\Temp\claude\C--Users-Antony-Desktop-ctrl-voice\5985905e-4572-4f19-a6ec-0c1ce1de5723\scratchpad\e2e\out\2026-10-18T04-16-58-311Z-ai-tone.png {"width":1180,"height":780}
+[  41.05] PASS no tone change (clear take) {"run":true,"ms":177,"state":{"job":null,"notice":null,"outDur":10.628458333333333,"view":"output","take":null,"ops":7,"version":7,"hist":3,"fut":0},"toasts":[],"consoleErrors":[]}
+[  42.45] PASS shorten {"run":true,"ms":1393,"state":{"job":null,"notice":null,"outDur":10.628458333333333,"view":"output","take":null,"ops":8,"version":8,"hist":4,"fut":0},"toasts":[{"text":"1 part could go. Click one to cut it","bad":false,"t":1792297060582}],"consoleErrors":[]}
+[  44.02] PASS check for misheard words {"run":true,"ms":1574,"state":{"job":null,"notice":null,"outDur":10.628458333333333,"view":"output","take":null,"ops":8,"version":8,"hist":4,"fut":0},"toasts":[{"text":"No misheard words found","bad":false,"t":1792297062176}],"consoleErrors":[]}
+[  44.62] PASS undo then redo {"run":{"undoChanged":true,"redoRestored":true},"ms":592,"state":{"job":null,"notice":null,"outDur":10.628458333333333,"view":"output","take":null,"ops":8,"version":10,"hist":4,"fut":0},"toasts":[],"consoleErrors":[]}
+[  45.18] PASS rename title {"run":true,"ms":154,"state":{"job":null,"notice":null,"outDur":10.628458333333333,"view":"output","take":null,"ops":8,"version":10,"hist":4,"fut":0},"toasts":[],"consoleErrors":[]}
+[  45.40] PASS original / fixed switch {"run":{"view":"original","dur":18.357333333333333},"ms":218,"state":{"job":null,"notice":null,"outDur":10.628458333333333,"view":"output","take":null,"ops":8,"version":10,"hist":4,"fut":0},"toasts":[],"consoleErrors":[]}
+[  46.76] PASS play / pause (muted) {"run":{"paused":false,"t":1.164825},"ms":1364,"state":{"job":null,"notice":null,"outDur":10.628458333333333,"view":"output","take":null,"ops":8,"version":10,"hist":4,"fut":0},"toasts":[],"consoleErrors":[]}
+[  46.76] final stored ops [{"kind":"command","on":true},{"kind":"filler","on":true,"i":6,"j":6},{"kind":"correction","on":true,"i":11,"j":13},{"kind":"filler","on":true,"i":25,"j":25},{"kind":"replace","on":true,"new":"Thursday","i":14,"j":14},{"kind":"pronunciation","on":true,"new":"cafe","i":19,"j":19},{"kind":"natural confident","on":true,"new":"see you then!","i":48,"j":50}]
+[  46.76] final kept text Hey, Maya! So, about this weekend, I'll meet you on Thursday at 5 at the cafe And can you bring the, the board game? Okay, see you then!
+[  46.81] -> hub rec:recording true
+[  50.28] -> hub rec:recording false
+[  52.79] PASS cancel leaves no message {"before":1,"after":1,"rec":"pill interactive rec","pillAfter":"pill interactive idle hidden-idle"}
+[  52.81] screenshot C:\Users\Antony\AppData\Local\Temp\claude\C--Users-Antony-Desktop-ctrl-voice\5985905e-4572-4f19-a6ec-0c1ce1de5723\scratchpad\e2e\out\2026-10-18T04-16-58-311Z-final.png {"width":1180,"height":780}
+[  52.81] RESULTS ["PASS live words arrive","PASS scratch that removed live","PASS message saved after stop","PASS auto-fix finished","PASS stored message","PASS editor opened on the new message","PASS open message","PASS replace word (Wednesday -> Thursday)","PASS say clearly","PASS tone words (natural confident)","PASS tone whole message (your voice: confident strong + warm medium)","PASS tone whole message (AI calm)","PASS no tone change (clear take)","PASS shorten","PASS check for misheard words","PASS undo then redo","PASS rename title","PASS original / fixed switch","PASS play / pause (muted)","PASS cancel leaves no message"]
